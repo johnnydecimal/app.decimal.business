@@ -1,4 +1,5 @@
 ---
+import { marked } from "marked";
 import Ops from "../../layouts/Ops.astro";
 import ops from "../../content/data/ops.json";
 
@@ -26,13 +27,15 @@ const manual = ops.find((item) => item.id.toString() === id);
 if (!manual) {
   throw new Error(`Manual with ID ${id} not found`);
 }
+
+const purposeHtml = marked(manual.purpose);
 ---
 
 <Ops>
   <h1>{id}</h1>
   <h2>{manual.title}</h2>
   <h3>Purpose</h3>
-  <div set:html={manual.purpose} />
+  <div set:html={purposeHtml} />
   <h3>Trigger</h3>
   <div>{manual.trigger}</div>
   <h3>Inputs</h3>
