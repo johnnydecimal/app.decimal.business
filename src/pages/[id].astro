@@ -22,7 +22,28 @@ export async function getStaticPaths() {
    * we pull that out here and load it on to props.
    */
 
-  const returnArray = [];
+  interface PageParams {
+    id: string;
+  }
+  interface PageProps {
+    areaId: string;
+    areaTitle: string;
+    categoryId: string;
+    categoryTitle: string;
+    idNumber: string;
+    idTitle: string;
+    examples: string;
+    moreInfo: string;
+    exceptions: string;
+    alsoSee: string;
+    rationale: string;
+  }
+  interface PageData {
+    params: PageParams;
+    props: PageProps;
+  }
+
+  const pageData: PageData[] = [];
 
   const areas = Object.keys(sb.areas);
   /**
@@ -103,7 +124,7 @@ export async function getStaticPaths() {
         }
 
         // Now push all this to the return array
-        returnArray.push({
+        pageData.push({
           params: { id: id },
           props: {
             areaId,
@@ -123,7 +144,7 @@ export async function getStaticPaths() {
     });
   });
 
-  return returnArray;
+  return pageData;
 }
 
 const { id } = Astro.params;
@@ -198,8 +219,10 @@ console.log(moreInfo);
 <style></style>
 
 <script>
+  // @ts-ignore
   document.getElementById("copy-jd-id").addEventListener("click", function () {
     // Get the text from the div
+    // @ts-ignore
     const textToCopy = document.getElementById("jd-id").innerText;
 
     // Copy the text to the clipboard
