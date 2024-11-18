@@ -69,6 +69,14 @@ const smallBusiness: JohnnyDecimalSystem = {
         },
       },
     },
+    "20-29": {
+      id: "20-29",
+      title: "Product & customers",
+      metadata: {
+        createdDate: "2024-11-18",
+        updatedDate: "2024-11-18",
+      },
+    },
   },
 };
 

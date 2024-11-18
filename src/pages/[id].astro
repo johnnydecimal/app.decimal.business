@@ -8,17 +8,122 @@
  * as the canonical URL.
  */
 
-import smallBusiness from "../content/data/smallbusiness.ts";
+import { undefined } from "astro:schema";
+import sb from "../content/data/smallbusiness.ts";
+import type { Category } from "../types/jd_schema";
 
 export async function getStaticPaths() {
-  return [
-    { params: { id: "11.00" }, props: { test: "yeah" } },
-    { params: { id: "11.10" }, props: { test: "hell" } },
-  ];
+  /**
+   * All we need to do here is return an array of objects that have
+   * the id param set. This becomes the list of pages available at
+   * /[id].
+   *
+   * If we also want data available to the page when it's rendered,
+   * we pull that out here and load it on to props.
+   */
+
+  const returnArray = [];
+
+  const areas = Object.keys(sb.areas);
+  /**
+   * For each iteration, we build an object with params, and props. It's
+   * made up of the area/category/id properties that we come across as
+   * we traverse the system.
+   *
+   * When we get down to the ID, these variables should be loaded with the
+   * stuff we need to generate the page. We'll push them on to returnArray.
+   */
+
+  console.log("🏃 -----------------");
+  console.log("🪵 areas:", areas);
+
+  areas.forEach((area) => {
+    const areaId = sb.areas[area].id;
+    const areaTitle = sb.areas[area].title;
+
+    const categories =
+      // TS: does the object exist?
+      sb.areas[area].categories
+        ? // Then list out its keys
+          Object.keys(sb.areas[area].categories)
+        : // Otherwise return an empty array
+          [];
+    console.log(`🪵 categories in ${area}:`, categories);
+
+    // We know categories isn't empty, but satisfy TS
+    if (categories.length > 0) {
+      categories.forEach((category) => {
+        // Load up the return objects
+        let categoryId: string, categoryTitle: string;
+        if (sb.areas[area].categories?.[category]) {
+          categoryId = sb.areas[area].categories[category].id;
+          categoryTitle = sb.areas[area].categories[category].title;
+        }
+
+        const ids =
+          // TS: does the object exist?
+          sb.areas[area].categories?.[category].ids
+            ? // Then list out its keys
+              Object.keys(sb.areas[area].categories[category].ids)
+            : // Otherwise return an empty array
+              [];
+
+        console.log(`🪵 ids in ${category}:`, ids);
+
+        ids.forEach((id) => {
+          // Load up the return objects
+          let idNumber,
+            idTitle,
+            examples = "";
+          if (sb.areas[area].categories?.[category].ids?.[id]) {
+            idNumber = sb.areas[area].categories[category].ids[id].id;
+            idTitle = sb.areas[area].categories[category].ids[id].title;
+          }
+          if (
+            sb.areas[area].categories?.[category].ids?.[id].extensions
+              ?.smallBusiness
+          ) {
+            examples =
+              sb.areas[area].categories[category].ids[id].extensions
+                .smallBusiness.examples || "";
+          }
+
+          // Now push all this to the return array
+          returnArray.push({
+            params: { id: id },
+            props: {
+              areaId,
+              areaTitle,
+              categoryId,
+              categoryTitle,
+              idNumber,
+              idTitle,
+              examples,
+            },
+          });
+        });
+      });
+    }
+  });
+
+  // return [
+  //   { params: { id: "11.00" }, props: { test: "yeah" } },
+  //   { params: { id: "11.10" }, props: { test: "hell" } },
+  // ];
+  return returnArray;
 }
 
 const { id } = Astro.params;
-const { test } = Astro.props;
+const { areaId, areaTitle, categoryId, categoryTitle, idTitle, examples } =
+  Astro.props;
 ---
 
-<div>{id} {test}</div>
+<div>
+  {id}
+  {idTitle}
+  {areaId}
+  {areaTitle}
+  {categoryId}
+  {categoryTitle}
+  {examples}
+</div>
