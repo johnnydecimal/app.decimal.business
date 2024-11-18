@@ -11,3 +11,9 @@
 
 - Find: ` *"examples":`
 - Replace: `      "extensions": {\n       "smallBusiness": {\n        "examples":`
+
+7. Close those two nestings.
+
+- Find: `\},\n(.*"1\d\.\d\d")`
+- Replace: `}}},$1`
+- Add 2x closing brackets at eof.
