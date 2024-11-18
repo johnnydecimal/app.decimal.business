@@ -1,0 +1,24 @@
+---
+/**
+ * Each standard page gets rendered to /AC.ID for the simplest possible
+ * experience. There's no clever sub-foldering (although there's nothing
+ * stopping us from doing that _as well_).
+ *
+ * This way we don't need a _redirects or whatever, we can just use this
+ * as the canonical URL.
+ */
+
+import smallBusiness from "../content/data/smallbusiness.ts";
+
+export async function getStaticPaths() {
+  return [
+    { params: { id: "11.00" }, props: { test: "yeah" } },
+    { params: { id: "11.10" }, props: { test: "hell" } },
+  ];
+}
+
+const { id } = Astro.params;
+const { test } = Astro.props;
+---
+
+<div>{id} {test}</div>
