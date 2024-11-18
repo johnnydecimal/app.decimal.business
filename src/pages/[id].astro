@@ -1,4 +1,5 @@
 ---
+import { marked } from "marked";
 import Layout from "../layouts/Layout.astro";
 /**
  * Each standard page gets rendered to /AC.ID for the simplest possible
@@ -51,11 +52,11 @@ export async function getStaticPaths() {
 
     categories.forEach((category) => {
       // Load up the return objects
-      let categoryId: string, categoryTitle: string;
-      if (sb.areas[area].categories?.[category]) {
-        categoryId = sb.areas[area].categories[category].id;
-        categoryTitle = sb.areas[area].categories[category].title;
+      if (!sb.areas[area].categories?.[category]) {
+        throw new Error("Keeping TS happy");
       }
+      const categoryId = sb.areas[area].categories?.[category]?.id;
+      const categoryTitle = sb.areas[area].categories?.[category]?.title;
 
       const ids =
         // TS: does the object exist?
@@ -111,11 +112,11 @@ export async function getStaticPaths() {
             categoryTitle,
             idNumber,
             idTitle,
-            examples,
-            moreInfo,
-            exceptions,
-            alsoSee,
-            rationale,
+            examples: marked(examples || ""),
+            moreInfo: marked(moreInfo || ""),
+            exceptions: marked(exceptions || ""),
+            alsoSee: marked(alsoSee || ""),
+            rationale: marked(rationale || ""),
           },
         });
       });
@@ -138,34 +139,77 @@ const {
   alsoSee,
   rationale,
 } = Astro.props;
+
+console.log(moreInfo);
 ---
 
-<Layout>
-  <h1>{id} {idTitle}</h1>
+<Layout title={`${id} ${idTitle}`}>
+  <h1 id="jd-id">{id} {idTitle}</h1>
+  <button id="copy-jd-id">Copy</button>
 
-  <div class="area">Area: {areaId} {areaTitle}</div>
-  <div class="category">Category: {categoryId} {categoryTitle}</div>
+  <div class="area">
+    <code>{areaId} {areaTitle} > {categoryId} {categoryTitle}</code>
+  </div>
 
   <div>
-    <h3>Examples</h3>
-    <div>{examples}</div>
-    <h3>More info</h3>
-    <div>{moreInfo}</div>
-    <h3>More info</h3>
-    <div>{moreInfo}</div>
-    <h3>Exceptions</h3>
-    <div>{exceptions}</div>
+    {
+      examples === "" ? null : (
+        <>
+          <h3>Examples</h3>
+          <div set:html={examples} />
+        </>
+      )
+    }
+    {
+      moreInfo === "" ? null : (
+        <>
+          <h3>More info</h3>
+          <div set:html={moreInfo} />
+        </>
+      )
+    }
+    {
+      exceptions === "" ? null : (
+        <>
+          <h3>Exceptions</h3>
+          <div set:html={exceptions} />
+        </>
+      )
+    }
     {
       alsoSee === "" ? null : (
         <>
           <h3>Also see</h3>
-          <div>{alsoSee}</div>
+          <div set:html={alsoSee} />
         </>
       )
     }
-    <h3>Rationale</h3>
-    <div>{rationale}</div>
+    {
+      rationale === "" ? null : (
+        <>
+          <h3>Rationale</h3>
+          <div set:html={rationale} />
+        </>
+      )
+    }
   </div>
 </Layout>
 
 <style></style>
+
+<script>
+  document.getElementById("copy-jd-id").addEventListener("click", function () {
+    // Get the text from the div
+    const textToCopy = document.getElementById("jd-id").innerText;
+
+    // Copy the text to the clipboard
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        alert("Text copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+  });
+</script>

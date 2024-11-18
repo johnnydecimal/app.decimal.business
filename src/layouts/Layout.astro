@@ -1,8 +1,11 @@
+---
+const { title } = Astro.props;
+---
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Your Page Title</title>
-  <link rel="stylesheet" href="path/to/your/styles.css" />
+  <title>{title}</title>
 </head>
 <body>
   <main>
@@ -14,6 +17,7 @@
   main {
     font-family: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
       Consolas, "DejaVu Sans Mono", monospace;
+    line-height: 1.5;
     margin: 0 auto;
     max-width: 600px;
   }
