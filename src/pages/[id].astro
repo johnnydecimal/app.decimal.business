@@ -46,51 +46,114 @@ export async function getStaticPaths() {
   const pageData: PageData[] = [];
 
   const areas = Object.keys(sb.areas);
-  /**
-   * For each iteration, we build an object with params, and props. It's
-   * made up of the area/category/id properties that we come across as
-   * we traverse the system.
-   *
-   * When we get down to the ID, these variables should be loaded with the
-   * stuff we need to generate the page. We'll push them on to returnArray.
-   */
+  // /**
+  //  * For each iteration, we build an object with params, and props. It's
+  //  * made up of the area/category/id properties that we come across as
+  //  * we traverse the system.
+  //  *
+  //  * When we get down to the ID, these variables should be loaded with the
+  //  * stuff we need to generate the page. We'll push them on to returnArray.
+  //  */
 
-  areas.forEach((area) => {
+  // areas.forEach((area) => {
+  //   const areaId = sb.areas[area].id;
+  //   const areaTitle = sb.areas[area].title;
+
+  //   const categories =
+  //     // TS: does the object exist?
+  //     sb.areas[area].categories
+  //       ? // Then list out its keys
+  //         Object.keys(sb.areas[area].categories)
+  //       : // Otherwise return an empty array
+  //         [];
+
+  //   categories.forEach((category) => {
+  //     // Load up the return objects
+  //     if (!sb.areas[area].categories?.[category]) {
+  //       throw new Error("1: Keeping TS happy -- this shouldn't be possible");
+  //     }
+  //     const categoryId = sb.areas[area].categories?.[category]?.id;
+  //     const categoryTitle = sb.areas[area].categories?.[category]?.title;
+
+  //     const ids =
+  //       // TS: does the object exist?
+  //       sb.areas[area].categories?.[category].ids
+  //         ? // Then list out its keys
+  //           Object.keys(sb.areas[area].categories[category].ids)
+  //         : // Otherwise return an empty array
+  //           [];
+
+  //     ids.forEach(async (id) => {
+  //       if (!sb.areas[area].categories?.[category].ids?.[id]) {
+  //         throw new Error("2: Keeping TS happy -- this shouldn't be possible");
+  //       }
+  //       const idNumber = sb.areas[area].categories?.[category]?.ids?.[id].id;
+  //       const idTitle = sb.areas[area].categories?.[category]?.ids?.[id].title;
+
+  //       // Make life a bit simpler
+  //       const sbDescriptions =
+  //         sb.areas[area].categories[category].ids[id].extensions?.smallBusiness;
+  //       let mdExamples, mdMoreInfo, mdExceptions, mdAlsoSee, mdRationale;
+
+  //       if (sbDescriptions) {
+  //         const { examples, moreInfo, exceptions, alsoSee, rationale } =
+  //           sbDescriptions;
+  //         mdExamples = examples ? await marked.parse(examples) : undefined;
+  //         mdMoreInfo = moreInfo ? await marked.parse(moreInfo) : undefined;
+  //         mdExceptions = exceptions
+  //           ? await marked.parse(exceptions)
+  //           : undefined;
+  //         mdAlsoSee = alsoSee ? await marked.parse(alsoSee) : undefined;
+  //         mdRationale = rationale ? await marked.parse(rationale) : undefined;
+  //       }
+
+  //       // Now push all this to the return array
+  //       pageData.push({
+  //         params: { id: id },
+  //         props: {
+  //           areaId,
+  //           areaTitle,
+  //           categoryId,
+  //           categoryTitle,
+  //           idNumber,
+  //           idTitle,
+  //           examples: mdExamples,
+  //           moreInfo: mdMoreInfo,
+  //           exceptions: mdExceptions,
+  //           alsoSee: mdAlsoSee,
+  //           rationale: mdRationale,
+  //         },
+  //       });
+  //     });
+  //   });
+  // });
+
+  for (const area of areas) {
     const areaId = sb.areas[area].id;
     const areaTitle = sb.areas[area].title;
 
-    const categories =
-      // TS: does the object exist?
-      sb.areas[area].categories
-        ? // Then list out its keys
-          Object.keys(sb.areas[area].categories)
-        : // Otherwise return an empty array
-          [];
+    const categories = sb.areas[area].categories
+      ? Object.keys(sb.areas[area].categories)
+      : [];
 
-    categories.forEach((category) => {
-      // Load up the return objects
+    for (const category of categories) {
       if (!sb.areas[area].categories?.[category]) {
         throw new Error("1: Keeping TS happy -- this shouldn't be possible");
       }
-      const categoryId = sb.areas[area].categories?.[category]?.id;
-      const categoryTitle = sb.areas[area].categories?.[category]?.title;
+      const categoryId = sb.areas[area].categories[category]?.id;
+      const categoryTitle = sb.areas[area].categories[category]?.title;
 
-      const ids =
-        // TS: does the object exist?
-        sb.areas[area].categories?.[category].ids
-          ? // Then list out its keys
-            Object.keys(sb.areas[area].categories[category].ids)
-          : // Otherwise return an empty array
-            [];
+      const ids = sb.areas[area].categories[category].ids
+        ? Object.keys(sb.areas[area].categories[category].ids)
+        : [];
 
-      ids.forEach(async (id) => {
-        if (!sb.areas[area].categories?.[category].ids?.[id]) {
+      for (const id of ids) {
+        if (!sb.areas[area].categories[category].ids?.[id]) {
           throw new Error("2: Keeping TS happy -- this shouldn't be possible");
         }
-        const idNumber = sb.areas[area].categories?.[category]?.ids?.[id].id;
-        const idTitle = sb.areas[area].categories?.[category]?.ids?.[id].title;
+        const idNumber = sb.areas[area].categories[category].ids[id].id;
+        const idTitle = sb.areas[area].categories[category].ids[id].title;
 
-        // Make life a bit simpler
         const sbDescriptions =
           sb.areas[area].categories[category].ids[id].extensions?.smallBusiness;
         let mdExamples, mdMoreInfo, mdExceptions, mdAlsoSee, mdRationale;
@@ -98,6 +161,8 @@ export async function getStaticPaths() {
         if (sbDescriptions) {
           const { examples, moreInfo, exceptions, alsoSee, rationale } =
             sbDescriptions;
+
+          // Await the parsing
           mdExamples = examples ? await marked.parse(examples) : undefined;
           mdMoreInfo = moreInfo ? await marked.parse(moreInfo) : undefined;
           mdExceptions = exceptions
@@ -107,7 +172,6 @@ export async function getStaticPaths() {
           mdRationale = rationale ? await marked.parse(rationale) : undefined;
         }
 
-        // Now push all this to the return array
         pageData.push({
           params: { id: id },
           props: {
@@ -124,9 +188,9 @@ export async function getStaticPaths() {
             rationale: mdRationale,
           },
         });
-      });
-    });
-  });
+      }
+    }
+  }
 
   return pageData;
 }
