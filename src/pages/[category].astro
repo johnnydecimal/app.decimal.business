@@ -2,42 +2,37 @@
 import { marked } from "marked";
 import Layout from "../layouts/Layout.astro";
 /**
- * Each area page gets rendered to /A0-A9 for the simplest possible
+ * Each category page gets rendered to /CC for the simplest possible
  * experience. There's no clever sub-foldering (although there's nothing
  * stopping us from doing that _as well_).
  *
  * This way we don't need a _redirects or whatever, we can just use this
  * as the canonical URL.
  *
- * But what does this page show? We want it to list all areas ... is that
- * it? With their contents? Just with their categories?
- *
- * So that changes things. We _return_ an array of pages: only one page per
- * area. But that page's props needs to have all of the data in order to
- * render the stuff on the page. That feels like a different function: one
- * to return the array of areas (as a param), and another to return all of
- * that area's data so we can display it.
+ * The category page should show all IDs in that category. Also maybe
+ * with their description? That would probably be nice.
  */
 
 import sb from "../content/data/smallbusiness.ts";
+import { undefined } from "astro:schema";
 
 export async function getStaticPaths() {
   /**
    * All we need to do here is return an array of objects that have
-   * the area param set. This becomes the list of pages available at
-   * /[area].
+   * the category param set. This becomes the list of pages available at
+   * /[category].
    *
    * If we also want data available to the page when it's rendered,
    * we pull that out here and load it on to props.
    */
 
   interface PageParams {
-    area: string;
+    category: string;
   }
   interface PageProps {
-    areaId: string;
-    areaTitle: string;
-    categoryData?: { categoryId: string; categoryTitle: string }[];
+    categoryId: string;
+    categoryTitle: string;
+    idData?: { idNumber: string; idTitle: string; idDescription: string }[];
   }
   interface PageData {
     params: PageParams;
@@ -51,36 +46,44 @@ export async function getStaticPaths() {
     const areaId = sb.areas[area].id;
     const areaTitle = sb.areas[area].title;
 
-    // Safely handle categoryData
-    const categories = sb.areas[area].categories || {};
-    const categoryData = Object.keys(categories).map((category) => ({
-      categoryId: category,
-      categoryTitle: categories[category].title,
-    }));
+    if (sb.areas[area].categories) {
+      const categories = Object.keys(sb.areas[area].categories);
+      for (const category of categories) {
+        const categoryId = sb.areas[area].categories[category].id;
+        const categoryTitle = sb.areas[area].categories[category].title;
 
-    pageData.push({
-      params: { area: areaId },
-      props: { areaId, areaTitle, categoryData },
-    });
+        const ids = sb.areas[area].categories[category].ids || {};
+        const idData = Object.keys(ids).map((id) => ({
+          idNumber: id,
+          idTitle: ids[id].title,
+          idDescription: ids[id].description || "",
+        }));
+
+        pageData.push({
+          params: { category: categoryId },
+          props: { categoryId, categoryTitle, idData },
+        });
+      }
+    }
   }
 
   return pageData;
 }
 
-const { area: areaId } = Astro.params;
-const { areaTitle, categoryData = [] } = Astro.props;
+const { category: categoryId } = Astro.params;
+const { categoryTitle, idData = [] } = Astro.props;
 ---
 
-<Layout title={`${areaId} ${areaTitle}`}>
-  <h1 id="jd-id">{areaId} {areaTitle}</h1>
+<Layout title={`${categoryId} ${categoryTitle}`}>
+  <h1 id="jd-id">{categoryId} {categoryTitle}</h1>
   <button id="copy-jd-id">Copy</button>
 
   <div>
     {
-      categoryData.map((c) => (
+      idData.map((i) => (
         <li>
-          <a href={c.categoryId}>
-            {c.categoryId} {c.categoryTitle}
+          <a href={i.idNumber}>
+            {i.idNumber} {i.idTitle}
           </a>
         </li>
       ))

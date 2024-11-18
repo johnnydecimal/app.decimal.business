@@ -89,6 +89,14 @@ const smallBusiness: JohnnyDecimalSystem = {
             },
           },
         },
+        "12": {
+          id: "12",
+          title: "Where I trade & how I get around",
+          metadata: {
+            createdDate: "2024-11-18",
+            updatedDate: "2024-11-18",
+          },
+        },
       },
     },
     "20-29": {
