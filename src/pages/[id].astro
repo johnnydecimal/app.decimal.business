@@ -32,11 +32,11 @@ export async function getStaticPaths() {
     categoryTitle: string;
     idNumber: string;
     idTitle: string;
-    examples: string;
-    moreInfo: string;
-    exceptions: string;
-    alsoSee: string;
-    rationale: string;
+    examples?: string;
+    moreInfo?: string;
+    exceptions?: string;
+    alsoSee?: string;
+    rationale?: string;
   }
   interface PageData {
     params: PageParams;
@@ -70,7 +70,7 @@ export async function getStaticPaths() {
     categories.forEach((category) => {
       // Load up the return objects
       if (!sb.areas[area].categories?.[category]) {
-        throw new Error("Keeping TS happy");
+        throw new Error("1: Keeping TS happy -- this shouldn't be possible");
       }
       const categoryId = sb.areas[area].categories?.[category]?.id;
       const categoryTitle = sb.areas[area].categories?.[category]?.title;
@@ -83,39 +83,48 @@ export async function getStaticPaths() {
           : // Otherwise return an empty array
             [];
 
-      ids.forEach((id) => {
-        // Load up the return objects
-        let idNumber,
-          idTitle,
-          examples,
-          moreInfo,
-          exceptions,
-          alsoSee,
-          rationale = "";
-        if (sb.areas[area].categories?.[category].ids?.[id]) {
-          idNumber = sb.areas[area].categories[category].ids[id].id;
-          idTitle = sb.areas[area].categories[category].ids[id].title;
+      ids.forEach(async (id) => {
+        if (!sb.areas[area].categories?.[category].ids?.[id]) {
+          throw new Error("2: Keeping TS happy -- this shouldn't be possible");
         }
-        if (
-          sb.areas[area].categories?.[category].ids?.[id].extensions
-            ?.smallBusiness
-        ) {
-          examples =
-            sb.areas[area].categories[category].ids[id].extensions.smallBusiness
-              .examples || "";
-          moreInfo =
-            sb.areas[area].categories[category].ids[id].extensions.smallBusiness
-              .moreInfo || "";
-          exceptions =
-            sb.areas[area].categories[category].ids[id].extensions.smallBusiness
-              .exceptions || "";
-          alsoSee =
-            sb.areas[area].categories[category].ids[id].extensions.smallBusiness
-              .alsoSee || "";
-          rationale =
-            sb.areas[area].categories[category].ids[id].extensions.smallBusiness
-              .rationale || "";
+        const idNumber = sb.areas[area].categories?.[category]?.ids?.[id].id;
+        const idTitle = sb.areas[area].categories?.[category]?.ids?.[id].title;
+
+        // Extract all the descriptive text from ID
+        // if (
+        //   sb.areas[area].categories?.[category].ids?.[id].extensions
+        //     ?.smallBusiness
+        // ) {
+        // This is a legitimate case -- not every ID has extensions.
+        // smallBusiness.
+
+        // Make life a bit simpler
+        const sbDescriptions =
+          sb.areas[area].categories[category].ids[id].extensions?.smallBusiness;
+        let mdExamples, mdMoreInfo, mdExceptions, mdAlsoSee, mdRationale;
+
+        if (sbDescriptions) {
+          const { examples, moreInfo, exceptions, alsoSee, rationale } =
+            sbDescriptions;
+          mdExamples = examples ? marked.parse(examples) : undefined;
+          mdMoreInfo = moreInfo ? marked.parse(moreInfo) : undefined;
+          mdExceptions = exceptions ? marked.parse(exceptions) : undefined;
+          mdAlsoSee = alsoSee ? marked.parse(alsoSee) : undefined;
+          mdRationale = rationale ? marked.parse(rationale) : undefined;
         }
+
+        // const { examples, moreInfo, exceptions, alsoSee, rationale } =
+        //   sbDescriptions;
+
+        // const mdExamples = examples ? await marked.parse(examples) : undefined;
+        // const mdMoreInfo = moreInfo ? await marked.parse(moreInfo) : undefined;
+        // const mdExceptions = exceptions
+        //   ? await marked.parse(exceptions)
+        //   : undefined;
+        // const mdAlsoSee = alsoSee ? await marked.parse(alsoSee) : undefined;
+        // const mdRationale = rationale
+        //   ? await marked.parse(rationale)
+        //   : undefined;
 
         // Now push all this to the return array
         pageData.push({
@@ -127,11 +136,11 @@ export async function getStaticPaths() {
             categoryTitle,
             idNumber,
             idTitle,
-            examples: marked(examples || ""),
-            moreInfo: marked(moreInfo || ""),
-            exceptions: marked(exceptions || ""),
-            alsoSee: marked(alsoSee || ""),
-            rationale: marked(rationale || ""),
+            examples: mdExamples,
+            moreInfo: mdMoreInfo,
+            exceptions: mdExceptions,
+            alsoSee: mdAlsoSee,
+            rationale: mdRationale,
           },
         });
       });
