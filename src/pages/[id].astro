@@ -1,4 +1,5 @@
 ---
+import Layout from "../layouts/Layout.astro";
 /**
  * Each standard page gets rendered to /AC.ID for the simplest possible
  * experience. There's no clever sub-foldering (although there's nothing
@@ -8,9 +9,7 @@
  * as the canonical URL.
  */
 
-import { undefined } from "astro:schema";
 import sb from "../content/data/smallbusiness.ts";
-import type { Category } from "../types/jd_schema";
 
 export async function getStaticPaths() {
   /**
@@ -50,80 +49,123 @@ export async function getStaticPaths() {
           [];
     console.log(`🪵 categories in ${area}:`, categories);
 
-    // We know categories isn't empty, but satisfy TS
-    if (categories.length > 0) {
-      categories.forEach((category) => {
+    categories.forEach((category) => {
+      // Load up the return objects
+      let categoryId: string, categoryTitle: string;
+      if (sb.areas[area].categories?.[category]) {
+        categoryId = sb.areas[area].categories[category].id;
+        categoryTitle = sb.areas[area].categories[category].title;
+      }
+
+      const ids =
+        // TS: does the object exist?
+        sb.areas[area].categories?.[category].ids
+          ? // Then list out its keys
+            Object.keys(sb.areas[area].categories[category].ids)
+          : // Otherwise return an empty array
+            [];
+
+      console.log(`🪵 ids in ${category}:`, ids);
+
+      ids.forEach((id) => {
         // Load up the return objects
-        let categoryId: string, categoryTitle: string;
-        if (sb.areas[area].categories?.[category]) {
-          categoryId = sb.areas[area].categories[category].id;
-          categoryTitle = sb.areas[area].categories[category].title;
+        let idNumber,
+          idTitle,
+          examples,
+          moreInfo,
+          exceptions,
+          alsoSee,
+          rationale = "";
+        if (sb.areas[area].categories?.[category].ids?.[id]) {
+          idNumber = sb.areas[area].categories[category].ids[id].id;
+          idTitle = sb.areas[area].categories[category].ids[id].title;
+        }
+        if (
+          sb.areas[area].categories?.[category].ids?.[id].extensions
+            ?.smallBusiness
+        ) {
+          examples =
+            sb.areas[area].categories[category].ids[id].extensions.smallBusiness
+              .examples || "";
+          moreInfo =
+            sb.areas[area].categories[category].ids[id].extensions.smallBusiness
+              .moreInfo || "";
+          exceptions =
+            sb.areas[area].categories[category].ids[id].extensions.smallBusiness
+              .exceptions || "";
+          alsoSee =
+            sb.areas[area].categories[category].ids[id].extensions.smallBusiness
+              .alsoSee || "";
+          rationale =
+            sb.areas[area].categories[category].ids[id].extensions.smallBusiness
+              .rationale || "";
         }
 
-        const ids =
-          // TS: does the object exist?
-          sb.areas[area].categories?.[category].ids
-            ? // Then list out its keys
-              Object.keys(sb.areas[area].categories[category].ids)
-            : // Otherwise return an empty array
-              [];
-
-        console.log(`🪵 ids in ${category}:`, ids);
-
-        ids.forEach((id) => {
-          // Load up the return objects
-          let idNumber,
+        // Now push all this to the return array
+        returnArray.push({
+          params: { id: id },
+          props: {
+            areaId,
+            areaTitle,
+            categoryId,
+            categoryTitle,
+            idNumber,
             idTitle,
-            examples = "";
-          if (sb.areas[area].categories?.[category].ids?.[id]) {
-            idNumber = sb.areas[area].categories[category].ids[id].id;
-            idTitle = sb.areas[area].categories[category].ids[id].title;
-          }
-          if (
-            sb.areas[area].categories?.[category].ids?.[id].extensions
-              ?.smallBusiness
-          ) {
-            examples =
-              sb.areas[area].categories[category].ids[id].extensions
-                .smallBusiness.examples || "";
-          }
-
-          // Now push all this to the return array
-          returnArray.push({
-            params: { id: id },
-            props: {
-              areaId,
-              areaTitle,
-              categoryId,
-              categoryTitle,
-              idNumber,
-              idTitle,
-              examples,
-            },
-          });
+            examples,
+            moreInfo,
+            exceptions,
+            alsoSee,
+            rationale,
+          },
         });
       });
-    }
+    });
   });
 
-  // return [
-  //   { params: { id: "11.00" }, props: { test: "yeah" } },
-  //   { params: { id: "11.10" }, props: { test: "hell" } },
-  // ];
   return returnArray;
 }
 
 const { id } = Astro.params;
-const { areaId, areaTitle, categoryId, categoryTitle, idTitle, examples } =
-  Astro.props;
+const {
+  areaId,
+  areaTitle,
+  categoryId,
+  categoryTitle,
+  idTitle,
+  examples,
+  moreInfo,
+  exceptions,
+  alsoSee,
+  rationale,
+} = Astro.props;
 ---
 
-<div>
-  {id}
-  {idTitle}
-  {areaId}
-  {areaTitle}
-  {categoryId}
-  {categoryTitle}
-  {examples}
-</div>
+<Layout>
+  <h1>{id} {idTitle}</h1>
+
+  <div class="area">Area: {areaId} {areaTitle}</div>
+  <div class="category">Category: {categoryId} {categoryTitle}</div>
+
+  <div>
+    <h3>Examples</h3>
+    <div>{examples}</div>
+    <h3>More info</h3>
+    <div>{moreInfo}</div>
+    <h3>More info</h3>
+    <div>{moreInfo}</div>
+    <h3>Exceptions</h3>
+    <div>{exceptions}</div>
+    {
+      alsoSee === "" ? null : (
+        <>
+          <h3>Also see</h3>
+          <div>{alsoSee}</div>
+        </>
+      )
+    }
+    <h3>Rationale</h3>
+    <div>{rationale}</div>
+  </div>
+</Layout>
+
+<style></style>
