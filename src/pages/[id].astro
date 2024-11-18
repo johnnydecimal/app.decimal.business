@@ -32,6 +32,7 @@ export async function getStaticPaths() {
     categoryTitle: string;
     idNumber: string;
     idTitle: string;
+    idDescription?: string;
     examples?: string;
     moreInfo?: string;
     exceptions?: string;
@@ -71,6 +72,8 @@ export async function getStaticPaths() {
         }
         const idNumber = sb.areas[area].categories[category].ids[id].id;
         const idTitle = sb.areas[area].categories[category].ids[id].title;
+        const idDescription =
+          sb.areas[area].categories[category].ids[id].description;
 
         let mdExamples, mdMoreInfo, mdExceptions, mdAlsoSee, mdRationale;
         const sbDescriptions =
@@ -97,6 +100,7 @@ export async function getStaticPaths() {
             categoryTitle,
             idNumber,
             idTitle,
+            idDescription,
             examples: mdExamples,
             moreInfo: mdMoreInfo,
             exceptions: mdExceptions,
@@ -118,6 +122,7 @@ const {
   categoryId,
   categoryTitle,
   idTitle,
+  idDescription,
   examples,
   moreInfo,
   exceptions,
@@ -130,54 +135,60 @@ const {
   <h1 id="jd-id">{id} {idTitle}</h1>
   <button id="copy-jd-id">Copy</button>
 
-  <div class="area">
+  <div class="id-title">
     <a href={areaId}>{areaId} {areaTitle}</a> > <a href={categoryId}
       >{categoryId} {categoryTitle}</a
     >
   </div>
 
-  <div>
-    {
-      examples === "" ? null : (
-        <>
-          <h3>Examples</h3>
-          <div set:html={examples} />
-        </>
-      )
-    }
-    {
-      moreInfo === "" ? null : (
-        <>
-          <h3>More info</h3>
-          <div set:html={moreInfo} />
-        </>
-      )
-    }
-    {
-      exceptions === "" ? null : (
-        <>
-          <h3>Exceptions</h3>
-          <div set:html={exceptions} />
-        </>
-      )
-    }
-    {
-      alsoSee === "" ? null : (
-        <>
-          <h3>Also see</h3>
-          <div set:html={alsoSee} />
-        </>
-      )
-    }
-    {
-      rationale === "" ? null : (
-        <>
-          <h3>Rationale</h3>
-          <div set:html={rationale} />
-        </>
-      )
-    }
-  </div>
+  {
+    idDescription && (
+      <>
+        <h3>Description</h3>
+        <p>{idDescription}</p>
+      </>
+    )
+  }
+  {
+    examples && (
+      <>
+        <h3>Examples</h3>
+        <div set:html={examples} />
+      </>
+    )
+  }
+  {
+    moreInfo && (
+      <>
+        <h3>More info</h3>
+        <div set:html={moreInfo} />
+      </>
+    )
+  }
+  {
+    exceptions && (
+      <>
+        <h3>Exceptions</h3>
+        <div set:html={exceptions} />
+      </>
+    )
+  }
+  {
+    alsoSee && (
+      <>
+        <h3>Also see</h3>
+        <div set:html={alsoSee} />
+      </>
+    )
+  }
+  {
+    rationale && (
+      <>
+        <h3>Rationale</h3>
+        <div set:html={rationale} />
+      </>
+    )
+  }
 </Layout>
 
 <style></style>
