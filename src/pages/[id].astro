@@ -90,14 +90,6 @@ export async function getStaticPaths() {
         const idNumber = sb.areas[area].categories?.[category]?.ids?.[id].id;
         const idTitle = sb.areas[area].categories?.[category]?.ids?.[id].title;
 
-        // Extract all the descriptive text from ID
-        // if (
-        //   sb.areas[area].categories?.[category].ids?.[id].extensions
-        //     ?.smallBusiness
-        // ) {
-        // This is a legitimate case -- not every ID has extensions.
-        // smallBusiness.
-
         // Make life a bit simpler
         const sbDescriptions =
           sb.areas[area].categories[category].ids[id].extensions?.smallBusiness;
@@ -106,25 +98,14 @@ export async function getStaticPaths() {
         if (sbDescriptions) {
           const { examples, moreInfo, exceptions, alsoSee, rationale } =
             sbDescriptions;
-          mdExamples = examples ? marked.parse(examples) : undefined;
-          mdMoreInfo = moreInfo ? marked.parse(moreInfo) : undefined;
-          mdExceptions = exceptions ? marked.parse(exceptions) : undefined;
-          mdAlsoSee = alsoSee ? marked.parse(alsoSee) : undefined;
-          mdRationale = rationale ? marked.parse(rationale) : undefined;
+          mdExamples = examples ? await marked.parse(examples) : undefined;
+          mdMoreInfo = moreInfo ? await marked.parse(moreInfo) : undefined;
+          mdExceptions = exceptions
+            ? await marked.parse(exceptions)
+            : undefined;
+          mdAlsoSee = alsoSee ? await marked.parse(alsoSee) : undefined;
+          mdRationale = rationale ? await marked.parse(rationale) : undefined;
         }
-
-        // const { examples, moreInfo, exceptions, alsoSee, rationale } =
-        //   sbDescriptions;
-
-        // const mdExamples = examples ? await marked.parse(examples) : undefined;
-        // const mdMoreInfo = moreInfo ? await marked.parse(moreInfo) : undefined;
-        // const mdExceptions = exceptions
-        //   ? await marked.parse(exceptions)
-        //   : undefined;
-        // const mdAlsoSee = alsoSee ? await marked.parse(alsoSee) : undefined;
-        // const mdRationale = rationale
-        //   ? await marked.parse(rationale)
-        //   : undefined;
 
         // Now push all this to the return array
         pageData.push({
