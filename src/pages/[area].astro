@@ -1,0 +1,114 @@
+---
+import { marked } from "marked";
+import Layout from "../layouts/Layout.astro";
+/**
+ * Each area page gets rendered to /A0-A9 for the simplest possible
+ * experience. There's no clever sub-foldering (although there's nothing
+ * stopping us from doing that _as well_).
+ *
+ * This way we don't need a _redirects or whatever, we can just use this
+ * as the canonical URL.
+ *
+ * But what does this page show? We want it to list all areas ... is that
+ * it? With their contents? Just with their categories?
+ *
+ * So that changes things. We _return_ an array of pages: only one page per
+ * area. But that page's props needs to have all of the data in order to
+ * render the stuff on the page. That feels like a different function: one
+ * to return the array of areas (as a param), and another to return all of
+ * that area's data so we can display it.
+ */
+
+import sb from "../content/data/smallbusiness.ts";
+
+export async function getStaticPaths() {
+  /**
+   * All we need to do here is return an array of objects that have
+   * the area param set. This becomes the list of pages available at
+   * /[area].
+   *
+   * If we also want data available to the page when it's rendered,
+   * we pull that out here and load it on to props.
+   */
+
+  interface PageParams {
+    area: string;
+  }
+  interface PageProps {
+    areaId: string;
+    areaTitle: string;
+    categoryData?: { categoryId: string; categoryTitle: string }[];
+  }
+  interface PageData {
+    params: PageParams;
+    props: PageProps;
+  }
+  const pageData: PageData[] = [];
+
+  const areas = Object.keys(sb.areas);
+
+  for (const area of areas) {
+    // Generate the array of areas for the param
+    const areaId = sb.areas[area].id;
+    const areaTitle = sb.areas[area].title;
+    const props = { areaId, areaTitle };
+
+    // Generate the array of category data in this area
+    const categoryData = [];
+    if (sb.areas[area].categories) {
+      const categories = Object.keys(sb.areas[area].categories);
+      for (const category of categories) {
+        categoryData.push({
+          categoryId: category,
+          categoryTitle: sb.areas[area].categories[category].title,
+        });
+      }
+    }
+
+    pageData.push({
+      params: { area: areaId },
+      props: { areaId, areaTitle, categoryData },
+    });
+  }
+
+  return pageData;
+}
+
+const { area } = Astro.params;
+const { areaId, areaTitle, categoryData = [] } = Astro.props;
+---
+
+<Layout title={`${areaId} ${areaTitle}`}>
+  <h1 id="jd-id">{areaId} {areaTitle}</h1>
+  <button id="copy-jd-id">Copy</button>
+
+  <div>
+    {
+      categoryData.map((category) => (
+        <li>
+          {category.categoryId} {category.categoryTitle}
+        </li>
+      ))
+    }
+  </div>
+</Layout>
+<style></style>
+
+<script>
+  // @ts-ignore
+  document.getElementById("copy-jd-id").addEventListener("click", function () {
+    // Get the text from the div
+    // @ts-ignore
+    const textToCopy = document.getElementById("jd-id").innerText;
+
+    // Copy the text to the clipboard
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        alert("Text copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+  });
+</script>
