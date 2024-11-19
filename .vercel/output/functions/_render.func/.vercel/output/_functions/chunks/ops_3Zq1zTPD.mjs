@@ -1,0 +1,14 @@
+const id = "ops";
+const collection = "data";
+const data = [{ id: "13.11+01", title: "Ops manual: capture income, expense, or liability", youtube: "https://www.youtube.com/embed/1Q2J3Z2Y4Z4", purpose: "To capture income, expense, or [liability](/ops/13.12/) in the accounting system.\n\n- This is\n- a list\n- of items", diagram: "https://www.lucidchart.com/publicSegments/view/7b3b3b3e-3b7b-4b3b-8b3b-3b7b3b3b3b3b", trigger: "When a transaction occurs that involves income, expense, or liability.", inputs: "The transaction details.", process: "1. Open the accounting system.\n2. Select the appropriate module (e.g., income, expense, liability).\n3. Enter the transaction details (e.g., date, amount, description).\n4. Save the transaction.", outputs: "The transaction is recorded in the accounting system." }, { id: "13.12", title: "Thirteen twelve", youtube: "https://www.youtube.com/embed/1Q2J3Z2Y4Z4", purpose: "To capture income, expense, or liability in the accounting system.", diagram: "https://www.lucidchart.com/publicSegments/view/7b3b3b3e-3b7b-4b3b-8b3b-3b7b3b3b3b3b", trigger: "When a transaction occurs that involves income, expense, or liability.", inputs: "The transaction details.", process: "1. Open the accounting system.\n2. Select the appropriate module (e.g., income, expense, liability).\n3. Enter the transaction details (e.g., date, amount, description).\n4. Save the transaction.", outputs: "The transaction is recorded in the accounting system." }, { id: "13.13", title: "Thirteen thirteen", youtube: "https://www.youtube.com/embed/1Q2J3Z2Y4Z4", purpose: "To capture income, expense, or liability in the accounting system. For more details, visit <a href='/ops/13.12/'>this link</a>.", diagram: "https://www.lucidchart.com/publicSegments/view/7b3b3b3e-3b7b-4b3b-8b3b-3b7b3b3b3b3b", trigger: "When a transaction occurs that involves income, expense, or liability.", inputs: "The transaction details.", process: "1. Open the accounting system.\n2. Select the appropriate module (e.g., income, expense, liability).\n3. Enter the transaction details (e.g., date, amount, description).\n4. Save the transaction.", outputs: "The transaction is recorded in the accounting system." }];
+const _internal = {
+  type: "data",
+  filePath: "/Users/john/dev/decimal.business/memberwww.decimal.business/src/content/data/ops.json",
+  rawData: ""
+};
+export {
+  _internal,
+  collection,
+  data,
+  id
+};

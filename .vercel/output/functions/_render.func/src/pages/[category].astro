@@ -1,0 +1,122 @@
+---
+// Modules
+import { marked } from "marked";
+// Layout
+import Layout from "../layouts/Layout.astro";
+// Data
+import sb from "../content/data/smallbusiness.ts";
+
+/**
+ *
+ * Each category page gets rendered to /CC for the simplest possible
+ * experience. There's no clever sub-foldering (although there's nothing
+ * stopping us from doing that _as well_).
+ *
+ * This way we don't need a _redirects or whatever, we can just use this
+ * as the canonical URL.
+ *
+ * The category page should show all IDs in that category. Also maybe
+ * with their description? That would probably be nice.
+ */
+
+export async function getStaticPaths() {
+  /**
+   * All we need to do here is return an array of objects that have
+   * the category param set. This becomes the list of pages available at
+   * /[category].
+   *
+   * If we also want data available to the page when it's rendered,
+   * we pull that out here and load it on to props.
+   */
+
+  interface PageParams {
+    category: string;
+  }
+  interface PageProps {
+    categoryId: string;
+    categoryTitle: string;
+    categoryDescription: string; // Optional in the schema, but we'll always have one here
+    idData?: { idNumber: string; idTitle: string; idDescription: string }[];
+  }
+  interface PageData {
+    params: PageParams;
+    props: PageProps;
+  }
+  const pageData: PageData[] = [];
+
+  const areas = Object.keys(sb.areas);
+
+  for (const area of areas) {
+    // const areaId = sb.areas[area].id;
+    // const areaTitle = sb.areas[area].title;
+
+    if (sb.areas[area].categories) {
+      const categories = Object.keys(sb.areas[area].categories);
+      for (const category of categories) {
+        const categoryId = sb.areas[area].categories[category].id;
+        const categoryTitle = sb.areas[area].categories[category].title;
+        // Optional in the schema, but we know it exists on sb.
+        const categoryDescription =
+          sb.areas[area].categories[category].description!;
+
+        const ids = sb.areas[area].categories[category].ids || {};
+        const idData = Object.keys(ids).map((id) => ({
+          idNumber: id,
+          idTitle: ids[id].title,
+          idDescription: ids[id].description || "",
+        }));
+
+        pageData.push({
+          params: { category: categoryId },
+          props: { categoryId, categoryTitle, categoryDescription, idData },
+        });
+      }
+    }
+  }
+
+  return pageData;
+}
+
+const { category: categoryId } = Astro.params;
+const { categoryTitle, categoryDescription, idData = [] } = Astro.props;
+const mdCategoryDescription = await marked.parse(categoryDescription);
+---
+
+<Layout title={`${categoryId} ${categoryTitle}`}>
+  <h1 id="jd-id">{categoryId} {categoryTitle}</h1>
+  <button id="copy-jd-id">Copy</button>
+
+  <div class="category-description" set:html={mdCategoryDescription} />
+
+  <div>
+    {
+      idData.map((i) => (
+        <li>
+          <a href={i.idNumber}>
+            {i.idNumber} {i.idTitle}
+          </a>
+        </li>
+      ))
+    }
+  </div>
+</Layout>
+<style></style>
+
+<script>
+  // @ts-ignore
+  document.getElementById("copy-jd-id").addEventListener("click", function () {
+    // Get the text from the div
+    // @ts-ignore
+    const textToCopy = document.getElementById("jd-id").innerText;
+
+    // Copy the text to the clipboard
+    navigator.clipboard
+      .writeText(textToCopy)
+      .then(() => {
+        alert("Text copied to clipboard!");
+      })
+      .catch((err) => {
+        console.error("Failed to copy text: ", err);
+      });
+  });
+</script>
