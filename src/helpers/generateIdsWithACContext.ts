@@ -1,7 +1,7 @@
 import { marked } from "marked";
 import type { JohnnyDecimalSystem } from "../types/jd_schema";
 
-interface IDsWithACContext {
+export interface IDWithACContext {
   areaId: string;
   areaTitle: string;
   categoryId: string;
@@ -24,11 +24,15 @@ interface IDsWithACContext {
  *
  * The idea is that this is a basically flat array of objects that you can
  * query when you want to know something about an ID.
+ *
+ * For now, this thing converts Markdown to HTML. But I'm even wondering if
+ * it should do that. Anyway, it _does not_ do anything extra, like convert
+ * [[wiki]] links to actual links. Do that closer to the component.
  */
 async function generateIdsWithACContext(
   system: JohnnyDecimalSystem
-): Promise<IDsWithACContext[]> {
-  const idsWithACContext: IDsWithACContext[] = [];
+): Promise<IDWithACContext[]> {
+  const idsWithACContext: IDWithACContext[] = [];
 
   const areas = Object.keys(system.areas);
 

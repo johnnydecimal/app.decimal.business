@@ -1,7 +1,9 @@
 ---
 import { marked } from "marked";
 import Layout from "../layouts/Layout.astro";
-import generateIdsWithACContext from "../helpers/generateIdsWithACContext.ts";
+import generateIdsWithACContext, {
+  type IDWithACContext,
+} from "../helpers/generateIdsWithACContext.ts";
 
 /**
  * Each standard page gets rendered to /AC.ID for the simplest possible
@@ -51,25 +53,40 @@ export async function getStaticPaths() {
 
   const pageData: PageData[] = [];
 
-  const generatedIdsWithACContext = await generateIdsWithACContext(sb);
-  console.log(generatedIdsWithACContext);
+  const idsWithACContext = await generateIdsWithACContext(sb);
+  // console.log(idsWithWikiLinks);
 
-  for (const id of generatedIdsWithACContext) {
+  /**
+   * Convert [[wiki-links]] in the text to <a href="..."> full links.
+   */
+  function wikiLinkify(text?: string, idsWithACContext: IDWithACContext[]) {
+    if (!text) {
+      return "";
+    }
+    return text.replace(/\[\[(\d{2}.\d{2})\]\]/g, (_match, p1) => {
+      const foundId = idsWithACContext.find((obj) => obj.idNumber === p1);
+      // Use idTitle if found, otherwise fall back to just displaying the number
+      const idTitle = foundId ? foundId.idTitle : p1;
+      return `<a href="${p1}">${p1} ${idTitle}</a>`;
+    });
+  }
+
+  for (const id of idsWithACContext) {
     pageData.push({
       params: { id: id.idNumber },
       props: {
-        areaId: id.areaId,
-        areaTitle: id.areaTitle,
-        categoryId: id.categoryId,
-        categoryTitle: id.categoryTitle,
-        idNumber: id.idNumber,
-        idTitle: id.idTitle,
-        idDescription: id.idDescription,
-        examples: id.examples,
-        moreInfo: id.moreInfo,
-        exceptions: id.exceptions,
-        alsoSee: id.alsoSee,
-        rationale: id.rationale,
+        areaId: wikiLinkify(id.areaId, idsWithACContext),
+        areaTitle: wikiLinkify(id.areaTitle, idsWithACContext),
+        categoryId: wikiLinkify(id.categoryId, idsWithACContext),
+        categoryTitle: wikiLinkify(id.categoryTitle, idsWithACContext),
+        idNumber: wikiLinkify(id.idNumber, idsWithACContext),
+        idTitle: wikiLinkify(id.idTitle, idsWithACContext),
+        idDescription: wikiLinkify(id.idDescription, idsWithACContext),
+        examples: wikiLinkify(id.examples, idsWithACContext),
+        moreInfo: wikiLinkify(id.moreInfo, idsWithACContext),
+        exceptions: wikiLinkify(id.exceptions, idsWithACContext),
+        alsoSee: wikiLinkify(id.alsoSee, idsWithACContext),
+        rationale: wikiLinkify(id.rationale, idsWithACContext),
       },
     });
   }
