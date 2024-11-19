@@ -23,6 +23,8 @@ export async function getStaticPaths() {
    *
    * If we also want data available to the page when it's rendered,
    * we pull that out here and load it on to props.
+   *
+   * Update: we've factored that out to generateIdsWithACContext().
    */
 
   interface PageParams {
