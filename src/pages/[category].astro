@@ -1,6 +1,9 @@
 ---
-// import { marked } from "marked";
+// Modules
+import { marked } from "marked";
+// Layout
 import Layout from "../layouts/Layout.astro";
+// Data
 import sb from "../content/data/smallbusiness.ts";
 
 /**
@@ -32,6 +35,7 @@ export async function getStaticPaths() {
   interface PageProps {
     categoryId: string;
     categoryTitle: string;
+    categoryDescription: string; // Optional in the schema, but we'll always have one here
     idData?: { idNumber: string; idTitle: string; idDescription: string }[];
   }
   interface PageData {
@@ -51,6 +55,9 @@ export async function getStaticPaths() {
       for (const category of categories) {
         const categoryId = sb.areas[area].categories[category].id;
         const categoryTitle = sb.areas[area].categories[category].title;
+        // Optional in the schema, but we know it exists on sb.
+        const categoryDescription =
+          sb.areas[area].categories[category].description!;
 
         const ids = sb.areas[area].categories[category].ids || {};
         const idData = Object.keys(ids).map((id) => ({
@@ -61,7 +68,7 @@ export async function getStaticPaths() {
 
         pageData.push({
           params: { category: categoryId },
-          props: { categoryId, categoryTitle, idData },
+          props: { categoryId, categoryTitle, categoryDescription, idData },
         });
       }
     }
@@ -71,12 +78,15 @@ export async function getStaticPaths() {
 }
 
 const { category: categoryId } = Astro.params;
-const { categoryTitle, idData = [] } = Astro.props;
+const { categoryTitle, categoryDescription, idData = [] } = Astro.props;
+const mdCategoryDescription = await marked.parse(categoryDescription);
 ---
 
 <Layout title={`${categoryId} ${categoryTitle}`}>
   <h1 id="jd-id">{categoryId} {categoryTitle}</h1>
   <button id="copy-jd-id">Copy</button>
+
+  <div class="category-description" set:html={mdCategoryDescription} />
 
   <div>
     {

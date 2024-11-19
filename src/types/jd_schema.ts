@@ -22,6 +22,8 @@ export interface Area {
 export interface Category {
   id: string;
   title: string;
+  description?: string; // Remember this is a global standard: you don't _have_ to have a description
+  emoji?: string;
   metadata: ACMetadata;
   ids?: {
     [id: string]: ID;
@@ -59,8 +61,6 @@ interface Dates {
 }
 
 export interface ACMetadata extends Dates {
-  // no description -- this lives on the relevant .00 note
-  emoji?: string; // think of this as a global standard: you don't _have to_ have an emoji
   /* TODO: think about AC versioning.
      Is it MAJOR for area, MINOR for category, PATCH?
      1.1.0 = first area release

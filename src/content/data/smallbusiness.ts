@@ -16,6 +16,9 @@ const smallBusiness: JohnnyDecimalSystem = {
         "11": {
           id: "11",
           title: "The business & its people",
+          description:
+            "This category is _all about_ the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
+          emoji: "🙋", // person raising one hand
           metadata: {
             createdDate: "2024-11-18",
             updatedDate: "2024-11-18",
