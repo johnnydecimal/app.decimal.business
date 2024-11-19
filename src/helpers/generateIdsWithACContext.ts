@@ -59,7 +59,7 @@ async function generateIdsWithACContext(
         const idTitle = system.areas[area].categories[category].ids[id].title;
         const idDescription = system.areas[area].categories[category].ids[id]
           .description
-          ? marked.parse(
+          ? await marked.parse(
               system.areas[area].categories[category].ids[id].description
             )
           : undefined;
