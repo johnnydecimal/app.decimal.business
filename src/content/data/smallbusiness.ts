@@ -68,7 +68,7 @@ const smallBusiness: JohnnyDecimalSystem = {
               id: "11.11",
               title: "Structure & registrations",
               description:
-                "Proof of the business’ existence, trading structure, and name – where it all begins! ",
+                "Proof of the business’ existence, **trading MODIFIED TEST structure**, `and name` -- where it all begins! ",
               metadata: {
                 createdDate: "2024-11-19",
                 updatedDate: "2024-11-19",

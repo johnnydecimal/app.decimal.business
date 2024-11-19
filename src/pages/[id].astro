@@ -1,6 +1,8 @@
 ---
 import { marked } from "marked";
 import Layout from "../layouts/Layout.astro";
+import generateIdsWithACContext from "../helpers/generateIds";
+
 /**
  * Each standard page gets rendered to /AC.ID for the simplest possible
  * experience. There's no clever sub-foldering (although there's nothing
@@ -11,6 +13,7 @@ import Layout from "../layouts/Layout.astro";
  */
 
 import sb from "../content/data/smallbusiness.ts";
+import { undefined } from "astro:schema";
 
 export async function getStaticPaths() {
   /**
@@ -72,8 +75,12 @@ export async function getStaticPaths() {
         }
         const idNumber = sb.areas[area].categories[category].ids[id].id;
         const idTitle = sb.areas[area].categories[category].ids[id].title;
-        const idDescription =
-          sb.areas[area].categories[category].ids[id].description;
+        const idDescription = sb.areas[area].categories[category].ids[id]
+          .description
+          ? marked.parse(
+              sb.areas[area].categories[category].ids[id].description
+            )
+          : undefined;
 
         let mdExamples, mdMoreInfo, mdExceptions, mdAlsoSee, mdRationale;
         const sbDescriptions =
@@ -145,7 +152,7 @@ const {
     idDescription && (
       <>
         <h3>Description</h3>
-        <p>{idDescription}</p>
+        <div set:html={idDescription} />
       </>
     )
   }
