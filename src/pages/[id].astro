@@ -1,9 +1,11 @@
 ---
-import { marked } from "marked";
+// Layout
 import Layout from "../layouts/Layout.astro";
-import generateIdsWithACContext, {
-  type IDWithACContext,
-} from "../helpers/generateIdsWithACContext.ts";
+// Helpers
+import generateIdsWithACContext from "../helpers/generateIdsWithACContext.ts";
+import wikiLinkify from "../helpers/wikiLinkify";
+// Data
+import sb from "../content/data/smallbusiness.ts";
 
 /**
  * Each standard page gets rendered to /AC.ID for the simplest possible
@@ -13,9 +15,6 @@ import generateIdsWithACContext, {
  * This way we don't need a _redirects or whatever, we can just use this
  * as the canonical URL.
  */
-
-import sb from "../content/data/smallbusiness.ts";
-import { undefined } from "astro:schema";
 
 export async function getStaticPaths() {
   /**
@@ -54,22 +53,6 @@ export async function getStaticPaths() {
   const pageData: PageData[] = [];
 
   const idsWithACContext = await generateIdsWithACContext(sb);
-  // console.log(idsWithWikiLinks);
-
-  /**
-   * Convert [[wiki-links]] in the text to <a href="..."> full links.
-   */
-  function wikiLinkify(text?: string, idsWithACContext: IDWithACContext[]) {
-    if (!text) {
-      return "";
-    }
-    return text.replace(/\[\[(\d{2}.\d{2})\]\]/g, (_match, p1) => {
-      const foundId = idsWithACContext.find((obj) => obj.idNumber === p1);
-      // Use idTitle if found, otherwise fall back to just displaying the number
-      const idTitle = foundId ? foundId.idTitle : p1;
-      return `<a href="${p1}">${p1} ${idTitle}</a>`;
-    });
-  }
 
   for (const id of idsWithACContext) {
     pageData.push({
@@ -81,12 +64,14 @@ export async function getStaticPaths() {
         categoryTitle: wikiLinkify(id.categoryTitle, idsWithACContext),
         idNumber: wikiLinkify(id.idNumber, idsWithACContext),
         idTitle: wikiLinkify(id.idTitle, idsWithACContext),
-        idDescription: wikiLinkify(id.idDescription, idsWithACContext),
-        examples: wikiLinkify(id.examples, idsWithACContext),
-        moreInfo: wikiLinkify(id.moreInfo, idsWithACContext),
-        exceptions: wikiLinkify(id.exceptions, idsWithACContext),
-        alsoSee: wikiLinkify(id.alsoSee, idsWithACContext),
-        rationale: wikiLinkify(id.rationale, idsWithACContext),
+        idDescription:
+          id.idDescription && wikiLinkify(id.idDescription, idsWithACContext),
+        examples: id.examples && wikiLinkify(id.examples, idsWithACContext),
+        moreInfo: id.moreInfo && wikiLinkify(id.moreInfo, idsWithACContext),
+        exceptions:
+          id.exceptions && wikiLinkify(id.exceptions, idsWithACContext),
+        alsoSee: id.alsoSee && wikiLinkify(id.alsoSee, idsWithACContext),
+        rationale: id.rationale && wikiLinkify(id.rationale, idsWithACContext),
       },
     });
   }
