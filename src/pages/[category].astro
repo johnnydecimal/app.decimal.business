@@ -1,7 +1,10 @@
 ---
-import { marked } from "marked";
+// import { marked } from "marked";
 import Layout from "../layouts/Layout.astro";
+import sb from "../content/data/smallbusiness.ts";
+
 /**
+ *
  * Each category page gets rendered to /CC for the simplest possible
  * experience. There's no clever sub-foldering (although there's nothing
  * stopping us from doing that _as well_).
@@ -12,9 +15,6 @@ import Layout from "../layouts/Layout.astro";
  * The category page should show all IDs in that category. Also maybe
  * with their description? That would probably be nice.
  */
-
-import sb from "../content/data/smallbusiness.ts";
-import { undefined } from "astro:schema";
 
 export async function getStaticPaths() {
   /**
@@ -43,8 +43,8 @@ export async function getStaticPaths() {
   const areas = Object.keys(sb.areas);
 
   for (const area of areas) {
-    const areaId = sb.areas[area].id;
-    const areaTitle = sb.areas[area].title;
+    // const areaId = sb.areas[area].id;
+    // const areaTitle = sb.areas[area].title;
 
     if (sb.areas[area].categories) {
       const categories = Object.keys(sb.areas[area].categories);

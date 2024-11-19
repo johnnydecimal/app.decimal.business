@@ -79,7 +79,7 @@ const smallBusiness: JohnnyDecimalSystem = {
                     "Business entity registrations; trading name registrations; income and sales tax registrations; trademark records for trading names; company director identity applications. -- ",
                   moreInfo:
                     "This ID is about your business being born. Think of it like your birth certificate and proof of name. Deciding on a trading structure and name are the first steps to starting a business. This affects how you will operate and the various obligations you will have, especially government taxes. Whether you want to trade alone under your own name, or as a company with staff and its own name, you will have to complete certain registrations to ‘exist’. The more complicated the structure, the more paperwork there will be. But for many people with simple structures, once you’re set up, this ID should be pretty quiet (apart from ensuring registrations stay active). ",
-                  Exceptions:
+                  exceptions:
                     "Put product or brand-related patents, trademarks, and copyrights in [[XX.XX]]. ",
                   alsoSee: "",
                   rationale:
@@ -150,7 +150,7 @@ const smallBusiness: JohnnyDecimalSystem = {
                     "Statutory declarations; affidavits; documents related to proof of ownership; non-disclosure or confidentiality agreements; change of company director paperwork; contracts that don’t fit elsewhere; court appearances. ",
                   moreInfo:
                     "It’s hard to predict what other core documents a business may have around the world. Or any legal matters that may need to be dealt with. But if it’s important and doesn’t fit elsewhere, put it here and note its location in your JDex. ",
-                  Exceptions:
+                  exceptions:
                     "We’re still dealing with the business entity here, not employees, products, or suppliers. Any legal matters or ‘serious’ documents related to those things live with them. ",
                   alsoSee: "",
                   rationale: "",
@@ -239,7 +239,7 @@ const smallBusiness: JohnnyDecimalSystem = {
                     "Public liability insurance; professional indemnity insurance; workers compensation insurance. ",
                   moreInfo:
                     "This is a place for any insurance that covers the business entity interacting with the world. And overall coverage for staff while they are at work. This is also where to store incident reports that might become part of a claim. For example, if a staff member is injured at work put the details and medical report here. ",
-                  Exceptions:
+                  exceptions:
                     "Staff medical insurance as part of a salary package goes in [[XX.XX]]. Building (structural and/or contents) or land insurance goes in [[12.12]]. Vehicle insurance goes in [[12.42]]. Financial insurance goes in [[13.XX]]. IT insurance goes in [[14.XX]]. Product insurance goes in [[2X.XX]]. ",
                   alsoSee: "",
                   rationale:
@@ -352,7 +352,7 @@ const smallBusiness: JohnnyDecimalSystem = {
                     "Customer service policy; refund policy; retail terms and conditions; privacy policy; disclaimers; timely payment process for suppliers; environmental and sustainability policy; equal opportunity employer statement; anti-slavery or land acknowledgement statements. ",
                   moreInfo:
                     "How do you want your business to be perceived by others? This is a place for figuring this out and writing it down. We’re not talking about operations as such, or nice things your business might do for the community. It’s for any official policies or statements, or personal stances on how the business will behave. For instance, on your website you might have administrative policies or social, ethical, or environmental statements. Or maybe you have a policy to use local suppliers and pay their invoices early because you want to support others like you. ",
-                  Exceptions:
+                  exceptions:
                     "This is not related to front office operations, that’s at [[12.30]]. This is not related to being part of a community, that’s at [[12.50]]. ",
                   alsoSee: "",
                   rationale: "",
@@ -483,7 +483,7 @@ const smallBusiness: JohnnyDecimalSystem = {
                     "The offboarding process and paperwork; checklists for handing things back; exit interview templates; handover documents and meetings; notice periods for resignations, redundancies, or dismissals. ",
                   moreInfo:
                     "When staff move on it’s important to have a process in place leading up to their last day – the opposite of onboarding. Clearly communicate your expectations of what they need to achieve before they go and what you will do in return. This includes handing the role over to another staff member in a timely manner if required. While this is a normal part of running a business, it can sometimes be sad or stressful. Review your local employment laws if you have to deal with a dismissal or redundancy. And remember to seek advice or support if you need help. ",
-                  Exceptions:
+                  exceptions:
                     "Calculate final payouts over in [[13.XX]] and record the details in [[11.42]] to close the loop. If you want to organise a farewell social gathering or gift, that’s in [[15.XX]]. ",
                   alsoSee:
                     "[[14.XX]] for collecting devices and closing accounts. ",
@@ -506,7 +506,7 @@ const smallBusiness: JohnnyDecimalSystem = {
                     "Dogs or horses that work in tourism or muster livestock; birds who help with biological pest control; dogs trained for a service such as companionship or search and rescue; truffle pigs or dogs. ",
                   moreInfo:
                     "We’re not experts so it’s hard to predict what subfolders you might need. It will depend on the animals you have, what they do, and where you live. Some basic things to consider include: - Health records, registrations, and other important documents.\n- Insurance and claims.\n- Nutrition and exercise.\n- Pest control and grooming.\n- Training and discipline.\n- Equipment and shelter.\n- First aid and contacts for general healthcare and medical emergencies.\nIf this is integral to your business and you need more room, feel free to use the spare IDs in this section. We’d love it if you chat to us first on the Discord so we can help you get the best result (which will help other people who need this). ",
-                  Exceptions:
+                  exceptions:
                     "If you’re a farmer and sell livestock or other animal products such as wool, milk, eggs, or genetic material for breeding, then how you manage all of that should be in [[20-29]] or another area that you create yourself (or we can help!). ",
                   alsoSee: "",
                   rationale:
