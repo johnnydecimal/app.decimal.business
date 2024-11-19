@@ -57,8 +57,12 @@ async function generateIdsWithACContext(
         }
         const idNumber = system.areas[area].categories[category].ids[id].id;
         const idTitle = system.areas[area].categories[category].ids[id].title;
-        const idDescription =
-          system.areas[area].categories[category].ids[id].description;
+        const idDescription = system.areas[area].categories[category].ids[id]
+          .description
+          ? marked.parse(
+              system.areas[area].categories[category].ids[id].description
+            )
+          : undefined;
 
         let mdExamples, mdMoreInfo, mdExceptions, mdAlsoSee, mdRationale;
         const sbDescriptions =
