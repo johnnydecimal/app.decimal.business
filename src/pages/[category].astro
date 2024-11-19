@@ -35,7 +35,7 @@ export async function getStaticPaths() {
   interface PageProps {
     categoryId: string;
     categoryTitle: string;
-    categoryDescription: string; // Optional in the schema, but we'll always have one here
+    categoryDescription?: string;
     idData?: { idNumber: string; idTitle: string; idDescription: string }[];
   }
   interface PageData {
@@ -57,7 +57,7 @@ export async function getStaticPaths() {
         const categoryTitle = sb.areas[area].categories[category].title;
         // Optional in the schema, but we know it exists on sb.
         const categoryDescription =
-          sb.areas[area].categories[category].description!;
+          sb.areas[area].categories[category].description ?? undefined;
 
         const ids = sb.areas[area].categories[category].ids || {};
         const idData = Object.keys(ids).map((id) => ({
@@ -68,7 +68,12 @@ export async function getStaticPaths() {
 
         pageData.push({
           params: { category: categoryId },
-          props: { categoryId, categoryTitle, categoryDescription, idData },
+          props: {
+            categoryId,
+            categoryTitle,
+            categoryDescription: categoryDescription,
+            idData,
+          },
         });
       }
     }
@@ -79,7 +84,9 @@ export async function getStaticPaths() {
 
 const { category: categoryId } = Astro.params;
 const { categoryTitle, categoryDescription, idData = [] } = Astro.props;
-const mdCategoryDescription = await marked.parse(categoryDescription);
+const mdCategoryDescription = categoryDescription
+  ? await marked.parse(categoryDescription)
+  : undefined;
 ---
 
 <Layout title={`${categoryId} ${categoryTitle}`}>
