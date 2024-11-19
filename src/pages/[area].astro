@@ -79,7 +79,7 @@ const { areaTitle, categoryData = [] } = Astro.props;
     {
       categoryData.map((c) => (
         <li>
-          <a href={c.categoryId}>
+          <a href=`/${c.categoryId}`>
             {c.categoryId} {c.categoryTitle}
           </a>
         </li>
