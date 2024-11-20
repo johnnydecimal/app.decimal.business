@@ -78,4 +78,16 @@
   - first step: install the Netlify dingus but use hybrid routing so nothing actually changes; great
   - now the Astro quickstart, which doesn't mention React at all
   - https://clerk.com/docs/quickstarts/astro
-  - then don't forget https://clerk.com/docs/references/astro/hybrid-rendering#hybrid-output-mode
+  - then don't forget https://clerk.com/docs/references/astro/hybrid-rendering#hybrid-output-mode **no** actually nothing to do
+  - errrrr ... okay that basically works. let's commit
+- 2d2fdb852ef772964b3f35e3617ab4105b19505f
+  - now, nothing is protected. but we expected that
+  - let's protect some routes https://clerk.com/docs/references/astro/clerk-middleware
+  - let's do anything starting /11 so we can test that /12+ still works
+  - add our .env vars to Netlify
+  - then we might need envs for SIGN_IN etc.
+  - aha yeah that's why we're in that nasty loop
+  - added vars, does it need a redeploy?
+  - protecting routes futzed it right up. unprotect
+  - you idiot. routes 12.x don't exist. okay let's protect 11.1\*, idea is just to see if that works at a very basic level
+  - does. and in local dev it seems to redirect nicely from /11.11 also...
