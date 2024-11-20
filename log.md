@@ -74,3 +74,8 @@
 - git reset --hard a796e9f94a9b8ae9545c9e05ab22630fad246973
   - ooh careful doing that, you almost lost this file!
   - let's commit and do shit on branches from now on
+- alright, from `main` we're now on branch `one`
+  - first step: install the Netlify dingus but use hybrid routing so nothing actually changes; great
+  - now the Astro quickstart, which doesn't mention React at all
+  - https://clerk.com/docs/quickstarts/astro
+  - then don't forget https://clerk.com/docs/references/astro/hybrid-rendering#hybrid-output-mode
