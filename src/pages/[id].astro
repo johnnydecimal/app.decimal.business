@@ -1,86 +1,38 @@
 ---
-// Layout
-// import Layout from "../layouts/Layout.astro";
 import Layout from "../layouts/SiteLayout.astro";
-// Helpers
 import generateIdsWithACContext from "../helpers/generateIdsWithACContext.ts";
 import wikiLinkify from "../helpers/wikiLinkify";
-// Data
 import sb from "../content/data/smallbusiness.ts";
 
-/**
- * Each standard page gets rendered to /AC.ID for the simplest possible
- * experience. There's no clever sub-foldering (although there's nothing
- * stopping us from doing that _as well_).
- *
- * This way we don't need a _redirects or whatever, we can just use this
- * as the canonical URL.
- */
+const idsWithACContext = await generateIdsWithACContext(sb);
+const { id } = Astro.params;
 
-export async function getStaticPaths() {
-  /**
-   * All we need to do here is return an array of objects that have
-   * the id param set. This becomes the list of pages available at
-   * /[id].
-   *
-   * If we also want data available to the page when it's rendered,
-   * we pull that out here and load it on to props.
-   *
-   * Update: we've factored that out to generateIdsWithACContext().
-   */
-
-  interface PageParams {
-    id: string;
-  }
-  interface PageProps {
-    areaId: string;
-    areaTitle: string;
-    categoryId: string;
-    categoryTitle: string;
-    idNumber: string;
-    idTitle: string;
-    idDescription?: string;
-    examples?: string;
-    moreInfo?: string;
-    exceptions?: string;
-    alsoSee?: string;
-    rationale?: string;
-  }
-  interface PageData {
-    params: PageParams;
-    props: PageProps;
-  }
-
-  const pageData: PageData[] = [];
-
-  const idsWithACContext = await generateIdsWithACContext(sb);
-
-  for (const id of idsWithACContext) {
-    pageData.push({
-      params: { id: id.idNumber },
-      props: {
-        areaId: wikiLinkify(id.areaId, idsWithACContext),
-        areaTitle: wikiLinkify(id.areaTitle, idsWithACContext),
-        categoryId: wikiLinkify(id.categoryId, idsWithACContext),
-        categoryTitle: wikiLinkify(id.categoryTitle, idsWithACContext),
-        idNumber: wikiLinkify(id.idNumber, idsWithACContext),
-        idTitle: wikiLinkify(id.idTitle, idsWithACContext),
-        idDescription:
-          id.idDescription && wikiLinkify(id.idDescription, idsWithACContext),
-        examples: id.examples && wikiLinkify(id.examples, idsWithACContext),
-        moreInfo: id.moreInfo && wikiLinkify(id.moreInfo, idsWithACContext),
-        exceptions:
-          id.exceptions && wikiLinkify(id.exceptions, idsWithACContext),
-        alsoSee: id.alsoSee && wikiLinkify(id.alsoSee, idsWithACContext),
-        rationale: id.rationale && wikiLinkify(id.rationale, idsWithACContext),
-      },
-    });
-  }
-
-  return pageData;
+const pageData = idsWithACContext.find((item) => item.idNumber === id);
+if (!pageData) {
+  return Astro.redirect("/404");
 }
 
-const { id } = Astro.params;
+const props = {
+  areaId: wikiLinkify(pageData.areaId, idsWithACContext),
+  areaTitle: wikiLinkify(pageData.areaTitle, idsWithACContext),
+  categoryId: wikiLinkify(pageData.categoryId, idsWithACContext),
+  categoryTitle: wikiLinkify(pageData.categoryTitle, idsWithACContext),
+  idNumber: wikiLinkify(pageData.idNumber, idsWithACContext),
+  idTitle: wikiLinkify(pageData.idTitle, idsWithACContext),
+  idDescription:
+    pageData.idDescription &&
+    wikiLinkify(pageData.idDescription, idsWithACContext),
+  examples:
+    pageData.examples && wikiLinkify(pageData.examples, idsWithACContext),
+  moreInfo:
+    pageData.moreInfo && wikiLinkify(pageData.moreInfo, idsWithACContext),
+  exceptions:
+    pageData.exceptions && wikiLinkify(pageData.exceptions, idsWithACContext),
+  alsoSee: pageData.alsoSee && wikiLinkify(pageData.alsoSee, idsWithACContext),
+  rationale:
+    pageData.rationale && wikiLinkify(pageData.rationale, idsWithACContext),
+};
+
 const {
   areaId,
   areaTitle,
@@ -93,7 +45,7 @@ const {
   exceptions,
   alsoSee,
   rationale,
-} = Astro.props;
+} = props;
 ---
 
 <Layout title={`${id} ${idTitle}`}>
@@ -101,8 +53,10 @@ const {
   <button id="copy-jd-id">Copy</button>
 
   <div class="id-title">
-    <a href=`/${areaId}`>{areaId} {areaTitle}</a> > <a href=`/${categoryId}`
-      >{categoryId} {categoryTitle}</a
+    <a href={`/${areaId}`}>{areaId} {areaTitle}</a> &gt; <a
+      href={`/${categoryId}`}
+    >
+      {categoryId} {categoryTitle}</a
     >
   </div>
 
@@ -159,13 +113,8 @@ const {
 <style></style>
 
 <script>
-  // @ts-ignore
-  document.getElementById("copy-jd-id").addEventListener("click", function () {
-    // Get the text from the div
-    // @ts-ignore
-    const textToCopy = document.getElementById("jd-id").innerText;
-
-    // Copy the text to the clipboard
+  document.getElementById("copy-jd-id")!.addEventListener("click", function () {
+    const textToCopy = document.getElementById("jd-id")!.innerText;
     navigator.clipboard
       .writeText(textToCopy)
       .then(() => {

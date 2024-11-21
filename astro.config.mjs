@@ -15,6 +15,6 @@ export default defineConfig({
 
   site: "https://app.johnnydecimal.com",
   integrations: [mdx(), sitemap(), clerk()],
-  output: "hybrid",
+  output: "server",
   adapter: netlify(),
 });
