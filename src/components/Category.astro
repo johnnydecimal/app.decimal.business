@@ -37,9 +37,7 @@ interface Props {
 const { category } = Astro.props;
 
 // - To check that the category exists, and 404 if not.
-if (!sb[category]) {
-  throw new Error("404: Not found");
-}
+const categoryExists = !!sb[category];
 
 // - The whole system to reference. Just import it directly.
 import sb from "@content/data/smallBusinessFlat";
@@ -48,4 +46,4 @@ import sb from "@content/data/smallBusinessFlat";
 const categoryTitle = sb[category]?.title;
 ---
 
-<div></div>
+{categoryExists ? <div>{category}</div> : <div>404</div>}
