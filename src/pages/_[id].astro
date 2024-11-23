@@ -4,31 +4,15 @@ import generateIdsWithACContext from "@helpers/generateIdsWithACContext.ts";
 import wikiLinkify from "@helpers/wikiLinkify";
 import sb from "@content/data/smallbusiness.ts";
 import sbFlat from "@content/data/smallBusinessFlat.ts";
-import type { EntryType } from "@content/data/smallBusinessFlat.ts";
 
-const { slug } = Astro.params;
+const idsWithACContext = await generateIdsWithACContext(sb);
+const { id } = Astro.params;
 
-/**
- * This page handles the display of all areas, categories, and IDs. So first
- * we need to figure out which of those things we want. Then we fetch it,
- * then we display it. This is all done with components.
- *
- * If it doesn't exist, show our 04.04.
- *
- * We also need to handle the default case where the user visits /jdex.
- */
-
-let entryType: EntryType | null = null;
-
-if (slug?.match(/^[0-9]0-[0-9]9$/)) {
-  entryType = "area";
-} else if (slug?.match(/^\d\d$/)) {
-  entryType = "category";
-} else if (slug?.match(/^\d\d\.\d\d$/)) {
-  entryType = "id";
+const pageData = idsWithACContext.find((item) => item.idNumber === id);
+if (!pageData) {
+  return Astro.redirect("/404");
 }
 
-/*
 const props = {
   areaId: wikiLinkify(pageData.areaId, idsWithACContext),
   areaTitle: wikiLinkify(pageData.areaTitle, idsWithACContext),
@@ -63,14 +47,8 @@ const {
   alsoSee,
   rationale,
 } = props;
- */
 ---
 
-{entryType === "area" ? <div>area</div> : null}
-{entryType === "category" ? <div>category</div> : null}
-{entryType === "id" ? <div>id</div> : null}
-
-<!--
 <Layout title={`${id} ${idTitle}`}>
   <h1 id="jd-id">{id} {idTitle}</h1>
   <button id="copy-jd-id">Copy</button>
@@ -132,7 +110,6 @@ const {
     )
   }
 </Layout>
--->
 
 <style></style>
 
