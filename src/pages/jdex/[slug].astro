@@ -4,8 +4,17 @@ import generateIdsWithACContext from "@helpers/generateIdsWithACContext.ts";
 import wikiLinkify from "@helpers/wikiLinkify";
 import sb from "@content/data/smallbusiness.ts";
 import sbFlat from "@content/data/smallBusinessFlat.ts";
-import type { EntryType } from "@content/data/smallBusinessFlat.ts";
+import type {
+  EntryType,
+  AreaEntry,
+  CategoryEntry,
+  IdEntry,
+  FlattenedEntry,
+} from "@content/data/smallBusinessFlat.ts";
 import { findById } from "@content/data/smallBusinessFlat.ts";
+import ID from "@components/ID.astro";
+
+import Category from "@components/Category.astro";
 
 const { slug } = Astro.params;
 
@@ -20,48 +29,23 @@ const { slug } = Astro.params;
  */
 
 let entryType: EntryType | "default" | null = null;
-let thisEntry: any;
+let thisEntry: FlattenedEntry;
+let renderObject: any;
 
 if (slug?.match(/^[0-9]0-[0-9]9$/)) {
   entryType = "area";
-  thisEntry = findById(sbFlat, slug);
 } else if (slug?.match(/^\d\d$/)) {
   entryType = "category";
-  thisEntry = findById(sbFlat, slug);
 } else if (slug?.match(/^\d\d\.\d\d$/)) {
   entryType = "id";
-  thisEntry = findById(sbFlat, slug);
 } else {
   entryType = "default";
+  // None of the above
 }
-
-/*
-const props = {
-  areaId: wikiLinkify(pageData.areaId, idsWithACContext),
-  areaTitle: wikiLinkify(pageData.areaTitle, idsWithACContext),
-  categoryId: wikiLinkify(pageData.categoryId, idsWithACContext),
-  categoryTitle: wikiLinkify(pageData.categoryTitle, idsWithACContext),
-  idNumber: wikiLinkify(pageData.idNumber, idsWithACContext),
-  idTitle: wikiLinkify(pageData.idTitle, idsWithACContext),
-  idDescription:
-    pageData.idDescription &&
-    wikiLinkify(pageData.idDescription, idsWithACContext),
-  examples:
-    pageData.examples && wikiLinkify(pageData.examples, idsWithACContext),
-  moreInfo:
-    pageData.moreInfo && wikiLinkify(pageData.moreInfo, idsWithACContext),
-  exceptions:
-    pageData.exceptions && wikiLinkify(pageData.exceptions, idsWithACContext),
-  alsoSee: pageData.alsoSee && wikiLinkify(pageData.alsoSee, idsWithACContext),
-  rationale:
-    pageData.rationale && wikiLinkify(pageData.rationale, idsWithACContext),
-};
-
- */
 ---
 
 {entryType === "area" ? <div>area</div> : null}
-{entryType === "category" ? <div>category</div> : null}
+{entryType === "category" ? <Category category={slug!} /> : null}
 {entryType === "id" ? <div>id</div> : null}
 
 <!--
@@ -131,15 +115,15 @@ const props = {
 <style></style>
 
 <script>
-  document.getElementById("copy-jd-id")!.addEventListener("click", function () {
-    const textToCopy = document.getElementById("jd-id")!.innerText;
-    navigator.clipboard
-      .writeText(textToCopy)
-      .then(() => {
-        alert("Text copied to clipboard!");
-      })
-      .catch((err) => {
-        console.error("Failed to copy text: ", err);
-      });
-  });
+  // document.getElementById("copy-jd-id")!.addEventListener("click", function () {
+  //   const textToCopy = document.getElementById("jd-id")!.innerText;
+  //   navigator.clipboard
+  //     .writeText(textToCopy)
+  //     .then(() => {
+  //       alert("Text copied to clipboard!");
+  //     })
+  //     .catch((err) => {
+  //       console.error("Failed to copy text: ", err);
+  //     });
+  // });
 </script>

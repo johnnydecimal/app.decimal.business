@@ -18,16 +18,16 @@ interface BaseEntry {
 }
 
 // Specialized interfaces
-interface AreaEntry extends BaseEntry {
+export interface AreaEntry extends BaseEntry {
   type: "area";
 }
 
-interface CategoryEntry extends BaseEntry {
+export interface CategoryEntry extends BaseEntry {
   type: "category";
   parentId: string; // All categories must have a parent area
 }
 
-interface IdEntry extends BaseEntry {
+export interface IdEntry extends BaseEntry {
   type: "id";
   parentId: string; // All ids must have a parent category
   isHeader?: boolean;
@@ -44,7 +44,7 @@ interface IdEntry extends BaseEntry {
 }
 
 // Union type for all entries
-type FlattenedEntry = AreaEntry | CategoryEntry | IdEntry;
+export type FlattenedEntry = AreaEntry | CategoryEntry | IdEntry;
 
 // Flattened data structure type
 type FlattenedData = Record<string, FlattenedEntry>;

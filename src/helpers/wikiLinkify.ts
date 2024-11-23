@@ -3,6 +3,8 @@ import type { IDWithACContext } from "./generateIdsWithACContext";
 /**
  * Convert [[wiki-links]] in the text to <a href="..."> full links.
  */
+
+// Convert this like Gordon would!
 function wikiLinkify(text: string, idsWithACContext: IDWithACContext[]) {
   return text.replace(/\[\[(\d{2}.\d{2})\]\]/g, (_match, p1) => {
     const foundId = idsWithACContext.find((obj) => obj.idNumber === p1);

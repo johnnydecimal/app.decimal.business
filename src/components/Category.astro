@@ -1,0 +1,51 @@
+---
+/**
+ * The category list view component. So we've navigated to
+ * /jdex/11.
+ *
+ * Shows the category and all of its IDs, grouped by header.
+ *
+ * ```
+ * 🕚 11 Eleven                                          [emoji, big?]
+ *      The description of category eleven.
+ *
+ * ## 11.10 Official documents 🗂 ️
+ *          Description
+ *    11.11 Structure & registrations
+ *          Description
+ *    11.12 ...
+ *
+ * ## 11.20 Planning, contingencies, & insurance 🧭
+ *          Description
+ *    11.21 ...
+ * ```
+ *
+ * So we need:
+ * - To be passed the number of the category to render. This is the slug.
+ * - To check that the category exists, and 404 if not.
+ * - The whole system to reference. Just import it directly.
+ * - The title of the category for the main header.
+ * - The emoji of the category.
+ * - An array of the IDs that this category contains. Each one of those
+ *   needs to contain the ID, title, description, isHeader, emoji.
+ */
+
+// - To be passed the number of the category to render. This is the slug.
+interface Props {
+  category: string;
+}
+const { category } = Astro.props;
+
+// - To check that the category exists, and 404 if not.
+if (!sb[category]) {
+  throw new Error("404: Not found");
+}
+
+// - The whole system to reference. Just import it directly.
+import sb from "@content/data/smallBusinessFlat";
+
+// - The title of the category for the main header.
+const categoryTitle = sb[category]?.title;
+---
+
+<div></div>
