@@ -28,8 +28,10 @@ const { title } = Astro.props;
         </SignedIn>
       </nav>
     </header>
-    <article>
-      <slot />
-    </article>
+    <SignedIn>
+      <article>
+        <slot />
+      </article>
+    </SignedIn>
   </body>
 </html>

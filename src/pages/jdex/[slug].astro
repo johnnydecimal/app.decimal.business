@@ -1,8 +1,8 @@
 ---
-import Layout from "../layouts/SiteLayout.astro";
-import generateIdsWithACContext from "../helpers/generateIdsWithACContext.ts";
-import wikiLinkify from "../helpers/wikiLinkify";
-import sb from "../content/data/smallbusiness.ts";
+import Layout from "@layouts/SiteLayout.astro";
+import generateIdsWithACContext from "@helpers/generateIdsWithACContext.ts";
+import wikiLinkify from "@helpers/wikiLinkify";
+import sb from "@content/data/smallbusiness.ts";
 
 const idsWithACContext = await generateIdsWithACContext(sb);
 const { id } = Astro.params;

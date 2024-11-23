@@ -1,7 +1,13 @@
 {
-  "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@content/*": ["src/content/*"],
+      "@helpers/*": ["src/helpers/*"],
+      "@layouts/*": ["src/layouts/*"]
+    },
     "strictNullChecks": true
   },
-  "exclude": ["src/**/_*"]
+  "exclude": ["src/**/_*"],
+  "extends": "astro/tsconfigs/strict"
 }
