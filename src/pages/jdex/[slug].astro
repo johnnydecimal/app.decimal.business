@@ -5,6 +5,7 @@ import wikiLinkify from "@helpers/wikiLinkify";
 import sb from "@content/data/smallbusiness.ts";
 import sbFlat from "@content/data/smallBusinessFlat.ts";
 import type { EntryType } from "@content/data/smallBusinessFlat.ts";
+import { findById } from "@content/data/smallBusinessFlat.ts";
 
 const { slug } = Astro.params;
 
@@ -18,14 +19,20 @@ const { slug } = Astro.params;
  * We also need to handle the default case where the user visits /jdex.
  */
 
-let entryType: EntryType | null = null;
+let entryType: EntryType | "default" | null = null;
+let thisEntry: any;
 
 if (slug?.match(/^[0-9]0-[0-9]9$/)) {
   entryType = "area";
+  thisEntry = findById(sbFlat, slug);
 } else if (slug?.match(/^\d\d$/)) {
   entryType = "category";
+  thisEntry = findById(sbFlat, slug);
 } else if (slug?.match(/^\d\d\.\d\d$/)) {
   entryType = "id";
+  thisEntry = findById(sbFlat, slug);
+} else {
+  entryType = "default";
 }
 
 /*
@@ -50,19 +57,6 @@ const props = {
     pageData.rationale && wikiLinkify(pageData.rationale, idsWithACContext),
 };
 
-const {
-  areaId,
-  areaTitle,
-  categoryId,
-  categoryTitle,
-  idTitle,
-  idDescription,
-  examples,
-  moreInfo,
-  exceptions,
-  alsoSee,
-  rationale,
-} = props;
  */
 ---
 

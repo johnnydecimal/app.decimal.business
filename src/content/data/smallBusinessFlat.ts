@@ -186,7 +186,10 @@ function getChildren(data: FlattenedData, parentId: string): FlattenedEntry[] {
 }
 
 // Utility function to find an entry by key
-function findById(data: FlattenedData, id: string): FlattenedEntry | undefined {
+export function findById(
+  data: FlattenedData,
+  id: string
+): FlattenedEntry | undefined {
   return data[id];
 }
 
