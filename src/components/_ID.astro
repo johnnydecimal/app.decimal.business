@@ -1,0 +1,76 @@
+---
+const {
+  areaId,
+  areaTitle,
+  categoryId,
+  categoryTitle,
+  idNumber,
+  idTitle,
+  idDescription,
+  examples,
+  moreInfo,
+  exceptions,
+  alsoSee,
+  rationale,
+} = Astro.props;
+---
+
+<h1 id="jd-id">{idNumber} {idTitle}</h1>
+<button id="copy-jd-id">Copy</button>
+
+<div class="id-title">
+  <a href={`/${areaId}`}>{areaId} {areaTitle}</a> &gt; <a
+    href={`/${categoryId}`}
+  >
+    {categoryId} {categoryTitle}</a
+  >
+</div>
+
+{
+  idDescription && (
+    <>
+      <h3>Description</h3>
+      <div set:html={idDescription} />
+    </>
+  )
+}
+{
+  examples && (
+    <>
+      <h3>Examples</h3>
+      <div set:html={examples} />
+    </>
+  )
+}
+{
+  moreInfo && (
+    <>
+      <h3>More info</h3>
+      <div set:html={moreInfo} />
+    </>
+  )
+}
+{
+  exceptions && (
+    <>
+      <h3>Exceptions</h3>
+      <div set:html={exceptions} />
+    </>
+  )
+}
+{
+  alsoSee && (
+    <>
+      <h3>Also see</h3>
+      <div set:html={alsoSee} />
+    </>
+  )
+}
+{
+  rationale && (
+    <>
+      <h3>Rationale</h3>
+      <div set:html={rationale} />
+    </>
+  )
+}

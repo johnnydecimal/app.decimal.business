@@ -29,7 +29,8 @@
  *   needs to contain the ID, title, description, isHeader, emoji.
  * √ Where those descriptions have been rendered to HTML from Markdown.
  * √ Linking the ID header to the ID URL.
- * - Denoting with styles and a ■ whether it's a header.
+ * √ Denoting with styles and a ■ whether it's a header.
+ * - A breadcrumb to the parent area.
  */
 
 // - To be passed the number of the category to render. This is the slug.
@@ -53,6 +54,7 @@ const cEmoji = sb[category].emoji;
 import { getChildren } from "@content/data/smallBusinessFlat.ts";
 import type { IdEntry } from "@content/data/smallBusinessFlat";
 const ids = getChildren(sb, "11") as IdEntry[];
+console.log("=====");
 console.log(ids);
 
 // - Where those descriptions have been rendered to HTML from Markdown.

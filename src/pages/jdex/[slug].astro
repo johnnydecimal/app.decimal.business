@@ -1,20 +1,12 @@
 ---
-import Layout from "@layouts/SiteLayout.astro";
-import generateIdsWithACContext from "@helpers/generateIdsWithACContext.ts";
-import wikiLinkify from "@helpers/wikiLinkify";
-// import sb from "@content/data/smallbusiness.ts";
 import sb from "@content/data/smallBusinessFlat.ts";
 import type {
   EntryType,
-  AreaEntry,
-  CategoryEntry,
-  IdEntry,
   FlattenedEntry,
 } from "@content/data/smallBusinessFlat.ts";
-import { findById } from "@content/data/smallBusinessFlat.ts";
-import ID from "@components/ID.astro";
 
 import Category from "@components/Category.astro";
+import ID from "@components/ID.astro";
 import SiteLayout from "@layouts/SiteLayout.astro";
 
 const { slug } = Astro.params;
@@ -30,7 +22,6 @@ const { slug } = Astro.params;
  */
 
 let entryType: EntryType | "no-match" | null = null;
-let thisEntry: FlattenedEntry;
 
 if (slug?.match(/^[0-9]0-[0-9]9$/)) {
   entryType = "area";
@@ -42,7 +33,12 @@ if (slug?.match(/^[0-9]0-[0-9]9$/)) {
     entryType = "no-match";
   }
 } else if (slug?.match(/^\d\d\.\d\d$/)) {
-  entryType = "id";
+  // We've pattern-matched, but does it exist? Gracefully fail if not
+  if (!!sb[slug]) {
+    entryType = "id";
+  } else {
+    entryType = "no-match";
+  }
 } else {
   entryType = "no-match";
   // None of the above
@@ -52,7 +48,7 @@ if (slug?.match(/^[0-9]0-[0-9]9$/)) {
 <SiteLayout>
   {entryType === "area" ? <div>area</div> : null}
   {entryType === "category" ? <Category category={slug!} /> : null}
-  {entryType === "id" ? <div>id</div> : null}
+  {entryType === "id" ? <ID id={slug!} /> : null}
   {
     entryType === "no-match" ? (
       <div>Graceful fallback; show the system?</div>

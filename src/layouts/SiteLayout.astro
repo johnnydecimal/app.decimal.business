@@ -60,7 +60,9 @@ const { title } = Astro.props;
   </body>
 </html>
 
-<style>
+<style lang="scss">
+  @use "@styles/responsive" as r;
+
   @font-face {
     font-family: "Berkeley Mono";
     src:
@@ -107,6 +109,9 @@ const { title } = Astro.props;
     margin: 0 auto;
     max-width: 650px;
     padding: 0 20px;
+    @include r.mobile {
+      padding: 0 10px;
+    }
   }
   footer {
     margin-top: 100px;

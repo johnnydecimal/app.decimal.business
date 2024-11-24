@@ -1,76 +1,104 @@
 ---
-const {
-  areaId,
-  areaTitle,
-  categoryId,
-  categoryTitle,
-  idNumber,
-  idTitle,
-  idDescription,
-  examples,
-  moreInfo,
-  exceptions,
-  alsoSee,
-  rationale,
-} = Astro.props;
+/**
+ * The category list view component. So we've navigated to
+ * /jdex/11.
+ *
+ * The ID view component. So we're at /jdex/11.11.
+ *
+ * Shows a single ID, with all of its detail. Shows breadcrumbs
+ * to its category and area.
+ *
+ * ```
+ * 11.11 Eleven-eleven                                      [emoji, big?]
+ *       The description of category eleven.
+ *
+ *       > Area > Category
+ *
+ *       # Header, e.g. Examples
+ *       Content
+ * ```
+ *
+ * So we need:
+ * √ To be passed the number of the id to render. This is the slug.
+ * √ The whole system to reference. Just import it directly.
+ * √ The title of the ID for the main header.
+ * - All of its other details for the main content.
+ * - Its parent category (number & title), and
+ * - Its parent category's parent area (number & title).
+ * - Linking the ID header to the ID URL.
+ * - Denoting with styles and a ■ whether it's a header.
+ */
+
+// - To be passed the number of the id to render. This is the slug.
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+
+// - The whole system to reference. Just import it directly.
+import sb from "@content/data/smallBusinessFlat";
+
+// - The title of the ID for the main header.
+const idTitle = sb[id]?.title;
+
+// - All of its other details for the main content.
+const idDescription = sb[id].description;
+const idEmoji = sb[id].emoji;
+
+// - Where those descriptions have been rendered to HTML from Markdown.
+import { marked } from "marked";
+import { markedSmartypants } from "marked-smartypants";
+marked.use(markedSmartypants());
 ---
 
-<h1 id="jd-id">{idNumber} {idTitle}</h1>
-<button id="copy-jd-id">Copy</button>
+<h1 id="number-title">
+  <span class="number">{id}</span>
+  <span class="title">{idTitle}</span>
+  <span class="emoji">{idEmoji}</span>
+</h1>
 
-<div class="id-title">
-  <a href={`/${areaId}`}>{areaId} {areaTitle}</a> &gt; <a
-    href={`/${categoryId}`}
-  >
-    {categoryId} {categoryTitle}</a
-  >
-</div>
+<div class="description">{idDescription}</div>
 
-{
-  idDescription && (
-    <>
-      <h3>Description</h3>
-      <div set:html={idDescription} />
-    </>
-  )
-}
-{
-  examples && (
-    <>
-      <h3>Examples</h3>
-      <div set:html={examples} />
-    </>
-  )
-}
-{
-  moreInfo && (
-    <>
-      <h3>More info</h3>
-      <div set:html={moreInfo} />
-    </>
-  )
-}
-{
-  exceptions && (
-    <>
-      <h3>Exceptions</h3>
-      <div set:html={exceptions} />
-    </>
-  )
-}
-{
-  alsoSee && (
-    <>
-      <h3>Also see</h3>
-      <div set:html={alsoSee} />
-    </>
-  )
-}
-{
-  rationale && (
-    <>
-      <h3>Rationale</h3>
-      <div set:html={rationale} />
-    </>
-  )
-}
+<style lang="scss">
+  @use "@styles/responsive.scss" as r;
+
+  h1#number-title {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "number title emoji";
+    gap: 1ch;
+    @include r.mobile {
+      grid-template-areas:
+        "number emoji"
+        "title  title";
+    }
+
+    .number,
+    .emoji {
+      font-size: 4rem;
+      line-height: 1;
+      @include r.mobile {
+        justify-self: end;
+      }
+    }
+    .number {
+      grid-area: number;
+    }
+    .title {
+      grid-area: title;
+    }
+    .emoji {
+      grid-area: emoji;
+      padding-top: 5px;
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    a {
+      text-decoration: none;
+    }
+  }
+</style>

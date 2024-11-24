@@ -835,26 +835,26 @@ const flattenedData: FlattenedData = {
     },
   },
   "12": {
-    number: "12",
-    parentNumber: "11",
-    title: "Where I trade & how I get around",
     type: "category",
+    number: "12",
+    title: "Where I trade & how I get around",
+    parentNumber: "10-19",
     description:
       "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
     emoji: "🗺️",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
   "12.01": {
-    number: "12.01",
     type: "id",
+    number: "12.01",
     title: "Twelve oh-one",
-    parentNumber: "10-19",
+    parentNumber: "12",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
   "20-29": {
+    type: "area",
     number: "20-29",
     title: "Company administration",
-    type: "area",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
 };
