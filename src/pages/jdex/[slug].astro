@@ -2,8 +2,8 @@
 import Layout from "@layouts/SiteLayout.astro";
 import generateIdsWithACContext from "@helpers/generateIdsWithACContext.ts";
 import wikiLinkify from "@helpers/wikiLinkify";
-import sb from "@content/data/smallbusiness.ts";
-import sbFlat from "@content/data/smallBusinessFlat.ts";
+// import sb from "@content/data/smallbusiness.ts";
+import sb from "@content/data/smallBusinessFlat.ts";
 import type {
   EntryType,
   AreaEntry,
@@ -29,18 +29,22 @@ const { slug } = Astro.params;
  * We also need to handle the default case where the user visits /jdex.
  */
 
-let entryType: EntryType | "default" | null = null;
+let entryType: EntryType | "no-match" | null = null;
 let thisEntry: FlattenedEntry;
-let renderObject: any;
 
 if (slug?.match(/^[0-9]0-[0-9]9$/)) {
   entryType = "area";
 } else if (slug?.match(/^\d\d$/)) {
-  entryType = "category";
+  // We've pattern-matched, but does it exist? Gracefully fail if not
+  if (!!sb[slug]) {
+    entryType = "category";
+  } else {
+    entryType = "no-match";
+  }
 } else if (slug?.match(/^\d\d\.\d\d$/)) {
   entryType = "id";
 } else {
-  entryType = "default";
+  entryType = "no-match";
   // None of the above
 }
 ---
@@ -49,6 +53,11 @@ if (slug?.match(/^[0-9]0-[0-9]9$/)) {
   {entryType === "area" ? <div>area</div> : null}
   {entryType === "category" ? <Category category={slug!} /> : null}
   {entryType === "id" ? <div>id</div> : null}
+  {
+    entryType === "no-match" ? (
+      <div>Graceful fallback; show the system?</div>
+    ) : null
+  }
 </SiteLayout>
 
 <!--

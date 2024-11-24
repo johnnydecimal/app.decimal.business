@@ -9,6 +9,7 @@ export type EntryType = "area" | "category" | "id";
 
 // Base interface for common fields
 interface BaseEntry {
+  number: string;
   title: string;
   type: EntryType;
   description?: string;
@@ -51,6 +52,7 @@ type FlattenedData = Record<string, FlattenedEntry>;
 
 const flattenedData: FlattenedData = {
   "10-19": {
+    number: "10-19",
     title: "Company administration",
     type: "area",
     description:
@@ -58,6 +60,7 @@ const flattenedData: FlattenedData = {
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
   "11": {
+    number: "11",
     title: "The business & its people",
     type: "category",
     description:
@@ -67,6 +70,7 @@ const flattenedData: FlattenedData = {
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
   "11.00": {
+    number: "11.00",
     title: "Category management",
     type: "id",
     parentId: "11",
@@ -79,6 +83,7 @@ const flattenedData: FlattenedData = {
     },
   },
   "11.10": {
+    number: "11.10",
     title: "Official documents",
     type: "id",
     parentId: "11",
@@ -102,6 +107,7 @@ const flattenedData: FlattenedData = {
     },
   },
   "11.11": {
+    number: "11.11",
     title: "Structure & registrations",
     type: "id",
     parentId: "11",
@@ -127,6 +133,7 @@ const flattenedData: FlattenedData = {
     },
   },
   "11.12": {
+    number: "11.12",
     title: "Licences, permits, & accreditations",
     type: "id",
     parentId: "11",
@@ -152,6 +159,7 @@ const flattenedData: FlattenedData = {
     },
   },
   "12": {
+    number: "12",
     title: "Where I trade & how I get around",
     type: "category",
     description:
@@ -161,12 +169,14 @@ const flattenedData: FlattenedData = {
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
   "12.01": {
+    number: "12.01",
     title: "Twelve oh-one",
     parentId: "10-19",
     type: "id",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
   "20-29": {
+    number: "20-29",
     title: "Company administration",
     type: "area",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
@@ -181,7 +191,10 @@ function getAllByType(data: FlattenedData, type: EntryType): FlattenedEntry[] {
 }
 
 // Utility function to get all children of a given parent ID
-function getChildren(data: FlattenedData, parentId: string): FlattenedEntry[] {
+export function getChildren(
+  data: FlattenedData,
+  parentId: string
+): FlattenedEntry[] {
   return Object.values(data).filter((entry) => entry.parentId === parentId);
 }
 

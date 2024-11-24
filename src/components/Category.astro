@@ -22,12 +22,12 @@
  *
  * So we need:
  * - To be passed the number of the category to render. This is the slug.
- * - To check that the category exists, and 404 if not.
  * - The whole system to reference. Just import it directly.
  * - The title of the category for the main header.
  * - The description and emoji of the category.
  * - An array of the IDs that this category contains. Each one of those
  *   needs to contain the ID, title, description, isHeader, emoji.
+ * - Where those descriptions have been rendered to HTML from Markdown.
  */
 
 // - To be passed the number of the category to render. This is the slug.
@@ -35,12 +35,6 @@ interface Props {
   category: string;
 }
 const { category } = Astro.props;
-
-// - To check that the category exists, and 404 if not.
-const cExists = !!sb[category];
-if (!cExists) {
-  throw new Response(null, { status: 404 });
-}
 
 // - The whole system to reference. Just import it directly.
 import sb from "@content/data/smallBusinessFlat";
@@ -51,20 +45,57 @@ const cTitle = sb[category]?.title;
 // - The description and emoji of the category.
 const cDescription = sb[category].description;
 const cEmoji = sb[category].emoji;
+
+// - An array of the IDs that this category contains. Each one of those
+//   needs to contain the ID, title, description, isHeader, emoji.
+import { getChildren } from "@content/data/smallBusinessFlat.ts";
+const ids = getChildren(sb, "11");
+console.log(ids);
+
+// - Where those descriptions have been rendered to HTML from Markdown.
+import { marked } from "marked";
 ---
 
-<>
-  {
-    cExists ? (
-      <div class="category-id-title">
-        <h1 aria-label="Category ID and title">
-          {category}&nbsp;{cTitle}
-        </h1>
-      </div>
-    ) : (
-      <div>404</div>
-    )
-  }
-</>
+<h1 id="id-title">
+  <span class="id">{category}</span>
+  <span class="title">{cTitle}</span>
+  <span class="emoji">{cEmoji}</span>
+</h1>
 
-<style></style>
+<div class="description">{cDescription}</div>
+
+<ul>
+  {
+    ids.map((id) => (
+      <li>
+        <h2>{`${id.number} ${id.title}`}</h2>
+        <div
+          class="description"
+          set:html={id.description && marked.parse(id.description)}
+        />
+      </li>
+    ))
+  }
+</ul>
+
+<style>
+  h1#id-title {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1ch;
+
+    .emoji {
+      font-size: 4rem;
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+</style>
