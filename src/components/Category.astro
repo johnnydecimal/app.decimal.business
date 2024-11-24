@@ -21,13 +21,15 @@
  * ```
  *
  * So we need:
- * - To be passed the number of the category to render. This is the slug.
- * - The whole system to reference. Just import it directly.
- * - The title of the category for the main header.
- * - The description and emoji of the category.
- * - An array of the IDs that this category contains. Each one of those
+ * √ To be passed the number of the category to render. This is the slug.
+ * √ The whole system to reference. Just import it directly.
+ * √ The title of the category for the main header.
+ * √ The description and emoji of the category.
+ * √ An array of the IDs that this category contains. Each one of those
  *   needs to contain the ID, title, description, isHeader, emoji.
- * - Where those descriptions have been rendered to HTML from Markdown.
+ * √ Where those descriptions have been rendered to HTML from Markdown.
+ * √ Linking the ID header to the ID URL.
+ * - Denoting with styles and a ■ whether it's a header.
  */
 
 // - To be passed the number of the category to render. This is the slug.
@@ -54,9 +56,11 @@ console.log(ids);
 
 // - Where those descriptions have been rendered to HTML from Markdown.
 import { marked } from "marked";
+import { markedSmartypants } from "marked-smartypants";
+marked.use(markedSmartypants());
 ---
 
-<h1 id="id-title">
+<h1 id="number-title">
   <span class="id">{category}</span>
   <span class="title">{cTitle}</span>
   <span class="emoji">{cEmoji}</span>
@@ -68,7 +72,10 @@ import { marked } from "marked";
   {
     ids.map((id) => (
       <li>
-        <h2>{`${id.number} ${id.title}`}</h2>
+        <h2>
+          {/* - Linking the ID header to the ID URL. */}
+          <a href={`/jdex/${id.number}`}>{`${id.number} ${id.title}`}</a>
+        </h2>
         <div
           class="description"
           set:html={id.description && marked.parse(id.description)}
@@ -79,7 +86,7 @@ import { marked } from "marked";
 </ul>
 
 <style>
-  h1#id-title {
+  h1#number-title {
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 1ch;
@@ -92,6 +99,9 @@ import { marked } from "marked";
   h2 {
     font-size: 1rem;
     font-weight: 600;
+    a {
+      text-decoration: none;
+    }
   }
 
   ul {
