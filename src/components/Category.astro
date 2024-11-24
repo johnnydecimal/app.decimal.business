@@ -51,7 +51,8 @@ const cEmoji = sb[category].emoji;
 // - An array of the IDs that this category contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.
 import { getChildren } from "@content/data/smallBusinessFlat.ts";
-const ids = getChildren(sb, "11");
+import type { IdEntry } from "@content/data/smallBusinessFlat";
+const ids = getChildren(sb, "11") as IdEntry[];
 console.log(ids);
 
 // - Where those descriptions have been rendered to HTML from Markdown.
@@ -71,7 +72,7 @@ marked.use(markedSmartypants());
 <ul>
   {
     ids.map((id) => (
-      <li>
+      <li class={id.isHeader ? "is-header" : null}>
         <h2>
           {/* - Linking the ID header to the ID URL. */}
           <a href={`/jdex/${id.number}`}>{`${id.number} ${id.title}`}</a>
@@ -130,5 +131,9 @@ marked.use(markedSmartypants());
   ul {
     list-style-type: none;
     padding: 0;
+    li.is-header {
+      border-top: 1px solid darkblue;
+      margin-top: 30px;
+    }
   }
 </style>

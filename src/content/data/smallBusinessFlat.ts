@@ -87,8 +87,8 @@ const flattenedData: FlattenedData = {
     title: "Official documents",
     type: "id",
     parentId: "11",
-    isHeader: true,
     emoji: "🗂️",
+    isHeader: true,
     description:
       "The official paperwork that you need in order to start and maintain a business. ",
     metadata: {
