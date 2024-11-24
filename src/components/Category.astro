@@ -61,7 +61,7 @@ marked.use(markedSmartypants());
 ---
 
 <h1 id="number-title">
-  <span class="id">{category}</span>
+  <span class="number">{category}</span>
   <span class="title">{cTitle}</span>
   <span class="emoji">{cEmoji}</span>
 </h1>
@@ -89,10 +89,31 @@ marked.use(markedSmartypants());
   h1#number-title {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    gap: 1ch;
+    grid-template-areas: "number title emoji";
 
+    @media (max-width: 600px) {
+      grid-template-areas:
+        "number emoji"
+        "title  title";
+    }
+    gap: 1ch;
+    .number,
     .emoji {
       font-size: 4rem;
+      line-height: 1;
+      @media (max-width: 600px) {
+        justify-self: end;
+      }
+    }
+    .number {
+      grid-area: number;
+    }
+    .title {
+      grid-area: title;
+    }
+    .emoji {
+      grid-area: emoji;
+      padding-top: 5px;
     }
   }
 
