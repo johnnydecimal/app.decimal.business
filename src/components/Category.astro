@@ -85,23 +85,25 @@ marked.use(markedSmartypants());
   }
 </ul>
 
-<style>
+<style lang="scss">
+  @use "@styles/responsive.scss" as r;
+
   h1#number-title {
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "number title emoji";
-
-    @media (max-width: 600px) {
+    gap: 1ch;
+    @include r.mobile {
       grid-template-areas:
         "number emoji"
         "title  title";
     }
-    gap: 1ch;
+
     .number,
     .emoji {
       font-size: 4rem;
       line-height: 1;
-      @media (max-width: 600px) {
+      @include r.mobile {
         justify-self: end;
       }
     }

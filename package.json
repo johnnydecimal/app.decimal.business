@@ -20,6 +20,8 @@
     "astro": "^4.16.13",
     "marked": "^15.0.1",
     "marked-smartypants": "^1.1.9",
+    "sass": "^1.81.0",
+    "sass-embedded": "^1.81.0",
     "typescript": "^5.6.3"
   }
 }

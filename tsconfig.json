@@ -5,7 +5,8 @@
       "@components/*": ["src/components/*"],
       "@content/*": ["src/content/*"],
       "@helpers/*": ["src/helpers/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@styles/*": ["src/styles/*"]
     },
     "strictNullChecks": true
   },
