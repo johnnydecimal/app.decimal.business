@@ -25,7 +25,7 @@
  * - To check that the category exists, and 404 if not.
  * - The whole system to reference. Just import it directly.
  * - The title of the category for the main header.
- * - The emoji of the category.
+ * - The description and emoji of the category.
  * - An array of the IDs that this category contains. Each one of those
  *   needs to contain the ID, title, description, isHeader, emoji.
  */
@@ -37,13 +37,34 @@ interface Props {
 const { category } = Astro.props;
 
 // - To check that the category exists, and 404 if not.
-const categoryExists = !!sb[category];
+const cExists = !!sb[category];
+if (!cExists) {
+  throw new Response(null, { status: 404 });
+}
 
 // - The whole system to reference. Just import it directly.
 import sb from "@content/data/smallBusinessFlat";
 
 // - The title of the category for the main header.
-const categoryTitle = sb[category]?.title;
+const cTitle = sb[category]?.title;
+
+// - The description and emoji of the category.
+const cDescription = sb[category].description;
+const cEmoji = sb[category].emoji;
 ---
 
-{categoryExists ? <div>{category}</div> : <div>404</div>}
+<>
+  {
+    cExists ? (
+      <div class="category-id-title">
+        <h1 aria-label="Category ID and title">
+          {category}&nbsp;{cTitle}
+        </h1>
+      </div>
+    ) : (
+      <div>404</div>
+    )
+  }
+</>
+
+<style></style>
