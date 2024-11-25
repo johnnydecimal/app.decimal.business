@@ -42,16 +42,15 @@ if (slug?.match(/^[0-9]0-[0-9]9$/)) {
 }
 ---
 
-<SiteLayout>
-  {entryType === "area" ? <div>area</div> : null}
-  {entryType === "category" ? <Category category={slug!} /> : null}
-  {entryType === "id" ? <ID id={slug!} /> : null}
-  {
-    entryType === "no-match" ? (
-      <div>Graceful fallback; show the system?</div>
-    ) : null
-  }
-</SiteLayout>
+<!-- <SiteLayout> -->{entryType === "area" ? <div>area</div> : null}
+{entryType === "category" ? <Category category={slug!} /> : null}
+{entryType === "id" ? <ID id={slug!} /> : null}
+{
+  entryType === "no-match" ? (
+    <div>Graceful fallback; show the system?</div>
+  ) : null
+}
+<!-- </SiteLayout> -->
 
 <!--
   <h1 id="jd-id">{id} {idTitle}</h1>
