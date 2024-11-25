@@ -1,4 +1,7 @@
 ---
+interface Props {
+  id: string;
+}
 /**
  * The category list view component. So we've navigated to
  * /jdex/11.
@@ -31,10 +34,6 @@
  */
 
 // - To be passed the number of the id to render. This is the slug.
-interface Props {
-  id: string;
-}
-
 const { id } = Astro.props;
 
 // - The whole system to reference. Just import it directly.
@@ -55,6 +54,7 @@ marked.use(markedSmartypants());
 // - All of its other details for the main content.
 const idEntry = sb[id] as IdEntry;
 const idEmoji = idEntry.emoji;
+
 //   - Wiki-linking the descriptive text.
 function wikiLinkify(text: string): string {
   // `text` is a Markdown string which might contain wiki-links like [[12.34]].
@@ -75,15 +75,17 @@ function wikiLinkify(text: string): string {
 const idDescription = idEntry.description && wikiLinkify(idEntry.description);
 const idEntrySb = idEntry.extensions?.smallBusiness;
 const idExamples =
-  idEntrySb?.examples && (await marked.parse(idEntrySb.examples));
+  idEntrySb?.examples && (await marked.parse(wikiLinkify(idEntrySb.examples)));
 const idMoreInfo =
-  idEntrySb?.moreInfo && (await marked.parse(idEntrySb.moreInfo));
+  idEntrySb?.moreInfo && (await marked.parse(wikiLinkify(idEntrySb.moreInfo)));
 const idExceptions =
-  idEntrySb?.exceptions && (await marked.parse(idEntrySb.exceptions));
+  idEntrySb?.exceptions &&
+  (await marked.parse(wikiLinkify(idEntrySb.exceptions)));
 const idAlsoSee =
   idEntrySb?.alsoSee && (await marked.parse(wikiLinkify(idEntrySb.alsoSee)));
 const idRationale =
-  idEntrySb?.rationale && (await marked.parse(idEntrySb.rationale));
+  idEntrySb?.rationale &&
+  (await marked.parse(wikiLinkify(idEntrySb.rationale)));
 
 // - Its parent category (number & title), and
 // - Its parent category's parent area (number & title).
@@ -104,89 +106,90 @@ const parentATitle = parentAEntry.title;
 
 <div class="breadcrumbs">
   <p>
-    <a href=`/jdex/${parentANumber}`>{parentANumber} {parentATitle}</a> &gt; <a
-      href=`/jdex/${parentCNumber}`>{parentCNumber} {parentCTitle}</a>
+    <a href=`/jdex/${parentANumber}`>{parentANumber} {parentATitle}</a> &gt/ <a
+      href=`/jdex/${parentCNumber}`>{parentCNumber} {parentCTitle}</a
+    >
   </p>
-</div>
 
-{
-  idDescription ? (
-    <div
-      class="description"
-      set:html={idDescription && marked.parse(idDescription)}
-    />
-  ) : null
-}
+  {
+    idDescription ? (
+      <div
+        class="description"
+        set:html={idDescription && marked.parse(idDescription)}
+      />
+    ) : null
+  }
 
-{
-  idExamples ? (
-    <div>
-      <h2>Examples</h2>
-      <div set:html={idExamples} />
-    </div>
-  ) : null
-}
-{
-  idMoreInfo ? (
-    <div>
-      <h2>More info</h2>
-      <div set:html={idMoreInfo} />
-    </div>
-  ) : null
-}
-{
-  idExceptions ? (
-    <div>
-      <h2>Exceptions</h2>
-      <div set:html={idExceptions} />
-    </div>
-  ) : null
-}
-{
-  idAlsoSee ? (
-    <div>
-      <h2>Also see</h2>
-      <div set:html={idAlsoSee} />
-    </div>
-  ) : null
-}
-{
-  idRationale ? (
-    <div>
-      <h2>Rationale</h2>
-      <div set:html={idRationale} />
-    </div>
-  ) : null
-}
+  {
+    idExamples ? (
+      <div>
+        <h2>Examples</h2>
+        <div set:html={idExamples} />
+      </div>
+    ) : null
+  }
+  {
+    idMoreInfo ? (
+      <div>
+        <h2>More info</h2>
+        <div set:html={idMoreInfo} />
+      </div>
+    ) : null
+  }
+  {
+    idExceptions ? (
+      <div>
+        <h2>Exceptions</h2>
+        <div set:html={idExceptions} />
+      </div>
+    ) : null
+  }
+  {
+    idAlsoSee ? (
+      <div>
+        <h2>Also see</h2>
+        <div set:html={idAlsoSee} />
+      </div>
+    ) : null
+  }
+  {
+    idRationale ? (
+      <div>
+        <h2>Rationale</h2>
+        <div set:html={idRationale} />
+      </div>
+    ) : null
+  }
 
-<style lang="scss">
-  @use "@styles/responsive.scss" as r;
+  <style lang="scss">
+    @use "@styles/responsive.scss" as r;
 
-  h1#number-title {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas:
-      "number emoji"
-      "title  title";
-    gap: 1ch;
+    h1#number-title {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      grid-template-areas:
+        "number emoji"
+        "title  title";
+      gap: 1ch;
 
-    .number,
-    .emoji {
-      font-size: 4rem;
-      line-height: 1;
-      @include r.mobile {
-        justify-self: end;
+      .number,
+      .emoji {
+        font-size: 4rem;
+        line-height: 1;
+        @include r.mobile {
+          justify-self: end;
+        }
+      }
+      .number {
+        grid-area: number;
+      }
+      .title {
+        grid-area: title;
+      }
+      .emoji {
+        grid-area: emoji;
+        padding-top: 5px;
       }
     }
-    .number {
-      grid-area: number;
-    }
-    .title {
-      grid-area: title;
-    }
-    .emoji {
-      grid-area: emoji;
-      padding-top: 5px;
-    }
-  }
-</style>
+  </style>
+</div>

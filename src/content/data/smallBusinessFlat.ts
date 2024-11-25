@@ -514,7 +514,7 @@ const flattenedData: FlattenedData = {
       smallBusiness: {
         examples: "",
         moreInfo:
-          "In Australia, staff records must be kept for up to 7 years. Your government may have different requirements. We suggest storing the records in this ID as per the image below. Each employee has a subfolder labelled with the year-month-day they joined (so it sorts neatly) and their name. Inside that is a standard template. We have provided an example template in the folder system. Adjust this to your needs as required, just remember to be consistent. 2014-07-08 Slydell, Bob\n2017-08-21 Bolton, Michael\n2019-02-14 Lumbergh, Bill\n10 Personal details\n20 Payments and deductions\n30 Work hours and overtime\n40 Leave taken and accrued\n50 Pension contributions\n60 Training completed\n70 Ending the employment Other records you might consider keeping include: CVs/resumes, job applications and pre-employment checks, employment contracts, performance reviews, trade or registration certificates, details of uniforms and equipment allocated, roles held and promotions. ",
+          "In Australia, staff records must be kept for up to 7 years. Your government may have different requirements. We suggest storing the records in this ID as per the image below. Each employee has a subfolder labelled with the year-month-day they joined (so it sorts neatly) and their name. Inside that is a standard template. We have provided an example template in the folder system. Adjust this to your needs as required, just remember to be consistent.\n\n```\n2014-07-08 Slydell, Bob\n2017-08-21 Bolton, Michael\n2019-02-14 Lumbergh, Bill\n        10 Personal details\n20 Payments and deductions\n30 Work hours and overtime\n40 Leave taken and accrued\n50 Pension contributions\n60 Training completed\n70 Ending the employment\n``` \n\nOther records you might consider keeping include: CVs/resumes, job applications and pre-employment checks, employment contracts, performance reviews, trade or registration certificates, details of uniforms and equipment allocated, roles held and promotions. ",
         exceptions: "",
         alsoSee: "",
         rationale: "",
@@ -886,13 +886,13 @@ export function findById(
 }
 
 // Utility function to validate the entire data structure
-function validateStructure(data: FlattenedData): string[] {
+export function validateStructure(data: FlattenedData): string[] {
   const errors: string[] = [];
   for (const key in data) {
     const entry = data[key];
-    if (entry.parentId && !data[entry.parentId]) {
+    if (entry.parentNumber && !data[entry.parentNumber]) {
       errors.push(
-        `Entry with key ${key} has a non-existent parent ID ${entry.parentId}.`
+        `Entry with key ${key} has a non-existent parent ID ${entry.parentNumber}.`
       );
     }
   }

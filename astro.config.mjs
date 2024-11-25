@@ -17,4 +17,14 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), clerk()],
   output: "server",
   adapter: netlify(),
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          api: "modern-compiler",
+          importers: [],
+        },
+      },
+    },
+  },
 });
