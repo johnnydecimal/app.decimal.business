@@ -15,12 +15,12 @@ interface BaseEntry {
   description?: string;
   emoji?: string;
   metadata: Metadata;
-  parentId?: string; // Optional for top-level entries
 }
 
 // Specialized interfaces
 export interface AreaEntry extends BaseEntry {
   type: "area";
+  parentNumber?: string; // Optional for top-level entries
 }
 
 export interface CategoryEntry extends BaseEntry {
@@ -61,7 +61,7 @@ const flattenedData: FlattenedData = {
   },
   "11": {
     number: "11",
-    parentNumber: "11",
+    parentNumber: "10-19",
     title: "The business & its people",
     type: "category",
     description:
