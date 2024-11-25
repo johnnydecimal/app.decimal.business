@@ -112,7 +112,7 @@ const flattenedData: FlattenedData = {
     type: "id",
     title: "Structure & registrations",
     description:
-      "Proof of the business’ existence, **trading MODIFIED TEST structure**, `and name` -- where it all begins! ",
+      "Proof of the business’ existence, **trading MODIFIED TEST structure**, `and name` -- where it all begins! LINK> [[11.12]] <LINK",
     metadata: {
       createdDate: "2024-11-19",
       updatedDate: "2024-11-19",
@@ -120,9 +120,9 @@ const flattenedData: FlattenedData = {
     extensions: {
       smallBusiness: {
         examples:
-          "Business entity registrations; trading name registrations; income and sales tax registrations; trademark records for trading names; company director identity applications. -- ",
+          "Business entity registrations; trading name registrations; income and sales tax registrations; trademark records for trading names; company director identity applications.",
         moreInfo:
-          "This ID is about your business being born. Think of it like your birth certificate and proof of name. Deciding on a trading structure and name are the first steps to starting a business. This affects how you will operate and the various obligations you will have, especially government taxes. Whether you want to trade alone under your own name, or as a company with staff and its own name, you will have to complete certain registrations to ‘exist’. The more complicated the structure, the more paperwork there will be. But for many people with simple structures, once you’re set up, this ID should be pretty quiet (apart from ensuring registrations stay active). ",
+          "This ID is about your business being born. Think of it like your birth certificate and proof of name. Deciding on a trading structure and name are the first steps to starting a business. This affects how you will operate and the various obligations you will have, especially government taxes.\n\nWhether you want to trade alone under your own name, or as a company with staff and its own name, you will have to complete certain registrations to ‘exist’. The more complicated the structure, the more paperwork there will be. But for many people with simple structures, once you’re set up, this ID should be pretty quiet (apart from ensuring registrations stay active). ",
         exceptions:
           "Put product or brand-related patents, trademarks, and copyrights in [[XX.XX]]. ",
         alsoSee: "",

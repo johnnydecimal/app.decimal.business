@@ -23,6 +23,7 @@
  * √ The whole system to reference. Just import it directly.
  * √ The title of the ID for the main header.
  * - All of its other details for the main content.
+ *   - Wiki-linking the descriptive text.
  * - Its parent category (number & title), and
  * - Its parent category's parent area (number & title).
  * - Linking the ID header to the ID URL.
@@ -37,19 +38,44 @@ interface Props {
 const { id } = Astro.props;
 
 // - The whole system to reference. Just import it directly.
-import sb from "@content/data/smallBusinessFlat";
+import sb, { type IdEntry } from "@content/data/smallBusinessFlat";
 
 // - The title of the ID for the main header.
 const idTitle = sb[id]?.title;
-
-// - All of its other details for the main content.
-const idDescription = sb[id].description;
-const idEmoji = sb[id].emoji;
 
 // - Where those descriptions have been rendered to HTML from Markdown.
 import { marked } from "marked";
 import { markedSmartypants } from "marked-smartypants";
 marked.use(markedSmartypants());
+
+// - All of its other details for the main content.
+const idEntry = sb[id] as IdEntry;
+const idEmoji = idEntry.emoji;
+//   - Wiki-linking the descriptive text.
+function wikiLinkify(text: string): string {
+  // `text` is a Markdown string which might contain wiki-links like [[12.34]].
+  return text.replace(/\[\[(\d{2}.\d{2})\]\]/g, (_match, p1) => {
+    // If a match was made, `p1` is an ID. Return a [Markdown](link) to it.
+    if (sb[p1]) {
+      return `[${p1} ${sb[p1].title}](/jdex/${p1})`;
+    } else {
+      console.warn(
+        `🚨 ID.astro: you tried to wiki-link to an ID that doesn't exist: ${p1}`
+      );
+      // Return the original text.
+      return text;
+    }
+  });
+}
+
+const idDescription = idEntry.description && wikiLinkify(idEntry.description);
+const idSb = idEntry.extensions?.smallBusiness;
+const idExamples = idSb?.examples && (await marked.parse(idSb.examples));
+const idMoreInfo = idSb?.moreInfo && (await marked.parse(idSb.moreInfo));
+const idExceptions = idSb?.exceptions && (await marked.parse(idSb.exceptions));
+const idAlsoSee =
+  idSb?.alsoSee && (await marked.parse(wikiLinkify(idSb.alsoSee)));
+const idRationale = idSb?.rationale && (await marked.parse(idSb.rationale));
 ---
 
 <h1 id="number-title">
@@ -58,7 +84,55 @@ marked.use(markedSmartypants());
   <span class="emoji">{idEmoji}</span>
 </h1>
 
-<div class="description">{idDescription}</div>
+{
+  idDescription ? (
+    <div
+      class="description"
+      set:html={idDescription && marked.parse(idDescription)}
+    />
+  ) : null
+}
+
+{
+  idExamples ? (
+    <div>
+      <h2>Examples</h2>
+      <div set:html={idExamples} />
+    </div>
+  ) : null
+}
+{
+  idMoreInfo ? (
+    <div>
+      <h2>More info</h2>
+      <div set:html={idMoreInfo} />
+    </div>
+  ) : null
+}
+{
+  idExceptions ? (
+    <div>
+      <h2>Exceptions</h2>
+      <div set:html={idExceptions} />
+    </div>
+  ) : null
+}
+{
+  idAlsoSee ? (
+    <div>
+      <h2>Also see</h2>
+      <div set:html={idAlsoSee} />
+    </div>
+  ) : null
+}
+{
+  idRationale ? (
+    <div>
+      <h2>Rationale</h2>
+      <div set:html={idRationale} />
+    </div>
+  ) : null
+}
 
 <style lang="scss">
   @use "@styles/responsive.scss" as r;
@@ -66,13 +140,10 @@ marked.use(markedSmartypants());
   h1#number-title {
     display: grid;
     grid-template-columns: auto 1fr auto;
-    grid-template-areas: "number title emoji";
+    grid-template-areas:
+      "number emoji"
+      "title  title";
     gap: 1ch;
-    @include r.mobile {
-      grid-template-areas:
-        "number emoji"
-        "title  title";
-    }
 
     .number,
     .emoji {
@@ -91,14 +162,6 @@ marked.use(markedSmartypants());
     .emoji {
       grid-area: emoji;
       padding-top: 5px;
-    }
-  }
-
-  h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    a {
-      text-decoration: none;
     }
   }
 </style>
