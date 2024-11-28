@@ -61,6 +61,9 @@ console.log(ids);
 import { marked } from "marked";
 import { markedSmartypants } from "marked-smartypants";
 marked.use(markedSmartypants());
+
+// - Wiki-linkify the description
+import wikiLinkify from "@helpers/wikiLinkify";
 ---
 
 <h1 id="number-title">
@@ -81,7 +84,7 @@ marked.use(markedSmartypants());
         </h2>
         <div
           class="description"
-          set:html={id.description && marked.parse(id.description)}
+          set:html={id.description && marked.parse(wikiLinkify(id.description))}
         />
       </li>
     ))

@@ -1,16 +1,19 @@
-import type { IDWithACContext } from "./generateIdsWithACContext";
+import sb from "@content/data/smallBusinessFlat.ts";
 
-/**
- * Convert [[wiki-links]] in the text to <a href="..."> full links.
- */
-
-// Convert this like Gordon would!
-function wikiLinkify(text: string, idsWithACContext: IDWithACContext[]) {
+//   - Wiki-linking the descriptive text.
+function wikiLinkify(text: string): string {
+  // `text` is a Markdown string which might contain wiki-links like [[12.34]].
   return text.replace(/\[\[(\d{2}.\d{2})\]\]/g, (_match, p1) => {
-    const foundId = idsWithACContext.find((obj) => obj.idNumber === p1);
-    // Use idTitle if found, otherwise fall back to just displaying the number
-    const idTitle = foundId ? foundId.idTitle : p1;
-    return `<a href="${p1}">${p1} ${idTitle}</a>`;
+    // If a match was made, `p1` is an ID. Return a [Markdown](link) to it.
+    if (sb[p1]) {
+      return `[${p1} ${sb[p1].title}](/jdex/${p1})`;
+    } else {
+      console.warn(
+        `🚨 ID.astro: you tried to wiki-link to an ID that doesn't exist: ${p1}`
+      );
+      // Return the original text.
+      return text;
+    }
   });
 }
 
