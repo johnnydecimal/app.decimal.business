@@ -1,35 +1,35 @@
 ---
 /**
- * The category list view component. So we've navigated to
- * /jdex/11.
+ * The area list view component. So we've navigated to
+ * /jdex/10-19.
  *
- * Shows the category and all of its IDs, grouped by header.
+ * Shows the area and all of its categories. Might it be nice to show
+ * the header-IDs as well?
  *
  * ```
- * 🕚 11 Eleven                                          [emoji, big?]
- *      The description of category eleven.
+ * 🕚 10-19 The teens                                        [emoji, big?]
+ *      The description of area ten through nineteen.
  *
- * ## 11.10 Official documents 🗂 ️
- *          Description
- *    11.11 Structure & registrations
- *          Description
- *    11.12 ...
+ * ## 11 The business & its people
+ *       Description
+ *       11.10 Documents
+ *       11.20 Registraions
  *
- * ## 11.20 Planning, contingencies, & insurance 🧭
+ * ## 12 Where we trade...
  *          Description
- *    11.21 ...
+ * ## 13 ...
+ *
  * ```
  *
  * So we need:
- * √ To be passed the number of the category to render. This is the slug.
- * √ The whole system to reference. Just import it directly.
- * √ The title of the category for the main header.
- * √ The description and emoji of the category.
- * √ An array of the IDs that this category contains. Each one of those
- *   needs to contain the ID, title, description, isHeader, emoji.
- * √ Where those descriptions have been rendered to HTML from Markdown.
- * √ Linking the ID header to the ID URL.
- * √ Denoting with styles and a ■ whether it's a header.
+ * - To be passed the number of the area to render. This is the slug.
+ * - The whole system to reference. Just import it directly.
+ * - The title of the area for the main header.
+ * - The description and emoji of the area.
+ * - An array of the categories that this area contains. Each one of those
+ *   needs to contain the ID, title, description, emoji.
+ * - Where those descriptions have been rendered to HTML from Markdown.
+ * - Linking the category header to the category URL.
  * - A breadcrumb to the parent area.
  */
 
@@ -43,21 +43,16 @@ const { category } = Astro.props;
 import sb from "@content/data/smallBusinessFlat";
 
 // - The title of the category for the main header.
-const categoryEntry = sb[category] as CategoryEntry;
-const cTitle = categoryEntry.title;
+const cTitle = sb[category]?.title;
 
 // - The description and emoji of the category.
-const cDescription = categoryEntry.description;
-const cEmoji = categoryEntry.emoji;
+const cDescription = sb[category].description;
+const cEmoji = sb[category].emoji;
 
 // - An array of the IDs that this category contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.
 import { getChildren } from "@content/data/smallBusinessFlat.ts";
-import type {
-  AreaEntry,
-  CategoryEntry,
-  IdEntry,
-} from "@content/data/smallBusinessFlat";
+import type { IdEntry } from "@content/data/smallBusinessFlat";
 const ids = getChildren(sb, "11") as IdEntry[];
 console.log("=====");
 console.log(ids);
@@ -69,20 +64,7 @@ marked.use(markedSmartypants());
 
 // - Wiki-linkify the description
 import wikiLinkify from "@helpers/wikiLinkify";
-
-// - A breadcrumb to the parent area.
-const parentANumber = categoryEntry.parentNumber;
-const parentAEntry = sb[parentANumber] as AreaEntry;
-const parentATitle = parentAEntry.title;
 ---
-
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <ol>
-    <li>
-      <a href=`/jdex/${parentANumber}`>{parentANumber} {parentATitle}</a>
-    </li>
-  </ol>
-</nav>
 
 <h1 id="number-title">
   <span class="number">{category}</span>
@@ -100,14 +82,10 @@ const parentATitle = parentAEntry.title;
           {/* - Linking the ID header to the ID URL. */}
           <a href={`/jdex/${id.number}`}>{`${id.number} ${id.title}`}</a>
         </h2>
-        <div>
-          <p
-            class="description"
-            set:html={
-              id.description && marked.parse(wikiLinkify(id.description))
-            }
-          />
-        </div>
+        <div
+          class="description"
+          set:html={id.description && marked.parse(wikiLinkify(id.description))}
+        />
       </li>
     ))
   }

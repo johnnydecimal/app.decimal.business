@@ -96,86 +96,87 @@ const parentATitle = parentAEntry.title;
       href=`/jdex/${parentCNumber}`>{parentCNumber} {parentCTitle}</a
     >
   </p>
+</div>
 
-  {
-    idDescription ? (
-      <div
-        class="description"
-        set:html={idDescription && marked.parse(idDescription)}
-      />
-    ) : null
-  }
+{
+  idDescription ? (
+    <div
+      class="description"
+      set:html={idDescription && marked.parse(idDescription)}
+    />
+  ) : null
+}
 
-  {
-    idExamples ? (
-      <div>
-        <h2>Examples</h2>
-        <div set:html={idExamples} />
-      </div>
-    ) : null
-  }
-  {
-    idMoreInfo ? (
-      <div>
-        <h2>More info</h2>
-        <div set:html={idMoreInfo} />
-      </div>
-    ) : null
-  }
-  {
-    idExceptions ? (
-      <div>
-        <h2>Exceptions</h2>
-        <div set:html={idExceptions} />
-      </div>
-    ) : null
-  }
-  {
-    idAlsoSee ? (
-      <div>
-        <h2>Also see</h2>
-        <div set:html={idAlsoSee} />
-      </div>
-    ) : null
-  }
-  {
-    idRationale ? (
-      <div>
-        <h2>Rationale</h2>
-        <div set:html={idRationale} />
-      </div>
-    ) : null
-  }
+{
+  idExamples ? (
+    <div>
+      <h2>Examples</h2>
+      <div set:html={idExamples} />
+    </div>
+  ) : null
+}
+{
+  idMoreInfo ? (
+    <div>
+      <h2>More info</h2>
+      <div set:html={idMoreInfo} />
+    </div>
+  ) : null
+}
+{
+  idExceptions ? (
+    <div>
+      <h2>Exceptions</h2>
+      <div set:html={idExceptions} />
+    </div>
+  ) : null
+}
+{
+  idAlsoSee ? (
+    <div>
+      <h2>Also see</h2>
+      <div set:html={idAlsoSee} />
+    </div>
+  ) : null
+}
+{
+  idRationale ? (
+    <div>
+      <h2>Rationale</h2>
+      <div set:html={idRationale} />
+    </div>
+  ) : null
+}
 
-  <style lang="scss">
-    @use "@styles/responsive.scss" as r;
+<style lang="scss">
+  @use "@styles/common.scss";
+  @use "@styles/responsive.scss" as r;
 
-    h1#number-title {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      grid-template-areas:
-        "number emoji"
-        "title  title";
-      gap: 1ch;
+  h1#number-title {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "number emoji"
+      "title  title";
+    gap: 1ch;
 
-      .number,
-      .emoji {
-        font-size: 4rem;
-        line-height: 1;
-        @include r.mobile {
-          justify-self: end;
-        }
-      }
-      .number {
-        grid-area: number;
-      }
-      .title {
-        grid-area: title;
-      }
-      .emoji {
-        grid-area: emoji;
-        padding-top: 5px;
+    .number,
+    .emoji {
+      font-size: 4rem;
+      line-height: 1;
+      @include r.mobile {
+        justify-self: end;
       }
     }
-  </style>
-</div>
+    .number {
+      grid-area: number;
+    }
+    .title {
+      grid-area: title;
+    }
+    .emoji {
+      grid-area: emoji;
+      padding-top: 5px;
+    }
+  }
+</style>

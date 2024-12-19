@@ -1,0 +1,15 @@
+/* common.scss
+ *
+ * Use this for commonly-named classes etc. Then just @use directly in a
+ * component and there's nothing to declare there.
+ */
+
+nav.breadcrumb {
+  background-color: aliceblue;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 20px 0 40px 0;
+  ol {
+    list-style-type: none;
+  }
+}
