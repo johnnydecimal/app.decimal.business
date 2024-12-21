@@ -112,7 +112,7 @@ import Slice from "./common/Slice.astro";
 }
 
 <Slice>
-  <ul>
+  <ul id="id-list">
     {
       ids.map((id) => (
         <li class={id.isHeader ? "is-header" : null}>
@@ -146,7 +146,7 @@ import Slice from "./common/Slice.astro";
     font-size: 1rem;
   }
 
-  ul {
+  ul#id-list {
     list-style-type: none;
     li.is-header {
       margin-top: var(--large);
