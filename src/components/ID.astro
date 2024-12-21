@@ -31,6 +31,9 @@ interface Props {
  * - Its parent category's parent area (number & title).
  * - Linking the ID header to the ID URL.
  * - Denoting with styles and a ■ whether it's a header.
+ *
+ * New Dec '24
+ * - To import and use the Slice component.
  */
 
 // - To be passed the number of the id to render. This is the slug.
@@ -82,76 +85,101 @@ const parentCTitle = parentCEntry.title;
 const parentANumber = parentCEntry.parentNumber;
 const parentAEntry = sb[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
+
+// - To import and use the Slice component.
+import Slice from "./common/Slice.astro";
 ---
 
-<h1 id="number-title">
-  <span class="number">{id}</span>
-  <span class="title">{idTitle}</span>
-  <span class="emoji">{idEmoji}</span>
-</h1>
+<Slice>
+  <a href={`/${parentANumber}`}>
+    <span>{parentANumber}</span>
+    <span>{parentATitle}</span>
+  </a>
+</Slice>
 
-<div class="breadcrumbs">
-  <p>
-    <a href=`/${parentANumber}`>{parentANumber} {parentATitle}</a> &gt; <a
-      href=`/${parentCNumber}`>{parentCNumber} {parentCTitle}</a
-    >
-  </p>
-</div>
+<Slice>
+  <a href={`/${parentCNumber}`} class="breadcrumb-category">
+    <span>{parentCNumber}</span>
+    <span>{parentCTitle}</span>
+  </a>
+</Slice>
+
+<Slice>
+  <h1 id="number-title">
+    <span class="number">{id}</span>
+    <span class="title">{idTitle}</span>
+    <span class="emoji">{idEmoji}</span>
+  </h1>
+</Slice>
 
 {
   idDescription ? (
-    <div
-      class="description"
-      set:html={idDescription && marked.parse(idDescription)}
-    />
+    <Slice>
+      <div
+        class="description"
+        set:html={idDescription && marked.parse(idDescription)}
+      />
+    </Slice>
   ) : null
 }
 
 {
   idExamples ? (
-    <div>
+    <Slice>
       <h2>Examples</h2>
       <div set:html={idExamples} />
-    </div>
+    </Slice>
   ) : null
 }
+
 {
   idMoreInfo ? (
-    <div>
+    <Slice>
       <h2>More info</h2>
       <div set:html={idMoreInfo} />
-    </div>
+    </Slice>
   ) : null
 }
+
 {
   idExceptions ? (
-    <div>
+    <Slice>
       <h2>Exceptions</h2>
       <div set:html={idExceptions} />
-    </div>
+    </Slice>
   ) : null
 }
+
 {
   idAlsoSee ? (
-    <div>
+    <Slice>
       <h2>Also see</h2>
       <div set:html={idAlsoSee} />
-    </div>
+    </Slice>
   ) : null
 }
+
 {
   idRationale ? (
-    <div>
+    <Slice>
       <h2>Rationale</h2>
       <div set:html={idRationale} />
-    </div>
+    </Slice>
   ) : null
 }
 
 <style lang="scss">
-  @use "@styles/common.scss";
-  @use "@styles/responsive.scss" as r;
+  @use "@styles/common.scss" as *;
 
+  h1 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+
+  /* 
   h1#number-title {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -164,7 +192,7 @@ const parentATitle = parentAEntry.title;
     .emoji {
       font-size: 4rem;
       line-height: 1;
-      @include r.mobile {
+      @include mobile {
         justify-self: end;
       }
     }
@@ -179,4 +207,5 @@ const parentATitle = parentAEntry.title;
       padding-top: 5px;
     }
   }
+    */
 </style>

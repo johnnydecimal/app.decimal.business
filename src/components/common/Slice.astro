@@ -1,0 +1,25 @@
+---
+interface Props {
+  backgroundColor?: string;
+}
+
+const { backgroundColor = "#ffffff" } = Astro.props;
+---
+
+<div
+  class="background-wrapper"
+  style={`--background-color: ${backgroundColor};`}
+>
+  <div class="layout-container">
+    <slot />
+  </div>
+</div>
+
+<style lang="scss">
+  @use "/src/styles/common";
+
+  .background-wrapper {
+    border: 1px dotted beige;
+    margin: 10px 0;
+  }
+</style>

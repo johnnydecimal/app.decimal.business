@@ -16,7 +16,7 @@ import {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <!-- <link rel="stylesheet" href="/src/styles/reset.css" /> -->
+    <link rel="stylesheet" href="/src/styles/reset.css" />
     <link
       rel="preload"
       href="/fonts/BerkeleyMono/BerkeleyMono-Regular.woff2"
@@ -63,10 +63,13 @@ import {
 
 <style lang="scss">
   @use "@styles/fonts";
-  @use "@styles/responsive" as r;
 
   :global(*) {
     // border: 1px dotted lightblue;
+  }
+
+  body {
+    margin-top: 20px;
   }
 
   main {

@@ -4,6 +4,52 @@
  * component and there's nothing to declare there.
  */
 
+/* Note that our content is limited to 600px, so having the site be
+   responsive at a touch wider viewport means the content never
+   touches the sides. Update: but we have built-in padding anyway.
+ */
+@mixin mobile {
+  @media (max-width: 699px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+@mixin dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+/* -------------------------------- Variables ------------------------------- */
+:root {
+  --content-max-width: 600px;
+  --content-padding: 1rem;
+}
+
+/* ----------------------------- Utility classes ---------------------------- */
+.background-wrapper {
+  background-color: var(
+    --background-color,
+    #f0f0f0
+  ); /* Default background color */
+}
+
+.layout-container {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 0 var(--content-padding);
+  box-sizing: border-box;
+}
+
+a.breadcrumb-category {
+  // margin-left: 3ch;
+  // text-indent: 3ch hanging;
+}
+
 nav.breadcrumb {
   background-color: aliceblue;
   border-top: 1px solid black;
