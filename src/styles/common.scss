@@ -28,6 +28,24 @@
 :root {
   --content-max-width: 600px;
   --content-padding: 1rem;
+
+  --tiny: 10px;
+  --small: 14px;
+  --medium: 20px;
+  --large: 28px;
+  --xlarge: 40px;
+}
+
+/* -------------------------------- Elements -------------------------------- */
+
+nav {
+  ul {
+    list-style: none;
+  }
+}
+
+p {
+  line-height: 1.4;
 }
 
 /* ----------------------------- Utility classes ---------------------------- */
@@ -45,17 +63,4 @@
   box-sizing: border-box;
 }
 
-a.breadcrumb-category {
-  // margin-left: 3ch;
-  // text-indent: 3ch hanging;
-}
-
-nav.breadcrumb {
-  background-color: aliceblue;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  margin: 20px 0 40px 0;
-  ol {
-    list-style-type: none;
-  }
-}
+/* ------------------- Elements styled with a class or ID ------------------- */

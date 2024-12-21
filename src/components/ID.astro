@@ -1,7 +1,10 @@
 ---
+import "/src/styles/common.scss";
+
 interface Props {
   id: string;
 }
+
 /**
  * The category list view component. So we've navigated to
  * /jdex/11.
@@ -91,17 +94,22 @@ import Slice from "./common/Slice.astro";
 ---
 
 <Slice>
-  <a href={`/${parentANumber}`}>
-    <span>{parentANumber}</span>
-    <span>{parentATitle}</span>
-  </a>
-</Slice>
-
-<Slice>
-  <a href={`/${parentCNumber}`} class="breadcrumb-category">
-    <span>{parentCNumber}</span>
-    <span>{parentCTitle}</span>
-  </a>
+  <nav>
+    <ul>
+      <li>
+        <a href={`/${parentANumber}`}>
+          <span>{parentANumber}</span>
+          <span>{parentATitle}</span>
+        </a>
+      </li>
+      <li>
+        <a href={`/${parentCNumber}`} class="breadcrumb-category">
+          <span>{parentCNumber}</span>
+          <span>{parentCTitle}</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </Slice>
 
 <Slice>
@@ -173,12 +181,12 @@ import Slice from "./common/Slice.astro";
 
   h1 {
     font-size: 1rem;
-    font-weight: normal;
   }
   h2 {
     font-size: 1rem;
   }
 
+  // --------- old but might be useful ---------
   /* 
   h1#number-title {
     display: grid;

@@ -74,48 +74,90 @@ import wikiLinkify from "@helpers/wikiLinkify";
 const parentANumber = categoryEntry.parentNumber;
 const parentAEntry = sb[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
+
+// - To import and use the Slice component.
+import Slice from "./common/Slice.astro";
 ---
 
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <ol>
-    <li>
-      <a href=`/jdex/${parentANumber}`>{parentANumber} {parentATitle}</a>
-    </li>
-  </ol>
-</nav>
-
-<h1 id="number-title">
-  <span class="number">{category}</span>
-  <span class="title">{cTitle}</span>
-  <span class="emoji">{cEmoji}</span>
-</h1>
-
-<div class="description"><p>{cDescription}</p></div>
-
-<ul>
-  {
-    ids.map((id) => (
-      <li class={id.isHeader ? "is-header" : null}>
-        <h2>
-          {/* - Linking the ID header to the ID URL. */}
-          <a href={`/jdex/${id.number}`}>{`${id.number} ${id.title}`}</a>
-        </h2>
-        <div>
-          <p
-            class="description"
-            set:html={
-              id.description && marked.parse(wikiLinkify(id.description))
-            }
-          />
-        </div>
+<Slice>
+  <nav>
+    <ul>
+      <li>
+        <a href={`/${parentANumber}`}>
+          <span>{parentANumber}</span>
+          <span>{parentATitle}</span>
+        </a>
       </li>
-    ))
-  }
-</ul>
+    </ul>
+  </nav>
+</Slice>
+
+<Slice>
+  <h1 id="number-title">
+    <span class="number">{category}</span>
+    <span class="title">{cTitle}</span>
+    <span class="emoji">{cEmoji}</span>
+  </h1>
+</Slice>
+
+{
+  cDescription ? (
+    <Slice>
+      <div
+        class="description"
+        set:html={cDescription && marked.parse(cDescription)}
+      />
+    </Slice>
+  ) : null
+}
+
+<Slice>
+  <ul>
+    {
+      ids.map((id) => (
+        <li class={id.isHeader ? "is-header" : null}>
+          <h2>
+            {/* - Linking the ID header to the ID URL. */}
+            <a href={`/${id.number}`}>
+              {id.number} {id.isHeader ? "■" : ""} {id.title}
+            </a>
+          </h2>
+          <div>
+            <p
+              class="description"
+              set:html={
+                id.description && marked.parse(wikiLinkify(id.description))
+              }
+            />
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</Slice>
 
 <style lang="scss">
   @use "@styles/common.scss" as *;
 
+  h1 {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+
+  ul {
+    list-style-type: none;
+    li.is-header {
+      margin-top: var(--large);
+    }
+
+    li {
+      margin: var(--tiny) 0;
+    }
+  }
+
+  /*
   h1#number-title {
     display: grid;
     grid-template-columns: auto 1fr auto;
@@ -155,12 +197,5 @@ const parentATitle = parentAEntry.title;
     }
   }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    li.is-header {
-      border-top: 1px solid darkblue;
-      margin-top: 30px;
-    }
-  }
+  */
 </style>

@@ -74,6 +74,7 @@ const flattenedData: FlattenedData = {
     parentNumber: "11",
     type: "id",
     title: "Category management",
+    isHeader: true,
     metadata: { createdDate: "2024-11-19", updatedDate: "2024-11-19" },
     extensions: {
       smallBusiness: {
