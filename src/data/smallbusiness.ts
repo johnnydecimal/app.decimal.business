@@ -1,4 +1,4 @@
-import type { JohnnyDecimalSystem } from "../../types/jd_schema";
+import type { JohnnyDecimalSystem } from "../types/jd_schema";
 
 const smallBusiness: JohnnyDecimalSystem = {
   systemId: "J92",

@@ -1,4 +1,4 @@
-import sb from "@content/data/smallBusinessFlat.ts";
+import sb from "src/data/smallBusinessFlat";
 
 //   - Wiki-linking the descriptive text.
 function wikiLinkify(text: string): string {

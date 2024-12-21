@@ -3,7 +3,7 @@ import { writeFile } from "fs/promises";
 // Internal
 import generateIdsWithACContext from "../helpers/generateIdsWithACContext.ts";
 // Data
-import sb from "../content/data/smallbusiness.ts";
+import sb from "../data/smallbusiness.ts";
 
 (async () => {
   const idsWithACContext = await generateIdsWithACContext(sb);

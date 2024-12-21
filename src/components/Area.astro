@@ -40,7 +40,7 @@ interface Props {
 const { category } = Astro.props;
 
 // - The whole system to reference. Just import it directly.
-import sb from "@content/data/smallBusinessFlat";
+import sb from "src/data/smallBusinessFlat";
 
 // - The title of the category for the main header.
 const cTitle = sb[category]?.title;
@@ -51,8 +51,8 @@ const cEmoji = sb[category].emoji;
 
 // - An array of the IDs that this category contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.
-import { getChildren } from "@content/data/smallBusinessFlat.ts";
-import type { IdEntry } from "@content/data/smallBusinessFlat";
+import { getChildren } from "src/data/smallBusinessFlat";
+import type { IdEntry } from "src/data/smallBusinessFlat";
 const ids = getChildren(sb, "11") as IdEntry[];
 console.log("=====");
 console.log(ids);
