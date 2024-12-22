@@ -2,9 +2,10 @@
 import sb from "src/data/smallBusinessFlat";
 import type { EntryType } from "src/data/smallBusinessFlat";
 
+import Layout from "@layouts/Layout.astro";
 import Category from "@components/Category.astro";
 import ID from "@components/ID.astro";
-import Layout from "@layouts/Layout.astro";
+import OpsManual from "@components/OpsManual.astro";
 
 const { slug } = Astro.params;
 
@@ -36,6 +37,12 @@ if (slug?.match(/^[0-9]0-[0-9]9$/)) {
   } else {
     entryType = "no-match";
   }
+} else if (slug?.match(/^\d\d\.\d\d\+OPS\d+$/)) {
+  if (!!sb[slug]) {
+    entryType = "ops";
+  } else {
+    entryType = "no-match";
+  }
 } else {
   entryType = "no-match";
   // None of the above
@@ -46,6 +53,7 @@ if (slug?.match(/^[0-9]0-[0-9]9$/)) {
   {entryType === "area" ? <div>area</div> : null}
   {entryType === "category" ? <Category category={slug!} /> : null}
   {entryType === "id" ? <ID id={slug!} /> : null}
+  {entryType === "ops" ? <OpsManual id={slug!} /> : null}
   {
     entryType === "no-match" ? (
       <div>Graceful fallback; show the system?</div>

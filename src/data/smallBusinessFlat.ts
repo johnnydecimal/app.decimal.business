@@ -5,7 +5,7 @@ type Metadata = {
 };
 
 // Entry types
-export type EntryType = "area" | "category" | "id";
+export type EntryType = "area" | "category" | "id" | "ops";
 
 // Base interface for common fields
 interface BaseEntry {
@@ -41,7 +41,17 @@ export interface IdEntry extends BaseEntry {
       rationale?: string;
       links?: string;
     };
-    smallBusinessOpsManual?: {
+  };
+}
+
+export interface OpsEntry extends BaseEntry {
+  type: "ops";
+  parentNumber: string; // All ids must have a parent category
+  // isHeader?: boolean;
+  extensions: {
+    smallBusinessOpsManual: {
+      overview: string; // remember the ID has a description
+      diagram?: string;
       trigger: string;
       inputs: string;
       process: string;
@@ -51,7 +61,7 @@ export interface IdEntry extends BaseEntry {
 }
 
 // Union type for all entries
-export type FlattenedEntry = AreaEntry | CategoryEntry | IdEntry;
+export type FlattenedEntry = AreaEntry | CategoryEntry | IdEntry | OpsEntry;
 
 // Flattened data structure type
 type FlattenedData = Record<string, FlattenedEntry>;
@@ -87,6 +97,28 @@ const flattenedData: FlattenedData = {
       smallBusiness: {
         examples: "Example of category management",
         moreInfo: "More information about this ID",
+      },
+    },
+  },
+  "11.03+OPS1": {
+    number: "11.01+OPS1",
+    parentNumber: "11",
+    type: "ops",
+    title: "Saving invoices, receipts, or bills in an inbox",
+    description: "A one-liner.",
+    metadata: { createdDate: "2024-11-19", updatedDate: "2024-11-19" },
+    extensions: {
+      smallBusinessOpsManual: {
+        overview:
+          "This manual explains how to record:\n\n- income, e.g. invoices you issue,\n- expenses, e.g. receipts for things you buy,\n- liabilities, e.g. bills you receive.\n\nIn this first phase, you store the invoice, receipt, or bill -- the 'artefact' -- in an **inbox** until it is time to process it. Processing occurs in the next phase.",
+        diagram:
+          'flowchart TD\n    A(("[A] Start")) --> B("[B] An income, expense, or\n    liability event")\n    B --> C["[C] The invoice, receipt, or bill"]\n    C --> D["[D] Save it for\n    later processing"] & H["[H] Process the invoice,\n    receipt, or bill"]\n    C -.-> E["*(Bills only)*\n    [E] Pay it immediately"]\n    D --> F["[F] One of your inboxes"]\n    F --o G["[G] ⏯️\n    Every month/quarter,\n    process your inboxes"]\n    G --> H\n    H --> I["[I] A specific JD ID for\n    the thing you have processed"]\n    E --> H\n    I --> J((("[J] Stop")))\n\n    C@{ shape: doc}\n    D@{ shape: proc}\n    F@{ shape: db}\n    G@{ shape: delay}\n    I@{ shape: db}',
+        trigger:
+          "Whenever you generate or receive an invoice, receipt, or bill.",
+        inputs:
+          "1. The invoice, receipt, or bill.\n2. Your [[list of inboxes]].",
+        process: "This is the process. We haven't documented this yet.",
+        outputs: "This is the outputs. We haven't documented this yet.",
       },
     },
   },
