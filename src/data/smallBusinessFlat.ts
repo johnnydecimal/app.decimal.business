@@ -111,8 +111,32 @@ const flattenedData: FlattenedData = {
       smallBusinessOpsManual: {
         overview:
           "This manual explains how to record:\n\n- income, e.g. invoices you issue,\n- expenses, e.g. receipts for things you buy,\n- liabilities, e.g. bills you receive.\n\nIn this first phase, you store the invoice, receipt, or bill -- the 'artefact' -- in an **inbox** until it is time to process it. Processing occurs in the next phase.",
-        diagram:
-          'flowchart TD\n    A(("[A] Start")) --> B("[B] An income, expense, or\n    liability event")\n    B --> C["[C] The invoice, receipt, or bill"]\n    C --> D["[D] Save it for\n    later processing"] & H["[H] Process the invoice,\n    receipt, or bill"]\n    C -.-> E["*(Bills only)*\n    [E] Pay it immediately"]\n    D --> F["[F] One of your inboxes"]\n    F --o G["[G] ⏯️\n    Every month/quarter,\n    process your inboxes"]\n    G --> H\n    H --> I["[I] A specific JD ID for\n    the thing you have processed"]\n    E --> H\n    I --> J((("[J] Stop")))\n\n    C@{ shape: doc}\n    D@{ shape: proc}\n    F@{ shape: db}\n    G@{ shape: delay}\n    I@{ shape: db}',
+        diagram: `
+        flowchart TD
+    A(("[A] Start")) --> B("[B] An income, expense, or
+    liability event")
+    B --> C["[C] The invoice, receipt, or bill"]
+    C --> D["[D] Save it for
+    later processing"] & H["[H] Process the invoice,
+    receipt, or bill"]
+    C -.-> E["*(Bills only)*
+    [E] Pay it immediately"]
+    D --> F["[F] One of your inboxes"]
+    F --o G["[G] ⏯️
+    Every month/quarter,
+    process your inboxes"]
+    G --> H
+    H --> I["[I] A specific JD ID for
+    the thing you have processed"]
+    E --> H
+    I --> J((("[J] Stop")))
+
+    C@{ shape: doc}
+    D@{ shape: proc}
+    F@{ shape: db}
+    G@{ shape: delay}
+    I@{ shape: db}
+        `,
         trigger:
           "Whenever you generate or receive an invoice, receipt, or bill.",
         inputs:

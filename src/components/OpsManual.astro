@@ -34,6 +34,7 @@ import sb, {
   type AreaEntry,
   type CategoryEntry,
   type IdEntry,
+  type OpsEntry,
 } from "src/data/smallBusinessFlat";
 
 // - The title of the ID for the main header.
@@ -45,26 +46,26 @@ import { markedSmartypants } from "marked-smartypants";
 marked.use(markedSmartypants());
 
 // - All of its other details for the main content.
-const idEntry = sb[id] as IdEntry;
+const idEntry = sb[id] as OpsEntry;
 const idEmoji = idEntry.emoji;
 
 //   - Wiki-linking the descriptive text.
 import wikiLinkify from "@helpers/wikiLinkify";
 
 const idDescription = await marked.parse(wikiLinkify(idEntry.description));
-const idEntrySb = idEntry.extensions?.smallBusiness;
-const idExamples =
-  idEntrySb?.examples && (await marked.parse(wikiLinkify(idEntrySb.examples)));
-const idMoreInfo =
-  idEntrySb?.moreInfo && (await marked.parse(wikiLinkify(idEntrySb.moreInfo)));
-const idExceptions =
-  idEntrySb?.exceptions &&
-  (await marked.parse(wikiLinkify(idEntrySb.exceptions)));
-const idAlsoSee =
-  idEntrySb?.alsoSee && (await marked.parse(wikiLinkify(idEntrySb.alsoSee)));
-const idRationale =
-  idEntrySb?.rationale &&
-  (await marked.parse(wikiLinkify(idEntrySb.rationale)));
+const opsEntryManual = idEntry.extensions?.smallBusinessOpsManual;
+// const idExamples =
+//   idEntrySb?.examples && (await marked.parse(wikiLinkify(idEntrySb.examples)));
+// const idMoreInfo =
+//   idEntrySb?.moreInfo && (await marked.parse(wikiLinkify(idEntrySb.moreInfo)));
+// const idExceptions =
+//   idEntrySb?.exceptions &&
+//   (await marked.parse(wikiLinkify(idEntrySb.exceptions)));
+// const idAlsoSee =
+//   idEntrySb?.alsoSee && (await marked.parse(wikiLinkify(idEntrySb.alsoSee)));
+// const idRationale =
+//   idEntrySb?.rationale &&
+//   (await marked.parse(wikiLinkify(idEntrySb.rationale)));
 
 // - Its parent category (number & title), and
 // - Its parent category's parent area (number & title).
@@ -130,6 +131,12 @@ flowchart TD
   </div>
 </Slice>
 
+<Slice>
+  <div class="mermaid">
+    {opsEntryManual.diagram!}
+  </div>
+</Slice>
+
 {
   idDescription ? (
     <Slice>
@@ -141,7 +148,7 @@ flowchart TD
   ) : null
 }
 
-{
+<!-- {
   idExamples ? (
     <Slice>
       <div class="label-text-container">
@@ -150,57 +157,7 @@ flowchart TD
       </div>
     </Slice>
   ) : null
-}
-
-{
-  idMoreInfo ? (
-    <Slice>
-      <div class="label-text-container">
-        <h2 class="label">More info</h2>
-        <div class="text" set:html={idMoreInfo} />
-      </div>
-    </Slice>
-  ) : null
-}
-
-{
-  idExceptions ? (
-    <Slice>
-      <div class="label-text-container">
-        <h2 class="label">Exceptions</h2>
-        <div class="text" set:html={idExceptions} />
-      </div>
-    </Slice>
-  ) : null
-}
-
-{
-  idAlsoSee ? (
-    <Slice>
-      <div class="label-text-container">
-        <h2 class="label">Also see</h2>
-        <div class="text" set:html={idAlsoSee} />
-      </div>
-    </Slice>
-  ) : null
-}
-
-{
-  idRationale ? (
-    <Slice>
-      <div class="label-text-container">
-        <h2 class="label">Rationale</h2>
-        <div class="text" set:html={idRationale} />
-      </div>
-    </Slice>
-  ) : null
-}
-
-<!-- <Slice>
-  <div class="mermaid">
-    {flowchart}
-    </div>
-    </Slice> -->
+} -->
 
 <style lang="scss">
   @use "@styles/common.scss" as *;
