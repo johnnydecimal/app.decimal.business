@@ -52,7 +52,7 @@ export interface OpsEntry extends BaseEntry {
     smallBusinessOpsManual: {
       overview: string; // remember the ID has a description
       diagram?: string;
-      trigger: string;
+      triggers: string;
       inputs: string;
       process: string;
       outputs: string;
@@ -137,7 +137,7 @@ const flattenedData: FlattenedData = {
     G@{ shape: delay}
     I@{ shape: db}
         `,
-        trigger:
+        triggers:
           "Whenever you generate or receive an invoice, receipt, or bill.",
         inputs:
           "1. The invoice, receipt, or bill.\n2. Your [[list of inboxes]].",

@@ -46,30 +46,23 @@ import { markedSmartypants } from "marked-smartypants";
 marked.use(markedSmartypants());
 
 // - All of its other details for the main content.
-const idEntry = sb[id] as OpsEntry;
-const idEmoji = idEntry.emoji;
+const opsEntry = sb[id] as OpsEntry;
+const idEmoji = opsEntry.emoji;
 
 //   - Wiki-linking the descriptive text.
 import wikiLinkify from "@helpers/wikiLinkify";
 
-const idDescription = await marked.parse(wikiLinkify(idEntry.description));
-const opsEntryManual = idEntry.extensions?.smallBusinessOpsManual;
-// const idExamples =
-//   idEntrySb?.examples && (await marked.parse(wikiLinkify(idEntrySb.examples)));
-// const idMoreInfo =
-//   idEntrySb?.moreInfo && (await marked.parse(wikiLinkify(idEntrySb.moreInfo)));
-// const idExceptions =
-//   idEntrySb?.exceptions &&
-//   (await marked.parse(wikiLinkify(idEntrySb.exceptions)));
-// const idAlsoSee =
-//   idEntrySb?.alsoSee && (await marked.parse(wikiLinkify(idEntrySb.alsoSee)));
-// const idRationale =
-//   idEntrySb?.rationale &&
-//   (await marked.parse(wikiLinkify(idEntrySb.rationale)));
+const opsDescription = await marked.parse(wikiLinkify(opsEntry.description));
+const opsEntryOpsManual = opsEntry.extensions?.smallBusinessOpsManual;
+
+const opsTriggers = await marked.parse(wikiLinkify(opsEntryOpsManual.triggers));
+const opsInputs = await marked.parse(wikiLinkify(opsEntryOpsManual.inputs));
+const opsProcess = await marked.parse(wikiLinkify(opsEntryOpsManual.process));
+const opsOutputs = await marked.parse(wikiLinkify(opsEntryOpsManual.outputs));
 
 // - Its parent category (number & title), and
 // - Its parent category's parent area (number & title).
-const parentCNumber = idEntry.parentNumber;
+const parentCNumber = opsEntry.parentNumber;
 const parentCEntry = sb[parentCNumber] as CategoryEntry;
 const parentCTitle = parentCEntry.title;
 
@@ -132,32 +125,50 @@ flowchart TD
 </Slice>
 
 <Slice>
-  <div class="mermaid">
-    {opsEntryManual.diagram!}
+  <div class="label-text-container">
+    <div></div>
+    <div class="title" set:html={opsDescription} />
   </div>
 </Slice>
 
 {
-  idDescription ? (
+  opsEntryOpsManual.diagram ? (
     <Slice>
       <div class="label-text-container">
-        <div />
-        <div class="title" set:html={idDescription} />
+        <h2 class="label">Diagram</h2>
+        <div class="mermaid text">{opsEntryOpsManual.diagram!}</div>
       </div>
     </Slice>
   ) : null
 }
 
-<!-- {
-  idExamples ? (
-    <Slice>
-      <div class="label-text-container">
-        <h2 class="label">Examples</h2>
-        <div class="text" set:html={idExamples} />
-      </div>
-    </Slice>
-  ) : null
-} -->
+<Slice>
+  <div class="label-text-container">
+    <h2 class="label">Triggers</h2>
+    <div class="text" set:html={opsTriggers} />
+  </div>
+</Slice>
+
+<Slice>
+  <div class="label-text-container">
+    <h2 class="label">Inputs</h2>
+    <div class="text" set:html={opsInputs} />
+  </div>
+</Slice>
+
+<Slice>
+  <div class="label-text-container">
+    <h2 class="label">Process</h2>
+    <div class="text" set:html={opsProcess} />
+  </div>
+</Slice>
+
+<Slice>
+  <div class="label-text-container">
+    <h2 class="label">Outputs</h2>
+    <div class="text" set:html={opsOutputs} />
+  </div>
+</Slice>
 
 <style lang="scss">
   @use "@styles/common.scss" as *;
