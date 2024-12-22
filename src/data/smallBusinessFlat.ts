@@ -33,13 +33,19 @@ export interface IdEntry extends BaseEntry {
   parentNumber: string; // All ids must have a parent category
   isHeader?: boolean;
   extensions?: {
-    smallBusiness: {
+    smallBusiness?: {
       examples?: string;
       moreInfo?: string;
       exceptions?: string;
       alsoSee?: string;
       rationale?: string;
       links?: string;
+    };
+    smallBusinessOpsManual?: {
+      trigger: string;
+      inputs: string;
+      process: string;
+      outputs: string;
     };
   };
 }
