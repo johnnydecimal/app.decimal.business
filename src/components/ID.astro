@@ -146,7 +146,7 @@ flowchart TD
     <Slice>
       <div class="label-text-container">
         <h2 class="label">Examples</h2>
-        <div class="title" set:html={idExamples} />
+        <div class="text" set:html={idExamples} />
       </div>
     </Slice>
   ) : null
@@ -156,19 +156,20 @@ flowchart TD
   idMoreInfo ? (
     <Slice>
       <div class="label-text-container">
-        <h2 class="number">More info</h2>
-        <div class="title" set:html={idMoreInfo} />
+        <h2 class="label">More info</h2>
+        <div class="text" set:html={idMoreInfo} />
       </div>
     </Slice>
   ) : null
 }
-<hr style="margin-top: 300px;" />
 
 {
   idExceptions ? (
     <Slice>
-      <h2>Exceptions</h2>
-      <div set:html={idExceptions} />
+      <div class="label-text-container">
+        <h2 class="label">Exceptions</h2>
+        <div class="text" set:html={idExceptions} />
+      </div>
     </Slice>
   ) : null
 }
@@ -176,8 +177,10 @@ flowchart TD
 {
   idAlsoSee ? (
     <Slice>
-      <h2>Also see</h2>
-      <div set:html={idAlsoSee} />
+      <div class="label-text-container">
+        <h2 class="label">Also see</h2>
+        <div class="text" set:html={idAlsoSee} />
+      </div>
     </Slice>
   ) : null
 }
@@ -185,11 +188,16 @@ flowchart TD
 {
   idRationale ? (
     <Slice>
-      <h2>Rationale</h2>
-      <div set:html={idRationale} />
+      <div class="label-text-container">
+        <h2 class="label">Rationale</h2>
+        <div class="text" set:html={idRationale} />
+      </div>
     </Slice>
   ) : null
 }
+
+{/**************** MOVE ME ***********************/}
+<hr style="margin-top: 300px;" />
 <!-- <Slice>
   <div class="mermaid">
     {flowchart}
@@ -221,6 +229,7 @@ flowchart TD
         padding: 1ch 1ch 0 0;
         justify-self: end;
       }
+      .text,
       .title {
         border-left: 1.5px solid lightgrey;
         margin-bottom: unset;
