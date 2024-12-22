@@ -4,6 +4,8 @@
  * component and there's nothing to declare there.
  */
 
+@use "./reset.css";
+
 @mixin dark {
   @media (prefers-color-scheme: dark) {
     @content;
