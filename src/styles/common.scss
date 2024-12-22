@@ -48,6 +48,9 @@
 }
 
 /* -------------------------------- Elements -------------------------------- */
+html {
+  color-scheme: light dark;
+}
 
 nav {
   ul {
@@ -62,10 +65,10 @@ p {
 
 /* ----------------------------- Utility classes ---------------------------- */
 .background-wrapper {
-  background-color: var(
-    --background-color,
-    #f0f0f0
-  ); /* Default background color */
+  // background-color: var(
+  //   --background-color,
+  //   #f0f0f0
+  // ); /* Default background color */
 }
 
 .layout-container {
@@ -76,3 +79,13 @@ p {
 }
 
 /* ------------------- Elements styled with a class or ID ------------------- */
+// Explain why they're here and not in their component.
+
+// The p here is set:html'd, so doesn't pick up styling from the component.
+div.ac-label {
+  div.title {
+    p + p {
+      margin-top: 1ch;
+    }
+  }
+}

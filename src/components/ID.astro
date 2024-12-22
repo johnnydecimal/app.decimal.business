@@ -51,7 +51,7 @@ const idEmoji = idEntry.emoji;
 //   - Wiki-linking the descriptive text.
 import wikiLinkify from "@helpers/wikiLinkify";
 
-const idDescription = idEntry.description && wikiLinkify(idEntry.description);
+const idDescription = await marked.parse(wikiLinkify(idEntry.description));
 const idEntrySb = idEntry.extensions?.smallBusiness;
 const idExamples =
   idEntrySb?.examples && (await marked.parse(wikiLinkify(idEntrySb.examples)));
@@ -78,6 +78,8 @@ const parentATitle = parentAEntry.title;
 
 // - To import and use the Slice component.
 import Slice from "./common/Slice.astro";
+import LabelText from "./common/LabelText.astro";
+import ACIDLabelText from "./common/ACIDLabelText.astro";
 
 const flowchart = `
 flowchart TD
@@ -108,45 +110,33 @@ flowchart TD
 ---
 
 <Slice>
-  <nav>
-    <ul>
-      <li>
-        <a href={`/${parentANumber}`}>
-          <span>{parentANumber}</span>
-          <span>{parentATitle}</span>
-        </a>
-      </li>
-      <li>
-        <a href={`/${parentCNumber}`} class="breadcrumb-category">
-          <span>{parentCNumber}</span>
-          <span>{parentCTitle}</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <div class="label-text-container">
+    <h2 class="number"><a href={parentANumber}>10-19</a></h2>
+    <div class="title">Company administration</div>
+  </div>
 </Slice>
 
 <Slice>
-  <h1 id="number-title">
-    <span class="number">{id}</span>
-    <span class="title">{idTitle}</span>
-    <span class="emoji">{idEmoji}</span>
-  </h1>
+  <div class="label-text-container">
+    <h2 class="number"><a href={parentCNumber}>11</a></h2>
+    <div class="title">The business & its people</div>
+  </div>
 </Slice>
 
 <Slice>
-  <div class="mermaid">
-    {flowchart}
+  <div class="label-text-container">
+    <div class="number"><strong>{id}</strong></div>
+    <div class="title"><strong>{idTitle}</strong></div>
   </div>
 </Slice>
 
 {
   idDescription ? (
     <Slice>
-      <div
-        class="description"
-        set:html={idDescription && marked.parse(idDescription)}
-      />
+      <div class="label-text-container">
+        <div />
+        <div class="title" set:html={idDescription} />
+      </div>
     </Slice>
   ) : null
 }
@@ -154,8 +144,10 @@ flowchart TD
 {
   idExamples ? (
     <Slice>
-      <h2>Examples</h2>
-      <div set:html={idExamples} />
+      <div class="label-text-container">
+        <h2 class="label">Examples</h2>
+        <div class="title" set:html={idExamples} />
+      </div>
     </Slice>
   ) : null
 }
@@ -163,11 +155,14 @@ flowchart TD
 {
   idMoreInfo ? (
     <Slice>
-      <h2>More info</h2>
-      <div set:html={idMoreInfo} />
+      <div class="label-text-container">
+        <h2 class="number">More info</h2>
+        <div class="title" set:html={idMoreInfo} />
+      </div>
     </Slice>
   ) : null
 }
+<hr style="margin-top: 300px;" />
 
 {
   idExceptions ? (
@@ -195,6 +190,11 @@ flowchart TD
     </Slice>
   ) : null
 }
+<!-- <Slice>
+  <div class="mermaid">
+    {flowchart}
+    </div>
+    </Slice> -->
 
 <style lang="scss">
   @use "@styles/common.scss" as *;
@@ -204,6 +204,29 @@ flowchart TD
   }
   h2 {
     font-size: 1rem;
+  }
+
+  .label-text-container {
+    // Mobile-first
+    .title {
+      margin-bottom: 1ch;
+    }
+
+    @include tablet-portrait-up {
+      display: grid;
+      grid-template-columns: 10ch auto;
+
+      .label,
+      .number {
+        padding: 1ch 1ch 0 0;
+        justify-self: end;
+      }
+      .title {
+        border-left: 1.5px solid lightgrey;
+        margin-bottom: unset;
+        padding: 1ch 0 0 1ch;
+      }
+    }
   }
 
   // --------- old but might be useful ---------

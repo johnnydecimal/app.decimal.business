@@ -100,19 +100,19 @@ import wikiLinkify from "@helpers/wikiLinkify";
     grid-template-columns: auto 1fr auto;
     grid-template-areas: "number title emoji";
     gap: 1ch;
-    @include r.mobile {
-      grid-template-areas:
-        "number emoji"
-        "title  title";
-    }
+    // @include r.mobile {
+    //   grid-template-areas:
+    //     "number emoji"
+    //     "title  title";
+    // }
 
     .number,
     .emoji {
       font-size: 4rem;
       line-height: 1;
-      @include r.mobile {
-        justify-self: end;
-      }
+      // @include r.mobile {
+      //   justify-self: end;
+      // }
     }
     .number {
       grid-area: number;

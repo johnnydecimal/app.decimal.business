@@ -12,7 +12,7 @@ interface BaseEntry {
   number: string;
   title: string;
   type: EntryType;
-  description?: string;
+  description: string; // Late change: everything must have a description; document the rationale later
   emoji?: string;
   metadata: Metadata;
 }
@@ -73,6 +73,7 @@ const flattenedData: FlattenedData = {
     number: "11.00",
     parentNumber: "11",
     type: "id",
+    description: "The 'standard zero' ID for category management.",
     title: "Category management",
     isHeader: true,
     metadata: { createdDate: "2024-11-19", updatedDate: "2024-11-19" },
@@ -849,6 +850,7 @@ const flattenedData: FlattenedData = {
     type: "id",
     number: "12.01",
     title: "Twelve oh-one",
+    description: "Twelve oh-one",
     parentNumber: "12",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
@@ -856,6 +858,7 @@ const flattenedData: FlattenedData = {
     type: "area",
     number: "20-29",
     title: "Company administration",
+    description: "The twenties",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
 };
