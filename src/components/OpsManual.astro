@@ -1,142 +1,80 @@
 ---
-import "/src/styles/common.scss";
-
-interface Props {
-  id: string;
-}
-
-/**
- * The ID view component. So we're at /11.11.
- *
- * Shows a single ID, with all of its detail. Shows breadcrumbs
- * to its category and area.
- *
- * So we need:
- * √ To be passed the number of the id to render. This is the slug.
- * √ The whole system to reference. Just import it directly.
- * √ The title of the ID for the main header.
- * √ All of its other details for the main content.
- *   √ Wiki-linking the descriptive text.
- * - Its parent category (number & title), and
- * - Its parent category's parent area (number & title).
- * - Linking the ID header to the ID URL.
- * - Denoting with styles and a ■ whether it's a header.
- *
- * New Dec '24
- * - To import and use the Slice component.
- */
-
-// - To be passed the number of the id to render. This is the slug.
-const { id } = Astro.props;
-
-// - The whole system to reference. Just import it directly.
-import sb, {
-  type AreaEntry,
-  type CategoryEntry,
-  type IdEntry,
-  type OpsEntry,
-} from "src/data/smallBusinessFlat";
-
-// - The title of the ID for the main header.
-const idTitle = sb[id]?.title;
-
-// - Where those descriptions have been rendered to HTML from Markdown.
 import { marked } from "marked";
 import { markedSmartypants } from "marked-smartypants";
 marked.use(markedSmartypants());
 
-// - All of its other details for the main content.
-const opsEntry = sb[id] as OpsEntry;
-const idEmoji = opsEntry.emoji;
-
-//   - Wiki-linking the descriptive text.
+import "/src/styles/common.scss";
+import sb, {
+  type AreaEntry,
+  type CategoryEntry,
+  type OpsEntry,
+} from "src/data/smallBusinessFlat";
 import wikiLinkify from "@helpers/wikiLinkify";
+import Slice from "./common/Slice.astro";
 
-const opsDescription = await marked.parse(wikiLinkify(opsEntry.description));
-const opsEntryOpsManual = opsEntry.extensions?.smallBusinessOpsManual;
+// This component is passed the slug as `id`.
+interface Props {
+  id: string;
+}
+const { id } = Astro.props;
 
-const opsTriggers = await marked.parse(wikiLinkify(opsEntryOpsManual.triggers));
-const opsInputs = await marked.parse(wikiLinkify(opsEntryOpsManual.inputs));
-const opsProcess = await marked.parse(wikiLinkify(opsEntryOpsManual.process));
-const opsOutputs = await marked.parse(wikiLinkify(opsEntryOpsManual.outputs));
+// To allow consistency between Area, Category, ID, and OpsManual, we refer to
+// the current item -- one of those things -- as the 'entry'.
 
-// - Its parent category (number & title), and
-// - Its parent category's parent area (number & title).
-const parentCNumber = opsEntry.parentNumber;
+const entry = sb[id] as OpsEntry;
+const title = entry.title;
+const description = await marked.parse(wikiLinkify(entry.description));
+// const emoji = entry.emoji;
+
+const opsManual = entry.extensions.smallBusinessOpsManual;
+const triggers = await marked.parse(wikiLinkify(opsManual.triggers));
+const inputs = await marked.parse(wikiLinkify(opsManual.inputs));
+const process = await marked.parse(wikiLinkify(opsManual.process));
+const outputs = await marked.parse(wikiLinkify(opsManual.outputs));
+
+const parentCNumber = entry.parentNumber;
 const parentCEntry = sb[parentCNumber] as CategoryEntry;
 const parentCTitle = parentCEntry.title;
 
 const parentANumber = parentCEntry.parentNumber;
 const parentAEntry = sb[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
-
-// - To import and use the Slice component.
-import Slice from "./common/Slice.astro";
-import LabelText from "./common/LabelText.astro";
-import ACIDLabelText from "./common/ACIDLabelText.astro";
-
-const flowchart = `
-flowchart TD
-    A(("[A] Start")) --> B("[B] An income, expense, or
-    liability event")
-    B --> C["[C] The invoice, receipt, or bill"]
-    C --> D["[D] Save it for
-    later processing"] & H["[H] Process the invoice,
-    receipt, or bill"]
-    C -.-> E["*(Bills only)*
-    [E] Pay it immediately"]
-    D --> F["[F] One of your inboxes"]
-    F --o G["[G] ⏯️
-    Every month/quarter,
-    process your inboxes"]
-    G --> H
-    H --> I["[I] A specific JD ID for
-    the thing you have processed"]
-    E --> H
-    I --> J((("[J] Stop")))
-
-    C@{ shape: doc}
-    D@{ shape: proc}
-    F@{ shape: db}
-    G@{ shape: delay}
-    I@{ shape: db}
-`;
 ---
 
 <Slice>
   <div class="label-text-container">
     <h2 class="number"><a href={parentANumber}>10-19</a></h2>
-    <div class="title">Company administration</div>
+    <div class="title">{parentATitle}</div>
   </div>
 </Slice>
 
 <Slice>
   <div class="label-text-container">
     <h2 class="number"><a href={parentCNumber}>11</a></h2>
-    <div class="title">The business & its people</div>
+    <div class="title">{parentCTitle}</div>
   </div>
 </Slice>
 
 <Slice>
   <div class="label-text-container">
     <div class="number"><strong>{id}</strong></div>
-    <div class="title"><strong>{idTitle}</strong></div>
+    <div class="title"><strong>{title}</strong></div>
   </div>
 </Slice>
 
 <Slice>
   <div class="label-text-container">
     <div></div>
-    <div class="title" set:html={opsDescription} />
+    <div class="title" set:html={description} />
   </div>
 </Slice>
 
 {
-  opsEntryOpsManual.diagram ? (
+  opsManual.diagram ? (
     <Slice>
       <div class="label-text-container">
         <h2 class="label">Diagram</h2>
-        <div class="mermaid text">{opsEntryOpsManual.diagram!}</div>
+        <div class="mermaid text">{opsManual.diagram!}</div>
       </div>
     </Slice>
   ) : null
@@ -145,28 +83,28 @@ flowchart TD
 <Slice>
   <div class="label-text-container">
     <h2 class="label">Triggers</h2>
-    <div class="text" set:html={opsTriggers} />
+    <div class="text" set:html={triggers} />
   </div>
 </Slice>
 
 <Slice>
   <div class="label-text-container">
     <h2 class="label">Inputs</h2>
-    <div class="text" set:html={opsInputs} />
+    <div class="text" set:html={inputs} />
   </div>
 </Slice>
 
 <Slice>
   <div class="label-text-container">
     <h2 class="label">Process</h2>
-    <div class="text" set:html={opsProcess} />
+    <div class="text" set:html={process} />
   </div>
 </Slice>
 
 <Slice>
   <div class="label-text-container">
     <h2 class="label">Outputs</h2>
-    <div class="text" set:html={opsOutputs} />
+    <div class="text" set:html={outputs} />
   </div>
 </Slice>
 
