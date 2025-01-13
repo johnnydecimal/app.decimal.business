@@ -102,33 +102,26 @@ import Slice from "./common/Slice.astro";
 ---
 
 <Slice>
-  <nav>
-    <ul>
-      <li>
-        <a href={`/${parentANumber}`}>
-          <span>{parentANumber}</span>
-          <span>{parentATitle}</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+  <div class="label-text-container">
+    <h2 class="number"><a href={parentANumber}>{parentANumber}</a></h2>
+    <div class="title">{parentATitle}</div>
+  </div>
 </Slice>
 
 <Slice>
-  <h1 id="number-title">
-    <span class="number">{category}</span>
-    <span class="title">{cTitle}</span>
-    <span class="emoji">{cEmoji}</span>
-  </h1>
+  <div class="label-text-container">
+    <div class="number"><strong>{category}</strong></div>
+    <div class="title"><strong>{cTitle}</strong></div>
+  </div>
 </Slice>
 
 {
-  cDescription ? (
+  categoryDescription ? (
     <Slice>
-      <div
-        class="description"
-        set:html={cDescription && marked.parse(cDescription)}
-      />
+      <div class="label-text-container">
+        <div />
+        <div class="title" set:html={categoryDescription} />
+      </div>
     </Slice>
   ) : null
 }
@@ -166,6 +159,32 @@ import Slice from "./common/Slice.astro";
   }
   h2 {
     font-size: 1rem;
+    line-height: 1.4; // line up with the adjacent <p>
+  }
+
+  .label-text-container {
+    // Mobile-first
+    .title {
+      margin-bottom: 1ch;
+    }
+
+    @include tablet-portrait-up {
+      display: grid;
+      grid-template-columns: 10ch auto;
+
+      .label,
+      .number {
+        padding: 1ch 1ch 0 0;
+        justify-self: end;
+      }
+      .text,
+      .title {
+        border-left: 1.5px solid lightgrey;
+        line-height: 1.4; // align baselines
+        margin-bottom: unset;
+        padding: 1ch 0 0 1ch;
+      }
+    }
   }
 
   ul#id-list {
