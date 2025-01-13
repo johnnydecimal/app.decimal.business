@@ -10,6 +10,6 @@
     },
     "strictNullChecks": true
   },
-  "exclude": ["src/**/_*"],
+  "exclude": ["src/**/_*", "dist/_astro"],
   "extends": "astro/tsconfigs/strict"
 }
