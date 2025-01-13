@@ -26,6 +26,18 @@ export interface AreaEntry extends BaseEntry {
 export interface CategoryEntry extends BaseEntry {
   type: "category";
   parentNumber: string; // All categories must have a parent area
+  extensions?: {
+    smallBusiness?: SmallBusinessExtension;
+  };
+}
+
+interface SmallBusinessExtension {
+  examples?: string;
+  moreInfo?: string;
+  exceptions?: string;
+  alsoSee?: string;
+  rationale?: string;
+  links?: string;
 }
 
 export interface IdEntry extends BaseEntry {
@@ -33,14 +45,7 @@ export interface IdEntry extends BaseEntry {
   parentNumber: string; // All ids must have a parent category
   isHeader?: boolean;
   extensions?: {
-    smallBusiness?: {
-      examples?: string;
-      moreInfo?: string;
-      exceptions?: string;
-      alsoSee?: string;
-      rationale?: string;
-      links?: string;
-    };
+    smallBusiness?: SmallBusinessExtension;
   };
 }
 

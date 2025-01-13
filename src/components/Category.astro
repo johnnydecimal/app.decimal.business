@@ -25,6 +25,7 @@
  * √ The whole system to reference. Just import it directly.
  * √ The title of the category for the main header.
  * √ The description and emoji of the category.
+ * √ All of its other details for the main content.
  * √ An array of the IDs that this category contains. Each one of those
  *   needs to contain the ID, title, description, isHeader, emoji.
  * √ Where those descriptions have been rendered to HTML from Markdown.
@@ -49,6 +50,27 @@ const cTitle = categoryEntry.title;
 // - The description and emoji of the category.
 const cDescription = categoryEntry.description;
 const cEmoji = categoryEntry.emoji;
+
+// - All of its other details for the main content.
+const categoryDescription = await marked.parse(
+  wikiLinkify(categoryEntry.description)
+);
+const categoryEntrySb = categoryEntry.extensions?.smallBusiness;
+const categoryExamples =
+  categoryEntrySb?.examples &&
+  (await marked.parse(wikiLinkify(categoryEntrySb.examples)));
+const categoryMoreInfo =
+  categoryEntrySb?.moreInfo &&
+  (await marked.parse(wikiLinkify(categoryEntrySb.moreInfo)));
+const categoryExceptions =
+  categoryEntrySb?.exceptions &&
+  (await marked.parse(wikiLinkify(categoryEntrySb.exceptions)));
+const categoryAlsoSee =
+  categoryEntrySb?.alsoSee &&
+  (await marked.parse(wikiLinkify(categoryEntrySb.alsoSee)));
+const categoryRationale =
+  categoryEntrySb?.rationale &&
+  (await marked.parse(wikiLinkify(categoryEntrySb.rationale)));
 
 // - An array of the IDs that this category contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.

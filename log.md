@@ -91,3 +91,9 @@
   - protecting routes futzed it right up. unprotect
   - you idiot. routes 12.x don't exist. okay let's protect 11.1\*, idea is just to see if that works at a very basic level
   - does. and in local dev it seems to redirect nicely from /11.11 also...
+
+# 2025
+
+- 70a222f9ee9cd4568c476f4c6c8f81b63bd74a07
+  - start with the weird issue where 'Missing Clerk Secret Key'
+  - but it works after you reload astro.config so meh
