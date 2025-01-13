@@ -110,7 +110,7 @@ import Slice from "./common/Slice.astro";
 
 <Slice>
   <div class="label-text-container">
-    <div class="number"><strong>{category}</strong></div>
+    <h2 class="number"><strong>{category}</strong></h2>
     <div class="title"><strong>{cTitle}</strong></div>
   </div>
 </Slice>
@@ -127,26 +127,31 @@ import Slice from "./common/Slice.astro";
 }
 
 <Slice>
-  <ul id="id-list">
+  <div class="label-text-container">
+    <div class="number"></div>
+    <div class="title">---</div>
+  </div>
+</Slice>
+
+<Slice>
+  <ul>
     {
-      ids.map((id) => (
-        <li class={id.isHeader ? "is-header" : null}>
-          <h2>
-            {/* - Linking the ID header to the ID URL. */}
-            <a href={`/${id.number}`}>
-              {id.number} {id.isHeader ? "■" : ""} {id.title}
-            </a>
-          </h2>
-          <div>
-            <p
-              class="description"
-              set:html={
-                id.description && marked.parse(wikiLinkify(id.description))
-              }
-            />
-          </div>
-        </li>
-      ))
+      ids.map(async (id) => {
+        const idDescription = await marked.parse(wikiLinkify(id.description));
+        return (
+          <li class="label-text-container">
+            <h2 class="number">
+              <a href={`/${id.number}`}>{id.number}</a>
+            </h2>
+            <div>
+              <div class="title">
+                <a href={`/${id.number}`}>{id.title}</a>
+              </div>
+              <div class="title" set:html={idDescription} />
+            </div>
+          </li>
+        );
+      })
     }
   </ul>
 </Slice>

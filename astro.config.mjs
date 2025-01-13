@@ -10,7 +10,7 @@ import clerk from "@clerk/astro";
 // https://astro.build/config
 export default defineConfig({
   server: {
-    port: 3001,
+    port: 3011,
   },
 
   site: "https://app.johnnydecimal.com",
