@@ -967,10 +967,10 @@ export function validateStructure(data: FlattenedData): string[] {
 
 // Example usage
 const allAreas = getAllByType(flattenedData, "area");
-console.log("All Areas:", allAreas);
+// console.log("All Areas:", allAreas);
 
 const categoryChildren = getChildren(flattenedData, "11");
-console.log("Children of Category '11':", categoryChildren);
+// console.log("Children of Category '11':", categoryChildren);
 
 const specificEntry = findById(flattenedData, "11.00");
-console.log("Entry with ID '11.00':", specificEntry);
+// console.log("Entry with ID '11.00':", specificEntry);
