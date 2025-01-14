@@ -104,21 +104,21 @@ const parentSTitle = parentSEntry.title;
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice backgroundColor="#f0f0f0">
+<Slice>
   <div class="label-text-container">
     <h2 class="number"><a href="/">{parentSNumber}</a></h2>
     <div class="title">{parentSTitle}</div>
   </div>
 </Slice>
 
-<Slice backgroundColor="#f6f6f6">
+<Slice>
   <div class="label-text-container">
     <h2 class="number"><a href={parentANumber}>{parentANumber}</a></h2>
     <div class="title">{parentATitle}</div>
   </div>
 </Slice>
 
-<Slice>
+<Slice style="background-color: #eee; border-top: 1px solid black;">
   <div class="label-text-container">
     <h2 class="number"><strong>{category}</strong></h2>
     <div class="title"><strong>{categoryTitle}</strong></div>
@@ -127,7 +127,7 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryDescription ? (
-    <Slice>
+    <Slice style="background-color: #eee; border-bottom: 1px solid black;">
       <div class="label-text-container">
         <div />
         <div class="title" set:html={categoryDescription} />

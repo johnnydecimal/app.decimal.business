@@ -1,22 +1,24 @@
 ---
 interface Props {
   backgroundColor?: string;
+  border?: string;
+  style?: string;
 }
 
-const { backgroundColor = "#ffffff" } = Astro.props;
+const { backgroundColor = "#ffffff", border = "", style } = Astro.props;
 ---
 
-<div class="background-wrapper" style={`background-color: ${backgroundColor};`}>
+<div class="background-wrapper" style={style}>
   {/* layout-container is what does all of the work */}
   <div class="layout-container">
     <slot />
   </div>
+
+  <style lang="scss">
+    @use "/src/styles/common";
+
+    .background-wrapper {
+      // border: 1px dotted beige;
+    }
+  </style>
 </div>
-
-<style lang="scss">
-  @use "/src/styles/common";
-
-  .background-wrapper {
-    // border: 1px dotted beige;
-  }
-</style>
