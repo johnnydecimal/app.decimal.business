@@ -21,6 +21,9 @@ interface BaseEntry {
 export interface AreaEntry extends BaseEntry {
   type: "area";
   parentNumber?: string; // Optional for top-level entries
+  extensions?: {
+    smallBusiness?: SmallBusinessExtension;
+  };
 }
 
 export interface CategoryEntry extends BaseEntry {

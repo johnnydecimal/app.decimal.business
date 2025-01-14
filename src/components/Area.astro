@@ -35,27 +35,44 @@
 
 // - To be passed the number of the category to render. This is the slug.
 interface Props {
-  category: string;
+  area: string;
 }
-const { category } = Astro.props;
+const { area } = Astro.props;
 
 // - The whole system to reference. Just import it directly.
 import sb from "src/data/smallBusinessFlat";
 
-// - The title of the category for the main header.
-const cTitle = sb[category]?.title;
+// - The title of the area for the main header.
+const areaEntry = sb[area] as AreaEntry;
+const areaTitle = areaEntry.title;
 
-// - The description and emoji of the category.
-const cDescription = sb[category].description;
-const cEmoji = sb[category].emoji;
+// - The description and emoji of the area.
+const areaEmoji = areaEntry.emoji;
 
-// - An array of the IDs that this category contains. Each one of those
+// - All of its other details for the main content.
+const areaDescription = await marked.parse(wikiLinkify(areaEntry.description));
+const areaEntrySb = areaEntry.extensions?.smallBusiness;
+const areaExamples =
+  areaEntrySb?.examples &&
+  (await marked.parse(wikiLinkify(areaEntrySb.examples)));
+const areaMoreInfo =
+  areaEntrySb?.moreInfo &&
+  (await marked.parse(wikiLinkify(areaEntrySb.moreInfo)));
+const areaExceptions =
+  areaEntrySb?.exceptions &&
+  (await marked.parse(wikiLinkify(areaEntrySb.exceptions)));
+const areaAlsoSee =
+  areaEntrySb?.alsoSee &&
+  (await marked.parse(wikiLinkify(areaEntrySb.alsoSee)));
+const areaRationale =
+  areaEntrySb?.rationale &&
+  (await marked.parse(wikiLinkify(areaEntrySb.rationale)));
+
+// - An array of the categories that this area contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.
 import { getChildren } from "src/data/smallBusinessFlat";
-import type { IdEntry } from "src/data/smallBusinessFlat";
-const ids = getChildren(sb, "11") as IdEntry[];
-console.log("=====");
-console.log(ids);
+import type { AreaEntry, CategoryEntry } from "src/data/smallBusinessFlat";
+const ids = getChildren(sb, area) as CategoryEntry[];
 
 // - Where those descriptions have been rendered to HTML from Markdown.
 import { marked } from "marked";
@@ -64,82 +81,52 @@ marked.use(markedSmartypants());
 
 // - Wiki-linkify the description
 import wikiLinkify from "@helpers/wikiLinkify";
+
+// - To import and use the Slice component.
+import Slice from "./common/Slice.astro";
 ---
 
-<h1 id="number-title">
-  <span class="number">{category}</span>
-  <span class="title">{cTitle}</span>
-  <span class="emoji">{cEmoji}</span>
-</h1>
-
-<div class="description"><p>{cDescription}</p></div>
-
-<ul>
-  {
-    ids.map((id) => (
-      <li class={id.isHeader ? "is-header" : null}>
-        <h2>
-          {/* - Linking the ID header to the ID URL. */}
-          <a href={`/jdex/${id.number}`}>{`${id.number} ${id.title}`}</a>
-        </h2>
-        <div
-          class="description"
-          set:html={id.description && marked.parse(wikiLinkify(id.description))}
-        />
-      </li>
-    ))
-  }
-</ul>
+<Slice>
+  <div class="label-text-container">
+    <h2 class="number">{areaEntry.number}</h2>
+    <div class="title">{areaEntry.title}</div>
+  </div>
+</Slice>
 
 <style lang="scss">
-  @use "@styles/common.scss";
-  @use "@styles/responsive.scss" as r;
+  @use "@styles/common.scss" as *;
 
-  h1#number-title {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "number title emoji";
-    gap: 1ch;
-    // @include r.mobile {
-    //   grid-template-areas:
-    //     "number emoji"
-    //     "title  title";
-    // }
-
-    .number,
-    .emoji {
-      font-size: 4rem;
-      line-height: 1;
-      // @include r.mobile {
-      //   justify-self: end;
-      // }
-    }
-    .number {
-      grid-area: number;
-    }
-    .title {
-      grid-area: title;
-    }
-    .emoji {
-      grid-area: emoji;
-      padding-top: 5px;
-    }
+  // TODO: Pull me out, I'm used across AC.ID
+  h1 {
+    font-size: 1rem;
   }
-
   h2 {
     font-size: 1rem;
-    font-weight: 600;
-    a {
-      text-decoration: none;
-    }
+    line-height: 1.4; // line up with the adjacent <p>
   }
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    li.is-header {
-      border-top: 1px solid darkblue;
-      margin-top: 30px;
+  .label-text-container {
+    // Mobile-first
+    .title {
+      margin-bottom: 1ch;
+    }
+
+    @include tablet-portrait-up {
+      display: grid;
+      grid-template-columns: 10ch auto;
+
+      .label,
+      .number {
+        padding: 1ch 1ch 0 0;
+        justify-self: end;
+      }
+      .text,
+      .title {
+        border-left: 1.5px solid lightgrey;
+        line-height: 1.4; // align baselines
+        margin-bottom: unset;
+        padding: 1ch 0 0 1ch;
+      }
     }
   }
 </style>

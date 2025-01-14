@@ -45,11 +45,10 @@ import sb from "src/data/smallBusinessFlat";
 
 // - The title of the category for the main header.
 const categoryEntry = sb[category] as CategoryEntry;
-const cTitle = categoryEntry.title;
+const categoryTitle = categoryEntry.title;
 
 // - The description and emoji of the category.
-const cDescription = categoryEntry.description;
-const cEmoji = categoryEntry.emoji;
+const categoryEmoji = categoryEntry.emoji;
 
 // - All of its other details for the main content.
 const categoryDescription = await marked.parse(
@@ -80,9 +79,7 @@ import type {
   CategoryEntry,
   IdEntry,
 } from "src/data/smallBusinessFlat";
-const ids = getChildren(sb, "11") as IdEntry[];
-console.log("=====");
-console.log(ids);
+const ids = getChildren(sb, category) as IdEntry[];
 
 // - Where those descriptions have been rendered to HTML from Markdown.
 import { marked } from "marked";
@@ -111,7 +108,7 @@ import Slice from "./common/Slice.astro";
 <Slice>
   <div class="label-text-container">
     <h2 class="number"><strong>{category}</strong></h2>
-    <div class="title"><strong>{cTitle}</strong></div>
+    <div class="title"><strong>{categoryTitle}</strong></div>
   </div>
 </Slice>
 
