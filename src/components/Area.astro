@@ -47,7 +47,7 @@ const areaEntry = sb[area] as AreaEntry;
 const areaTitle = areaEntry.title;
 
 // - The description and emoji of the area.
-const areaEmoji = areaEntry.emoji;
+// const areaEmoji = areaEntry.emoji;
 
 // - All of its other details for the main content.
 const areaDescription = await marked.parse(wikiLinkify(areaEntry.description));
@@ -88,8 +88,8 @@ import Slice from "./common/Slice.astro";
 
 <Slice>
   <div class="label-text-container">
-    <h2 class="number">{areaEntry.number}</h2>
-    <div class="title">{areaEntry.title}</div>
+    <h2 class="number">{area}</h2>
+    <div class="title">{areaTitle}</div>
   </div>
 </Slice>
 

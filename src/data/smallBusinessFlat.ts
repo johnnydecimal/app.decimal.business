@@ -947,9 +947,11 @@ const flattenedData: FlattenedData = {
 export default flattenedData;
 
 // Utility function to get all entries by type
+/*
 function getAllByType(data: FlattenedData, type: EntryType): FlattenedEntry[] {
   return Object.values(data).filter((entry) => entry.type === type);
 }
+*/
 
 // Utility function to get all children of a given parent ID
 export function getChildren(
@@ -985,11 +987,11 @@ export function validateStructure(data: FlattenedData): string[] {
 }
 
 // Example usage
-const allAreas = getAllByType(flattenedData, "area");
+// const allAreas = getAllByType(flattenedData, "area");
 // console.log("All Areas:", allAreas);
 
-const categoryChildren = getChildren(flattenedData, "11");
+// const categoryChildren = getChildren(flattenedData, "11");
 // console.log("Children of Category '11':", categoryChildren);
 
-const specificEntry = findById(flattenedData, "11.00");
+// const specificEntry = findById(flattenedData, "11.00");
 // console.log("Entry with ID '11.00':", specificEntry);
