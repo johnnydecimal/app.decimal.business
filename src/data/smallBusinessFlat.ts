@@ -5,7 +5,7 @@ type Metadata = {
 };
 
 // Entry types
-export type EntryType = "area" | "category" | "id" | "ops";
+export type EntryType = "system" | "area" | "category" | "id" | "ops";
 
 // Base interface for common fields
 interface BaseEntry {
@@ -18,9 +18,13 @@ interface BaseEntry {
 }
 
 // Specialized interfaces
+export interface SystemEntry extends BaseEntry {
+  type: "system";
+}
+
 export interface AreaEntry extends BaseEntry {
   type: "area";
-  parentNumber?: string; // Optional for top-level entries
+  parentNumber: string; // All areas must have a parent system
   extensions?: {
     smallBusiness?: SmallBusinessExtension;
   };
@@ -69,16 +73,29 @@ export interface OpsEntry extends BaseEntry {
 }
 
 // Union type for all entries
-export type FlattenedEntry = AreaEntry | CategoryEntry | IdEntry | OpsEntry;
+export type FlattenedEntry =
+  | SystemEntry
+  | AreaEntry
+  | CategoryEntry
+  | IdEntry
+  | OpsEntry;
 
 // Flattened data structure type
 type FlattenedData = Record<string, FlattenedEntry>;
 
 const flattenedData: FlattenedData = {
+  J82: {
+    number: "J82",
+    title: "Small business",
+    description: "The best small business system.",
+    type: "system",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+  },
   "10-19": {
     number: "10-19",
     title: "Company administration",
     type: "area",
+    parentNumber: "J82",
     description:
       "In [[10-19]], our goal is that these categories could be the foundation of _any_ business, regardless of the product or service you offer. In theory, you should be able to keep the same business structure, but completely change your offering and still use this area. Whereas, [[20-29]] is specific to how you create and market what you sell.\n\nFor example, you are a gardener and your registered business structure is ‘sole trader’. After 5 years you decide to trade as a freelance hairdresser, another skill you have. You don’t want or need to change your structure. Sole trader is fine. And all the other IDs in this area are still relevant, you’ll just be saving some revised information in them. The government doesn’t care, as long as you keep sending them those tax dollars.\n\nFor example, over the years our company, Coruscade, has been used to run a dance production, manage an IT contractor business, and now Johnny.Decimal. Coruscade could have used [[10-19]] to administer any of these businesses. But the dance production and Johnny.Decimal need their own product and marketing areas.\n\nFor example, a shell company might have several products and/or operate several business at once. But it just has one batch of government tax reporting. The ‘timber’ business in New Zealand has a similar situation – one entity, several businesses. [[10-19]] is designed to accommodate this scenario.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
@@ -938,6 +955,7 @@ const flattenedData: FlattenedData = {
   "20-29": {
     type: "area",
     number: "20-29",
+    parentNumber: "J82",
     title: "Company administration",
     description: "The twenties",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
@@ -947,11 +965,12 @@ const flattenedData: FlattenedData = {
 export default flattenedData;
 
 // Utility function to get all entries by type
-/*
-function getAllByType(data: FlattenedData, type: EntryType): FlattenedEntry[] {
+export function getAllByType(
+  data: FlattenedData,
+  type: EntryType
+): FlattenedEntry[] {
   return Object.values(data).filter((entry) => entry.type === type);
 }
-*/
 
 // Utility function to get all children of a given parent ID
 export function getChildren(
@@ -977,7 +996,11 @@ export function validateStructure(data: FlattenedData): string[] {
   const errors: string[] = [];
   for (const key in data) {
     const entry = data[key];
-    if (entry.parentNumber && !data[entry.parentNumber]) {
+    if (
+      "parentNumber" in entry &&
+      entry.parentNumber &&
+      !data[entry.parentNumber]
+    ) {
       errors.push(
         `Entry with key ${key} has a non-existent parent ID ${entry.parentNumber}.`
       );

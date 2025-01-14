@@ -1,24 +1,137 @@
 ---
 /**
- * The category list view component.
+ * The system list view component. So we've navigated to /.
  *
- * Shows all categories, grouped by area, with their one-line description.
- * Should probably also show the area description?
- *
- * ```
- * # 10-19 The teens
- *         From ten to nineteen. Even though eleven isn't a teen.
- *      11 Eleven
- *         Eleven as in 'legs eleven'.
- *      12 Twelve
- *         Twelfth of August is grouse hunting day.
- * # 20-29 The twenties
- *         Almost half way through them by now!
- *      21 Twenty one
- *         You got given a key or some other pointless trinket.
- * ```
- *
- * Should be a simple render job. I doubt any of the descriptions contain
- * a wiki-link? But if they do that should be an easy retro-fit later.
  */
+
+// - The whole system to reference. Just import it directly.
+import sb, { getAllByType } from "src/data/smallBusinessFlat";
+
+// - The title of the area for the main header.
+const systemEntries = getAllByType(sb, "system") as SystemEntry[];
+// There can only be one
+if (systemEntries.length > 1) {
+  throw new Error(
+    "You have defined more than one 'system' entry. That's weird."
+  );
+}
+const systemEntry = systemEntries[0];
+const systemTitle = systemEntry.title;
+
+// - The description and emoji of the area.
+// const areaEmoji = areaEntry.emoji;
+
+// - All of its other details for the main content.
+const systemDescription = await marked.parse(
+  wikiLinkify(systemEntry.description)
+);
+
+// - An array of the areas that this area contains. Each one of those
+//   needs to contain the ID, title, description, isHeader, emoji.
+import { getChildren } from "src/data/smallBusinessFlat";
+import type {
+  SystemEntry,
+  AreaEntry,
+  CategoryEntry,
+} from "src/data/smallBusinessFlat";
+const areas = getChildren(sb, systemEntry.number) as AreaEntry[];
+
+// - Where those descriptions have been rendered to HTML from Markdown.
+import { marked } from "marked";
+import { markedSmartypants } from "marked-smartypants";
+marked.use(markedSmartypants());
+
+// - Wiki-linkify the description
+import wikiLinkify from "@helpers/wikiLinkify";
+
+// - To import and use the Slice component.
+import Slice from "./common/Slice.astro";
 ---
+
+<Slice>
+  <div class="label-text-container">
+    <h2 class="number">{systemEntry.number}</h2>
+    <div class="title">{systemTitle}</div>
+  </div>
+</Slice>
+
+{
+  systemDescription ? (
+    <Slice>
+      <div class="label-text-container">
+        <div />
+        <div class="title" set:html={systemDescription} />
+      </div>
+    </Slice>
+  ) : null
+}
+
+<Slice>
+  <div class="label-text-container">
+    <div class="number"></div>
+    <div class="title">---</div>
+  </div>
+</Slice>
+
+<Slice>
+  <ol>
+    {
+      areas.map(async (area) => {
+        const areaDescription = await marked.parse(
+          wikiLinkify(area.description)
+        );
+        return (
+          <li class="label-text-container">
+            <h2 class="number">
+              <a href={`/${area.number}`}>{area.number}</a>
+            </h2>
+            <div>
+              <div class="title">
+                <a href={`/${area.number}`}>{area.title}</a>
+              </div>
+              <div class="title" set:html={areaDescription} />
+            </div>
+          </li>
+        );
+      })
+    }
+  </ol>
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common.scss" as *;
+
+  // TODO: Pull me out, I'm used across AC.ID
+  h1 {
+    font-size: 1rem;
+  }
+  h2 {
+    font-size: 1rem;
+    line-height: 1.4; // line up with the adjacent <p>
+  }
+
+  .label-text-container {
+    // Mobile-first
+    .title {
+      margin-bottom: 1ch;
+    }
+
+    @include tablet-portrait-up {
+      display: grid;
+      grid-template-columns: 10ch auto;
+
+      .label,
+      .number {
+        padding: 1ch 1ch 0 0;
+        justify-self: end;
+      }
+      .text,
+      .title {
+        border-left: 1.5px solid lightgrey;
+        line-height: 1.4; // align baselines
+        margin-bottom: unset;
+        padding: 1ch 0 0 1ch;
+      }
+    }
+  }
+</style>
