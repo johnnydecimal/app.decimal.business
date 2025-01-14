@@ -80,6 +80,33 @@ p {
   box-sizing: border-box;
 }
 
+.label-text-container {
+  h2 {
+    font-size: 1rem;
+    line-height: 1.4; // line up with the adjacent <p>
+  }
+
+  // Pad the internal text element so we retain the grey divider
+  .text {
+    padding-bottom: var(--small);
+  }
+
+  @include tablet-portrait-up {
+    display: grid;
+    grid-template-columns: 10ch auto;
+
+    .label {
+      padding: 0.5ch 1ch 0.5ch 0;
+      justify-self: end;
+    }
+    .text {
+      border-left: 1.5px solid lightgrey;
+      line-height: 1.4; // align baselines
+      padding: 0.5ch 0 0.5ch 1ch;
+    }
+  }
+}
+
 /* ------------------- Elements styled with a class or ID ------------------- */
 // Explain why they're here and not in their component.
 

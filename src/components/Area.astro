@@ -97,15 +97,15 @@ const parentSTitle = parentSEntry.title;
 
 <Slice>
   <div class="label-text-container">
-    <h2 class="number"><a href="/">{parentSNumber}</a></h2>
-    <div class="title">{parentSTitle}</div>
+    <h2 class="label"><a href="/">{parentSNumber}</a></h2>
+    <div class="text">{parentSTitle}</div>
   </div>
 </Slice>
 
 <Slice>
   <div class="label-text-container">
-    <h2 class="number">{area}</h2>
-    <div class="title">{areaTitle}</div>
+    <h2 class="label">{area}</h2>
+    <div class="text">{areaTitle}</div>
   </div>
 </Slice>
 
@@ -114,7 +114,7 @@ const parentSTitle = parentSEntry.title;
     <Slice>
       <div class="label-text-container">
         <div />
-        <div class="title" set:html={areaDescription} />
+        <div class="text" set:html={areaDescription} />
       </div>
     </Slice>
   ) : null
@@ -177,8 +177,8 @@ const parentSTitle = parentSEntry.title;
 
 <Slice>
   <div class="label-text-container">
-    <div class="number"></div>
-    <div class="title">---</div>
+    <div class="label"></div>
+    <div class="text">---</div>
   </div>
 </Slice>
 
@@ -191,14 +191,14 @@ const parentSTitle = parentSEntry.title;
         );
         return (
           <li class="label-text-container">
-            <h2 class="number">
+            <h2 class="label">
               <a href={`/${category.number}`}>{category.number}</a>
             </h2>
             <div>
-              <div class="title">
+              <div class="text">
                 <a href={`/${category.number}`}>{category.title}</a>
               </div>
-              <div class="title" set:html={categoryDescription} />
+              <div class="text" set:html={categoryDescription} />
             </div>
           </li>
         );
@@ -209,38 +209,4 @@ const parentSTitle = parentSEntry.title;
 
 <style lang="scss">
   @use "@styles/common.scss" as *;
-
-  // TODO: Pull me out, I'm used across AC.ID
-  h1 {
-    font-size: 1rem;
-  }
-  h2 {
-    font-size: 1rem;
-    line-height: 1.4; // line up with the adjacent <p>
-  }
-
-  .label-text-container {
-    // Mobile-first
-    .title {
-      margin-bottom: 1ch;
-    }
-
-    @include tablet-portrait-up {
-      display: grid;
-      grid-template-columns: 10ch auto;
-
-      .label,
-      .number {
-        padding: 1ch 1ch 0 0;
-        justify-self: end;
-      }
-      .text,
-      .title {
-        border-left: 1.5px solid lightgrey;
-        line-height: 1.4; // align baselines
-        margin-bottom: unset;
-        padding: 1ch 0 0 1ch;
-      }
-    }
-  }
 </style>

@@ -106,22 +106,22 @@ import Slice from "./common/Slice.astro";
 
 <Slice>
   <div class="label-text-container">
-    <h2 class="number"><a href="/">{parentSNumber}</a></h2>
-    <div class="title">{parentSTitle}</div>
+    <h2 class="label"><a href="/">{parentSNumber}</a></h2>
+    <div class="text">{parentSTitle}</div>
   </div>
 </Slice>
 
 <Slice>
   <div class="label-text-container">
-    <h2 class="number"><a href={parentANumber}>{parentANumber}</a></h2>
-    <div class="title">{parentATitle}</div>
+    <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
+    <div class="text">{parentATitle}</div>
   </div>
 </Slice>
 
 <Slice style="background-color: #eee; border-top: 1px solid black;">
   <div class="label-text-container">
-    <h2 class="number"><strong>{category}</strong></h2>
-    <div class="title"><strong>{categoryTitle}</strong></div>
+    <h2 class="label"><strong>{category}</strong></h2>
+    <div class="text"><strong>{categoryTitle}</strong></div>
   </div>
 </Slice>
 
@@ -130,7 +130,7 @@ import Slice from "./common/Slice.astro";
     <Slice style="background-color: #eee; border-bottom: 1px solid black;">
       <div class="label-text-container">
         <div />
-        <div class="title" set:html={categoryDescription} />
+        <div class="text" set:html={categoryDescription} />
       </div>
     </Slice>
   ) : null
@@ -193,8 +193,8 @@ import Slice from "./common/Slice.astro";
 
 <Slice>
   <div class="label-text-container">
-    <div class="number"></div>
-    <div class="title">---</div>
+    <div class="label"></div>
+    <div class="text">---</div>
   </div>
 </Slice>
 
@@ -205,14 +205,14 @@ import Slice from "./common/Slice.astro";
         const idDescription = await marked.parse(wikiLinkify(id.description));
         return (
           <li class="label-text-container">
-            <h2 class="number">
+            <h2 class="label">
               <a href={`/${id.number}`}>{id.number}</a>
             </h2>
             <div>
-              <div class="title">
+              <div class="text">
                 <a href={`/${id.number}`}>{id.title}</a>
               </div>
-              <div class="title" set:html={idDescription} />
+              <div class="text" set:html={idDescription} />
             </div>
           </li>
         );
@@ -223,90 +223,4 @@ import Slice from "./common/Slice.astro";
 
 <style lang="scss">
   @use "@styles/common.scss" as *;
-
-  h1 {
-    font-size: 1rem;
-  }
-  h2 {
-    font-size: 1rem;
-    line-height: 1.4; // line up with the adjacent <p>
-  }
-
-  .label-text-container {
-    // Mobile-first
-    .title {
-      margin-bottom: 1ch;
-    }
-
-    @include tablet-portrait-up {
-      display: grid;
-      grid-template-columns: 10ch auto;
-
-      .label,
-      .number {
-        padding: 0.5ch 1ch 0.5ch 0;
-        justify-self: end;
-      }
-      .text,
-      .title {
-        border-left: 1.5px solid lightgrey;
-        line-height: 1.4; // align baselines
-        margin-bottom: unset;
-        padding: 0.5ch 0 0.5ch 1ch;
-      }
-    }
-  }
-
-  ul#id-list {
-    list-style-type: none;
-    li.is-header {
-      margin-top: var(--large);
-    }
-
-    li {
-      margin: var(--tiny) 0;
-    }
-  }
-
-  /*
-  h1#number-title {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: "number title emoji";
-    gap: 1ch;
-    @include mobile {
-      grid-template-areas:
-        "number emoji"
-        "title  title";
-    }
-
-    .number,
-    .emoji {
-      font-size: 4rem;
-      line-height: 1;
-      @include mobile {
-        justify-self: end;
-      }
-    }
-    .number {
-      grid-area: number;
-    }
-    .title {
-      grid-area: title;
-    }
-    .emoji {
-      grid-area: emoji;
-      padding-top: 5px;
-    }
-  }
-
-  h2 {
-    font-size: 1rem;
-    font-weight: 600;
-    a {
-      text-decoration: none;
-    }
-  }
-
-  */
 </style>
