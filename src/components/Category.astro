@@ -131,7 +131,7 @@ import Slice from "./common/Slice.astro";
 </Slice>
 
 <Slice>
-  <ul>
+  <ol>
     {
       ids.map(async (id) => {
         const idDescription = await marked.parse(wikiLinkify(id.description));
@@ -150,7 +150,7 @@ import Slice from "./common/Slice.astro";
         );
       })
     }
-  </ul>
+  </ol>
 </Slice>
 
 <style lang="scss">

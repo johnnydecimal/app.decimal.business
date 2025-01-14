@@ -72,7 +72,7 @@ const areaRationale =
 //   needs to contain the ID, title, description, isHeader, emoji.
 import { getChildren } from "src/data/smallBusinessFlat";
 import type { AreaEntry, CategoryEntry } from "src/data/smallBusinessFlat";
-const ids = getChildren(sb, area) as CategoryEntry[];
+const categories = getChildren(sb, area) as CategoryEntry[];
 
 // - Where those descriptions have been rendered to HTML from Markdown.
 import { marked } from "marked";
@@ -91,6 +91,49 @@ import Slice from "./common/Slice.astro";
     <h2 class="number">{areaEntry.number}</h2>
     <div class="title">{areaEntry.title}</div>
   </div>
+</Slice>
+
+{
+  areaDescription ? (
+    <Slice>
+      <div class="label-text-container">
+        <div />
+        <div class="title" set:html={areaDescription} />
+      </div>
+    </Slice>
+  ) : null
+}
+
+<Slice>
+  <div class="label-text-container">
+    <div class="number"></div>
+    <div class="title">---</div>
+  </div>
+</Slice>
+
+<Slice>
+  <ol>
+    {
+      categories.map(async (category) => {
+        const categoryDescription = await marked.parse(
+          wikiLinkify(category.description)
+        );
+        return (
+          <li class="label-text-container">
+            <h2 class="number">
+              <a href={`/${category.number}`}>{category.number}</a>
+            </h2>
+            <div>
+              <div class="title">
+                <a href={`/${category.number}`}>{category.title}</a>
+              </div>
+              <div class="title" set:html={categoryDescription} />
+            </div>
+          </li>
+        );
+      })
+    }
+  </ol>
 </Slice>
 
 <style lang="scss">
