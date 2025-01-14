@@ -118,7 +118,7 @@ import Slice from "./common/Slice.astro";
   </div>
 </Slice>
 
-<Slice style="background-color: #eee; border-top: 1px solid black;">
+<Slice className="active-top">
   <div class="label-text-container">
     <h2 class="label"><strong>{category}</strong></h2>
     <div class="text"><strong>{categoryTitle}</strong></div>
@@ -127,7 +127,7 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryDescription ? (
-    <Slice style="background-color: #eee; border-bottom: 1px solid black;">
+    <Slice className="active-middle">
       <div class="label-text-container">
         <div />
         <div class="text" set:html={categoryDescription} />
@@ -138,7 +138,7 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryExamples ? (
-    <Slice>
+    <Slice className="active-middle">
       <div class="label-text-container">
         <h2 class="label">Examples</h2>
         <div class="text" set:html={categoryExamples} />
@@ -149,7 +149,7 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryMoreInfo ? (
-    <Slice>
+    <Slice className="active-middle">
       <div class="label-text-container">
         <h2 class="label">More info</h2>
         <div class="text" set:html={categoryMoreInfo} />
@@ -160,7 +160,7 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryExceptions ? (
-    <Slice>
+    <Slice className="active-middle">
       <div class="label-text-container">
         <h2 class="label">Exceptions</h2>
         <div class="text" set:html={categoryExceptions} />
@@ -171,7 +171,7 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryAlsoSee ? (
-    <Slice>
+    <Slice className="active-middle">
       <div class="label-text-container">
         <h2 class="label">Also see</h2>
         <div class="text" set:html={categoryAlsoSee} />
@@ -182,7 +182,7 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryRationale ? (
-    <Slice>
+    <Slice className="active-middle">
       <div class="label-text-container">
         <h2 class="label">Rationale</h2>
         <div class="text" set:html={categoryRationale} />
@@ -191,15 +191,10 @@ import Slice from "./common/Slice.astro";
   ) : null
 }
 
-<Slice>
-  <div class="label-text-container">
-    <div class="label"></div>
-    <div class="text">---</div>
-  </div>
-</Slice>
+<Slice className="active-bottom" />
 
 <Slice>
-  <ol>
+  <ol class="acid-list">
     {
       ids.map(async (id) => {
         const idDescription = await marked.parse(wikiLinkify(id.description));

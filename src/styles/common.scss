@@ -63,6 +63,9 @@ nav {
 
 ol {
   list-style-position: inside;
+  &.acid-list {
+    list-style-type: none;
+  }
 }
 
 p {
@@ -73,17 +76,41 @@ p {
 }
 
 /* ----------------------------- Utility classes ---------------------------- */
-.layout-container {
-  max-width: var(--content-max-width);
-  margin: 0 auto;
-  padding: 0 var(--content-padding);
-  box-sizing: border-box;
+// Spans the page width without margin. Used for full-width effects e.g.
+// background & border. No content should live at this level.
+.slice-container {
+  &.active-top {
+    background-color: #eee;
+    border-top: 1px solid black;
+  }
+  &.active-middle {
+    background-color: #eee;
+  }
+  &.active-bottom {
+    background-color: #eee;
+    border-bottom: 1px solid black;
+  }
+
+  // The inner container is what brings us in from the edges, with padding
+  // Everything absolutely everything should live in .
+  .slice-inner {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0 var(--content-padding);
+    box-sizing: border-box;
+  }
 }
 
+// The style where we have a label down the left, and the text on the right.
+// Or on mobile, label above then text below.
 .label-text-container {
   h2 {
     font-size: 1rem;
     line-height: 1.4; // line up with the adjacent <p>
+  }
+
+  h3 {
+    padding-top: var(--large);
   }
 
   // Pad the internal text element so we retain the grey divider
