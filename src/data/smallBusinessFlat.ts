@@ -86,7 +86,7 @@ type FlattenedData = Record<string, FlattenedEntry>;
 const flattenedData: FlattenedData = {
   J82: {
     number: "J82",
-    title: "Small business",
+    title: "Small business system",
     description: "The best small business system.",
     type: "system",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },

@@ -6,10 +6,7 @@ interface Props {
 const { backgroundColor = "#ffffff" } = Astro.props;
 ---
 
-<div
-  class="background-wrapper"
-  style={`--background-color: ${backgroundColor};`}
->
+<div class="background-wrapper" style={`background-color: ${backgroundColor};`}>
   {/* layout-container is what does all of the work */}
   <div class="layout-container">
     <slot />

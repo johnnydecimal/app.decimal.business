@@ -71,7 +71,11 @@ const areaRationale =
 // - An array of the categories that this area contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.
 import { getChildren } from "src/data/smallBusinessFlat";
-import type { AreaEntry, CategoryEntry } from "src/data/smallBusinessFlat";
+import type {
+  SystemEntry,
+  AreaEntry,
+  CategoryEntry,
+} from "src/data/smallBusinessFlat";
 const categories = getChildren(sb, area) as CategoryEntry[];
 
 // - Where those descriptions have been rendered to HTML from Markdown.
@@ -84,7 +88,19 @@ import wikiLinkify from "@helpers/wikiLinkify";
 
 // - To import and use the Slice component.
 import Slice from "./common/Slice.astro";
+
+// - A breadcrumb to the parent system.
+const parentSNumber = areaEntry.parentNumber;
+const parentSEntry = sb[parentSNumber] as SystemEntry;
+const parentSTitle = parentSEntry.title;
 ---
+
+<Slice>
+  <div class="label-text-container">
+    <h2 class="number"><a href="/">{parentSNumber}</a></h2>
+    <div class="title">{parentSTitle}</div>
+  </div>
+</Slice>
 
 <Slice>
   <div class="label-text-container">

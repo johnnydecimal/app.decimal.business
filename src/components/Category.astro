@@ -75,6 +75,7 @@ const categoryRationale =
 //   needs to contain the ID, title, description, isHeader, emoji.
 import { getChildren } from "src/data/smallBusinessFlat";
 import type {
+  SystemEntry,
   AreaEntry,
   CategoryEntry,
   IdEntry,
@@ -94,11 +95,23 @@ const parentANumber = categoryEntry.parentNumber;
 const parentAEntry = sb[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
+// - A breadcrumb to the parent system
+const parentSNumber = parentAEntry.parentNumber;
+const parentSEntry = sb[parentSNumber] as SystemEntry;
+const parentSTitle = parentSEntry.title;
+
 // - To import and use the Slice component.
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice>
+<Slice backgroundColor="#f0f0f0">
+  <div class="label-text-container">
+    <h2 class="number"><a href="/">{parentSNumber}</a></h2>
+    <div class="title">{parentSTitle}</div>
+  </div>
+</Slice>
+
+<Slice backgroundColor="#f4f4f4">
   <div class="label-text-container">
     <h2 class="number"><a href={parentANumber}>{parentANumber}</a></h2>
     <div class="title">{parentATitle}</div>
