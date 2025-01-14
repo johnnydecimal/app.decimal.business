@@ -123,6 +123,61 @@ import Slice from "./common/Slice.astro";
   ) : null
 }
 
+{
+  categoryExamples ? (
+    <Slice>
+      <div class="label-text-container">
+        <h2 class="label">Examples</h2>
+        <div class="text" set:html={categoryExamples} />
+      </div>
+    </Slice>
+  ) : null
+}
+
+{
+  categoryMoreInfo ? (
+    <Slice>
+      <div class="label-text-container">
+        <h2 class="label">More info</h2>
+        <div class="text" set:html={categoryMoreInfo} />
+      </div>
+    </Slice>
+  ) : null
+}
+
+{
+  categoryExceptions ? (
+    <Slice>
+      <div class="label-text-container">
+        <h2 class="label">Exceptions</h2>
+        <div class="text" set:html={categoryExceptions} />
+      </div>
+    </Slice>
+  ) : null
+}
+
+{
+  categoryAlsoSee ? (
+    <Slice>
+      <div class="label-text-container">
+        <h2 class="label">Also see</h2>
+        <div class="text" set:html={categoryAlsoSee} />
+      </div>
+    </Slice>
+  ) : null
+}
+
+{
+  categoryRationale ? (
+    <Slice>
+      <div class="label-text-container">
+        <h2 class="label">Rationale</h2>
+        <div class="text" set:html={categoryRationale} />
+      </div>
+    </Slice>
+  ) : null
+}
+
 <Slice>
   <div class="label-text-container">
     <div class="number"></div>

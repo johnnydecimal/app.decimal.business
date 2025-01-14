@@ -104,6 +104,61 @@ import Slice from "./common/Slice.astro";
   ) : null
 }
 
+{
+  areaExamples ? (
+    <Slice>
+      <div class="label-text-container">
+        <h2 class="label">Examples</h2>
+        <div class="text" set:html={areaExamples} />
+      </div>
+    </Slice>
+  ) : null
+}
+
+{
+  areaMoreInfo ? (
+    <Slice>
+      <div class="label-text-container">
+        <h2 class="label">More info</h2>
+        <div class="text" set:html={areaMoreInfo} />
+      </div>
+    </Slice>
+  ) : null
+}
+
+{
+  areaExceptions ? (
+    <Slice>
+      <div class="label-text-container">
+        <h2 class="label">Exceptions</h2>
+        <div class="text" set:html={areaExceptions} />
+      </div>
+    </Slice>
+  ) : null
+}
+
+{
+  areaAlsoSee ? (
+    <Slice>
+      <div class="label-text-container">
+        <h2 class="label">Also see</h2>
+        <div class="text" set:html={areaAlsoSee} />
+      </div>
+    </Slice>
+  ) : null
+}
+
+{
+  areaRationale ? (
+    <Slice>
+      <div class="label-text-container">
+        <h2 class="label">Rationale</h2>
+        <div class="text" set:html={areaRationale} />
+      </div>
+    </Slice>
+  ) : null
+}
+
 <Slice>
   <div class="label-text-container">
     <div class="number"></div>
