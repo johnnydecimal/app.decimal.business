@@ -104,14 +104,14 @@ const parentSTitle = parentSEntry.title;
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice>
+<Slice className="grey">
   <div class="label-text-container">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
     <div class="text">{parentSTitle}</div>
   </div>
 </Slice>
 
-<Slice>
+<Slice className="grey">
   <div class="label-text-container">
     <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
     <div class="text">{parentATitle}</div>
@@ -120,8 +120,8 @@ import Slice from "./common/Slice.astro";
 
 <Slice className="active-top">
   <div class="label-text-container">
-    <h2 class="label"><strong>{category}</strong></h2>
-    <div class="text"><strong>{categoryTitle}</strong></div>
+    <h2 class="label active-item">{category}</h2>
+    <h2 class="text active-item">{categoryTitle}</h2>
   </div>
 </Slice>
 
@@ -193,7 +193,14 @@ import Slice from "./common/Slice.astro";
 
 <Slice className="active-bottom" />
 
-<Slice>
+<Slice className="grey">
+  <div class="label-text-container">
+    <div></div>
+    <h3 class="text">IDs in this category</h3>
+  </div>
+</Slice>
+
+<Slice className="grey">
   <ol class="acid-list">
     {
       ids.map(async (id) => {

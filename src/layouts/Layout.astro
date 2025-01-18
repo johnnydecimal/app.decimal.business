@@ -16,7 +16,7 @@ import {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <!-- <link rel="stylesheet" href="/src/styles/reset.css" /> -->
+    <!-- <link rel="stylesheet" href="@styles/reset.css" /> -->
     <link
       rel="preload"
       href="/fonts/BerkeleyMono/BerkeleyMono-Regular.woff2"
@@ -68,28 +68,10 @@ import {
 </html>
 
 <style lang="scss">
+  @use "@styles/common" as *;
   @use "@styles/fonts";
 
   :global(*) {
     // border: 1px dotted lightblue;
-  }
-
-  body {
-    margin-top: 20px;
-  }
-
-  main {
-    font-family: "Berkeley Mono", ui-monospace, "Cascadia Code",
-      "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-    // margin: 0 auto;
-    // max-width: 650px;
-    // padding: 0 20px;
-    // @include r.mobile {
-    //   padding: 0 10px;
-    // }
-  }
-
-  footer {
-    margin-top: 100px;
   }
 </style>

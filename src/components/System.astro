@@ -48,16 +48,16 @@ import wikiLinkify from "@helpers/wikiLinkify";
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice>
+<Slice className="active-top">
   <div class="label-text-container">
-    <h2 class="label">{systemEntry.number}</h2>
-    <div class="text">{systemTitle}</div>
+    <h2 class="label active-item">{systemEntry.number}</h2>
+    <h2 class="text active-item">{systemTitle}</h2>
   </div>
 </Slice>
 
 {
   systemDescription ? (
-    <Slice>
+    <Slice className="active-middle">
       <div class="label-text-container">
         <div />
         <div class="text" set:html={systemDescription} />
@@ -66,14 +66,16 @@ import Slice from "./common/Slice.astro";
   ) : null
 }
 
-<Slice>
+<Slice className="active-bottom" />
+
+<Slice className="grey">
   <div class="label-text-container">
-    <div class="label"></div>
-    <div class="text">---</div>
+    <div></div>
+    <h3 class="text">Areas in this system</h3>
   </div>
 </Slice>
 
-<Slice>
+<Slice className="grey">
   <ol>
     {
       areas.map(async (area) => {
