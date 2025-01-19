@@ -8,6 +8,7 @@ import {
 } from "@clerk/astro/components";
 
 import Search from "@components/common/Search.astro";
+import Slice from "@components/common/Slice.astro";
 
 // const { title } = Astro.props;
 ---
@@ -61,7 +62,9 @@ import Search from "@components/common/Search.astro";
       </nav>
     </SignedOut>
     <SignedIn>
-      <Search />
+      <Slice>
+        <Search />
+      </Slice>
       <main>
         <slot />
       </main>
