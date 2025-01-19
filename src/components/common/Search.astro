@@ -3,7 +3,7 @@ import Slice from "./Slice.astro";
 ---
 
 <Slice>
-  <div class="search-container">
+  <div id="search-container">
     <input type="text" id="search" placeholder="Search..." />
     <button id="clear-search" aria-label="Clear search" style="display: none;"
       >&times;</button
@@ -15,7 +15,7 @@ import Slice from "./Slice.astro";
 <style lang="scss">
   @use "@styles/common.scss" as *;
 
-  .search-container {
+  #search-container {
     position: relative;
     width: 100%;
   }
