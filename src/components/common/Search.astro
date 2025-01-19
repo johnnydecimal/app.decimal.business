@@ -55,6 +55,14 @@
           displayResults(results);
         }
       });
+
+      searchInput.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          (searchInput as HTMLInputElement).value = "";
+          searchInput.blur();
+          displayResults([]);
+        }
+      });
     }
   }
 
