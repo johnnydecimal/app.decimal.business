@@ -1,13 +1,21 @@
 <input type="text" id="search" placeholder="Search..." />
-<ul id="results"></ul>
-<style>
+<ul id="results" style="display: none;"></ul>
+
+<style lang="scss">
   input#search {
-    border: none;
+    border-color: transparent;
+    border-radius: 0px;
     font-family: "Berkeley Mono", ui-monospace, "Cascadia Code",
       "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
     outline: none;
     padding: 10px;
     width: 100%;
+    -webkit-appearance: none; /* Remove rounded corners on iOS */
+  }
+
+  input#search:focus {
+    border-color: transparent;
+    outline: 2px solid hotpink; /* Use outline for focus indication */
   }
 
   ul#results {
@@ -15,20 +23,32 @@
       "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
     position: absolute;
     background: white;
-    /* border: 1px solid #ccc; */
-    max-height: 200px;
+    max-height: 250px;
     overflow-y: auto;
-    width: 100%;
+    width: calc(
+      var(--content-max-width) - var(--content-padding) - var(--content-padding)
+    );
     z-index: 1000;
+    border-left: 2px solid hotpink;
+    border-right: 2px solid hotpink;
+    border-bottom: 2px solid hotpink;
+
+    :global(li) {
+      padding: 5px 10px;
+      border-bottom: 1px dotted hotpink;
+
+      :global(a) {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
   }
-  #results li {
-    padding: 10px;
-    /* border-bottom: 1px solid #eee; */
-  }
+
   #results li:last-child {
     border-bottom: none;
   }
 </style>
+
 <script>
   import Fuse from "fuse.js";
   async function initializeSearch() {
@@ -79,13 +99,20 @@
   function displayResults(results) {
     const resultsList = document.getElementById("results");
     if (resultsList) {
+      if (results.length > 0) {
+        resultsList.style.display = "block";
+      } else {
+        resultsList.style.display = "none";
+      }
       resultsList.innerHTML = results
         .map(
           // @ts-ignore TODO
           (item) => `
             <li>
-              <strong>${item.number} ${item.title}</strong>
-              <p>${item.description}</p>
+              <a href="/${item.number}">
+                <strong>${item.number} ${item.title}</strong>
+                <p>${item.description}</p>
+              </a>
             </li>`
         )
         .join("");
