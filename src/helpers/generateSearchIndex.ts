@@ -10,7 +10,6 @@ async function generateSearchIndex() {
       type: entry.type,
       emoji: entry.emoji || null,
       metadata: entry.metadata,
-      extensions: entry.extensions || {},
     }));
 
     await writeFile(
