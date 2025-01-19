@@ -1,5 +1,23 @@
 <input type="text" id="search" placeholder="Search..." />
 <ul id="results"></ul>
+<style>
+  #results {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1000;
+  }
+  #results li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  #results li:last-child {
+    border-bottom: none;
+  }
+</style>
 <script>
   import Fuse from "fuse.js";
   async function initializeSearch() {
@@ -28,13 +46,13 @@
     }
   }
 
-  // @ts-ignore
+  // @ts-ignore TODO
   function displayResults(results) {
     const resultsList = document.getElementById("results");
     if (resultsList) {
       resultsList.innerHTML = results
         .map(
-          // @ts-ignore
+          // @ts-ignore TODO
           (item) => `
             <li>
               <strong>${item.title}</strong>
