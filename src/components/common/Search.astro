@@ -1,7 +1,16 @@
 <input type="text" id="search" placeholder="Search..." />
 <ul id="results"></ul>
 <style>
-  #results {
+  input#search {
+    border: none;
+    font-family: "Berkeley Mono", ui-monospace, "Cascadia Code",
+      "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    outline: none;
+    padding: 10px;
+    width: 100%;
+  }
+
+  ul#results {
     font-family: "Berkeley Mono", ui-monospace, "Cascadia Code",
       "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
     position: absolute;
