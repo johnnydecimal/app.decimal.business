@@ -21,12 +21,22 @@
 <script>
   import Fuse from "fuse.js";
   async function initializeSearch() {
-    const res = await fetch("/search.json");
+    const res = await fetch("/searchIndex.json");
     const data = await res.json();
 
     // Initialize Fuse.js
     const fuse = new Fuse(data, {
-      keys: ["number", "title", "description", "type", "emoji"], // Fields to search
+      keys: [
+        "number",
+        "title",
+        "description",
+        "smallBusiness.examples",
+        "smallBusiness.moreInfo",
+        "smallBusiness.exceptions",
+        "smallBusiness.alsoSee",
+        "smallBusiness.rationale",
+        "smallBusiness.links",
+      ], // Fields to search
       ignoreLocation: true, // Don't include index location data
       includeScore: true, // Include search relevance scores
       threshold: 0.4, // Adjust for more/less fuzzy matching

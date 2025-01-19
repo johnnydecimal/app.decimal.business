@@ -10,14 +10,15 @@ async function generateSearchIndex() {
       type: entry.type,
       emoji: entry.emoji || null,
       metadata: entry.metadata,
+      ...entry.extensions, // Include all fields from extensions
     }));
 
     await writeFile(
-      "./public/search.json",
+      "./public/searchIndex.json",
       JSON.stringify(searchIndex, null, 2)
     );
 
-    console.log("search.json generated successfully!");
+    console.log("searchIndex.json generated successfully!");
   } catch (error) {
     console.error("Error generating search.json:", error);
   }

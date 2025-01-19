@@ -20,6 +20,9 @@ interface BaseEntry {
 // Specialized interfaces
 export interface SystemEntry extends BaseEntry {
   type: "system";
+  extensions?: {
+    smallBusiness?: SmallBusinessExtension;
+  };
 }
 
 export interface AreaEntry extends BaseEntry {
