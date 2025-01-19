@@ -13,6 +13,8 @@ import Slice from "./Slice.astro";
 </Slice>
 
 <style lang="scss">
+  @use "@styles/common.scss" as *;
+
   .search-container {
     position: relative;
     width: 100%;
@@ -79,9 +81,16 @@ import Slice from "./Slice.astro";
 
 <script>
   import Fuse from "fuse.js";
+
+  interface SearchResult {
+    number: string;
+    title: string;
+    description: string;
+  }
+
   async function initializeSearch() {
     const res = await fetch("/searchIndex.json");
-    const data = await res.json();
+    const data: SearchResult[] = await res.json();
 
     // Initialize Fuse.js
     const fuse = new Fuse(data, {
@@ -101,26 +110,26 @@ import Slice from "./Slice.astro";
       threshold: 0.4, // Adjust for more/less fuzzy matching
     });
 
-    const searchInput = document.getElementById("search");
-    const clearButton = document.getElementById("clear-search");
+    const searchInput = document.getElementById("search") as HTMLInputElement;
+    const clearButton = document.getElementById(
+      "clear-search"
+    ) as HTMLButtonElement;
 
     if (searchInput) {
       searchInput.addEventListener("input", (e) => {
-        if (e.target) {
-          const query = (e.target as HTMLInputElement).value;
-          const results = query
-            ? fuse.search(query).map((result) => result.item)
-            : [];
-          displayResults(results);
+        const query = (e.target as HTMLInputElement).value;
+        const results = query
+          ? fuse.search(query).map((result) => result.item)
+          : [];
+        displayResults(results);
 
-          // Toggle clear button visibility
-          clearButton.style.display = query ? "block" : "none";
-        }
+        // Toggle clear button visibility
+        clearButton.style.display = query ? "block" : "none";
       });
 
       searchInput.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
-          (searchInput as HTMLInputElement).value = "";
+          searchInput.value = "";
           searchInput.blur();
           displayResults([]);
           clearButton.style.display = "none";
@@ -140,9 +149,8 @@ import Slice from "./Slice.astro";
     }
   }
 
-  // @ts-ignore TODO
-  function displayResults(results) {
-    const resultsList = document.getElementById("results");
+  function displayResults(results: SearchResult[]) {
+    const resultsList = document.getElementById("results") as HTMLUListElement;
     if (resultsList) {
       if (results.length > 0) {
         resultsList.style.display = "block";
@@ -151,7 +159,6 @@ import Slice from "./Slice.astro";
       }
       resultsList.innerHTML = results
         .map(
-          // @ts-ignore TODO
           (item) => `
             <li>
               <a href="/${item.number}">
