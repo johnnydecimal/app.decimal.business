@@ -6,7 +6,6 @@ import {
   SignInButton,
   SignOutButton,
 } from "@clerk/astro/components";
-import Search from "astro-pagefind/components/Search";
 
 // const { title } = Astro.props;
 ---
@@ -60,11 +59,6 @@ import Search from "astro-pagefind/components/Search";
       </nav>
     </SignedOut>
     <SignedIn>
-      <Search
-        id="search"
-        className="pagefind-ui"
-        uiOptions={{ showImages: false }}
-      />
       <main>
         <slot />
       </main>

@@ -29,7 +29,11 @@ const systemDescription = await marked.parse(
 // - An array of the areas that this area contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.
 import { getChildren } from "src/data/smallBusinessFlat";
-import type { SystemEntry, AreaEntry } from "src/data/smallBusinessFlat";
+import type {
+  SystemEntry,
+  AreaEntry,
+  CategoryEntry,
+} from "src/data/smallBusinessFlat";
 const areas = getChildren(sb, systemEntry.number) as AreaEntry[];
 
 // - Where those descriptions have been rendered to HTML from Markdown.
