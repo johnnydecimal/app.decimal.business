@@ -1,5 +1,11 @@
-<input type="text" id="search" placeholder="Search..." />
-<ul id="results" style="display: none;"></ul>
+---
+import Slice from "./Slice.astro";
+---
+
+<Slice>
+  <input type="text" id="search" placeholder="Search..." />
+  <ul id="results" style="display: none;"></ul>
+</Slice>
 
 <style lang="scss">
   input#search {
