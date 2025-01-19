@@ -9,6 +9,7 @@
     // Initialize Fuse.js
     const fuse = new Fuse(data, {
       keys: ["number", "title", "description", "type", "emoji"], // Fields to search
+      ignoreLocation: true, // Don't include index location data
       includeScore: true, // Include search relevance scores
       threshold: 0.4, // Adjust for more/less fuzzy matching
     });
