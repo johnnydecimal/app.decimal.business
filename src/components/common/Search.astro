@@ -28,11 +28,13 @@
     }
   }
 
+  // @ts-ignore
   function displayResults(results) {
     const resultsList = document.getElementById("results");
     if (resultsList) {
       resultsList.innerHTML = results
         .map(
+          // @ts-ignore
           (item) => `
             <li>
               <strong>${item.title}</strong>
