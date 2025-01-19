@@ -3,11 +3,21 @@ import Slice from "./Slice.astro";
 ---
 
 <Slice>
-  <input type="text" id="search" placeholder="Search..." />
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Search..." />
+    <button id="clear-search" aria-label="Clear search" style="display: none;"
+      >&times;</button
+    >
+  </div>
   <ul id="results" style="display: none;"></ul>
 </Slice>
 
 <style lang="scss">
+  .search-container {
+    position: relative;
+    width: 100%;
+  }
+
   input#search {
     border-color: transparent;
     border-radius: 0px;
@@ -22,6 +32,18 @@ import Slice from "./Slice.astro";
   input#search:focus {
     border-color: transparent;
     outline: 2px solid hotpink; /* Use outline for focus indication */
+  }
+
+  button#clear-search {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: hotpink;
   }
 
   ul#results {
@@ -80,6 +102,8 @@ import Slice from "./Slice.astro";
     });
 
     const searchInput = document.getElementById("search");
+    const clearButton = document.getElementById("clear-search");
+
     if (searchInput) {
       searchInput.addEventListener("input", (e) => {
         if (e.target) {
@@ -88,6 +112,9 @@ import Slice from "./Slice.astro";
             ? fuse.search(query).map((result) => result.item)
             : [];
           displayResults(results);
+
+          // Toggle clear button visibility
+          clearButton.style.display = query ? "block" : "none";
         }
       });
 
@@ -96,6 +123,18 @@ import Slice from "./Slice.astro";
           (searchInput as HTMLInputElement).value = "";
           searchInput.blur();
           displayResults([]);
+          clearButton.style.display = "none";
+        }
+      });
+    }
+
+    if (clearButton) {
+      clearButton.addEventListener("click", () => {
+        if (searchInput) {
+          searchInput.value = "";
+          searchInput.blur();
+          displayResults([]);
+          clearButton.style.display = "none";
         }
       });
     }
