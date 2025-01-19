@@ -3,10 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
+    "dev": "npm run generate-search && astro dev",
     "generate-ids": "node src/scripts/generateIds.js",
+    "generate-search": "npx tsx ./src/helpers/generateSearchIndex.ts",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "npm run generate-search && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -23,5 +24,8 @@
     "sass": "^1.83.4",
     "sass-embedded": "^1.83.4",
     "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
   }
 }
