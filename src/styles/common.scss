@@ -59,6 +59,16 @@ html {
   color-scheme: light dark;
 }
 
+input {
+  &#search {
+    border: none;
+    font-family: "Berkeley Mono", ui-monospace, "Cascadia Code",
+      "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+    outline: none;
+    padding: 10px;
+  }
+}
+
 main {
   font-family: "Berkeley Mono", ui-monospace, "Cascadia Code", "Source Code Pro",
     Menlo, Consolas, "DejaVu Sans Mono", monospace;
