@@ -1,0 +1,24 @@
+<input type="text" id="search" placeholder="Search..." />
+<ul id="results"></ul>
+<script>
+  async function fetchAndSearch(query) {
+    const res = await fetch("/search.json");
+    const data = await res.json();
+    console.log("data:", data);
+    const results = data.filter((item) =>
+      item.name.toLowerCase().includes(query.toLowerCase())
+    );
+    displayResults(results);
+  }
+
+  function displayResults(results) {
+    const resultsList = document.getElementById("results");
+    resultsList.innerHTML = results
+      .map((item) => `<li><a href="${item.name}">${item.email}</a></li>`)
+      .join("");
+  }
+
+  document.getElementById("search").addEventListener("input", (e) => {
+    fetchAndSearch(e.target.value);
+  });
+</script>
