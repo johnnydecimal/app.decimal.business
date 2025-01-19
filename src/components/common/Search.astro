@@ -1,35 +1,33 @@
 <input type="text" id="search" placeholder="Search..." />
 <ul id="results"></ul>
 <script>
-  async function fetchAndSearch(query: string) {
+  import Fuse from "fuse.js";
+  async function initializeSearch() {
     const res = await fetch("/search.json");
     const data = await res.json();
-    const results = query
-      ? data.filter(
-          (item: {
-            number: string;
-            title: string;
-            description: string;
-            type: string;
-            emoji?: string;
-          }) =>
-            Object.values(item).some((value) =>
-              String(value).toLowerCase().includes(query.toLowerCase())
-            )
-        )
-      : [];
-    displayResults(results);
+
+    // Initialize Fuse.js
+    const fuse = new Fuse(data, {
+      keys: ["number", "title", "description", "type", "emoji"], // Fields to search
+      includeScore: true, // Include search relevance scores
+      threshold: 0.4, // Adjust for more/less fuzzy matching
+    });
+
+    const searchInput = document.getElementById("search");
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        if (e.target) {
+          const query = (e.target as HTMLInputElement).value;
+          const results = query
+            ? fuse.search(query).map((result) => result.item)
+            : [];
+          displayResults(results);
+        }
+      });
+    }
   }
 
-  function displayResults(
-    results: {
-      number: string;
-      title: string;
-      description: string;
-      type: string;
-      emoji?: string;
-    }[]
-  ) {
+  function displayResults(results) {
     const resultsList = document.getElementById("results");
     if (resultsList) {
       resultsList.innerHTML = results
@@ -45,12 +43,8 @@
     }
   }
 
-  const searchInput = document.getElementById("search");
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      if (e.target) {
-        fetchAndSearch((e.target as HTMLInputElement).value);
-      }
-    });
-  }
+  // Initialize search on page load
+  initializeSearch().catch((err) =>
+    console.error("Error initializing search:", err)
+  );
 </script>
