@@ -104,21 +104,21 @@ const parentSTitle = parentSEntry.title;
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice className="secondary-content-bg system-slice">
+<Slice className="secondary-content-bg system-crumb">
   <div class="label-text-container">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
-    <div class="text">{parentSTitle}</div>
+    <h2 class="text"><a href="/">{parentSTitle}</a></h2>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg">
+<Slice className="secondary-content-bg area-crumb">
   <div class="label-text-container">
     <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
-    <div class="text">{parentATitle}</div>
+    <h2 class="text"><a href={parentANumber}>{parentATitle}</a></h2>
   </div>
 </Slice>
 
-<Slice className="active-top">
+<Slice className="active-top category-crumb">
   <div class="label-text-container">
     <h2 class="label active-item">{category}</h2>
     <h2 class="text active-item">{categoryTitle}</h2>
