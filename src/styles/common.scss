@@ -3,8 +3,7 @@
  * Use this for commonly-named classes etc. Then just @use directly in a
  * component and there's nothing to declare there.
  */
-
-@use "./reset.css";
+@import "normalize.css";
 
 @mixin dark {
   @media (prefers-color-scheme: dark) {
@@ -114,24 +113,24 @@ p {
   }
 
   // Fix ul styling in descriptive text
-  &.descriptive-text {
-    ol {
-      padding-left: 3ch;
-      text-indent: -3ch;
-    }
+  // &.descriptive-text {
+  //   ol {
+  //     padding-left: 3ch;
+  //     text-indent: -3ch;
+  //   }
 
-    ul {
-      list-style-position: inside;
-      padding-left: 18px;
-      text-indent: -15px;
-    }
+  //   ul {
+  //     list-style-position: inside;
+  //     padding-left: 18px;
+  //     text-indent: -15px;
+  //   }
 
-    li {
-      + li {
-        margin-top: 8px;
-      }
-    }
-  }
+  //   li {
+  //     + li {
+  //       margin-top: 8px;
+  //     }
+  //   }
+  // }
 
   // The inner container is what brings us in from the edges, with padding
   // Everything absolutely everything should live in here
@@ -149,6 +148,7 @@ p {
   h2 {
     font-size: 1rem;
     line-height: 1.4; // line up with the adjacent <p>
+    margin: 0;
     &.active-item {
       font-size: 1.6rem;
     }
