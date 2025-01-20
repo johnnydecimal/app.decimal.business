@@ -89,28 +89,28 @@ import Slice from "./common/Slice.astro";
 <Slice className="secondary-content-bg system-crumb">
   <div class="label-text-container">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
-    <div class="text">{parentSTitle}</div>
+    <h2 class="text">{parentSTitle}</h2>
   </div>
 </Slice>
 
 <Slice className="secondary-content-bg area-crumb">
   <div class="label-text-container">
     <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
-    <div class="text">{parentATitle}</div>
+    <h2 class="text">{parentATitle}</h2>
   </div>
 </Slice>
 
 <Slice className="secondary-content-bg category-crumb">
   <div class="label-text-container">
     <h2 class="label"><a href={parentCNumber}>{parentCNumber}</a></h2>
-    <div class="text">{parentCTitle}</div>
+    <h2 class="text">{parentCTitle}</h2>
   </div>
 </Slice>
 
 <Slice className="active-top id-crumb">
   <div class="label-text-container">
-    <h2 class="label active-item"><strong>{id}</strong></h2>
-    <h2 class="text active-item"><strong>{idTitle}</strong></h2>
+    <h2 class="label active-item">{id}</h2>
+    <h2 class="text active-item">{idTitle}</h2>
   </div>
 </Slice>
 
