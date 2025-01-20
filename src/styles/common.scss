@@ -42,11 +42,11 @@
   --content-max-width: 600px;
   --content-padding: 1rem;
 
-  --tiny: 10px;
-  --small: 14px;
-  --medium: 20px;
-  --large: 28px;
-  --xlarge: 40px;
+  --tiny: 5px;
+  --small: 8px;
+  --medium: 12px;
+  --large: 16px;
+  --xlarge: 20px;
 
   --border-strong: light-dark(#111, #eee);
   --border-accent: light-dark(#11b, #99c);
@@ -97,16 +97,10 @@ p {
   }
 }
 
-ul {
-  list-style-position: inside;
-  padding-left: 18px;
-  text-indent: -15px;
-}
-
 /* ----------------------------- Utility classes ---------------------------- */
 // Spans the page width without margin. Used for full-width effects e.g.
 // background & border. No content should live at this level.
-.slice-container {
+.Slice {
   &.active-top {
     border-top: 1px solid var(--border-strong);
   }
@@ -122,6 +116,14 @@ ul {
 
   &.search-border {
     border-bottom: 2px solid var(--border-strong);
+  }
+
+  &.descriptive-text {
+    ul {
+      list-style-position: inside;
+      padding-left: 18px;
+      text-indent: -15px;
+    }
   }
 
   // The inner container is what brings us in from the edges, with padding
@@ -159,13 +161,13 @@ ul {
     grid-template-columns: 10ch auto;
 
     .label {
-      padding: 5px 8px 5px 0;
+      padding: var(--tiny) 8px var(--tiny) 0;
       justify-self: end;
     }
     .text {
       border-left: 1.5px solid light-dark(#ccc, #333);
       line-height: 1.4; // align baselines
-      padding: 5px 0 5px 8px;
+      padding: var(--tiny) 0 var(--tiny) 8px;
     }
   }
 }

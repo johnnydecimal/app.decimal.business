@@ -86,28 +86,28 @@ const parentSTitle = parentSEntry.title;
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice className="secondary-content-bg system-slice">
+<Slice className="secondary-content-bg system-crumb">
   <div class="label-text-container">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
     <div class="text">{parentSTitle}</div>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg">
+<Slice className="secondary-content-bg area-crumb">
   <div class="label-text-container">
     <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
     <div class="text">{parentATitle}</div>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg">
+<Slice className="secondary-content-bg category-crumb">
   <div class="label-text-container">
     <h2 class="label"><a href={parentCNumber}>{parentCNumber}</a></h2>
     <div class="text">{parentCTitle}</div>
   </div>
 </Slice>
 
-<Slice className="active-top">
+<Slice className="active-top id-crumb">
   <div class="label-text-container">
     <h2 class="label active-item"><strong>{id}</strong></h2>
     <h2 class="text active-item"><strong>{idTitle}</strong></h2>
@@ -116,7 +116,7 @@ import Slice from "./common/Slice.astro";
 
 {
   idDescription ? (
-    <Slice>
+    <Slice className="descriptive-text">
       <div class="label-text-container">
         <div />
         <div class="text" set:html={idDescription} />
@@ -127,7 +127,7 @@ import Slice from "./common/Slice.astro";
 
 {
   idExamples ? (
-    <Slice>
+    <Slice className="descriptive-text">
       <div class="label-text-container">
         <h2 class="label">Examples</h2>
         <div class="text" set:html={idExamples} />
@@ -138,7 +138,7 @@ import Slice from "./common/Slice.astro";
 
 {
   idMoreInfo ? (
-    <Slice>
+    <Slice className="descriptive-text">
       <div class="label-text-container">
         <h2 class="label">More info</h2>
         <div class="text" set:html={idMoreInfo} />
@@ -149,7 +149,7 @@ import Slice from "./common/Slice.astro";
 
 {
   idExceptions ? (
-    <Slice>
+    <Slice className="descriptive-text">
       <div class="label-text-container">
         <h2 class="label">Exceptions</h2>
         <div class="text" set:html={idExceptions} />
@@ -160,7 +160,7 @@ import Slice from "./common/Slice.astro";
 
 {
   idAlsoSee ? (
-    <Slice>
+    <Slice className="descriptive-text">
       <div class="label-text-container">
         <h2 class="label">Also see</h2>
         <div class="text" set:html={idAlsoSee} />
@@ -171,7 +171,7 @@ import Slice from "./common/Slice.astro";
 
 {
   idRationale ? (
-    <Slice>
+    <Slice className="descriptive-text">
       <div class="label-text-container">
         <h2 class="label">Rationale</h2>
         <div class="text" set:html={idRationale} />
