@@ -49,6 +49,7 @@
   --xlarge: 40px;
 
   --border-strong: light-dark(#111, #eee);
+  --border-accent: light-dark(#11b, #99c);
   --secondary-content-bg: light-dark(#f3f3f3, #111);
 }
 
@@ -103,6 +104,10 @@ p {
 
   &.secondary-content-bg {
     background-color: var(--secondary-content-bg);
+  }
+
+  &.search-border {
+    border-bottom: 2px solid var(--border-strong);
   }
 
   // The inner container is what brings us in from the edges, with padding

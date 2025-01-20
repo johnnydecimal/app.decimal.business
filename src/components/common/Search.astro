@@ -2,7 +2,7 @@
 import Slice from "./Slice.astro";
 ---
 
-<Slice className="secondary-content-bg">
+<Slice className="secondary-content-bg search-border">
   <div id="search-container">
     <input type="text" id="search" placeholder="Search..." />
     <button id="clear-search" aria-label="Clear search" style="display: none;"
@@ -34,7 +34,7 @@ import Slice from "./Slice.astro";
 
   input#search:focus {
     border-color: transparent;
-    outline: 2px solid hotpink; /* Use outline for focus indication */
+    outline: 2px solid var(--border-accent);
   }
 
   button#clear-search {
@@ -46,7 +46,7 @@ import Slice from "./Slice.astro";
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: hotpink;
+    color: var(--border-accent);
   }
 
   ul#results {
@@ -60,13 +60,13 @@ import Slice from "./Slice.astro";
       var(--content-max-width) - var(--content-padding) - var(--content-padding)
     );
     z-index: 1000;
-    border-left: 2px solid hotpink;
-    border-right: 2px solid hotpink;
-    border-bottom: 2px solid hotpink;
+    border-left: 2px solid var(--border-accent);
+    border-right: 2px solid var(--border-accent);
+    border-bottom: 2px solid var(--border-accent);
 
     :global(li) {
       padding: 5px 10px;
-      border-bottom: 1px dotted hotpink;
+      border-bottom: 1px dotted var(--border-accent);
 
       :global(a) {
         color: inherit;
