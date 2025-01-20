@@ -47,6 +47,9 @@
   --medium: 20px;
   --large: 28px;
   --xlarge: 40px;
+
+  --border-strong: light-dark(#111, #eee);
+  --secondary-content-bg: light-dark(#f3f3f3, #111);
 }
 
 /* -------------------------------- Elements -------------------------------- */
@@ -90,16 +93,16 @@ p {
 // background & border. No content should live at this level.
 .slice-container {
   &.active-top {
-    border-top: 1px solid light-dark(#111, #eee);
+    border-top: 1px solid var(--border-strong);
   }
   &.active-middle {
   }
   &.active-bottom {
-    border-bottom: 1px solid light-dark(#111, #eee);
+    border-bottom: 1px solid var(--border-strong);
   }
 
-  &.grey {
-    background-color: light-dark(#fafafa, #111);
+  &.secondary-content-bg {
+    background-color: var(--secondary-content-bg);
   }
 
   // The inner container is what brings us in from the edges, with padding

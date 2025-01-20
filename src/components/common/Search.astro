@@ -2,7 +2,7 @@
 import Slice from "./Slice.astro";
 ---
 
-<Slice>
+<Slice className="secondary-content-bg">
   <div id="search-container">
     <input type="text" id="search" placeholder="Search..." />
     <button id="clear-search" aria-label="Clear search" style="display: none;"
@@ -21,6 +21,7 @@ import Slice from "./Slice.astro";
   }
 
   input#search {
+    background-color: var(--secondary-content-bg);
     border-color: transparent;
     border-radius: 0px;
     font-family: "Berkeley Mono", ui-monospace, "Cascadia Code",
@@ -52,7 +53,7 @@ import Slice from "./Slice.astro";
     font-family: "Berkeley Mono", ui-monospace, "Cascadia Code",
       "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
     position: absolute;
-    background: white;
+    background: light-dark(white, black);
     max-height: 250px;
     overflow-y: auto;
     width: calc(

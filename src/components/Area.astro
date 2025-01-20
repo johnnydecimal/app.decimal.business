@@ -95,7 +95,7 @@ const parentSEntry = sb[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 ---
 
-<Slice className="grey">
+<Slice className="secondary-content-bg">
   <div class="label-text-container">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
     <div class="text">{parentSTitle}</div>
@@ -177,14 +177,14 @@ const parentSTitle = parentSEntry.title;
 
 <Slice className="active-bottom" />
 
-<Slice className="grey">
+<Slice className="secondary-content-bg">
   <div class="label-text-container">
     <div></div>
     <h3 class="text">Categories in this area</h3>
   </div>
 </Slice>
 
-<Slice className="grey">
+<Slice className="secondary-content-bg">
   <ol class="acid-list">
     {
       categories.map(async (category) => {
