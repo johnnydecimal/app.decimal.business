@@ -92,6 +92,12 @@ main {
     border-bottom: 2px solid var(--border-strong);
   }
 
+  // Push the system crumb off search a touch b/c of the thick border
+  &.system-crumb > .inner-container > .label-text-container > h2.label,
+  &.system-crumb > .inner-container > .label-text-container > h2.text {
+    padding-top: calc(var(--tiny) + 2px);
+  }
+
   // The inner container is what brings us in from the edges, with padding
   // Everything absolutely everything should live in here
   .inner-container {
@@ -106,19 +112,24 @@ main {
 // Or on mobile, label above then text below. This is always contained in a
 // <Slice>, but it's out here as its own thing as they're not _really_ related.
 .label-text-container {
+  @include phone-only {
+    padding: var(--small) 0;
+  }
   h2 {
     font-size: 1rem;
     font-weight: normal;
     margin: 0;
-    &.label {
-      padding: var(--tiny) var(--small) var(--tiny) 0;
-    }
-    &.text {
-      padding: var(--tiny) 0 var(--tiny) var(--small);
-    }
     &.active-item {
       font-size: 1.6rem;
       font-weight: bold;
+    }
+    @include tablet-landscape-up {
+      &.label {
+        padding: var(--tiny) var(--small) var(--tiny) 0;
+      }
+      &.text {
+        padding: var(--tiny) 0 var(--tiny) var(--small);
+      }
     }
   }
 
