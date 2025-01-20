@@ -90,16 +90,16 @@ p {
 // background & border. No content should live at this level.
 .slice-container {
   &.active-top {
-    border-top: 1px solid black;
+    border-top: 1px solid light-dark(#111, #eee);
   }
   &.active-middle {
   }
   &.active-bottom {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid light-dark(#111, #eee);
   }
 
   &.grey {
-    background-color: #fafafa;
+    background-color: light-dark(#fafafa, #111);
   }
 
   // The inner container is what brings us in from the edges, with padding
@@ -141,7 +141,7 @@ p {
       justify-self: end;
     }
     .text {
-      border-left: 1.5px solid lightgrey;
+      border-left: 1.5px solid light-dark(#ccc, #333);
       line-height: 1.4; // align baselines
       padding: 5px 0 5px 8px;
     }
