@@ -65,6 +65,7 @@ html {
 main {
   font-family: "Berkeley Mono", ui-monospace, "Cascadia Code", "Source Code Pro",
     Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  line-height: 1.4;
 }
 
 /* ----------------------------- Utility classes ---------------------------- */
@@ -129,18 +130,19 @@ main {
   }
 }
 
+// Make the active breadcrumb stand out
 .breadcrumb .label-text-container.active-item {
   h2 {
     font-size: 1.6rem;
     font-weight: bold;
   }
-}
 
-// On mobile, the active item's breadcrumb doesn't need the dividing line;
-// otherwise we have to separate it somehow from the description that follows.
-.breadcrumb .label-text-container.active-item .text {
+  // On mobile, the active item's breadcrumb doesn't need the dividing line;
+  // otherwise we have to separate it somehow from the description that follows.
   @include phone-only {
-    border-left: unset;
+    .text {
+      border-left: unset;
+    }
   }
 }
 
@@ -160,11 +162,17 @@ main {
   }
 }
 
-// Original stuff here
-div.text {
-  padding: var(--tiny) 0 0 var(--small);
-  p:first-child {
-    margin-top: 0;
+.descriptive-text .label-text-container {
+  h2 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  div.text {
+    padding: var(--tiny) 0 0 var(--small);
+    p:first-child {
+      margin-top: 0;
+    }
   }
 }
 
