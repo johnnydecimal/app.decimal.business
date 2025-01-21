@@ -8,7 +8,7 @@ interface Props {
 /**
  * The ID view component. So we're at /11.11.
  *
- * Shows a single ID, with all of its detail. Shows breadcrumbs
+ * Shows a single ID, with all of its detail. Shows breadbreadcrumbs
  * to its category and area.
  *
  * So we need:
@@ -77,7 +77,7 @@ const parentANumber = parentCEntry.parentNumber;
 const parentAEntry = sb[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
-// - A breadcrumb to the parent system
+// - A breadbreadcrumb to the parent system
 const parentSNumber = parentAEntry.parentNumber;
 const parentSEntry = sb[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
@@ -86,31 +86,31 @@ const parentSTitle = parentSEntry.title;
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice className="secondary-content-bg system-crumb">
+<Slice className="secondary-content-bg breadcrumb system">
   <div class="label-text-container">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
     <h2 class="text"><a href="/">{parentSTitle}</a></h2>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg area-crumb">
+<Slice className="secondary-content-bg breadcrumb area">
   <div class="label-text-container">
     <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
     <h2 class="text"><a href={parentANumber}>{parentATitle}</a></h2>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg category-crumb">
+<Slice className="secondary-content-bg breadcrumb category">
   <div class="label-text-container">
     <h2 class="label"><a href={parentCNumber}>{parentCNumber}</a></h2>
     <h2 class="text"><a href={parentCNumber}>{parentCTitle}</a></h2>
   </div>
 </Slice>
 
-<Slice className="active-top id-crumb">
-  <div class="label-text-container">
-    <h2 class="label active-item">{id}</h2>
-    <h2 class="text active-item">{idTitle}</h2>
+<Slice className="active-top breadcrumb id">
+  <div class="label-text-container active-item">
+    <h2 class="label">{id}</h2>
+    <h2 class="text">{idTitle}</h2>
   </div>
 </Slice>
 

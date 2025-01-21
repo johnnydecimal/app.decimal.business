@@ -31,7 +31,7 @@
  * √ Where those descriptions have been rendered to HTML from Markdown.
  * √ Linking the ID header to the ID URL.
  * √ Denoting with styles and a ■ whether it's a header.
- * - A breadcrumb to the parent area.
+ * - A breadbreadcrumb to the parent area.
  */
 
 // - To be passed the number of the category to render. This is the slug.
@@ -90,12 +90,12 @@ marked.use(markedSmartypants());
 // - Wiki-linkify the description
 import wikiLinkify from "@helpers/wikiLinkify";
 
-// - A breadcrumb to the parent area.
+// - A breadbreadcrumb to the parent area.
 const parentANumber = categoryEntry.parentNumber;
 const parentAEntry = sb[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
-// - A breadcrumb to the parent system
+// - A breadbreadcrumb to the parent system
 const parentSNumber = parentAEntry.parentNumber;
 const parentSEntry = sb[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
@@ -104,24 +104,24 @@ const parentSTitle = parentSEntry.title;
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice className="secondary-content-bg system-crumb">
+<Slice className="secondary-content-bg breadcrumb system">
   <div class="label-text-container">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
     <h2 class="text"><a href="/">{parentSTitle}</a></h2>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg area-crumb">
+<Slice className="secondary-content-bg breadcrumb area">
   <div class="label-text-container">
     <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
     <h2 class="text"><a href={parentANumber}>{parentATitle}</a></h2>
   </div>
 </Slice>
 
-<Slice className="active-top category-crumb">
-  <div class="label-text-container">
-    <h2 class="label active-item">{category}</h2>
-    <h2 class="text active-item">{categoryTitle}</h2>
+<Slice className="active-top breadcrumb category">
+  <div class="label-text-container active-item">
+    <h2 class="label">{category}</h2>
+    <h2 class="text">{categoryTitle}</h2>
   </div>
 </Slice>
 

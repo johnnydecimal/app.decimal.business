@@ -30,7 +30,7 @@
  *   needs to contain the ID, title, description, emoji.
  * - Where those descriptions have been rendered to HTML from Markdown.
  * - Linking the category header to the category URL.
- * - A breadcrumb to the parent area.
+ * - A breadbreadcrumb to the parent area.
  */
 
 // - To be passed the number of the category to render. This is the slug.
@@ -89,23 +89,23 @@ import wikiLinkify from "@helpers/wikiLinkify";
 // - To import and use the Slice component.
 import Slice from "./common/Slice.astro";
 
-// - A breadcrumb to the parent system.
+// - A breadbreadcrumb to the parent system.
 const parentSNumber = areaEntry.parentNumber;
 const parentSEntry = sb[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 ---
 
-<Slice className="secondary-content-bg system-crumb">
+<Slice className="secondary-content-bg breadcrumb system">
   <div class="label-text-container">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
     <h2 class="text"><a href="/">{parentSTitle}</a></h2>
   </div>
 </Slice>
 
-<Slice className="active-top area-crumb">
-  <div class="label-text-container">
-    <h2 class="label active-item">{area}</h2>
-    <h2 class="text active-item">{areaTitle}</h2>
+<Slice className="active-top breadcrumb area">
+  <div class="label-text-container active-item">
+    <h2 class="label">{area}</h2>
+    <h2 class="text">{areaTitle}</h2>
   </div>
 </Slice>
 

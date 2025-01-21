@@ -74,6 +74,16 @@ main {
 // regardless of its content. For that stuff, see .label-text-container or
 // wherever else the actual content is. This way we stay specific.
 .Slice {
+  // Thicken the border below search
+  &.search-border {
+    border-bottom: 2px solid var(--border-strong);
+  }
+  // Push the system breadcrumb off search a touch b/c of the thick border
+  &.system.breadcrumb > .inner-container > .label-text-container > h2.label,
+  &.system.breadcrumb > .inner-container > .label-text-container > h2.text {
+    padding-top: calc(var(--tiny) + 2px);
+  }
+
   // Active vs. inactive highlighting
   // .active-top/-bottom do the border
   &.active-top {
@@ -87,17 +97,6 @@ main {
     background-color: var(--secondary-content-bg);
   }
 
-  // Thicken the border below search
-  &.search-border {
-    border-bottom: 2px solid var(--border-strong);
-  }
-
-  // Push the system crumb off search a touch b/c of the thick border
-  &.system-crumb > .inner-container > .label-text-container > h2.label,
-  &.system-crumb > .inner-container > .label-text-container > h2.text {
-    padding-top: calc(var(--tiny) + 2px);
-  }
-
   // The inner container is what brings us in from the edges, with padding
   // Everything absolutely everything should live in here
   .inner-container {
@@ -106,61 +105,62 @@ main {
     padding: 0 var(--content-padding);
     box-sizing: border-box;
   }
+
+  // But now for the specific things that _do_ live inside there, define them
+  // below so this doesn't get too busy.
 }
 
-// The style where we have a label down the left, and the text on the right.
-// Or on mobile, label above then text below. This is always contained in a
-// <Slice>, but it's out here as its own thing as they're not _really_ related.
-.label-text-container {
-  @include phone-only {
-    padding: var(--small) 0;
+// Breadcrumbs. They look mostly the same on all platforms.
+.breadcrumb .label-text-container {
+  display: grid;
+  grid-template-columns: 10ch auto;
+  .label {
+    justify-self: end;
+    padding: var(--tiny) var(--small) var(--tiny) 0;
   }
-  div.text {
-    padding: var(--tiny) 0 0 var(--small);
-    p:first-child {
-      margin-top: 0;
-    }
-  }
-  h2 {
-    font-size: 1rem;
-    font-weight: normal;
-    margin: 0;
-    &.active-item {
-      font-size: 1.6rem;
-      font-weight: bold;
-    }
-    @include tablet-landscape-up {
-      &.label {
-        padding: var(--tiny) var(--small) var(--tiny) 0;
-      }
-      &.text {
-        padding: var(--tiny) 0 var(--tiny) var(--small);
-      }
-    }
-  }
-
-  h3 {
-    // padding-top: var(--large);
-  }
-
-  // Pad the internal text element so we retain the grey divider
   .text {
-    // padding-bottom: var(--small);
+    border-left: 1.5px solid light-dark(#ccc, #333);
+    padding: var(--tiny) 0 var(--tiny) var(--small);
   }
+}
+// On mobile, the active item's breadcrumb doesn't need the dividing line;
+// otherwise we have to separate it somehow from the description that follows.
+.breadcrumb .label-text-container.active-item .text {
+  @include phone-only {
+    border-left: unset;
+  }
+}
 
+.descriptive-text .label-text-container {
   @include tablet-portrait-up {
+    // Exactly as above
     display: grid;
     grid-template-columns: 10ch auto;
-
     .label {
-      // padding: var(--tiny) 8px var(--tiny) 0;
       justify-self: end;
+      padding: var(--tiny) var(--small) var(--tiny) 0;
     }
     .text {
       border-left: 1.5px solid light-dark(#ccc, #333);
-      // line-height: 1.4; // align baselines
-      // padding: var(--tiny) 0 var(--tiny) 8px;
+      padding: var(--tiny) 0 var(--tiny) var(--small);
     }
+  }
+}
+
+// Original stuff here
+div.text {
+  padding: var(--tiny) 0 0 var(--small);
+  p:first-child {
+    margin-top: 0;
+  }
+}
+h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  &.active-item {
+    font-size: 1.6rem;
+    font-weight: bold;
   }
 }
 
