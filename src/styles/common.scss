@@ -166,11 +166,20 @@ main {
     h2 {
       font-size: 1rem;
       margin: 0;
+      // On mobile, bump the size and give it a bit of room at the top
+      // (p's margin takes care of the bottom)
+      @include phone-only {
+        font-size: 1.2rem;
+        margin-top: var(--xlarge);
+      }
     }
 
+    // Line up the top of first paragraph with its label on larger screens
     .text {
-      p:first-child {
-        margin-top: 0;
+      @include tablet-portrait-up {
+        p:first-child {
+          margin-top: 0;
+        }
       }
     }
   }
