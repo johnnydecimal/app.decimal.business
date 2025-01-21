@@ -111,8 +111,8 @@ main {
   // below so this doesn't get too busy.
 }
 
-// Breadcrumbs. They look mostly the same on all platforms.
-.breadcrumb .label-text-container {
+// This is common for breadcrumbs at all sizes, and descriptive text on larger
+@mixin label-text-container-two-column {
   display: grid;
   grid-template-columns: 10ch auto;
   .label {
@@ -123,55 +123,54 @@ main {
     border-left: 1.5px solid light-dark(#ccc, #333);
     padding: var(--tiny) 0 var(--tiny) var(--small);
   }
-  h2 {
-    font-size: 1rem;
-    font-weight: normal;
-    margin: 0;
+}
+
+// Breadcrumbs. They look mostly the same on all platforms.
+.breadcrumb {
+  .label-text-container {
+    @include label-text-container-two-column;
+
+    // Using h2 for semantics: simplify appearance
+    h2 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    // Make the active breadcrumb stand out
+    &.active-item {
+      h2 {
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+
+      // On mobile, the active item's breadcrumb doesn't need the dividing line;
+      // otherwise we have to separate it somehow from the description
+      .text {
+        @include phone-only {
+          border-left: unset;
+        }
+      }
+    }
   }
 }
 
-// Make the active breadcrumb stand out
-.breadcrumb .label-text-container.active-item {
-  h2 {
-    font-size: 1.6rem;
-    font-weight: bold;
-  }
+// The main body text
+.descriptive-text {
+  .label-text-container {
+    @include tablet-portrait-up {
+      @include label-text-container-two-column;
+    }
+    // Using h2 for semantics: simplify appearance
+    h2 {
+      font-size: 1rem;
+      margin: 0;
+    }
 
-  // On mobile, the active item's breadcrumb doesn't need the dividing line;
-  // otherwise we have to separate it somehow from the description that follows.
-  @include phone-only {
     .text {
-      border-left: unset;
-    }
-  }
-}
-
-.descriptive-text .label-text-container {
-  @include tablet-portrait-up {
-    // Exactly as above
-    display: grid;
-    grid-template-columns: 10ch auto;
-    .label {
-      justify-self: end;
-      padding: var(--tiny) var(--small) var(--tiny) 0;
-    }
-    .text {
-      border-left: 1.5px solid light-dark(#ccc, #333);
-      padding: var(--tiny) 0 var(--tiny) var(--small);
-    }
-  }
-}
-
-.descriptive-text .label-text-container {
-  h2 {
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  div.text {
-    padding: var(--tiny) 0 0 var(--small);
-    p:first-child {
-      margin-top: 0;
+      p:first-child {
+        margin-top: 0;
+      }
     }
   }
 }
