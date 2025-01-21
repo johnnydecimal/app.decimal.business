@@ -139,8 +139,11 @@ main {
       font-size: 1rem;
       font-weight: normal;
       margin: 0;
-      word-break: break-word;
-      hyphens: auto;
+      // Even medium words can easily cause right-spill; force a break
+      @include phone-only {
+        hyphens: auto;
+        word-break: break-word;
+      }
     }
 
     // Make the active breadcrumb stand out
@@ -175,8 +178,6 @@ main {
     h2 {
       font-size: 1rem;
       margin: 0;
-      word-break: break-word;
-      hyphens: auto;
       // On mobile, bump the size and give it a bit of room at the top
       // (p's margin takes care of the bottom)
       @include phone-only {
