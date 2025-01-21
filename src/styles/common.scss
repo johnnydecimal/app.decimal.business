@@ -122,7 +122,20 @@ main {
     border-left: 1.5px solid light-dark(#ccc, #333);
     padding: var(--tiny) 0 var(--tiny) var(--small);
   }
+  h2 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+  }
 }
+
+.breadcrumb .label-text-container.active-item {
+  h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+  }
+}
+
 // On mobile, the active item's breadcrumb doesn't need the dividing line;
 // otherwise we have to separate it somehow from the description that follows.
 .breadcrumb .label-text-container.active-item .text {
@@ -152,15 +165,6 @@ div.text {
   padding: var(--tiny) 0 0 var(--small);
   p:first-child {
     margin-top: 0;
-  }
-}
-h2 {
-  font-size: 1rem;
-  font-weight: normal;
-  margin: 0;
-  &.active-item {
-    font-size: 1.6rem;
-    font-weight: bold;
   }
 }
 
