@@ -115,6 +115,10 @@ main {
 @mixin label-text-container-two-column {
   display: grid;
   grid-template-columns: 10ch auto;
+  // On mobile, this takes a lot of room on the left. Reclaim a touch.
+  @include phone-only {
+    grid-template-columns: 8ch auto;
+  }
   .label {
     justify-self: end;
     padding: var(--tiny) var(--small) var(--tiny) 0;
@@ -135,6 +139,8 @@ main {
       font-size: 1rem;
       font-weight: normal;
       margin: 0;
+      word-break: break-word;
+      hyphens: auto;
     }
 
     // Make the active breadcrumb stand out
@@ -142,6 +148,9 @@ main {
       h2 {
         font-size: 1.6rem;
         font-weight: bold;
+        @include phone-only {
+          font-size: 1.4rem;
+        }
       }
 
       // On mobile, the active item's breadcrumb doesn't need the dividing line;
@@ -166,6 +175,8 @@ main {
     h2 {
       font-size: 1rem;
       margin: 0;
+      word-break: break-word;
+      hyphens: auto;
       // On mobile, bump the size and give it a bit of room at the top
       // (p's margin takes care of the bottom)
       @include phone-only {
