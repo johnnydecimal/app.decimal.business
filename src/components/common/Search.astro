@@ -23,16 +23,17 @@ import Slice from "./Slice.astro";
     background-color: var(--secondary-content-bg);
     border-color: transparent;
     border-radius: 0px;
+    box-sizing: border-box; // otherwise padding adds to overall
     font-family: "Berkeley Mono", ui-monospace, "Cascadia Code",
       "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
     outline: none;
     padding: 10px;
-    // width: 100%;
+    width: 100%;
     -webkit-appearance: none; /* Remove rounded corners on iOS */
   }
 
   input#search:focus {
-    border-color: transparent;
+    // border-color: transparent;
     outline: 2px solid var(--border-accent);
   }
 
