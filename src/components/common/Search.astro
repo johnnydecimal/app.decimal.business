@@ -17,7 +17,6 @@ import Slice from "./Slice.astro";
 
   #search-container {
     position: relative;
-    width: 90%;
   }
 
   input#search {
@@ -28,7 +27,7 @@ import Slice from "./Slice.astro";
       "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
     outline: none;
     padding: 10px;
-    width: 100%;
+    // width: 100%;
     -webkit-appearance: none; /* Remove rounded corners on iOS */
   }
 
@@ -38,35 +37,35 @@ import Slice from "./Slice.astro";
   }
 
   button#clear-search {
+    background: none;
+    border: none;
+    color: var(--border-accent);
+    cursor: pointer;
+    font-size: 1.5rem;
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--border-accent);
   }
 
   ul#results {
+    background: light-dark(white, black);
+    border-left: 2px solid var(--border-accent);
+    border-right: 2px solid var(--border-accent);
+    border-bottom: 2px solid var(--border-accent);
     font-family: "Berkeley Mono", ui-monospace, "Cascadia Code",
       "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
-    position: absolute;
-    background: light-dark(white, black);
     max-height: 250px;
     overflow-y: auto;
+    position: absolute;
     width: calc(
       var(--content-max-width) - var(--content-padding) - var(--content-padding)
     );
     z-index: 1000;
-    border-left: 2px solid var(--border-accent);
-    border-right: 2px solid var(--border-accent);
-    border-bottom: 2px solid var(--border-accent);
 
     :global(li) {
-      padding: 5px 10px;
       border-bottom: 1px dotted var(--border-accent);
+      padding: 5px 10px;
 
       :global(a) {
         color: inherit;
