@@ -15,7 +15,11 @@ const { className } = Astro.props;
 
 <style lang="scss">
   @use "@styles/common" as *;
+  // common.scss contains styles that affect this component
+  // - constrains to site-width
+  // - forces l/r padding
 
+  // temporary
   .inner-container {
     border: 1px dotted hotpink;
   }
