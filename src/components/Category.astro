@@ -193,10 +193,10 @@ import Slice from "./common/Slice.astro";
 
 <Slice className="active-bottom" />
 
-<Slice className="descriptive-text secondary-content-bg">
-  <div class="label-text-grid">
+<Slice className="secondary-content-bg">
+  <div class="layout-grid-left-right">
     <div></div>
-    <h2 class="text" id="children-in-this-parent-label">
+    <h2 class="layout-right-item margin-0 padding-t-15px">
       IDs in this category
     </h2>
   </div>
@@ -206,7 +206,7 @@ import Slice from "./common/Slice.astro";
   <ol class="acid-list">
     {
       ids.map(async (id) => {
-        // If id isn't a pure JD ID, i.e. it might be OPS, ignore
+        // If id isn't a pure JD ID, e.g. it might be +OPS, ignore
         if (!id.number.match(/^\d\d\.\d\d$/)) {
           return;
         }

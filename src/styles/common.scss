@@ -218,17 +218,17 @@ h2#children-in-this-parent-label {
   @include phone-only {
     grid-template-columns: 8ch auto;
   }
-
-  // These classes can only possibly make sense inside this component. So it's
-  // okay to declare them here, nested.
-  .layout-left-item {
-    justify-self: end;
-    padding: var(--tiny) var(--small) var(--tiny) 0;
-  }
-  .layout-right-item {
-    border-left: 1.5px solid light-dark(#ccc, #333);
-    padding: var(--tiny) 0 var(--tiny) var(--small);
-  }
+}
+// Don't nest these in the declaration above! When you do that, you run in to
+// specificity problems trying to use .padding-t-10px and so on. There's no
+// reason for them to be nested. They work just fine.
+.layout-left-item {
+  justify-self: end;
+  padding: var(--tiny) var(--small) var(--tiny) 0;
+}
+.layout-right-item {
+  border-left: 1.5px solid light-dark(#ccc, #333);
+  padding: var(--tiny) 0 var(--tiny) var(--small);
 }
 
 /* --------------------- Style - specific page elements --------------------- */
@@ -250,5 +250,8 @@ ol.acid-list {
 }
 .margin-0 {
   margin: 0;
+}
+.padding-t-15px {
+  padding-top: 15px;
 }
 /* ------------------------------ END NEW STUFF ----------------------------- */
