@@ -203,7 +203,7 @@ import Slice from "./common/Slice.astro";
 </Slice>
 
 <Slice className="secondary-content-bg">
-  <ol id="acid-list">
+  <ol class="acid-list">
     {
       ids.map(async (id) => {
         // If id isn't a pure JD ID, i.e. it might be OPS, ignore
@@ -212,14 +212,12 @@ import Slice from "./common/Slice.astro";
         }
         const idDescription = await marked.parse(wikiLinkify(id.description));
         return (
-          <li class="label-text-grid">
-            <h2 class="label">
+          <li class="layout-grid-left-right">
+            <h2 class="layout-left-item font-1rem margin-0">
               <a href={`/${id.number}`}>{id.number}</a>
             </h2>
-            <div>
-              <div class="text">
-                <a href={`/${id.number}`}>{id.title}</a>
-              </div>
+            <div class="layout-right-item">
+              <a href={`/${id.number}`}>{id.title}</a>
               <div class="text" set:html={idDescription} />
             </div>
           </li>

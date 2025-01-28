@@ -198,21 +198,6 @@ main {
   }
 }
 
-ol#acid-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  h2.label {
-    font-size: 1rem;
-    margin: 0;
-  }
-  h2.label:first-child {
-    margin-top: 0;
-    padding-top: 10px;
-  }
-}
-
 h2#children-in-this-parent-label {
   font-size: 1.4rem;
   margin: 0;
@@ -222,5 +207,48 @@ h2#children-in-this-parent-label {
   }
 }
 
-/* ------------------- Elements styled with a class or ID ------------------- */
-// Explain why they're here and not in their component.
+/* -------------------------------- NEW STUFF ------------------------------- */
+// The layout class that gives us the 1/3rd left 2/3rds right split, with a
+// grey dividing border. It's the same on mobile, but we shrink the left.
+
+/* ------------------------ Layouts - no style here! ------------------------ */
+.layout-grid-left-right {
+  display: grid;
+  grid-template-columns: 10ch auto;
+  @include phone-only {
+    grid-template-columns: 8ch auto;
+  }
+
+  // These classes can only possibly make sense inside this component. So it's
+  // okay to declare them here, nested.
+  .layout-left-item {
+    justify-self: end;
+    padding: var(--tiny) var(--small) var(--tiny) 0;
+  }
+  .layout-right-item {
+    border-left: 1.5px solid light-dark(#ccc, #333);
+    padding: var(--tiny) 0 var(--tiny) var(--small);
+  }
+}
+
+/* --------------------- Style - specific page elements --------------------- */
+// The list of 'children in this parent'
+ol.acid-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  // It's a bit roomy by default
+  p {
+    margin: 5px 0;
+  }
+}
+
+/* ------------------------- Style - think Tailscale ------------------------ */
+.font-1rem {
+  font-size: 1rem;
+}
+.margin-0 {
+  margin: 0;
+}
+/* ------------------------------ END NEW STUFF ----------------------------- */
