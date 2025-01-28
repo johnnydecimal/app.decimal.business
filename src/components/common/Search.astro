@@ -10,6 +10,7 @@ import Slice from "./Slice.astro";
     >
     <ul id="results" style="display: none;"></ul>
   </div>
+  <div id="dimmed-overlay" style="display: none;"></div>
 </Slice>
 
 <style lang="scss">
@@ -17,6 +18,18 @@ import Slice from "./Slice.astro";
 
   #search-container {
     position: relative;
+    z-index: 1001; // Ensure search container is above the overlay
+  }
+
+  #dimmed-overlay {
+    background: rgba(0, 0, 0, 0.2);
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
   }
 
   input#search {
@@ -125,6 +138,7 @@ import Slice from "./Slice.astro";
     const clearButton = document.getElementById(
       "clear-search"
     ) as HTMLButtonElement;
+    const dimmedOverlay = document.getElementById("dimmed-overlay");
 
     if (searchInput) {
       searchInput.addEventListener("input", (e) => {
@@ -136,6 +150,10 @@ import Slice from "./Slice.astro";
 
         // Toggle clear button visibility
         clearButton.style.display = query ? "block" : "none";
+        // Toggle dimmed overlay visibility
+        if (dimmedOverlay) {
+          dimmedOverlay.style.display = results.length > 0 ? "block" : "none";
+        }
       });
 
       searchInput.addEventListener("keydown", (e) => {
@@ -144,6 +162,9 @@ import Slice from "./Slice.astro";
           searchInput.blur();
           displayResults([]);
           clearButton.style.display = "none";
+          if (dimmedOverlay) {
+            dimmedOverlay.style.display = "none";
+          }
         }
       });
     }
@@ -155,6 +176,9 @@ import Slice from "./Slice.astro";
           searchInput.blur();
           displayResults([]);
           clearButton.style.display = "none";
+          if (dimmedOverlay) {
+            dimmedOverlay.style.display = "none";
+          }
         }
       });
     }
