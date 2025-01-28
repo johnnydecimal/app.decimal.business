@@ -111,7 +111,7 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaDescription ? (
-    <Slice className="active-middle">
+    <Slice className="descriptive-text">
       <div class="label-text-grid">
         <div />
         <div class="text" set:html={areaDescription} />
@@ -122,7 +122,7 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaExamples ? (
-    <Slice className="active-middle">
+    <Slice className="descriptive-text">
       <div class="label-text-grid">
         <h2 class="label">Examples</h2>
         <div class="text" set:html={areaExamples} />
@@ -133,7 +133,7 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaMoreInfo ? (
-    <Slice className="active-middle">
+    <Slice className="descriptive-text">
       <div class="label-text-grid">
         <h2 class="label">More info</h2>
         <div class="text" set:html={areaMoreInfo} />
@@ -144,7 +144,7 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaExceptions ? (
-    <Slice className="active-middle">
+    <Slice className="descriptive-text">
       <div class="label-text-grid">
         <h2 class="label">Exceptions</h2>
         <div class="text" set:html={areaExceptions} />
@@ -155,7 +155,7 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaAlsoSee ? (
-    <Slice className="active-middle">
+    <Slice className="descriptive-text">
       <div class="label-text-grid">
         <h2 class="label">Also see</h2>
         <div class="text" set:html={areaAlsoSee} />
@@ -166,7 +166,7 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaRationale ? (
-    <Slice className="active-middle">
+    <Slice className="descriptive-text">
       <div class="label-text-grid">
         <h2 class="label">Rationale</h2>
         <div class="text" set:html={areaRationale} />
@@ -178,9 +178,11 @@ const parentSTitle = parentSEntry.title;
 <Slice className="active-bottom" />
 
 <Slice className="secondary-content-bg">
-  <div class="label-text-grid">
+  <div class="layout-grid-left-right">
     <div></div>
-    <h3 class="text">Categories in this area</h3>
+    <h2 class="layout-right-item margin-0 padding-t-15px">
+      Categories in this area
+    </h2>
   </div>
 </Slice>
 
@@ -192,14 +194,12 @@ const parentSTitle = parentSEntry.title;
           wikiLinkify(category.description)
         );
         return (
-          <li class="label-text-grid">
-            <h2 class="label">
+          <li class="layout-grid-left-right">
+            <h2 class="layout-left-item font-1rem margin-0">
               <a href={`/${category.number}`}>{category.number}</a>
             </h2>
-            <div>
-              <div class="text">
-                <a href={`/${category.number}`}>{category.title}</a>
-              </div>
+            <div class="layout-right-item">
+              <a href={`/${category.number}`}>{category.title}</a>
               <div class="text" set:html={categoryDescription} />
             </div>
           </li>
