@@ -68,12 +68,10 @@ main {
   line-height: 1.4;
 }
 
-/* ----------------------------- Utility classes ---------------------------- */
 // Spans the page width without margin. Used for full-width effects e.g.
 // background & border. No content should live at this level.
 // This blob of style only includes stuff that applies to the whole slice,
-// regardless of its content. For that stuff, see .label-text-grid or
-// wherever else the actual content is. This way we stay specific.
+// regardless of its content.
 .Slice {
   // Thicken the border below search
   &.search-border {
