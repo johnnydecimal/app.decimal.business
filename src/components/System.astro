@@ -44,7 +44,7 @@ import wikiLinkify from "@helpers/wikiLinkify";
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice className="active-top system-slice">
+<Slice className="active-top breadcrumb system">
   <div class="label-text-grid active-item">
     <h2 class="label">{systemEntry.number}</h2>
     <h2 class="text">{systemTitle}</h2>
@@ -53,7 +53,7 @@ import Slice from "./common/Slice.astro";
 
 {
   systemDescription ? (
-    <Slice className="active-middle">
+    <Slice className="descriptive-text">
       <div class="label-text-grid">
         <div />
         <div class="text" set:html={systemDescription} />
@@ -65,14 +65,16 @@ import Slice from "./common/Slice.astro";
 <Slice className="active-bottom" />
 
 <Slice className="secondary-content-bg">
-  <div class="label-text-grid">
+  <div class="layout-grid-left-right">
     <div></div>
-    <h3 class="text">Areas in this system</h3>
+    <h2 class="layout-right-item margin-0 padding-t-15px">
+      Areas in this system
+    </h2>
   </div>
 </Slice>
 
 <Slice className="secondary-content-bg">
-  <ol>
+  <ol class="acid-list">
     {
       areas.map(async (area) => {
         const areaDescription = await marked.parse(
