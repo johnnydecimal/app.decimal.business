@@ -72,7 +72,7 @@ main {
 // Spans the page width without margin. Used for full-width effects e.g.
 // background & border. No content should live at this level.
 // This blob of style only includes stuff that applies to the whole slice,
-// regardless of its content. For that stuff, see .label-text-container or
+// regardless of its content. For that stuff, see .label-text-grid or
 // wherever else the actual content is. This way we stay specific.
 .Slice {
   // Thicken the border below search
@@ -80,8 +80,8 @@ main {
     border-bottom: 2px solid var(--border-strong);
   }
   // Push the system breadcrumb off search a touch b/c of the thick border
-  &.system.breadcrumb > .inner-container > .label-text-container > h2.label,
-  &.system.breadcrumb > .inner-container > .label-text-container > h2.text {
+  &.system.breadcrumb > .inner-container > .label-text-grid > h2.label,
+  &.system.breadcrumb > .inner-container > .label-text-grid > h2.text {
     padding-top: calc(var(--tiny) + 2px);
   }
 
@@ -112,7 +112,7 @@ main {
 }
 
 // This is common for breadcrumbs at all sizes, and descriptive text on larger
-@mixin label-text-container-two-column {
+@mixin layout-grid-10ch-auto {
   display: grid;
   grid-template-columns: 10ch auto;
   // On mobile, this takes a lot of room on the left. Reclaim a touch.
@@ -131,8 +131,8 @@ main {
 
 // Breadcrumbs. They look mostly the same on all platforms.
 .breadcrumb {
-  .label-text-container {
-    @include label-text-container-two-column;
+  .label-text-grid {
+    @include layout-grid-10ch-auto;
 
     // Using h2 for semantics: simplify appearance
     h2 {
@@ -168,11 +168,12 @@ main {
 }
 
 // The main body text
-.descriptive-text {
-  .label-text-container {
+.descriptive-text,
+.acid-list {
+  .label-text-grid {
     // Mobile just flows like basic HTML; bigger gets the two-column layout
     @include tablet-portrait-up {
-      @include label-text-container-two-column;
+      @include layout-grid-10ch-auto;
     }
     // Using h2 for semantics: simplify appearance
     h2 {
@@ -194,6 +195,30 @@ main {
         }
       }
     }
+  }
+}
+
+ol#acid-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  h2.label {
+    font-size: 1rem;
+    margin: 0;
+  }
+  h2.label:first-child {
+    margin-top: 0;
+    padding-top: 10px;
+  }
+}
+
+h2#children-in-this-parent-label {
+  font-size: 1.4rem;
+  margin: 0;
+  padding: 20px 0 10px 8px;
+  @include phone-only {
+    padding-left: 0;
   }
 }
 

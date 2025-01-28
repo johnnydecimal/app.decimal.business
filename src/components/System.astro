@@ -45,7 +45,7 @@ import Slice from "./common/Slice.astro";
 ---
 
 <Slice className="active-top system-slice">
-  <div class="label-text-container active-item">
+  <div class="label-text-grid active-item">
     <h2 class="label">{systemEntry.number}</h2>
     <h2 class="text">{systemTitle}</h2>
   </div>
@@ -54,7 +54,7 @@ import Slice from "./common/Slice.astro";
 {
   systemDescription ? (
     <Slice className="active-middle">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <div />
         <div class="text" set:html={systemDescription} />
       </div>
@@ -65,7 +65,7 @@ import Slice from "./common/Slice.astro";
 <Slice className="active-bottom" />
 
 <Slice className="secondary-content-bg">
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <div></div>
     <h3 class="text">Areas in this system</h3>
   </div>
@@ -79,7 +79,7 @@ import Slice from "./common/Slice.astro";
           wikiLinkify(area.description)
         );
         return (
-          <li class="label-text-container">
+          <li class="label-text-grid">
             <h2 class="label">
               <a href={`/${area.number}`}>{area.number}</a>
             </h2>

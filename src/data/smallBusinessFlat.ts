@@ -123,6 +123,8 @@ const flattenedData: FlattenedData = {
     extensions: {
       smallBusiness: {
         alsoSee: "Just an 'also see' to test rendering'.",
+        rationale:
+          "Some rationale so that we have a little more to go on, and the rationale is that more is better right?\n\n- A simple.\n- Bullet.",
       },
     },
   },

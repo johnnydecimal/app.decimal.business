@@ -42,28 +42,28 @@ const parentATitle = parentAEntry.title;
 ---
 
 <Slice>
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="number"><a href={parentANumber}>10-19</a></h2>
     <div class="title">{parentATitle}</div>
   </div>
 </Slice>
 
 <Slice>
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="number"><a href={parentCNumber}>11</a></h2>
     <div class="title">{parentCTitle}</div>
   </div>
 </Slice>
 
 <Slice>
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <div class="number"><strong>{id}</strong></div>
     <div class="title"><strong>{title}</strong></div>
   </div>
 </Slice>
 
 <Slice>
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <div></div>
     <div class="title" set:html={description} />
   </div>
@@ -72,7 +72,7 @@ const parentATitle = parentAEntry.title;
 {
   opsManual.diagram ? (
     <Slice>
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">Diagram</h2>
         <div class="mermaid text">{opsManual.diagram!}</div>
       </div>
@@ -81,28 +81,28 @@ const parentATitle = parentAEntry.title;
 }
 
 <Slice>
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="label">Triggers</h2>
     <div class="text" set:html={triggers} />
   </div>
 </Slice>
 
 <Slice>
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="label">Inputs</h2>
     <div class="text" set:html={inputs} />
   </div>
 </Slice>
 
 <Slice>
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="label">Process</h2>
     <div class="text" set:html={process} />
   </div>
 </Slice>
 
 <Slice>
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="label">Outputs</h2>
     <div class="text" set:html={outputs} />
   </div>
@@ -118,7 +118,7 @@ const parentATitle = parentAEntry.title;
     font-size: 1rem;
   }
 
-  .label-text-container {
+  .label-text-grid {
     // Mobile-first
     .title {
       margin-bottom: 1ch;

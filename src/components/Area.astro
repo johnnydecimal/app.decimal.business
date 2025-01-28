@@ -96,14 +96,14 @@ const parentSTitle = parentSEntry.title;
 ---
 
 <Slice className="secondary-content-bg breadcrumb system">
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
     <h2 class="text"><a href="/">{parentSTitle}</a></h2>
   </div>
 </Slice>
 
 <Slice className="active-top breadcrumb area">
-  <div class="label-text-container active-item">
+  <div class="label-text-grid active-item">
     <h2 class="label">{area}</h2>
     <h2 class="text">{areaTitle}</h2>
   </div>
@@ -112,7 +112,7 @@ const parentSTitle = parentSEntry.title;
 {
   areaDescription ? (
     <Slice className="active-middle">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <div />
         <div class="text" set:html={areaDescription} />
       </div>
@@ -123,7 +123,7 @@ const parentSTitle = parentSEntry.title;
 {
   areaExamples ? (
     <Slice className="active-middle">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">Examples</h2>
         <div class="text" set:html={areaExamples} />
       </div>
@@ -134,7 +134,7 @@ const parentSTitle = parentSEntry.title;
 {
   areaMoreInfo ? (
     <Slice className="active-middle">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">More info</h2>
         <div class="text" set:html={areaMoreInfo} />
       </div>
@@ -145,7 +145,7 @@ const parentSTitle = parentSEntry.title;
 {
   areaExceptions ? (
     <Slice className="active-middle">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">Exceptions</h2>
         <div class="text" set:html={areaExceptions} />
       </div>
@@ -156,7 +156,7 @@ const parentSTitle = parentSEntry.title;
 {
   areaAlsoSee ? (
     <Slice className="active-middle">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">Also see</h2>
         <div class="text" set:html={areaAlsoSee} />
       </div>
@@ -167,7 +167,7 @@ const parentSTitle = parentSEntry.title;
 {
   areaRationale ? (
     <Slice className="active-middle">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">Rationale</h2>
         <div class="text" set:html={areaRationale} />
       </div>
@@ -178,7 +178,7 @@ const parentSTitle = parentSEntry.title;
 <Slice className="active-bottom" />
 
 <Slice className="secondary-content-bg">
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <div></div>
     <h3 class="text">Categories in this area</h3>
   </div>
@@ -192,7 +192,7 @@ const parentSTitle = parentSEntry.title;
           wikiLinkify(category.description)
         );
         return (
-          <li class="label-text-container">
+          <li class="label-text-grid">
             <h2 class="label">
               <a href={`/${category.number}`}>{category.number}</a>
             </h2>

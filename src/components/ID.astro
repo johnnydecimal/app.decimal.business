@@ -87,28 +87,28 @@ import Slice from "./common/Slice.astro";
 ---
 
 <Slice className="secondary-content-bg breadcrumb system">
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
     <h2 class="text"><a href="/">{parentSTitle}</a></h2>
   </div>
 </Slice>
 
 <Slice className="secondary-content-bg breadcrumb area">
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
     <h2 class="text"><a href={parentANumber}>{parentATitle}</a></h2>
   </div>
 </Slice>
 
 <Slice className="secondary-content-bg breadcrumb category">
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="label"><a href={parentCNumber}>{parentCNumber}</a></h2>
     <h2 class="text"><a href={parentCNumber}>{parentCTitle}</a></h2>
   </div>
 </Slice>
 
 <Slice className="active-top breadcrumb id">
-  <div class="label-text-container active-item">
+  <div class="label-text-grid active-item">
     <h2 class="label">{id}</h2>
     <h2 class="text">{idTitle}</h2>
   </div>
@@ -117,7 +117,7 @@ import Slice from "./common/Slice.astro";
 {
   idDescription ? (
     <Slice className="descriptive-text">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <div />
         <div class="text" set:html={idDescription} />
       </div>
@@ -128,7 +128,7 @@ import Slice from "./common/Slice.astro";
 {
   idExamples ? (
     <Slice className="descriptive-text">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">Examples</h2>
         <div class="text" set:html={idExamples} />
       </div>
@@ -139,7 +139,7 @@ import Slice from "./common/Slice.astro";
 {
   idMoreInfo ? (
     <Slice className="descriptive-text">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">More info</h2>
         <div class="text" set:html={idMoreInfo} />
       </div>
@@ -150,7 +150,7 @@ import Slice from "./common/Slice.astro";
 {
   idExceptions ? (
     <Slice className="descriptive-text">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">Exceptions</h2>
         <div class="text" set:html={idExceptions} />
       </div>
@@ -161,7 +161,7 @@ import Slice from "./common/Slice.astro";
 {
   idAlsoSee ? (
     <Slice className="descriptive-text">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">Also see</h2>
         <div class="text" set:html={idAlsoSee} />
       </div>
@@ -172,7 +172,7 @@ import Slice from "./common/Slice.astro";
 {
   idRationale ? (
     <Slice className="descriptive-text">
-      <div class="label-text-container">
+      <div class="label-text-grid">
         <h2 class="label">Rationale</h2>
         <div class="text" set:html={idRationale} />
       </div>

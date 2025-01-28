@@ -105,21 +105,21 @@ import Slice from "./common/Slice.astro";
 ---
 
 <Slice className="secondary-content-bg breadcrumb system">
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="label"><a href="/">{parentSNumber}</a></h2>
     <h2 class="text"><a href="/">{parentSTitle}</a></h2>
   </div>
 </Slice>
 
 <Slice className="secondary-content-bg breadcrumb area">
-  <div class="label-text-container">
+  <div class="label-text-grid">
     <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
     <h2 class="text"><a href={parentANumber}>{parentATitle}</a></h2>
   </div>
 </Slice>
 
 <Slice className="active-top breadcrumb category">
-  <div class="label-text-container active-item">
+  <div class="label-text-grid active-item">
     <h2 class="label">{category}</h2>
     <h2 class="text">{categoryTitle}</h2>
   </div>
@@ -127,8 +127,8 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryDescription ? (
-    <Slice className="active-middle">
-      <div class="label-text-container">
+    <Slice className="descriptive-text">
+      <div class="label-text-grid">
         <div />
         <div class="text" set:html={categoryDescription} />
       </div>
@@ -138,8 +138,8 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryExamples ? (
-    <Slice className="active-middle">
-      <div class="label-text-container">
+    <Slice className="descriptive-text">
+      <div class="label-text-grid">
         <h2 class="label">Examples</h2>
         <div class="text" set:html={categoryExamples} />
       </div>
@@ -149,8 +149,8 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryMoreInfo ? (
-    <Slice className="active-middle">
-      <div class="label-text-container">
+    <Slice className="descriptive-text">
+      <div class="label-text-grid">
         <h2 class="label">More info</h2>
         <div class="text" set:html={categoryMoreInfo} />
       </div>
@@ -160,8 +160,8 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryExceptions ? (
-    <Slice className="active-middle">
-      <div class="label-text-container">
+    <Slice className="descriptive-text">
+      <div class="label-text-grid">
         <h2 class="label">Exceptions</h2>
         <div class="text" set:html={categoryExceptions} />
       </div>
@@ -171,8 +171,8 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryAlsoSee ? (
-    <Slice className="active-middle">
-      <div class="label-text-container">
+    <Slice className="descriptive-text">
+      <div class="label-text-grid">
         <h2 class="label">Also see</h2>
         <div class="text" set:html={categoryAlsoSee} />
       </div>
@@ -182,8 +182,8 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryRationale ? (
-    <Slice className="active-middle">
-      <div class="label-text-container">
+    <Slice className="descriptive-text">
+      <div class="label-text-grid">
         <h2 class="label">Rationale</h2>
         <div class="text" set:html={categoryRationale} />
       </div>
@@ -193,20 +193,26 @@ import Slice from "./common/Slice.astro";
 
 <Slice className="active-bottom" />
 
-<Slice className="secondary-content-bg">
-  <div class="label-text-container">
+<Slice className="descriptive-text secondary-content-bg">
+  <div class="label-text-grid">
     <div></div>
-    <h3 class="text">IDs in this category</h3>
+    <h2 class="text" id="children-in-this-parent-label">
+      IDs in this category
+    </h2>
   </div>
 </Slice>
 
 <Slice className="secondary-content-bg">
-  <ol class="acid-list">
+  <ol id="acid-list">
     {
       ids.map(async (id) => {
+        // If id isn't a pure JD ID, i.e. it might be OPS, ignore
+        if (!id.number.match(/^\d\d\.\d\d$/)) {
+          return;
+        }
         const idDescription = await marked.parse(wikiLinkify(id.description));
         return (
-          <li class="label-text-container">
+          <li class="label-text-grid">
             <h2 class="label">
               <a href={`/${id.number}`}>{id.number}</a>
             </h2>
