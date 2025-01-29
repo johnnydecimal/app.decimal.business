@@ -23,7 +23,7 @@ const { slug } = Astro.params;
 
 let entryType: EntryType | "no-match" | null = null;
 
-console.log("🐌", slug);
+// console.log("🐌", slug);
 
 if (slug?.match(/^index.html$/)) {
   entryType = "system";
