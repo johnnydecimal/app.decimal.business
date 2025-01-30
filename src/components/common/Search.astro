@@ -2,7 +2,7 @@
 import Slice from "./Slice.astro";
 ---
 
-<Slice className="secondary-content-bg search-border">
+<Slice id="Search" className="secondary-content-bg search-border">
   <div id="search-container">
     <input type="text" id="search" placeholder="Search..." />
     <button id="clear-search" aria-label="Clear search" style="display: none;"
@@ -30,6 +30,7 @@ import Slice from "./Slice.astro";
     top: 0;
     width: 100%;
     z-index: 1000;
+    backdrop-filter: blur(5px); // Add blur effect
   }
 
   input#search {
