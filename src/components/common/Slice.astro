@@ -1,12 +1,13 @@
 ---
 interface Props {
   className?: string;
+  id?: string;
 }
 
-const { className } = Astro.props;
+const { className, id } = Astro.props;
 ---
 
-<div class="Slice" class:list={className}>
+<div class="Slice" class:list={className} id={id}>
   {/* layout-container is what does all of the work */}
   <div class="inner-container">
     <slot />
