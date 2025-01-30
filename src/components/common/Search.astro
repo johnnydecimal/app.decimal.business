@@ -147,6 +147,7 @@ import Slice from "./Slice.astro";
       "clear-search"
     ) as HTMLButtonElement;
     const dimmedOverlay = document.getElementById("dimmed-overlay");
+    const searchContainer = document.getElementById("search-container");
 
     if (searchInput) {
       searchInput.addEventListener("input", (e) => {
@@ -175,6 +176,17 @@ import Slice from "./Slice.astro";
           }
         }
       });
+
+      searchInput.addEventListener("blur", () => {
+        setTimeout(() => {
+          searchInput.value = "";
+          displayResults([]);
+          clearButton.style.display = "none";
+          if (dimmedOverlay) {
+            dimmedOverlay.style.display = "none";
+          }
+        }, 100); // Add a small delay before dismissing
+      });
     }
 
     if (clearButton) {
@@ -190,6 +202,23 @@ import Slice from "./Slice.astro";
         }
       });
     }
+
+    document.addEventListener("click", (e) => {
+      if (
+        searchContainer &&
+        !searchContainer.contains(e.target as Node) &&
+        searchInput.value
+      ) {
+        setTimeout(() => {
+          searchInput.value = "";
+          displayResults([]);
+          clearButton.style.display = "none";
+          if (dimmedOverlay) {
+            dimmedOverlay.style.display = "none";
+          }
+        }, 100); // Add a small delay before dismissing
+      }
+    });
   }
 
   function displayResults(results: SearchResult[]) {
