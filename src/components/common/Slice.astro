@@ -7,7 +7,7 @@ interface Props {
 const { className, id } = Astro.props;
 ---
 
-<div class="Slice" class:list={className} id={id}>
+<div id={id} class="Slice" class:list={className}>
   {/* layout-container is what does all of the work */}
   <div class="inner-container">
     <slot />

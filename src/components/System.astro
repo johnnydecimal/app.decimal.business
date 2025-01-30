@@ -44,7 +44,7 @@ import wikiLinkify from "@helpers/wikiLinkify";
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice className="active-top breadcrumb system">
+<Slice className="active-top breadcrumb system" id="SystemBreadcrumb">
   <div class="label-text-grid active-item">
     <div></div>
     <h2 class="text">{systemTitle}</h2>
@@ -100,4 +100,10 @@ import Slice from "./common/Slice.astro";
 
 <style lang="scss">
   @use "@styles/common.scss" as *;
+
+  :global(#SystemBreadcrumb) {
+    .text {
+      padding-top: 20px;
+    }
+  }
 </style>
