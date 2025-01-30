@@ -1,0 +1,60 @@
+---
+import { SignInButton } from "@clerk/astro/components";
+import Slice from "./common/Slice.astro";
+---
+
+<Slice>
+  <h1>Johnny.Decimal</h1>
+  <h2>Small Business System</h2>
+  <hr />
+</Slice>
+
+<Slice>
+  <p>
+    Existing users
+    <SignInButton asChild>
+      <button>sign in here</button>.
+    </SignInButton>
+  </p>
+  <hr />
+  <p>
+    If you do not have a user account, you can <a
+      href="https://decimal.business">sign up here</a
+    >. (This is a paid service.)
+  </p>
+  <p>
+    For any queries, contact <a
+      href="mailto:hello@johnnydecimal.com?subject=JD%20SBS%20signup%20query"
+      >hello@johnnydecimal.com</a
+    >.
+  </p>
+  <hr />
+  <p>
+    System status: normal<br />
+    v1.0 2024-01-30
+  </p>
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common";
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    padding: 0;
+    font: inherit; // Inherit font styles from parent
+  }
+
+  button:hover {
+    color: darkblue;
+  }
+
+  hr {
+    border: 0;
+    border-bottom: 1px solid #666;
+    margin: 40px 0;
+  }
+</style>

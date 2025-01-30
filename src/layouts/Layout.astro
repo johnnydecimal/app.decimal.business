@@ -8,6 +8,7 @@ import {
 } from "@clerk/astro/components";
 
 import Search from "@components/common/Search.astro";
+import SignInPage from "@components/SignInPage.astro";
 
 // const { title } = Astro.props;
 ---
@@ -56,7 +57,9 @@ import Search from "@components/common/Search.astro";
   </head>
   <body>
     <SignedOut>
-      <SignInButton />
+      <main>
+        <SignInPage />
+      </main>
     </SignedOut>
     <SignedIn>
       <Search />
