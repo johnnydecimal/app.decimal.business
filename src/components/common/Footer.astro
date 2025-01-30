@@ -4,13 +4,18 @@ import Slice from "./Slice.astro";
 const today = new Date();
 ---
 
-<footer>
-  <Slice>
-    <p>
-      System status: normal<br />
-      v1.0 2024-01-30
-    </p>
-    &copy; {today.getFullYear()} Johnny.Decimal
+<footer class={import.meta.env.DEV ? "dev" : null}>
+  <Slice id="footer">
+    <div class="layout-grid-left-right">
+      <div class="layout-left-item"></div>
+      <div class="layout-right-item border-none">
+        <p>
+          System status: normal<br />
+          v1.0 2024-01-30
+        </p>
+        &copy; {today.getFullYear()} Johnny.Decimal
+      </div>
+    </div>
   </Slice>
 </footer>
 
@@ -21,5 +26,8 @@ const today = new Date();
     font-size: 0.8rem;
     padding: var(--component-padding) 0;
     padding-bottom: calc(var(--component-padding) + 10px);
+    &.dev {
+      border-bottom: 2px dashed hotpink;
+    }
   }
 </style>

@@ -228,6 +228,9 @@ h2#children-in-this-parent-label {
 .layout-right-item {
   border-left: 1.5px solid light-dark(#ccc, #333);
   padding: var(--tiny) 0 var(--tiny) var(--small);
+  &.border-none {
+    border-left: none;
+  }
 }
 
 /* --------------------- Style - specific page elements --------------------- */

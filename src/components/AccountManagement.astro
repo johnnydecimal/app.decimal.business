@@ -5,14 +5,32 @@ import Slice from "./common/Slice.astro";
 ---
 
 <Slice className="border-t-1px" id="AccountManagement">
-  <p>
-    ↗ <a href="https://accounts.johnnydecimal.com/user">Account management</a>.
-  </p>
-  <p>
-    <SignOutButton asChild>
-      × <button>Sign out</button>.
-    </SignOutButton>
-  </p>
+  <div class="layout-grid-left-right">
+    <div class="layout-left-item">↗</div>
+    <div class="layout-right-item border-none">
+      {
+        import.meta.env.DEV ? (
+          // prettier-ignore
+          <span>
+            <a href="https://lenient-hound-82.accounts.dev/user">
+              Account management</a>.</span>
+        ) : (
+          // prettier-ignore
+          <span>
+            <a href="https://accounts.production.com/user">
+              Account management</a>.</span>
+        )
+      }
+    </div>
+  </div>
+  <div class="layout-grid-left-right">
+    <div class="layout-left-item">×</div>
+    <div class="layout-right-item border-none">
+      <SignOutButton asChild>
+        <button>Sign out</button>.
+      </SignOutButton>
+    </div>
+  </div>
 </Slice>
 
 <style lang="scss">
