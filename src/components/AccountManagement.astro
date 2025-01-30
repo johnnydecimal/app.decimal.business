@@ -4,7 +4,7 @@ import { SignOutButton } from "@clerk/astro/components";
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice className="border-t-1px padding-t-15px" id="AccountManagement">
+<Slice className="border-t-1px" id="AccountManagement">
   <p>
     ↗ <a href="https://accounts.johnnydecimal.com/user">Account management</a>.
   </p>
@@ -17,6 +17,10 @@ import Slice from "./common/Slice.astro";
 
 <style lang="scss">
   @use "/src/styles/common";
+
+  :global(#AccountManagement) {
+    padding: 20px 0;
+  }
 
   button {
     background: none;
