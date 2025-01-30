@@ -13,7 +13,7 @@ import Slice from "./common/Slice.astro";
   <p>
     Existing users
     <SignInButton asChild>
-      <button>sign in here</button>.
+      <button>sign in</button>.
     </SignInButton>
   </p>
   <hr />
@@ -43,11 +43,10 @@ import Slice from "./common/Slice.astro";
     border: none;
     cursor: pointer;
     color: blue;
+    font: inherit; // Inherit font styles from parent
     text-decoration: underline;
     padding: 0;
-    font: inherit; // Inherit font styles from parent
   }
-
   button:hover {
     color: darkblue;
   }
