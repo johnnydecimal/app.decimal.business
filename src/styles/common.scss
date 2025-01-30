@@ -110,12 +110,12 @@ html {
 }
 
 // This is common for breadcrumbs at all sizes, and descriptive text on larger
-@mixin layout-grid-10ch-auto {
+@mixin layout-grid-100px-auto {
   display: grid;
-  grid-template-columns: 10ch auto;
+  grid-template-columns: 100px auto;
   // On mobile, this takes a lot of room on the left. Reclaim a touch.
   @include phone-only {
-    grid-template-columns: 8ch auto;
+    grid-template-columns: 80px auto;
   }
   .label {
     justify-self: end;
@@ -130,7 +130,7 @@ html {
 // Breadcrumbs. They look mostly the same on all platforms.
 .breadcrumb {
   .label-text-grid {
-    @include layout-grid-10ch-auto;
+    @include layout-grid-100px-auto;
 
     // Using h2 for semantics: simplify appearance
     h2 {
@@ -172,7 +172,7 @@ html {
   .label-text-grid {
     // Mobile just flows like basic HTML; bigger gets the two-column layout
     @include tablet-portrait-up {
-      @include layout-grid-10ch-auto;
+      @include layout-grid-100px-auto;
     }
     // Using h2 for semantics: simplify appearance
     h2 {
@@ -213,9 +213,9 @@ h2#children-in-this-parent-label {
 /* ------------------------ Layouts - no style here! ------------------------ */
 .layout-grid-left-right {
   display: grid;
-  grid-template-columns: 10ch auto;
+  grid-template-columns: 100px auto;
   @include phone-only {
-    grid-template-columns: 8ch auto;
+    grid-template-columns: 80px auto;
   }
 }
 // Don't nest these in the declaration above! When you do that, you run in to

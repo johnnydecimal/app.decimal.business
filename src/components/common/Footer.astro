@@ -2,6 +2,11 @@
 import Slice from "./Slice.astro";
 
 const today = new Date();
+const month = String(today.getMonth() + 1).padStart(2, "0");
+const day = String(today.getDate()).padStart(2, "0");
+const year = today.getFullYear();
+const date = `${year}-${month}-${day}`;
+const environment = import.meta.env.DEV ? "dev" : "prod";
 ---
 
 <footer class={import.meta.env.DEV ? "dev" : null}>
@@ -10,10 +15,13 @@ const today = new Date();
       <div class="layout-left-item"></div>
       <div class="layout-right-item border-none">
         <p>
-          System status: normal<br />
-          v1.0 2024-01-30
+          <span>Environment&nbsp;&nbsp;&nbsp;: {environment}</span>
+          <br />
+          System status : normal<br />
+          Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1.0<br />
+          Published&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {date}
         </p>
-        &copy; {today.getFullYear()} Johnny.Decimal
+        &copy; {year} Johnny.Decimal
       </div>
     </div>
   </Slice>
@@ -27,7 +35,8 @@ const today = new Date();
     padding: var(--component-padding) 0;
     padding-bottom: calc(var(--component-padding) + 10px);
     &.dev {
-      border-bottom: 2px dashed hotpink;
+      border-bottom: 5px dashed hotpink;
+      margin-bottom: 10px;
     }
   }
 </style>
