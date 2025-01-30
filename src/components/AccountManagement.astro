@@ -10,15 +10,11 @@ import Slice from "./common/Slice.astro";
     <div class="layout-right-item border-none">
       {
         import.meta.env.DEV ? (
-          // prettier-ignore
-          <span>
-            <a href="https://lenient-hound-82.accounts.dev/user">
-              Account management</a>.</span>
+          <a href="https://lenient-hound-82.accounts.dev/user">
+            Account management
+          </a>
         ) : (
-          // prettier-ignore
-          <span>
-            <a href="https://accounts.production.com/user">
-              Account management</a>.</span>
+          <a href="https://accounts.production.com/user">Account management</a>
         )
       }
     </div>
@@ -27,7 +23,7 @@ import Slice from "./common/Slice.astro";
     <div class="layout-left-item">×</div>
     <div class="layout-right-item border-none">
       <SignOutButton asChild>
-        <button>Sign out</button>.
+        <button>Sign out</button>
       </SignOutButton>
     </div>
   </div>
