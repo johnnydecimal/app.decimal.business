@@ -41,11 +41,14 @@
   --content-max-width: 600px;
   --content-padding: 1rem;
 
+  // Meh are these useful?
   --tiny: 5px;
   --small: 8px;
   --medium: 12px;
   --large: 16px;
   --xlarge: 20px;
+  // Is this better
+  --component-padding: 20px;
 
   --border-strong: light-dark(#111, #eee);
   --border-accent: light-dark(#11b, #99c);
