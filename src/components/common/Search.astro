@@ -48,7 +48,12 @@ import Slice from "./Slice.astro";
 
   input#search:focus {
     // border-color: transparent;
-    outline: 2px solid var(--border-accent);
+    // outline: 2px solid var(--border-accent);
+    // border-left: 2px solid var(--border-accent);
+    // border-right: 2px solid var(--border-accent);
+    box-shadow:
+      -2px 0 var(--border-accent),
+      2px 0 var(--border-accent);
   }
 
   button#clear-search {
@@ -65,9 +70,12 @@ import Slice from "./Slice.astro";
 
   ul#results {
     background: light-dark(white, black);
-    border-left: 2px solid var(--border-accent);
-    border-right: 2px solid var(--border-accent);
+    // border-left: 2px solid var(--border-accent);
+    // border-right: 2px solid var(--border-accent);
     border-bottom: 2px solid var(--border-accent);
+    box-shadow:
+      -2px 0 var(--border-accent),
+      2px 0 var(--border-accent);
     box-sizing: border-box;
     font-family: "Berkeley Mono", ui-monospace, "Cascadia Code",
       "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
@@ -79,8 +87,7 @@ import Slice from "./Slice.astro";
     padding: 0;
     position: absolute;
     width: calc(
-      var(--content-max-width) - var(--content-padding) - var(--content-padding) -
-        2px
+      var(--content-max-width) - var(--content-padding) - var(--content-padding)
     );
     z-index: 1000;
 
