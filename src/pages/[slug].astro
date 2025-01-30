@@ -61,9 +61,5 @@ if (slug?.match(/^index.html$/)) {
   {entryType === "category" ? <Category category={slug!} /> : null}
   {entryType === "id" ? <ID id={slug!} /> : null}
   {entryType === "ops" ? <OpsManual id={slug!} /> : null}
-  {
-    entryType === "no-match" ? (
-      <div>Graceful fallback; show the system?</div>
-    ) : null
-  }</Layout
->
+  {entryType === "no-match" ? <System /> : null}
+</Layout>

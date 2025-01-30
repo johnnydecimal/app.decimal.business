@@ -9,6 +9,7 @@ import {
 
 import Search from "@components/common/Search.astro";
 import SignInPage from "@components/SignInPage.astro";
+import AccountManagement from "@components/AccountManagement.astro";
 
 // const { title } = Astro.props;
 ---
@@ -66,6 +67,7 @@ import SignInPage from "@components/SignInPage.astro";
       <main>
         <slot />
       </main>
+      <AccountManagement />
       <footer><hr /><SignOutButton /></footer>
     </SignedIn>
   </body>
