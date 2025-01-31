@@ -10,7 +10,7 @@
     "build": "npm run generate-search && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "playwright test"
+    "test": "NODE_ENV=playwright playwright test"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

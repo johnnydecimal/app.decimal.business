@@ -39,11 +39,17 @@ interface Props {
 }
 const { area } = Astro.props;
 
-// - The whole system to reference. Just import it directly.
 import sb from "src/data/smallBusinessFlat";
+import sbTest from "src/data/smallBusinessFlatTest";
+let system;
+if (process.env.NODE_ENV === "playwright") {
+  system = sbTest;
+} else {
+  system = sb;
+}
 
 // - The title of the area for the main header.
-const areaEntry = sb[area] as AreaEntry;
+const areaEntry = system[area] as AreaEntry;
 const areaTitle = areaEntry.title;
 
 // - The description and emoji of the area.
@@ -76,7 +82,7 @@ import type {
   AreaEntry,
   CategoryEntry,
 } from "src/data/smallBusinessFlat";
-const categories = getChildren(sb, area) as CategoryEntry[];
+const categories = getChildren(system, area) as CategoryEntry[];
 
 // - Where those descriptions have been rendered to HTML from Markdown.
 import { marked } from "marked";
@@ -91,7 +97,7 @@ import Slice from "./common/Slice.astro";
 
 // - A breadbreadcrumb to the parent system.
 const parentSNumber = areaEntry.parentNumber;
-const parentSEntry = sb[parentSNumber] as SystemEntry;
+const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 ---
 
