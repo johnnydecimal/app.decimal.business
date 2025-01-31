@@ -1,8 +1,18 @@
 ---
-import AccountManagement from "@components/AccountManagement.astro";
-import Area from "@components/Area.astro";
-import Footer from "@components/common/Footer.astro";
+import {
+  SignedIn,
+  SignedOut,
+  // UserButton,
+  SignInButton,
+  SignOutButton,
+} from "@clerk/astro/components";
+
 import Search from "@components/common/Search.astro";
+import SignInPage from "@components/SignInPage.astro";
+import AccountManagement from "@components/AccountManagement.astro";
+import Footer from "@components/common/Footer.astro";
+
+// const { title } = Astro.props;
 ---
 
 <html lang="en">
@@ -50,7 +60,7 @@ import Search from "@components/common/Search.astro";
   <body>
     <Search />
     <main>
-      <Area area="10-19" />
+      <slot />
     </main>
     <AccountManagement />
     <Footer />
@@ -58,5 +68,10 @@ import Search from "@components/common/Search.astro";
 </html>
 
 <style lang="scss">
-  @use "/src/styles/common" as *;
+  @use "@styles/common" as *;
+  @use "@styles/fonts";
+
+  :global(*) {
+    // border: 1px dotted lightblue;
+  }
 </style>
