@@ -84,7 +84,7 @@ export type FlattenedEntry =
   | OpsEntry;
 
 // Flattened data structure type
-type FlattenedData = Record<string, FlattenedEntry>;
+export type FlattenedData = Record<string, FlattenedEntry>;
 
 const flattenedData: FlattenedData = {
   J82: {
