@@ -966,7 +966,7 @@ const flattenedData: FlattenedData = {
     type: "area",
     number: "20-29",
     parentNumber: "J82",
-    title: "Company administration",
+    title: "A longer area title that definitely wraps",
     description: "The twenties",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },

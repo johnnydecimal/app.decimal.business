@@ -62,14 +62,10 @@ import Slice from "./common/Slice.astro";
   ) : null
 }
 
-<!-- <Slice className="active-bottom" /> -->
-
-<Slice id="AreasInSystemLabel" className="secondary-content-bg">
+<Slice id="ChildrenInParentLabel" className="secondary-content-bg">
   <div class="layout-grid-left-right">
     <div></div>
-    <h2 class="layout-right-item margin-0 padding-t-15px">
-      Areas in this system
-    </h2>
+    <h2 class="layout-right-item">Areas in this system</h2>
   </div>
 </Slice>
 
@@ -82,11 +78,13 @@ import Slice from "./common/Slice.astro";
         );
         return (
           <li class="layout-grid-left-right">
-            <h2 class="layout-left-item">
+            <h3 class="layout-left-item">
               <a href={`/${area.number}`}>{area.number}</a>
-            </h2>
+            </h3>
             <div class="layout-right-item">
-              <a href={`/${area.number}`}>{area.title}</a>
+              <h3>
+                <a href={`/${area.number}`}>{area.title}</a>
+              </h3>
               <div class="text" set:html={areaDescription} />
             </div>
           </li>
@@ -102,7 +100,7 @@ import Slice from "./common/Slice.astro";
   // TODO when all's settled, these can probably move out to common.scss
   :global(#SystemHeader),
   :global(#SystemDescription),
-  :global(#AreasInSystemLabel) {
+  :global(#ChildrenInParentLabel) {
     // On mobile, override the grid
     @include phone-only {
       .layout-grid-left-right {
@@ -122,8 +120,14 @@ import Slice from "./common/Slice.astro";
     }
   }
 
-  :global(#AreasInSystemLabel) {
+  :global(#ChildrenInParentLabel) {
+    // Border here vs. above, as we don't know if SystemDescription will exist
     border-top: 1px solid var(--border-strong);
+    h2 {
+      margin: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
     @include phone-only {
       border-bottom: 1px solid lightgray;
       h2.layout-right-item {
@@ -133,6 +137,7 @@ import Slice from "./common/Slice.astro";
   }
 
   :global(#AreasInSystemList) {
+    border-bottom: 1px solid var(--border-strong);
     h2 {
       font-size: 1rem;
       margin: 0;

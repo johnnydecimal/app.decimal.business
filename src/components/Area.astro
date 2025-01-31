@@ -95,26 +95,29 @@ const parentSEntry = sb[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 ---
 
-<Slice id="SystemBreadcrumb" className="secondary-content-bg breadcrumb system">
-  <div class="label-text-grid">
+<Slice id="SystemBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
     <div></div>
-    <h2 class="text"><a href="/">{parentSTitle}</a></h2>
+    <h3 class="layout-right-item"><a href="/">{parentSTitle}</a></h3>
   </div>
 </Slice>
 
-<Slice className="active-top breadcrumb area">
-  <div class="label-text-grid active-item">
-    <h2 class="label">{area}</h2>
-    <h2 class="text">{areaTitle}</h2>
+<Slice id="AreaHeader" className="active-top">
+  <div class="layout-grid-left-right active-item phone-only">
+    <h1 class="layout-left-item">{area} {areaTitle}</h1>
+  </div>
+  <div class="layout-grid-left-right active-item tablet-portrait-up">
+    <h1 class="layout-left-item">{area}</h1>
+    <h1 class="layout-right-item">{areaTitle}</h1>
   </div>
 </Slice>
 
 {
   areaDescription ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
+    <Slice id="AreaDescription" className="descriptive-text">
+      <div class="layout-grid-left-right">
         <div />
-        <div class="text" set:html={areaDescription} />
+        <div class="layout-right-item" set:html={areaDescription} />
       </div>
     </Slice>
   ) : null
@@ -122,10 +125,10 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaExamples ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Examples</h2>
-        <div class="text" set:html={areaExamples} />
+    <Slice id="AreaExamples" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Examples</h3>
+        <div class="layout-right-item" set:html={areaExamples} />
       </div>
     </Slice>
   ) : null
@@ -133,10 +136,10 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaMoreInfo ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">More info</h2>
-        <div class="text" set:html={areaMoreInfo} />
+    <Slice id="AreaMoreInfo" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">More info</h3>
+        <div class="layout-right-item" set:html={areaMoreInfo} />
       </div>
     </Slice>
   ) : null
@@ -144,10 +147,10 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaExceptions ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Exceptions</h2>
-        <div class="text" set:html={areaExceptions} />
+    <Slice id="AreaExceptions" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Exceptions</h3>
+        <div class="layout-right-item" set:html={areaExceptions} />
       </div>
     </Slice>
   ) : null
@@ -155,10 +158,10 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaAlsoSee ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Also see</h2>
-        <div class="text" set:html={areaAlsoSee} />
+    <Slice id="AreaAlsoSee" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Also see</h3>
+        <div class="layout-right-item" set:html={areaAlsoSee} />
       </div>
     </Slice>
   ) : null
@@ -166,16 +169,14 @@ const parentSTitle = parentSEntry.title;
 
 {
   areaRationale ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Rationale</h2>
-        <div class="text" set:html={areaRationale} />
+    <Slice id="AreaRationale" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Rationale</h3>
+        <div class="layout-right-item" set:html={areaRationale} />
       </div>
     </Slice>
   ) : null
 }
-
-<Slice className="active-bottom" />
 
 <Slice className="secondary-content-bg">
   <div class="layout-grid-left-right">
@@ -200,7 +201,7 @@ const parentSTitle = parentSEntry.title;
             </h2>
             <div class="layout-right-item">
               <a href={`/${category.number}`}>{category.title}</a>
-              <div class="text" set:html={categoryDescription} />
+              <div class="layout-right-item" set:html={categoryDescription} />
             </div>
           </li>
         );
@@ -211,4 +212,81 @@ const parentSTitle = parentSEntry.title;
 
 <style lang="scss">
   @use "@styles/common.scss" as *;
+
+  :global(#AreaHeader), // same as SystemHeader
+  :global(#AreaDescription), // same as SystemDescription
+  :global(#ChildrenInParentLabel) {
+    // On mobile, override the grid
+    @include phone-only {
+      .layout-grid-left-right {
+        display: block;
+      }
+      .layout-right-item {
+        border: none;
+        padding-left: 0;
+      }
+    }
+  }
+
+  :global(#AreaHeader) {
+    h1 {
+      margin: 0;
+      padding-top: 20px;
+      @include phone-only {
+        // A word has to be pretty long to need breaking mid-word
+        // But this is what does it
+        // hyphens: auto;
+        // overflow-wrap: break-word;
+      }
+    }
+    .phone-only {
+      display: none;
+      @include phone-only {
+        display: block;
+      }
+    }
+    .tablet-portrait-up {
+      display: none;
+      @include tablet-portrait-up {
+        display: grid;
+      }
+    }
+  }
+
+  :global(#SystemBreadcrumb) {
+    h3 {
+      font-size: 1rem;
+      font-weight: normal;
+      margin: 0;
+    }
+  }
+
+  :global(.descriptive-text) {
+    h3 {
+      font-size: 1rem;
+      margin: 0; // Surrounding <p>s handle it
+    }
+    // Line the text up with its header by removing top margin
+    @include tablet-portrait-up {
+      // This <p> is set:html'd
+      .layout-right-item :global(p:first-child) {
+        margin-top: 0;
+      }
+    }
+    // Headers go above the text on mobile, otherwise they take up loads of
+    // room on the left.
+    @include phone-only {
+      .layout-grid-left-right {
+        grid-auto-flow: row;
+        grid-template-columns: none;
+        .layout-left-item {
+          justify-self: start;
+        }
+        .layout-right-item {
+          border: none;
+          padding: unset;
+        }
+      }
+    }
+  }
 </style>

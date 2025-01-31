@@ -112,10 +112,10 @@ html {
 // This is common for breadcrumbs at all sizes, and descriptive text on larger
 @mixin layout-grid-100px-auto {
   display: grid;
-  grid-template-columns: 100px auto;
+  grid-template-columns: 110px auto;
   // On mobile, this takes a lot of room on the left. Reclaim a touch.
   @include phone-only {
-    grid-template-columns: 80px auto;
+    grid-template-columns: 60px auto;
   }
   .label {
     justify-self: end;
@@ -175,7 +175,7 @@ html {
       @include layout-grid-100px-auto;
     }
     // Using h2 for semantics: simplify appearance
-    h2 {
+    h3 {
       font-size: 1rem;
       margin: 0;
       // On mobile, bump the size and give it a bit of room at the top
@@ -197,30 +197,13 @@ html {
   }
 }
 
-h2#children-in-this-parent-label {
-  font-size: 1.4rem;
-  margin: 0;
-  padding: 20px 0 10px 8px;
-  @include phone-only {
-    padding-left: 0;
-  }
-}
-
 /* -------------------------------- NEW STUFF ------------------------------- */
-// The layout class that gives us the 1/3rd left 2/3rds right split, with a
-// grey dividing border. It's the same on mobile, but we shrink the left.
-
-// Decision: because you're spending time working around it otherwise.
-// Labels, that are typically larger, are H1s.
-// JD AC.IDs, even when 'headers', are H2s.
-// Then you can style each appropriately.
-
 /* --------------------------------- Layouts -------------------------------- */
 .layout-grid-left-right {
   display: grid;
-  grid-template-columns: 100px auto;
+  grid-template-columns: 110px auto;
   @include phone-only {
-    grid-template-columns: 80px auto;
+    grid-template-columns: 60px auto;
   }
 }
 // Don't nest these in the declaration above! When you do that, you run in to
@@ -245,23 +228,13 @@ ol.acid-list {
   margin: 0;
   padding: 0;
 
+  h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
   // It's a bit roomy by default
   p {
     margin: 5px 0;
   }
 }
-
-/* ------------------------- Style - think Tailwind ------------------------- */
-.border-t-1px {
-  border-top: 1px solid black;
-}
-.font-1rem {
-  font-size: 1rem;
-}
-.margin-0 {
-  margin: 0;
-}
-.padding-t-15px {
-  padding-top: 15px;
-}
-/* ------------------------------ END NEW STUFF ----------------------------- */
