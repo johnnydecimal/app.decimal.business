@@ -44,27 +44,27 @@ import wikiLinkify from "@helpers/wikiLinkify";
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice className="active-top breadcrumb system" id="SystemBreadcrumb">
-  <div class="label-text-grid active-item">
+<Slice id="SystemHeader" className="active-top">
+  <div class="layout-grid-left-right active-item">
     <div></div>
-    <h2 class="text">{systemTitle}</h2>
+    <h1 class="layout-right-item">{systemTitle}</h1>
   </div>
 </Slice>
 
 {
   systemDescription ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
+    <Slice id="SystemDescription" className="descriptive-text">
+      <div class="layout-grid-left-right">
         <div />
-        <div class="text" set:html={systemDescription} />
+        <div class="layout-right-item" set:html={systemDescription} />
       </div>
     </Slice>
   ) : null
 }
 
-<Slice className="active-bottom" />
+<!-- <Slice className="active-bottom" /> -->
 
-<Slice className="secondary-content-bg">
+<Slice id="AreasInSystemLabel" className="secondary-content-bg">
   <div class="layout-grid-left-right">
     <div></div>
     <h2 class="layout-right-item margin-0 padding-t-15px">
@@ -73,7 +73,7 @@ import Slice from "./common/Slice.astro";
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg">
+<Slice id="AreasInSystemList" className="secondary-content-bg">
   <ol class="acid-list">
     {
       areas.map(async (area) => {
@@ -81,14 +81,12 @@ import Slice from "./common/Slice.astro";
           wikiLinkify(area.description)
         );
         return (
-          <li class="label-text-grid">
-            <h2 class="label">
+          <li class="layout-grid-left-right">
+            <h2 class="layout-left-item">
               <a href={`/${area.number}`}>{area.number}</a>
             </h2>
-            <div>
-              <div class="text">
-                <a href={`/${area.number}`}>{area.title}</a>
-              </div>
+            <div class="layout-right-item">
+              <a href={`/${area.number}`}>{area.title}</a>
               <div class="text" set:html={areaDescription} />
             </div>
           </li>
@@ -101,9 +99,54 @@ import Slice from "./common/Slice.astro";
 <style lang="scss">
   @use "@styles/common.scss" as *;
 
-  :global(#SystemBreadcrumb) {
-    .text {
+  // TODO when all's settled, these can probably move out to common.scss
+  :global(#SystemHeader),
+  :global(#SystemDescription),
+  :global(#AreasInSystemLabel) {
+    // On mobile, override the grid
+    @include phone-only {
+      .layout-grid-left-right {
+        display: block;
+      }
+      .layout-right-item {
+        border: none;
+        padding-left: 0;
+      }
+    }
+  }
+
+  :global(#SystemHeader) {
+    h1 {
+      margin: 0;
       padding-top: 20px;
+    }
+  }
+
+  :global(#AreasInSystemLabel) {
+    border-top: 1px solid var(--border-strong);
+    @include phone-only {
+      border-bottom: 1px solid lightgray;
+      h2.layout-right-item {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  :global(#AreasInSystemList) {
+    h2 {
+      font-size: 1rem;
+      margin: 0;
+    }
+    // Bring the list away from the light grey border a touch
+    @include phone-only {
+      ol {
+        li {
+          .layout-left-item,
+          .layout-right-item {
+            padding-top: 10px;
+          }
+        }
+      }
     }
   }
 </style>

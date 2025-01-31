@@ -210,7 +210,12 @@ h2#children-in-this-parent-label {
 // The layout class that gives us the 1/3rd left 2/3rds right split, with a
 // grey dividing border. It's the same on mobile, but we shrink the left.
 
-/* ------------------------ Layouts - no style here! ------------------------ */
+// Decision: because you're spending time working around it otherwise.
+// Labels, that are typically larger, are H1s.
+// JD AC.IDs, even when 'headers', are H2s.
+// Then you can style each appropriately.
+
+/* --------------------------------- Layouts -------------------------------- */
 .layout-grid-left-right {
   display: grid;
   grid-template-columns: 100px auto;
