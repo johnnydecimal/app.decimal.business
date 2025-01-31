@@ -102,11 +102,11 @@ const parentSTitle = parentSEntry.title;
   </div>
 </Slice>
 
-<Slice id="AreaHeader" className="active-top">
-  <div class="layout-grid-left-right active-item phone-only">
+<Slice id="Header" className="active-top">
+  <div class="layout-grid-left-right phone-only">
     <h1 class="layout-left-item">{area} {areaTitle}</h1>
   </div>
-  <div class="layout-grid-left-right active-item tablet-portrait-up">
+  <div class="layout-grid-left-right tablet-portrait-up">
     <h1 class="layout-left-item">{area}</h1>
     <h1 class="layout-right-item">{areaTitle}</h1>
   </div>
@@ -178,16 +178,14 @@ const parentSTitle = parentSEntry.title;
   ) : null
 }
 
-<Slice className="secondary-content-bg">
+<Slice id="ChildrenInParentLabel" className="secondary-content-bg">
   <div class="layout-grid-left-right">
     <div></div>
-    <h2 class="layout-right-item margin-0 padding-t-15px">
-      Categories in this area
-    </h2>
+    <h2 class="layout-right-item">Categories in this area</h2>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg">
+<Slice id="ChildrenInParentList" className="secondary-content-bg">
   <ol class="acid-list">
     {
       categories.map(async (category) => {
@@ -196,12 +194,14 @@ const parentSTitle = parentSEntry.title;
         );
         return (
           <li class="layout-grid-left-right">
-            <h2 class="layout-left-item font-1rem margin-0">
+            <h3 class="layout-left-item">
               <a href={`/${category.number}`}>{category.number}</a>
-            </h2>
+            </h3>
             <div class="layout-right-item">
-              <a href={`/${category.number}`}>{category.title}</a>
-              <div class="layout-right-item" set:html={categoryDescription} />
+              <h3>
+                <a href={`/${category.number}`}>{category.title}</a>
+              </h3>
+              <div set:html={categoryDescription} />
             </div>
           </li>
         );
@@ -228,40 +228,43 @@ const parentSTitle = parentSEntry.title;
     }
   }
 
-  :global(#AreaHeader) {
-    h1 {
-      margin: 0;
-      padding-top: 20px;
-      @include phone-only {
-        // A word has to be pretty long to need breaking mid-word
-        // But this is what does it
-        // hyphens: auto;
-        // overflow-wrap: break-word;
-      }
-    }
-    .phone-only {
-      display: none;
-      @include phone-only {
-        display: block;
-      }
-    }
-    .tablet-portrait-up {
-      display: none;
-      @include tablet-portrait-up {
-        display: grid;
-      }
-    }
-  }
+  // Moved out to common
+  // :global(#Header) {
+  //   h1 {
+  //     margin: 0;
+  //     padding-top: 20px;
+  //     @include phone-only {
+  //       // A word has to be pretty long to need breaking mid-word
+  //       // But this is what does it
+  //       // hyphens: auto;
+  //       // overflow-wrap: break-word;
+  //     }
+  //   }
+  //   .phone-only {
+  //     display: none;
+  //     @include phone-only {
+  //       display: block;
+  //     }
+  //   }
+  //   .tablet-portrait-up {
+  //     display: none;
+  //     @include tablet-portrait-up {
+  //       display: grid;
+  //     }
+  //   }
+  // }
 
-  :global(#SystemBreadcrumb) {
-    h3 {
-      font-size: 1rem;
-      font-weight: normal;
-      margin: 0;
-    }
-  }
+  // moved to common
+  // :global(#SystemBreadcrumb) {
+  //   h3 {
+  //     font-size: 1rem;
+  //     font-weight: normal;
+  //     margin: 0;
+  //   }
+  // }
 
   :global(.descriptive-text) {
+    // All headers within are h3
     h3 {
       font-size: 1rem;
       margin: 0; // Surrounding <p>s handle it
@@ -279,12 +282,48 @@ const parentSTitle = parentSEntry.title;
       .layout-grid-left-right {
         grid-auto-flow: row;
         grid-template-columns: none;
+        // Undo the stuff we set for larger screens
         .layout-left-item {
           justify-self: start;
         }
         .layout-right-item {
           border: none;
           padding: unset;
+        }
+      }
+    }
+  }
+
+  :global(#ChildrenInParentLabel) {
+    // Border here vs. above, as we don't know if SystemDescription will exist
+    border-top: 1px solid var(--border-strong);
+    h2 {
+      margin: 0;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    @include phone-only {
+      border-bottom: 1px solid lightgray;
+      h2.layout-right-item {
+        padding: 10px 0;
+      }
+    }
+  }
+
+  :global(#ChildrenInParentList) {
+    border-bottom: 1px solid var(--border-strong);
+    h2 {
+      font-size: 1rem;
+      margin: 0;
+    }
+    // Bring the list away from the light grey border a touch
+    @include phone-only {
+      ol {
+        li {
+          .layout-left-item,
+          .layout-right-item {
+            padding-top: 10px;
+          }
         }
       }
     }

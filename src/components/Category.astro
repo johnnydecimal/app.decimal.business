@@ -104,33 +104,40 @@ const parentSTitle = parentSEntry.title;
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice className="secondary-content-bg breadcrumb system">
-  <div class="label-text-grid">
+<Slice id="SystemBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
     <div></div>
-    <h2 class="text"><a href="/">{parentSTitle}</a></h2>
+    <h3 class="layout-right-item"><a href="/">{parentSTitle}</a></h3>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg breadcrumb area">
-  <div class="label-text-grid">
-    <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
-    <h2 class="text"><a href={parentANumber}>{parentATitle}</a></h2>
+<Slice id="AreaBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">
+      <a href={parentANumber}>{parentANumber}</a>
+    </h3>
+    <h3 class="layout-right-item">
+      <a href={parentANumber}>{parentATitle}</a>
+    </h3>
   </div>
 </Slice>
 
-<Slice className="active-top breadcrumb category">
-  <div class="label-text-grid active-item">
-    <h2 class="label">{category}</h2>
-    <h2 class="text">{categoryTitle}</h2>
+<Slice id="Header" className="active-top">
+  <div class="layout-grid-left-right phone-only">
+    <h1 class="layout-left-item">{category} {categoryTitle}</h1>
+  </div>
+  <div class="layout-grid-left-right tablet-portrait-up">
+    <h1 class="layout-left-item">{category}</h1>
+    <h1 class="layout-right-item">{categoryTitle}</h1>
   </div>
 </Slice>
 
 {
   categoryDescription ? (
     <Slice className="descriptive-text">
-      <div class="label-text-grid">
+      <div class="layout-grid-left-right">
         <div />
-        <div class="text" set:html={categoryDescription} />
+        <div class="layout-right-item" set:html={categoryDescription} />
       </div>
     </Slice>
   ) : null
@@ -139,9 +146,9 @@ import Slice from "./common/Slice.astro";
 {
   categoryExamples ? (
     <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Examples</h2>
-        <div class="text" set:html={categoryExamples} />
+      <div class="layout-grid-left-right">
+        <h2 class="layout-left-item">Examples</h2>
+        <div class="layout-right-item" set:html={categoryExamples} />
       </div>
     </Slice>
   ) : null
@@ -150,9 +157,9 @@ import Slice from "./common/Slice.astro";
 {
   categoryMoreInfo ? (
     <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">More info</h2>
-        <div class="text" set:html={categoryMoreInfo} />
+      <div class="layout-grid-left-right">
+        <h2 class="layout-left-item">More info</h2>
+        <div class="layout-right-item" set:html={categoryMoreInfo} />
       </div>
     </Slice>
   ) : null
@@ -161,9 +168,9 @@ import Slice from "./common/Slice.astro";
 {
   categoryExceptions ? (
     <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Exceptions</h2>
-        <div class="text" set:html={categoryExceptions} />
+      <div class="layout-grid-left-right">
+        <h2 class="layout-left-item">Exceptions</h2>
+        <div class="layout-right-item" set:html={categoryExceptions} />
       </div>
     </Slice>
   ) : null
@@ -172,9 +179,9 @@ import Slice from "./common/Slice.astro";
 {
   categoryAlsoSee ? (
     <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Also see</h2>
-        <div class="text" set:html={categoryAlsoSee} />
+      <div class="layout-grid-left-right">
+        <h2 class="layout-left-item">Also see</h2>
+        <div class="layout-right-item" set:html={categoryAlsoSee} />
       </div>
     </Slice>
   ) : null
@@ -183,9 +190,9 @@ import Slice from "./common/Slice.astro";
 {
   categoryRationale ? (
     <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Rationale</h2>
-        <div class="text" set:html={categoryRationale} />
+      <div class="layout-grid-left-right">
+        <h2 class="layout-left-item">Rationale</h2>
+        <div class="layout-right-item" set:html={categoryRationale} />
       </div>
     </Slice>
   ) : null
@@ -218,7 +225,7 @@ import Slice from "./common/Slice.astro";
             </h2>
             <div class="layout-right-item">
               <a href={`/${id.number}`}>{id.title}</a>
-              <div class="text" set:html={idDescription} />
+              <div class="layout-right-item" set:html={idDescription} />
             </div>
           </li>
         );

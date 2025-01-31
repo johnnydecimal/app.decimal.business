@@ -45,7 +45,7 @@ import Slice from "./common/Slice.astro";
 ---
 
 <Slice id="SystemHeader" className="active-top">
-  <div class="layout-grid-left-right active-item">
+  <div class="layout-grid-left-right">
     <div></div>
     <h1 class="layout-right-item">{systemTitle}</h1>
   </div>
@@ -69,7 +69,7 @@ import Slice from "./common/Slice.astro";
   </div>
 </Slice>
 
-<Slice id="AreasInSystemList" className="secondary-content-bg">
+<Slice id="ChildrenInParentList" className="secondary-content-bg">
   <ol class="acid-list">
     {
       areas.map(async (area) => {
@@ -85,7 +85,7 @@ import Slice from "./common/Slice.astro";
               <h3>
                 <a href={`/${area.number}`}>{area.title}</a>
               </h3>
-              <div class="text" set:html={areaDescription} />
+              <div set:html={areaDescription} />
             </div>
           </li>
         );
@@ -120,6 +120,7 @@ import Slice from "./common/Slice.astro";
     }
   }
 
+  // We copied this whole thing to Area
   :global(#ChildrenInParentLabel) {
     // Border here vs. above, as we don't know if SystemDescription will exist
     border-top: 1px solid var(--border-strong);
@@ -136,7 +137,8 @@ import Slice from "./common/Slice.astro";
     }
   }
 
-  :global(#AreasInSystemList) {
+  // Also this
+  :global(#ChildrenInParentList) {
     border-bottom: 1px solid var(--border-strong);
     h2 {
       font-size: 1rem;

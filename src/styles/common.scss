@@ -238,3 +238,38 @@ ol.acid-list {
     margin: 5px 0;
   }
 }
+
+/* ---------------------- Moved out of Component:global --------------------- */
+#SystemBreadcrumb,
+#AreaBreadcrumb {
+  h3 {
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+#Header {
+  h1 {
+    margin: 0;
+    padding-top: 20px;
+    @include phone-only {
+      // A word has to be pretty long to need breaking mid-word
+      // But this is what does it
+      // hyphens: auto;
+      // overflow-wrap: break-word;
+    }
+  }
+  .phone-only {
+    display: none;
+    @include phone-only {
+      display: block;
+    }
+  }
+  .tablet-portrait-up {
+    display: none;
+    @include tablet-portrait-up {
+      display: grid;
+    }
+  }
+}
