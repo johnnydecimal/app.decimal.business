@@ -36,13 +36,15 @@
 // - To be passed the number of the category to render. This is the slug.
 interface Props {
   area: string;
+  testRun?: boolean;
 }
-const { area } = Astro.props;
+const { area, testRun } = Astro.props;
 
 import sb from "src/data/smallBusinessFlat";
 import sbTest from "src/data/smallBusinessFlatTest";
 let system;
-if (process.env.NODE_ENV === "playwright") {
+console.log("env:", process.env.NODE_ENV);
+if (testRun) {
   system = sbTest;
 } else {
   system = sb;

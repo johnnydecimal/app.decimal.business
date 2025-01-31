@@ -9,8 +9,8 @@ import Category from "@components/Category.astro";
 import ID from "@components/ID.astro";
 import OpsManual from "@components/OpsManual.astro";
 
-// const { slug } = Astro.params;
-const slug = "/10-19";
+const { slug } = Astro.params;
+// const slug = "/10-19";
 
 /**
  * This page handles the display of all areas, categories, and IDs. So first
@@ -58,7 +58,7 @@ if (slug?.match(/^index.html$/)) {
 
 <LayoutNoAuth>
   {entryType === "system" ? <System /> : null}
-  {entryType === "area" ? <Area area={slug!} /> : null}
+  {entryType === "area" ? <Area area={slug!} testRun /> : null}
   {entryType === "category" ? <Category category={slug!} /> : null}
   {entryType === "id" ? <ID id={slug!} /> : null}
   {entryType === "ops" ? <OpsManual id={slug!} /> : null}
