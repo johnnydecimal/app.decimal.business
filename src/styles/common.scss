@@ -195,7 +195,8 @@ html {
 /* ---------------------- Moved out of Component:global --------------------- */
 // And I can't tell you why they all need the :global. I think it's a bug.
 :global(#SystemBreadcrumb),
-:global(#AreaBreadcrumb) {
+:global(#AreaBreadcrumb),
+:global(#CategoryBreadcrumb) {
   h3 {
     font-size: 1rem;
     font-weight: normal;

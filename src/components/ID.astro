@@ -3,6 +3,7 @@ import "@styles/common.scss";
 
 interface Props {
   id: string;
+  testRun?: boolean;
 }
 
 /**
@@ -27,10 +28,19 @@ interface Props {
  */
 
 // - To be passed the number of the id to render. This is the slug.
-const { id } = Astro.props;
+const { id, testRun } = Astro.props;
 
 // - The whole system to reference. Just import it directly.
-import sb, {
+import sb from "src/data/smallBusinessFlat";
+import sbTest from "src/data/smallBusinessFlatTest";
+let system;
+console.log("env:", process.env.NODE_ENV);
+if (testRun) {
+  system = sbTest;
+} else {
+  system = sb;
+}
+import {
   type SystemEntry,
   type AreaEntry,
   type CategoryEntry,
@@ -38,7 +48,7 @@ import sb, {
 } from "src/data/smallBusinessFlat";
 
 // - The title of the ID for the main header.
-const idTitle = sb[id]?.title;
+const idTitle = system[id]?.title;
 
 // - Where those descriptions have been rendered to HTML from Markdown.
 import { marked } from "marked";
@@ -46,7 +56,7 @@ import { markedSmartypants } from "marked-smartypants";
 marked.use(markedSmartypants());
 
 // - All of its other details for the main content.
-const idEntry = sb[id] as IdEntry;
+const idEntry = system[id] as IdEntry;
 // const idEmoji = idEntry.emoji;
 
 //   - Wiki-linking the descriptive text.
@@ -70,56 +80,67 @@ const idRationale =
 // - Its parent category (number & title), and
 // - Its parent category's parent area (number & title).
 const parentCNumber = idEntry.parentNumber;
-const parentCEntry = sb[parentCNumber] as CategoryEntry;
+const parentCEntry = system[parentCNumber] as CategoryEntry;
 const parentCTitle = parentCEntry.title;
 
 const parentANumber = parentCEntry.parentNumber;
-const parentAEntry = sb[parentANumber] as AreaEntry;
+const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
 // - A breadbreadcrumb to the parent system
 const parentSNumber = parentAEntry.parentNumber;
-const parentSEntry = sb[parentSNumber] as SystemEntry;
+const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 
 // - To import and use the Slice component.
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice className="secondary-content-bg breadcrumb system">
-  <div class="label-text-grid">
+<Slice id="SystemBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
     <div></div>
-    <h2 class="text"><a href="/">{parentSTitle}</a></h2>
+    <h3 class="layout-right-item"><a href="/">{parentSTitle}</a></h3>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg breadcrumb area">
-  <div class="label-text-grid">
-    <h2 class="label"><a href={parentANumber}>{parentANumber}</a></h2>
-    <h2 class="text"><a href={parentANumber}>{parentATitle}</a></h2>
+<Slice id="AreaBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">
+      <a href={parentANumber}>{parentANumber}</a>
+    </h3>
+    <h3 class="layout-right-item">
+      <a href={parentANumber}>{parentATitle}</a>
+    </h3>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg breadcrumb category">
-  <div class="label-text-grid">
-    <h2 class="label"><a href={parentCNumber}>{parentCNumber}</a></h2>
-    <h2 class="text"><a href={parentCNumber}>{parentCTitle}</a></h2>
+<Slice id="CategoryBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">
+      <a href={parentCNumber}>{parentCNumber}</a>
+    </h3>
+    <h3 class="layout-right-item">
+      <a href={parentCNumber}>{parentCTitle}</a>
+    </h3>
   </div>
 </Slice>
 
-<Slice className="active-top breadcrumb id">
-  <div class="label-text-grid active-item">
-    <h2 class="label">{id}</h2>
-    <h2 class="text">{idTitle}</h2>
+<Slice id="Header" className="active-top">
+  <div class="layout-grid-left-right phone-only">
+    <h1 class="layout-left-item">{id} {idTitle}</h1>
+  </div>
+  <div class="layout-grid-left-right tablet-portrait-up">
+    <h1 class="layout-left-item">{id}</h1>
+    <h1 class="layout-right-item">{idTitle}</h1>
   </div>
 </Slice>
 
 {
   idDescription ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
+    <Slice id="IDDescription" className="descriptive-text">
+      <div class="layout-grid-left-right">
         <div />
-        <div class="text" set:html={idDescription} />
+        <div class="layout-right-item" set:html={idDescription} />
       </div>
     </Slice>
   ) : null
@@ -127,10 +148,10 @@ import Slice from "./common/Slice.astro";
 
 {
   idExamples ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Examples</h2>
-        <div class="text" set:html={idExamples} />
+    <Slice id="IDExamples" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Examples</h3>
+        <div class="layout-right-item" set:html={idExamples} />
       </div>
     </Slice>
   ) : null
@@ -138,10 +159,10 @@ import Slice from "./common/Slice.astro";
 
 {
   idMoreInfo ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">More info</h2>
-        <div class="text" set:html={idMoreInfo} />
+    <Slice id="IDMoreInfo" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">More info</h3>
+        <div class="layout-right-item" set:html={idMoreInfo} />
       </div>
     </Slice>
   ) : null
@@ -149,10 +170,10 @@ import Slice from "./common/Slice.astro";
 
 {
   idExceptions ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Exceptions</h2>
-        <div class="text" set:html={idExceptions} />
+    <Slice id="IDExceptions" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Exceptions</h3>
+        <div class="layout-right-item" set:html={idExceptions} />
       </div>
     </Slice>
   ) : null
@@ -160,10 +181,10 @@ import Slice from "./common/Slice.astro";
 
 {
   idAlsoSee ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Also see</h2>
-        <div class="text" set:html={idAlsoSee} />
+    <Slice id="IDAlsoSee" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Also see</h3>
+        <div class="layout-right-item" set:html={idAlsoSee} />
       </div>
     </Slice>
   ) : null
@@ -171,15 +192,23 @@ import Slice from "./common/Slice.astro";
 
 {
   idRationale ? (
-    <Slice className="descriptive-text">
-      <div class="label-text-grid">
-        <h2 class="label">Rationale</h2>
-        <div class="text" set:html={idRationale} />
+    <Slice id="IDRationale" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Rationale</h3>
+        <div class="layout-right-item" set:html={idRationale} />
       </div>
     </Slice>
   ) : null
 }
 
+<!-- TODO: add Ops manuals in this ID :-) -->
+
+<div id="EndOfIDsBorder"></div>
+
 <style lang="scss">
   @use "@styles/common" as *;
+
+  #EndOfIDsBorder {
+    border-top: 1px solid var(--border-strong);
+  }
 </style>

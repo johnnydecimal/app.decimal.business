@@ -24,11 +24,8 @@ const { slug } = Astro.params;
 
 let entryType: EntryType | "no-match" | null = null;
 
-console.log("🐌 test:", slug);
-
 if (slug?.match(/^\/test$/)) {
   entryType = "system";
-  console.log("🎽 TEST RUN SYSTEM");
 } else if (slug?.match(/^[0-9]0-[0-9]9$/)) {
   entryType = "area";
 } else if (slug?.match(/^\d\d$/)) {
@@ -61,7 +58,7 @@ if (slug?.match(/^\/test$/)) {
   {entryType === "system" ? <System testRun /> : null}
   {entryType === "area" ? <Area area={slug!} testRun /> : null}
   {entryType === "category" ? <Category category={slug!} testRun /> : null}
-  {entryType === "id" ? <ID id={slug!} /> : null}
+  {entryType === "id" ? <ID id={slug!} testRun /> : null}
   {entryType === "ops" ? <OpsManual id={slug!} /> : null}
   {entryType === "no-match" ? <System /> : null}
 </LayoutNoAuth>
