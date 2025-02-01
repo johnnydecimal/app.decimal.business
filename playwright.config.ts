@@ -14,21 +14,30 @@ export default defineConfig({
       name: "Desktop Chrome",
       use: {
         ...devices["Desktop Chrome"],
-        viewport: { width: 1280, height: 720 },
       },
     },
     {
       name: "Desktop Firefox",
       use: {
         ...devices["Desktop Firefox"],
-        viewport: { width: 1280, height: 720 },
       },
     },
     {
       name: "Desktop Safari",
       use: {
         ...devices["Desktop Safari"],
-        viewport: { width: 1280, height: 720 },
+      },
+    },
+    {
+      name: "Mobile Safari, iPhone 13 mini",
+      use: {
+        ...devices["iPhone 13 Mini"],
+      },
+    },
+    {
+      name: "Android",
+      use: {
+        ...devices["Galaxy S8"],
       },
     },
   ],
