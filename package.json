@@ -10,7 +10,8 @@
     "build": "npm run generate-search && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "playwright test"
+    "test": "playwright test & git acm 'Test: run'",
+    "test:update": "playwright test --update-snapshots && git acm 'Test: update snapshots'"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",

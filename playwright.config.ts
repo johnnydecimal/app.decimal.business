@@ -4,7 +4,7 @@ export default defineConfig({
   testDir: "./tests",
   fullyParallel: true,
   retries: 1,
-  reporter: [["html", { open: "never" }]],
+  reporter: [["html", { open: "on-failure" }]],
   use: {
     baseURL: "http://localhost:3012",
     trace: "on-first-retry",

@@ -270,36 +270,37 @@ const parentSTitle = parentSEntry.title;
   //   }
   // }
 
-  :global(.descriptive-text) {
-    // All headers within are h3
-    h3 {
-      font-size: 1rem;
-      margin: 0; // Surrounding <p>s handle it
-    }
-    // Line the text up with its header by removing top margin
-    @include tablet-portrait-up {
-      // This <p> is set:html'd
-      .layout-right-item :global(p:first-child) {
-        margin-top: 0;
-      }
-    }
-    // Headers go above the text on mobile, otherwise they take up loads of
-    // room on the left.
-    @include phone-only {
-      .layout-grid-left-right {
-        grid-auto-flow: row;
-        grid-template-columns: none;
-        // Undo the stuff we set for larger screens
-        .layout-left-item {
-          justify-self: start;
-        }
-        .layout-right-item {
-          border: none;
-          padding: unset;
-        }
-      }
-    }
-  }
+  // moved to common
+  // :global(.descriptive-text) {
+  //   // All headers within are h3
+  //   h3 {
+  //     font-size: 1rem;
+  //     margin: 0; // Surrounding <p>s handle it
+  //   }
+  //   // Line the text up with its header by removing top margin
+  //   @include tablet-portrait-up {
+  //     // This <p> is set:html'd
+  //     .layout-right-item :global(p:first-child) {
+  //       margin-top: 0;
+  //     }
+  //   }
+  //   // Headers go above the text on mobile, otherwise they take up loads of
+  //   // room on the left.
+  //   @include phone-only {
+  //     .layout-grid-left-right {
+  //       grid-auto-flow: row;
+  //       grid-template-columns: none;
+  //       // Undo the stuff we set for larger screens
+  //       .layout-left-item {
+  //         justify-self: start;
+  //       }
+  //       .layout-right-item {
+  //         border: none;
+  //         padding: unset;
+  //       }
+  //     }
+  //   }
+  // }
 
   :global(#ChildrenInParentLabel) {
     // Border here vs. above, as we don't know if SystemDescription will exist

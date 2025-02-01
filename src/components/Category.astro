@@ -90,12 +90,12 @@ marked.use(markedSmartypants());
 // - Wiki-linkify the description
 import wikiLinkify from "@helpers/wikiLinkify";
 
-// - A breadbreadcrumb to the parent area.
+// - A breadcrumb to the parent area.
 const parentANumber = categoryEntry.parentNumber;
 const parentAEntry = sb[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
-// - A breadbreadcrumb to the parent system
+// - A breadcrumb to the parent system
 const parentSNumber = parentAEntry.parentNumber;
 const parentSEntry = sb[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
@@ -134,7 +134,7 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryDescription ? (
-    <Slice className="descriptive-text">
+    <Slice id="CategoryDescription" className="descriptive-text">
       <div class="layout-grid-left-right">
         <div />
         <div class="layout-right-item" set:html={categoryDescription} />
@@ -145,9 +145,9 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryExamples ? (
-    <Slice className="descriptive-text">
+    <Slice id="CategoryExamples" className="descriptive-text">
       <div class="layout-grid-left-right">
-        <h2 class="layout-left-item">Examples</h2>
+        <h3 class="layout-left-item">Examples</h3>
         <div class="layout-right-item" set:html={categoryExamples} />
       </div>
     </Slice>
@@ -156,9 +156,9 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryMoreInfo ? (
-    <Slice className="descriptive-text">
+    <Slice id="CategoryMoreInfo" className="descriptive-text">
       <div class="layout-grid-left-right">
-        <h2 class="layout-left-item">More info</h2>
+        <h3 class="layout-left-item">More info</h3>
         <div class="layout-right-item" set:html={categoryMoreInfo} />
       </div>
     </Slice>
@@ -167,9 +167,9 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryExceptions ? (
-    <Slice className="descriptive-text">
+    <Slice id="CategoryExceptions" className="descriptive-text">
       <div class="layout-grid-left-right">
-        <h2 class="layout-left-item">Exceptions</h2>
+        <h3 class="layout-left-item">Exceptions</h3>
         <div class="layout-right-item" set:html={categoryExceptions} />
       </div>
     </Slice>
@@ -178,9 +178,9 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryAlsoSee ? (
-    <Slice className="descriptive-text">
+    <Slice id="CategoryAlsoSee" className="descriptive-text">
       <div class="layout-grid-left-right">
-        <h2 class="layout-left-item">Also see</h2>
+        <h3 class="layout-left-item">Also see</h3>
         <div class="layout-right-item" set:html={categoryAlsoSee} />
       </div>
     </Slice>
@@ -189,9 +189,9 @@ import Slice from "./common/Slice.astro";
 
 {
   categoryRationale ? (
-    <Slice className="descriptive-text">
+    <Slice id="CategoryRationale" className="descriptive-text">
       <div class="layout-grid-left-right">
-        <h2 class="layout-left-item">Rationale</h2>
+        <h3 class="layout-left-item">Rationale</h3>
         <div class="layout-right-item" set:html={categoryRationale} />
       </div>
     </Slice>
