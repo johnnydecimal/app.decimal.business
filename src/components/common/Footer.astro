@@ -6,7 +6,12 @@ const month = String(today.getMonth() + 1).padStart(2, "0");
 const day = String(today.getDate()).padStart(2, "0");
 const year = today.getFullYear();
 const date = `${year}-${month}-${day}`;
-const environment = import.meta.env.DEV ? "dev" : "prod";
+let environment = import.meta.env.DEV ? "dev" : "prod";
+
+const pathname = Astro.url.pathname;
+if (pathname.match(/^\/test/)) {
+  environment = "test";
+}
 ---
 
 <footer class={import.meta.env.DEV ? "dev" : null}>
@@ -19,9 +24,10 @@ const environment = import.meta.env.DEV ? "dev" : "prod";
             >Environment&nbsp;&nbsp;&nbsp;: {environment}</span
           >
           <br />
-          System status : normal<br />
-          Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1.0<br />
-          Published&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {date}
+          <span>System status : normal</span><br />
+          <span>Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1.0</span><br
+          />
+          <span>Published&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {date}</span>
         </p>
         &copy; {year} Johnny.Decimal
       </div>
@@ -41,5 +47,8 @@ const environment = import.meta.env.DEV ? "dev" : "prod";
   .env-dev {
     background-color: hotpink;
     color: white;
+  }
+  .env-test {
+    background-color: lime;
   }
 </style>

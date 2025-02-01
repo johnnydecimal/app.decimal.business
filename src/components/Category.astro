@@ -37,14 +37,23 @@
 // - To be passed the number of the category to render. This is the slug.
 interface Props {
   category: string;
+  testRun?: boolean;
 }
-const { category } = Astro.props;
+const { category, testRun } = Astro.props;
 
 // - The whole system to reference. Just import it directly.
 import sb from "src/data/smallBusinessFlat";
+import sbTest from "src/data/smallBusinessFlatTest";
+let system;
+console.log("env:", process.env.NODE_ENV);
+if (testRun) {
+  system = sbTest;
+} else {
+  system = sb;
+}
 
 // - The title of the category for the main header.
-const categoryEntry = sb[category] as CategoryEntry;
+const categoryEntry = system[category] as CategoryEntry;
 const categoryTitle = categoryEntry.title;
 
 // - The description and emoji of the category.
@@ -80,7 +89,7 @@ import type {
   CategoryEntry,
   IdEntry,
 } from "src/data/smallBusinessFlat";
-const ids = getChildren(sb, category) as IdEntry[];
+const ids = getChildren(system, category) as IdEntry[];
 
 // - Where those descriptions have been rendered to HTML from Markdown.
 import { marked } from "marked";
@@ -92,12 +101,12 @@ import wikiLinkify from "@helpers/wikiLinkify";
 
 // - A breadcrumb to the parent area.
 const parentANumber = categoryEntry.parentNumber;
-const parentAEntry = sb[parentANumber] as AreaEntry;
+const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
 // - A breadcrumb to the parent system
 const parentSNumber = parentAEntry.parentNumber;
-const parentSEntry = sb[parentSNumber] as SystemEntry;
+const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 
 // - To import and use the Slice component.
