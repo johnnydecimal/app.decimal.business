@@ -167,35 +167,6 @@ html {
 }
 
 // The main body text
-.descriptive-text,
-.acid-list {
-  .label-text-grid {
-    // Mobile just flows like basic HTML; bigger gets the two-column layout
-    @include tablet-portrait-up {
-      @include layout-grid-100px-auto;
-    }
-    // Using h2 for semantics: simplify appearance
-    h3 {
-      font-size: 1rem;
-      margin: 0;
-      // On mobile, bump the size and give it a bit of room at the top
-      // (p's margin takes care of the bottom)
-      @include phone-only {
-        font-size: 1.2rem;
-        margin-top: var(--xlarge);
-      }
-    }
-
-    // Line up the top of first paragraph with its label on larger screens
-    .text {
-      @include tablet-portrait-up {
-        p:first-child {
-          margin-top: 0;
-        }
-      }
-    }
-  }
-}
 
 /* -------------------------------- NEW STUFF ------------------------------- */
 /* --------------------------------- Layouts -------------------------------- */
@@ -328,11 +299,6 @@ html {
     h3 {
       font-size: 1rem;
       margin: 0;
-    }
-    // It's a bit roomy by default
-    :global(p) {
-      // color: hotpink;
-      // margin: 5px 0;
     }
   }
   // Bring the list away from the light grey border a touch
