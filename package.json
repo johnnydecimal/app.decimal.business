@@ -11,7 +11,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "test": "playwright test && echo '\n\nYou might wanna git commit now.\n'",
-    "test:update": "playwright test --update-snapshots && git acm 'Test: update snapshots'"
+    "test:update": "playwright test --update-snapshots && echo '\n\nYou might wanna git commit now.\n'"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
