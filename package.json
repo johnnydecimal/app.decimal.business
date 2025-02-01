@@ -10,7 +10,7 @@
     "build": "npm run generate-search && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test": "playwright test & echo 🔐 You might wanna git commit now.",
+    "test": "playwright test && echo '\n\nYou might wanna git commit now.\n'",
     "test:update": "playwright test --update-snapshots && git acm 'Test: update snapshots'"
   },
   "dependencies": {
