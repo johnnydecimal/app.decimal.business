@@ -25,9 +25,16 @@ if (pathname.match(/^\/test/)) {
           >
           <br />
           <span>System status : normal</span><br />
-          <span>Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: 1.0</span><br
-          />
-          <span>Published&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {date}</span>
+          <span
+            >Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {
+              environment !== "test" ? "1.0.0" : "x.y.z"
+            }</span
+          ><br />
+          <span
+            >Published&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {
+              environment !== "test" ? date : "yyyy-mm-dd"
+            }</span
+          >
         </p>
         &copy; {year} Johnny.Decimal
       </div>
