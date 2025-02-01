@@ -1,0 +1,12 @@
+---
+/**
+ * I'm needed to match /test, otherwise the [slug] in our parent folder
+ * handles it.
+ */
+import LayoutNoAuth from "@layouts/LayoutNoAuth.astro";
+import System from "@components/System.astro";
+---
+
+<LayoutNoAuth>
+  <System testRun />
+</LayoutNoAuth>

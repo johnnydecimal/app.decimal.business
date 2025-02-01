@@ -3,8 +3,8 @@ import type { FlattenedData } from "./smallBusinessFlat";
 const flattenedData: FlattenedData = {
   J82: {
     number: "J82",
-    title: "Small business system",
-    description: "The best small business system.",
+    title: "Small business test data",
+    description: "The best small business system's test data set.",
     type: "system",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
