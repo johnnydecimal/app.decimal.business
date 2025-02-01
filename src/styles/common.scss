@@ -221,27 +221,10 @@ html {
   }
 }
 
-/* --------------------- Style - specific page elements --------------------- */
-// The list of 'children in this parent'
-ol.acid-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  h3 {
-    font-size: 1rem;
-    margin: 0;
-  }
-
-  // It's a bit roomy by default
-  p {
-    margin: 5px 0;
-  }
-}
-
 /* ---------------------- Moved out of Component:global --------------------- */
-#SystemBreadcrumb,
-#AreaBreadcrumb {
+// And I can't tell you why they all need the :global. I think it's a bug.
+:global(#SystemBreadcrumb),
+:global(#AreaBreadcrumb) {
   h3 {
     font-size: 1rem;
     font-weight: normal;
@@ -249,7 +232,7 @@ ol.acid-list {
   }
 }
 
-#Header {
+:global(#Header) {
   h1 {
     margin: 0;
     padding-top: 20px;
@@ -277,7 +260,7 @@ ol.acid-list {
   }
 }
 
-.descriptive-text {
+:global(.descriptive-text) {
   // All headers within are h3
   h3 {
     font-size: 1rem;
@@ -286,7 +269,7 @@ ol.acid-list {
   // Line the text up with its header by removing top margin
   @include tablet-portrait-up {
     // This <p> is set:html'd
-    .layout-right-item p:first-child {
+    .layout-right-item :global(p:first-child) {
       margin-top: 0;
     }
   }
@@ -303,6 +286,55 @@ ol.acid-list {
       .layout-right-item {
         border: none;
         padding: unset;
+      }
+    }
+  }
+}
+
+:global(#ChildrenInParentLabel) {
+  // Border here vs. above, as we don't know if SystemDescription will exist
+  border-top: 1px solid var(--border-strong);
+  h2 {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @include phone-only {
+    border-bottom: 1px solid rgb(130, 94, 94);
+    h2.layout-right-item {
+      padding: 10px 0;
+    }
+  }
+}
+
+:global(#ChildrenInParentList) {
+  border-bottom: 1px solid var(--border-strong);
+  h2 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  ol.acid-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    h3 {
+      font-size: 1rem;
+      margin: 0;
+    }
+    // It's a bit roomy by default
+    :global(p) {
+      // color: hotpink;
+      // margin: 5px 0;
+    }
+  }
+  // Bring the list away from the light grey border a touch
+  @include phone-only {
+    ol {
+      li {
+        .layout-left-item,
+        .layout-right-item {
+          padding-top: 10px;
+        }
       }
     }
   }

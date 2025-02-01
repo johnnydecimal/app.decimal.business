@@ -40,6 +40,7 @@ interface Props {
 }
 const { area, testRun } = Astro.props;
 
+// - The whole system to reference. Just import it directly.
 import sb from "src/data/smallBusinessFlat";
 import sbTest from "src/data/smallBusinessFlatTest";
 let system;
@@ -83,6 +84,7 @@ import type {
   SystemEntry,
   AreaEntry,
   CategoryEntry,
+  FlattenedData,
 } from "src/data/smallBusinessFlat";
 const categories = getChildren(system, area) as CategoryEntry[];
 
@@ -219,8 +221,10 @@ const parentSTitle = parentSEntry.title;
 </Slice>
 
 <style lang="scss">
-  @use "@styles/common.scss" as *;
+  @use "@styles/common" as *;
 
+  // Global, as <Slice> is a component, and the content above is <slot>
+  :global(#AreaHeader), // same as SystemHeader
   :global(#AreaDescription), // same as SystemDescription
   :global(#ChildrenInParentLabel) {
     // On mobile, override the grid
@@ -270,70 +274,69 @@ const parentSTitle = parentSEntry.title;
   //   }
   // }
 
-  // moved to common
-  // :global(.descriptive-text) {
-  //   // All headers within are h3
-  //   h3 {
-  //     font-size: 1rem;
-  //     margin: 0; // Surrounding <p>s handle it
-  //   }
-  //   // Line the text up with its header by removing top margin
-  //   @include tablet-portrait-up {
-  //     // This <p> is set:html'd
-  //     .layout-right-item :global(p:first-child) {
-  //       margin-top: 0;
-  //     }
-  //   }
-  //   // Headers go above the text on mobile, otherwise they take up loads of
-  //   // room on the left.
-  //   @include phone-only {
-  //     .layout-grid-left-right {
-  //       grid-auto-flow: row;
-  //       grid-template-columns: none;
-  //       // Undo the stuff we set for larger screens
-  //       .layout-left-item {
-  //         justify-self: start;
-  //       }
-  //       .layout-right-item {
-  //         border: none;
-  //         padding: unset;
-  //       }
-  //     }
-  //   }
-  // }
-
-  :global(#ChildrenInParentLabel) {
-    // Border here vs. above, as we don't know if SystemDescription will exist
-    border-top: 1px solid var(--border-strong);
-    h2 {
-      margin: 0;
-      padding-top: 15px;
-      padding-bottom: 15px;
+  .descriptive-text {
+    // All headers within are h3
+    h3 {
+      font-size: 1rem;
+      margin: 0; // Surrounding <p>s handle it
     }
-    @include phone-only {
-      border-bottom: 1px solid lightgray;
-      h2.layout-right-item {
-        padding: 10px 0;
+    // Line the text up with its header by removing top margin
+    @include tablet-portrait-up {
+      // This <p> is set:html'd
+      .layout-right-item p:first-child {
+        margin-top: 0;
       }
     }
-  }
-
-  :global(#ChildrenInParentList) {
-    border-bottom: 1px solid var(--border-strong);
-    h2 {
-      font-size: 1rem;
-      margin: 0;
-    }
-    // Bring the list away from the light grey border a touch
+    // Headers go above the text on mobile, otherwise they take up loads of
+    // room on the left.
     @include phone-only {
-      ol {
-        li {
-          .layout-left-item,
-          .layout-right-item {
-            padding-top: 10px;
-          }
+      .layout-grid-left-right {
+        grid-auto-flow: row;
+        grid-template-columns: none;
+        // Undo the stuff we set for larger screens
+        .layout-left-item {
+          justify-self: start;
+        }
+        .layout-right-item {
+          border: none;
+          padding: unset;
         }
       }
     }
   }
+
+  // #ChildrenInParentLabel {
+  //   // Border here vs. above, as we don't know if SystemDescription will exist
+  //   border-top: 1px solid var(--border-strong);
+  //   h2 {
+  //     margin: 0;
+  //     padding-top: 15px;
+  //     padding-bottom: 15px;
+  //   }
+  //   @include phone-only {
+  //     border-bottom: 1px solid lightgray;
+  //     h2.layout-right-item {
+  //       padding: 10px 0;
+  //     }
+  //   }
+  // }
+
+  // #ChildrenInParentList {
+  //   border-bottom: 1px solid var(--border-strong);
+  //   h2 {
+  //     font-size: 1rem;
+  //     margin: 0;
+  //   }
+  //   // Bring the list away from the light grey border a touch
+  //   @include phone-only {
+  //     ol {
+  //       li {
+  //         .layout-left-item,
+  //         .layout-right-item {
+  //           padding-top: 10px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 </style>

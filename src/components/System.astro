@@ -58,7 +58,7 @@ import wikiLinkify from "@helpers/wikiLinkify";
 import Slice from "./common/Slice.astro";
 ---
 
-<Slice id="SystemHeader" className="active-top">
+<Slice id="Header" className="active-top">
   <div class="layout-grid-left-right">
     <div></div>
     <h1 class="layout-right-item">{systemTitle}</h1>
@@ -109,10 +109,10 @@ import Slice from "./common/Slice.astro";
 </Slice>
 
 <style lang="scss">
-  @use "@styles/common.scss" as *;
+  @use "@styles/common" as *;
 
   // TODO when all's settled, these can probably move out to common.scss
-  :global(#SystemHeader),
+  :global(#Header),
   :global(#SystemDescription),
   :global(#ChildrenInParentLabel) {
     // On mobile, override the grid
@@ -127,7 +127,7 @@ import Slice from "./common/Slice.astro";
     }
   }
 
-  :global(#SystemHeader) {
+  #Header {
     h1 {
       margin: 0;
       padding-top: 20px;
@@ -135,39 +135,39 @@ import Slice from "./common/Slice.astro";
   }
 
   // We copied this whole thing to Area
-  :global(#ChildrenInParentLabel) {
-    // Border here vs. above, as we don't know if SystemDescription will exist
-    border-top: 1px solid var(--border-strong);
-    h2 {
-      margin: 0;
-      padding-top: 15px;
-      padding-bottom: 15px;
-    }
-    @include phone-only {
-      border-bottom: 1px solid lightgray;
-      h2.layout-right-item {
-        padding: 10px 0;
-      }
-    }
-  }
+  // :global(#ChildrenInParentLabel) {
+  //   // Border here vs. above, as we don't know if SystemDescription will exist
+  //   border-top: 1px solid var(--border-strong);
+  //   h2 {
+  //     margin: 0;
+  //     padding-top: 15px;
+  //     padding-bottom: 15px;
+  //   }
+  //   @include phone-only {
+  //     border-bottom: 1px solid lightgray;
+  //     h2.layout-right-item {
+  //       padding: 10px 0;
+  //     }
+  //   }
+  // }
 
-  // Also this
-  :global(#ChildrenInParentList) {
-    border-bottom: 1px solid var(--border-strong);
-    h2 {
-      font-size: 1rem;
-      margin: 0;
-    }
-    // Bring the list away from the light grey border a touch
-    @include phone-only {
-      ol {
-        li {
-          .layout-left-item,
-          .layout-right-item {
-            padding-top: 10px;
-          }
-        }
-      }
-    }
-  }
+  // // Also this
+  // :global(#ChildrenInParentList) {
+  //   border-bottom: 1px solid var(--border-strong);
+  //   h2 {
+  //     font-size: 1rem;
+  //     margin: 0;
+  //   }
+  //   // Bring the list away from the light grey border a touch
+  //   @include phone-only {
+  //     ol {
+  //       li {
+  //         .layout-left-item,
+  //         .layout-right-item {
+  //           padding-top: 10px;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 </style>
