@@ -247,9 +247,9 @@ html {
     display: none;
     @include phone-only {
       display: block;
-    }
-    .layout-left-item {
-      justify-self: start; // Affects mobile Chromium
+      .layout-left-item {
+        justify-self: start; // Affects mobile Chromium
+      }
     }
   }
   .tablet-portrait-up {
@@ -299,10 +299,18 @@ html {
     padding-top: 15px;
     padding-bottom: 15px;
   }
+  // On mobile, override the grid
   @include phone-only {
     border-bottom: 1px solid rgb(130, 94, 94);
     h2.layout-right-item {
       padding: 10px 0;
+    }
+    .layout-grid-left-right {
+      display: block;
+    }
+    .layout-right-item {
+      border: none;
+      padding-left: 0;
     }
   }
 }

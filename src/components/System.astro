@@ -58,9 +58,15 @@ import wikiLinkify from "@helpers/wikiLinkify";
 import Slice from "./common/Slice.astro";
 ---
 
+<!-- Not actually required here as we don't display a system ID, but
+     it keeps consistency with the other components & simplifies CSS.
+  -->
 <Slice id="Header" className="active-top">
-  <div class="layout-grid-left-right">
-    <div></div>
+  <div class="layout-grid-left-right phone-only">
+    <h1 class="layout-left-item">{systemTitle}</h1>
+  </div>
+  <div class="layout-grid-left-right tablet-portrait-up">
+    <h1></h1>
     <h1 class="layout-right-item">{systemTitle}</h1>
   </div>
 </Slice>
@@ -112,7 +118,6 @@ import Slice from "./common/Slice.astro";
   @use "@styles/common" as *;
 
   // TODO when all's settled, these can probably move out to common.scss
-  :global(#Header),
   :global(#SystemDescription),
   :global(#ChildrenInParentLabel) {
     // On mobile, override the grid
@@ -133,41 +138,4 @@ import Slice from "./common/Slice.astro";
       padding-top: 20px;
     }
   }
-
-  // We copied this whole thing to Area
-  // :global(#ChildrenInParentLabel) {
-  //   // Border here vs. above, as we don't know if SystemDescription will exist
-  //   border-top: 1px solid var(--border-strong);
-  //   h2 {
-  //     margin: 0;
-  //     padding-top: 15px;
-  //     padding-bottom: 15px;
-  //   }
-  //   @include phone-only {
-  //     border-bottom: 1px solid lightgray;
-  //     h2.layout-right-item {
-  //       padding: 10px 0;
-  //     }
-  //   }
-  // }
-
-  // // Also this
-  // :global(#ChildrenInParentList) {
-  //   border-bottom: 1px solid var(--border-strong);
-  //   h2 {
-  //     font-size: 1rem;
-  //     margin: 0;
-  //   }
-  //   // Bring the list away from the light grey border a touch
-  //   @include phone-only {
-  //     ol {
-  //       li {
-  //         .layout-left-item,
-  //         .layout-right-item {
-  //           padding-top: 10px;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
 </style>

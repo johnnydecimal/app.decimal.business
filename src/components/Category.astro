@@ -198,16 +198,14 @@ import Slice from "./common/Slice.astro";
   ) : null
 }
 
-<Slice className="secondary-content-bg">
+<Slice id="ChildrenInParentLabel" className="secondary-content-bg">
   <div class="layout-grid-left-right">
     <div></div>
-    <h2 class="layout-right-item margin-0 padding-t-15px">
-      IDs in this category
-    </h2>
+    <h2 class="layout-right-item">IDs in this category</h2>
   </div>
 </Slice>
 
-<Slice className="secondary-content-bg">
+<Slice id="ChildrenInParentList" className="secondary-content-bg">
   <ol class="acid-list">
     {
       ids.map(async (id) => {
@@ -218,12 +216,14 @@ import Slice from "./common/Slice.astro";
         const idDescription = await marked.parse(wikiLinkify(id.description));
         return (
           <li class="layout-grid-left-right">
-            <h2 class="layout-left-item font-1rem margin-0">
+            <h3 class="layout-left-item">
               <a href={`/${id.number}`}>{id.number}</a>
-            </h2>
+            </h3>
             <div class="layout-right-item">
-              <a href={`/${id.number}`}>{id.title}</a>
-              <div class="layout-right-item" set:html={idDescription} />
+              <h3>
+                <a href={`/${id.number}`}>{id.title}</a>
+              </h3>
+              <div set:html={idDescription} />
             </div>
           </li>
         );
