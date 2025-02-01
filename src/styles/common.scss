@@ -265,6 +265,9 @@ ol.acid-list {
     @include phone-only {
       display: block;
     }
+    .layout-left-item {
+      justify-self: start; // Affects mobile Chromium
+    }
   }
   .tablet-portrait-up {
     display: none;
