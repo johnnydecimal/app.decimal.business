@@ -5,7 +5,7 @@ type Metadata = {
 };
 
 // Entry types
-export type EntryType = "system" | "area" | "category" | "id" | "ops";
+export type EntryType = "system" | "area" | "category" | "id" | "ops" | "howto";
 
 // Base interface for common fields
 interface BaseEntry {
@@ -64,6 +64,7 @@ export interface OpsEntry extends BaseEntry {
   parentNumber: string; // All ids must have a parent category
   // isHeader?: boolean;
   extensions: {
+    // TODO these are too restrictive: just use the HOWTO pattern
     smallBusinessOpsManual: {
       overview: string; // remember the ID has a description
       diagram?: string;
@@ -75,13 +76,24 @@ export interface OpsEntry extends BaseEntry {
   };
 }
 
+export interface HowtoEntry extends BaseEntry {
+  type: "howto";
+  parentNumber: string;
+  extensions: {
+    howto: {
+      text: string; // freeform
+    };
+  };
+}
+
 // Union type for all entries
 export type FlattenedEntry =
   | SystemEntry
   | AreaEntry
   | CategoryEntry
   | IdEntry
-  | OpsEntry;
+  | OpsEntry
+  | HowtoEntry;
 
 // Flattened data structure type
 export type FlattenedData = Record<string, FlattenedEntry>;
@@ -242,6 +254,23 @@ const flattenedData: FlattenedData = {
       },
     },
   },
+  "11.11+HOW1": {
+    number: "11.11+HOW1",
+    parentNumber: "11.11",
+    type: "howto",
+    title: "How to register a business in Australia",
+    description:
+      "A simple guide to registering a proprietary company in Australia.",
+    metadata: {
+      createdDate: "2024-11-19",
+      updatedDate: "2024-11-19",
+    },
+    extensions: {
+      howto: {
+        text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
+      },
+    },
+  },
   "11.12": {
     number: "11.12",
     parentNumber: "11",
@@ -268,7 +297,6 @@ const flattenedData: FlattenedData = {
       },
     },
   },
-
   "11.13": {
     number: "11.13",
     parentNumber: "11",
