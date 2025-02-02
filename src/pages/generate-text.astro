@@ -1,0 +1,15 @@
+---
+const fileUrl = "/api/generate-text";
+---
+
+<button onclick="downloadFile()">Download File</button>
+<button onclick="downloadZip()">Download ZIP</button>
+
+<script is:inline>
+  function downloadFile() {
+    window.location.href = "/api/generate-text";
+  }
+  function downloadZip() {
+    window.location.href = "/api/generate-zip";
+  }
+</script>
