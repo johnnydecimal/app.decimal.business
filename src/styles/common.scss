@@ -128,43 +128,43 @@ html {
 }
 
 // Breadcrumbs. They look mostly the same on all platforms.
-.breadcrumb {
-  .label-text-grid {
-    @include layout-grid-100px-auto;
+// .breadcrumb {
+//   .label-text-grid {
+//     @include layout-grid-100px-auto;
 
-    // Using h2 for semantics: simplify appearance
-    h2 {
-      font-size: 1rem;
-      font-weight: normal;
-      margin: 0;
-      // Even medium words can easily cause right-spill; force a break
-      @include phone-only {
-        hyphens: auto;
-        word-break: break-word;
-      }
-    }
+//     // Using h2 for semantics: simplify appearance
+//     h2 {
+//       font-size: 1rem;
+//       font-weight: normal;
+//       margin: 0;
+//       // Even medium words can easily cause right-spill; force a break
+//       @include phone-only {
+//         hyphens: auto;
+//         word-break: break-word;
+//       }
+//     }
 
-    // Make the active breadcrumb stand out
-    &.active-item {
-      h2 {
-        font-size: 1.6rem;
-        font-weight: bold;
-        padding-top: 1rem;
-        @include phone-only {
-          font-size: 1.4rem;
-        }
-      }
+//     // Make the active breadcrumb stand out
+//     &.active-item {
+//       h2 {
+//         font-size: 1.6rem;
+//         font-weight: bold;
+//         padding-top: 1rem;
+//         @include phone-only {
+//           font-size: 1.4rem;
+//         }
+//       }
 
-      // On mobile, the active item's breadcrumb doesn't need the dividing line;
-      // otherwise we have to separate it somehow from the description
-      .text {
-        @include phone-only {
-          border-left: unset;
-        }
-      }
-    }
-  }
-}
+//       // On mobile, the active item's breadcrumb doesn't need the dividing line;
+//       // otherwise we have to separate it somehow from the description
+//       .text {
+//         @include phone-only {
+//           border-left: unset;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // The main body text
 
