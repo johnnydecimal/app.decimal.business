@@ -27,5 +27,5 @@ pnpm-debug.log*
 .idea/
 
 # Playwright's nonsense
-playwright-report
-test-results
+playwright-report/
+test-results/
