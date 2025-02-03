@@ -1,4 +1,7 @@
 ---
+if (process.env.NODE_ENV === "production") {
+  throw new Response("Unauthorized", { status: 401 });
+}
 /**
  * I'm needed to match /test, otherwise the [slug] in our parent folder
  * handles it.

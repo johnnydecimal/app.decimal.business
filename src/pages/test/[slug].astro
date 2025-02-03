@@ -1,4 +1,8 @@
 ---
+if (process.env.NODE_ENV === "production") {
+  throw new Response("Unauthorized", { status: 401 });
+}
+
 import sb from "src/data/smallBusinessFlat";
 import type { EntryType } from "src/data/smallBusinessFlat";
 
