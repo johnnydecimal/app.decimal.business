@@ -25,7 +25,7 @@ export const GET: APIRoute = async ({ request }) => {
     const categoryEntry = system[categoryNumber] as CategoryEntry;
     const categoryTitle = categoryEntry.title;
     const areaNumber = categoryEntry.parentNumber;
-    const areaEntry = system[areaNumber];
+    const areaEntry = system[areaNumber] as AreaEntry;
     const areaTitle = areaEntry.title;
     zip.folder(
       `${areaNumber} ${areaTitle}/${categoryNumber} ${categoryTitle}/${id.number} ${id.title}`
