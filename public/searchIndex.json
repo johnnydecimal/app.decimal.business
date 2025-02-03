@@ -78,25 +78,6 @@
     }
   },
   {
-    "number": "11.01+OPS1",
-    "title": "Saving invoices, receipts, or bills in an inbox",
-    "description": "A one-liner.",
-    "type": "ops",
-    "emoji": null,
-    "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
-    },
-    "smallBusinessOpsManual": {
-      "overview": "This manual explains how to record:\n\n- income, e.g. invoices you issue,\n- expenses, e.g. receipts for things you buy,\n- liabilities, e.g. bills you receive.\n\nIn this first phase, you store the invoice, receipt, or bill -- the 'artefact' -- in an **inbox** until it is time to process it. Processing occurs in the next phase.",
-      "diagram": "\n        flowchart TD\n    A((\"[A] Start\")) --> B(\"[B] An income, expense, or\n    liability event\")\n    B --> C[\"[C] The invoice, receipt, or bill\"]\n    C --> D[\"[D] Save it for\n    later processing\"] & H[\"[H] Process the invoice,\n    receipt, or bill\"]\n    C -.-> E[\"*(Bills only)*\n    [E] Pay it immediately\"]\n    D --> F[\"[F] One of your inboxes\"]\n    F --o G[\"[G] ⏯️\n    Every month/quarter,\n    process your inboxes\"]\n    G --> H\n    H --> I[\"[I] A specific JD ID for\n    the thing you have processed\"]\n    E --> H\n    I --> J(((\"[J] Stop\")))\n\n    C@{ shape: doc}\n    D@{ shape: proc}\n    F@{ shape: db}\n    G@{ shape: delay}\n    I@{ shape: db}\n        ",
-      "triggers": "Whenever you generate or receive an invoice, receipt, or bill.",
-      "inputs": "1. The invoice, receipt, or bill.\n2. Your [[list of inboxes]].",
-      "process": "This is the process. We haven't documented this yet.",
-      "outputs": "This is the outputs. We haven't documented this yet."
-    }
-  },
-  {
     "number": "11.10",
     "title": "Official documents",
     "description": "The official paperwork that you need in order to start and maintain a business. ",
@@ -174,6 +155,25 @@
     },
     "moreInfo": {
       "text": "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n"
+    }
+  },
+  {
+    "number": "11.11+OPS1",
+    "title": "Saving invoices, receipts, or bills in an inbox",
+    "description": "A one-liner.",
+    "type": "ops",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2024-11-19",
+      "updatedDate": "2024-11-19"
+    },
+    "smallBusinessOpsManual": {
+      "overview": "This manual explains how to record:\n\n- income, e.g. invoices you issue,\n- expenses, e.g. receipts for things you buy,\n- liabilities, e.g. bills you receive.\n\nIn this first phase, you store the invoice, receipt, or bill -- the 'artefact' -- in an **inbox** until it is time to process it. Processing occurs in the next phase.",
+      "diagram": "\n        flowchart TD\n    A((\"[A] Start\")) --> B(\"[B] An income, expense, or\n    liability event\")\n    B --> C[\"[C] The invoice, receipt, or bill\"]\n    C --> D[\"[D] Save it for\n    later processing\"] & H[\"[H] Process the invoice,\n    receipt, or bill\"]\n    C -.-> E[\"*(Bills only)*\n    [E] Pay it immediately\"]\n    D --> F[\"[F] One of your inboxes\"]\n    F --o G[\"[G] ⏯️\n    Every month/quarter,\n    process your inboxes\"]\n    G --> H\n    H --> I[\"[I] A specific JD ID for\n    the thing you have processed\"]\n    E --> H\n    I --> J(((\"[J] Stop\")))\n\n    C@{ shape: doc}\n    D@{ shape: proc}\n    F@{ shape: db}\n    G@{ shape: delay}\n    I@{ shape: db}\n        ",
+      "triggers": "Whenever you generate or receive an invoice, receipt, or bill.",
+      "inputs": "1. The invoice, receipt, or bill.\n2. Your [[list of inboxes]].",
+      "process": "This is the process. We haven't documented this yet.",
+      "outputs": "This is the outputs. We haven't documented this yet."
     }
   },
   {
