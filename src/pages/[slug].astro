@@ -13,6 +13,11 @@ import MoreInfo from "@components/MoreInfo.astro";
 
 const { slug } = Astro.params;
 
+// Is it a test run? That's only a possibility if we're in dev, which is how
+// we stop sneaky people appending ?env=test in prod and viewing the system.
+const testRun =
+  import.meta.env.DEV && Astro.url.searchParams.get("env") === "test";
+
 /**
  * This page handles the display of all areas, categories, and IDs. So first
  * we need to figure out which of those things we want. Then we fetch it,
@@ -71,7 +76,7 @@ if (slug?.match(/^index.html$/)) {
 console.log("🚪 entryType:", entryType);
 ---
 
-<Layout>
+<Layout testRun={testRun}>
   {entryType === "system" ? <System /> : null}
   {entryType === "area" ? <Area area={slug!} /> : null}
   {entryType === "category" ? <Category category={slug!} /> : null}
