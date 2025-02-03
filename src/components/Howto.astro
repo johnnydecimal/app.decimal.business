@@ -1,13 +1,13 @@
 ---
 interface Props {
-  id: string;
+  howToId: string;
   testRun?: boolean;
 }
 
 /**
- * The ID view component. So we're at /11.11.
+ * The HowTo view component. So we're at /11.11+HOWx.
  *
- * Shows a single ID, with all of its detail. Shows breadbreadcrumbs
+ * Shows a single ID, with all of its detail. Shows breadcrumbs
  * to its category and area.
  *
  * So we need:
@@ -26,7 +26,7 @@ interface Props {
  */
 
 // - To be passed the number of the id to render. This is the slug.
-const { id, testRun } = Astro.props;
+const { howToId, testRun } = Astro.props;
 
 // - The whole system to reference. Just import it directly.
 import sb from "src/data/smallBusinessFlat";
@@ -43,10 +43,11 @@ import {
   type AreaEntry,
   type CategoryEntry,
   type IdEntry,
+  type HowToEntry,
 } from "src/data/smallBusinessFlat";
 
 // - The title of the ID for the main header.
-const idTitle = system[id]?.title;
+const howToTitle = system[howToId]?.title;
 
 // - Where those descriptions have been rendered to HTML from Markdown.
 import { marked } from "marked";
@@ -54,30 +55,27 @@ import { markedSmartypants } from "marked-smartypants";
 marked.use(markedSmartypants());
 
 // - All of its other details for the main content.
-const idEntry = system[id] as IdEntry;
-// const idEmoji = idEntry.emoji;
+const howToEntry = system[howToId] as HowToEntry;
+// const idEmoji = howToEntry.emoji;
 
 //   - Wiki-linking the descriptive text.
 import wikiLinkify from "@helpers/wikiLinkify";
 
-const idDescription = await marked.parse(wikiLinkify(idEntry.description));
-const idEntrySb = idEntry.extensions?.smallBusiness;
-const idExamples =
-  idEntrySb?.examples && (await marked.parse(wikiLinkify(idEntrySb.examples)));
-const idMoreInfo =
-  idEntrySb?.moreInfo && (await marked.parse(wikiLinkify(idEntrySb.moreInfo)));
-const idExceptions =
-  idEntrySb?.exceptions &&
-  (await marked.parse(wikiLinkify(idEntrySb.exceptions)));
-const idAlsoSee =
-  idEntrySb?.alsoSee && (await marked.parse(wikiLinkify(idEntrySb.alsoSee)));
-const idRationale =
-  idEntrySb?.rationale &&
-  (await marked.parse(wikiLinkify(idEntrySb.rationale)));
+const howToIdForDisplay = howToId.replace(/^\d\d\.\d\d\+$/, "");
+const howToDescription = await marked.parse(
+  wikiLinkify(howToEntry.description)
+);
+const howToEntryText = await marked.parse(
+  wikiLinkify(howToEntry.extensions?.howTo.text)
+);
 
 // - Its parent category (number & title), and
 // - Its parent category's parent area (number & title).
-const parentCNumber = idEntry.parentNumber;
+const parentIdNumber = howToEntry.parentNumber;
+const parentIdEntry = system[parentIdNumber] as IdEntry;
+const parentIdTitle = parentIdEntry.title;
+
+const parentCNumber = parentIdEntry.parentNumber;
 const parentCEntry = system[parentCNumber] as CategoryEntry;
 const parentCTitle = parentCEntry.title;
 
@@ -85,7 +83,6 @@ const parentANumber = parentCEntry.parentNumber;
 const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
-// - A breadbreadcrumb to the parent system
 const parentSNumber = parentAEntry.parentNumber;
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
@@ -123,28 +120,39 @@ import Slice from "./common/Slice.astro";
   </div>
 </Slice>
 
+<Slice id="IdBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">
+      <a href={parentIdNumber}>{parentIdNumber}</a>
+    </h3>
+    <h3 class="layout-right-item">
+      <a href={parentIdNumber}>{parentIdTitle}</a>
+    </h3>
+  </div>
+</Slice>
+
 <Slice id="Header" className="active-top">
   <div class="layout-grid-left-right phone-only">
-    <h1 class="layout-left-item">{id} {idTitle}</h1>
+    <h1 class="layout-left-item">{howToIdForDisplay} {howToTitle}</h1>
   </div>
   <div class="layout-grid-left-right tablet-portrait-up">
-    <h1 class="layout-left-item">{id}</h1>
-    <h1 class="layout-right-item">{idTitle}</h1>
+    <h1 class="layout-left-item">{howToIdForDisplay}</h1>
+    <h1 class="layout-right-item">{howToTitle}</h1>
   </div>
 </Slice>
 
 {
-  idDescription ? (
+  howToDescription ? (
     <Slice id="IDDescription" className="descriptive-text">
       <div class="layout-grid-left-right">
         <div />
-        <div class="layout-right-item" set:html={idDescription} />
+        <div class="layout-right-item" set:html={howToDescription} />
       </div>
     </Slice>
   ) : null
 }
 
-{
+<!-- {
   idExamples ? (
     <Slice id="IDExamples" className="descriptive-text">
       <div class="layout-grid-left-right">
@@ -153,51 +161,7 @@ import Slice from "./common/Slice.astro";
       </div>
     </Slice>
   ) : null
-}
-
-{
-  idMoreInfo ? (
-    <Slice id="IDMoreInfo" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">More info</h3>
-        <div class="layout-right-item" set:html={idMoreInfo} />
-      </div>
-    </Slice>
-  ) : null
-}
-
-{
-  idExceptions ? (
-    <Slice id="IDExceptions" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">Exceptions</h3>
-        <div class="layout-right-item" set:html={idExceptions} />
-      </div>
-    </Slice>
-  ) : null
-}
-
-{
-  idAlsoSee ? (
-    <Slice id="IDAlsoSee" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">Also see</h3>
-        <div class="layout-right-item" set:html={idAlsoSee} />
-      </div>
-    </Slice>
-  ) : null
-}
-
-{
-  idRationale ? (
-    <Slice id="IDRationale" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">Rationale</h3>
-        <div class="layout-right-item" set:html={idRationale} />
-      </div>
-    </Slice>
-  ) : null
-}
+} -->
 
 <!-- TODO: add Ops manuals in this ID :-) -->
 

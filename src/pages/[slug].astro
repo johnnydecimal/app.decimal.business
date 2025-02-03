@@ -8,6 +8,7 @@ import Area from "@components/Area.astro";
 import Category from "@components/Category.astro";
 import ID from "@components/ID.astro";
 import OpsManual from "@components/OpsManual.astro";
+import HowTo from "@components/HowTo.astro";
 
 const { slug } = Astro.params;
 
@@ -23,7 +24,7 @@ const { slug } = Astro.params;
 
 let entryType: EntryType | "no-match" | null = null;
 
-// console.log("🐌", slug);
+console.log("🐌", slug);
 
 if (slug?.match(/^index.html$/)) {
   entryType = "system";
@@ -49,6 +50,12 @@ if (slug?.match(/^index.html$/)) {
   } else {
     entryType = "no-match";
   }
+} else if (slug?.match(/^\d\d\.\d\d\+HOW\d+$/)) {
+  if (!!sb[slug]) {
+    entryType = "howTo";
+  } else {
+    entryType = "no-match";
+  }
 } else {
   entryType = "no-match";
   // None of the above
@@ -63,5 +70,6 @@ console.log("🚪 entryType:", entryType);
   {entryType === "category" ? <Category category={slug!} /> : null}
   {entryType === "id" ? <ID id={slug!} /> : null}
   {entryType === "ops" ? <OpsManual id={slug!} /> : null}
+  {entryType === "howTo" ? <HowTo howToId={slug!} /> : null}
   {entryType === "no-match" ? <System /> : null}
 </Layout>

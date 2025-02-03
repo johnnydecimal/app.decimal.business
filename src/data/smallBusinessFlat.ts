@@ -5,7 +5,7 @@ type Metadata = {
 };
 
 // Entry types
-export type EntryType = "system" | "area" | "category" | "id" | "ops" | "howto";
+export type EntryType = "system" | "area" | "category" | "id" | "ops" | "howTo";
 
 // Base interface for common fields
 interface BaseEntry {
@@ -76,11 +76,11 @@ export interface OpsEntry extends BaseEntry {
   };
 }
 
-export interface HowtoEntry extends BaseEntry {
-  type: "howto";
+export interface HowToEntry extends BaseEntry {
+  type: "howTo";
   parentNumber: string;
   extensions: {
-    howto: {
+    howTo: {
       text: string; // freeform
     };
   };
@@ -93,7 +93,7 @@ export type FlattenedEntry =
   | CategoryEntry
   | IdEntry
   | OpsEntry
-  | HowtoEntry;
+  | HowToEntry;
 
 // Flattened data structure type
 export type FlattenedData = Record<string, FlattenedEntry>;
@@ -257,7 +257,7 @@ const flattenedData: FlattenedData = {
   "11.11+HOW1": {
     number: "11.11+HOW1",
     parentNumber: "11.11",
-    type: "howto",
+    type: "howTo",
     title: "How to register a business in Australia",
     description:
       "A simple guide to registering a proprietary company in Australia.",
@@ -266,7 +266,7 @@ const flattenedData: FlattenedData = {
       updatedDate: "2024-11-19",
     },
     extensions: {
-      howto: {
+      howTo: {
         text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
       },
     },
