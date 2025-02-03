@@ -120,6 +120,13 @@ html {
   &.border-none {
     border-left: none;
   }
+
+  // When we set:html text in here, e.g. HowToText, control the headers
+  // TODO in the future, pull the H1s out and then re-style the remainder
+  // set:html'd needs :global
+  h1 {
+    font-size: 1.2rem;
+  }
 }
 
 /* ---------------------- Moved out of Component:global --------------------- */
