@@ -5,7 +5,14 @@ type Metadata = {
 };
 
 // Entry types
-export type EntryType = "system" | "area" | "category" | "id" | "ops" | "howTo";
+export type EntryType =
+  | "system"
+  | "area"
+  | "category"
+  | "id"
+  | "ops"
+  | "howTo"
+  | "moreInfo";
 
 // Base interface for common fields
 interface BaseEntry {
@@ -86,6 +93,18 @@ export interface HowToEntry extends BaseEntry {
   };
 }
 
+export interface MoreInfoEntry extends BaseEntry {
+  // These entries don't need an ID; or rather, we don't _use_ the ID
+  // They're just 11.11+ …words, not 11.11+HOW1 or whatever
+  type: "moreInfo";
+  parentNumber: string;
+  extensions: {
+    moreInfo: {
+      text: string; // freeform
+    };
+  };
+}
+
 // Union type for all entries
 export type FlattenedEntry =
   | SystemEntry
@@ -93,7 +112,8 @@ export type FlattenedEntry =
   | CategoryEntry
   | IdEntry
   | OpsEntry
-  | HowToEntry;
+  | HowToEntry
+  | MoreInfoEntry;
 
 // Flattened data structure type
 export type FlattenedData = Record<string, FlattenedEntry>;
@@ -267,6 +287,23 @@ const flattenedData: FlattenedData = {
     },
     extensions: {
       howTo: {
+        text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
+      },
+    },
+  },
+  "11.11+SUB1": {
+    number: "11.11+1",
+    parentNumber: "11.11",
+    type: "moreInfo",
+    title: "Why would you want to register a business in Australia?",
+    description:
+      "A simple guide to registering a proprietary company in Australia.",
+    metadata: {
+      createdDate: "2024-11-19",
+      updatedDate: "2024-11-19",
+    },
+    extensions: {
+      moreInfo: {
         text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
       },
     },

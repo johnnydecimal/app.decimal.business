@@ -32,7 +32,6 @@ const { id, testRun } = Astro.props;
 import sb from "src/data/smallBusinessFlat";
 import sbTest from "src/data/smallBusinessFlatTest";
 let system;
-console.log("env:", process.env.NODE_ENV);
 if (testRun) {
   system = sbTest;
 } else {
@@ -75,6 +74,23 @@ const idRationale =
   idEntrySb?.rationale &&
   (await marked.parse(wikiLinkify(idEntrySb.rationale)));
 
+// - An array of the IDs that this ID contains. Each one of those
+//   needs to contain the ID, title, description, isHeader, emoji.
+import { getChildren } from "src/data/smallBusinessFlat";
+const subIds = getChildren(system, id) as IdEntry[];
+subIds.sort((a, b) => {
+  // if a.number is alphabetically before b.number
+  if (a.number < b.number) {
+    return -1;
+  }
+  // if a.number is alphabetically after b.number
+  if (a.number > b.number) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+});
+
 // - Its parent category (number & title), and
 // - Its parent category's parent area (number & title).
 const parentCNumber = idEntry.parentNumber;
@@ -85,7 +101,7 @@ const parentANumber = parentCEntry.parentNumber;
 const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
-// - A breadbreadcrumb to the parent system
+// - A breadcrumb to the parent system
 const parentSNumber = parentAEntry.parentNumber;
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
@@ -199,9 +215,50 @@ import Slice from "./common/Slice.astro";
   ) : null
 }
 
-<!-- TODO: add Ops manuals in this ID :-) -->
+<Slice id="ChildrenInParentLabel" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <div></div>
+    <h2 class="layout-right-item">This ID's sub-notes</h2>
+  </div>
+</Slice>
 
-<div id="EndOfIDsBorder"></div>
+<Slice id="ChildrenInParentList" className="secondary-content-bg">
+  <ol class="acid-list">
+    {
+      subIds.map(async (id) => {
+        console.log("id being processed: ", id);
+        const idDescription = await marked.parse(wikiLinkify(id.description));
+        // If id.number starts `AC.ID+SUB`, it's a MoreInfoEntry. We don't
+        // display the number for these in the list, as it's the full title
+        // of the entry. So just clear it.
+        let displayId = id.number;
+        if (id.number.match(/^\d\d\.\d\d\+[0-9]/)) {
+          console.log("match!");
+          displayId = "";
+        }
+        console.log("displayId: ", displayId);
+        // If id.number starts `AC.ID+X`, where X is any character, it's a
+        // OPS or HOW or whatever. Strip the AC.ID from the front for display.
+        if (id.number.match(/^\d\d\.\d\d\+[A-Z]/)) {
+          displayId = id.number.replace(/^\d\d\.\d\d\+/, "");
+        }
+        return (
+          <li class="layout-grid-left-right">
+            <h3 class="layout-left-item">
+              <a href={`/${id.number}`}>{displayId}</a>
+            </h3>
+            <div class="layout-right-item">
+              <h3>
+                <a href={`/${id.number}`}>{id.title}</a>
+              </h3>
+              <div set:html={idDescription} />
+            </div>
+          </li>
+        );
+      })
+    }
+  </ol>
+</Slice>
 
 <style lang="scss">
   // @use "@styles/common" as *;
