@@ -69,6 +69,23 @@ const flattenedData: FlattenedData = {
       },
     },
   },
+  "11.11+HOW1": {
+    number: "11.11+HOW1",
+    parentNumber: "11.11",
+    type: "howTo",
+    title: "How to register a business in Australia",
+    description:
+      "A simple guide to registering a proprietary company in Australia.",
+    metadata: {
+      createdDate: "2024-11-19",
+      updatedDate: "2024-11-19",
+    },
+    extensions: {
+      howTo: {
+        text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
+      },
+    },
+  },
   "11.12": {
     number: "11.12",
     parentNumber: "11",

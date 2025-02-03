@@ -8,6 +8,7 @@ import Area from "@components/Area.astro";
 import Category from "@components/Category.astro";
 import ID from "@components/ID.astro";
 import OpsManual from "@components/OpsManual.astro";
+import HowTo from "@components/HowTo.astro";
 
 const { slug } = Astro.params;
 // const slug = "/10-19";
@@ -48,6 +49,12 @@ if (slug?.match(/^\/test$/)) {
   } else {
     entryType = "no-match";
   }
+} else if (slug?.match(/^\d\d\.\d\d\+HOW\d+$/)) {
+  if (!!sb[slug]) {
+    entryType = "howTo";
+  } else {
+    entryType = "no-match";
+  }
 } else {
   entryType = "no-match";
   // None of the above
@@ -59,6 +66,7 @@ if (slug?.match(/^\/test$/)) {
   {entryType === "area" ? <Area area={slug!} testRun /> : null}
   {entryType === "category" ? <Category category={slug!} testRun /> : null}
   {entryType === "id" ? <ID id={slug!} testRun /> : null}
+  {entryType === "howTo" ? <HowTo howToId={slug!} testRun /> : null}
   {entryType === "ops" ? <OpsManual id={slug!} /> : null}
   {entryType === "no-match" ? <System /> : null}
 </LayoutNoAuth>
