@@ -1,7 +1,8 @@
 import type { FullConfig } from "@playwright/test";
-import { clerkSetup } from "@clerk/testing/playwright";
+// import { clerkSetup } from "@clerk/testing/playwright";
+// didn't do a damned thing
 import net from "net";
-import dotenv from "dotenv";
+// import dotenv from "dotenv";
 
 async function isPortOpen(port: number, host = "localhost"): Promise<boolean> {
   return new Promise((resolve) => {
@@ -22,10 +23,10 @@ async function isPortOpen(port: number, host = "localhost"): Promise<boolean> {
 }
 
 async function globalSetup(config: FullConfig) {
-  dotenv.config();
-  process.env.CLERK_PUBLISHABLE_KEY = process.env.PUBLIC_CLERK_PUBLISHABLE_KEY;
-  // CLERK_SECRET_KEY should be okay?
-  await clerkSetup();
+  // dotenv.config();
+  // process.env.CLERK_PUBLISHABLE_KEY = process.env.PUBLIC_CLERK_PUBLISHABLE_KEY;
+  // // CLERK_SECRET_KEY should be okay?
+  // await clerkSetup();
 
   const PORT = 3012;
   const serverRunning = await isPortOpen(PORT);
