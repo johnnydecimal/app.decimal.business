@@ -86,6 +86,87 @@ const flattenedData: FlattenedData = {
       },
     },
   },
+  "11.11+1": {
+    number: "11.11+1",
+    parentNumber: "11.11",
+    type: "moreInfo",
+    title: "Why would you want to register a business in Australia?",
+    description:
+      "A simple guide to registering a proprietary company in Australia.",
+    metadata: {
+      createdDate: "2024-11-19",
+      updatedDate: "2024-11-19",
+    },
+    extensions: {
+      moreInfo: {
+        text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
+      },
+    },
+  },
+  "11.11+2": {
+    number: "11.11+2",
+    parentNumber: "11.11",
+    type: "moreInfo",
+    title:
+      "Some other more info article whose title I can't be bothered making up",
+    description:
+      "A simple guide to registering a proprietary company in Australia.",
+    metadata: {
+      createdDate: "2024-11-19",
+      updatedDate: "2024-11-19",
+    },
+    extensions: {
+      moreInfo: {
+        text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
+      },
+    },
+  },
+  "11.11+OPS1": {
+    number: "11.11+OPS1",
+    parentNumber: "11.11",
+    type: "ops",
+    title: "Saving invoices, receipts, or bills in an inbox",
+    description: "A one-liner.",
+    metadata: { createdDate: "2024-11-19", updatedDate: "2024-11-19" },
+    extensions: {
+      smallBusinessOpsManual: {
+        overview:
+          "This manual explains how to record:\n\n- income, e.g. invoices you issue,\n- expenses, e.g. receipts for things you buy,\n- liabilities, e.g. bills you receive.\n\nIn this first phase, you store the invoice, receipt, or bill -- the 'artefact' -- in an **inbox** until it is time to process it. Processing occurs in the next phase.",
+        diagram: `
+        flowchart TD
+    A(("[A] Start")) --> B("[B] An income, expense, or
+    liability event")
+    B --> C["[C] The invoice, receipt, or bill"]
+    C --> D["[D] Save it for
+    later processing"] & H["[H] Process the invoice,
+    receipt, or bill"]
+    C -.-> E["*(Bills only)*
+    [E] Pay it immediately"]
+    D --> F["[F] One of your inboxes"]
+    F --o G["[G] ⏯️
+    Every month/quarter,
+    process your inboxes"]
+    G --> H
+    H --> I["[I] A specific JD ID for
+    the thing you have processed"]
+    E --> H
+    I --> J((("[J] Stop")))
+
+    C@{ shape: doc}
+    D@{ shape: proc}
+    F@{ shape: db}
+    G@{ shape: delay}
+    I@{ shape: db}
+        `,
+        triggers:
+          "Whenever you generate or receive an invoice, receipt, or bill.",
+        inputs:
+          "1. The invoice, receipt, or bill.\n2. Your [[list of inboxes]].",
+        process: "This is the process. We haven't documented this yet.",
+        outputs: "This is the outputs. We haven't documented this yet.",
+      },
+    },
+  },
   "11.12": {
     number: "11.12",
     parentNumber: "11",
