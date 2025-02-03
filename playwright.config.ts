@@ -9,6 +9,11 @@ export default defineConfig({
   use: {
     baseURL: "http://localhost:3012",
     trace: "on-first-retry",
+    launchOptions: {
+      env: {
+        NODE_ENV: "test",
+      },
+    },
   },
   projects: [
     {
