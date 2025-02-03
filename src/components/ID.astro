@@ -116,7 +116,9 @@ console.log("children: ", children);
 const moreInfos = children.filter((child) =>
   child.number.match(/^\d\d\.\d\d\+[0-9]/)
 );
-console.log("moreInfos: ", moreInfos);
+const opsManuals = children.filter((child) =>
+  child.number.match(/^\d\d\.\d\d\+OPS/)
+);
 ---
 
 <Slice id="SystemBreadcrumb" className="secondary-content-bg">
@@ -226,7 +228,7 @@ console.log("moreInfos: ", moreInfos);
 
 {
   moreInfos.length > 0 ? (
-    <Slice id="MoreInfoEntries" className="descriptive-text">
+    <Slice id="MoreInfos" className="descriptive-text">
       <div class="layout-grid-left-right">
         <h3 class="layout-left-item">More info</h3>
         <div class="layout-right-item">
@@ -248,18 +250,47 @@ console.log("moreInfos: ", moreInfos);
   ) : null
 }
 
+{
+  opsManuals.length > 0 ? (
+    <Slice id="OpsManuals" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Ops manuals</h3>
+        <div class="layout-right-item">
+          <ul>
+            {opsManuals.map((opsManual) => {
+              return (
+                <li>
+                  <a href={`/${opsManual.number}`}>
+                    {opsManual.number.replace(/^\d\d\.\d\d\+OPS[0-9]+/, "")}
+                    {opsManual.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </Slice>
+  ) : null
+}
+
 <div id="EndOfIDsBorder"></div>
 
 <style lang="scss">
+  @use "@styles/mixins" as *;
+
   :global(#EndOfIDsBorder) {
     border-top: 1px solid var(--border-strong);
   }
 
-  :global(#MoreInfoEntries) {
+  :global(#MoreInfos),
+  :global(#OpsManuals) {
     ul {
       list-style-type: none;
-      margin-top: 0;
       padding-left: 0;
+      @include tablet-portrait-up {
+        margin-top: 0;
+      }
     }
     li {
       margin-bottom: 0.5rem;
