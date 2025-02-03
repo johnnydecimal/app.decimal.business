@@ -291,7 +291,7 @@ const flattenedData: FlattenedData = {
       },
     },
   },
-  "11.11+SUB1": {
+  "11.11+1": {
     number: "11.11+1",
     parentNumber: "11.11",
     type: "moreInfo",

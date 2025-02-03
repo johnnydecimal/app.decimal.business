@@ -9,6 +9,7 @@ import Category from "@components/Category.astro";
 import ID from "@components/ID.astro";
 import OpsManual from "@components/OpsManual.astro";
 import HowTo from "@components/HowTo.astro";
+import MoreInfo from "@components/MoreInfo.astro";
 
 const { slug } = Astro.params;
 
@@ -56,6 +57,12 @@ if (slug?.match(/^index.html$/)) {
   } else {
     entryType = "no-match";
   }
+} else if (slug?.match(/^\d\d\.\d\d\+[0-9]/)) {
+  if (!!sb[slug]) {
+    entryType = "moreInfo";
+  } else {
+    entryType = "no-match";
+  }
 } else {
   entryType = "no-match";
   // None of the above
@@ -71,5 +78,6 @@ console.log("🚪 entryType:", entryType);
   {entryType === "id" ? <ID id={slug!} /> : null}
   {entryType === "ops" ? <OpsManual id={slug!} /> : null}
   {entryType === "howTo" ? <HowTo howToId={slug!} /> : null}
+  {entryType === "moreInfo" ? <MoreInfo moreInfoId={slug!} /> : null}
   {entryType === "no-match" ? <System /> : null}
 </Layout>
