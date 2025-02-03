@@ -61,7 +61,7 @@ const howToEntry = system[howToId] as HowToEntry;
 //   - Wiki-linking the descriptive text.
 import wikiLinkify from "@helpers/wikiLinkify";
 
-const howToIdForDisplay = howToId.replace(/^\d\d\.\d\d\+$/, "");
+const howToIdForDisplay = howToId.replace(/^\d\d\.\d\d\+/, "");
 const howToDescription = await marked.parse(
   wikiLinkify(howToEntry.description)
 );
