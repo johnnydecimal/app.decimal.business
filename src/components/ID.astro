@@ -1,6 +1,4 @@
 ---
-import "@styles/common.scss";
-
 interface Props {
   id: string;
   testRun?: boolean;
@@ -34,7 +32,6 @@ const { id, testRun } = Astro.props;
 import sb from "src/data/smallBusinessFlat";
 import sbTest from "src/data/smallBusinessFlatTest";
 let system;
-console.log("env:", process.env.NODE_ENV);
 if (testRun) {
   system = sbTest;
 } else {
@@ -77,6 +74,23 @@ const idRationale =
   idEntrySb?.rationale &&
   (await marked.parse(wikiLinkify(idEntrySb.rationale)));
 
+// - An array of the IDs that this ID contains. Each one of those
+//   needs to contain the ID, title, description, isHeader, emoji.
+import { getChildren } from "src/data/smallBusinessFlat";
+const subIds = getChildren(system, id) as IdEntry[];
+subIds.sort((a, b) => {
+  // if a.number is alphabetically before b.number
+  if (a.number < b.number) {
+    return -1;
+  }
+  // if a.number is alphabetically after b.number
+  if (a.number > b.number) {
+    return 1;
+  }
+  // a must be equal to b
+  return 0;
+});
+
 // - Its parent category (number & title), and
 // - Its parent category's parent area (number & title).
 const parentCNumber = idEntry.parentNumber;
@@ -87,13 +101,24 @@ const parentANumber = parentCEntry.parentNumber;
 const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
-// - A breadbreadcrumb to the parent system
+// - A breadcrumb to the parent system
 const parentSNumber = parentAEntry.parentNumber;
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 
 // - To import and use the Slice component.
 import Slice from "./common/Slice.astro";
+
+// Get all children of this ID
+const children = getChildren(system, id);
+console.log("children: ", children);
+// Get any 'more info' children, which have a number AC.ID+[0-9]
+const moreInfos = children.filter((child) =>
+  child.number.match(/^\d\d\.\d\d\+[0-9]/)
+);
+const opsManuals = children.filter((child) =>
+  child.number.match(/^\d\d\.\d\d\+OPS/)
+);
 ---
 
 <Slice id="SystemBreadcrumb" className="secondary-content-bg">
@@ -201,14 +226,74 @@ import Slice from "./common/Slice.astro";
   ) : null
 }
 
-<!-- TODO: add Ops manuals in this ID :-) -->
+{
+  moreInfos.length > 0 ? (
+    <Slice id="MoreInfos" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">More info</h3>
+        <div class="layout-right-item">
+          <ul>
+            {moreInfos.map((moreInfo) => {
+              return (
+                <li>
+                  <a href={`/${moreInfo.number}`}>
+                    {moreInfo.number.replace(/^\d\d\.\d\d\+[0-9]/, "")}
+                    {moreInfo.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </Slice>
+  ) : null
+}
+
+{
+  opsManuals.length > 0 ? (
+    <Slice id="OpsManuals" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Ops manuals</h3>
+        <div class="layout-right-item">
+          <ul>
+            {opsManuals.map((opsManual) => {
+              return (
+                <li>
+                  <a href={`/${opsManual.number}`}>
+                    {opsManual.number.replace(/^\d\d\.\d\d\+OPS[0-9]+/, "")}
+                    {opsManual.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </Slice>
+  ) : null
+}
 
 <div id="EndOfIDsBorder"></div>
 
 <style lang="scss">
-  @use "@styles/common" as *;
+  @use "@styles/mixins" as *;
 
-  #EndOfIDsBorder {
+  :global(#EndOfIDsBorder) {
     border-top: 1px solid var(--border-strong);
+  }
+
+  :global(#MoreInfos),
+  :global(#OpsManuals) {
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      @include tablet-portrait-up {
+        margin-top: 0;
+      }
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
   }
 </style>

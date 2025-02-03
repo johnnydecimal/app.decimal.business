@@ -6,15 +6,14 @@ const month = String(today.getMonth() + 1).padStart(2, "0");
 const day = String(today.getDate()).padStart(2, "0");
 const year = today.getFullYear();
 const date = `${year}-${month}-${day}`;
-let environment = import.meta.env.DEV ? "dev" : "prod";
 
-const pathname = Astro.url.pathname;
-if (pathname.match(/^\/test/)) {
+let environment = import.meta.env.DEV ? "dev" : "prod";
+if (Astro.url.searchParams.get("env") === "test") {
   environment = "test";
 }
 ---
 
-<footer class={import.meta.env.DEV ? "dev" : null}>
+<footer>
   <Slice id="footer">
     <div class="layout-grid-left-right">
       <div class="layout-left-item"></div>
@@ -43,7 +42,7 @@ if (pathname.match(/^\/test/)) {
 </footer>
 
 <style lang="scss">
-  @use "@styles/common" as *;
+  // @use "@styles/common" as *;
 
   footer {
     font-size: 0.8rem;

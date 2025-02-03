@@ -3,38 +3,9 @@
  * Use this for commonly-named classes etc. Then just @use directly in a
  * component and there's nothing to declare there.
  */
+@use "@styles/mixins" as *;
+@use "@styles/fonts";
 @import "normalize.css";
-
-@mixin dark {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-}
-@mixin phone-only {
-  @media (max-width: 599px) {
-    @content;
-  }
-}
-@mixin tablet-portrait-up {
-  @media (min-width: 600px) {
-    @content;
-  }
-}
-@mixin tablet-landscape-up {
-  @media (min-width: 900px) {
-    @content;
-  }
-}
-@mixin desktop-up {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-@mixin big-desktop-up {
-  @media (min-width: 1800px) {
-    @content;
-  }
-}
 
 /* -------------------------------- Variables ------------------------------- */
 :root {
@@ -149,13 +120,24 @@ html {
   &.border-none {
     border-left: none;
   }
+
+  // When we set:html text in here, e.g. HowToText, control the headers
+  // TODO in the future, pull the H1s out and then re-style the remainder
+  // set:html'd needs :global
+  :global(h1) {
+    font-size: 1.2rem;
+  }
+  :global(h2, h3) {
+    font-size: 1rem;
+  }
 }
 
 /* ---------------------- Moved out of Component:global --------------------- */
 // And I can't tell you why they all need the :global. I think it's a bug.
 :global(#SystemBreadcrumb),
 :global(#AreaBreadcrumb),
-:global(#CategoryBreadcrumb) {
+:global(#CategoryBreadcrumb),
+:global(#IdBreadcrumb) {
   h3 {
     font-size: 1rem;
     font-weight: normal;
@@ -196,6 +178,7 @@ html {
   h3 {
     font-size: 1rem;
     margin: 0; // Surrounding <p>s handle it
+    text-align: right;
   }
   // Line the text up with its header by removing top margin
   @include tablet-portrait-up {

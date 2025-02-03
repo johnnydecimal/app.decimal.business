@@ -1,12 +1,19 @@
 ---
+interface Props {
+  testRun?: boolean;
+}
+
 import { SignedIn, SignedOut } from "@clerk/astro/components";
 
 import Search from "@components/common/Search.astro";
 import SignInPage from "@components/SignInPage.astro";
 import AccountManagement from "@components/AccountManagement.astro";
 import Footer from "@components/common/Footer.astro";
+
+const { testRun } = Astro.props;
 ---
 
+<!-- 🐓🐓🐓 This system is dedicated to Wendy, Marie, and Belinda. We loved them very much. -->
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -50,23 +57,38 @@ import Footer from "@components/common/Footer.astro";
     </script>
   </head>
   <body>
-    <SignedOut>
-      <main>
-        <SignInPage />
-      </main>
-    </SignedOut>
-    <SignedIn>
-      <Search />
-      <main>
-        <slot />
-      </main>
-      <AccountManagement />
-      <Footer />
-    </SignedIn>
+    {
+      !testRun ? (
+        <>
+          <SignedOut>
+            <main>
+              <SignInPage />
+            </main>
+          </SignedOut>
+          <SignedIn>
+            <Search />
+            <main>
+              <slot />
+            </main>
+            <AccountManagement />
+            <Footer />
+          </SignedIn>
+        </>
+      ) : (
+        <>
+          <Search />
+          <main>
+            <slot />
+          </main>
+          <AccountManagement />
+          <Footer />
+        </>
+      )
+    }
   </body>
-</html>
 
-<style lang="scss">
-  @use "@styles/common" as *;
-  @use "@styles/fonts";
-</style>
+  <style lang="scss">
+    // @use "@styles/common" as *;
+    // @use "@styles/fonts";
+  </style>
+</html>

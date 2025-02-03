@@ -4,7 +4,7 @@ export default defineConfig({
   globalSetup: "./playwrightGlobalSetup.ts",
   testDir: "./tests",
   fullyParallel: true,
-  retries: 1,
+  retries: 0,
   reporter: [["html", { open: "on-failure" }]],
   use: {
     baseURL: "http://localhost:3012",
