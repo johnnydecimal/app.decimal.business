@@ -61,10 +61,12 @@ const howToEntry = system[howToId] as HowToEntry;
 //   - Wiki-linking the descriptive text.
 import wikiLinkify from "@helpers/wikiLinkify";
 
-const howToIdForDisplay = howToId.replace(/^\d\d\.\d\d\+/, "");
+const howToIdForDisplay = howToId.replace(/^\d\d\.\d\d/, "");
 const howToDescription = await marked.parse(
   wikiLinkify(howToEntry.description)
 );
+// TODO Build something that pulls out the H1s from this text and puts them
+// in the left side as a header. .map(yada...)
 const howToEntryText = await marked.parse(
   wikiLinkify(howToEntry.extensions?.howTo.text)
 );
@@ -141,16 +143,19 @@ import Slice from "./common/Slice.astro";
   </div>
 </Slice>
 
-{
-  howToDescription ? (
-    <Slice id="IDDescription" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <div />
-        <div class="layout-right-item" set:html={howToDescription} />
-      </div>
-    </Slice>
-  ) : null
-}
+<Slice id="HowToDescription" className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <div></div>
+    <div class="layout-right-item" set:html={howToDescription} />
+  </div>
+</Slice>
+
+<Slice id="HowToEntryText" className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <div></div>
+    <div class="layout-right-item" set:html={howToEntryText} />
+  </div>
+</Slice>
 
 <!-- {
   idExamples ? (
