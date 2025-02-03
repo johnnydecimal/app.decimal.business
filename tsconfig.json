@@ -6,7 +6,8 @@
       "@content/*": ["src/content/*"],
       "@helpers/*": ["src/helpers/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@styles/*": ["src/styles/*"]
+      "@styles/*": ["src/styles/*"],
+      "@data/*": ["src/data/*"]
     },
     "strictNullChecks": true
   },
