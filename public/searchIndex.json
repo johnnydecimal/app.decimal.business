@@ -111,16 +111,6 @@
     "metadata": {
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
-    },
-    "adHoc": {
-      "first_property": {
-        "label": "First property",
-        "value": "This is the value for `first_property`."
-      },
-      "second_property": {
-        "label": "Another property",
-        "value": "We can just do this for _as long_ as we want!"
-      }
     }
   },
   {

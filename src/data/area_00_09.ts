@@ -61,17 +61,5 @@ export const area_00_09: FlattenedData = {
     parentNumber: "00",
     description: "This section contains your user settings.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: {
-      adHoc: {
-        first_property: {
-          label: "First property",
-          value: "This is the value for `first_property`.",
-        },
-        second_property: {
-          label: "Another property",
-          value: "We can just do this for _as long_ as we want!",
-        },
-      },
-    },
   },
 };

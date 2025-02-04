@@ -1,11 +1,80 @@
-/* common.scss
- *
- * Use this for commonly-named classes etc. Then just @use directly in a
- * component and there's nothing to declare there.
- */
-@use "@styles/mixins" as *;
-@use "@styles/fonts";
 @import "normalize.css";
+
+// #region fonts
+@font-face {
+  font-family: "Berkeley Mono";
+  src:
+    local("Berkeley Mono"),
+    local("BerkeleyMono"),
+    url("/fonts/BerkeleyMono/BerkeleyMono-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Berkeley Mono";
+  src:
+    local("Berkeley Mono"),
+    local("BerkeleyMono"),
+    url("/fonts/BerkeleyMono/BerkeleyMono-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Berkeley Mono";
+  src:
+    local("Berkeley Mono"),
+    local("BerkeleyMono"),
+    url("/fonts/BerkeleyMono/BerkeleyMono-Italic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Berkeley Mono";
+  src:
+    local("Berkeley Mono"),
+    local("BerkeleyMono"),
+    url("/fonts/BerkeleyMono/BerkeleyMono-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+// #endregion
+
+// #region mixins
+@mixin dark {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+@mixin phone-only {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+@mixin tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+// #endregion
 
 /* -------------------------------- Variables ------------------------------- */
 :root {
@@ -27,7 +96,6 @@
 }
 
 /* -------------------------------- Elements -------------------------------- */
-
 footer {
   border-top: 2px solid black;
 }
@@ -179,6 +247,13 @@ html {
     font-size: 1rem;
     margin: 0; // Surrounding <p>s handle it
     text-align: right;
+
+    // Actually, if you have a double-height label and a single-height text,
+    // which might be the case in our user-prefs layout, it's a bit tight. Fix:
+    // -- removing just for now, but this is the fix
+    // @include tablet-portrait-up {
+    //   margin-bottom: 0.8rem;
+    // }
   }
   // Line the text up with its header by removing top margin
   @include tablet-portrait-up {

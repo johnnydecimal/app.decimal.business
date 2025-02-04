@@ -109,14 +109,7 @@ export interface MoreInfoEntry extends BaseEntry {
 export interface AdHocEntry extends BaseEntry {
   type: "adHoc";
   parentNumber: string;
-  extensions: {
-    adHoc: {
-      [key: string]: {
-        label: string; // human-readable label
-        value: string; // freeform value
-      };
-    };
-  };
+  // Every page is a unique Astro component. We don't define it in the object
 }
 
 // Union type for all entries

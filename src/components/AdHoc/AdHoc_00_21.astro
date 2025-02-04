@@ -1,36 +1,29 @@
 ---
 import { createClerkClient } from "@clerk/backend";
-
-const { userId } = Astro.locals.auth();
+import Slice from "@components/common/Slice.astro";
 
 const clerkClient = createClerkClient({
   secretKey: import.meta.env.CLERK_SECRET_KEY,
 });
 
-// console.log(clerkClient);
-
-const userList = await clerkClient.users.getUserList();
-
+const { userId } = Astro.locals.auth();
 const user = await clerkClient.users.getUser(userId!);
-console.log("user", user);
+const publicMetadata = user.publicMetadata;
 
 // const updateUserMetadata = await clerkClient.users.updateUserMetadata(userId, {
 //   publicMetadata: {
 //     firstRunComplete: true,
 //   },
 // });
-const publicMetadata = user.publicMetadata;
 ---
 
-<main>
-  <!-- <div>{JSON.stringify(userList)}</div> -->
-  <div>{JSON.stringify(publicMetadata)}</div>
-</main>
+<Slice>
+  <div class="layout-grid-left-right">
+    <div></div>
+    <div class="layout-right-item">{JSON.stringify(publicMetadata)}</div>
+  </div>
+</Slice>
 
 <style lang="scss">
   @use "@styles/common" as *;
-
-  main {
-    font-family: monospace;
-  }
 </style>
