@@ -48,6 +48,82 @@
     }
   },
   {
+    "number": "00-09",
+    "title": "About the system",
+    "description": "This area is used to manage the system.",
+    "type": "area",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-01-01",
+      "updatedDate": "2025-01-01"
+    }
+  },
+  {
+    "number": "00",
+    "title": "System information, help, and settings",
+    "description": "This category contains information about the system, its help pages, and your user settings.",
+    "type": "category",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-01-01",
+      "updatedDate": "2025-01-01"
+    }
+  },
+  {
+    "number": "00.00",
+    "title": "System index",
+    "description": "This section contains a list of every ID in the system.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-01-01",
+      "updatedDate": "2025-01-01"
+    }
+  },
+  {
+    "number": "00.10",
+    "title": "Help",
+    "description": "This section contains the system's help pages.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-01-01",
+      "updatedDate": "2025-01-01"
+    }
+  },
+  {
+    "number": "00.20",
+    "title": "Settings",
+    "description": "This section contains your user settings.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-01-01",
+      "updatedDate": "2025-01-01"
+    }
+  },
+  {
+    "number": "00.21",
+    "title": "User settings",
+    "description": "This section contains your user settings.",
+    "type": "adHoc",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-01-01",
+      "updatedDate": "2025-01-01"
+    },
+    "adHoc": {
+      "first_property": {
+        "label": "First property",
+        "value": "This is the value for `first_property`."
+      },
+      "second_property": {
+        "label": "Another property",
+        "value": "We can just do this for _as long_ as we want!"
+      }
+    }
+  },
+  {
     "number": "10-19",
     "title": "Company administration",
     "description": "In [[10-19]], our goal is that these categories could be the foundation of _any_ business, regardless of the product or service you offer.",

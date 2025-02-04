@@ -1,0 +1,156 @@
+---
+interface Props {
+  id: string;
+}
+const { id } = Astro.props;
+
+/* --------------------------------- Imports -------------------------------- */
+import { marked } from "marked";
+import { markedSmartypants } from "marked-smartypants";
+marked.use(markedSmartypants());
+
+import Slice from "@components/common/Slice.astro";
+import wikiLinkify from "@helpers/wikiLinkify";
+
+import system, {
+  type SystemEntry,
+  type AreaEntry,
+  type CategoryEntry,
+  type AdHocEntry,
+} from "@data/smallBusinessFlat";
+
+/* --------------------------- This item's details -------------------------- */
+const idTitle = system[id]?.title;
+const idEntry = system[id] as AdHocEntry;
+// const idEmoji = idEntry.emoji;
+// const idDescription = await marked.parse(wikiLinkify(idEntry.description));
+
+/* ------------------------------- Breadcrumbs ------------------------------ */
+const parentCNumber = idEntry.parentNumber;
+const parentCEntry = system[parentCNumber] as CategoryEntry;
+const parentCTitle = parentCEntry.title;
+
+const parentANumber = parentCEntry.parentNumber;
+const parentAEntry = system[parentANumber] as AreaEntry;
+const parentATitle = parentAEntry.title;
+
+const parentSNumber = parentAEntry.parentNumber;
+const parentSEntry = system[parentSNumber] as SystemEntry;
+const parentSTitle = parentSEntry.title;
+
+/* -------------------------------------------------------------------------- */
+/*                                Ad-hoc items                                */
+/* -------------------------------------------------------------------------- */
+// idEntry.extensions.adHoc is an object.
+const ssss = idEntry.extensions.adHoc;
+console.log("ssss", ssss);
+---
+
+<Slice id="SystemBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <div></div>
+    <h3 class="layout-right-item"><a href="/">{parentSTitle}</a></h3>
+  </div>
+</Slice>
+
+<Slice id="AreaBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">
+      <a href={parentANumber}>{parentANumber}</a>
+    </h3>
+    <h3 class="layout-right-item">
+      <a href={parentANumber}>{parentATitle}</a>
+    </h3>
+  </div>
+</Slice>
+
+<Slice id="CategoryBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">
+      <a href={parentCNumber}>{parentCNumber}</a>
+    </h3>
+    <h3 class="layout-right-item">
+      <a href={parentCNumber}>{parentCTitle}</a>
+    </h3>
+  </div>
+</Slice>
+
+<Slice id="Header" className="active-top">
+  <div class="layout-grid-left-right phone-only">
+    <h1 class="layout-left-item">{id} {idTitle}</h1>
+  </div>
+  <div class="layout-grid-left-right tablet-portrait-up">
+    <h1 class="layout-left-item">{id}</h1>
+    <h1 class="layout-right-item">{idTitle}</h1>
+  </div>
+</Slice>
+
+<!-- {
+  idDescription ? (
+    <Slice id="IDDescription" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <div />
+        <div class="layout-right-item" set:html={idDescription} />
+      </div>
+    </Slice>
+  ) : null
+} -->
+
+<!-- {
+  idExamples ? (
+    <Slice id="IDExamples" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Examples</h3>
+        <div class="layout-right-item" set:html={idExamples} />
+      </div>
+    </Slice>
+  ) : null
+} -->
+
+<!-- {
+  opsManuals.length > 0 ? (
+    <Slice id="OpsManuals" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Ops manuals</h3>
+        <div class="layout-right-item">
+          <ul>
+            {opsManuals.map((opsManual) => {
+              return (
+                <li>
+                  <a href={`/${opsManual.number}`}>
+                    {opsManual.number.replace(/^\d\d\.\d\d\+OPS[0-9]+/, "")}
+                    {opsManual.title}
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </div>
+    </Slice>
+  ) : null
+} -->
+
+<div id="EndOfIDsBorder"></div>
+
+<style lang="scss">
+  @use "@styles/mixins" as *;
+
+  :global(#EndOfIDsBorder) {
+    border-top: 1px solid var(--border-strong);
+  }
+
+  :global(#MoreInfos),
+  :global(#OpsManuals) {
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      @include tablet-portrait-up {
+        margin-top: 0;
+      }
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+</style>
