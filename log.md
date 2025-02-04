@@ -1,3 +1,5 @@
+# 2024
+
 - a796e9f94a9b8ae9545c9e05ab22630fad246973
   - bare-bones static functionality
   - next: turn in to SSR while keeping what we've got
@@ -97,3 +99,30 @@
 - 70a222f9ee9cd4568c476f4c6c8f81b63bd74a07
   - start with the weird issue where 'Missing Clerk Secret Key'
   - but it works after you reload astro.config so meh
+
+# Clerk auth stuff
+
+- Frontend
+  - JavaScript
+  - https://clerk.com/docs/quickstarts/javascript
+  - Definitely interesting. JS, talks about bundling with Vite which we know we can do.
+  - `npm install @clerk/clerk-js` then set your .env keys
+  - So could this happen in an /api/\_ file? Like your download handler?
+  - Because then this page talks about building a vanilla HTML app with <script> tags
+- But the clerk.load method might be interesting
+  https://clerk.com/docs/references/javascript/clerk/clerk#load
+- Okay we're not loving that code when pasted as-is to /api/clerk.ts.
+- What about in an .astro component?
+  - Nah
+- Let's keep going with the doco. Chatty-G recommends @clerk/backend instead.
+  - https://clerk.com/docs/references/backend/overview
+  - _For example, if you wanted to get a list of all users in your application, instead of creating a fetch to https://api.clerk.com/v1/users endpoint, you can use the users.getUserList() method provided by the JavaScript Backend SDK._
+  - `npm i @clerk/backend`
+  - Okay and now the basic code works in an Astro component, and logs `clerkClient` as an object
+  - It notes that you need to [error handle](https://clerk.com/docs/references/backend/overview#error-handling) with `try/catch`
+
+## Got it!
+
+- So Astro.locals.auth() contains the user's ID
+  - https://clerk.com/docs/references/astro/locals
+- And clerkClient.users.getUser(userId) now works hunky-dory

@@ -1,0 +1,34 @@
+---
+import { createClerkClient } from "@clerk/backend";
+
+const { userId } = Astro.locals.auth();
+
+const clerkClient = createClerkClient({
+  secretKey: import.meta.env.CLERK_SECRET_KEY,
+});
+
+// console.log(clerkClient);
+
+const userList = await clerkClient.users.getUserList();
+
+const user = await clerkClient.users.getUser(userId);
+console.log("user", user);
+
+// const updateUserMetadata = await clerkClient.users.updateUserMetadata(userId, {
+//   publicMetadata: {
+//     firstRunComplete: true,
+//   },
+// });
+const publicMetadata = user.publicMetadata;
+---
+
+<main>
+  <!-- <div>{JSON.stringify(userList)}</div> -->
+  <div>{JSON.stringify(publicMetadata)}</div>
+</main>
+
+<style lang="scss">
+  main {
+    font-family: monospace;
+  }
+</style>

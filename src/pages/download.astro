@@ -4,6 +4,7 @@ const fileUrl = "/api/generate-text";
 
 <button onclick="downloadFile()">Download File</button>
 <button onclick="downloadZip()">Download ZIP</button>
+<button onclick="clerk()">Clerk</button>
 
 <script is:inline>
   function downloadFile() {
@@ -11,5 +12,8 @@ const fileUrl = "/api/generate-text";
   }
   function downloadZip() {
     window.location.href = "/api/download-folder-structure";
+  }
+  function clerk() {
+    window.location.href = "/api/clerk";
   }
 </script>
