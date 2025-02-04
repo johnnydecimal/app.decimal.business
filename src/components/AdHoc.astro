@@ -1,4 +1,11 @@
 ---
+/**
+ * AdHoc pages are custom builds, every one.
+ *
+ * We import and render each as a component depending on the slug. This page
+ * handles the common stuff like breadcrumbs.
+ */
+
 interface Props {
   id: string;
 }
@@ -95,26 +102,13 @@ const parentSTitle = parentSEntry.title;
 
 {id === "00.21" ? <AdHoc_00_21 /> : null}
 
+<!-- TODO fix this nonsense -->
 <div id="EndOfIDsBorder"></div>
 
 <style lang="scss">
   @use "@styles/common" as *;
 
-  :global(#EndOfIDsBorder) {
+  #EndOfIDsBorder {
     border-top: 1px solid var(--border-strong);
-  }
-
-  :global(#MoreInfos),
-  :global(#OpsManuals) {
-    ul {
-      list-style-type: none;
-      padding-left: 0;
-      @include tablet-portrait-up {
-        margin-top: 0;
-      }
-    }
-    li {
-      margin-bottom: 0.5rem;
-    }
   }
 </style>
