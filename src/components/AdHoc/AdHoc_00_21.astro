@@ -1,5 +1,8 @@
 ---
-import { createClerkClient } from "@clerk/backend";
+// TODO: uninstall @clerk/backend if the astro import works long-term
+// import { createClerkClient } from "@clerk/backend";
+import { createClerkClient } from "@clerk/astro/server";
+
 import Slice from "@components/common/Slice.astro";
 
 const clerkClient = createClerkClient({

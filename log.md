@@ -126,3 +126,11 @@
 - So Astro.locals.auth() contains the user's ID
   - https://clerk.com/docs/references/astro/locals
 - And clerkClient.users.getUser(userId) now works hunky-dory
+
+- This should be really useful but let's focus on getting the actual API call working first, _then_ worry about how we call it and react to the result.
+  - https://docs.astro.build/en/recipes/call-endpoints/
+
+## Recap what we've figured out
+
+- Don't lose this train of thought!
+-
