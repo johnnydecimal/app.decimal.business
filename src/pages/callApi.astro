@@ -1,17 +1,15 @@
 ---
-// let message = "";
-// async function callApi(event) {
-//   event.preventDefault();
+import { createClerkClient } from "@clerk/astro/server";
 
-//   const res = await fetch ("/api/updatePublicMetadata", {
-//     method: "GET",
-//     headers: {"Content-Type": "application/json"},
-//     body: JSON.stringify("hi there")
-//   })
+const clerkClient = createClerkClient({
+  secretKey: import.meta.env.CLERK_SECRET_KEY,
+});
 
-//   const result = await res.json();
-//   message = result.success ? "Call succeeded!" : "Call failed :-("
-// }
+const { userId } = Astro.locals.auth();
+const user = await clerkClient.users.getUser(userId!);
+let publicMetadata = user.publicMetadata;
+console.log("publicMetadata:", publicMetadata);
+
 const API_BASE_URL =
   import.meta.env.PUBLIC_API_BASE_URL ||
   import.meta.env.DEPLOY_URL ||
@@ -21,19 +19,40 @@ const API_BASE_URL =
 let message;
 if (Astro.request.method === "POST") {
   console.log("📮 callApi/POST loop has been called");
-  try {
-    // const data = await Astro.request.formData();
-    const res = await fetch(`${API_BASE_URL}/devapi/updatePublicMetadata/`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ hi: "there" }),
-    });
-    const result = await res.json();
-    console.log("result:", result);
-    message = result.message;
-  } catch (e) {
-    console.log("some error:", e);
+  if (publicMetadata.firstRunComplete) {
+    const updateUserMetadata = await clerkClient.users.updateUserMetadata(
+      userId,
+      {
+        publicMetadata: {
+          firstRunComplete: false,
+        },
+      }
+    );
+  } else {
+    const updateUserMetadata = await clerkClient.users.updateUserMetadata(
+      userId,
+      {
+        publicMetadata: {
+          firstRunComplete: true,
+        },
+      }
+    );
   }
+
+  // This is the call-an-API way, which we might not need?
+  // try {
+  //   const data = await Astro.request.formData();
+  //   const res = await fetch(`${API_BASE_URL}/devapi/updatePublicMetadata/`, {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //     body: JSON.stringify({ hi: "there" }),
+  //   });
+  //   const result = await res.json();
+  //   console.log("result:", result);
+  //   message = result.message;
+  // } catch (e) {
+  //   console.log("some error:", e);
+  // }
 }
 ---
 
@@ -45,4 +64,6 @@ if (Astro.request.method === "POST") {
   <button>Submit</button>
 </form>
 
-<div>message: {message}</div>
+<div id="firstRunComplete">
+  first run: {publicMetadata.firstRunComplete.toString()}
+</div>
