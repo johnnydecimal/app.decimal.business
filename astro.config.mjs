@@ -13,6 +13,9 @@ export default defineConfig({
   },
   site: "https://app.johnnydecimal.com",
   vite: {
+    server: {
+      allowedHosts: ["lutetium"],
+    },
     css: {
       preprocessorOptions: {
         scss: {
