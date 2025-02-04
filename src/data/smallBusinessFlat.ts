@@ -12,7 +12,8 @@ export type EntryType =
   | "id"
   | "ops"
   | "howTo"
-  | "moreInfo";
+  | "moreInfo"
+  | "adHoc";
 
 // Base interface for common fields
 interface BaseEntry {
@@ -105,6 +106,19 @@ export interface MoreInfoEntry extends BaseEntry {
   };
 }
 
+export interface AdHocEntry extends BaseEntry {
+  type: "adHoc";
+  parentNumber: string;
+  extensions: {
+    adHoc: {
+      [key: string]: {
+        label: string; // human-readable label
+        value: string; // freeform value
+      };
+    };
+  };
+}
+
 // Union type for all entries
 export type FlattenedEntry =
   | SystemEntry
@@ -113,10 +127,13 @@ export type FlattenedEntry =
   | IdEntry
   | OpsEntry
   | HowToEntry
-  | MoreInfoEntry;
+  | MoreInfoEntry
+  | AdHocEntry;
 
 // Flattened data structure type
 export type FlattenedData = Record<string, FlattenedEntry>;
+
+import { area_00_09 } from "./area_00_09";
 
 const flattenedData: FlattenedData = {
   J82: {
@@ -126,6 +143,7 @@ const flattenedData: FlattenedData = {
     type: "system",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
+  ...area_00_09,
   "10-19": {
     number: "10-19",
     title: "Company administration",

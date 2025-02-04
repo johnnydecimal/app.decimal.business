@@ -1,6 +1,6 @@
 ---
 import sb from "src/data/smallBusinessFlat";
-import type { EntryType } from "src/data/smallBusinessFlat";
+import type { EntryType, FlattenedEntry } from "src/data/smallBusinessFlat";
 
 import Layout from "@layouts/Layout.astro";
 import System from "@components/System.astro";
@@ -28,10 +28,32 @@ const testRun =
  * We also need to handle the default case where the user visits /jdex.
  */
 
+/**
+ * New way to do this. On each item we've specified what it is. So grab _that_
+ * and act appropriately. This handles the does-it-exist check simultaneously.
+ * TODO rename this to `system` later
+ */
+
+console.log("[slug.astro] ------------------------------------------");
+console.log("🐌 slug:", slug);
 let entryType: EntryType | "no-match" | null = null;
+if (!slug) {
+  // Not sure how this can be, but handle it
+  entryType = "no-match";
+} else if (slug === "index.html") {
+  entryType = "system";
+} else {
+  const systemEntry = sb[slug];
+  if (!systemEntry) {
+    entryType = "no-match";
+    // TODO you could display a toast here that the item wasn't found
+  } else {
+    entryType = systemEntry.type;
+  }
+}
+console.log("🚪 entryType:", entryType);
 
-console.log("🐌", slug);
-
+/*
 if (slug?.match(/^index.html$/)) {
   entryType = "system";
 } else if (slug?.match(/^[0-9]0-[0-9]9$/)) {
@@ -72,11 +94,10 @@ if (slug?.match(/^index.html$/)) {
   entryType = "no-match";
   // None of the above
 }
-
-console.log("🚪 entryType:", entryType);
+*/
 ---
 
-<Layout testRun={testRun}>
+<Layout testRun>
   {entryType === "system" ? <System /> : null}
   {entryType === "area" ? <Area area={slug!} /> : null}
   {entryType === "category" ? <Category category={slug!} /> : null}

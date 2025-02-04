@@ -11,7 +11,7 @@ const clerkClient = createClerkClient({
 
 const userList = await clerkClient.users.getUserList();
 
-const user = await clerkClient.users.getUser(userId);
+const user = await clerkClient.users.getUser(userId!);
 console.log("user", user);
 
 // const updateUserMetadata = await clerkClient.users.updateUserMetadata(userId, {

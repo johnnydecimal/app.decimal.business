@@ -44,7 +44,6 @@ const { area, testRun } = Astro.props;
 import sb from "src/data/smallBusinessFlat";
 import sbTest from "src/data/smallBusinessFlatTest";
 let system;
-console.log("env:", process.env.NODE_ENV);
 if (testRun) {
   system = sbTest;
 } else {
