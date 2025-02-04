@@ -280,7 +280,7 @@ html {
   }
 }
 
-:global(#ChildrenInParentLabel) {
+#ChildrenInParentLabel {
   // Border here vs. above, as we don't know if SystemDescription will exist
   border-top: 1px solid var(--border-strong);
   h2 {
@@ -304,7 +304,7 @@ html {
   }
 }
 
-:global(#ChildrenInParentList) {
+#ChildrenInParentList {
   border-bottom: 1px solid var(--border-strong);
   h2 {
     font-size: 1rem;
