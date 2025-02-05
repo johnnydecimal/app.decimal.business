@@ -1,7 +1,14 @@
-import { defineAction } from "astro:actions";
+import { defineAction, ActionError } from "astro:actions";
 // import { z } from "astro:schema";
 import { createClerkClient } from "@clerk/astro/server";
 import { z } from "astro:content";
+import JSZip from "jszip";
+import system, {
+  getAllByType,
+  type AreaEntry,
+  type CategoryEntry,
+  type IdEntry,
+} from "@data/smallBusinessFlat.ts";
 
 export const server = {
   flipFirstRun: defineAction({
@@ -49,6 +56,7 @@ export const server = {
         });
         return { status: "success", useEmoji: user.publicMetadata.useEmoji };
       } catch (e) {
+        // TODO update to ActionError
         return { status: "error", message: JSON.stringify(e) };
       }
     },
