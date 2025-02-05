@@ -47,7 +47,6 @@ export const GET: APIRoute = async (context) => {
 
   const content = await zip.generateAsync({ type: "nodebuffer" });
 
-  // return new Response(JSON.stringify({ message: "This was a GET!" }));
   return new Response(content, {
     headers: {
       "Content-Type": "application/zip",
