@@ -74,63 +74,44 @@ const useEmoji = user.publicMetadata.useEmoji || false;
 <script>
   import { actions } from "astro:actions";
   document.addEventListener("DOMContentLoaded", () => {
-    // #region
-    /*
-    const checkbox = document.getElementById("firstRunCompleteCheckbox");
-    const firstRunCompleteUpdateStatus = document.getElementById(
-      "firstRunCompleteUpdateStatus"
-    );
-
-    checkbox!.addEventListener("change", async () => {
-      console.log("Checkbox state changed");
-      const { data, error } = await actions.flipFirstRun({});
-      if (!error) {
-        (checkbox as HTMLInputElement)!.checked = data as boolean;
-        firstRunCompleteUpdateStatus!.innerText = "Saved!";
-        setTimeout(() => {
-          firstRunCompleteUpdateStatus!.innerText = "";
-        }, 2000);
-      } else {
-        firstRunCompleteUpdateStatus!.innerText = error.message;
-      }
-    });
-    */
-    // #endregion
-
     const useEmojiEl = document.getElementById("useEmoji") as HTMLSelectElement;
     if (!useEmojiEl) throw new Error("🚨 emojiPref doesn't exist!");
 
     useEmojiEl.addEventListener("change", async () => {
       const useEmoji = useEmojiEl.value === "true";
-      const { data, error } = await actions.setUseEmoji({ useEmoji });
       const useEmojiSaved = document.getElementById("useEmojiSaved");
+      if (!useEmojiSaved) throw new Error("🚨 useEmojiSaved doesn't exist!");
+
+      const { data, error } = await actions.setUseEmoji({ useEmoji });
       if (!error && data.status === "success") {
+        console.log("✅ setUseEmoji.");
         // It should already be, but
         useEmojiEl.value = data.useEmoji!.toString();
 
-        useEmojiSaved!.innerText = " ■"; // Set text
-        useEmojiSaved!.classList.add("green");
-        useEmojiSaved!.classList.remove("hidden"); // Make visible
+        useEmojiSaved.innerText = " ■"; // Set text
+        useEmojiSaved.classList.add("green");
+        useEmojiSaved.classList.remove("hidden"); // Make visible
 
         setTimeout(() => {
-          useEmojiSaved!.classList.add("hidden"); // Fade out
+          useEmojiSaved.classList.add("hidden"); // Fade out
           setTimeout(() => {
-            useEmojiSaved!.innerText = ""; // Remove text after fade out
-            useEmojiSaved!.classList.remove("green");
+            useEmojiSaved.innerText = ""; // Remove text after fade out
+            useEmojiSaved.classList.remove("green");
           }, 500); // Match transition duration
         }, 2000);
         // TODO flash a red if failure?
       } else {
+        console.error("setUseEmoji failed:", data?.message);
         useEmojiEl.value = useEmoji.toString();
-        useEmojiSaved!.innerText = " ■"; // Set text
-        useEmojiSaved!.classList.add("red");
-        useEmojiSaved!.classList.remove("hidden"); // Make visible
+        useEmojiSaved.innerText = " ■"; // Set text
+        useEmojiSaved.classList.add("red");
+        useEmojiSaved.classList.remove("hidden"); // Make visible
 
         setTimeout(() => {
-          useEmojiSaved!.classList.add("hidden"); // Fade out
+          useEmojiSaved.classList.add("hidden"); // Fade out
           setTimeout(() => {
-            useEmojiSaved!.innerText = ""; // Remove text after fade out
-            useEmojiSaved!.classList.remove("red");
+            useEmojiSaved.innerText = ""; // Remove text after fade out
+            useEmojiSaved.classList.remove("red");
           }, 500); // Match transition duration
         }, 2000);
       }
