@@ -63,7 +63,7 @@ const useEmoji = user.publicMetadata.useEmoji || false;
                 Yes 😃
               </option>
             </select>
-            <span id="useEmojiSaved" />
+            <span id="useEmojiSaved" class="hidden" />
           </div>
         </div>
       </Slice>
@@ -106,11 +106,16 @@ const useEmoji = user.publicMetadata.useEmoji || false;
       if (!error && data.status === "success") {
         // It should already be, but
         useEmojiEl.value = data.useEmoji!.toString();
-        console.log("SAVED");
         const useEmojiSaved = document.getElementById("useEmojiSaved");
-        useEmojiSaved!.innerText = " Saved";
+
+        useEmojiSaved!.innerText = " ■"; // Set text
+        useEmojiSaved!.classList.remove("hidden"); // Make visible
+
         setTimeout(() => {
-          useEmojiSaved!.innerText = "";
+          useEmojiSaved!.classList.add("hidden"); // Fade out
+          setTimeout(() => {
+            useEmojiSaved!.innerText = ""; // Remove text after fade out
+          }, 500); // Match transition duration
         }, 2000);
       }
     });
@@ -122,5 +127,15 @@ const useEmoji = user.publicMetadata.useEmoji || false;
 
   select {
     margin-bottom: 1rem;
+  }
+
+  #useEmojiSaved {
+    color: light-dark(green, lightgreen);
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  #useEmojiSaved.hidden {
+    opacity: 0;
   }
 </style>
