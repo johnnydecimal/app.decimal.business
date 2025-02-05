@@ -35,7 +35,7 @@ if (Astro.url.searchParams.get("env") === "test") {
             }</span
           >
         </p>
-        &copy; {year} Johnny.Decimal
+        &copy; {environment !== "test" ? year : "20__"} Johnny.Decimal
       </div>
     </div>
   </Slice>
