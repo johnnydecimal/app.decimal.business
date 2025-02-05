@@ -1,23 +1,14 @@
 ---
-// TODO: uninstall @clerk/backend if the astro import works long-term
-// import { createClerkClient } from "@clerk/backend";
 import { createClerkClient } from "@clerk/astro/server";
 
 import Slice from "@components/common/Slice.astro";
 
+const { userId } = Astro.locals.auth();
 const clerkClient = createClerkClient({
   secretKey: import.meta.env.CLERK_SECRET_KEY,
 });
-
-const { userId } = Astro.locals.auth();
 const user = await clerkClient.users.getUser(userId!);
 const publicMetadata = user.publicMetadata;
-
-// const updateUserMetadata = await clerkClient.users.updateUserMetadata(userId, {
-//   publicMetadata: {
-//     firstRunComplete: true,
-//   },
-// });
 ---
 
 <Slice>
