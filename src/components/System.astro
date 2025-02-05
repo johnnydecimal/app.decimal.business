@@ -11,15 +11,7 @@ interface Props {
 const { testRun } = Astro.props;
 
 // - The whole system to reference. Just import it directly.
-import sb, { getAllByType } from "src/data/smallBusinessFlat";
-import sbTest from "src/data/smallBusinessFlatTest";
-let system;
-if (testRun) {
-  system = sbTest;
-  console.log("🎽 TEST RUN SYSTEM");
-} else {
-  system = sb;
-}
+import system, { getAllByType } from "src/data/smallBusinessFlat";
 
 // - The title of the area for the main header.
 const systemEntries = getAllByType(system, "system") as SystemEntry[];

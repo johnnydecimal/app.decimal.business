@@ -42,14 +42,7 @@ interface Props {
 const { category, testRun } = Astro.props;
 
 // - The whole system to reference. Just import it directly.
-import sb from "src/data/smallBusinessFlat";
-import sbTest from "src/data/smallBusinessFlatTest";
-let system;
-if (testRun) {
-  system = sbTest;
-} else {
-  system = sb;
-}
+import system from "src/data/smallBusinessFlat";
 
 // - The title of the category for the main header.
 const categoryEntry = system[category] as CategoryEntry;
