@@ -45,6 +45,14 @@ export const area_00_09: FlattenedData = {
     isHeader: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
   },
+  "00.11": {
+    number: "00.11",
+    title: "Welcome & where to find help",
+    type: "adHoc",
+    parentNumber: "00",
+    description: "Welcome to the system. Here's where to find help.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+  },
   "00.20": {
     number: "00.20",
     title: "Settings",

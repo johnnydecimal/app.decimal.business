@@ -1,6 +1,7 @@
 import { defineAction } from "astro:actions";
 // import { z } from "astro:schema";
 import { createClerkClient } from "@clerk/astro/server";
+import { z } from "astro:content";
 
 export const server = {
   flipFirstRun: defineAction({
@@ -9,7 +10,6 @@ export const server = {
     // userId: z.string(),
     // }),
     handler: async (_input, context) => {
-      // console.log("actions: flipFirstRun handler running");
       const { userId } = context.locals.auth();
       try {
         const clerkClient = createClerkClient({
@@ -29,6 +29,27 @@ export const server = {
         return result.publicMetadata.firstRunComplete;
       } catch (e) {
         return JSON.stringify(e);
+      }
+    },
+  }),
+  setUseEmoji: defineAction({
+    input: z.object({
+      useEmoji: z.boolean(),
+    }),
+    handler: async (input, context) => {
+      try {
+        const { userId } = context.locals.auth();
+        const clerkClient = createClerkClient({
+          secretKey: import.meta.env.CLERK_SECRET_KEY,
+        });
+        const user = await clerkClient.users.updateUserMetadata(userId!, {
+          publicMetadata: {
+            useEmoji: input.useEmoji,
+          },
+        });
+        return { status: "success", useEmoji: user.publicMetadata.useEmoji };
+      } catch (e) {
+        return { status: "error", message: JSON.stringify(e) };
       }
     },
   }),

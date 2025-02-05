@@ -8,16 +8,93 @@ const clerkClient = createClerkClient({
   secretKey: import.meta.env.CLERK_SECRET_KEY,
 });
 const user = await clerkClient.users.getUser(userId!);
-const publicMetadata = user.publicMetadata;
+const useEmoji = user.publicMetadata.useEmoji || false;
 ---
 
-<Slice>
+<Slice className="descriptive-text">
   <div class="layout-grid-left-right">
-    <div></div>
-    <div class="layout-right-item">{JSON.stringify(publicMetadata)}</div>
+    <h3 class="layout-left-item">Home page</h3>
+    <div class="layout-right-item">
+      <!-- <input
+        type="checkbox"
+        id="firstRunCompleteCheckbox"
+        checked={publicMetadata.firstRunComplete}
+      /><span id="firstRunCompleteUpdateStatus"></span> -->
+      <p>
+        When you log in, do you want to see the <a href="/00.11"
+          >introductory help page</a
+        >, or the
+        <a href="/">system home page</a>? (Inactive)
+      </p>
+      <select name="homePage" id="homePage">
+        <option value="home">Home page</option>
+        <option value="help">Help page</option>
+      </select>
+    </div>
   </div>
 </Slice>
 
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Emoji</h3>
+    <div class="layout-right-item">
+      <p>
+        Do you want to use emoji in your system? This applies to file system
+        folder and JDex downloads.
+      </p>
+      <select name="useEmoji" id="useEmoji">
+        <option value="false" selected={!useEmoji}>No</option>
+        <option value="true" selected={useEmoji}>Yes 😃</option>
+      </select>
+      <span id="useEmoji-saved"></span>
+    </div>
+  </div>
+</Slice>
+
+<script>
+  import { actions } from "astro:actions";
+  document.addEventListener("DOMContentLoaded", () => {
+    // #region
+    /*
+    const checkbox = document.getElementById("firstRunCompleteCheckbox");
+    const firstRunCompleteUpdateStatus = document.getElementById(
+      "firstRunCompleteUpdateStatus"
+    );
+
+    checkbox!.addEventListener("change", async () => {
+      console.log("Checkbox state changed");
+      const { data, error } = await actions.flipFirstRun({});
+      if (!error) {
+        (checkbox as HTMLInputElement)!.checked = data as boolean;
+        firstRunCompleteUpdateStatus!.innerText = "Saved!";
+        setTimeout(() => {
+          firstRunCompleteUpdateStatus!.innerText = "";
+        }, 2000);
+      } else {
+        firstRunCompleteUpdateStatus!.innerText = error.message;
+      }
+    });
+    */
+    // #endregion
+
+    const useEmojiEl = document.getElementById("useEmoji") as HTMLSelectElement;
+    if (!useEmojiEl) throw new Error("🚨 emojiPref doesn't exist!");
+
+    useEmojiEl.addEventListener("change", async () => {
+      const useEmoji = useEmojiEl.value === "true";
+      const { data, error } = await actions.setUseEmoji({ useEmoji });
+      if (!error && data.status === "success") {
+        // It should already be, but
+        useEmojiEl.value = data.useEmoji!.toString();
+      }
+    });
+  });
+</script>
+
 <style lang="scss">
   @use "@styles/common" as *;
+
+  select {
+    margin-bottom: 1rem;
+  }
 </style>
