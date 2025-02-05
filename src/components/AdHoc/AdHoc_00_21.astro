@@ -8,48 +8,68 @@ const clerkClient = createClerkClient({
   secretKey: import.meta.env.CLERK_SECRET_KEY,
 });
 const user = await clerkClient.users.getUser(userId!);
+const firstRunComplete = user.publicMetadata.firstRunComplete || false;
 const useEmoji = user.publicMetadata.useEmoji || false;
 ---
 
-<Slice className="descriptive-text">
-  <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">Home page</h3>
-    <div class="layout-right-item">
-      <!-- <input
-        type="checkbox"
-        id="firstRunCompleteCheckbox"
-        checked={publicMetadata.firstRunComplete}
-      /><span id="firstRunCompleteUpdateStatus"></span> -->
-      <p>
-        When you log in, do you want to see the <a href="/00.11"
-          >introductory help page</a
-        >, or the
-        <a href="/">system home page</a>? (Inactive)
-      </p>
-      <select name="homePage" id="homePage">
-        <option value="home">Home page</option>
-        <option value="help">Help page</option>
-      </select>
-    </div>
-  </div>
-</Slice>
+{
+  !user ? (
+    <Slice className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <div />
+        <div class="layout-right-item">
+          <p>Loading your user data...</p>
+        </div>
+      </div>
+    </Slice>
+  ) : (
+    <>
+      <Slice className="descriptive-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Home page</h3>
+          <div class="layout-right-item">
+            <input
+              type="checkbox"
+              id="firstRunCompleteCheckbox"
+              checked={firstRunComplete}
+            />
+            <span id="firstRunCompleteUpdateStatus" />
+            <p>
+              When you log in, do you want to see the{" "}
+              <a href="/00.11">introductory help page</a>, or the
+              <a href="/">system home page</a>? (Inactive)
+            </p>
+            <select name="homePage" id="homePage">
+              <option value="home">Home page</option>
+              <option value="help">Help page</option>
+            </select>
+          </div>
+        </div>
+      </Slice>
 
-<Slice className="descriptive-text">
-  <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">Emoji</h3>
-    <div class="layout-right-item">
-      <p>
-        Do you want to use emoji in your system? This applies to file system
-        folder and JDex downloads.
-      </p>
-      <select name="useEmoji" id="useEmoji">
-        <option value="false" selected={!useEmoji}>No</option>
-        <option value="true" selected={useEmoji}>Yes 😃</option>
-      </select>
-      <span id="useEmoji-saved"></span>
-    </div>
-  </div>
-</Slice>
+      <Slice className="descriptive-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Emoji</h3>
+          <div class="layout-right-item">
+            <p>
+              Do you want to use emoji in your system? This applies to file
+              system folder and JDex downloads.
+            </p>
+            <select name="useEmoji" id="useEmoji">
+              <option value="false" selected={!useEmoji}>
+                No
+              </option>
+              <option value="true" selected={useEmoji}>
+                Yes 😃
+              </option>
+            </select>
+            <span id="useEmojiSaved" />
+          </div>
+        </div>
+      </Slice>
+    </>
+  )
+}
 
 <script>
   import { actions } from "astro:actions";
@@ -86,6 +106,12 @@ const useEmoji = user.publicMetadata.useEmoji || false;
       if (!error && data.status === "success") {
         // It should already be, but
         useEmojiEl.value = data.useEmoji!.toString();
+        console.log("SAVED");
+        const useEmojiSaved = document.getElementById("useEmojiSaved");
+        useEmojiSaved!.innerText = " Saved";
+        setTimeout(() => {
+          useEmojiSaved!.innerText = "";
+        }, 2000);
       }
     });
   });

@@ -103,7 +103,6 @@ import Slice from "./common/Slice.astro";
 
 // Get all children of this ID
 const children = getChildren(system, id);
-console.log("children: ", children);
 // Get any 'more info' children, which have a number AC.ID+[0-9]
 const moreInfos = children.filter((child) =>
   child.number.match(/^\d\d\.\d\d\+[0-9]/)
