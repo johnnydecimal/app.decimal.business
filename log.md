@@ -133,4 +133,21 @@
 ## Recap what we've figured out
 
 - Don't lose this train of thought!
--
+
+```js
+<script>
+  // document.addEventListener('DOMContentLoaded', () => {
+  import { actions } from "astro:actions";
+  const checkbox = document.getElementById("firstRunCompleteCheckbox");
+
+  const button = document.querySelector("button");
+  button?.addEventListener("click", async () => {
+    console.log("You clicked the button");
+    const { data, error } = await actions.flipFirstRun({});
+    if (!error) {
+      // alert(data);
+      (checkbox as HTMLInputElement)!.checked = data as boolean;
+    }
+  });
+</script>
+```

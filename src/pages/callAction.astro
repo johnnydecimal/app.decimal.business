@@ -1,5 +1,4 @@
 ---
-import { actions } from "astro:actions";
 import { createClerkClient } from "@clerk/astro/server";
 
 const { userId } = Astro.locals.auth();
@@ -10,7 +9,6 @@ const user = await clerkClient.users.getUser(userId!);
 const firstRunComplete = user.publicMetadata.firstRunComplete as boolean;
 ---
 
-<button>firstRunComplete: {firstRunComplete.toString()}</button>
 <label>
   <input
     type="checkbox"
@@ -19,19 +17,26 @@ const firstRunComplete = user.publicMetadata.firstRunComplete as boolean;
   />
   First Run Complete
 </label>
+<div id="saved"></div>
 
 <script>
-  // document.addEventListener('DOMContentLoaded', () => {
   import { actions } from "astro:actions";
-  const checkbox = document.getElementById("firstRunCompleteCheckbox");
+  document.addEventListener("DOMContentLoaded", () => {
+    const checkbox = document.getElementById("firstRunCompleteCheckbox");
+    const saved = document.getElementById("saved");
 
-  const button = document.querySelector("button");
-  button?.addEventListener("click", async () => {
-    console.log("You clicked the button");
-    const { data, error } = await actions.flipFirstRun({});
-    if (!error) {
-      // alert(data);
-      (checkbox as HTMLInputElement)!.checked = data as boolean;
-    }
+    checkbox!.addEventListener("change", async () => {
+      console.log("Checkbox state changed");
+      const { data, error } = await actions.flipFirstRun({});
+      if (!error) {
+        (checkbox as HTMLInputElement)!.checked = data as boolean;
+        saved!.innerText = "Saved!";
+        setTimeout(() => {
+          saved!.innerText = "";
+        }, 2000);
+      } else {
+        saved!.innerText = error.message;
+      }
+    });
   });
 </script>
