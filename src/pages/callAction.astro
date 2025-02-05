@@ -1,0 +1,37 @@
+---
+import { actions } from "astro:actions";
+import { createClerkClient } from "@clerk/astro/server";
+
+const { userId } = Astro.locals.auth();
+const clerkClient = createClerkClient({
+  secretKey: import.meta.env.CLERK_SECRET_KEY,
+});
+const user = await clerkClient.users.getUser(userId!);
+const firstRunComplete = user.publicMetadata.firstRunComplete as boolean;
+---
+
+<button>firstRunComplete: {firstRunComplete.toString()}</button>
+<label>
+  <input
+    type="checkbox"
+    id="firstRunCompleteCheckbox"
+    checked={firstRunComplete}
+  />
+  First Run Complete
+</label>
+
+<script>
+  // document.addEventListener('DOMContentLoaded', () => {
+  import { actions } from "astro:actions";
+  const checkbox = document.getElementById("firstRunCompleteCheckbox");
+
+  const button = document.querySelector("button");
+  button?.addEventListener("click", async () => {
+    console.log("You clicked the button");
+    const { data, error } = await actions.flipFirstRun({});
+    if (!error) {
+      // alert(data);
+      (checkbox as HTMLInputElement)!.checked = data as boolean;
+    }
+  });
+</script>
