@@ -103,18 +103,34 @@ const useEmoji = user.publicMetadata.useEmoji || false;
     useEmojiEl.addEventListener("change", async () => {
       const useEmoji = useEmojiEl.value === "true";
       const { data, error } = await actions.setUseEmoji({ useEmoji });
+      const useEmojiSaved = document.getElementById("useEmojiSaved");
       if (!error && data.status === "success") {
         // It should already be, but
         useEmojiEl.value = data.useEmoji!.toString();
-        const useEmojiSaved = document.getElementById("useEmojiSaved");
 
         useEmojiSaved!.innerText = " ■"; // Set text
+        useEmojiSaved!.classList.add("green");
         useEmojiSaved!.classList.remove("hidden"); // Make visible
 
         setTimeout(() => {
           useEmojiSaved!.classList.add("hidden"); // Fade out
           setTimeout(() => {
             useEmojiSaved!.innerText = ""; // Remove text after fade out
+            useEmojiSaved!.classList.remove("green");
+          }, 500); // Match transition duration
+        }, 2000);
+        // TODO flash a red if failure?
+      } else {
+        useEmojiEl.value = useEmoji.toString();
+        useEmojiSaved!.innerText = " ■"; // Set text
+        useEmojiSaved!.classList.add("red");
+        useEmojiSaved!.classList.remove("hidden"); // Make visible
+
+        setTimeout(() => {
+          useEmojiSaved!.classList.add("hidden"); // Fade out
+          setTimeout(() => {
+            useEmojiSaved!.innerText = ""; // Remove text after fade out
+            useEmojiSaved!.classList.remove("red");
           }, 500); // Match transition duration
         }, 2000);
       }
@@ -130,12 +146,16 @@ const useEmoji = user.publicMetadata.useEmoji || false;
   }
 
   #useEmojiSaved {
-    color: light-dark(green, lightgreen);
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
-  }
-
-  #useEmojiSaved.hidden {
-    opacity: 0;
+    &.hidden {
+      opacity: 0;
+    }
+    &.green {
+      color: light-dark(green, lightgreen);
+    }
+    &.red {
+      color: light-dark(red, red);
+    }
   }
 </style>
