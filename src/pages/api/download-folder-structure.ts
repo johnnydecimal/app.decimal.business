@@ -1,5 +1,6 @@
 import type { APIRoute } from "astro";
 import JSZip from "jszip";
+import { clerkClient } from "@clerk/astro/server";
 
 import system, {
   getAllByType,
@@ -9,16 +10,14 @@ import system, {
 } from "@data/smallBusinessFlat.ts";
 
 // export const GET: APIRoute = async ({ request }) => {
-export const GET: APIRoute = async () => {
+export const GET: APIRoute = async (context) => {
   const zip = new JSZip();
+  console.log(context.locals.auth());
+  const userId = context.locals.auth().userId;
 
-  // For each area in smallBusinessFlat.ts
-  // const areas = getAllByType(system, "area") as AreaEntry[];
-  // const categories = getAllByType(system, "category") as CategoryEntry[];
-
-  // areas.forEach((area) => {
-  //   zip.folder(`${area.number} ${area.title}`);
-  // });
+  const clerk = clerkClient(context);
+  const user = await clerk.users.getUser(userId!);
+  console.log("user", user);
 
   const ids = getAllByType(system, "id") as IdEntry[];
   ids.forEach((id) => {
@@ -33,18 +32,14 @@ export const GET: APIRoute = async () => {
     );
   });
 
-  // Create folders and add files
-  // zip.folder("documents")?.file("notes.txt", "Some notes");
-  // zip.folder("images")?.file("readme.txt", "This is the images folder");
-
-  // Generate the ZIP file
   const content = await zip.generateAsync({ type: "nodebuffer" });
 
-  return new Response(content, {
-    headers: {
-      "Content-Type": "application/zip",
-      "Content-Disposition":
-        'attachment; filename="Johnny.Decimal Small Business System - folder structure.zip"',
-    },
-  });
+  return new Response(JSON.stringify({ message: "This was a GET!" }));
+  // return new Response(content, {
+  //   headers: {
+  //     "Content-Type": "application/zip",
+  //     "Content-Disposition":
+  //       'attachment; filename="Johnny.Decimal Small Business System - folder structure.zip"',
+  //   },
+  // });
 };

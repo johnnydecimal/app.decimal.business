@@ -35,8 +35,6 @@ const testRun =
  * TODO rename this to `system` later
  */
 
-console.log("[slug.astro] ------------------------------------------");
-console.log("🐌 slug:", slug);
 let entryType: EntryType | "no-match" | null = null;
 if (!slug) {
   // Not sure how this can be, but handle it
@@ -52,7 +50,6 @@ if (!slug) {
     entryType = systemEntry.type;
   }
 }
-console.log("🚪 entryType:", entryType);
 
 /*
 if (slug?.match(/^index.html$/)) {
