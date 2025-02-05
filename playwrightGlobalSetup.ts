@@ -22,7 +22,7 @@ async function isPortOpen(port: number, host = "localhost"): Promise<boolean> {
   });
 }
 
-async function globalSetup(config: FullConfig) {
+async function globalSetup(_config: FullConfig) {
   // dotenv.config();
   // process.env.CLERK_PUBLISHABLE_KEY = process.env.PUBLIC_CLERK_PUBLISHABLE_KEY;
   // // CLERK_SECRET_KEY should be okay?

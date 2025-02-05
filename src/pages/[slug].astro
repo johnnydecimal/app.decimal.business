@@ -1,6 +1,6 @@
 ---
 import sb from "src/data/smallBusinessFlat";
-import type { EntryType, FlattenedEntry } from "src/data/smallBusinessFlat";
+import type { EntryType } from "src/data/smallBusinessFlat";
 
 import Layout from "@layouts/Layout.astro";
 import System from "@components/System.astro";
@@ -98,7 +98,7 @@ if (slug?.match(/^index.html$/)) {
 */
 ---
 
-<Layout testRun>
+<Layout testRun={testRun}>
   {entryType === "system" ? <System /> : null}
   {entryType === "area" ? <Area area={slug!} /> : null}
   {entryType === "category" ? <Category category={slug!} /> : null}

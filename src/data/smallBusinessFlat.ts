@@ -23,6 +23,7 @@ interface BaseEntry {
   description: string; // Late change: everything must have a description; document the rationale later
   emoji?: string;
   metadata: Metadata;
+  extensions?: {};
 }
 
 // Specialized interfaces

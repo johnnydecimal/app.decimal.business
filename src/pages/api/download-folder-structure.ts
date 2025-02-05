@@ -8,7 +8,8 @@ import system, {
   type IdEntry,
 } from "@data/smallBusinessFlat.ts";
 
-export const GET: APIRoute = async ({ request }) => {
+// export const GET: APIRoute = async ({ request }) => {
+export const GET: APIRoute = async () => {
   const zip = new JSZip();
 
   // For each area in smallBusinessFlat.ts

@@ -21,7 +21,7 @@ if (Astro.request.method === "POST") {
   console.log("📮 callApi/POST loop has been called");
   if (publicMetadata.firstRunComplete) {
     const updateUserMetadata = await clerkClient.users.updateUserMetadata(
-      userId,
+      userId!,
       {
         publicMetadata: {
           firstRunComplete: false,
@@ -30,7 +30,7 @@ if (Astro.request.method === "POST") {
     );
   } else {
     const updateUserMetadata = await clerkClient.users.updateUserMetadata(
-      userId,
+      userId!,
       {
         publicMetadata: {
           firstRunComplete: true,
@@ -65,5 +65,6 @@ if (Astro.request.method === "POST") {
 </form>
 
 <div id="firstRunComplete">
+  <!-- @ts-ignore -->
   first run: {publicMetadata.firstRunComplete.toString()}
 </div>

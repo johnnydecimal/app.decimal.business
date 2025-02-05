@@ -10,7 +10,7 @@ export const GET: APIRoute = () => {
   );
 };
 
-export const POST: APIRoute = async (_context) => {
+export const POST: APIRoute = async (context) => {
   console.log("📮 updatePublicMetadata/POST");
   // const { userId, redirectToSignIn } = context.locals.auth();
 
@@ -20,8 +20,8 @@ export const POST: APIRoute = async (_context) => {
 
   // const user = await clerkClient(context).users.getUser(userId);
   // return new Response(JSON.stringify({ user }));
-  // const newPublicMetadata = context.request.json();
-  // console.log(newPublicMetadata);
+  const newPublicMetadata = context.request.json();
+  console.log(newPublicMetadata);
 
   // try {
   // } catch (error: any) {

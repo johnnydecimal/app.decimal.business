@@ -1,5 +1,5 @@
 import { defineAction } from "astro:actions";
-import { z } from "astro:schema";
+// import { z } from "astro:schema";
 import { createClerkClient } from "@clerk/astro/server";
 
 export const server = {

@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 
-export const GET: APIRoute = async ({ request }) => {
+export const GET: APIRoute = async () => {
   const textContent = "This is a dynamically generated file.";
   const filename = "file.txt";
 
