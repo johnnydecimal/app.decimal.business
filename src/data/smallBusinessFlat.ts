@@ -672,7 +672,8 @@ const flattenedData: FlattenedData = {
     extensions: {
       smallBusiness: {
         examples: "",
-        moreInfo: "",
+        moreInfo:
+          "_Lucy's finalising this area so there's no detail here yet._",
         exceptions: "",
         alsoSee: "",
         rationale: "",

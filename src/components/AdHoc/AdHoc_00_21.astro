@@ -11,6 +11,7 @@ const user = await clerkClient.users.getUser(userId!);
 const firstRunComplete = user.publicMetadata.firstRunComplete || false;
 const useEmoji = user.publicMetadata.useEmoji || false;
 const jdexApp = user.publicMetadata.jdexApp || "none";
+const obsidianVault = user.publicMetadata.obsidianVault;
 ---
 
 {
@@ -123,7 +124,12 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
               If you haven't created your vault yet, you can come back and enter
               the value here at any time.
             </p>
-            <input type="text" id="obsidianVault" />
+            <input
+              type="text"
+              id="obsidianVault"
+              value={obsidianVault}
+              placeholder="No value saved"
+            />
             <button id="obsidianVaultSubmit">Submit</button>
             <span id="obsidianVaultSaved" class="saved-indicator hidden" />
           </div>
@@ -136,7 +142,7 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
 <script>
   import { actions } from "astro:actions";
   document.addEventListener("DOMContentLoaded", () => {
-    /* ------------------------------ Emoji --------------------------------- */
+    // #region ---------------------- Emoji --------------------------------- */
     const useEmojiEl = document.getElementById("useEmoji") as HTMLSelectElement;
     if (!useEmojiEl) throw new Error("🚨 emojiPref doesn't exist!");
 
@@ -154,8 +160,9 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
         console.error("setUseEmoji failed:", error.message);
       }
     });
+    // #endregion
 
-    /* ------------------------------ JDex app ------------------------------ */
+    // #region ---------------------- JDex app ------------------------------ */
     // Get the element that will change/detect submit
     const jdexAppEl = document.getElementById("jdexApp") as HTMLSelectElement;
     if (!jdexAppEl) throw new Error("🚨 jdexApp doesn't exist!");
@@ -195,8 +202,9 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
         obsidianVault!.classList.add("hidden");
       }
     });
+    // #endregion
 
-    /* ------------------------- Obsidian vault ----------------------------- */
+    // #region ----------------- Obsidian vault ----------------------------- */
     // Get the element that will change/detect submit
     const obsidianVaultSubmit = document.getElementById(
       "obsidianVaultSubmit"
@@ -205,11 +213,15 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
     const obsidianVault = document.getElementById(
       "obsidianVault"
     ) as HTMLInputElement;
-    if (!obsidianVault || !obsidianVaultSubmit)
+    const obsidianVaultSaved = document.getElementById(
+      "obsidianVaultSaved"
+    ) as HTMLElement;
+    if (!obsidianVault || !obsidianVaultSubmit || !obsidianVaultSaved)
       throw new Error("🚨 obsidianVault[Submit] doesn't exist!");
 
     // Add the event listener
-    obsidianVaultSubmit.addEventListener("submit", async () => {
+    obsidianVaultSubmit.addEventListener("click", async () => {
+      console.log("🦆");
       // Push to Clerk
       const { data, error } = await actions.setPublicMetadata({
         key: "obsidianVault",

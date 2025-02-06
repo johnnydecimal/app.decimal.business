@@ -110,6 +110,16 @@ const moreInfos = children.filter((child) =>
 const opsManuals = children.filter((child) =>
   child.number.match(/^\d\d\.\d\d\+OPS/)
 );
+
+import { createClerkClient } from "@clerk/astro/server";
+const { userId } = Astro.locals.auth();
+const clerkClient = createClerkClient({
+  secretKey: import.meta.env.CLERK_SECRET_KEY,
+});
+const user = await clerkClient.users.getUser(userId!);
+const obsidianVaultURI = encodeURIComponent(user.publicMetadata.obsidianVault);
+const obsidianPathURI =
+  obsidianVaultURI && encodeURIComponent(`${id} ${idTitle}`);
 ---
 
 <Slice id="SystemBreadcrumb" className="secondary-content-bg">
@@ -151,6 +161,7 @@ const opsManuals = children.filter((child) =>
   </div>
 </Slice>
 
+<!-- #region Optional fields -------------------------------------------------->
 {
   idDescription ? (
     <Slice id="IDDescription" className="descriptive-text">
@@ -259,6 +270,24 @@ const opsManuals = children.filter((child) =>
               );
             })}
           </ul>
+        </div>
+      </div>
+    </Slice>
+  ) : null
+}
+<!-- #endregion -->
+
+{
+  obsidianVaultURI ? (
+    <Slice id="ObsidianVaultLink" className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">Open in Obsidian</h3>
+        <div class="layout-right-item">
+          <a
+            href={`obsidian://open?vault=${obsidianVaultURI}&file=${obsidianPathURI}`}
+          >
+            {id} {idTitle}
+          </a>
         </div>
       </div>
     </Slice>
