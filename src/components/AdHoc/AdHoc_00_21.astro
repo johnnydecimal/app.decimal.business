@@ -24,7 +24,8 @@ const useEmoji = user.publicMetadata.useEmoji || false;
     </Slice>
   ) : (
     <>
-      <Slice className="descriptive-text">
+      {/* 
+      <Slice id="SettingsFirstRun" className="descriptive-text">
         <div class="layout-grid-left-right">
           <h3 class="layout-left-item">Home page</h3>
           <div class="layout-right-item">
@@ -46,8 +47,9 @@ const useEmoji = user.publicMetadata.useEmoji || false;
           </div>
         </div>
       </Slice>
+      */}
 
-      <Slice className="descriptive-text">
+      <Slice id="SettingsEmoji" className="descriptive-text">
         <div class="layout-grid-left-right">
           <h3 class="layout-left-item">Emoji</h3>
           <div class="layout-right-item">
@@ -64,6 +66,28 @@ const useEmoji = user.publicMetadata.useEmoji || false;
               </option>
             </select>
             <span id="useEmojiSaved" class="hidden" />
+          </div>
+        </div>
+      </Slice>
+
+      <Slice id="SettingsJDexApp" className="descriptive-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">JDex app</h3>
+          <div class="layout-right-item">
+            <p>
+              Which app do you use for your JDex? This setting allows us to
+              create links from each of the IDs on this website.
+            </p>
+            <p>
+              If the app you use isn't shown here, please send us feedback using
+              the link below.
+            </p>
+            <select name="jdexApp" id="jdexApp">
+              <option value="none">– Select –</option>
+              <option value="bear">Bear</option>
+              <option value="obsidian">Obsidian</option>
+            </select>
+            <span id="jdexAppSaved" class="hidden" />
           </div>
         </div>
       </Slice>
