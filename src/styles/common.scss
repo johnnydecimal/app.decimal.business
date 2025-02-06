@@ -93,6 +93,9 @@
   --border-strong: light-dark(#111, #eee);
   --border-accent: light-dark(#11b, #99c);
   --secondary-content-bg: light-dark(#f3f3f3, #111);
+
+  --monospace: "Berkeley Mono", ui-monospace, "Cascadia Code", "Source Code Pro",
+    Menlo, Consolas, "DejaVu Sans Mono", monospace;
 }
 
 /* -------------------------------- Elements -------------------------------- */
@@ -102,9 +105,12 @@ footer {
 
 html {
   color-scheme: light dark;
-  font-family: "Berkeley Mono", ui-monospace, "Cascadia Code", "Source Code Pro",
-    Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  font-family: var(--monospace);
   line-height: 1.4;
+}
+
+select {
+  font-family: var(--monospace);
 }
 
 // Spans the page width without margin. Used for full-width effects e.g.
