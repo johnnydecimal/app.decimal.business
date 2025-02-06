@@ -109,7 +109,7 @@ const useEmoji = user.publicMetadata.useEmoji || false;
         }, 700);
       }, 2000);
     } else {
-      statusEl.innerText = " Error saving: please reload";
+      statusEl.innerHTML = ` Error saving: please <a href="#" onclick="location.reload();">reload</a>`;
       statusEl.classList.add("red");
       statusEl.classList.remove("green", "hidden");
     }
