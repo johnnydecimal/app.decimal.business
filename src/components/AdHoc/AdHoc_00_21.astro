@@ -100,6 +100,7 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
                 Obsidian
               </a>
             </p>
+            <div id="ObsidianVault">ObV</div>
           </div>
         </div>
       </Slice>
@@ -150,6 +151,7 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
       }
     });
   });
+  // #endregion document.addEventListener
 
   function updateStatus(statusEl: HTMLElement | null, success: boolean): void {
     if (!statusEl) return;
@@ -194,5 +196,9 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
     &.red {
       color: light-dark(red, red);
     }
+  }
+
+  #ObsidianVault {
+    display: none;
   }
 </style>

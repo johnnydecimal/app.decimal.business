@@ -89,6 +89,7 @@ export const server = {
         }
         return { status: "success", publicMetadata: user.publicMetadata };
       } catch (e) {
+        // TODO this is typed all wrong
         throw new ActionError({
           code: "INTERNAL_SERVER_ERROR",
           message: JSON.stringify(e),
