@@ -10,6 +10,7 @@ const clerkClient = createClerkClient({
 const user = await clerkClient.users.getUser(userId!);
 const firstRunComplete = user.publicMetadata.firstRunComplete || false;
 const useEmoji = user.publicMetadata.useEmoji || false;
+const jdexApp = user.publicMetadata.jdexApp || "none";
 ---
 
 {
@@ -65,7 +66,7 @@ const useEmoji = user.publicMetadata.useEmoji || false;
                 Yes 😃
               </option>
             </select>
-            <span id="useEmojiSaved" class="hidden" />
+            <span id="useEmojiSaved" class="saved-indicator hidden" />
           </div>
         </div>
       </Slice>
@@ -83,11 +84,22 @@ const useEmoji = user.publicMetadata.useEmoji || false;
               the link below.
             </p>
             <select name="jdexApp" id="jdexApp">
-              <option value="none">– Select –</option>
-              <option value="bear">Bear</option>
-              <option value="obsidian">Obsidian</option>
+              <option value="none" selected={jdexApp === "none"}>
+                – Select –
+              </option>
+              <option value="bear" selected={jdexApp === "bear"}>
+                Bear
+              </option>
+              <option value="obsidian" selected={jdexApp === "obsidian"}>
+                Obsidian
+              </option>
             </select>
-            <span id="jdexAppSaved" class="hidden" />
+            <span id="jdexAppSaved" class="saved-indicator hidden" />
+            <p>
+              <a href="obsidian://open?vault=D85%20Johnny.Decimal&file=01.01%20System%20inbox">
+                Obsidian
+              </a>
+            </p>
           </div>
         </div>
       </Slice>
@@ -98,6 +110,7 @@ const useEmoji = user.publicMetadata.useEmoji || false;
 <script>
   import { actions } from "astro:actions";
   document.addEventListener("DOMContentLoaded", () => {
+    /* ------------------------------ Emoji --------------------------------- */
     const useEmojiEl = document.getElementById("useEmoji") as HTMLSelectElement;
     if (!useEmojiEl) throw new Error("🚨 emojiPref doesn't exist!");
 
@@ -113,6 +126,27 @@ const useEmoji = user.publicMetadata.useEmoji || false;
       } else if (error) {
         updateStatus(useEmojiSaved, false);
         console.error("setUseEmoji failed:", error.message);
+      }
+    });
+
+    /* ------------------------------ JDex app ------------------------------ */
+    const jdexAppEl = document.getElementById("jdexApp") as HTMLSelectElement;
+    if (!jdexAppEl) throw new Error("🚨 jdexApp doesn't exist!");
+    jdexAppEl.addEventListener("change", async () => {
+      const jdexApp = jdexAppEl.value;
+      const jdexAppSaved = document.getElementById("jdexAppSaved");
+      if (!jdexAppSaved) throw new Error("🚨 jdexAppSaved doesn't exist!");
+
+      const { data, error } = await actions.setPublicMetadata({
+        key: "jdexApp",
+        value: jdexApp,
+      });
+      if (!error && data.status === "success") {
+        console.log("✅ setJdexApp.");
+        updateStatus(jdexAppSaved, true);
+      } else if (error) {
+        updateStatus(jdexAppSaved, false);
+        console.error("setJdexApp failed:", error.message);
       }
     });
   });
@@ -148,7 +182,7 @@ const useEmoji = user.publicMetadata.useEmoji || false;
     margin-bottom: 1rem;
   }
 
-  #useEmojiSaved {
+  .saved-indicator {
     opacity: 1;
     transition: opacity 0.7s ease-in-out;
     &.hidden {

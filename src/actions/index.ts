@@ -63,4 +63,54 @@ export const server = {
       }
     },
   }),
+  setPublicMetadata: defineAction({
+    input: z.object({
+      key: z.string(),
+      value: z.any(),
+    }),
+    handler: async (input, context) => {
+      try {
+        const { userId } = context.locals.auth();
+        const clerkClient = createClerkClient({
+          secretKey: import.meta.env.CLERK_SECRET_KEY,
+        });
+        const user = await clerkClient.users.updateUserMetadata(userId!, {
+          publicMetadata: {
+            [input.key]: input.value,
+          },
+        });
+        // Test that the user object contains the value we just set
+        // and throw an error if it doesn't
+        if (user.publicMetadata[input.key] !== input.value) {
+          throw new ActionError({
+            code: "INTERNAL_SERVER_ERROR",
+            message: "Metadata was not set correctly",
+          });
+        }
+        return { status: "success", publicMetadata: user.publicMetadata };
+      } catch (e) {
+        throw new ActionError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: JSON.stringify(e),
+        });
+      }
+    },
+  }),
+  getPublicMetadata: defineAction({
+    handler: async (_input, context) => {
+      try {
+        const { userId } = context.locals.auth();
+        const clerkClient = createClerkClient({
+          secretKey: import.meta.env.CLERK_SECRET_KEY,
+        });
+        const user = await clerkClient.users.getUser(userId!);
+        return { status: "success", publicMetadata: user.publicMetadata };
+      } catch (e) {
+        throw new ActionError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: JSON.stringify(e),
+        });
+      }
+    },
+  }),
 };
