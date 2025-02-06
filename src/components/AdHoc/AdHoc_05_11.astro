@@ -1,0 +1,156 @@
+---
+import { createClerkClient } from "@clerk/astro/server";
+
+import Slice from "@components/common/Slice.astro";
+
+const { userId } = Astro.locals.auth();
+const clerkClient = createClerkClient({
+  secretKey: import.meta.env.CLERK_SECRET_KEY,
+});
+const user = await clerkClient.users.getUser(userId!);
+const useEmoji = user.publicMetadata.useEmoji || false;
+---
+
+{
+  !user ? (
+    <Slice className="descriptive-text">
+      <div class="layout-grid-left-right">
+        <div />
+        <div class="layout-right-item">
+          <p>Loading your user data...</p>
+        </div>
+      </div>
+    </Slice>
+  ) : (
+    <>
+      <Slice className="descriptive-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Note</h3>
+          <div class="layout-right-item">
+            {/* prettier-ignore */}
+            <p>
+              Your <a href="/00.21" title="00.21">user settings</a> affect whether these downloads contain emoji and other special
+              characters.
+            </p>
+            <p>
+              You can change those settings and use the download links here as
+              often as you like.
+            </p>
+          </div>
+        </div>
+      </Slice>
+
+      <Slice className="descriptive-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Folder structure</h3>
+          <div class="layout-right-item">
+            <p>
+              Download your Johnny.Decimal file system folder structure here.
+            </p>
+            <p>
+              Move the folder from your Downloads folder to wherever you store
+              your documents.
+            </p>
+            <button onclick="window.location.href = '/api/v1/download-folder-structure'">
+              Download
+            </button>
+          </div>
+        </div>
+      </Slice>
+
+      <Slice className="descriptive-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">JDex files</h3>
+          <div class="layout-right-item">
+            <p>Download your Johnny.Decimal JDex files here.</p>
+            <p>
+              Move the folder from your Downloads folder to wherever you store
+              your documents.
+            </p>
+            <button onclick="window.location.href = '/api/v1/download-folder-structure'">
+              Download
+            </button>
+            <p>
+              <a href="obsidian://open?vault=D85%20Johnny.Decimal&file=01.01%20System%20inbox">
+                Obsidian
+              </a>
+            </p>
+          </div>
+        </div>
+      </Slice>
+    </>
+  )
+}
+
+<script>
+  import { actions } from "astro:actions";
+  document.addEventListener("DOMContentLoaded", () => {
+    const useEmojiEl = document.getElementById("useEmoji") as HTMLSelectElement;
+    if (!useEmojiEl) throw new Error("🚨 emojiPref doesn't exist!");
+
+    useEmojiEl.addEventListener("change", async () => {
+      const useEmoji = useEmojiEl.value === "true";
+      const useEmojiSaved = document.getElementById("useEmojiSaved");
+      if (!useEmojiSaved) throw new Error("🚨 useEmojiSaved doesn't exist!");
+
+      const { data, error } = await actions.setUseEmoji({ useEmoji });
+      if (!error && data.status === "success") {
+        console.log("✅ setUseEmoji.");
+        updateStatus(useEmojiSaved, true);
+      } else if (error) {
+        updateStatus(useEmojiSaved, false);
+        console.error("setUseEmoji failed:", error.message);
+      }
+    });
+  });
+
+  function updateStatus(statusEl: HTMLElement | null, success: boolean): void {
+    if (!statusEl) return;
+
+    if (success) {
+      statusEl.innerText = " ■";
+      statusEl.classList.add("green");
+      statusEl.classList.remove("red", "hidden");
+
+      setTimeout(() => {
+        statusEl.classList.add("hidden");
+        setTimeout(() => {
+          statusEl.innerText = "";
+          statusEl.classList.remove("green");
+        }, 700);
+      }, 2000);
+    } else {
+      statusEl.innerHTML = ` Error saving: please <a href="#" onclick="location.reload();">reload</a>`;
+      statusEl.classList.add("red");
+      statusEl.classList.remove("green", "hidden");
+    }
+  }
+</script>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+
+  button {
+    margin-bottom: 1rem; // mimics <p>
+    padding: 5px;
+  }
+
+  select {
+    height: 1.6rem; // Affects FF, Chromium
+    margin-bottom: 1rem;
+  }
+
+  #useEmojiSaved {
+    opacity: 1;
+    transition: opacity 0.7s ease-in-out;
+    &.hidden {
+      opacity: 0;
+    }
+    &.green {
+      color: light-dark(green, lightgreen);
+    }
+    &.red {
+      color: light-dark(red, red);
+    }
+  }
+</style>

@@ -70,4 +70,20 @@ export const area_00_09: FlattenedData = {
     description: "This section contains your user settings.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
   },
+  "05": {
+    number: "05",
+    title: "Templates & downloads",
+    type: "category",
+    parentNumber: "00-09",
+    description: "Get your file system folders & JDex files here.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+  },
+  "05.11": {
+    number: "05.11",
+    title: "System downloads",
+    type: "adHoc",
+    parentNumber: "05",
+    description: "Get your file system folders & JDex files here.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+  },
 };
