@@ -85,7 +85,7 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
             </p>
             <select name="jdexApp" id="jdexApp">
               <option value="none" selected={jdexApp === "none"}>
-                – Select –
+                – None –
               </option>
               <option value="bear" selected={jdexApp === "bear"}>
                 Bear
@@ -95,12 +95,37 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
               </option>
             </select>
             <span id="jdexAppSaved" class="saved-indicator hidden" />
+          </div>
+        </div>
+      </Slice>
+
+      <Slice
+        id="ObsidianVault"
+        className={
+          jdexApp === "obsidian"
+            ? "descriptive-text visible"
+            : "descriptive-text hidden"
+        }
+      >
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Obsidian vault</h3>
+          <div class="layout-right-item">
             <p>
-              <a href="obsidian://open?vault=D85%20Johnny.Decimal&file=01.01%20System%20inbox">
-                Obsidian
-              </a>
+              What's the name of your Obsidian vault? You can find it at the
+              very bottom of the left sidebar next to the arrow-up/arrow-down
+              symbol. Enter it exactly as shown.
             </p>
-            <div id="ObsidianVault">ObV</div>
+            <p>
+              This allows us to create links from each ID page on this site that
+              open your Obsidian note directly.
+            </p>
+            <p>
+              If you haven't created your vault yet, you can come back and enter
+              the value here at any time.
+            </p>
+            <input type="text" id="obsidianVault" />
+            <button id="obsidianVaultSubmit">Submit</button>
+            <span id="obsidianVaultSaved" class="saved-indicator hidden" />
           </div>
         </div>
       </Slice>
@@ -131,13 +156,18 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
     });
 
     /* ------------------------------ JDex app ------------------------------ */
+    // Get the element that will change/detect submit
     const jdexAppEl = document.getElementById("jdexApp") as HTMLSelectElement;
     if (!jdexAppEl) throw new Error("🚨 jdexApp doesn't exist!");
+
+    // Add an event listener to it
     jdexAppEl.addEventListener("change", async () => {
+      // Get user values
       const jdexApp = jdexAppEl.value;
       const jdexAppSaved = document.getElementById("jdexAppSaved");
       if (!jdexAppSaved) throw new Error("🚨 jdexAppSaved doesn't exist!");
 
+      // Push to Clerk
       const { data, error } = await actions.setPublicMetadata({
         key: "jdexApp",
         value: jdexApp,
@@ -148,6 +178,50 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
       } else if (error) {
         updateStatus(jdexAppSaved, false);
         console.error("setJdexApp failed:", error.message);
+      }
+
+      // Show/hide Obsidian vault Slice
+      const obsidianVault = document.getElementById("ObsidianVault");
+      console.log(
+        "🚀 ~ jdexAppEl.addEventListener ~ obsidianVault:",
+        obsidianVault
+      );
+
+      if (jdexApp === "obsidian") {
+        obsidianVault!.classList.remove("hidden");
+        obsidianVault!.classList.add("visible");
+      } else {
+        obsidianVault!.classList.remove("visible");
+        obsidianVault!.classList.add("hidden");
+      }
+    });
+
+    /* ------------------------- Obsidian vault ----------------------------- */
+    // Get the element that will change/detect submit
+    const obsidianVaultSubmit = document.getElementById(
+      "obsidianVaultSubmit"
+    ) as HTMLElement;
+    // Get user values while we're here for easier error checking
+    const obsidianVault = document.getElementById(
+      "obsidianVault"
+    ) as HTMLInputElement;
+    if (!obsidianVault || !obsidianVaultSubmit)
+      throw new Error("🚨 obsidianVault[Submit] doesn't exist!");
+
+    // Add the event listener
+    obsidianVaultSubmit.addEventListener("submit", async () => {
+      // Push to Clerk
+      const { data, error } = await actions.setPublicMetadata({
+        key: "obsidianVault",
+        value: obsidianVault.value,
+      });
+
+      if (!error && data.status === "success") {
+        console.log("✅ set obsidianVault.");
+        updateStatus(obsidianVaultSaved, true);
+      } else if (error) {
+        console.error("set obsidianVault failed:", error.message);
+        updateStatus(obsidianVaultSaved, false);
       }
     });
   });
@@ -198,7 +272,18 @@ const jdexApp = user.publicMetadata.jdexApp || "none";
     }
   }
 
-  #ObsidianVault {
-    display: none;
+  :global(#ObsidianVault) {
+    &.hidden {
+      display: none;
+    }
+    &.visible {
+      display: block;
+    }
+
+    button {
+      @include phone-only {
+        margin-top: 10px;
+      }
+    }
   }
 </style>
