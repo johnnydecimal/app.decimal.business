@@ -56,8 +56,10 @@ export const server = {
         });
         return { status: "success", useEmoji: user.publicMetadata.useEmoji };
       } catch (e) {
-        // TODO update to ActionError
-        return { status: "error", message: JSON.stringify(e) };
+        throw new ActionError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: JSON.stringify(e),
+        });
       }
     },
   }),

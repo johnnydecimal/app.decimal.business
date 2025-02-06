@@ -85,38 +85,28 @@ const useEmoji = user.publicMetadata.useEmoji || false;
       const { data, error } = await actions.setUseEmoji({ useEmoji });
       if (!error && data.status === "success") {
         console.log("✅ setUseEmoji.");
-        // It should already be, but
-        useEmojiEl.value = data.useEmoji!.toString();
-
-        useEmojiSaved.innerText = " ■"; // Set text
-        useEmojiSaved.classList.add("green");
-        useEmojiSaved.classList.remove("hidden"); // Make visible
-
-        setTimeout(() => {
-          useEmojiSaved.classList.add("hidden"); // Fade out
-          setTimeout(() => {
-            useEmojiSaved.innerText = ""; // Remove text after fade out
-            useEmojiSaved.classList.remove("green");
-          }, 500); // Match transition duration
-        }, 2000);
-        // TODO flash a red if failure?
-      } else {
-        console.error("setUseEmoji failed:", data?.message);
-        useEmojiEl.value = useEmoji.toString();
-        useEmojiSaved.innerText = " ■"; // Set text
-        useEmojiSaved.classList.add("red");
-        useEmojiSaved.classList.remove("hidden"); // Make visible
-
-        setTimeout(() => {
-          useEmojiSaved.classList.add("hidden"); // Fade out
-          setTimeout(() => {
-            useEmojiSaved.innerText = ""; // Remove text after fade out
-            useEmojiSaved.classList.remove("red");
-          }, 500); // Match transition duration
-        }, 2000);
+        updateStatus(useEmojiSaved, true);
+      } else if (error) {
+        updateStatus(useEmojiSaved, false);
+        console.error("setUseEmoji failed:", error.message);
       }
     });
   });
+
+  function updateStatus(statusEl: HTMLElement | null, success: boolean): void {
+    if (!statusEl) return;
+    statusEl.innerText = " ■";
+    statusEl.classList.add(success ? "green" : "red");
+    statusEl.classList.remove("hidden");
+
+    setTimeout(() => {
+      statusEl.classList.add("hidden");
+      setTimeout(() => {
+        statusEl.innerText = "";
+        statusEl.classList.remove("green", "red");
+      }, 500);
+    }, 2000);
+  }
 </script>
 
 <style lang="scss">
