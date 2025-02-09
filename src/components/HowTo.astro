@@ -50,7 +50,7 @@ const howToEntry = system[howToId] as HowToEntry;
 // const idEmoji = howToEntry.emoji;
 
 //   - Wiki-linking the descriptive text.
-import wikiLinkify from "@helpers/wikiLinkify";
+import wikiLinkify from "@utils/wikiLinkify";
 
 const howToIdForDisplay = howToId.replace(/^\d\d\.\d\d/, "");
 const howToDescription = await marked.parse(

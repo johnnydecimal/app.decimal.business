@@ -49,7 +49,7 @@ const idEntry = system[id] as IdEntry;
 // const idEmoji = idEntry.emoji;
 
 //   - Wiki-linking the descriptive text.
-import wikiLinkify from "@helpers/wikiLinkify";
+import wikiLinkify from "@utils/wikiLinkify";
 
 const idDescription = await marked.parse(wikiLinkify(idEntry.description));
 const idEntrySb = idEntry.extensions?.smallBusiness;

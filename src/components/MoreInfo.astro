@@ -50,7 +50,7 @@ const moreInfoEntry = system[moreInfoId] as MoreInfoEntry;
 // const idEmoji = howToEntry.emoji;
 
 //   - Wiki-linking the descriptive text.
-import wikiLinkify from "@helpers/wikiLinkify";
+import wikiLinkify from "@utils/wikiLinkify";
 
 const moreInfoIdForDisplay = moreInfoId.replace(/^\d\d\.\d\d/, "");
 const moreInfoDescription = await marked.parse(
