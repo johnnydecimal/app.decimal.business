@@ -154,52 +154,38 @@ const obsidianVault = user.publicMetadata.obsidianVault;
 
     useEmojiEl.addEventListener("change", async () => {
       const useEmoji = useEmojiEl.value === "true";
-      const useEmojiSaved = document.getElementById("useEmojiSaved");
-      if (!useEmojiSaved) throw new Error("🚨 useEmojiSaved doesn't exist!");
 
       const { data, error } = await actions.setUseEmoji({ useEmoji });
       if (!error && data.status === "success") {
         console.log("✅ setUseEmoji.");
-        updateStatusIndicator(useEmojiSaved, true);
+        updateStatusIndicator("useEmojiSaved", true);
       } else if (error) {
-        updateStatusIndicator(useEmojiSaved, false);
+        updateStatusIndicator("useEmojiSaved", false);
         console.error("setUseEmoji failed:", error.message);
       }
     });
     // #endregion
 
     // #region ---------------------- JDex app ------------------------------ */
-    // Get the element that will change/detect submit
     const jdexAppEl = document.getElementById("jdexApp") as HTMLSelectElement;
     if (!jdexAppEl) throw new Error("🚨 jdexApp doesn't exist!");
 
-    // Add an event listener to it
     jdexAppEl.addEventListener("change", async () => {
-      // Get user values
       const jdexApp = jdexAppEl.value;
-      const jdexAppSaved = document.getElementById("jdexAppSaved");
-      if (!jdexAppSaved) throw new Error("🚨 jdexAppSaved doesn't exist!");
 
-      // Push to Clerk
       const { data, error } = await actions.setPublicMetadata({
         key: "jdexApp",
         value: jdexApp,
       });
       if (!error && data.status === "success") {
         console.log("✅ setJdexApp.");
-        updateStatusIndicator(jdexAppSaved, true);
+        updateStatusIndicator("jdexAppSaved", true);
       } else if (error) {
-        updateStatusIndicator(jdexAppSaved, false);
+        updateStatusIndicator("jdexAppSaved", false);
         console.error("setJdexApp failed:", error.message);
       }
 
-      // Show/hide Obsidian vault Slice
       const obsidianVault = document.getElementById("ObsidianVault");
-      console.log(
-        "🚀 ~ jdexAppEl.addEventListener ~ obsidianVault:",
-        obsidianVault
-      );
-
       if (jdexApp === "obsidian") {
         obsidianVault!.classList.remove("hidden");
         obsidianVault!.classList.add("visible");
@@ -211,24 +197,17 @@ const obsidianVault = user.publicMetadata.obsidianVault;
     // #endregion
 
     // #region ----------------- Obsidian vault ----------------------------- */
-    // Get the element that will change/detect submit
     const obsidianVaultSubmit = document.getElementById(
       "obsidianVaultSubmit"
     ) as HTMLElement;
-    // Get user values while we're here for easier error checking
     const obsidianVault = document.getElementById(
       "obsidianVault"
     ) as HTMLInputElement;
-    const obsidianVaultSaved = document.getElementById(
-      "obsidianVaultSaved"
-    ) as HTMLElement;
-    if (!obsidianVault || !obsidianVaultSubmit || !obsidianVaultSaved)
+    if (!obsidianVault || !obsidianVaultSubmit)
       throw new Error("🚨 obsidianVault[Submit] doesn't exist!");
 
-    // Add the event listener
     obsidianVaultSubmit.addEventListener("click", async () => {
       console.log("🦆");
-      // Push to Clerk
       const { data, error } = await actions.setPublicMetadata({
         key: "obsidianVault",
         value: obsidianVault.value,
@@ -236,10 +215,10 @@ const obsidianVault = user.publicMetadata.obsidianVault;
 
       if (!error && data.status === "success") {
         console.log("✅ set obsidianVault.");
-        updateStatusIndicator(obsidianVaultSaved, true);
+        updateStatusIndicator("obsidianVaultSaved", true);
       } else if (error) {
         console.error("set obsidianVault failed:", error.message);
-        updateStatusIndicator(obsidianVaultSaved, false);
+        updateStatusIndicator("obsidianVaultSaved", false);
       }
     });
   });

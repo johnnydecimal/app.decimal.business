@@ -1,8 +1,12 @@
 export function updateStatusIndicator(
-  statusEl: HTMLElement | null,
+  elementId: string,
   success: boolean
 ): void {
-  if (!statusEl) return;
+  const statusEl = document.getElementById(elementId);
+  if (!statusEl) {
+    console.error(`🚨 Element with ID "${elementId}" does not exist!`);
+    return;
+  }
 
   if (success) {
     statusEl.innerText = " ■";

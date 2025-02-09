@@ -91,15 +91,13 @@ const useEmoji = user.publicMetadata.useEmoji || false;
 
     useEmojiEl.addEventListener("change", async () => {
       const useEmoji = useEmojiEl.value === "true";
-      const useEmojiSaved = document.getElementById("useEmojiSaved");
-      if (!useEmojiSaved) throw new Error("🚨 useEmojiSaved doesn't exist!");
 
       const { data, error } = await actions.setUseEmoji({ useEmoji });
       if (!error && data.status === "success") {
         console.log("✅ setUseEmoji.");
-        updateStatusIndicator(useEmojiSaved, true);
+        updateStatusIndicator("useEmojiSaved", true);
       } else if (error) {
-        updateStatusIndicator(useEmojiSaved, false);
+        updateStatusIndicator("useEmojiSaved", false);
         console.error("setUseEmoji failed:", error.message);
       }
     });
