@@ -1,4 +1,5 @@
 ---
+// 05.11 System downloads
 import { createClerkClient } from "@clerk/astro/server";
 
 import Slice from "@components/common/Slice.astro";
@@ -79,7 +80,12 @@ const useEmoji = user.publicMetadata.useEmoji || false;
 
 <script>
   import { actions } from "astro:actions";
-  document.addEventListener("DOMContentLoaded", () => {
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const { updateStatusIndicator } = await import(
+      "@utils/updateStatusIndicator"
+    );
+
     const useEmojiEl = document.getElementById("useEmoji") as HTMLSelectElement;
     if (!useEmojiEl) throw new Error("🚨 emojiPref doesn't exist!");
 
@@ -91,35 +97,13 @@ const useEmoji = user.publicMetadata.useEmoji || false;
       const { data, error } = await actions.setUseEmoji({ useEmoji });
       if (!error && data.status === "success") {
         console.log("✅ setUseEmoji.");
-        updateStatus(useEmojiSaved, true);
+        updateStatusIndicator(useEmojiSaved, true);
       } else if (error) {
-        updateStatus(useEmojiSaved, false);
+        updateStatusIndicator(useEmojiSaved, false);
         console.error("setUseEmoji failed:", error.message);
       }
     });
   });
-
-  function updateStatus(statusEl: HTMLElement | null, success: boolean): void {
-    if (!statusEl) return;
-
-    if (success) {
-      statusEl.innerText = " ■";
-      statusEl.classList.add("green");
-      statusEl.classList.remove("red", "hidden");
-
-      setTimeout(() => {
-        statusEl.classList.add("hidden");
-        setTimeout(() => {
-          statusEl.innerText = "";
-          statusEl.classList.remove("green");
-        }, 700);
-      }, 2000);
-    } else {
-      statusEl.innerHTML = ` Error saving: please <a href="#" onclick="location.reload();">reload</a>`;
-      statusEl.classList.add("red");
-      statusEl.classList.remove("green", "hidden");
-    }
-  }
 </script>
 
 <style lang="scss">
