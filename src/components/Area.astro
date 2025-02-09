@@ -51,23 +51,14 @@ const areaTitle = areaEntry.title;
 // const areaEmoji = areaEntry.emoji;
 
 // - All of its other details for the main content.
-const areaDescription = await marked.parse(wikiLinkify(areaEntry.description));
+import { parseMdWikiLink } from "@utils/parseMdWikiLink";
+const areaDescription = await parseMdWikiLink(areaEntry.description);
 const areaEntrySb = areaEntry.extensions?.smallBusiness;
-const areaExamples =
-  areaEntrySb?.examples &&
-  (await marked.parse(wikiLinkify(areaEntrySb.examples)));
-const areaMoreInfo =
-  areaEntrySb?.moreInfo &&
-  (await marked.parse(wikiLinkify(areaEntrySb.moreInfo)));
-const areaExceptions =
-  areaEntrySb?.exceptions &&
-  (await marked.parse(wikiLinkify(areaEntrySb.exceptions)));
-const areaAlsoSee =
-  areaEntrySb?.alsoSee &&
-  (await marked.parse(wikiLinkify(areaEntrySb.alsoSee)));
-const areaRationale =
-  areaEntrySb?.rationale &&
-  (await marked.parse(wikiLinkify(areaEntrySb.rationale)));
+const areaExamples = await parseMdWikiLink(areaEntrySb?.examples);
+const areaMoreInfo = await parseMdWikiLink(areaEntrySb?.moreInfo);
+const areaExceptions = await parseMdWikiLink(areaEntrySb?.exceptions);
+const areaAlsoSee = await parseMdWikiLink(areaEntrySb?.alsoSee);
+const areaRationale = await parseMdWikiLink(areaEntrySb?.rationale);
 
 // - An array of the categories that this area contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.
@@ -78,14 +69,6 @@ import type {
   CategoryEntry,
 } from "src/data/smallBusinessFlat";
 const categories = getChildren(system, area) as CategoryEntry[];
-
-// - Where those descriptions have been rendered to HTML from Markdown.
-import { marked } from "marked";
-import { markedSmartypants } from "marked-smartypants";
-marked.use(markedSmartypants());
-
-// - Wiki-linkify the description
-import wikiLinkify from "@utils/wikiLinkify";
 
 // - To import and use the Slice component.
 import Slice from "./common/Slice.astro";
@@ -190,9 +173,7 @@ const parentSTitle = parentSEntry.title;
   <ol class="acid-list">
     {
       categories.map(async (category) => {
-        const categoryDescription = await marked.parse(
-          wikiLinkify(category.description)
-        );
+        const categoryDescription = await parseMdWikiLink(category.description);
         return (
           <li class="layout-grid-left-right">
             <h3 class="layout-left-item">

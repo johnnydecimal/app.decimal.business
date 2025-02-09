@@ -52,25 +52,23 @@ const categoryTitle = categoryEntry.title;
 // const categoryEmoji = categoryEntry.emoji;
 
 // - All of its other details for the main content.
-const categoryDescription = await marked.parse(
-  wikiLinkify(categoryEntry.description)
-);
+import { parseMdWikiLink } from "@utils/parseMdWikiLink";
+const categoryDescription = await parseMdWikiLink(categoryEntry.description);
 const categoryEntrySb = categoryEntry.extensions?.smallBusiness;
 const categoryExamples =
   categoryEntrySb?.examples &&
-  (await marked.parse(wikiLinkify(categoryEntrySb.examples)));
+  (await parseMdWikiLink(categoryEntrySb.examples));
 const categoryMoreInfo =
   categoryEntrySb?.moreInfo &&
-  (await marked.parse(wikiLinkify(categoryEntrySb.moreInfo)));
+  (await parseMdWikiLink(categoryEntrySb.moreInfo));
 const categoryExceptions =
   categoryEntrySb?.exceptions &&
-  (await marked.parse(wikiLinkify(categoryEntrySb.exceptions)));
+  (await parseMdWikiLink(categoryEntrySb.exceptions));
 const categoryAlsoSee =
-  categoryEntrySb?.alsoSee &&
-  (await marked.parse(wikiLinkify(categoryEntrySb.alsoSee)));
+  categoryEntrySb?.alsoSee && (await parseMdWikiLink(categoryEntrySb.alsoSee));
 const categoryRationale =
   categoryEntrySb?.rationale &&
-  (await marked.parse(wikiLinkify(categoryEntrySb.rationale)));
+  (await parseMdWikiLink(categoryEntrySb.rationale));
 
 // - An array of the IDs that this category contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.
@@ -84,12 +82,12 @@ import type {
 const ids = getChildren(system, category) as IdEntry[];
 
 // - Where those descriptions have been rendered to HTML from Markdown.
-import { marked } from "marked";
-import { markedSmartypants } from "marked-smartypants";
-marked.use(markedSmartypants());
+// import { marked } from "marked";
+// import { markedSmartypants } from "marked-smartypants";
+// marked.use(markedSmartypants());
 
 // - Wiki-linkify the description
-import wikiLinkify from "@utils/wikiLinkify";
+// import wikiLinkify from "@utils/wikiLinkify";
 
 // - A breadcrumb to the parent area.
 const parentANumber = categoryEntry.parentNumber;
@@ -214,7 +212,7 @@ import Slice from "./common/Slice.astro";
         if (!id.number.match(/^\d\d\.\d\d$/)) {
           return;
         }
-        const idDescription = await marked.parse(wikiLinkify(id.description));
+        const idDescription = await parseMdWikiLink(id.description);
         return (
           <li class="layout-grid-left-right">
             <h3 class="layout-left-item">

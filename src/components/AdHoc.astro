@@ -12,9 +12,7 @@ interface Props {
 const { id } = Astro.props;
 
 /* --------------------------------- Imports -------------------------------- */
-import { marked } from "marked";
-import { markedSmartypants } from "marked-smartypants";
-marked.use(markedSmartypants());
+import { parseMdWikiLink } from "@utils/parseMdWikiLink";
 
 import Slice from "@components/common/Slice.astro";
 import wikiLinkify from "@utils/wikiLinkify";
@@ -32,7 +30,7 @@ import AdHoc_05_11 from "@components/AdHoc/AdHoc_05_11.astro";
 /* --------------------------- This item's details -------------------------- */
 const idTitle = system[id]?.title;
 const idEntry = system[id] as AdHocEntry;
-const idDescription = await marked.parse(wikiLinkify(idEntry.description));
+const idDescription = await parseMdWikiLink(idEntry.description);
 // const idEmoji = idEntry.emoji;
 
 /* ------------------------------- Breadcrumbs ------------------------------ */

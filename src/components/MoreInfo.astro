@@ -41,9 +41,7 @@ import system, {
 const moreInfoTitle = system[moreInfoId]?.title;
 
 // - Where those descriptions have been rendered to HTML from Markdown.
-import { marked } from "marked";
-import { markedSmartypants } from "marked-smartypants";
-marked.use(markedSmartypants());
+import { parseMdWikiLink } from "@utils/parseMdWikiLink";
 
 // - All of its other details for the main content.
 const moreInfoEntry = system[moreInfoId] as MoreInfoEntry;
@@ -53,9 +51,7 @@ const moreInfoEntry = system[moreInfoId] as MoreInfoEntry;
 import wikiLinkify from "@utils/wikiLinkify";
 
 const moreInfoIdForDisplay = moreInfoId.replace(/^\d\d\.\d\d/, "");
-const moreInfoDescription = await marked.parse(
-  wikiLinkify(moreInfoEntry.description)
-);
+const moreInfoDescription = await parseMdWikiLink(moreInfoEntry.description);
 // TODO Build something that pulls out the H1s from this text and puts them
 // in the left side as a header. .map(yada...)
 const moreInfoEntryText = await marked.parse(

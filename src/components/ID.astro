@@ -40,9 +40,7 @@ import system, {
 const idTitle = system[id]?.title;
 
 // - Where those descriptions have been rendered to HTML from Markdown.
-import { marked } from "marked";
-import { markedSmartypants } from "marked-smartypants";
-marked.use(markedSmartypants());
+import { parseMdWikiLink } from "@utils/parseMdWikiLink";
 
 // - All of its other details for the main content.
 const idEntry = system[id] as IdEntry;
@@ -51,20 +49,13 @@ const idEntry = system[id] as IdEntry;
 //   - Wiki-linking the descriptive text.
 import wikiLinkify from "@utils/wikiLinkify";
 
-const idDescription = await marked.parse(wikiLinkify(idEntry.description));
+const idDescription = await parseMdWikiLink(idEntry.description);
 const idEntrySb = idEntry.extensions?.smallBusiness;
-const idExamples =
-  idEntrySb?.examples && (await marked.parse(wikiLinkify(idEntrySb.examples)));
-const idMoreInfo =
-  idEntrySb?.moreInfo && (await marked.parse(wikiLinkify(idEntrySb.moreInfo)));
-const idExceptions =
-  idEntrySb?.exceptions &&
-  (await marked.parse(wikiLinkify(idEntrySb.exceptions)));
-const idAlsoSee =
-  idEntrySb?.alsoSee && (await marked.parse(wikiLinkify(idEntrySb.alsoSee)));
-const idRationale =
-  idEntrySb?.rationale &&
-  (await marked.parse(wikiLinkify(idEntrySb.rationale)));
+const idExamples = await parseMdWikiLink(idEntrySb?.examples);
+const idMoreInfo = await parseMdWikiLink(idEntrySb?.moreInfo);
+const idExceptions = await parseMdWikiLink(idEntrySb?.exceptions);
+const idAlsoSee = await parseMdWikiLink(idEntrySb?.alsoSee);
+const idRationale = await parseMdWikiLink(idEntrySb?.rationale);
 
 // - An array of the IDs that this ID contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.
