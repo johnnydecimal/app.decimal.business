@@ -157,11 +157,9 @@ const obsidianVault = user.publicMetadata.obsidianVault;
 
       const { data, error } = await actions.setUseEmoji({ useEmoji });
       if (!error && data.status === "success") {
-        console.log("✅ setUseEmoji.");
         updateStatusIndicator("useEmojiSaved", true);
       } else if (error) {
-        updateStatusIndicator("useEmojiSaved", false);
-        console.error("setUseEmoji failed:", error.message);
+        updateStatusIndicator("useEmojiSaved", false, error.message);
       }
     });
     // #endregion
@@ -178,11 +176,9 @@ const obsidianVault = user.publicMetadata.obsidianVault;
         value: jdexApp,
       });
       if (!error && data.status === "success") {
-        console.log("✅ setJdexApp.");
         updateStatusIndicator("jdexAppSaved", true);
       } else if (error) {
-        updateStatusIndicator("jdexAppSaved", false);
-        console.error("setJdexApp failed:", error.message);
+        updateStatusIndicator("jdexAppSaved", false, error.message);
       }
 
       const obsidianVault = document.getElementById("ObsidianVault");
@@ -207,18 +203,15 @@ const obsidianVault = user.publicMetadata.obsidianVault;
       throw new Error("🚨 obsidianVault[Submit] doesn't exist!");
 
     obsidianVaultSubmit.addEventListener("click", async () => {
-      console.log("🦆");
       const { data, error } = await actions.setPublicMetadata({
         key: "obsidianVault",
         value: obsidianVault.value,
       });
 
       if (!error && data.status === "success") {
-        console.log("✅ set obsidianVault.");
         updateStatusIndicator("obsidianVaultSaved", true);
       } else if (error) {
-        console.error("set obsidianVault failed:", error.message);
-        updateStatusIndicator("obsidianVaultSaved", false);
+        updateStatusIndicator("obsidianVaultSaved", false, error.message);
       }
     });
   });

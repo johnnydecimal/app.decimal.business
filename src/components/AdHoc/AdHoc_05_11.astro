@@ -94,11 +94,9 @@ const useEmoji = user.publicMetadata.useEmoji || false;
 
       const { data, error } = await actions.setUseEmoji({ useEmoji });
       if (!error && data.status === "success") {
-        console.log("✅ setUseEmoji.");
         updateStatusIndicator("useEmojiSaved", true);
       } else if (error) {
-        updateStatusIndicator("useEmojiSaved", false);
-        console.error("setUseEmoji failed:", error.message);
+        updateStatusIndicator("useEmojiSaved", false, error.message);
       }
     });
   });

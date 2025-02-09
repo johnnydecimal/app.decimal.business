@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "npm run generate-search && astro dev",
     "generate-ids": "node src/scripts/generateIds.js",
-    "generate-search": "npx tsx ./src/helpers/generateSearchIndex.ts",
+    "generate-search": "npx tsx ./src/utils/generateSearchIndex.ts",
     "start": "astro dev",
     "build": "npm run generate-search && astro check && astro build",
     "preview": "astro preview",
