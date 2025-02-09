@@ -1,7 +1,6 @@
 ---
 /**
  * The system list view component. So we've navigated to /.
- *
  */
 
 import system, {
@@ -23,9 +22,8 @@ const systemDescription = await parseMdWikiLink(systemEntry.description);
 const areas = getChildren(system, systemEntry.number) as AreaEntry[];
 ---
 
-<!-- Not actually required here as we don't display a system ID, but
-     it keeps consistency with the other components & simplifies CSS.
-  -->
+<!-- This duplication isn't actually required here, but it keeps
+     consistency with the other components & simplifies CSS. -->
 <Slice id="Header" className="active-top">
   <div class="layout-grid-left-right phone-only">
     <h1 class="layout-left-item">{systemTitle}</h1>
@@ -79,26 +77,4 @@ const areas = getChildren(system, systemEntry.number) as AreaEntry[];
 
 <style lang="scss">
   @use "@styles/common" as *;
-
-  // TODO when all's settled, these can probably move out to common.scss
-  :global(#SystemDescription),
-  :global(#ChildrenInParentLabel) {
-    // On mobile, override the grid
-    @include phone-only {
-      .layout-grid-left-right {
-        display: block;
-      }
-      .layout-right-item {
-        border: none;
-        padding-left: 0;
-      }
-    }
-  }
-
-  #Header {
-    h1 {
-      margin: 0;
-      padding-top: 20px;
-    }
-  }
 </style>
