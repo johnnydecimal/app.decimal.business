@@ -61,6 +61,7 @@ const { testRun, title } = Astro.props;
   <body>
     {
       !testRun ? (
+        // Production
         <>
           <SignedOut>
             <main>
@@ -77,6 +78,7 @@ const { testRun, title } = Astro.props;
           </SignedIn>
         </>
       ) : (
+        // Test run - no auth
         <>
           <Search />
           <main>

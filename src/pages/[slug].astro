@@ -100,7 +100,7 @@ if (slug?.match(/^index.html$/)) {
   {entryType === "system" ? <System /> : null}
   {entryType === "area" ? <Area area={slug!} /> : null}
   {entryType === "category" ? <Category category={slug!} /> : null}
-  {entryType === "id" ? <ID id={slug!} /> : null}
+  {entryType === "id" ? <ID id={slug!} testRun={testRun} /> : null}
   {entryType === "ops" ? <OpsManual id={slug!} /> : null}
   {entryType === "howTo" ? <HowTo howToId={slug!} /> : null}
   {entryType === "moreInfo" ? <MoreInfo moreInfoId={slug!} /> : null}

@@ -26,7 +26,7 @@ interface Props {
  */
 
 // - To be passed the number of the id to render. This is the slug.
-const { id } = Astro.props;
+const { id, testRun } = Astro.props;
 
 // - The whole system to reference. Just import it directly.
 import system, {
@@ -111,15 +111,24 @@ const opsManuals = children.filter((child) =>
   child.number.match(/^\d\d\.\d\d\+OPS/)
 );
 
+// Fetch data from the user's Clerk account.
 import { createClerkClient } from "@clerk/astro/server";
-const { userId } = Astro.locals.auth();
-const clerkClient = createClerkClient({
-  secretKey: import.meta.env.CLERK_SECRET_KEY,
-});
-const user = await clerkClient.users.getUser(userId!);
-const obsidianVaultURI = encodeURIComponent(user.publicMetadata.obsidianVault);
-const obsidianPathURI =
-  obsidianVaultURI && encodeURIComponent(`${id} ${idTitle}`);
+let obsidianVaultURI: string | undefined;
+let obsidianPathURI: string | undefined;
+if (!testRun) {
+  console.log("Fetching data from Clerk...");
+  const { userId } = Astro.locals.auth();
+  const clerkClient = createClerkClient({
+    secretKey: import.meta.env.CLERK_SECRET_KEY,
+  });
+  const user = await clerkClient.users.getUser(userId!);
+  obsidianVaultURI = encodeURIComponent(user.publicMetadata.obsidianVault);
+  obsidianPathURI = obsidianVaultURI && encodeURIComponent(`${id} ${idTitle}`);
+} else {
+  console.log("Test run, skipping Clerk data fetch...");
+  obsidianVaultURI = undefined;
+  obsidianPathURI = undefined;
+}
 ---
 
 <Slice id="SystemBreadcrumb" className="secondary-content-bg">
