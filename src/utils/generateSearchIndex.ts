@@ -11,6 +11,9 @@ async function generateSearchIndex() {
       emoji: entry.emoji || null,
       metadata: entry.metadata,
       ...entry.extensions, // Include all fields from extensions
+      ...("isPublic" in entry ? { isPublic: entry.isPublic } : {}),
+      ...(entry.type === "area" ? { isPublic: true } : {}),
+      ...(entry.type === "category" ? { isPublic: true } : {}),
     }));
 
     await writeFile(
