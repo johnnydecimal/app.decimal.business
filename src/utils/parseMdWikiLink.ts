@@ -1,3 +1,6 @@
+/**
+ * @deprecated Use parseAndObfuscate instead.
+ */
 import { marked } from "marked";
 import { markedSmartypants } from "marked-smartypants";
 import wikiLinkify from "./wikiLinkify";

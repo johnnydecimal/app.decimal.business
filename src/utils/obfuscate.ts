@@ -4,5 +4,5 @@ export default function obfuscate(isPublic: boolean, markdown: string): string {
   }
 
   // Replace all alphabetic characters with the Unicode light shade character
-  return markdown.replace(/[a-zA-Z]/g, "░");
+  return markdown.replace(/[a-zA-Z‘’]/g, "░");
 }
