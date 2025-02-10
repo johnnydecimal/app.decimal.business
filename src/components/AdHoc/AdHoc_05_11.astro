@@ -10,6 +10,15 @@ const clerkClient = createClerkClient({
 });
 const user = await clerkClient.users.getUser(userId!);
 const useEmoji = user.publicMetadata.useEmoji || false;
+
+// If this is not set, we default it to true and push it back to Clerk
+let useBlackSquare = user.publicMetadata.useBlackSquare;
+if (useBlackSquare === undefined) {
+  await clerkClient.users.updateUserMetadata(userId!, {
+    publicMetadata: { useBlackSquare: true },
+  });
+  useBlackSquare = true;
+}
 ---
 
 {

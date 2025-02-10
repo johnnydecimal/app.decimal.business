@@ -9,10 +9,19 @@ const clerkClient = createClerkClient({
   secretKey: import.meta.env.CLERK_SECRET_KEY,
 });
 const user = await clerkClient.users.getUser(userId!);
-const firstRunComplete = user.publicMetadata.firstRunComplete || false;
+// const firstRunComplete = user.publicMetadata.firstRunComplete || false;
 const useEmoji = user.publicMetadata.useEmoji || false;
 const jdexApp = user.publicMetadata.jdexApp || "none";
 const obsidianVault = user.publicMetadata.obsidianVault;
+
+// If this is not set, we default it to true and push it back to Clerk
+let useBlackSquare = user.publicMetadata.useBlackSquare;
+if (useBlackSquare === undefined) {
+  await clerkClient.users.updateUserMetadata(userId!, {
+    publicMetadata: { useBlackSquare: true },
+  });
+  useBlackSquare = true;
+}
 ---
 
 {
@@ -69,6 +78,31 @@ const obsidianVault = user.publicMetadata.obsidianVault;
               </option>
             </select>
             <span id="useEmojiSaved" class="saved-indicator hidden" />
+          </div>
+        </div>
+      </Slice>
+
+      <Slice id="SettingsBlackSquare" className="descriptive-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Black square</h3>
+          <div class="layout-right-item">
+            <p>
+              Do you want to use a black square to indicate headers? This
+              applies to file system folder and JDex downloads.
+            </p>
+            <p>
+              I recommend you leave this turned on unless you use a file system
+              that does not support it, e.g. Dropbox.
+            </p>
+            <select name="useBlackSquare" id="useBlackSquare">
+              <option value="false" selected={!useBlackSquare}>
+                No
+              </option>
+              <option value="true" selected={useBlackSquare}>
+                Yes ■
+              </option>
+            </select>
+            <span id="useBlackSquareSaved" class="saved-indicator hidden" />
           </div>
         </div>
       </Slice>
@@ -164,6 +198,26 @@ const obsidianVault = user.publicMetadata.obsidianVault;
     });
     // #endregion
 
+    // #region ------------------------ ■ ----------------------------------- */
+    const useBlackSquareEl = document.getElementById(
+      "useBlackSquare"
+    ) as HTMLSelectElement;
+    if (!useBlackSquareEl) throw new Error("🚨 emojiPref doesn't exist!");
+
+    useBlackSquareEl.addEventListener("change", async () => {
+      const useBlackSquare = useBlackSquareEl.value === "true";
+
+      const { data, error } = await actions.setUseBlackSquare({
+        useBlackSquare,
+      });
+      if (!error && data.status === "success") {
+        updateStatusIndicator("useBlackSquareSaved", true);
+      } else if (error) {
+        updateStatusIndicator("useBlackSquareSaved", false, error.message);
+      }
+    });
+    // #endregion
+
     // #region ---------------------- JDex app ------------------------------ */
     const jdexAppEl = document.getElementById("jdexApp") as HTMLSelectElement;
     if (!jdexAppEl) throw new Error("🚨 jdexApp doesn't exist!");
@@ -214,8 +268,8 @@ const obsidianVault = user.publicMetadata.obsidianVault;
         updateStatusIndicator("obsidianVaultSaved", false, error.message);
       }
     });
+    // #endregion
   });
-  // #endregion document.addEventListener
 </script>
 
 <style lang="scss">

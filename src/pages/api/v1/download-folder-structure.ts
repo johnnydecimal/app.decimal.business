@@ -19,6 +19,8 @@ export const GET: APIRoute = async (context) => {
 
   const user = await clerkClient.users.getUser(userId);
   const useEmoji = user.publicMetadata.useEmoji || false;
+  // This is always set, as we do it whenever we load the page
+  const useBlackSquare = user.publicMetadata.useBlackSquare;
 
   const zip = new JSZip();
 
@@ -30,19 +32,26 @@ export const GET: APIRoute = async (context) => {
     const areaNumber = categoryEntry.parentNumber;
     const areaEntry = system[areaNumber] as AreaEntry;
     const areaTitle = areaEntry.title;
-    let idEmoji, categoryEmoji, areaEmoji;
+
+    let idEmoji = "",
+      categoryEmoji = "",
+      areaEmoji = "";
     if (useEmoji) {
+      // Only use an emoji if the item has one; otherwise, use an empty string
       idEmoji = id.emoji ? " " + id.emoji : "";
       categoryEmoji = categoryEntry.emoji ? " " + categoryEntry.emoji : "";
       areaEmoji = areaEntry.emoji ? " " + areaEntry.emoji : "";
-      zip.folder(
-        `${areaNumber} ${areaTitle}${areaEmoji}/${categoryNumber} ${categoryTitle}${categoryEmoji}/${id.number} ${id.title}${idEmoji}`
-      );
-    } else {
-      zip.folder(
-        `${areaNumber} ${areaTitle}/${categoryNumber} ${categoryTitle}/${id.number} ${id.title}`
-      );
     }
+
+    // If our ID is a header, and useBlackSquare, then do that
+    let idHeaderSquare = "";
+    if (id.isHeader && useBlackSquare) {
+      idHeaderSquare = "■ ";
+    }
+
+    zip.folder(
+      `${areaNumber} ${areaTitle}${areaEmoji}/${categoryNumber} ${categoryTitle}${categoryEmoji}/${id.number} ${idHeaderSquare}${id.title}${idEmoji}`
+    );
   });
 
   const content = await zip.generateAsync({ type: "nodebuffer" });

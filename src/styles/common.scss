@@ -99,6 +99,14 @@
 }
 
 /* -------------------------------- Elements -------------------------------- */
+code {
+  background-color: var(--secondary-content-bg);
+  border: 1px dotted var(--border-strong);
+  border-bottom: 2px solid var(--border-strong);
+  font-family: var(--monospace);
+  padding-inline: 3px;
+}
+
 footer {
   border-top: 2px solid black;
 }

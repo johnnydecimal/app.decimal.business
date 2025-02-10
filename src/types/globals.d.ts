@@ -6,5 +6,6 @@ declare global {
     jdexApp?: "none" | "bear" | "obsidian";
     obsidianVault?: string;
     useEmoji?: boolean;
+    useBlackSquare?: boolean;
   }
 }

@@ -63,6 +63,33 @@ export const server = {
       }
     },
   }),
+  setUseBlackSquare: defineAction({
+    input: z.object({
+      useBlackSquare: z.boolean(),
+    }),
+    handler: async (input, context) => {
+      try {
+        const { userId } = context.locals.auth();
+        const clerkClient = createClerkClient({
+          secretKey: import.meta.env.CLERK_SECRET_KEY,
+        });
+        const user = await clerkClient.users.updateUserMetadata(userId!, {
+          publicMetadata: {
+            useBlackSquare: input.useBlackSquare,
+          },
+        });
+        return {
+          status: "success",
+          useBlackSquare: user.publicMetadata.useBlackSquare,
+        };
+      } catch (e) {
+        throw new ActionError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: JSON.stringify(e),
+        });
+      }
+    },
+  }),
   setPublicMetadata: defineAction({
     input: z.object({
       key: z.string(),
