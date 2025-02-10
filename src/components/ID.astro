@@ -17,12 +17,13 @@ import system, {
   type CategoryEntry,
   type IdEntry,
 } from "src/data/smallBusinessFlat";
+import obfuscate from "@utils/obfuscate";
 import parseAndObfuscate from "@utils/parseAndObfuscate";
 import Slice from "./common/Slice.astro";
 // Get this entry's details
 const idEntry = system[id] as IdEntry;
-const idTitle = system[id]?.title;
 const isPublic = idEntry.isPublic || false;
+const idTitle = obfuscate(isPublic, system[id]?.title);
 
 // All of its other details for the main content
 const idDescription = await parseAndObfuscate(isPublic, idEntry.description);
