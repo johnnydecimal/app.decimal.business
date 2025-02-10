@@ -155,12 +155,17 @@ const parentSTitle = parentSEntry.title;
         }
         const idDescription = await parseMdWikiLink(id.description);
         return (
-          <li class="layout-grid-left-right">
+          <li
+            class={`layout-grid-left-right ${id.isHeader ? "header-item" : ""}`}
+          >
             <h3 class="layout-left-item">
               <a href={`/${id.number}`}>{id.number}</a>
             </h3>
             <div class="layout-right-item">
               <h3>
+                <a class="blackSquare" href={`/${id.number}`}>
+                  {id.isHeader ? "■ " : ""}
+                </a>
                 <a href={`/${id.number}`}>{id.title}</a>
               </h3>
               <div set:html={idDescription} />
