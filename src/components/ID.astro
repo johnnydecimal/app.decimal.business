@@ -1,54 +1,30 @@
 ---
+/**
+ * The ID view component. So we're at /11.11.
+ */
+
 interface Props {
   id: string;
   testRun?: boolean;
 }
-
-/**
- * The ID view component. So we're at /11.11.
- *
- * Shows a single ID, with all of its detail. Shows breadbreadcrumbs
- * to its category and area.
- *
- * So we need:
- * √ To be passed the number of the id to render. This is the slug.
- * √ The whole system to reference. Just import it directly.
- * √ The title of the ID for the main header.
- * √ All of its other details for the main content.
- *   √ Wiki-linking the descriptive text.
- * - Its parent category (number & title), and
- * - Its parent category's parent area (number & title).
- * - Linking the ID header to the ID URL.
- * - Denoting with styles and a ■ whether it's a header.
- *
- * New Dec '24
- * - To import and use the Slice component.
- */
-
-// - To be passed the number of the id to render. This is the slug.
 const { id, testRun } = Astro.props;
 
-// - The whole system to reference. Just import it directly.
+import { createClerkClient } from "@clerk/astro/server";
 import system, {
+  getChildren,
   type SystemEntry,
   type AreaEntry,
   type CategoryEntry,
   type IdEntry,
 } from "src/data/smallBusinessFlat";
+import { parseMdWikiLink } from "@utils/parseMdWikiLink";
+import Slice from "./common/Slice.astro";
 
-// - The title of the ID for the main header.
+// Get this entry's details
+const idEntry = system[id] as IdEntry;
 const idTitle = system[id]?.title;
 
-// - Where those descriptions have been rendered to HTML from Markdown.
-import { parseMdWikiLink } from "@utils/parseMdWikiLink";
-
-// - All of its other details for the main content.
-const idEntry = system[id] as IdEntry;
-// const idEmoji = idEntry.emoji;
-
-//   - Wiki-linking the descriptive text.
-import wikiLinkify from "@utils/wikiLinkify";
-
+// All of its other details for the main content
 const idDescription = await parseMdWikiLink(idEntry.description);
 const idEntrySb = idEntry.extensions?.smallBusiness;
 const idExamples = await parseMdWikiLink(idEntrySb?.examples);
@@ -57,53 +33,27 @@ const idExceptions = await parseMdWikiLink(idEntrySb?.exceptions);
 const idAlsoSee = await parseMdWikiLink(idEntrySb?.alsoSee);
 const idRationale = await parseMdWikiLink(idEntrySb?.rationale);
 
-// - An array of the IDs that this ID contains. Each one of those
-//   needs to contain the ID, title, description, isHeader, emoji.
-import { getChildren } from "src/data/smallBusinessFlat";
-const subIds = getChildren(system, id) as IdEntry[];
-subIds.sort((a, b) => {
-  // if a.number is alphabetically before b.number
-  if (a.number < b.number) {
-    return -1;
-  }
-  // if a.number is alphabetically after b.number
-  if (a.number > b.number) {
-    return 1;
-  }
-  // a must be equal to b
-  return 0;
-});
+// Get all of the sub-IDs that this ID contains
+const subIds = getChildren(system, id);
+const moreInfos = subIds.filter((child) =>
+  child.number.match(/^\d\d\.\d\d\+[0-9]/)
+);
+const opsManuals = subIds.filter((child) =>
+  child.number.match(/^\d\d\.\d\d\+OPS/)
+);
 
-// - Its parent category (number & title), and
-// - Its parent category's parent area (number & title).
+// Breadcrumbs to parent items
 const parentCNumber = idEntry.parentNumber;
 const parentCEntry = system[parentCNumber] as CategoryEntry;
 const parentCTitle = parentCEntry.title;
-
 const parentANumber = parentCEntry.parentNumber;
 const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
-
-// - A breadcrumb to the parent system
 const parentSNumber = parentAEntry.parentNumber;
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 
-// - To import and use the Slice component.
-import Slice from "./common/Slice.astro";
-
-// Get all children of this ID
-const children = getChildren(system, id);
-// Get any 'more info' children, which have a number AC.ID+[0-9]
-const moreInfos = children.filter((child) =>
-  child.number.match(/^\d\d\.\d\d\+[0-9]/)
-);
-const opsManuals = children.filter((child) =>
-  child.number.match(/^\d\d\.\d\d\+OPS/)
-);
-
 // Fetch data from the user's Clerk account.
-import { createClerkClient } from "@clerk/astro/server";
 let obsidianVaultURI: string | undefined;
 let obsidianPathURI: string | undefined;
 if (!testRun) {
@@ -113,13 +63,12 @@ if (!testRun) {
     secretKey: import.meta.env.CLERK_SECRET_KEY,
   });
   const user = await clerkClient.users.getUser(userId!);
-  obsidianVaultURI = encodeURIComponent(user.publicMetadata.obsidianVault);
-  obsidianPathURI = obsidianVaultURI && encodeURIComponent(`${id} ${idTitle}`);
+  obsidianVaultURI = encodeURIComponent(user.publicMetadata.obsidianVault!);
 } else {
   console.log("Test run, skipping Clerk data fetch...");
-  obsidianVaultURI = undefined;
-  obsidianPathURI = undefined;
+  obsidianVaultURI = "obsidian://open?vault=test";
 }
+obsidianPathURI = obsidianVaultURI && encodeURIComponent(`${id} ${idTitle}`);
 ---
 
 <Slice id="SystemBreadcrumb" className="secondary-content-bg">

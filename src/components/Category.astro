@@ -26,20 +26,11 @@ const categoryTitle = categoryEntry.title;
 // All of its other details for the main content.
 const categoryDescription = await parseMdWikiLink(categoryEntry.description);
 const categoryEntrySb = categoryEntry.extensions?.smallBusiness;
-const categoryExamples =
-  categoryEntrySb?.examples &&
-  (await parseMdWikiLink(categoryEntrySb.examples));
-const categoryMoreInfo =
-  categoryEntrySb?.moreInfo &&
-  (await parseMdWikiLink(categoryEntrySb.moreInfo));
-const categoryExceptions =
-  categoryEntrySb?.exceptions &&
-  (await parseMdWikiLink(categoryEntrySb.exceptions));
-const categoryAlsoSee =
-  categoryEntrySb?.alsoSee && (await parseMdWikiLink(categoryEntrySb.alsoSee));
-const categoryRationale =
-  categoryEntrySb?.rationale &&
-  (await parseMdWikiLink(categoryEntrySb.rationale));
+const categoryExamples = await parseMdWikiLink(categoryEntrySb?.examples);
+const categoryMoreInfo = await parseMdWikiLink(categoryEntrySb?.moreInfo);
+const categoryExceptions = await parseMdWikiLink(categoryEntrySb?.exceptions);
+const categoryAlsoSee = await parseMdWikiLink(categoryEntrySb?.alsoSee);
+const categoryRationale = await parseMdWikiLink(categoryEntrySb?.rationale);
 
 // Get all of the IDs that this category contains
 const ids = getChildren(system, category) as IdEntry[];
