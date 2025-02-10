@@ -1,57 +1,28 @@
 ---
 /**
- * The area list view component. So we've navigated to
- * /jdex/10-19.
- *
- * Shows the area and all of its categories. Might it be nice to show
- * the header-IDs as well?
- *
- * ```
- * 🕚 10-19 The teens                                        [emoji, big?]
- *      The description of area ten through nineteen.
- *
- * ## 11 The business & its people
- *       Description
- *       11.10 Documents
- *       11.20 Registrations
- *
- * ## 12 Where we trade...
- *          Description
- * ## 13 ...
- *
- * ```
- *
- * So we need:
- * - To be passed the number of the area to render. This is the slug.
- * - The whole system to reference. Just import it directly.
- * - The title of the area for the main header.
- * - The description and emoji of the area.
- * - An array of the categories that this area contains. Each one of those
- *   needs to contain the ID, title, description, emoji.
- * - Where those descriptions have been rendered to HTML from Markdown.
- * - Linking the category header to the category URL.
- * - A breadcrumb to the parent area.
+ * The area list view component. So we've navigated to /jdex/10-19.
  */
 
-// - To be passed the number of the category to render. This is the slug.
 interface Props {
   area: string;
   testRun?: boolean;
 }
-const { area } = Astro.props;
+const { area, testRun } = Astro.props;
 
-// - The whole system to reference. Just import it directly.
-import system from "src/data/smallBusinessFlat";
+import system, {
+  getChildren,
+  type SystemEntry,
+  type AreaEntry,
+  type CategoryEntry,
+} from "@data/smallBusinessFlat";
+import { parseMdWikiLink } from "@utils/parseMdWikiLink";
+import Slice from "./common/Slice.astro";
 
-// - The title of the area for the main header.
+// Get this entry's details
 const areaEntry = system[area] as AreaEntry;
 const areaTitle = areaEntry.title;
 
-// - The description and emoji of the area.
-// const areaEmoji = areaEntry.emoji;
-
 // - All of its other details for the main content.
-import { parseMdWikiLink } from "@utils/parseMdWikiLink";
 const areaDescription = await parseMdWikiLink(areaEntry.description);
 const areaEntrySb = areaEntry.extensions?.smallBusiness;
 const areaExamples = await parseMdWikiLink(areaEntrySb?.examples);
@@ -62,18 +33,9 @@ const areaRationale = await parseMdWikiLink(areaEntrySb?.rationale);
 
 // - An array of the categories that this area contains. Each one of those
 //   needs to contain the ID, title, description, isHeader, emoji.
-import { getChildren } from "src/data/smallBusinessFlat";
-import type {
-  SystemEntry,
-  AreaEntry,
-  CategoryEntry,
-} from "src/data/smallBusinessFlat";
 const categories = getChildren(system, area) as CategoryEntry[];
 
-// - To import and use the Slice component.
-import Slice from "./common/Slice.astro";
-
-// - A breadcrumb to the parent system.
+// Breadcrumbs to parent items
 const parentSNumber = areaEntry.parentNumber;
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
