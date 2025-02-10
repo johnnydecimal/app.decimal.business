@@ -1,13 +1,13 @@
 ---
 /**
- * The area list view component. So we've navigated to /jdex/10-19.
+ * The area list view component. So we've navigated to /10-19.
  */
 
 interface Props {
   area: string;
   testRun?: boolean;
 }
-const { area, testRun } = Astro.props;
+const { area } = Astro.props;
 
 import system, {
   getChildren,
@@ -22,7 +22,7 @@ import Slice from "./common/Slice.astro";
 const areaEntry = system[area] as AreaEntry;
 const areaTitle = areaEntry.title;
 
-// - All of its other details for the main content.
+// All of its other details for the main content.
 const areaDescription = await parseMdWikiLink(areaEntry.description);
 const areaEntrySb = areaEntry.extensions?.smallBusiness;
 const areaExamples = await parseMdWikiLink(areaEntrySb?.examples);
@@ -31,8 +31,7 @@ const areaExceptions = await parseMdWikiLink(areaEntrySb?.exceptions);
 const areaAlsoSee = await parseMdWikiLink(areaEntrySb?.alsoSee);
 const areaRationale = await parseMdWikiLink(areaEntrySb?.rationale);
 
-// - An array of the categories that this area contains. Each one of those
-//   needs to contain the ID, title, description, isHeader, emoji.
+// Get all of the categories that this area contains
 const categories = getChildren(system, area) as CategoryEntry[];
 
 // Breadcrumbs to parent items

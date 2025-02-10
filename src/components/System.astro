@@ -17,8 +17,7 @@ const systemEntry = getAllByType(system, "system")[0] as SystemEntry;
 const systemTitle = systemEntry.title;
 const systemDescription = await parseMdWikiLink(systemEntry.description);
 
-// An array of the areas that this area contains. Each one of those
-// needs to contain the ID, title, description, isHeader, emoji.
+// Get all of the areas that this system contains
 const areas = getChildren(system, systemEntry.number) as AreaEntry[];
 ---
 

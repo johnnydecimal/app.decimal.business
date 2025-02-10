@@ -1,58 +1,29 @@
 ---
 /**
- * The category list view component. So we've navigated to
- * /jdex/11.
- *
- * Shows the category and all of its IDs, grouped by header.
- *
- * ```
- * 🕚 11 Eleven                                          [emoji, big?]
- *      The description of category eleven.
- *
- * ## 11.10 Official documents 🗂 ️
- *          Description
- *    11.11 Structure & registrations
- *          Description
- *    11.12 ...
- *
- * ## 11.20 Planning, contingencies, & insurance 🧭
- *          Description
- *    11.21 ...
- * ```
- *
- * So we need:
- * √ To be passed the number of the category to render. This is the slug.
- * √ The whole system to reference. Just import it directly.
- * √ The title of the category for the main header.
- * √ The description and emoji of the category.
- * √ All of its other details for the main content.
- * √ An array of the IDs that this category contains. Each one of those
- *   needs to contain the ID, title, description, isHeader, emoji.
- * √ Where those descriptions have been rendered to HTML from Markdown.
- * √ Linking the ID header to the ID URL.
- * √ Denoting with styles and a ■ whether it's a header.
- * - A breadcrumb to the parent area.
+ * The category list view component. So we've navigated to /11.
  */
 
-// - To be passed the number of the category to render. This is the slug.
 interface Props {
   category: string;
   testRun?: boolean;
 }
 const { category } = Astro.props;
 
-// - The whole system to reference. Just import it directly.
-import system from "src/data/smallBusinessFlat";
+import system, {
+  getChildren,
+  type SystemEntry,
+  type AreaEntry,
+  type CategoryEntry,
+  type IdEntry,
+} from "@data/smallBusinessFlat";
+import { parseMdWikiLink } from "@utils/parseMdWikiLink";
+import Slice from "./common/Slice.astro";
 
-// - The title of the category for the main header.
+// Get this entry's details
 const categoryEntry = system[category] as CategoryEntry;
 const categoryTitle = categoryEntry.title;
 
-// - The description and emoji of the category.
-// const categoryEmoji = categoryEntry.emoji;
-
-// - All of its other details for the main content.
-import { parseMdWikiLink } from "@utils/parseMdWikiLink";
+// All of its other details for the main content.
 const categoryDescription = await parseMdWikiLink(categoryEntry.description);
 const categoryEntrySb = categoryEntry.extensions?.smallBusiness;
 const categoryExamples =
@@ -70,37 +41,16 @@ const categoryRationale =
   categoryEntrySb?.rationale &&
   (await parseMdWikiLink(categoryEntrySb.rationale));
 
-// - An array of the IDs that this category contains. Each one of those
-//   needs to contain the ID, title, description, isHeader, emoji.
-import { getChildren } from "src/data/smallBusinessFlat";
-import type {
-  SystemEntry,
-  AreaEntry,
-  CategoryEntry,
-  IdEntry,
-} from "src/data/smallBusinessFlat";
+// Get all of the IDs that this category contains
 const ids = getChildren(system, category) as IdEntry[];
 
-// - Where those descriptions have been rendered to HTML from Markdown.
-// import { marked } from "marked";
-// import { markedSmartypants } from "marked-smartypants";
-// marked.use(markedSmartypants());
-
-// - Wiki-linkify the description
-// import wikiLinkify from "@utils/wikiLinkify";
-
-// - A breadcrumb to the parent area.
+// Breadcrumbs to parent items
 const parentANumber = categoryEntry.parentNumber;
 const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
-
-// - A breadcrumb to the parent system
 const parentSNumber = parentAEntry.parentNumber;
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
-
-// - To import and use the Slice component.
-import Slice from "./common/Slice.astro";
 ---
 
 <Slice id="SystemBreadcrumb" className="secondary-content-bg">
