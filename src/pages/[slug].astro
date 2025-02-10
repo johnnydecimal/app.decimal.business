@@ -50,49 +50,6 @@ if (!slug) {
     entryType = systemEntry.type;
   }
 }
-
-/*
-if (slug?.match(/^index.html$/)) {
-  entryType = "system";
-} else if (slug?.match(/^[0-9]0-[0-9]9$/)) {
-  entryType = "area";
-} else if (slug?.match(/^\d\d$/)) {
-  // We've pattern-matched, but does it exist? Gracefully fail if not
-  if (!!sb[slug]) {
-    entryType = "category";
-  } else {
-    entryType = "no-match";
-  }
-} else if (slug?.match(/^\d\d\.\d\d$/)) {
-  // We've pattern-matched, but does it exist? Gracefully fail if not
-  if (!!sb[slug]) {
-    entryType = "id";
-  } else {
-    entryType = "no-match";
-  }
-} else if (slug?.match(/^\d\d\.\d\d\+OPS\d+$/)) {
-  if (!!sb[slug]) {
-    entryType = "ops";
-  } else {
-    entryType = "no-match";
-  }
-} else if (slug?.match(/^\d\d\.\d\d\+HOW\d+$/)) {
-  if (!!sb[slug]) {
-    entryType = "howTo";
-  } else {
-    entryType = "no-match";
-  }
-} else if (slug?.match(/^\d\d\.\d\d\+[0-9]/)) {
-  if (!!sb[slug]) {
-    entryType = "moreInfo";
-  } else {
-    entryType = "no-match";
-  }
-} else {
-  entryType = "no-match";
-  // None of the above
-}
-*/
 ---
 
 <!-- TODO title needs fixing in case of / etc. -->

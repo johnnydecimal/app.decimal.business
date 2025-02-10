@@ -63,6 +63,7 @@ export interface IdEntry extends BaseEntry {
   type: "id";
   parentNumber: string; // All ids must have a parent category
   isHeader?: boolean;
+  isPublic?: boolean;
   extensions?: {
     smallBusiness?: SmallBusinessExtension;
   };
@@ -369,6 +370,7 @@ const flattenedData: FlattenedData = {
     parentNumber: "11",
     type: "id",
     title: "Compliance",
+    isPublic: true,
     description:
       "Any laws, codes, or standards relevant to your business, including inspections and audits that may be required. ",
     metadata: {
