@@ -5,7 +5,6 @@ const entry: IdEntry = {
   title: "Structure & registrations",
   description:
     "Proof of the business’ existence, trading structure, and name – where it all begins!",
-  parentNumber: "",
   type: "id",
   metadata: {
     createdDate: "2025-02-11T22:13:41.586Z",

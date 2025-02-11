@@ -26,10 +26,11 @@ export const GET: APIRoute = async (context) => {
 
   const ids = getAllByType(system, "id") as IdEntry[];
   ids.forEach((id) => {
-    const categoryNumber = id.parentNumber;
+    const categoryNumber = id.number.split(".")[0];
     const categoryEntry = system[categoryNumber] as CategoryEntry;
     const categoryTitle = categoryEntry.title;
-    const areaNumber = categoryEntry.parentNumber;
+    const firstDigit = categoryNumber.charAt(0);
+    const areaNumber = `${firstDigit}0-${firstDigit}9`;
     const areaEntry = system[areaNumber] as AreaEntry;
     const areaTitle = areaEntry.title;
 

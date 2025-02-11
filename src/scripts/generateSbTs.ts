@@ -111,7 +111,6 @@ async function generateTsFiles() {
         number: parsed.number,
         title: parsed.title,
         description: parsed.description || "",
-        parentNumber: "", // default value; update manually if needed
         type: "id",
         metadata: {
           createdDate: new Date().toISOString(),

@@ -34,15 +34,16 @@ const idDescription = await parseMd(idEntry.description);
 // const idEmoji = idEntry.emoji;
 
 /* ------------------------------- Breadcrumbs ------------------------------ */
-const parentCNumber = idEntry.parentNumber;
+const parentCNumber = idEntry.number.split(".")[0];
 const parentCEntry = system[parentCNumber] as CategoryEntry;
 const parentCTitle = parentCEntry.title;
 
-const parentANumber = parentCEntry.parentNumber;
+const firstDigit = parentCNumber.charAt(0);
+const parentANumber = `${firstDigit}0-${firstDigit}9`;
 const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
-const parentSNumber = parentAEntry.parentNumber;
+const parentSNumber = "J82";
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 ---

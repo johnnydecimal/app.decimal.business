@@ -36,7 +36,6 @@ export interface SystemEntry extends BaseEntry {
 
 export interface AreaEntry extends BaseEntry {
   type: "area";
-  parentNumber: string; // All areas must have a parent system
   extensions?: {
     smallBusiness?: SmallBusinessExtension;
   };
@@ -44,7 +43,6 @@ export interface AreaEntry extends BaseEntry {
 
 export interface CategoryEntry extends BaseEntry {
   type: "category";
-  parentNumber: string; // All categories must have a parent area
   extensions?: {
     smallBusiness?: SmallBusinessExtension;
   };
@@ -61,7 +59,6 @@ interface SmallBusinessExtension {
 
 export interface IdEntry extends BaseEntry {
   type: "id";
-  parentNumber: string; // All ids must have a parent category
   isHeader?: boolean;
   isPublic?: boolean;
   extensions: {
@@ -71,7 +68,6 @@ export interface IdEntry extends BaseEntry {
 
 export interface OpsEntry extends BaseEntry {
   type: "ops";
-  parentNumber: string; // All ids must have a parent category
   // isHeader?: boolean;
   extensions: {
     // TODO these are too restrictive: just use the HOWTO pattern
@@ -89,7 +85,6 @@ export interface OpsEntry extends BaseEntry {
 export interface HowToEntry extends BaseEntry {
   type: "howTo";
   isPublic?: boolean;
-  parentNumber: string;
   extensions: {
     howTo: {
       text: string; // freeform
@@ -102,7 +97,6 @@ export interface MoreInfoEntry extends BaseEntry {
   // They're just 11.11+ …words, not 11.11+HOW1 or whatever
   type: "moreInfo";
   isPublic?: boolean;
-  parentNumber: string;
   extensions: {
     moreInfo: {
       text: string; // freeform
@@ -112,7 +106,6 @@ export interface MoreInfoEntry extends BaseEntry {
 
 export interface AdHocEntry extends BaseEntry {
   type: "adHoc";
-  parentNumber: string;
   // Every page is a unique Astro component. We don't define it in the object
 }
 
@@ -146,7 +139,6 @@ const flattenedData: FlattenedData = {
     number: "10-19",
     title: "Company administration",
     type: "area",
-    parentNumber: "J82",
     description:
       "In [[10-19]], our goal is that these categories could be the foundation of _any_ business, regardless of the product or service you offer.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
@@ -163,7 +155,6 @@ const flattenedData: FlattenedData = {
   },
   "11": {
     number: "11",
-    parentNumber: "10-19",
     title: "The business & its people",
     type: "category",
     description:
@@ -180,7 +171,6 @@ const flattenedData: FlattenedData = {
   },
   "11.00": {
     number: "11.00",
-    parentNumber: "11",
     type: "id",
     description: "The 'standard zero' ID for category management.",
     title: "Category management",
@@ -195,7 +185,6 @@ const flattenedData: FlattenedData = {
   },
   "11.10": {
     number: "11.10",
-    parentNumber: "11",
     type: "id",
     title: "Official documents",
     emoji: "🗂️",
@@ -220,8 +209,7 @@ const flattenedData: FlattenedData = {
   "11.11": {
     ...id_11_11,
     // number: "11.11",
-    // parentNumber: "11",
-    // type: "id",
+    //     // type: "id",
     // title: "Structure & registrations",
     // description:
     //   "Proof of the business’ existence, **trading MODIFIED TEST structure**, `and name` -- where it all begins! LINK> [[11.12]] <LINK",
@@ -247,7 +235,6 @@ const flattenedData: FlattenedData = {
   },
   "11.11+HOW1": {
     number: "11.11+HOW1",
-    parentNumber: "11.11",
     type: "howTo",
     title: "How to register a business in Australia",
     description:
@@ -264,7 +251,6 @@ const flattenedData: FlattenedData = {
   },
   "11.11+1": {
     number: "11.11+1",
-    parentNumber: "11.11",
     type: "moreInfo",
     title: "Why would you want to register a business in Australia?",
     isPublic: true,
@@ -282,7 +268,6 @@ const flattenedData: FlattenedData = {
   },
   "11.11+2": {
     number: "11.11+2",
-    parentNumber: "11.11",
     type: "moreInfo",
     title:
       "Some other more info article whose title I can't be bothered making up",
@@ -300,7 +285,6 @@ const flattenedData: FlattenedData = {
   },
   "11.11+OPS1": {
     number: "11.11+OPS1",
-    parentNumber: "11.11",
     type: "ops",
     title: "Saving invoices, receipts, or bills in an inbox",
     description: "A one-liner.",
@@ -346,7 +330,6 @@ const flattenedData: FlattenedData = {
   },
   "11.12": {
     number: "11.12",
-    parentNumber: "11",
     type: "id",
     title: "Licences, permits, & accreditations",
     description:
@@ -372,7 +355,6 @@ const flattenedData: FlattenedData = {
   },
   "11.13": {
     number: "11.13",
-    parentNumber: "11",
     type: "id",
     title: "Compliance",
     isPublic: true,
@@ -398,7 +380,6 @@ const flattenedData: FlattenedData = {
   },
   "11.13+1": {
     number: "11.13+1",
-    parentNumber: "11.13",
     type: "moreInfo",
     title: "Just an example of a more info for testing",
     isPublic: true,
@@ -416,7 +397,6 @@ const flattenedData: FlattenedData = {
   },
   "11.14": {
     number: "11.14",
-    parentNumber: "11",
     type: "id",
     title: "Other legal matters",
     description:
@@ -441,7 +421,6 @@ const flattenedData: FlattenedData = {
   },
   "11.15": {
     number: "11.15",
-    parentNumber: "11",
     type: "id",
     title: "Selling it or closing it",
     description:
@@ -465,7 +444,6 @@ const flattenedData: FlattenedData = {
   },
   "11.20": {
     number: "11.20",
-    parentNumber: "11",
     type: "id",
     title: "Planning, contingencies, & insurance",
     isHeader: true,
@@ -489,7 +467,6 @@ const flattenedData: FlattenedData = {
   },
   "11.21": {
     number: "11.21",
-    parentNumber: "11",
     type: "id",
     title: "Business plan",
     description:
@@ -513,7 +490,6 @@ const flattenedData: FlattenedData = {
   },
   "11.22": {
     number: "11.22",
-    parentNumber: "11",
     type: "id",
     title: "Business insurance, incidents, & claims",
     description:
@@ -539,7 +515,6 @@ const flattenedData: FlattenedData = {
   },
   "11.23": {
     number: "11.23",
-    parentNumber: "11",
     type: "id",
     title: "Risk & emergency management plans",
     isPublic: true,
@@ -564,7 +539,6 @@ const flattenedData: FlattenedData = {
   },
   "11.24": {
     number: "11.24",
-    parentNumber: "11",
     type: "id",
     title: "Collected wisdom & analysis",
     description:
@@ -588,7 +562,6 @@ const flattenedData: FlattenedData = {
   },
   "11.30": {
     number: "11.30",
-    parentNumber: "11",
     type: "id",
     title: "Behaviours, ethics, & culture",
     isHeader: true,
@@ -612,7 +585,6 @@ const flattenedData: FlattenedData = {
   },
   "11.31": {
     number: "11.31",
-    parentNumber: "11",
     type: "id",
     title: "Internal policies",
     description:
@@ -637,7 +609,6 @@ const flattenedData: FlattenedData = {
   },
   "11.32": {
     number: "11.32",
-    parentNumber: "11",
     type: "id",
     title: "External policies",
     description:
@@ -662,7 +633,6 @@ const flattenedData: FlattenedData = {
   },
   "11.33": {
     number: "11.33",
-    parentNumber: "11",
     type: "id",
     title: "Dispute resolution",
     description: "Solving problems and complaints professionally and calmly. ",
@@ -685,7 +655,6 @@ const flattenedData: FlattenedData = {
   },
   "11.40": {
     number: "11.40",
-    parentNumber: "11",
     type: "id",
     title: "Our people",
     isHeader: true,
@@ -709,7 +678,6 @@ const flattenedData: FlattenedData = {
   },
   "11.41": {
     number: "11.41",
-    parentNumber: "11",
     type: "id",
     title: "Hiring",
     description:
@@ -733,7 +701,6 @@ const flattenedData: FlattenedData = {
   },
   "11.42": {
     number: "11.42",
-    parentNumber: "11",
     type: "id",
     title: "Staff record keeping",
     description:
@@ -756,7 +723,6 @@ const flattenedData: FlattenedData = {
   },
   "11.43": {
     number: "11.43",
-    parentNumber: "11",
     type: "id",
     title: "Formal reviews",
     description: "How’s everybody doing? ",
@@ -779,7 +745,6 @@ const flattenedData: FlattenedData = {
   },
   "11.44": {
     number: "11.44",
-    parentNumber: "11",
     type: "id",
     title: "Farewells",
     description:
@@ -804,7 +769,6 @@ const flattenedData: FlattenedData = {
   },
   "11.45": {
     number: "11.45",
-    parentNumber: "11",
     type: "id",
     title: "Animals as staff",
     description: "For all (working) creatures, great and small. ",
@@ -829,7 +793,6 @@ const flattenedData: FlattenedData = {
   },
   "11.50": {
     number: "11.50",
-    parentNumber: "11",
     type: "id",
     title: "Training & professional development",
     isHeader: true,
@@ -853,7 +816,6 @@ const flattenedData: FlattenedData = {
   },
   "11.51": {
     number: "11.51",
-    parentNumber: "11",
     type: "id",
     title: "Mandatory training",
     description:
@@ -879,7 +841,6 @@ const flattenedData: FlattenedData = {
   },
   "11.52": {
     number: "11.52",
-    parentNumber: "11",
     type: "id",
     title: "Optional training",
     description:
@@ -904,7 +865,6 @@ const flattenedData: FlattenedData = {
   },
   "11.53": {
     number: "11.53",
-    parentNumber: "11",
     type: "id",
     title: "Other learning & self-improvement",
     description:
@@ -928,7 +888,6 @@ const flattenedData: FlattenedData = {
   },
   "11.60": {
     number: "11.60",
-    parentNumber: "11",
     type: "id",
     title: "Other people & organisations",
     isHeader: true,
@@ -952,7 +911,6 @@ const flattenedData: FlattenedData = {
   },
   "11.61": {
     number: "11.61",
-    parentNumber: "11",
     type: "id",
     title: "Professional bodies",
     description:
@@ -976,7 +934,6 @@ const flattenedData: FlattenedData = {
   },
   "11.62": {
     number: "11.62",
-    parentNumber: "11",
     type: "id",
     title: "Seeking advice & support",
     description:
@@ -1001,7 +958,6 @@ const flattenedData: FlattenedData = {
   },
   "11.63": {
     number: "11.63",
-    parentNumber: "11",
     type: "id",
     title: "Networking & new business",
     description:
@@ -1024,7 +980,6 @@ const flattenedData: FlattenedData = {
   },
   "11.70": {
     number: "11.70",
-    parentNumber: "11",
     type: "id",
     title: "Library",
     isHeader: true,
@@ -1047,7 +1002,6 @@ const flattenedData: FlattenedData = {
   },
   "11.71": {
     number: "11.71",
-    parentNumber: "11",
     type: "id",
     title: "My business & people library",
     description: "xxx ",
@@ -1070,7 +1024,6 @@ const flattenedData: FlattenedData = {
     type: "category",
     number: "12",
     title: "Where I trade & how I get around",
-    parentNumber: "10-19",
     description:
       "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
     emoji: "🗺️",
@@ -1081,14 +1034,12 @@ const flattenedData: FlattenedData = {
     number: "12.01",
     title: "Twelve oh-one",
     description: "Twelve oh-one",
-    parentNumber: "12",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: { smallBusiness: {} },
   },
   "20-29": {
     type: "area",
     number: "20-29",
-    parentNumber: "J82",
     title: "A longer area title that definitely wraps",
     description: "The twenties",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
@@ -1097,7 +1048,6 @@ const flattenedData: FlattenedData = {
     type: "category",
     number: "21",
     title: "TESTENV Twenty-one with as long as a word is practicable?",
-    parentNumber: "20-29",
     description:
       "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
     emoji: "🗺️",
@@ -1108,7 +1058,6 @@ const flattenedData: FlattenedData = {
     number: "21.11",
     title: "TESTENV Twenty-one-eleven-lots-of-hyphens",
     description: "This is a test ID",
-    parentNumber: "21",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: { smallBusiness: {} },
   },
@@ -1144,22 +1093,23 @@ export function findById(
 }
 
 // Utility function to validate the entire data structure
-export function validateStructure(data: FlattenedData): string[] {
-  const errors: string[] = [];
-  for (const key in data) {
-    const entry = data[key];
-    if (
-      "parentNumber" in entry &&
-      entry.parentNumber &&
-      !data[entry.parentNumber]
-    ) {
-      errors.push(
-        `Entry with key ${key} has a non-existent parent ID ${entry.parentNumber}.`
-      );
-    }
-  }
-  return errors;
-}
+// Doesn't work now that we deleted the parentNumber field.
+// export function validateStructure(data: FlattenedData): string[] {
+//   const errors: string[] = [];
+//   for (const key in data) {
+//     const entry = data[key];
+//     if (
+//       "parentNumber" in entry &&
+//       entry.parentNumber &&
+//       !data[entry.parentNumber]
+//     ) {
+//       errors.push(
+//         `Entry with key ${key} has a non-existent parent ID ${entry.parentNumber}.`
+//       );
+//     }
+//   }
+//   return errors;
+// }
 
 // Example usage
 // const allAreas = getAllByType(flattenedData, "area");

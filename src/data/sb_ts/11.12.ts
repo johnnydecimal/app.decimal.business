@@ -5,7 +5,6 @@ const entry: IdEntry = {
   title: "Licences, permits, & accreditations",
   description:
     "Documents that you apply for, or are earned via training, so you can legally provide a service or operate in a particular location.",
-  parentNumber: "",
   type: "id",
   metadata: {
     createdDate: "2025-02-11T22:13:41.588Z",

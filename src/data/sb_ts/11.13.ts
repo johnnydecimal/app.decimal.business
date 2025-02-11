@@ -5,7 +5,6 @@ const entry: IdEntry = {
   title: "Compliance",
   description:
     "Any laws, codes, or standards relevant to your business, including inspections and audits that may be required.",
-  parentNumber: "",
   type: "id",
   metadata: {
     createdDate: "2025-02-11T22:13:41.588Z",
