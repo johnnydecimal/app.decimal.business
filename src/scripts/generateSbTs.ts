@@ -79,8 +79,7 @@ function parseMarkdown(markdown: string): SmallBusinessEntry {
         .slice(idx + 1, endIdx)
         .join("\n")
         .trim()
-        .replace(/\n+$/, "")
-        .replace(/\n\n-+$/, "");
+        .replace(/\n+$/, "");
       // Only add if there is some content.
       if (content) {
         (entry as any)[SECTION_MAP[headerKey]] = content;
