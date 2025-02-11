@@ -9,6 +9,10 @@ interface Props {
 }
 const { category } = Astro.props;
 
+// #region Clerk user
+const { userId } = Astro.locals.auth();
+// #endregion
+
 import system, {
   getChildren,
   type SystemEntry,
@@ -18,6 +22,8 @@ import system, {
 } from "@data/smallBusinessFlat";
 import { parseMdWikiLink } from "@utils/parseMdWikiLink";
 import Slice from "./common/Slice.astro";
+import obfuscate from "@utils/obfuscate";
+import parseAndObfuscate from "@utils/parseAndObfuscate";
 
 // Get this entry's details
 const categoryEntry = system[category] as CategoryEntry;
@@ -34,6 +40,30 @@ const categoryRationale = await parseMdWikiLink(categoryEntrySb?.rationale);
 
 // Get all of the IDs that this category contains
 const ids = getChildren(system, category) as IdEntry[];
+// Process those IDs and their descriptions
+const processedIds = await Promise.all(
+  ids.map(async (id) => {
+    // If id isn't a pure JD ID, e.g. it might be +OPS: ignore
+    if (!id.number.match(/^\d\d\.\d\d$/)) {
+      return null; // Return null to filter out later
+    }
+
+    let idTitle, idDescription;
+    if (!userId) {
+      idTitle = obfuscate(id.isPublic || false, id.title);
+      idDescription = parseAndObfuscate(id.isPublic || false, id.description);
+    } else {
+      idTitle = id.title;
+      idDescription = await parseMdWikiLink(id.description);
+    }
+
+    return {
+      ...id,
+      title: idTitle,
+      description: idDescription,
+    };
+  })
+).then((results) => results.filter((id): id is IdEntry => id !== null));
 
 // Breadcrumbs to parent items
 const parentANumber = categoryEntry.parentNumber;
@@ -148,12 +178,7 @@ const parentSTitle = parentSEntry.title;
 <Slice id="ChildrenInParentList" className="secondary-content-bg">
   <ol class="acid-list">
     {
-      ids.map(async (id) => {
-        // If id isn't a pure JD ID, e.g. it might be +OPS, ignore
-        if (!id.number.match(/^\d\d\.\d\d$/)) {
-          return;
-        }
-        const idDescription = await parseMdWikiLink(id.description);
+      processedIds.map((id) => {
         return (
           <li
             class={`layout-grid-left-right ${id.isHeader ? "header-item" : ""}`}
@@ -168,7 +193,7 @@ const parentSTitle = parentSEntry.title;
                 </a>
                 <a href={`/${id.number}`}>{id.title}</a>
               </h3>
-              <div set:html={idDescription} />
+              <div set:html={id.description} />
             </div>
           </li>
         );

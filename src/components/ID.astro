@@ -9,6 +9,9 @@ interface Props {
   testRun?: boolean;
 }
 const { id, testRun } = Astro.props;
+// #endregion
+
+// #region Clerk user
 const { userId } = Astro.locals.auth();
 // #endregion
 
