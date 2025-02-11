@@ -51,8 +51,8 @@ const processedIds = await Promise.all(
       idTitle = id.title;
       idDescription = await parseMd(id.description);
     } else {
-      idTitle = parseMd(id.title, false, id.isPublic);
-      idDescription = parseMd(id.description, true, id.isPublic);
+      idTitle = await parseMd(id.title, false, !!id.isPublic);
+      idDescription = await parseMd(id.description, true, !!id.isPublic);
     }
 
     return {
