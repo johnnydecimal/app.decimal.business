@@ -121,6 +121,10 @@ select {
   font-family: var(--monospace);
 }
 
+ul {
+  padding-inline-start: 18px; // Way too much otherwise
+}
+
 // Spans the page width without margin. Used for full-width effects e.g.
 // background & border. No content should live at this level.
 // This blob of style only includes stuff that applies to the whole slice,
@@ -273,6 +277,10 @@ select {
   @include tablet-portrait-up {
     // This <p> is set:html'd
     .layout-right-item :global(p:first-child) {
+      margin-top: 0;
+    }
+    // If the first thing is an ul, it's the same
+    .layout-right-item :global(ul:first-child) {
       margin-top: 0;
     }
   }
