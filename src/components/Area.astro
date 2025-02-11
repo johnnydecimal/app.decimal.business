@@ -24,12 +24,12 @@ const areaTitle = areaEntry.title;
 
 // All of its other details for the main content.
 const areaDescription = await parseMd(areaEntry.description);
-const areaEntrySb = areaEntry.extensions?.smallBusiness;
-const areaExamples = await parseMd(areaEntrySb?.examples ?? "");
-const areaMoreInfo = await parseMd(areaEntrySb?.moreInfo ?? "");
-const areaExceptions = await parseMd(areaEntrySb?.exceptions ?? "");
-const areaAlsoSee = await parseMd(areaEntrySb?.alsoSee ?? "");
-const areaRationale = await parseMd(areaEntrySb?.rationale ?? "");
+const sb = areaEntry.extensions?.smallBusiness;
+const areaExamples = sb?.examples && (await parseMd(sb.examples));
+const areaMoreInfo = sb?.moreInfo && (await parseMd(sb.moreInfo));
+const areaExceptions = sb?.exceptions && (await parseMd(sb.exceptions));
+const areaAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
+const areaRationale = sb?.rationale && (await parseMd(sb?.rationale));
 
 // Get all of the categories that this area contains
 const categories = getChildren(system, area) as CategoryEntry[];
