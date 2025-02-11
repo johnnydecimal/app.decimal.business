@@ -64,8 +64,8 @@ export interface IdEntry extends BaseEntry {
   parentNumber: string; // All ids must have a parent category
   isHeader?: boolean;
   isPublic?: boolean;
-  extensions?: {
-    smallBusiness?: SmallBusinessExtension;
+  extensions: {
+    smallBusiness: SmallBusinessExtension;
   };
 }
 
@@ -519,6 +519,7 @@ const flattenedData: FlattenedData = {
     parentNumber: "11",
     type: "id",
     title: "Risk & emergency management plans",
+    isPublic: true,
     description:
       "Awareness of the risks that can affect your business and instructions for what to do if they occur. ",
     metadata: {
@@ -1059,6 +1060,7 @@ const flattenedData: FlattenedData = {
     description: "Twelve oh-one",
     parentNumber: "12",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: { smallBusiness: {} },
   },
   "20-29": {
     type: "area",
@@ -1085,6 +1087,7 @@ const flattenedData: FlattenedData = {
     description: "This is a test ID",
     parentNumber: "21",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: { smallBusiness: {} },
   },
 };
 
