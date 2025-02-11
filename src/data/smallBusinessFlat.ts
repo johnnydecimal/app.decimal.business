@@ -88,6 +88,7 @@ export interface OpsEntry extends BaseEntry {
 
 export interface HowToEntry extends BaseEntry {
   type: "howTo";
+  isPublic?: boolean;
   parentNumber: string;
   extensions: {
     howTo: {

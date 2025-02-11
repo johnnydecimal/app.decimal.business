@@ -9,7 +9,7 @@ const clerkClient = createClerkClient({
   secretKey: import.meta.env.CLERK_SECRET_KEY,
 });
 const user = await clerkClient.users.getUser(userId!);
-const useEmoji = user.publicMetadata.useEmoji || false;
+// const useEmoji = user.publicMetadata.useEmoji || false;
 
 // If this is not set, we default it to true and push it back to Clerk
 let useBlackSquare = user.publicMetadata.useBlackSquare;

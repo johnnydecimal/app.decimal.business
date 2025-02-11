@@ -5,7 +5,7 @@ test("ID 11.11", async ({ page }) => {
   await expect(page).toHaveScreenshot({ fullPage: true });
 
   // There should be a link to the vault
-  const link = await page.getByRole("link", {
+  const link = page.getByRole("link", {
     name: "11.11 Structure & registrations",
   });
   await expect(link).toBeVisible();

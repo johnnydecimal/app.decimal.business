@@ -35,6 +35,7 @@ export const area_00_09: FlattenedData = {
       createdDate: "2025-01-01",
       updatedDate: "2025-01-01",
     },
+    extensions: { smallBusiness: {} },
   },
   "00.10": {
     number: "00.10",
@@ -44,6 +45,7 @@ export const area_00_09: FlattenedData = {
     description: "This section contains the system's help pages.",
     isHeader: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
   },
   "00.11": {
     number: "00.11",
@@ -52,6 +54,7 @@ export const area_00_09: FlattenedData = {
     parentNumber: "00",
     description: "Welcome to the system. Here's where to find help.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
   },
   "00.20": {
     number: "00.20",
@@ -61,6 +64,7 @@ export const area_00_09: FlattenedData = {
     description: "This section contains your user settings.",
     isHeader: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
   },
   "00.21": {
     number: "00.21",

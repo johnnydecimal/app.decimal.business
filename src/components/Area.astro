@@ -15,7 +15,7 @@ import system, {
   type AreaEntry,
   type CategoryEntry,
 } from "@data/smallBusinessFlat";
-import { parseMdWikiLink } from "@utils/parseMdWikiLink";
+import parseMd from "@utils/parseMd";
 import Slice from "./common/Slice.astro";
 
 // Get this entry's details
@@ -23,13 +23,13 @@ const areaEntry = system[area] as AreaEntry;
 const areaTitle = areaEntry.title;
 
 // All of its other details for the main content.
-const areaDescription = await parseMdWikiLink(areaEntry.description);
+const areaDescription = await parseMd(areaEntry.description);
 const areaEntrySb = areaEntry.extensions?.smallBusiness;
-const areaExamples = await parseMdWikiLink(areaEntrySb?.examples);
-const areaMoreInfo = await parseMdWikiLink(areaEntrySb?.moreInfo);
-const areaExceptions = await parseMdWikiLink(areaEntrySb?.exceptions);
-const areaAlsoSee = await parseMdWikiLink(areaEntrySb?.alsoSee);
-const areaRationale = await parseMdWikiLink(areaEntrySb?.rationale);
+const areaExamples = await parseMd(areaEntrySb?.examples ?? "");
+const areaMoreInfo = await parseMd(areaEntrySb?.moreInfo ?? "");
+const areaExceptions = await parseMd(areaEntrySb?.exceptions ?? "");
+const areaAlsoSee = await parseMd(areaEntrySb?.alsoSee ?? "");
+const areaRationale = await parseMd(areaEntrySb?.rationale ?? "");
 
 // Get all of the categories that this area contains
 const categories = getChildren(system, area) as CategoryEntry[];
@@ -134,7 +134,7 @@ const parentSTitle = parentSEntry.title;
   <ol class="acid-list">
     {
       categories.map(async (category) => {
-        const categoryDescription = await parseMdWikiLink(category.description);
+        const categoryDescription = await parseMd(category.description);
         return (
           <li class="layout-grid-left-right">
             <h3 class="layout-left-item">

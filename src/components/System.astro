@@ -9,13 +9,13 @@ import system, {
   type SystemEntry,
   type AreaEntry,
 } from "@data/smallBusinessFlat";
-import { parseMdWikiLink } from "@utils/parseMdWikiLink";
+import parseMd from "@utils/parseMd";
 import Slice from "./common/Slice.astro";
 
 // Get this entry's details
 const systemEntry = getAllByType(system, "system")[0] as SystemEntry;
 const systemTitle = systemEntry.title;
-const systemDescription = await parseMdWikiLink(systemEntry.description);
+const systemDescription = await parseMd(systemEntry.description);
 
 // Get all of the areas that this system contains
 const areas = getChildren(system, systemEntry.number) as AreaEntry[];
@@ -55,7 +55,7 @@ const areas = getChildren(system, systemEntry.number) as AreaEntry[];
   <ol class="acid-list">
     {
       areas.map(async (area) => {
-        const areaDescription = await parseMdWikiLink(area.description);
+        const areaDescription = await parseMd(area.description);
         return (
           <li class="layout-grid-left-right">
             <h3 class="layout-left-item">

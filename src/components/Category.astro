@@ -20,7 +20,7 @@ import system, {
   type CategoryEntry,
   type IdEntry,
 } from "@data/smallBusinessFlat";
-import { parseMdWikiLink } from "@utils/parseMdWikiLink";
+import parseMd from "@utils/parseMd";
 import Slice from "./common/Slice.astro";
 import obfuscate from "@utils/obfuscate";
 import parseAndObfuscate from "@utils/parseAndObfuscate";
@@ -30,13 +30,13 @@ const categoryEntry = system[category] as CategoryEntry;
 const categoryTitle = categoryEntry.title;
 
 // All of its other details for the main content.
-const categoryDescription = await parseMdWikiLink(categoryEntry.description);
+const categoryDescription = await parseMd(categoryEntry.description);
 const categoryEntrySb = categoryEntry.extensions?.smallBusiness;
-const categoryExamples = await parseMdWikiLink(categoryEntrySb?.examples);
-const categoryMoreInfo = await parseMdWikiLink(categoryEntrySb?.moreInfo);
-const categoryExceptions = await parseMdWikiLink(categoryEntrySb?.exceptions);
-const categoryAlsoSee = await parseMdWikiLink(categoryEntrySb?.alsoSee);
-const categoryRationale = await parseMdWikiLink(categoryEntrySb?.rationale);
+const categoryExamples = await parseMd(categoryEntrySb?.examples ?? "");
+const categoryMoreInfo = await parseMd(categoryEntrySb?.moreInfo ?? "");
+const categoryExceptions = await parseMd(categoryEntrySb?.exceptions ?? "");
+const categoryAlsoSee = await parseMd(categoryEntrySb?.alsoSee ?? "");
+const categoryRationale = await parseMd(categoryEntrySb?.rationale ?? "");
 
 // Get all of the IDs that this category contains
 const ids = getChildren(system, category) as IdEntry[];
@@ -54,7 +54,7 @@ const processedIds = await Promise.all(
       idDescription = parseAndObfuscate(id.isPublic || false, id.description);
     } else {
       idTitle = id.title;
-      idDescription = await parseMdWikiLink(id.description);
+      idDescription = await parseMd(id.description);
     }
 
     return {

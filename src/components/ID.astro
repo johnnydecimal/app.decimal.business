@@ -86,9 +86,9 @@ const moreInfos: { number: string; title: string }[] = moreInfoEntries.map(
   }
 );
 
-const opsManuals = subIds.filter((child) =>
-  child.number.match(/^\d\d\.\d\d\+OPS/)
-);
+// const opsManuals = subIds.filter((child) =>
+//   child.number.match(/^\d\d\.\d\d\+OPS/)
+// );
 
 // Breadcrumbs to parent items
 const parentCNumber = idEntry.parentNumber;
@@ -233,6 +233,7 @@ const parentSTitle = parentSEntry.title;
 }
 
 {
+  /*
   opsManuals.length > 0 ? (
     <Slice id="OpsManuals" className="descriptive-text">
       <div class="layout-grid-left-right">
@@ -254,6 +255,7 @@ const parentSTitle = parentSEntry.title;
       </div>
     </Slice>
   ) : null
+*/
 }
 <!-- #endregion -->
 

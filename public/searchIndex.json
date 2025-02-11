@@ -83,7 +83,8 @@
     "metadata": {
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
-    }
+    },
+    "smallBusiness": {}
   },
   {
     "number": "00.10",
@@ -94,7 +95,8 @@
     "metadata": {
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
-    }
+    },
+    "smallBusiness": {}
   },
   {
     "number": "00.11",
@@ -105,7 +107,8 @@
     "metadata": {
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
-    }
+    },
+    "smallBusiness": {}
   },
   {
     "number": "00.20",
@@ -116,7 +119,8 @@
     "metadata": {
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
-    }
+    },
+    "smallBusiness": {}
   },
   {
     "number": "00.21",
@@ -247,7 +251,8 @@
     },
     "moreInfo": {
       "text": "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n"
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "11.11+2",
@@ -318,6 +323,21 @@
       "alsoSee": "Manage ongoing training or education in [[11.50]], but store a copy of the proof of completion here if it helps you meet compliance obligations. ",
       "rationale": "",
       "links": ""
+    },
+    "isPublic": true
+  },
+  {
+    "number": "11.13+1",
+    "title": "Just an example of a more info for testing",
+    "description": "A simple guide to registering a proprietary company in Australia.",
+    "type": "moreInfo",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2024-11-19",
+      "updatedDate": "2024-11-19"
+    },
+    "moreInfo": {
+      "text": "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n"
     },
     "isPublic": true
   },
