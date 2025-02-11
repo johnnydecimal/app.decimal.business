@@ -1027,7 +1027,7 @@ const flattenedData: FlattenedData = {
     title: "Library",
     isHeader: true,
     emoji: "Books📚",
-    description: "",
+    description: "Your system library",
     metadata: {
       createdDate: "2024-11-19",
       updatedDate: "2024-11-19",

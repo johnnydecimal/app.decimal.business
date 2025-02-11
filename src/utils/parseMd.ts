@@ -26,6 +26,10 @@ export default async function parseMd(
   returnHtml: boolean = true,
   isPublic: boolean = true
 ): Promise<string> {
+  console.log("🚀 ~ isPublic:", isPublic);
+  console.log("🚀 ~ returnHtml:", returnHtml);
+  console.log("🚀 ~ markdown:", markdown);
+
   // This returns a string with all the links wiki-linked. It's still Markdown.
   const wikiLinkedMarkdown = wikiLinkify(markdown) as string;
 

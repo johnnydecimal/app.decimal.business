@@ -22,8 +22,6 @@ import system, {
 } from "@data/smallBusinessFlat";
 import parseMd from "@utils/parseMd";
 import Slice from "./common/Slice.astro";
-import obfuscate from "@utils/obfuscate";
-import parseAndObfuscate from "@utils/parseAndObfuscate";
 
 // Get this entry's details
 const categoryEntry = system[category] as CategoryEntry;
@@ -31,12 +29,12 @@ const categoryTitle = categoryEntry.title;
 
 // All of its other details for the main content.
 const categoryDescription = await parseMd(categoryEntry.description);
-const categoryEntrySb = categoryEntry.extensions?.smallBusiness;
-const categoryExamples = await parseMd(categoryEntrySb?.examples ?? "");
-const categoryMoreInfo = await parseMd(categoryEntrySb?.moreInfo ?? "");
-const categoryExceptions = await parseMd(categoryEntrySb?.exceptions ?? "");
-const categoryAlsoSee = await parseMd(categoryEntrySb?.alsoSee ?? "");
-const categoryRationale = await parseMd(categoryEntrySb?.rationale ?? "");
+const sb = categoryEntry.extensions?.smallBusiness;
+const categoryExamples = sb?.examples && (await parseMd(sb.examples));
+const categoryMoreInfo = sb?.moreInfo && (await parseMd(sb.moreInfo));
+const categoryExceptions = sb?.exceptions && (await parseMd(sb.exceptions));
+const categoryAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
+const categoryRationale = sb?.rationale && (await parseMd(sb.rationale));
 
 // Get all of the IDs that this category contains
 const ids = getChildren(system, category) as IdEntry[];
@@ -49,12 +47,12 @@ const processedIds = await Promise.all(
     }
 
     let idTitle, idDescription;
-    if (!userId) {
-      idTitle = obfuscate(id.isPublic || false, id.title);
-      idDescription = parseAndObfuscate(id.isPublic || false, id.description);
-    } else {
+    if (userId) {
       idTitle = id.title;
       idDescription = await parseMd(id.description);
+    } else {
+      idTitle = parseMd(id.title, false, id.isPublic);
+      idDescription = parseMd(id.description, true, id.isPublic);
     }
 
     return {
