@@ -1036,7 +1036,11 @@ export function getChildren(
   data: FlattenedData,
   parentNumber: string
 ): FlattenedEntry[] {
-  if (parentNumber.match(/\d0-\d9/)) {
+  if (parentNumber.match(/[A-Z]\d\d/)) {
+    // System provided. Get areas.
+    return Object.values(data).filter((entry) => entry.type === "area");
+  } else if (parentNumber.match(/\d0-\d9/)) {
+    // Area provided. Get categories that match.
     console.log("Area number:", parentNumber);
     // This is an area. Find all entries whose number starts with the first
     // two digits of the area number.
@@ -1044,6 +1048,12 @@ export function getChildren(
       (entry) =>
         entry.type === "category" &&
         entry.number.charAt(0) === parentNumber.charAt(0)
+    );
+  } else if (parentNumber.match(/^\d\d$/)) {
+    // Category provided. Get IDs that match.
+    console.log("Category number:", parentNumber);
+    return Object.values(data).filter(
+      (entry) => entry.type === "id" && entry.number.startsWith(parentNumber)
     );
   }
 }
