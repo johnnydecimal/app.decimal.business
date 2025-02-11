@@ -1,62 +1,62 @@
 ---
-interface Props {
-  moreInfoId: string;
-  testRun?: boolean;
-}
-
 /**
- * The HowTo view component. So we're at /11.11+HOWx.
- *
- * Shows a single ID, with all of its detail. Shows breadcrumbs
- * to its category and area.
- *
- * So we need:
- * √ To be passed the number of the id to render. This is the slug.
- * √ The whole system to reference. Just import it directly.
- * √ The title of the ID for the main header.
- * √ All of its other details for the main content.
- *   √ Wiki-linking the descriptive text.
- * - Its parent category (number & title), and
- * - Its parent category's parent area (number & title).
- * - Linking the ID header to the ID URL.
- * - Denoting with styles and a ■ whether it's a header.
- *
- * New Dec '24
- * - To import and use the Slice component.
+ * The MoreInfo view component. So we're at /11.11+[0-9].
  */
 
-// - To be passed the number of the id to render. This is the slug.
+// #region Props --------------------------------------------------------------
+interface Props {
+  moreInfoId: string;
+}
 const { moreInfoId } = Astro.props;
+// #endregion
 
-// - The whole system to reference. Just import it directly.
+// #region Clerk user
+const { userId } = Astro.locals.auth();
+// #endregion
+
+// #region Imports ------------------------------------------------------------
+// Data
 import system, {
   type SystemEntry,
   type AreaEntry,
   type CategoryEntry,
   type IdEntry,
   type MoreInfoEntry,
-} from "src/data/smallBusinessFlat";
+} from "@data/smallBusinessFlat";
+// Utils
+import parseMd from "@utils/parseMd";
+// Components
+import Slice from "./common/Slice.astro";
+// #endregion
 
-// - The title of the ID for the main header.
-const moreInfoTitle = system[moreInfoId]?.title;
-
-// - Where those descriptions have been rendered to HTML from Markdown.
-import { parseMdWikiLink } from "@utils/parseMdWikiLink";
-
-// - All of its other details for the main content.
+// #region Entry: core details ------------------------------------------------
 const moreInfoEntry = system[moreInfoId] as MoreInfoEntry;
-// const idEmoji = howToEntry.emoji;
+const isPublic = moreInfoEntry.isPublic || false;
+const moreInfoIdForDisplay = moreInfoEntry.number.replace(/^\d\d\.\d\d/, "");
 
-//   - Wiki-linking the descriptive text.
-import wikiLinkify from "@utils/wikiLinkify";
-
-const moreInfoIdForDisplay = moreInfoId.replace(/^\d\d\.\d\d/, "");
-const moreInfoDescription = await parseMdWikiLink(moreInfoEntry.description);
+let moreInfoTitle: string;
+let moreInfoDescription: string;
+let moreInfoEntryText: string;
+if (userId) {
+  moreInfoTitle = moreInfoEntry.title;
+  moreInfoDescription = await parseMd(moreInfoEntry.description);
+  moreInfoEntryText = await parseMd(moreInfoEntry.extensions?.moreInfo.text);
+} else {
+  moreInfoTitle = await parseMd(moreInfoEntry.title, false, isPublic);
+  moreInfoDescription = await parseMd(
+    moreInfoEntry.description,
+    true,
+    isPublic
+  );
+  console.log("🚀 ~ moreInfoDescription:", moreInfoDescription);
+  moreInfoEntryText = await parseMd(
+    moreInfoEntry.extensions?.moreInfo.text,
+    true,
+    isPublic
+  );
+}
 // TODO Build something that pulls out the H1s from this text and puts them
 // in the left side as a header. .map(yada...)
-const moreInfoEntryText = await marked.parse(
-  wikiLinkify(moreInfoEntry.extensions?.moreInfo.text)
-);
 
 // - Its parent category (number & title), and
 // - Its parent category's parent area (number & title).
@@ -75,9 +75,6 @@ const parentATitle = parentAEntry.title;
 const parentSNumber = parentAEntry.parentNumber;
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
-
-// - To import and use the Slice component.
-import Slice from "./common/Slice.astro";
 ---
 
 <Slice id="SystemBreadcrumb" className="secondary-content-bg">
@@ -143,17 +140,6 @@ import Slice from "./common/Slice.astro";
     <div class="layout-right-item" set:html={moreInfoEntryText} />
   </div>
 </Slice>
-
-<!-- {
-  idExamples ? (
-    <Slice id="IDExamples" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">Examples</h3>
-        <div class="layout-right-item" set:html={idExamples} />
-      </div>
-    </Slice>
-  ) : null
-} -->
 
 <!-- TODO: add Ops manuals in this ID :-) -->
 

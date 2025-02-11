@@ -6,9 +6,8 @@
 // #region Props --------------------------------------------------------------
 interface Props {
   id: string;
-  testRun?: boolean;
 }
-const { id, testRun } = Astro.props;
+const { id } = Astro.props;
 // #endregion
 
 // #region Clerk user
@@ -49,7 +48,7 @@ let idRationale: string | undefined;
 
 // If we have a signed-in user, show them the ID. If not, obfuscate it.
 if (userId) {
-  idTitle = system[id]?.title;
+  idTitle = idEntry.title;
   idDescription = await parseAndObfuscate(true, system[id]?.description);
   idExamples = await parseAndObfuscate(true, sb.examples);
   idMoreInfo = await parseAndObfuscate(true, sb.moreInfo);

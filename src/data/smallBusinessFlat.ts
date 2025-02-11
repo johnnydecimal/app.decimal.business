@@ -100,6 +100,7 @@ export interface MoreInfoEntry extends BaseEntry {
   // These entries don't need an ID; or rather, we don't _use_ the ID
   // They're just 11.11+ …words, not 11.11+HOW1 or whatever
   type: "moreInfo";
+  isPublic?: boolean;
   parentNumber: string;
   extensions: {
     moreInfo: {
@@ -263,6 +264,7 @@ const flattenedData: FlattenedData = {
     parentNumber: "11.11",
     type: "moreInfo",
     title: "Why would you want to register a business in Australia?",
+    isPublic: true,
     description:
       "A simple guide to registering a proprietary company in Australia.",
     metadata: {
@@ -388,6 +390,24 @@ const flattenedData: FlattenedData = {
           "Manage ongoing training or education in [[11.50]], but store a copy of the proof of completion here if it helps you meet compliance obligations. ",
         rationale: "",
         links: "",
+      },
+    },
+  },
+  "11.13+1": {
+    number: "11.13+1",
+    parentNumber: "11.13",
+    type: "moreInfo",
+    title: "Just an example of a more info for testing",
+    isPublic: true,
+    description:
+      "A simple guide to registering a proprietary company in Australia.",
+    metadata: {
+      createdDate: "2024-11-19",
+      updatedDate: "2024-11-19",
+    },
+    extensions: {
+      moreInfo: {
+        text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
       },
     },
   },
