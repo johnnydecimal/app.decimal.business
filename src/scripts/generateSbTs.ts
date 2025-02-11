@@ -132,7 +132,12 @@ async function generateTsFiles() {
       ];
       extKeys.forEach((key) => {
         if ((parsed as any)[key]) {
-          finalEntry.extensions.smallBusiness[key] = (parsed as any)[key];
+          (
+            finalEntry.extensions.smallBusiness as Record<
+              string,
+              string | undefined
+            >
+          )[key] = (parsed as any)[key];
         }
       });
 

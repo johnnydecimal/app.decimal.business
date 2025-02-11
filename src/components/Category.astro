@@ -63,11 +63,14 @@ const processedIds = await Promise.all(
   })
 ).then((results) => results.filter((id): id is IdEntry => id !== null));
 
-// Breadcrumbs to parent items
-const parentANumber = categoryEntry.parentNumber;
+// For category entries, compute the parent area number from the category's first digit.
+const firstDigit = categoryEntry.number.charAt(0);
+const parentANumber = `${firstDigit}0-${firstDigit}9`;
 const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
-const parentSNumber = parentAEntry.parentNumber;
+
+// The system parent's number is always "J82".
+const parentSNumber = "J82";
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 ---

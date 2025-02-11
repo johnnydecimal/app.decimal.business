@@ -34,8 +34,8 @@ const areaRationale = sb?.rationale && (await parseMd(sb?.rationale));
 // Get all of the categories that this area contains
 const categories = getChildren(system, area) as CategoryEntry[];
 
-// Breadcrumbs to parent items
-const parentSNumber = areaEntry.parentNumber;
+// For area entries, the parent's system number is always "J82".
+const parentSNumber = "J82";
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 ---
