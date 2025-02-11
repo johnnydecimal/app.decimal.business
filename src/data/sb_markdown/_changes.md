@@ -1,0 +1,1 @@
+- Removing header `## Ops manual` from text files.

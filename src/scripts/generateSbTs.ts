@@ -3,6 +3,7 @@ import { fileURLToPath } from "url";
 import { dirname } from "path";
 import { promises as fs } from "fs";
 import * as path from "path";
+import type { IdEntry } from "@data/smallBusinessFlat";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -79,7 +80,7 @@ function parseMarkdown(markdown: string): SmallBusinessEntry {
         .join("\n")
         .trim()
         .replace(/\n+$/, "")
-        .replace(/\n\n---$/, "");
+        .replace(/\n\n-+$/, "");
       // Only add if there is some content.
       if (content) {
         (entry as any)[SECTION_MAP[headerKey]] = content;
@@ -102,18 +103,24 @@ async function generateTsFiles() {
     if (file.endsWith(".md")) {
       const filePath = path.join(inputDir, file);
       const markdown = await fs.readFile(filePath, "utf-8");
-      const entry = parseMarkdown(markdown);
+      const parsed = parseMarkdown(markdown);
 
-      // Build an object string where each text value is JSON.stringified.
-      // Non-existent sections are omitted.
-      const props: string[] = [];
-      props.push(`number: ${JSON.stringify(entry.number)}`);
-      props.push(`title: ${JSON.stringify(entry.title)}`);
-      if (entry.description) {
-        props.push(`description: ${JSON.stringify(entry.description)}`);
-      }
-      // Build the extensions.smallBusiness object from the remaining supported fields.
-      const extProps: string[] = [];
+      // Construct a final entry conforming to IdEntry.
+      // Note: Since markdown doesn't provide all required fields (e.g. parentNumber),
+      // we are defaulting them. Adjust as needed.
+      const finalEntry: IdEntry = {
+        number: parsed.number,
+        title: parsed.title,
+        description: parsed.description || "",
+        parentNumber: "", // default value; update manually if needed
+        type: "id",
+        metadata: {
+          createdDate: new Date().toISOString(),
+          updatedDate: new Date().toISOString(),
+        },
+        extensions: { smallBusiness: {} },
+      };
+
       const extKeys: (keyof SmallBusinessEntry)[] = [
         "opsManual",
         "examples",
@@ -125,20 +132,18 @@ async function generateTsFiles() {
         "emoji",
       ];
       extKeys.forEach((key) => {
-        if (entry[key]) {
-          extProps.push(`${key}: ${JSON.stringify(entry[key])}`);
+        if ((parsed as any)[key]) {
+          finalEntry.extensions.smallBusiness[key] = (parsed as any)[key];
         }
       });
 
-      props.push(`extensions: { smallBusiness: { ${extProps.join(", ")} } }`);
-
-      const tsObject = `{
-  ${props.join(",\n  ")}
-}`;
-
+      const tsObject = JSON.stringify(finalEntry, null, 2);
       const tsContent = `// Auto-generated from ${file}
-export default ${tsObject} as const;
+import type { IdEntry } from "@data/smallBusinessFlat";
+const entry: IdEntry = ${tsObject};
+export default entry;
 `;
+
       const outputFileName = file.replace(/\.md$/, ".ts");
       const outputPath = path.join(outputDir, outputFileName);
       await fs.writeFile(outputPath, tsContent, "utf-8");
