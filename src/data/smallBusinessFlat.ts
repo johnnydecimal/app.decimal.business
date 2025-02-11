@@ -1035,7 +1035,7 @@ export function getAllByType(
 export function getChildren(
   data: FlattenedData,
   parentNumber: string
-): FlattenedEntry[] {
+): FlattenedEntry[] | undefined {
   if (parentNumber.match(/[A-Z]\d\d/)) {
     // System provided. Get areas.
     return Object.values(data).filter((entry) => entry.type === "area");
@@ -1054,6 +1054,15 @@ export function getChildren(
     console.log("Category number:", parentNumber);
     return Object.values(data).filter(
       (entry) => entry.type === "id" && entry.number.startsWith(parentNumber)
+    );
+  } else if (parentNumber.match(/^\d\d\.\d\d$/)) {
+    // ID provided. Get all sub-IDs.
+    return Object.values(data).filter(
+      (entry) =>
+        (entry.type === "moreInfo" ||
+          entry.type === "howTo" ||
+          entry.type === "ops") &&
+        entry.number.startsWith(parentNumber)
     );
   }
 }

@@ -68,11 +68,16 @@ if (userId) {
 
 // Get all of the sub-IDs that this ID contains
 const subIds = getChildren(system, id);
-const moreInfoEntries = subIds.filter((child) =>
-  child.number.match(/^\d\d\.\d\d\+[0-9]/)
-) as MoreInfoEntry[];
-const moreInfos: { number: string; title: string }[] = moreInfoEntries.map(
-  (entry) => {
+
+// let howTos, opsManuals;
+let moreInfos: { number: string; title: string }[] = [];
+
+if (subIds) {
+  // Generate moreInfos
+  const moreInfoEntries = subIds.filter((child) =>
+    child.number.match(/^\d\d\.\d\d\+[0-9]/)
+  ) as MoreInfoEntry[];
+  moreInfos = moreInfoEntries.map((entry) => {
     if (!userId) {
       return {
         number: entry.number,
@@ -83,8 +88,10 @@ const moreInfos: { number: string; title: string }[] = moreInfoEntries.map(
       number: entry.number,
       title: entry.title,
     };
-  }
-);
+  });
+  // Generate howTos
+  // Generate opsManuals
+}
 
 // const opsManuals = subIds.filter((child) =>
 //   child.number.match(/^\d\d\.\d\d\+OPS/)
@@ -216,7 +223,7 @@ const parentSTitle = parentSEntry.title;
 }
 
 {
-  moreInfos.length > 0 ? (
+  moreInfos.length ? (
     <Slice id="MoreInfos" className="descriptive-text">
       <div class="layout-grid-left-right">
         <h3 class="layout-left-item">More info</h3>
