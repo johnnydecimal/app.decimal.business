@@ -8,6 +8,7 @@ interface Props {
   testRun?: boolean;
 }
 const { id, testRun } = Astro.props;
+const { userId } = Astro.locals.auth();
 
 import { createClerkClient } from "@clerk/astro/server";
 import system, {
@@ -20,13 +21,16 @@ import system, {
 import obfuscate from "@utils/obfuscate";
 import parseAndObfuscate from "@utils/parseAndObfuscate";
 import Slice from "./common/Slice.astro";
+import { parseMdWikiLink } from "@utils/parseMdWikiLink";
+import wikiLinkify from "@utils/wikiLinkify";
 // Get this entry's details
 const idEntry = system[id] as IdEntry;
 const isPublic = idEntry.isPublic || false;
 const idTitle = obfuscate(isPublic, system[id]?.title);
 
 // All of its other details for the main content
-const idDescription = await parseAndObfuscate(isPublic, idEntry.description);
+// const idDescription = await parseAndObfuscate(isPublic, idEntry.description);
+const idDescription = await parseMdWikiLink(wikiLinkify(idEntry.description));
 const idEntrySb = idEntry.extensions?.smallBusiness;
 const idExamples = await parseAndObfuscate(isPublic, idEntrySb?.examples);
 const idMoreInfo = await parseAndObfuscate(isPublic, idEntrySb?.moreInfo);
