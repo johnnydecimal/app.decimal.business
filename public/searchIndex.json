@@ -12,7 +12,8 @@
     "smallBusiness": {
       "alsoSee": "Just an 'also see' to test rendering'.",
       "rationale": "Some rationale so that we have a little more to go on, and the rationale is that more is better right?\n\n- A simple.\n- Bullet."
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "12",
@@ -23,7 +24,8 @@
     "metadata": {
       "createdDate": "2024-11-18",
       "updatedDate": "2024-11-18"
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "21",
@@ -34,7 +36,8 @@
     "metadata": {
       "createdDate": "2024-11-18",
       "updatedDate": "2024-11-18"
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "J82",
@@ -56,7 +59,8 @@
     "metadata": {
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "00",
@@ -67,7 +71,8 @@
     "metadata": {
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "00.00",
@@ -133,7 +138,8 @@
     "metadata": {
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "05.11",
@@ -159,7 +165,8 @@
     "smallBusiness": {
       "exceptions": "Just some text in an exceptions field so we can **see** _how_ `it` renders with a [[11.11]] wiki-link for good measure.",
       "rationale": "It helps us design these pages if there's more than one descriptive item."
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "11.00",
@@ -311,7 +318,8 @@
       "alsoSee": "Manage ongoing training or education in [[11.50]], but store a copy of the proof of completion here if it helps you meet compliance obligations. ",
       "rationale": "",
       "links": ""
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "11.14",
@@ -846,7 +854,8 @@
     "metadata": {
       "createdDate": "2024-11-18",
       "updatedDate": "2024-11-18"
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "21.11",
