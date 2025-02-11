@@ -1,6 +1,11 @@
 #!/usr/bin/env ts-node
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 import { promises as fs } from "fs";
 import * as path from "path";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // The keys we'll support from the markdown. If a header does not exist then it is ignored.
 // We map markdown header names (in lowercase) to our schema keys.
@@ -72,7 +77,9 @@ function parseMarkdown(markdown: string): SmallBusinessEntry {
       const content = lines
         .slice(idx + 1, endIdx)
         .join("\n")
-        .trim();
+        .trim()
+        .replace(/\n+$/, "")
+        .replace(/\n\n---$/, "");
       // Only add if there is some content.
       if (content) {
         (entry as any)[SECTION_MAP[headerKey]] = content;
@@ -84,8 +91,8 @@ function parseMarkdown(markdown: string): SmallBusinessEntry {
 }
 
 async function generateTsFiles() {
-  const inputDir = path.join(__dirname, "../src/data/sb_markdown");
-  const outputDir = path.join(__dirname, "../src/data/sb_ts");
+  const inputDir = path.join(__dirname, "../data/sb_markdown");
+  const outputDir = path.join(__dirname, "../data/sb_ts");
 
   // Ensure the output directory exists
   await fs.mkdir(outputDir, { recursive: true });
