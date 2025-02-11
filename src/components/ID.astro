@@ -13,7 +13,7 @@ const { userId } = Astro.locals.auth();
 // #endregion
 
 // #region Imports ------------------------------------------------------------
-import { createClerkClient } from "@clerk/astro/server";
+// Data
 import system, {
   getChildren,
   type SystemEntry,
@@ -21,11 +21,12 @@ import system, {
   type CategoryEntry,
   type IdEntry,
 } from "src/data/smallBusinessFlat";
+// Utils
 import obfuscate from "@utils/obfuscate";
 import parseAndObfuscate from "@utils/parseAndObfuscate";
+// Components
 import Slice from "./common/Slice.astro";
-import { parseMdWikiLink } from "@utils/parseMdWikiLink";
-import wikiLinkify from "@utils/wikiLinkify";
+import ObsidianVaultLink from "./common/ObsidianVaultLink.astro";
 // #endregion
 
 // #region Entry: core details ------------------------------------------------
@@ -81,23 +82,6 @@ const parentATitle = parentAEntry.title;
 const parentSNumber = parentAEntry.parentNumber;
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
-
-// Fetch data from the user's Clerk account.
-let obsidianVaultURI: string | undefined;
-let obsidianPathURI: string | undefined;
-if (!testRun && userId) {
-  const { userId } = Astro.locals.auth();
-  const clerkClient = createClerkClient({
-    secretKey: import.meta.env.CLERK_SECRET_KEY,
-  });
-  const user = await clerkClient.users.getUser(userId!);
-  if (user.publicMetadata.obsidianVault) {
-    obsidianVaultURI = encodeURIComponent(user.publicMetadata.obsidianVault);
-  }
-} else {
-  obsidianVaultURI = "test-run-no-vault";
-}
-obsidianPathURI = obsidianVaultURI && encodeURIComponent(`${id} ${idTitle}`);
 ---
 
 <Slice id="SystemBreadcrumb" className="secondary-content-bg">
@@ -255,22 +239,7 @@ obsidianPathURI = obsidianVaultURI && encodeURIComponent(`${id} ${idTitle}`);
 }
 <!-- #endregion -->
 
-{
-  obsidianVaultURI ? (
-    <Slice id="ObsidianVaultLink" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">Open in Obsidian</h3>
-        <div class="layout-right-item">
-          <a
-            href={`obsidian://open?vault=${obsidianVaultURI}&file=${obsidianPathURI}`}
-          >
-            {id} {idTitle}
-          </a>
-        </div>
-      </div>
-    </Slice>
-  ) : null
-}
+<ObsidianVaultLink id={id} idTitle={idTitle} />
 
 <div id="EndOfIDsBorder"></div>
 

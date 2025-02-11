@@ -1,0 +1,43 @@
+---
+interface Props {
+  id: string;
+  idTitle: string;
+}
+
+import { createClerkClient } from "@clerk/astro/server";
+import Slice from "./Slice.astro";
+
+const { id, idTitle } = Astro.props;
+
+const obsidianPathURI = encodeURIComponent(`${id} ${idTitle}`);
+
+// Fetch data from the user's Clerk account.
+let obsidianVaultURI: string | undefined;
+let userId = Astro.locals.auth();
+if (userId) {
+  const { userId } = Astro.locals.auth();
+  const clerkClient = createClerkClient({
+    secretKey: import.meta.env.CLERK_SECRET_KEY,
+  });
+  const user = await clerkClient.users.getUser(userId!);
+  if (user.publicMetadata.obsidianVault) {
+    obsidianVaultURI = encodeURIComponent(user.publicMetadata.obsidianVault);
+  }
+} else {
+  obsidianVaultURI = "test-run-no-vault";
+}
+---
+
+<Slice id="ObsidianVaultLink" className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Open in Obsidian</h3>
+    <div class="layout-right-item">
+      <a
+        href={`obsidian://open?vault=${obsidianVaultURI}&file=${obsidianPathURI}`}
+      >
+        {id}
+        {idTitle}
+      </a>
+    </div>
+  </div>
+</Slice>
