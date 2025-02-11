@@ -372,7 +372,7 @@ const flattenedData: FlattenedData = {
     title: "Compliance",
     isPublic: true,
     description:
-      "Any laws, codes, or standards relevant to your business, including inspections and audits that may be required. ",
+      "Any laws, codes, **or standards** relevant to your business, including inspections and audits that may be required. ",
     metadata: {
       createdDate: "2024-11-19",
       updatedDate: "2024-11-19",

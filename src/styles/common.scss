@@ -4,40 +4,40 @@
 @font-face {
   font-family: "Berkeley Mono";
   src:
-    local("Berkeley Mono"),
-    local("BerkeleyMono"),
+    local("Berkeley Mono Regular"),
+    local("BerkeleyMonoRegular"),
     url("/fonts/BerkeleyMono/BerkeleyMono-Regular.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Berkeley Mono";
   src:
-    local("Berkeley Mono"),
-    local("BerkeleyMono"),
+    local("Berkeley Mono Bold"),
+    local("BerkeleyMonoBold"),
     url("/fonts/BerkeleyMono/BerkeleyMono-Bold.woff2") format("woff2");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Berkeley Mono";
   src:
-    local("Berkeley Mono"),
-    local("BerkeleyMono"),
+    local("Berkeley Mono Italic"),
+    local("BerkeleyMonoItalic"),
     url("/fonts/BerkeleyMono/BerkeleyMono-Italic.woff2") format("woff2");
-  font-weight: normal;
+  font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 @font-face {
   font-family: "Berkeley Mono";
   src:
-    local("Berkeley Mono"),
-    local("BerkeleyMono"),
+    local("Berkeley Mono Bold Italic"),
+    local("BerkeleyMonoBoldItalic"),
     url("/fonts/BerkeleyMono/BerkeleyMono-BoldItalic.woff2") format("woff2");
-  font-weight: bold;
+  font-weight: 700;
   font-style: italic;
   font-display: swap;
 }
@@ -263,6 +263,7 @@ select {
   // All headers within are h3
   h3 {
     font-size: 1rem;
+    font-weight: bold;
     margin: 0; // Surrounding <p>s handle it
     text-align: right;
 

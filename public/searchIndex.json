@@ -304,7 +304,7 @@
   {
     "number": "11.13",
     "title": "Compliance",
-    "description": "Any laws, codes, or standards relevant to your business, including inspections and audits that may be required. ",
+    "description": "Any laws, codes, **or standards** relevant to your business, including inspections and audits that may be required. ",
     "type": "id",
     "emoji": null,
     "metadata": {

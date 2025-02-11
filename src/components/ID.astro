@@ -36,7 +36,7 @@ const isPublic = idEntry.isPublic || false;
 // Get the small business details
 const sb = idEntry.extensions.smallBusiness;
 let idTitle: string;
-let idDescription: string;
+let idDescription: string | undefined;
 let idExamples: string | undefined;
 let idMoreInfo: string | undefined;
 let idExceptions: string | undefined;
@@ -46,16 +46,16 @@ let idRationale: string | undefined;
 // If we have a signed-in user, show them the ID. If not, obfuscate it.
 if (userId) {
   idTitle = system[id]?.title;
-  idDescription = system[id]?.description;
+  idDescription = await parseAndObfuscate(true, system[id]?.description);
   idExamples = await parseAndObfuscate(true, sb.examples);
   idMoreInfo = await parseAndObfuscate(true, sb.moreInfo);
   idExceptions = await parseAndObfuscate(true, sb.exceptions);
   idAlsoSee = await parseAndObfuscate(true, sb.alsoSee);
   idRationale = await parseAndObfuscate(true, sb.rationale);
 } else {
-  // Don't parseAndObfuscate the title or description, that returns HTML; we just want Markdown
+  // Don't parseAndObfuscate the title, it returns HTML
   idTitle = obfuscate(isPublic, system[id]?.title);
-  idDescription = obfuscate(isPublic, system[id]?.description);
+  idDescription = await parseAndObfuscate(isPublic, system[id]?.description);
   idExamples = await parseAndObfuscate(isPublic, sb?.examples);
   idMoreInfo = await parseAndObfuscate(isPublic, sb?.moreInfo);
   idExceptions = await parseAndObfuscate(isPublic, sb?.exceptions);
