@@ -433,7 +433,8 @@
       "alsoSee": "",
       "rationale": "",
       "links": ""
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "11.24",
@@ -843,7 +844,8 @@
     "metadata": {
       "createdDate": "2024-11-18",
       "updatedDate": "2024-11-18"
-    }
+    },
+    "smallBusiness": {}
   },
   {
     "number": "20-29",
@@ -866,6 +868,7 @@
     "metadata": {
       "createdDate": "2024-11-18",
       "updatedDate": "2024-11-18"
-    }
+    },
+    "smallBusiness": {}
   }
 ]

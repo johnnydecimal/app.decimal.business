@@ -3,13 +3,16 @@
  * The ID view component. So we're at /11.11.
  */
 
+// #region Props --------------------------------------------------------------
 interface Props {
   id: string;
   testRun?: boolean;
 }
 const { id, testRun } = Astro.props;
 const { userId } = Astro.locals.auth();
+// #endregion
 
+// #region Imports ------------------------------------------------------------
 import { createClerkClient } from "@clerk/astro/server";
 import system, {
   getChildren,
@@ -23,20 +26,41 @@ import parseAndObfuscate from "@utils/parseAndObfuscate";
 import Slice from "./common/Slice.astro";
 import { parseMdWikiLink } from "@utils/parseMdWikiLink";
 import wikiLinkify from "@utils/wikiLinkify";
-// Get this entry's details
+// #endregion
+
+// #region Entry: core details ------------------------------------------------
 const idEntry = system[id] as IdEntry;
 const isPublic = idEntry.isPublic || false;
-const idTitle = obfuscate(isPublic, system[id]?.title);
 
-// All of its other details for the main content
-// const idDescription = await parseAndObfuscate(isPublic, idEntry.description);
-const idDescription = await parseMdWikiLink(wikiLinkify(idEntry.description));
-const idEntrySb = idEntry.extensions?.smallBusiness;
-const idExamples = await parseAndObfuscate(isPublic, idEntrySb?.examples);
-const idMoreInfo = await parseAndObfuscate(isPublic, idEntrySb?.moreInfo);
-const idExceptions = await parseAndObfuscate(isPublic, idEntrySb?.exceptions);
-const idAlsoSee = await parseAndObfuscate(isPublic, idEntrySb?.alsoSee);
-const idRationale = await parseAndObfuscate(isPublic, idEntrySb?.rationale);
+// Get the small business details
+const sb = idEntry.extensions.smallBusiness;
+let idTitle: string;
+let idDescription: string;
+let idExamples: string | undefined;
+let idMoreInfo: string | undefined;
+let idExceptions: string | undefined;
+let idAlsoSee: string | undefined;
+let idRationale: string | undefined;
+
+// If we have a signed-in user, show them the ID. If not, obfuscate it.
+if (userId) {
+  idTitle = system[id]?.title;
+  idDescription = system[id]?.description;
+  idExamples = await parseAndObfuscate(true, sb.examples);
+  idMoreInfo = await parseAndObfuscate(true, sb.moreInfo);
+  idExceptions = await parseAndObfuscate(true, sb.exceptions);
+  idAlsoSee = await parseAndObfuscate(true, sb.alsoSee);
+  idRationale = await parseAndObfuscate(true, sb.rationale);
+} else {
+  // Don't parseAndObfuscate the title or description, that returns HTML; we just want Markdown
+  idTitle = obfuscate(isPublic, system[id]?.title);
+  idDescription = obfuscate(isPublic, system[id]?.description);
+  idExamples = await parseAndObfuscate(isPublic, sb?.examples);
+  idMoreInfo = await parseAndObfuscate(isPublic, sb?.moreInfo);
+  idExceptions = await parseAndObfuscate(isPublic, sb?.exceptions);
+  idAlsoSee = await parseAndObfuscate(isPublic, sb?.alsoSee);
+  idRationale = await parseAndObfuscate(isPublic, sb?.rationale);
+}
 
 // Get all of the sub-IDs that this ID contains
 const subIds = getChildren(system, id);
@@ -61,7 +85,7 @@ const parentSTitle = parentSEntry.title;
 // Fetch data from the user's Clerk account.
 let obsidianVaultURI: string | undefined;
 let obsidianPathURI: string | undefined;
-if (!testRun) {
+if (!testRun && userId) {
   const { userId } = Astro.locals.auth();
   const clerkClient = createClerkClient({
     secretKey: import.meta.env.CLERK_SECRET_KEY,

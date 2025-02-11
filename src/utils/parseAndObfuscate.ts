@@ -12,7 +12,9 @@ export default async function parseAndObfuscate(
   if (!markdown) return undefined;
 
   // This returns a string with all the links wiki-linked. It's still Markdown.
-  const processedText = wikiLinkify(markdown);
+  const processedText = wikiLinkify(markdown) as string;
+  // TODO this obfuscates links that are public; it'd be nice if it didn't
+  //      but that sounds quite complex so we're not doing it for now
   const obfuscatedText = obfuscate(isPublic, processedText);
   return await marked.parse(obfuscatedText);
 }

@@ -1,7 +1,10 @@
 import sb from "@data/smallBusinessFlat";
 
 //   - Wiki-linking the descriptive text.
-function wikiLinkify(text: string): string {
+function wikiLinkify(text: string | undefined): string | undefined {
+  if (!text) {
+    return undefined;
+  }
   // `text` is a Markdown string which might contain wiki-links like [[12.34]].
   return text.replace(/\[\[(\d{2}.\d{2})\]\]/g, (_match, p1) => {
     // If a match was made, `p1` is an ID. Return a [Markdown](link) to it.

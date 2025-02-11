@@ -59,36 +59,16 @@ const { testRun, title } = Astro.props;
     </script> -->
   </head>
   <body>
-    {
-      !testRun ? (
-        // Production
-        <>
-          <SignedOut>
-            <main>
-              <SignInPage />
-            </main>
-          </SignedOut>
-          <SignedIn>
-            <Search />
-            <main>
-              <slot />
-            </main>
-            <AccountManagement />
-            <Footer />
-          </SignedIn>
-        </>
-      ) : (
-        // Test run - no auth
-        <>
-          <Search />
-          <main>
-            <slot />
-          </main>
-          <AccountManagement />
-          <Footer />
-        </>
-      )
-    }
+    <!-- In this new world, we're not using Clerk's components at this level.
+         We handle all auth stuff down at the component level. -->
+    <SignedIn>You are signed in</SignedIn>
+    <SignedOut>You are not signed in</SignedOut>
+    <Search />
+    <main>
+      <slot />
+    </main>
+    <AccountManagement />
+    <Footer />
   </body>
 </html>
 
