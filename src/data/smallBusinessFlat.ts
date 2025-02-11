@@ -125,6 +125,8 @@ export type FlattenedData = Record<string, FlattenedEntry>;
 
 import { area_00_09 } from "./area_00_09";
 import id_11_11 from "@data/sb_ts/11.11";
+import id_11_12 from "@data/sb_ts/11.12";
+import id_11_13 from "@data/sb_ts/11.13";
 
 const flattenedData: FlattenedData = {
   J82: {
@@ -329,54 +331,10 @@ const flattenedData: FlattenedData = {
     },
   },
   "11.12": {
-    number: "11.12",
-    type: "id",
-    title: "Licences, permits, & accreditations",
-    description:
-      "Documents that you apply for, or are earned via training, so you can legally provide a service or operate in a particular location. ",
-    metadata: {
-      createdDate: "2024-11-19",
-      updatedDate: "2024-11-19",
-    },
-    extensions: {
-      smallBusiness: {
-        examples:
-          "Liquor licence; safe food handling certificate; truck or taxi licence; police check; zoning permit; government security clearance; market stall holder permit; working with children check; tradesperson licence; responsible service of alcohol certificate; environmental permit; any other legally-required core qualification. ",
-        moreInfo:
-          "This ID is for storing copies of any licence, permit, or accreditation that your business cannot trade without. First, you registered your business. Now you need the legal proof that you can provide a product or service.\n\nThis ‘proof’ will vary considerably depending on what you do. If you run a bar, you’ll need a liquor licence. If you’re a healthcare provider in private practice, you must have a degree, as well as any other required accreditations.\n\nYou might be thinking, “hey Johnny.Decimal, you’ve always said not to have copies of things in different places”. Absolutely – for documents that change, like your budget spreadsheet. You should never have multiple copies of things like that because someone will inevitably update the wrong version.\n\nHowever, licences, permits, and accreditations are static documents. Probably a PDF or a piece of paper. It’s okay to put copies of them where it’s helpful and makes sense to do so. They’re not going to change unless they are renewed.\n\nThis is an important ID to keep up-to-date in your JDex and to set reminders for to ensure nothing expires. ",
-        exceptions: "",
-        alsoSee:
-          "Manage ongoing training or education in [[11.50]], but store a copy of the proof of completion here if it’s essential to your ability to trade. ",
-        rationale:
-          "If an inspector turns up at your door, having copies of these core documents in one place will be very handy. They’re also highly visible at the top of your system so they’re not lost or forgotten. ",
-        links: "",
-      },
-    },
+    ...id_11_12,
   },
   "11.13": {
-    number: "11.13",
-    type: "id",
-    title: "Compliance",
-    isPublic: true,
-    description:
-      "Any laws, codes, **or standards** relevant to your business, including inspections and audits that may be required. ",
-    metadata: {
-      createdDate: "2024-11-19",
-      updatedDate: "2024-11-19",
-    },
-    extensions: {
-      smallBusiness: {
-        examples:
-          "Workplace health and safety compliance; environmental laws; industry manufacturing standards; payroll governance, building standards and safety inspections; retail fair trading laws; codes of conduct for advertising and marketing; food safety inspections; financial audits; local and international import/export regulations; laws around the supply of alcohol; employment and unfair dismissal laws. ",
-        moreInfo:
-          "You have a registered business and the legal permission to provide a product or service. Now you must adhere to the regulatory environment that you are trading in. Again, this will depend entirely on what you do. There may be many different local, state, national, or international laws or requirements to be aware of.\n\nAnd who knows, if you run a fishing business, things like the ‘law of the sea’ may apply.\n\nCompliance might mean that:\n- Your business must obey certain laws, regulations, or codes of practice.\n- Your business must undergo one-off or ongoing inspections or audits.\n- You and your staff must do ongoing training.\n- The products you sell or manufacture must meet certain standards.\nEither way, store copies of regulations and proof that you’re complying with them here. This is an important ID to keep up-to-date in your JDex and to set reminders for to ensure you stay above board.\n\nUsing as an example of an &lt;ol&gt;.\n\n1. First item, which is long enough to flow over not just one but two lines.\n2. Second item.\n3. Third item.\nThe list is finished.",
-        exceptions: "",
-        alsoSee:
-          "Manage ongoing training or education in [[11.50]], but store a copy of the proof of completion here if it helps you meet compliance obligations. ",
-        rationale: "",
-        links: "",
-      },
-    },
+    ...id_11_13,
   },
   "11.13+1": {
     number: "11.13+1",
