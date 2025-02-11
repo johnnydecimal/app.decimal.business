@@ -820,7 +820,7 @@
   {
     "number": "11.70",
     "title": "Library",
-    "description": "",
+    "description": "Your system library",
     "type": "id",
     "emoji": "Books📚",
     "metadata": {
