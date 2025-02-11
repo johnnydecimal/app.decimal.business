@@ -23,6 +23,7 @@ import system, {
   type AreaEntry,
   type CategoryEntry,
   type IdEntry,
+  type MoreInfoEntry,
 } from "src/data/smallBusinessFlat";
 // Utils
 import obfuscate from "@utils/obfuscate";
@@ -68,9 +69,24 @@ if (userId) {
 
 // Get all of the sub-IDs that this ID contains
 const subIds = getChildren(system, id);
-const moreInfos = subIds.filter((child) =>
+const moreInfoEntries = subIds.filter((child) =>
   child.number.match(/^\d\d\.\d\d\+[0-9]/)
+) as MoreInfoEntry[];
+const moreInfos: { number: string; title: string }[] = moreInfoEntries.map(
+  (entry) => {
+    if (!userId) {
+      return {
+        number: entry.number,
+        title: obfuscate(isPublic, entry.title),
+      };
+    }
+    return {
+      number: entry.number,
+      title: entry.title,
+    };
+  }
 );
+
 const opsManuals = subIds.filter((child) =>
   child.number.match(/^\d\d\.\d\d\+OPS/)
 );
