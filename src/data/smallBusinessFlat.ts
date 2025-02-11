@@ -1036,10 +1036,16 @@ export function getChildren(
   data: FlattenedData,
   parentNumber: string
 ): FlattenedEntry[] {
-  return Object.values(data).filter(
-    (entry): entry is CategoryEntry | IdEntry =>
-      "parentNumber" in entry && entry.parentNumber === parentNumber
-  );
+  if (parentNumber.match(/\d0-\d9/)) {
+    console.log("Area number:", parentNumber);
+    // This is an area. Find all entries whose number starts with the first
+    // two digits of the area number.
+    return Object.values(data).filter(
+      (entry) =>
+        entry.type === "category" &&
+        entry.number.charAt(0) === parentNumber.charAt(0)
+    );
+  }
 }
 
 // Utility function to find an entry by key
