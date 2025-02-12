@@ -93,24 +93,15 @@ if (subIds) {
   // Generate opsManuals
 }
 
-// const opsManuals = subIds.filter((child) =>
-//   child.number.match(/^\d\d\.\d\d\+OPS/)
-// );
-
-// Compute breadcrumbs on the fly using the entry number.
-// Rule 1: For id entries, the parent category is the first two digits.
 const parentCNumber = idEntry.number.split(".")[0];
 const parentCEntry = system[parentCNumber] as CategoryEntry;
 const parentCTitle = parentCEntry.title;
 
-// Rule 2: For category entries, the parent area number is based on the first digit:
-// e.g. for category "11", parent area becomes "10-19" (derived as "1" → "10-19").
 const firstDigit = parentCEntry.number.charAt(0);
 const parentANumber = `${firstDigit}0-${firstDigit}9`;
 const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
-// Rule 3: For areas, the parent's system number is always "J82".
 const parentSNumber = "J82";
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;

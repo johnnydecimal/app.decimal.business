@@ -7,8 +7,8 @@ const entry: CategoryEntry = {
   "type": "category",
   "emoji": "💻",
   "metadata": {
-    "createdDate": "2025-02-12T05:27:41.385Z",
-    "updatedDate": "2025-02-12T05:27:41.385Z"
+    "createdDate": "2025-02-12T05:47:44.781Z",
+    "updatedDate": "2025-02-12T05:47:44.781Z"
   },
   "extensions": {
     "smallBusiness": {

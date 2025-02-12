@@ -224,6 +224,7 @@ import id_13_62 from "@data/sb_ts/13.62-accounts-handle-tax";
 import id_13_63 from "@data/sb_ts/13.63-dividends";
 import id_13_64 from "@data/sb_ts/13.64-equity";
 import id_13_90 from "@data/sb_ts/13.90-money-earned-spent-saved-owed-library";
+import category_14 from "@data/sb_ts/14-technology";
 
 const flattenedData: FlattenedData = {
   J82: {
@@ -708,23 +709,20 @@ const flattenedData: FlattenedData = {
     ...id_13_90,
   },
   "14": {
-    type: "category",
-    number: "14",
-    title: "Technology",
-    description:
-      "This category is all about your business in the digital world.",
-    emoji: "💻",
+    ...category_14,
+  },
+  "14+FR1": {
+    number: "14+FR1",
+    title: "Isn’t everything ‘technology’ these days?",
+    description: "", // FIXME keeping TS happy here, review this later
+    type: "furtherReading",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
-      smallBusiness: {
-        overview:
-          "This is a place to manage all the common computer-y things that most businesses have. Like hardware and software, setting up your online presence, and staying safe in cyberspace.\n\nAnd to be an honorary IT professional, this includes notes about configuration (i.e. all the stuff you did when you set something up). This is a nice example of ‘working the Decimal way’ – keeping notes to help your future self. It might be as simple as bullet points in your JDex or maybe a diagram, depending on what you’re documenting. Now you’ll never forget what you did.",
-        exceptions:
-          "This category is for managing computer-y things that are common to _most_ businesses. Not for any ‘computerised machines’ that are specific to your operations or product, those go in [[12.20]], [[12.30]], or [[20-29]].\n\nThis category is for managing _your_ technology. If your product or service is related (e.g. you’re an IT consultant or run a computer repair shop) that goes in [[20-29]].\n\nThis category is not for managing technology related to workplace security or access (e.g cameras, passcards), that goes in [[12.22]] or [[12.32]].",
+      furtherReading: {
+        text: "We have so many gadgets now, so there’s a lot of potential crossover between general technology, operations, and product. But we made a decision that this category is for classic computers, mobile devices, accessories, and other digital services that are common to _most_ businesses. The things that underpin everything else. And that you probably have more control over.\n\nAnd it’s _not_ for computerised machines that are specific to your operations or product. Anything from card readers and payment machines, medical devices, manufacturing equipment, or that fancy robot vacuum cleaner in the back office.\n\nHere’s one scenario. A gift shop has a card reader at the till (which is really just a paid service that happens to come with a gadget). The card reader needs a computer or iPad, network, and wifi to run – these are managed here. And the card reader and its subscription go in [[12.34]] and [[14.32]], respectively.\n\nSame goes for our dentist. Their x-ray machine sends scans to a computer in the treatment room via the network. Whether they own or lease this machine, they’ll be paying someone to ensure it is mechanically sound and the software is updated. As above, the computers and network are managed here. And the x-ray machine and its support contract go in [[12.34]] and [[14.33]], respectively.\n\nSee [[14.14#When is an accessory ‘technology’ versus ‘front office operations’?]] for further rationale on this decision.",
       },
     },
   },
-  // TODO on Thursday, 14 as a category doesn't have the feature where it looks up further readings, imlpement tha
   "20-29": {
     type: "area",
     number: "20-29",
@@ -740,6 +738,7 @@ const flattenedData: FlattenedData = {
       "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
     emoji: "🗺️",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: { smallBusiness: {} },
   },
   "21.11": {
     type: "id",
@@ -780,10 +779,12 @@ export function getChildren(
         entry.number.charAt(0) === parentNumber.charAt(0)
     );
   } else if (parentNumber.match(/^\d\d$/)) {
-    // Category provided. Get IDs that match.
+    // Category provided. Get IDs that match and further readings that match.
     console.log("Category number:", parentNumber);
     return Object.values(data).filter(
-      (entry) => entry.type === "id" && entry.number.startsWith(parentNumber)
+      (entry) =>
+        (entry.type === "id" || entry.type === "furtherReading") &&
+        entry.number.slice(0, 2) === parentNumber
     );
   } else if (parentNumber.match(/^\d\d\.\d\d$/)) {
     // ID provided. Get all sub-IDs.
