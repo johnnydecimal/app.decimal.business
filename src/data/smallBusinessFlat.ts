@@ -124,36 +124,68 @@ export type FlattenedEntry =
 export type FlattenedData = Record<string, FlattenedEntry>;
 
 import { area_00_09 } from "./area_00_09";
-import id_11_10 from "@data/sb_ts/11.10";
-import id_11_11 from "@data/sb_ts/11.11";
-import id_11_12 from "@data/sb_ts/11.12";
-import id_11_13 from "@data/sb_ts/11.13";
-import id_11_14 from "@data/sb_ts/11.14";
-import id_11_15 from "@data/sb_ts/11.15";
-import id_11_20 from "@data/sb_ts/11.20";
-import id_11_21 from "@data/sb_ts/11.21";
-import id_11_22 from "@data/sb_ts/11.22";
-import id_11_23 from "@data/sb_ts/11.23";
-import id_11_24 from "@data/sb_ts/11.24";
-import id_11_30 from "@data/sb_ts/11.30";
-import id_11_31 from "@data/sb_ts/11.31";
-import id_11_32 from "@data/sb_ts/11.32";
-import id_11_33 from "@data/sb_ts/11.33";
-import id_11_40 from "@data/sb_ts/11.40";
-import id_11_41 from "@data/sb_ts/11.41";
-import id_11_42 from "@data/sb_ts/11.42";
-import id_11_43 from "@data/sb_ts/11.43";
-import id_11_44 from "@data/sb_ts/11.44";
-import id_11_45 from "@data/sb_ts/11.45";
-import id_11_50 from "@data/sb_ts/11.50";
-import id_11_51 from "@data/sb_ts/11.51";
-import id_11_52 from "@data/sb_ts/11.52";
-import id_11_53 from "@data/sb_ts/11.53";
-import id_11_60 from "@data/sb_ts/11.60";
-import id_11_61 from "@data/sb_ts/11.61";
-import id_11_62 from "@data/sb_ts/11.62";
-import id_11_63 from "@data/sb_ts/11.63";
-import id_11_90 from "@data/sb_ts/11.90";
+import id_11_10 from "@data/sb_ts/11.10-official-documents";
+import id_11_11 from "@data/sb_ts/11.11-structure-registrations";
+import id_11_12 from "@data/sb_ts/11.12-licences-permits-accreditations";
+import id_11_13 from "@data/sb_ts/11.13-compliance";
+import id_11_14 from "@data/sb_ts/11.14-other-legal-matters";
+import id_11_15 from "@data/sb_ts/11.15-selling-it-or-closing-it";
+import id_11_20 from "@data/sb_ts/11.20-planning-contingencies-insurance";
+import id_11_21 from "@data/sb_ts/11.21-business-plan";
+import id_11_22 from "@data/sb_ts/11.22-business-insurance-incidents-claims";
+import id_11_23 from "@data/sb_ts/11.23-risk-emergency-management-plans";
+import id_11_24 from "@data/sb_ts/11.24-collected-wisdom-analysis";
+import id_11_30 from "@data/sb_ts/11.30-behaviours-ethics-culture";
+import id_11_31 from "@data/sb_ts/11.31-internal-policies";
+import id_11_32 from "@data/sb_ts/11.32-external-policies";
+import id_11_33 from "@data/sb_ts/11.33-dispute-resolution";
+import id_11_40 from "@data/sb_ts/11.40-our-people";
+import id_11_41 from "@data/sb_ts/11.41-hiring";
+import id_11_42 from "@data/sb_ts/11.42-staff-record-keeping";
+import id_11_43 from "@data/sb_ts/11.43-formal-reviews";
+import id_11_44 from "@data/sb_ts/11.44-farewells";
+import id_11_45 from "@data/sb_ts/11.45-animals-as-staff";
+import id_11_50 from "@data/sb_ts/11.50-training-professional-development";
+import id_11_51 from "@data/sb_ts/11.51-mandatory-training";
+import id_11_52 from "@data/sb_ts/11.52-optional-training";
+import id_11_53 from "@data/sb_ts/11.53-other-learning-self-improvement";
+import id_11_60 from "@data/sb_ts/11.60-other-people-organisations";
+import id_11_61 from "@data/sb_ts/11.61-professional-bodies";
+import id_11_62 from "@data/sb_ts/11.62-seeking-advice-support";
+import id_11_63 from "@data/sb_ts/11.63-networking-new-business";
+import id_11_90 from "@data/sb_ts/11.90-the-business-its-people-library";
+import id_12_10 from "@data/sb_ts/12.10-fixed-locations";
+import id_12_11 from "@data/sb_ts/12.11-official-documents";
+import id_12_12 from "@data/sb_ts/12.12-office-insurance-incidents-claims";
+import id_12_13 from "@data/sb_ts/12.13-rates-taxes-fees";
+import id_12_14 from "@data/sb_ts/12.14-fit-outs-renovations-improvements";
+import id_12_15 from "@data/sb_ts/12.15-repairs-maintenance";
+import id_12_16 from "@data/sb_ts/12.16-moving";
+import id_12_20 from "@data/sb_ts/12.20-back-office-equipment-and-operations";
+import id_12_21 from "@data/sb_ts/12.21-keep-the-basics-running";
+import id_12_22 from "@data/sb_ts/12.22-keep-us-secure";
+import id_12_23 from "@data/sb_ts/12.23-keep-it-nice-for-us";
+import id_12_24 from "@data/sb_ts/12.24-keep-the-back-office-well-equipped";
+import id_12_25 from "@data/sb_ts/12.25-keep-us-fed-and-watered";
+import id_12_26 from "@data/sb_ts/12.26-keep-us-posted";
+import id_12_30 from "@data/sb_ts/12.30-front-office-equipment-operations";
+import id_12_31 from "@data/sb_ts/12.31-keep-the-basics-running";
+import id_12_32 from "@data/sb_ts/12.32-keep-our-customers-secure";
+import id_12_33 from "@data/sb_ts/12.33-keep-it-nice-for-our-customers";
+import id_12_34 from "@data/sb_ts/12.34-keep-the-front-office-well-equipped";
+import id_12_35 from "@data/sb_ts/12.35-keep-our-customers-fed-and-watered";
+import id_12_40 from "@data/sb_ts/12.40-getting-around";
+import id_12_41 from "@data/sb_ts/12.41-official-documents-formal";
+import id_12_42 from "@data/sb_ts/12.42-vehicle-insurance-incidents-claims-formal";
+import id_12_43 from "@data/sb_ts/12.43-permits-tolls-fees-other-running-expenses-formal";
+import id_12_44 from "@data/sb_ts/12.44-fit-outs-renovations-improvements-formal";
+import id_12_45 from "@data/sb_ts/12.45-repairs-maintenance-formal";
+import id_12_46 from "@data/sb_ts/12.46-public-or-shared-transport-other-informal-vehicles";
+import id_12_50 from "@data/sb_ts/12.50-the-community";
+import id_12_51 from "@data/sb_ts/12.51-your-business-local-neighbourhood";
+import id_12_52 from "@data/sb_ts/12.52-your-business-city-state-country";
+import id_12_53 from "@data/sb_ts/12.53-your-business-planet";
+import id_12_90 from "@data/sb_ts/12.90-where-i-trade-how-i-get-around-library";
 
 const flattenedData: FlattenedData = {
   J82: {
@@ -213,27 +245,7 @@ const flattenedData: FlattenedData = {
     },
   },
   "11.10": {
-    number: "11.10",
-    type: "id",
-    title: "Official documents",
-    emoji: "🗂️",
-    isHeader: true,
-    description:
-      "The official paperwork that you need in order to start and maintain a business. ",
-    metadata: {
-      createdDate: "2024-11-19",
-      updatedDate: "2024-11-19",
-    },
-    extensions: {
-      smallBusiness: {
-        examples: "",
-        moreInfo: "",
-        exceptions: "",
-        alsoSee: "",
-        rationale: "",
-        links: "",
-      },
-    },
+    ...id_11_10,
   },
   "11.11": {
     ...id_11_11,
@@ -390,27 +402,7 @@ const flattenedData: FlattenedData = {
     ...id_11_20,
   },
   "11.21": {
-    number: "11.21",
-    type: "id",
-    title: "Business plan",
-    description:
-      "The indispensable guide to where you are, where you want to be, and what to do to get there. ",
-    metadata: {
-      createdDate: "2024-11-19",
-      updatedDate: "2024-11-19",
-    },
-    extensions: {
-      smallBusiness: {
-        examples: "",
-        moreInfo:
-          "This may be less relevant if you’re, say, a freelance graphic designer working on a project-by-project basis. But for most other businesses, whether new or existing, this is something you shouldn’t skip. A business plan contains all the good stuff like your mission and vision statements, goals, risk analysis, and financial position. Do periodic reviews and remember to save the previous version of the document when updating it. And if you have innovative services or practices, you may wish to protect the plan with a confidentiality agreement. If you’ve never written one, government business websites often have handy templates to get you started. ",
-        exceptions: "",
-        alsoSee:
-          "If you have a confidentiality agreement to protect your business plan, store it in [[11.14]]. When it’s time to update your business plan, don’t forget to review [[11.23]]. ",
-        rationale: "",
-        links: "Business plan resources and templates from the: ",
-      },
-    },
+    ...id_11_21,
   },
   "11.22": {
     ...id_11_22,
@@ -487,13 +479,101 @@ const flattenedData: FlattenedData = {
     emoji: "🗺️",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
-  "12.01": {
-    type: "id",
-    number: "12.01",
-    title: "Twelve oh-one",
-    description: "Twelve oh-one",
-    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
-    extensions: { smallBusiness: {} },
+  "12.10": {
+    ...id_12_10,
+  },
+  "12.11": {
+    ...id_12_11,
+  },
+  "12.12": {
+    ...id_12_12,
+  },
+  "12.13": {
+    ...id_12_13,
+  },
+  "12.14": {
+    ...id_12_14,
+  },
+  "12.15": {
+    ...id_12_15,
+  },
+  "12.16": {
+    ...id_12_16,
+  },
+  "12.20": {
+    ...id_12_20,
+  },
+  "12.21": {
+    ...id_12_21,
+  },
+  "12.22": {
+    ...id_12_22,
+  },
+  "12.23": {
+    ...id_12_23,
+  },
+  "12.24": {
+    ...id_12_24,
+  },
+  "12.25": {
+    ...id_12_25,
+  },
+  "12.26": {
+    ...id_12_26,
+  },
+  "12.30": {
+    ...id_12_30,
+  },
+  "12.31": {
+    ...id_12_31,
+  },
+  "12.32": {
+    ...id_12_32,
+  },
+  "12.33": {
+    ...id_12_33,
+  },
+  "12.34": {
+    ...id_12_34,
+  },
+  "12.35": {
+    ...id_12_35,
+  },
+  "12.40": {
+    ...id_12_40,
+  },
+  "12.41": {
+    ...id_12_41,
+  },
+  "12.42": {
+    ...id_12_42,
+  },
+  "12.43": {
+    ...id_12_43,
+  },
+  "12.44": {
+    ...id_12_44,
+  },
+  "12.45": {
+    ...id_12_45,
+  },
+  "12.46": {
+    ...id_12_46,
+  },
+  "12.50": {
+    ...id_12_50,
+  },
+  "12.51": {
+    ...id_12_51,
+  },
+  "12.52": {
+    ...id_12_52,
+  },
+  "12.53": {
+    ...id_12_53,
+  },
+  "12.90": {
+    ...id_12_90,
   },
   "20-29": {
     type: "area",

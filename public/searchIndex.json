@@ -190,38 +190,33 @@
   {
     "number": "11.10",
     "title": "Official documents",
-    "description": "The official paperwork that you need in order to start and maintain a business. ",
+    "description": "The official paperwork that you need in order to start and maintain a business.",
     "type": "id",
     "emoji": "🗂️",
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.104Z",
+      "updatedDate": "2025-02-12T02:54:04.104Z"
     },
-    "smallBusiness": {
-      "examples": "",
-      "moreInfo": "",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+    "smallBusiness": {},
+    "isPublic": false
   },
   {
     "number": "11.11",
     "title": "Structure & registrations",
-    "description": "Proof of the business’ existence, trading structure, and name – where it all begins!",
+    "description": "Proof of the business' existence, trading structure, and name – where it all begins!",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-11T22:13:41.586Z",
-      "updatedDate": "2025-02-11T22:13:41.587Z"
+      "createdDate": "2025-02-12T02:54:04.105Z",
+      "updatedDate": "2025-02-12T02:54:04.105Z"
     },
     "smallBusiness": {
       "examples": "Business entity registrations; trading name registrations; income and sales tax registrations; trademark records for trading names; company director identity applications.",
-      "moreInfo": "This ID is about your business being born. Think of it like your birth certificate and proof of name. Deciding on a trading structure and name are the first steps to starting a business. This affects how you will operate and the various obligations you will have, especially government taxes.\n\nWhether you want to trade alone under your own name, or as a company with staff and its own name, you will have to complete certain registrations to ‘exist’. The more complicated the structure, the more paperwork there will be. But for many people with simple structures, once you’re set up, this ID should be pretty quiet (apart from ensuring registrations stay active).",
+      "moreInfo": "This ID is about your business being born. Think of it like your birth certificate and proof of name. Deciding on a trading structure and name are the first steps to starting a business. This affects how you will operate and the various obligations you will have, especially government taxes.\n\nWhether you want to trade alone under your own name, or as a company with staff and its own name, you will have to complete certain registrations to 'exist'. The more complicated the structure, the more paperwork there will be. But for many people with simple structures, once you're set up, this ID should be pretty quiet (apart from ensuring registrations stay active).",
       "exceptions": "Put product or brand-related patents, trademarks, and copyrights in [[20-29]].",
       "rationale": "This ID is not related to your product or service. You might conduct different types of business under one entity. Hence, we recommend that any trademark records for the business name should go here. And if you have other patents, trademarks, or copyrights, they should live with the things they protect."
-    }
+    },
+    "isPublic": true
   },
   {
     "number": "11.11+HOW1",
@@ -292,15 +287,16 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-11T22:13:41.588Z",
-      "updatedDate": "2025-02-11T22:13:41.588Z"
+      "createdDate": "2025-02-12T02:54:04.106Z",
+      "updatedDate": "2025-02-12T02:54:04.106Z"
     },
     "smallBusiness": {
       "examples": "Liquor licence; safe food handling certificate; truck or taxi licence; police check; zoning permit; government security clearance; market stall holder permit; working with children check; tradesperson licence; responsible service of alcohol certificate; environmental permit; any other legally-required core qualification.",
       "moreInfo": "This ID is for storing copies of any licence, permit, or accreditation that your business cannot trade without. First, you registered your business. Now you need the legal proof that you can provide a product or service.\n\nThis ‘proof’ will vary considerably depending on what you do. If you run a bar, you’ll need a liquor licence. If you’re a healthcare provider in private practice, you must have a degree, as well as any other required accreditations.\n\nYou might be thinking, “hey Johnny.Decimal, you’ve always said not to have copies of things in different places”. Absolutely – for documents that change, like a budget spreadsheet. You should never have multiple copies of things like that because someone will inevitably update the wrong version.\n\nHowever, licences, permits, and accreditations are static documents. Probably a PDF or a piece of paper. It’s okay to put copies of them where it’s helpful and makes sense to do so. They’re not going to change unless they are renewed.\n\nThis is an important ID to keep up-to-date in your JDex and to set reminders for to ensure nothing expires.",
       "alsoSee": "Manage ongoing training or education in [[11.50]], but store a copy of the proof of completion here if it’s essential to your ability to trade.",
       "rationale": "If an inspector turns up at your door, having copies of these core documents in one place will be very handy. They’re also highly visible at the top of your system so they’re not lost or forgotten."
-    }
+    },
+    "isPublic": false
   },
   {
     "number": "11.13",
@@ -309,14 +305,15 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-11T22:13:41.588Z",
-      "updatedDate": "2025-02-11T22:13:41.588Z"
+      "createdDate": "2025-02-12T02:54:04.106Z",
+      "updatedDate": "2025-02-12T02:54:04.106Z"
     },
     "smallBusiness": {
       "examples": "Workplace health and safety compliance; environmental laws; industry manufacturing standards; payroll governance, building standards and safety inspections; retail fair trading laws; codes of conduct for advertising and marketing; food safety inspections; financial audits; local and international import/export regulations; laws around the supply of alcohol; employment and unfair dismissal laws; privacy and data protection laws.",
       "moreInfo": "You have a registered business and the legal permission to provide a product or service. Now you must adhere to the regulatory environment that you are trading in. Again, this will depend entirely on what you do.\n\nThere may be many different local, state, national, or international laws or requirements to be aware of. And who knows, if you run a fishing business, things like the ‘law of the sea’ may apply.\n\nCompliance might mean that:\n\n- Your business must obey certain laws, regulations, or codes of practice.\n- Your business must undergo one-off or ongoing inspections or audits.\n- You and your staff must do ongoing training.\n- The products you sell or manufacture must meet certain standards.\n\nEither way, store copies of regulations and proof that you’re complying with them here. This is an important ID to keep up-to-date in your JDex and to set reminders for to ensure you stay above board.",
       "alsoSee": "Manage ongoing training or education in [[11.50]], but store a copy of the proof of completion here if it helps you meet compliance obligations."
-    }
+    },
+    "isPublic": false
   },
   {
     "number": "11.13+1",
@@ -336,528 +333,969 @@
   {
     "number": "11.14",
     "title": "Other legal matters",
-    "description": "A place for any other legal matters or ‘serious’ documents related to the business entity that a lawyer may have prepared, were issued by the government, or certified by a public official. ",
+    "description": "A place for any other legal matters or ‘serious’ documents related to the business entity that a lawyer may have prepared, were issued by the government, or certified by a public official.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.106Z",
+      "updatedDate": "2025-02-12T02:54:04.106Z"
     },
     "smallBusiness": {
-      "examples": "Statutory declarations; affidavits; documents related to proof of ownership; non-disclosure or confidentiality agreements; change of company director paperwork; contracts that don’t fit elsewhere; court appearances. ",
-      "moreInfo": "It’s hard to predict what other core documents a business may have around the world. Or any legal matters that may need to be dealt with. But if it’s important and doesn’t fit elsewhere, put it here and note its location in your JDex. ",
-      "exceptions": "We’re still dealing with the business entity here, not employees, products, or suppliers. Any legal matters or ‘serious’ documents related to those things live with them. ",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+      "examples": "Statutory declarations; affidavits; documents related to proof of ownership; non-disclosure or confidentiality agreements; change of company director paperwork; contracts that don’t fit elsewhere; financial disputes that make it to court.",
+      "moreInfo": "It’s hard to predict what other core documents a business may have around the world. Or any legal matters that may need to be dealt with. But if it’s important and doesn’t fit elsewhere, put it here in this legal catch-all. And note its location in your JDex.",
+      "exceptions": "We’re still dealing with the business entity here, not employees, products, or suppliers. Any legal matters or ‘serious’ documents related to those things live with them."
+    },
+    "isPublic": false
   },
   {
     "number": "11.15",
     "title": "Selling it or closing it",
-    "description": "Whether you sell the business, pass it on to a family member, or close it down, this is a place to work out the details. ",
+    "description": "Whether you sell the business, pass it on to a family member, or close it down, this is a place to work out the details.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.107Z",
+      "updatedDate": "2025-02-12T02:54:04.107Z"
     },
     "smallBusiness": {
-      "examples": "",
-      "moreInfo": "Businesses can end for many reasons, happy, sad, or indifferent. You might want to retire or just try something new. Or perhaps another business is interested in a merger or acquisition. Or there may be involuntary reasons like bankruptcy or a natural disaster. We haven’t seen Succession, the TV show, but we get the gist. This kind of planning would also be something to consider here. Hopefully your situation is less dramatic. And even if you’re a sole trader with a simple set up, there might be things for you to store here. For instance, you decide to return to regular employment and want to deregister or pause your business entity to avoid ongoing fees or tax obligations. ",
-      "exceptions": "",
-      "alsoSee": "Don’t forget to include this Johny.Decimal small business system in [[13.34]]. ",
-      "rationale": "",
-      "links": ""
-    }
+      "moreInfo": "Businesses can end for many reasons, happy, sad, or indifferent.\n\nYou might want to retire or just try something new. Or perhaps another business is interested in a merger or acquisition. Or there may be involuntary reasons like bankruptcy or a natural disaster.\n\nWe haven’t seen Succession, the TV show, but we get the gist. This kind of planning would also be something to consider here. Hopefully your situation is less dramatic.\n\nAnd even if you’re a sole trader with a simple set up, there might be things for you to store here. For instance, you decide to return to regular employment and want to deregister or pause your business entity to avoid ongoing fees or tax obligations.",
+      "alsoSee": "Don’t forget to include this Johnny.Decimal small business system in [[13.45]]."
+    },
+    "isPublic": false
   },
   {
     "number": "11.20",
-    "title": "Planning, contingencies, & insurance",
-    "description": "The documents you write to guide the business in the short and longer term, what to do when something bad happens, and insurance for the entity and its people. ",
+    "title": "■ Planning, contingencies, & insurance",
+    "description": "The documents you write to guide the business in the short and longer term, what to do when something bad happens, and insurance for the entity and its people.",
     "type": "id",
     "emoji": "🧭",
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.107Z",
+      "updatedDate": "2025-02-12T02:54:04.107Z"
     },
-    "smallBusiness": {
-      "examples": "",
-      "moreInfo": "",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+    "smallBusiness": {},
+    "isPublic": false
   },
   {
     "number": "11.21",
     "title": "Business plan",
-    "description": "The indispensable guide to where you are, where you want to be, and what to do to get there. ",
+    "description": "The indispensable guide to where you are, where you want to be, and what to do to get there.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.108Z",
+      "updatedDate": "2025-02-12T02:54:04.108Z"
     },
     "smallBusiness": {
-      "examples": "",
-      "moreInfo": "This may be less relevant if you’re, say, a freelance graphic designer working on a project-by-project basis. But for most other businesses, whether new or existing, this is something you shouldn’t skip. A business plan contains all the good stuff like your mission and vision statements, goals, risk analysis, and financial position. Do periodic reviews and remember to save the previous version of the document when updating it. And if you have innovative services or practices, you may wish to protect the plan with a confidentiality agreement. If you’ve never written one, government business websites often have handy templates to get you started. ",
-      "exceptions": "",
-      "alsoSee": "If you have a confidentiality agreement to protect your business plan, store it in [[11.14]]. When it’s time to update your business plan, don’t forget to review [[11.23]]. ",
-      "rationale": "",
-      "links": "Business plan resources and templates from the: "
-    }
+      "moreInfo": "This may be less relevant if you’re, say, a freelance graphic designer working on a project-by-project basis. But for most other businesses, whether new or existing, this is something you shouldn’t skip.\n\nA business plan contains all the good stuff like your mission and vision statements, goals, risk analysis, and financial position. Do periodic reviews and remember to save the previous version of the document when updating it. And if you have innovative services or practices, you may wish to protect the plan with a confidentiality agreement. \n\nIf you’ve never written one, government business websites often have handy templates to get you started.",
+      "alsoSee": "If you have a confidentiality agreement to protect your business plan, store it in [[11.14]].\n\nWhen it’s time to update your business plan, don’t forget to review [[11.23]].",
+      "links": "[Business plan resources and templates](https://business.gov.au/planning/business-plans/develop-your-business-plan) from the Australian Government.\n\n[Business plan resources and templates](https://www.gov.uk/write-business-plan) from the UK Government.\n\n[Business plan resources and templates](https://www.sba.gov/business-guide/plan-your-business/write-your-business-plan) from the US Government."
+    },
+    "isPublic": false
   },
   {
     "number": "11.22",
     "title": "Business insurance, incidents, & claims",
-    "description": "Policies, coverage details, incident reports, and claim forms for your business entity and people. ",
+    "description": "Policies, coverage details, incident reports, and claim forms for your business entity and people.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.108Z",
+      "updatedDate": "2025-02-12T02:54:04.108Z"
     },
     "smallBusiness": {
-      "examples": "Public liability insurance; professional indemnity insurance; workers compensation insurance. ",
-      "moreInfo": "This is a place for any insurance that covers the business entity interacting with the world. And overall coverage for staff while they are at work. This is also where to store incident reports that might become part of a claim. For example, if a staff member is injured at work put the details and medical report here. ",
-      "exceptions": "Staff medical insurance as part of a salary package goes in [[XX.XX]]. Building (structural and/or contents) or land insurance goes in [[12.12]]. Vehicle insurance goes in [[12.42]]. Financial insurance goes in [[13.XX]]. IT insurance goes in [[14.XX]]. Product insurance goes in [[2X.XX]]. ",
-      "alsoSee": "",
-      "rationale": "We recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal. Hence, business insurance goes up here and there’s room allocated for other insurances in the categories below. ",
-      "links": ""
-    }
+      "examples": "Public liability insurance; professional indemnity insurance; workers compensation insurance.",
+      "moreInfo": "This is a place for any insurance that covers the business entity interacting with the world. And overall coverage for staff while they are at work. \n\nSome of these insurances may be required by law. For instance, in Australia public liability and workers compensation insurance is compulsory.\n\nWe’ve noted in our research that insurance companies often have commercial policies that are specifically designed for certain occupations. So it might pay to look around to see if that’s an option for you.\n\nThis is also where to store incident reports that might become part of a claim. For example, if a staff member is injured at work put the details and medical report here. \n\n### There’s a lot of insurance out there\n\nWe’re not insurance brokers, so we can’t advise you on what to get. But one of the things we’ve learned in our research for this system is that there is _a lot_ of insurance options for businesses. It’s a bit overwhelming. We now understand the value of a trustworthy insurance professional to provide sensible, tailored advice.",
+      "exceptions": "Staff health insurance as part of a salary package goes in [[13.34]].\n\nBuilding (structural and/or contents) or land insurance goes in [[12.12]].\n\nVehicle insurance goes in [[12.42]].\n\nFinancial insurance goes in [[13.12]].\n\nCyber insurance goes in [[14.44]].\n\nProduct insurance goes in [[20-29]].",
+      "rationale": "We recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal. Hence, business insurance goes up here and there’s room allocated for other insurances in the categories below.",
+      "links": "An overview of all the [types of insurances](https://business.gov.au/risk-management/insurance/types-of-business-insurance) a business might have. Some policies would go here, others would fit in the categories below.\n\nThis is not an endorsement, just an example of a company that offers policies for different occupations – [NRMA business insurance](https://www.nrma.com.au/business-insurance#)."
+    },
+    "isPublic": false
   },
   {
     "number": "11.23",
     "title": "Risk & emergency management plans",
-    "description": "Awareness of the risks that can affect your business and instructions for what to do if they occur. ",
+    "description": "Awareness of the risks that can affect your business and instructions for what to do if they occur.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.108Z",
+      "updatedDate": "2025-02-12T02:54:04.108Z"
     },
     "smallBusiness": {
-      "examples": "- If you sell croissants, your risk management plan might include what to do if the price of butter rises.\n- If your business is next to a river, your emergency management plan might include flood evacuation procedures.\n",
-      "moreInfo": "It’s important to identify events that can negatively impact your business. And then plan how to make decisions and operate during the event, and recover afterwards (often referred to as ‘business continuity and disaster recovery’). A business risk might be specific to your service or product. While emergencies might be location-specific natural disasters, human-caused events like crime, or technological events like a water main rupturing. Either way, your future self will thank you for having a process in place if disaster strikes. And don’t forget to securely store contact numbers for local emergency, police, fire, and ambulance services, as well as recovery contacts for things like insurance, banking, and suppliers. ",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
+      "moreInfo": "It’s important to identify events that can negatively impact your business. And then plan how to make decisions and operate during the event, and recover afterwards (often referred to as ‘business continuity and disaster recovery’). Your future self will thank you for having a process in place if disaster strikes.\n\nA business risk might be specific to your product or service. While emergencies might be location-specific natural disasters, human-caused events like crime, or municipal events like a water main rupturing.\n\nFor example, if you sell croissants, your risk management plan might include what to do if the price of butter rises. If your business is next to a river, your emergency management plan might include flood evacuation procedures.\n\nEither way, don’t forget to securely store contact numbers for local emergency, police, fire, and ambulance services, as well as recovery contacts for things like insurance, banking, and suppliers.\n\n### Emergency digital recovery kit\n\nAnother risk you might consider here is – what if something happens to you? Who do you trust the most to log in to things, pay bills, and contact people on your behalf?\n\nIn our [Life Admin System](https://jdcm.al/14.11/), we discuss the concept of an emergency recovery kit. Which is basically just a list of instructions, stored in a secure location, that outlines your digital life for a trusted person in an emergency. In this case, it’s for your business.\n\nThis will obviously contain sensitive information, so don’t leave it lying around! There’s a good chance that your password manager can help you manage this kind of thing securely.",
+      "alsoSee": "Ensure you can access a _printed_ copy of your data recovery instructions from [[14.23]] in the event that something bad happens to your computers (e.g. theft, accident, natural disaster, ransomware attack)."
     },
     "isPublic": true
   },
   {
     "number": "11.24",
     "title": "Collected wisdom & analysis",
-    "description": "A place to record and analyse what’s working, what needs improvement, and ideas for making it happen. ",
+    "description": "A place to record and analyse what’s working, what needs improvement, and ideas for making it happen.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.109Z",
+      "updatedDate": "2025-02-12T02:54:04.109Z"
     },
     "smallBusiness": {
-      "examples": "What went well today/this week/this month/this year; ‘lessons learned’ to avoid repeat mistakes; miscellaneous anecdotes from staff meetings; and any other notes, dreams, or ideas related to the business. ",
-      "moreInfo": "",
-      "exceptions": "",
-      "alsoSee": "When it’s time to update [[11.21]], this ID should be a gold mine. ",
-      "rationale": "",
-      "links": ""
-    }
+      "examples": "What went well today/this week/this month/this year; ‘lessons learned’ to avoid repeat mistakes; miscellaneous anecdotes from staff meetings; and any other notes, dreams, or ideas related to the business.",
+      "alsoSee": "When it’s time to update [[11.21]], this ID should be a gold mine."
+    },
+    "isPublic": false
   },
   {
     "number": "11.30",
     "title": "Behaviours, ethics, & culture",
-    "description": "The things we do to be a good business to work in or deal with. ",
+    "description": "The things we do to be a good business to work in or deal with.",
     "type": "id",
     "emoji": "👍",
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.112Z",
+      "updatedDate": "2025-02-12T02:54:04.112Z"
     },
-    "smallBusiness": {
-      "examples": "",
-      "moreInfo": "",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+    "smallBusiness": {},
+    "isPublic": false
   },
   {
     "number": "11.31",
     "title": "Internal policies",
-    "description": "How the business will behave towards staff and expectations for staff behaviour. ",
+    "description": "How the business will behave towards staff and expectations for staff behaviour.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.113Z",
+      "updatedDate": "2025-02-12T02:54:04.113Z"
     },
     "smallBusiness": {
-      "examples": "Company values; enterprise or other registered agreements between employers and employees; formal policies that staff will be assessed against during reviews; how you communicate news and updates; dress code and grooming expectations; buddy systems for new staff; culture-related policies on things like working from home, pets or kids in the workplace, or social activities. ",
-      "moreInfo": "What sort of workplace do you want to have? This is a place for figuring this out and writing it down. For instance, official policies for how staff can expect to be treated and should behave. General processes around internal communications or managing a team. Staff-retention strategies to help everyone feel comfortable, get along, and enjoy their work. If you’re a sole trader, maybe you decide on some internal policies with yourself (why not!). Such as what your working hours are, how often you will check email or other channels, taking regular days off to avoid burn out, or making time for business admin each week. Anything that maintains morale and keeps you motivated. ",
-      "exceptions": "",
-      "alsoSee": "Be sure to make any formal policies clear to staff before doing [[11.43]]. ",
-      "rationale": "",
-      "links": ""
-    }
+      "examples": "Company values; enterprise or other registered agreements between employers and employees; formal policies that staff will be assessed against during reviews; how you communicate news and updates; dress code and grooming expectations; buddy systems for new staff; culture-related policies on things like working from home, pets or kids in the workplace, or social activities.",
+      "moreInfo": "What sort of workplace do you want to have? This is a place for figuring this out and writing it down. \n\nFor instance, official policies for how staff can expect to be treated and should behave. General processes around internal communications or managing a team. Staff-retention strategies to help everyone feel comfortable, get along, and enjoy their work.\n\nIf you’re a sole trader, maybe you decide on some internal policies with yourself (why not!). Such as what your working hours are, how often you will check email or other channels, taking regular days off to avoid burn out, or making time for business admin each week. Anything that maintains morale and keeps you motivated.",
+      "alsoSee": "Be sure to make any formal policies clear to staff before doing [[11.43]].",
+      "links": "[Enterprise agreements and other registered agreements](https://www.fairwork.gov.au/employment-conditions/agreements) from the Australian Government Fair Work Ombudsman."
+    },
+    "isPublic": false
   },
   {
     "number": "11.32",
     "title": "External policies",
-    "description": "How the business will behave towards customers, suppliers, and the wider world. ",
+    "description": "How the business will behave towards customers, suppliers, and the wider world.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.113Z",
+      "updatedDate": "2025-02-12T02:54:04.113Z"
     },
     "smallBusiness": {
-      "examples": "Customer service policy; refund policy; retail terms and conditions; privacy policy; disclaimers; timely payment process for suppliers; environmental and sustainability policy; equal opportunity employer statement; anti-slavery or land acknowledgement statements. ",
-      "moreInfo": "How do you want your business to be perceived by others? This is a place for figuring this out and writing it down. We’re not talking about operations as such, or nice things your business might do for the community. It’s for any official policies or statements, or personal stances on how the business will behave. For instance, on your website you might have administrative policies or social, ethical, or environmental statements. Or maybe you have a policy to use local suppliers and pay their invoices early because you want to support others like you. ",
-      "exceptions": "This is not related to front office operations, that’s at [[12.30]]. This is not related to being part of a community, that’s at [[12.50]]. ",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+      "examples": "Customer service policy; refund policy; retail terms and conditions; privacy policy; disclaimers; timely payment process for suppliers; environmental and sustainability policy; equal opportunity employer statement; anti-slavery or land acknowledgement statements.",
+      "moreInfo": "How do you want your business to be perceived by others? This is a place for figuring this out and writing it down. \n\nWe’re not talking about operations as such, or nice things your business might do for the community. It’s for any official policies or statements, or personal stances on how the business will behave. \n\nFor instance, on your website you might have administrative policies or social, ethical, or environmental statements. Or maybe you have a policy to use local suppliers and pay their invoices early because you want to support others like you.",
+      "exceptions": "This is not related to front office operations, that’s at [[12.30]].\n\nThis is not related to being part of a community, that’s at [[12.50]].",
+      "links": "An article about [environmental, social and governance (ESG) practices in business](https://business.gov.au/environmental-management/use-environmental-social-and-governance-esg-practices-in-your-business) from the Australian Government."
+    },
+    "isPublic": false
   },
   {
     "number": "11.33",
     "title": "Dispute resolution",
-    "description": "Solving problems and complaints professionally and calmly. ",
+    "description": "Solving problems and complaints professionally and calmly.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.114Z",
+      "updatedDate": "2025-02-12T02:54:04.114Z"
     },
     "smallBusiness": {
-      "examples": "Procedures for managing customer complaints or negative feedback; guidelines for replying to social media comments and online reviews; strategies for disputes with suppliers. ",
-      "moreInfo": "How do you solve problems and deal with sticky situations? This is a place for anything to do with figuring this out. It’s hard to predict what can go wrong. But having some guidelines in place for how you approach disputes can help you stay calm and in control, represent the business well, and hopefully get a good outcome. ",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+      "examples": "Procedures for managing customer complaints or negative feedback; guidelines for replying to social media comments and online reviews; strategies for disputes with suppliers.",
+      "moreInfo": "How do you solve problems and deal with sticky situations? This is a place for anything to do with figuring this out.\n\nIt’s hard to predict what can go wrong. But having some guidelines in place for how you approach disputes can help you stay calm and in control, represent the business well, and hopefully get a good outcome.",
+      "links": "An article about [managing online reviews](https://business.gov.au/online-and-digital/online-reviews) from the Australian Government."
+    },
+    "isPublic": true
   },
   {
     "number": "11.40",
     "title": "Our people",
-    "description": "Getting, keeping, & farewelling staff. ",
+    "description": "Getting, keeping, & farewelling staff.",
     "type": "id",
     "emoji": "🦸",
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.114Z",
+      "updatedDate": "2025-02-12T02:54:04.114Z"
     },
-    "smallBusiness": {
-      "examples": "",
-      "moreInfo": "_Lucy's finalising this area so there's no detail here yet._",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+    "smallBusiness": {},
+    "isPublic": false
   },
   {
     "number": "11.41",
     "title": "Hiring",
-    "description": "Anything to do with finding, choosing, & onboarding new staff. ",
+    "description": "Anything to do with finding, choosing, & onboarding new staff.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.115Z",
+      "updatedDate": "2025-02-12T02:54:04.115Z"
     },
     "smallBusiness": {
-      "examples": "Recruitment agencies or online employment platforms you use’ role descriptions for job ads; CVs/resumes received; the interview process and questions; candidate shortlists; the onboarding process; information for new employees; a checklist that covers the entire hiring process. ",
-      "moreInfo": "",
-      "exceptions": "",
-      "alsoSee": "[[11.42] for creating a new staff record template when someone is hired. [[14.XX]] for assigning and setting up new devices and accounts. ",
-      "rationale": "",
-      "links": ""
-    }
+      "examples": "Recruitment agencies or online employment platforms you use’ role descriptions for job ads; CVs/resumes received; the interview process and questions; candidate shortlists; the onboarding process; information for new employees; a checklist that covers the entire hiring process.",
+      "alsoSee": "[[11.42] for creating a new staff record template when someone is hired.\n\n[[14.10]] and [[14.41]] for assigning and setting up new devices and accounts."
+    },
+    "isPublic": true
   },
   {
     "number": "11.42",
     "title": "Staff record keeping",
-    "description": "The official staff records that a business must keep for a certain period of time, neatly templated. ",
+    "description": "The official staff records that a business must keep for a certain period of time, neatly templated.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.115Z",
+      "updatedDate": "2025-02-12T02:54:04.115Z"
     },
     "smallBusiness": {
-      "examples": "",
-      "moreInfo": "In Australia, staff records must be kept for up to 7 years. Your government may have different requirements. We suggest storing the records in this ID as per the image below. Each employee has a subfolder labelled with the year-month-day they joined (so it sorts neatly) and their name. Inside that is a standard template. We have provided an example template in the folder system. Adjust this to your needs as required, just remember to be consistent.\n\n```\n2014-07-08 Slydell, Bob\n2017-08-21 Bolton, Michael\n2019-02-14 Lumbergh, Bill\n        10 Personal details\n20 Payments and deductions\n30 Work hours and overtime\n40 Leave taken and accrued\n50 Pension contributions\n60 Training completed\n70 Ending the employment\n``` \n\nOther records you might consider keeping include: CVs/resumes, job applications and pre-employment checks, employment contracts, performance reviews, trade or registration certificates, details of uniforms and equipment allocated, roles held and promotions. ",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+      "moreInfo": "In Australia, staff records must be kept for up to 7 years. Your government may have different requirements. \n\nWe suggest storing the records in this ID as per the image below. Each employee has a subfolder labelled with the year-month-day they joined (so it sorts neatly) and their name. Inside that is a standard template. \n\nWe have provided an example template in the folder system. Adjust this to your needs as required, just remember to be consistent.\n\n2014-07-08 Slydell, Bob\n2017-08-21 Bolton, Michael\n2019-02-14 Lumbergh, Bill\n\t\t\t\t\t10 Personal details\n\t\t\t\t\t20 Payments and deductions\n\t\t\t\t\t30 Work hours and overtime\n\t\t\t\t\t40 Leave taken and accrued\n\t\t\t\t\t50 Pension contributions\n\t\t\t\t\t60 Training completed\n\t\t\t\t\t70 Ending the employment\n\nOther records you might consider keeping include: CVs/resumes, job applications and pre-employment checks, employment contracts, performance reviews, trade or registration certificates, details of uniforms and equipment allocated, roles held and promotions.",
+      "links": "An interview with the ATO Assistant Commissioner about tax obligations when hiring your first worker from the [Australian Business Podcast](https://www.youtube.com/watch?v=6MwO1g0F9IY)."
+    },
+    "isPublic": false
   },
   {
     "number": "11.43",
     "title": "Formal reviews",
-    "description": "How’s everybody doing? ",
+    "description": "How’s everybody doing?",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.115Z",
+      "updatedDate": "2025-02-12T02:54:04.115Z"
     },
     "smallBusiness": {
-      "examples": "Performance review templates; completed forms from staff; the follow-up process; resources and strategies for managing underperformance or misconduct; how you deliver warnings and disciplinary action. ",
-      "moreInfo": "Getting the best out of your people includes being open about your expectations for their performance, periodically reviewing it, and ensuring they have an opportunity to speak freely about how things are for them. Conducting formal reviews against pre-defined criteria is now commonplace. Most people expect to be reviewed during their employment and might think it was odd if they weren’t. Plus if a relationship sours, having evidence that the employee had opportunities to voice concerns and they were taken seriously can be an important protection for business owners. ",
-      "exceptions": "",
-      "alsoSee": "Ensure staff are clear on anything relevant at [[11.31]]. ",
-      "rationale": "",
-      "links": ""
-    }
+      "examples": "Performance review templates; completed forms from staff; the follow-up process; resources and strategies for managing underperformance or misconduct; how you deliver warnings and disciplinary action.",
+      "moreInfo": "Getting the best out of your people includes being open about your expectations for their performance, periodically reviewing it, and ensuring they have an opportunity to speak freely about how things are for them.\n\nConducting formal reviews against pre-defined criteria is now commonplace. Most people expect to be reviewed during their employment and might think it was odd if they weren’t. \n\nPlus if a relationship sours, having evidence that the employee had opportunities to voice concerns and they were taken seriously can be an important protection for business owners.",
+      "alsoSee": "Ensure staff are clear on anything relevant at [[11.31]].",
+      "links": "[Managing performance and warnings](https://www.fairwork.gov.au/employment-conditions/performance-in-the-workplace) from the Australian Government Fair Work Ombudsman."
+    },
+    "isPublic": false
   },
   {
     "number": "11.44",
     "title": "Farewells",
-    "description": "Anything to do with ending employment and offboarding staff. ",
+    "description": "Anything to do with ending employment and offboarding staff.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.115Z",
+      "updatedDate": "2025-02-12T02:54:04.115Z"
     },
     "smallBusiness": {
-      "examples": "The offboarding process and paperwork; checklists for handing things back; exit interview templates; handover documents and meetings; notice periods for resignations, redundancies, or dismissals. ",
-      "moreInfo": "When staff move on it’s important to have a process in place leading up to their last day – the opposite of onboarding. Clearly communicate your expectations of what they need to achieve before they go and what you will do in return. This includes handing the role over to another staff member in a timely manner if required. While this is a normal part of running a business, it can sometimes be sad or stressful. Review your local employment laws if you have to deal with a dismissal or redundancy. And remember to seek advice or support if you need help. ",
-      "exceptions": "Calculate final payouts over in [[13.XX]] and record the details in [[11.42]] to close the loop. If you want to organise a farewell social gathering or gift, that’s in [[15.XX]]. ",
-      "alsoSee": "[[14.XX]] for collecting devices and closing accounts. ",
-      "rationale": "",
-      "links": ""
-    }
+      "examples": "The offboarding process and paperwork; checklists for handing things back; exit interview templates; handover documents and meetings; notice periods for resignations, redundancies, or dismissals.",
+      "moreInfo": "When staff move on it’s important to have a process in place leading up to their last day – the opposite of onboarding. \n\nClearly communicate your expectations of what they need to achieve before they go and what you will do in return. This includes handing the role over to another staff member in a timely manner if required.\n\nWhile this is a normal part of running a business, it can sometimes be sad or stressful. Review your local employment laws if you have to deal with a dismissal or redundancy. And remember to seek advice or support if you need help.",
+      "exceptions": "Calculate final payouts over in [[13.34]] and record the details in [[11.42]] to close the loop.\n\nIf you organise a farewell social gathering or gift, that goes in [[15.XX]].",
+      "alsoSee": "[[14.10]] and [[14.41]] for collecting devices and closing accounts.",
+      "links": "[Ending employment](https://www.fairwork.gov.au/ending-employment) from the Australian Government Fair Work Ombudsman"
+    },
+    "isPublic": false
   },
   {
     "number": "11.45",
     "title": "Animals as staff",
-    "description": "For all (working) creatures, great and small. ",
+    "description": "For all (working) creatures, great and small.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.116Z",
+      "updatedDate": "2025-02-12T02:54:04.116Z"
     },
     "smallBusiness": {
-      "examples": "Dogs or horses that work in tourism or muster livestock; birds who help with biological pest control; dogs trained for a service such as companionship or search and rescue; truffle pigs or dogs. ",
-      "moreInfo": "We’re not experts so it’s hard to predict what subfolders you might need. It will depend on the animals you have, what they do, and where you live. Some basic things to consider include: - Health records, registrations, and other important documents.\n- Insurance and claims.\n- Nutrition and exercise.\n- Pest control and grooming.\n- Training and discipline.\n- Equipment and shelter.\n- First aid and contacts for general healthcare and medical emergencies.\nIf this is integral to your business and you need more room, feel free to use the spare IDs in this section. We’d love it if you chat to us first on the Discord so we can help you get the best result (which will help other people who need this). ",
-      "exceptions": "If you’re a farmer and sell livestock or other animal products such as wool, milk, eggs, or genetic material for breeding, then how you manage all of that should be in [[20-29]] or another area that you create yourself (or we can help!). ",
-      "alsoSee": "",
-      "rationale": "This ID was included to accommodate animals in exactly the same way as humans – in the delivery of a business’ product or service. But we appreciate that there’ll be some grey areas here depending on what you do. And we don’t want things to get confusing. For instance, if you run a sheep property or dairy farm and sell the wool/milk, it would probably be impractical to classify these animals as staff. But if you run, say, a Hansom cab or sled dog tourism business, you might classify the horses and dogs as staff and manage them here. The thing you’re selling is the experience of riding around New York’s Central Park or a snowscape in northern Canada, which is managed elsewhere. As always, do what works for you. If you need this ID, you know who you are. If you don’t, it’s highly unlikely you ever will, so just ignore it. ",
-      "links": ""
-    }
+      "examples": "Dogs or horses that work in tourism or muster livestock; birds who help with biological pest control; dogs trained for a service such as companionship or search and rescue; truffle pigs or dogs.",
+      "moreInfo": "We’re not experts so it’s hard to predict what subfolders you might need. It will depend on the animals you have, what they do, and where you live. \n\nSome basic things to consider include: \n- Health records, registrations, and other important documents.\n- Insurance and claims.\n- Nutrition and exercise.\n- Pest control and grooming.\n- Training and discipline.\n- Equipment and shelter.\n- First aid and contacts for general healthcare and medical emergencies.\n\nIf this is integral to your business and you need more room, feel free to use the spare IDs in this section. We’d love it if you chat to us first on the Discord so we can help you get the best result (which will help other people who need this).",
+      "exceptions": "If you’re a farmer and sell livestock or other animal products such as wool, milk, eggs, or genetic material for breeding, then how you manage all of that should be in [[20-29]] or another area that you create yourself (or we can help!).",
+      "rationale": "This ID was included to accommodate animals in exactly the same way as humans – in the delivery of a business’ product or service. But we appreciate that there’ll be some grey areas here depending on what you do. And we don’t want things to get confusing.\n\nFor instance, if you run a sheep property or dairy farm and sell the wool/milk, it would probably be impractical to classify these animals as staff. \n\nBut if you run, say, a Hansom cab or sled dog tourism business, you might classify the horses and dogs as staff and manage them here. The thing you’re selling is the experience of riding around New York’s Central Park or a snowscape in northern Canada, which is managed elsewhere. As always, do what works for you.\n\nIf you need this ID, you know who you are. If you don’t, it’s highly unlikely you ever will, so just ignore it."
+    },
+    "isPublic": false
   },
   {
     "number": "11.50",
     "title": "Training & professional development",
-    "description": "Anything to do with maintaining or updating skills and credentials, or other self-improvement. ",
+    "description": "Anything to do with maintaining or updating skills and credentials, or other self-improvement.",
     "type": "id",
     "emoji": "🎓",
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.116Z",
+      "updatedDate": "2025-02-12T02:54:04.116Z"
     },
-    "smallBusiness": {
-      "examples": "",
-      "moreInfo": "",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+    "smallBusiness": {},
+    "isPublic": false
   },
   {
     "number": "11.51",
     "title": "Mandatory training",
-    "description": "The basic, compulsory training that must be done, including general training common to many workplaces or that is specific to yours. ",
+    "description": "The basic, compulsory training that must be done, including general training common to many workplaces or that is specific to yours.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.116Z",
+      "updatedDate": "2025-02-12T02:54:04.116Z"
     },
     "smallBusiness": {
-      "examples": "Fire drills and general safety training; job-specific software or equipment training; keeping a first aid qualification up-to-date; getting a safe food handling certificate; how to run the reception desk of a dental surgery; on-the-job training during an apprenticeship; how to open and close a cafe or set up a food truck; any other mandatory role-based training, certifications, or competencies. ",
-      "moreInfo": "This kind of training has an ‘end’. There’s a list of things to tick off and achieve. And what’s mandatory for some staff may not be for others. Everyone might need to show they can lift a box safely, but only the IT person has to have a particular Microsoft certification. Some mandatory training will need to be maintained or renewed. For example, demonstrating first aid skills periodically to keep a qualification. ",
-      "exceptions": "",
-      "alsoSee": "If the training is core to the business operating legally, add the proof of completion to [[11.12]]. If the training helps meet compliance obligations, add the proof of completion to [[11.13]]. Consider adding these details to official employee records at [[11.42]]. If you have preferred in-person or online training suppliers, store their details at [[12.0X)]]. If the training is based on any ops manuals in [[12.20]] or [[12.30]], ensure any changes are reflected here. ",
-      "rationale": "We’ve called this ‘mandatory’ as it’s the kind of training you tend to be given as a new employee. Or it might be required due to workplace compliance laws. Or it’s related to how you or staff are expected to do their job. Either way, it must be done. ",
-      "links": ""
-    }
+      "examples": "Fire drills and general safety training; job-specific software or equipment training; keeping a first aid qualification up-to-date; getting a safe food handling certificate; how to run the reception desk of a dental surgery; on-the-job training during an apprenticeship; how to open and close a cafe or set up a food truck; any other mandatory role-based training, certifications, or competencies.",
+      "moreInfo": "This kind of training has an ‘end’. There’s a list of things to tick off and achieve. \n\nAnd what’s mandatory for some staff may not be for others. Everyone might need to show they can lift a box safely, but only the IT person has to have a particular Microsoft certification.\n\nSome mandatory training will need to be maintained or renewed. For example, demonstrating first aid skills periodically to keep a qualification.",
+      "alsoSee": "If the training is core to the business operating legally, add the proof of completion to [[11.12]].\n\nIf the training helps meet compliance obligations, add the proof of completion to [[11.13]].\n\nConsider adding these details to official employee records at [[11.42]].\n\nIf you have preferred in-person or online training suppliers, store their details at [[12.0X)]].\n\nIf the training is based on any ops manuals in [[12.20]] or [[12.30]], ensure any changes are reflected here.",
+      "rationale": "We’ve called this ‘mandatory’ as it’s the kind of training you tend to be given as a new employee. Or it might be required due to workplace compliance laws. Or it’s related to how you or staff are expected to do their job. Either way, it must be done."
+    },
+    "isPublic": false
   },
   {
     "number": "11.52",
     "title": "Optional training",
-    "description": "Extra training to gain or maintain a credential that is nice to have, but not mandatory. ",
+    "description": "Extra training to gain or maintain a credential that is nice to have, but not mandatory.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.117Z",
+      "updatedDate": "2025-02-12T02:54:04.117Z"
     },
     "smallBusiness": {
-      "examples": "Doing an Excel or Xero course to improve your skills; attending an advanced hairdressing or bar tending course to learn new techniques; completing an MBA or specialist dental qualification; gaining the project management professional (PMP) certification. ",
-      "moreInfo": "",
-      "exceptions": "",
-      "alsoSee": "Consider adding these details to official employee records at [[11.42]]. If you have preferred in-person or online training suppliers, store their details at [[12.0X)]]. If the training is based on any ops manuals in [[12.20]] or [[12.30]], ensure any changes are reflected here. ",
-      "rationale": "We’ve called this ‘optional’ as it’s the kind of training or credential you might add on to basic requirements. It’s nice to have, it might make you better at your job, but it’s not required by the business or the law. If you have multiple staff, everyone might do different things depending on their role and skill set. And it may be a formal qualification that is recognised anywhere, as opposed to training that is specific to your business. ",
-      "links": ""
-    }
+      "examples": "Doing an Excel or Xero course to improve your skills; attending an advanced hairdressing or bar tending course to learn new techniques; completing an MBA or specialist dental qualification; gaining the project management professional (PMP) certification.",
+      "alsoSee": "Consider adding these details to official employee records at [[11.42]].\n\nIf you have preferred in-person or online training suppliers, store their details at [[12.0X)]].\n\nIf the training is based on any ops manuals in [[12.20]] or [[12.30]], ensure any changes are reflected here.",
+      "rationale": "We’ve called this ‘optional’ as it’s the kind of training or credential you might add on to basic requirements. It’s nice to have, it might make you better at your job, but it’s not required by the business or the law.\n\nIf you have multiple staff, everyone might do different things depending on their role and skill set. And it may be a formal qualification that is recognised anywhere, as opposed to training that is specific to your business."
+    },
+    "isPublic": true
   },
   {
     "number": "11.53",
     "title": "Other learning & self-improvement",
-    "description": "A place to record any other general learning that doesn’t fit elsewhere. ",
+    "description": "A place to record any other general learning that doesn’t fit elsewhere.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.117Z",
+      "updatedDate": "2025-02-12T02:54:04.117Z"
     },
     "smallBusiness": {
-      "examples": "Materials you collect at industry conferences; notes in your JDex from YouTube software tutorials; a list of business-related books you plan to read; presentations from webinars or Meetups you attended; paid media subscriptions like specialty podcasts, blogs, newsletters, journals, periodicals, and magazines. ",
-      "moreInfo": "A place for anything you might classify as learning or self-improvement that doesn’t fit elsewhere. It’s not related to your business operating legally and/or doesn’t lead to a formal credential. You don’t have to do it, it’s extracurricular. But it might help you be a better business owner or staff member. For instance, informal courses, conferences or workshops, coaching programs, webinars, talks, or general reading and media consumption that keeps you informed. As an aside, we know some businesses that include budgets for this kind of thing in salary packages. Staff can then spend this on whatever learning they choose. Nice. ",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+      "examples": "Materials you collect at industry conferences; notes in your JDex from YouTube software tutorials; a list of business-related books you plan to read; presentations from webinars or Meetups you attended; paid media subscriptions like specialty podcasts, blogs, newsletters, journals, periodicals, and magazines.",
+      "moreInfo": "A place for anything you might classify as learning or self-improvement that doesn’t fit elsewhere. \n\nIt’s not related to your business operating legally and/or doesn’t lead to a formal credential. You don’t have to do it, it’s extracurricular. But it might help you be a better business owner or staff member. \n\nFor instance, informal courses, conferences or workshops, coaching programs, webinars, talks, or general reading and media consumption that keeps you informed.\n\nAs an aside, we know some businesses that include budgets for this kind of thing in salary packages. Staff can then spend this on whatever learning they choose. Nice.\n\n**Nerd tip:** this may sound obvious but we only just did it ourselves. Go to your government’s small business and/or tax website and see if they have newsletters. Sign up! We’ve subscribed to about ten different newsletters and so far they’re _full_ of useful stuff.",
+      "links": "[Free self-paced courses for small business](https://smallbusiness.taxsuperandyou.gov.au/) from the Australian Taxation Office."
+    },
+    "isPublic": false
   },
   {
     "number": "11.60",
     "title": "Other people & organisations",
-    "description": "External people and organisations that you interact with in a business capacity who are not suppliers or customers. ",
+    "description": "External people and organisations that you interact with in a business capacity who are not suppliers or customers.",
     "type": "id",
     "emoji": "🤝",
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.117Z",
+      "updatedDate": "2025-02-12T02:54:04.117Z"
     },
-    "smallBusiness": {
-      "examples": "",
-      "moreInfo": "",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+    "smallBusiness": {},
+    "isPublic": false
   },
   {
     "number": "11.61",
     "title": "Professional bodies",
-    "description": "Any kind of industry association, professional body, union, society, or similar group that you deal with. ",
+    "description": "Any kind of industry association, professional body, union, society, or similar group that you deal with.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.117Z",
+      "updatedDate": "2025-02-12T02:54:04.117Z"
     },
     "smallBusiness": {
-      "examples": "Certified Practising Accountants Australia; Australian Computer Society; Australasian Medical Writers’ Association; Media Entertainment & Arts Alliance; Australian Physiotherapy Association; Personal Trainers Association of Australia. ",
-      "moreInfo": "A place for any documents or notes related to your interactions with professional organisations. This might include membership records, literature they send you, meeting or event reminders, contact details, and website or social links. ",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+      "examples": "Certified Practising Accountants Australia; Australian Computer Society; Australasian Medical Writers’ Association; Media Entertainment & Arts Alliance; Australian Physiotherapy Association; Personal Trainers Association of Australia.",
+      "moreInfo": "A place for any documents or notes related to your interactions with professional organisations. This might include membership records, literature they send you, meeting or event reminders, contact details, and website or social links."
+    },
+    "isPublic": false
   },
   {
     "number": "11.62",
     "title": "Seeking advice & support",
-    "description": "Where to go for help with running the business or your wellbeing as a business owner. ",
+    "description": "Where to go for help with running the business or your wellbeing as a business owner.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.117Z",
+      "updatedDate": "2025-02-12T02:54:04.117Z"
     },
     "smallBusiness": {
-      "examples": "Government small business or finance websites; helplines; mentors; peers/other business owners; professional bodies; unions; ombudsman and watchdogs; mental health organisations. ",
-      "moreInfo": "This might include the contact details of anyone you know personally, or a list of websites that you have used previously or have been recommended. Or perhaps a library of useful downloads that you’ve saved on different topics. ",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": "Advice and wellbeing resources designed for small business: - \n- [Ahead for Business](https://aheadforbusiness.org.au/]\n"
-    }
+      "examples": "Government small business or finance websites; helplines; mentors; peers/other business owners; professional bodies; unions; ombudsman and watchdogs; mental health organisations.",
+      "moreInfo": "This might include the contact details of anyone you know personally, or a list of websites that you have used previously or have been recommended. Or perhaps a library of useful downloads that you’ve saved on different topics.",
+      "links": "[Business-related support](https://business.gov.au/planning/new-businesses/get-help-for-your-business) from the Australian Government.\n\n[Wellbeing-related support](https://business.gov.au/risk-management/mental-health/mental-health-and-wellbeing-support-for-business) from the Australian Government.\n\n[The Small Business Debt Helpline](https://sbdh.org.au/).\n\n[The Australian Small Business and Family Enterprise Ombudsman](https://www.asbfeo.gov.au/).\n\n[Small Business Guides to Mentally Healthy Workplaces](https://www.mentalhealthcommission.gov.au/projects/mentally-healthy-work/national-workplace-initiative/small-business-guides-mentally-healthy-workplaces) from the Australian Government National Mental Health Commission.\n\n[Mental health support for small business](https://www.beyondblue.org.au/mental-health/work/small-business-owners-and-sole-traders) from Beyond Blue.\n\n[Mental health support for small business](https://aheadforbusiness.org.au/] from Ahead for Business.\n\n[Business Mental Fitness Collection](https://www.smilingmind.com.au/business-mental-fitness) from Smiling Mind."
+    },
+    "isPublic": false
   },
   {
     "number": "11.63",
     "title": "Networking & new business",
-    "description": "Anyone you meet that you might develop a business relationship with one day. ",
+    "description": "Anyone you meet that you might develop a business relationship with one day.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.118Z",
+      "updatedDate": "2025-02-12T02:54:04.118Z"
     },
     "smallBusiness": {
-      "examples": "",
-      "moreInfo": "Whether you meet in person or online, jot down anything important and save it here. For instance, their name, contact details, what they do, what you discussed, and their social, LinkedIn, or website links. If they gave you their business card, you could take a photo of it and add it to your JDex note or file system. Consider linking these people to an ID. For example, if they’re a potential front office supplier, add a link in your JDex to [[12.0X]]. If they’re a graphic designer, add a link to [[XX.XX]]. ",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+      "moreInfo": "Whether you meet in person or online, jot down anything important and save it here.\n\nFor instance, their name, contact details, what they do, what you discussed, and their social, LinkedIn, or website links. If they gave you their business card, you could take a photo of it and add it to your JDex note or file system.\n\nConsider linking these people to an ID. For example, if they’re a potential front office supplier, add a link in your JDex to [[12.0X]]."
+    },
+    "isPublic": true
   },
   {
-    "number": "11.70",
-    "title": "Library",
-    "description": "Your system library",
+    "number": "11.90",
+    "title": "The business & its people library",
+    "description": "A place to put information that’s related to this category, kinda interesting, mostly unimportant, and definitely doesn’t fit elsewhere.",
     "type": "id",
-    "emoji": "Books📚",
+    "emoji": "🗺️",
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.118Z",
+      "updatedDate": "2025-02-12T02:54:04.118Z"
     },
     "smallBusiness": {
-      "examples": "",
-      "moreInfo": "",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+      "moreInfo": "Caution. This is a place for when there is no other place. Don’t get lazy and dump stuff here that is important and/or has a home elsewhere in the system.\n\nThis might be information that you found interesting or might be useful someday. But right now, it’s not strongly related to any other ID. And it would not make sense to clutter an existing ID or create a new one for it.\n\nIt’s a library so we want to keep it neat. Label any files with clear descriptions and use the year-month method in case the information is time sensitive.\n\n### Why are there no IDs here?\n\nIt’s difficult to imagine how these libraries might be used. So we didn’t want to commit to IDs just yet. By leaving these sections blank, we thought it might be a good way to introduce everyone to the careful consideration that goes into making a new ID.\n\nIf you’re ready to save things in this library, come over to the [[community]] and see what others are doing or ask us for advice. We’ll figure it out together and eventually settle on some standard IDs. In the meantime, just keep things neat and tidy here.\n\n### Leave yourself JDex notes\n\nRemember to leave a note in your JDex when you save things in this library so you can find them easily.\n\n(This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)",
+      "exceptions": "Things that contain information that is specific to your business, and that don’t fit elsewhere, should go in [[13.14]].",
+      "rationale": "We wanted to be realistic and acknowledge that sometimes there is miscellanea that accumulates over time.\n\nIt could be anything – a document, photo, URL, email, note, or a physical item. But it’s not the _work_ that you do. It’s things that you’ve found online or in real life, or perhaps that you’ve created.\n\nIt doesn’t fit anywhere else. It’s just a thing you wanted to save. And you don’t want it muddying other folders where work happens.\n\nImportantly, it’s not that important. It has nothing to do with business operations. If it wasn’t backed up it wouldn’t matter. If you lose it, you could probably download it again."
+    },
+    "isPublic": false
   },
   {
-    "number": "11.71",
-    "title": "My business & people library",
-    "description": "xxx ",
+    "number": "12.10",
+    "title": "■ Fixed locations 🏢",
+    "description": "Finding a place, renovating & maintaining it, & moving to a new place.",
     "type": "id",
-    "emoji": null,
+    "emoji": "🏢",
     "metadata": {
-      "createdDate": "2024-11-19",
-      "updatedDate": "2024-11-19"
+      "createdDate": "2025-02-12T02:54:04.119Z",
+      "updatedDate": "2025-02-12T02:54:04.119Z"
     },
-    "smallBusiness": {
-      "examples": "",
-      "moreInfo": "",
-      "exceptions": "",
-      "alsoSee": "",
-      "rationale": "",
-      "links": ""
-    }
+    "smallBusiness": {},
+    "isPublic": false
   },
   {
-    "number": "12.01",
-    "title": "Twelve oh-one",
-    "description": "Twelve oh-one",
+    "number": "12.11",
+    "title": "Official documents",
+    "description": "The important documents associated with owning, leasing, or selling a business premises with an address.",
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2024-11-18",
-      "updatedDate": "2024-11-18"
+      "createdDate": "2025-02-12T02:54:04.119Z",
+      "updatedDate": "2025-02-12T02:54:04.119Z"
     },
-    "smallBusiness": {}
+    "smallBusiness": {
+      "examples": "Leases and renewals; security deposits; inspection reports; purchasing contracts; property deeds; co-working space agreements.",
+      "moreInfo": "This ID is for business premises with an address where you work privately, trade with the public, or just use as storage. It could be a building or land. \n\nYou might have more than one fixed location – that’s fine, just use subfolders labelled with the address to separate them. And remember to name files consistently and use the year-month-day method so everything sorts neatly. \n\nThis can also include the future, so store your lease applications or property searches here too.",
+      "exceptions": "If your business ‘premises’ is mobile, like a food truck, van, or trailer, manage it down in [[12.40]].",
+      "rationale": "Many businesses do their work out of multiple locations, which might be fixed or mobile. \n\nFor instance, an electrician might have a home office and a van. A cafe might have a retail space and a food truck. A personal trainer might have a home office, a van, and a storage unit for their equipment. \n\nSo we suggest keeping the fixed locations here and anything mobile below in [[12.40]], even if you mentally lump them together. \n\nMotor vehicles or anything else that can move or be towed have their own types of documentation, so it felt more logical to keep them separate."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.12",
+    "title": "Office insurance, incidents, & claims",
+    "description": "Policies, coverage details, incident reports, and claim forms for your business premises and contents.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.119Z",
+      "updatedDate": "2025-02-12T02:54:04.119Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "When we say ‘office’, we mean whatever your fixed business premises means to you. \n\nWhether you have a room in your house, a commercial warehouse lease, or own a bakery, this is where the insurance for that address goes. \n\nAnd if you store equipment in both a fixed and mobile location, there might be some overlap here. Just do what makes sense to you. \n\nFor instance, if you’re a plumber your equipment might be insured in your home garage and also in your van. If these are separate policies then save them where relevant. \n\nThis is also a place to save incident reports that might become part of a claim. For example, something is stolen and you file a police report.",
+      "exceptions": "If your business ‘premises’ is mobile, like a food truck, van, or trailer, put the insurance details in [[12.42]].\n\nIf you’re a market stall holder or similar, store your equipment in [[12.30]] and your public liability insurance in [[11.22]].\n\nIf you’re a digital nomad with no fixed location, you might cover your valuables under a personal travel insurance policy.",
+      "alsoSee": "Having an up-to-date inventory at [[12.0X]] will be helpful if you need to make a claim. \n\nIf you have separate insurance for high-value computers, devices, or accessories, you might decide to store that down in [[14.44]].",
+      "rationale": "As mentioned previously, we recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.13",
+    "title": "Rates, taxes, & fees",
+    "description": "The unavoidable bills and levies associated with owning, leasing, or selling a business premises.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.119Z",
+      "updatedDate": "2025-02-12T02:54:04.119Z"
+    },
+    "smallBusiness": {
+      "examples": "Local council rates; government land tax; capital gains tax; stamp duty; body corporate/owner’s corporation fees for multi-occupancy properties; legal fees; local environmental taxes.",
+      "moreInfo": "This is a place for any fees that you can’t get out of, usually imposed by the government. Or perhaps an organisation that manages shared premises, such as a shopping centre, office block, or industrial estate.\n\nWhether leasing or buying a property, ensure you’re clear on what mandatory one-off and ongoing fees you’ll need to account for in your running costs. For instance, there can be extra fees associated with commercial and retail leases versus residential leases. \n\nAnd watch out for unscrupulous landlords asking for illegal fees. We recently learned about the practice of asking for ‘key money’ when signing retail leases. This is prohibited in Australia and might also be wherever you are.",
+      "links": "[Information about key money](https://www.vsbc.vic.gov.au/your-rights-and-responsibilities/paying-key-money/) from the Victorian Small Business Commission"
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.14",
+    "title": "Fit-outs, renovations, & improvements",
+    "description": "A place for larger projects that aren’t general upkeep.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.119Z",
+      "updatedDate": "2025-02-12T02:54:04.119Z"
+    },
+    "smallBusiness": {
+      "examples": "- Fitting-out a hair salon with walls, flooring, cabinetry, sinks, and a kitchen area.\n- Renovating a warehouse’s plumbing, ventilation, and concrete floor, and upgrading the internet connection.\n- Installing custom-made, fixed benches and planter boxes at the front of a bar.\n- Improvements to a workshop in a home garage that include building a new workbench and fixed shelving.\n- Mood boards, measurements, and a budget spreadsheet for repainting a cafe.",
+      "moreInfo": "This is a place to manage larger structural projects that have an end. And once done, you move into back or front office operations mode. \n\nAs such, we recommend that any equipment ordered as part of the project be stored in those sections.\n\nThis ID might be empty for many businesses. Like us. Our office is a room in a rented house. We will never be renovating it. \n\nHowever, it will be very busy for others. The hair salon above is based on a friend who spent a hectic 6 months fitting out a new space.",
+      "exceptions": "Daily fix-its and ongoing maintenance goes in [[12.15]].\n\nBack or front office equipment ordered as part of a project goes in [[12.24]] or [[12.34]].\n\nFit-outs and renovations for mobile premises go in [[12.44]].",
+      "rationale": "We made a decision that these projects are about building and installing things that you can’t really take with you – they were designed for a specific location – and they’re unlikely to have an ops manual. \n\nWhereas back or front office equipment ordered as part of the project might have service contracts or staff training and cleaning manuals linked to them, so they belong in operations. \n\nFor instance, the hair salon’s espresso machine in the kitchen area and massage chairs by the sinks."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.15",
+    "title": "Repairs & maintenance",
+    "description": "A place for fixing things and taking care of your business premises.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.120Z",
+      "updatedDate": "2025-02-12T02:54:04.120Z"
+    },
+    "smallBusiness": {
+      "examples": "Quotes from tradespeople; research on how to repair things; maintenance and repair requests to facilities management in multi-occupancy properties; recurring tasks to remember like oiling the squeaky front door, or monitoring your farm’s fence line for damage.",
+      "moreInfo": "When something that’s part of the building (or land) breaks, or you’re trying to prevent it from breaking, manage it here. \n\nThis is for daily repairs and maintenance related to the structure, not the equipment in it. \n\nAnd not general cleaning and keeping things ‘nice’. The latter are part of back and front office operations."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.16",
+    "title": "Moving",
+    "description": "Anything related to the act of moving from one location to another.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.120Z",
+      "updatedDate": "2025-02-12T02:54:04.120Z"
+    },
+    "smallBusiness": {
+      "examples": "Removalist quotes and contracts; checklists; a list of accounts to update with your new postal address.",
+      "exceptions": "Property searches for new locations go in [[12.11].",
+      "alsoSee": "[[12.0X]] will come in very handy for removalist quotes."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.20",
+    "title": "Back office equipment & operations",
+    "description": "Anything that supports the business behind the scenes (staff only).",
+    "type": "id",
+    "emoji": "⛔",
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.120Z",
+      "updatedDate": "2025-02-12T02:54:04.120Z"
+    },
+    "smallBusiness": {
+      "examples": "If you run a beauty salon, your back office might be:\n\n- a room out the back with a desk where you manage the business, and\n- a small kitchen area for staff.\n\nIf you’re a mobile personal trainer, your back office might be:\n\n- your home office where you manage the business, and\n- shelves in your garage for your equipment.\n\nIf you’re a freelance writer, your back office might be:\n\n- your home office where you manage the business and do your work.",
+      "moreInfo": "By ‘back office’ we mean the part of your business premises that isn’t customer facing.\n\nIt may be an actual office with paperclips and a desk. Or it could be some kind of area for staff to prepare meals, have a coffee, and relax on a break.\n\nIt’s the beating heart of the business – connecting the building to the outside world and looking after yourself/your staff during the work day.\n\nIt’s also the equipment and operational stuff that will be common to many businesses. Whereas everyone’s ‘front office’, where you interact with customers, will differ.\n\nAs always, there will be grey areas. When Lucy was a freelancer writer, as per the example above, all she had was a back office. She did not see customers at her business premises.\n\nBut if she had another (fancier) room to hold meetings in, that would have been her front office. Some businesses might be 100% front office. It all depends. ¯\\_(ツ)\\_/¯",
+      "rationale": "We decided to separate back office and front office because, depending on the business, these areas might have quite different suppliers, equipment, and daily operations.\n\nAnd different people might manage each area (you don’t want people trying to open the same spreadsheet at the same time).\n\nWhen we were thinking about this, we often referred to the TV show, The Bear. If you haven’t seen it, it’s about a restaurant in Chicago.\n\nThe back office is run by Natalie. She’s in a room with a desk and a computer, sorting out all their administrative chaos.\n\nThe front office is run by Richie. He’s in charge of the restaurant area where the customers are and the delivery of the product.\n\nThe ‘product’ is run by Carmy. He’s in charge of the kitchen where the food is made, i.e. the product that they sell.\n\nSome businesses are simpler than this, some might be more complicated. But hopefully this conveys the basic idea of ‘staff only’ versus ‘customer facing’ areas."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.21",
+    "title": "Keep the basics running",
+    "description": "Basic utility connections and services.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.120Z",
+      "updatedDate": "2025-02-12T02:54:04.120Z"
+    },
+    "smallBusiness": {
+      "examples": "Utility connections and bills (electricity, gas, water, telephone, internet); troubleshooting instructions; staff mobile phone contracts; parking bills; HVAC services.",
+      "moreInfo": "This is the foundation of your back office. Keeping the lights on and the phones ringing. \n\nAll the account paperwork and bills go here, neatly sorted by year-month. And if you have more than one back office, use per-site subfolders and keep things consistent.\n\nThese utilities and services might be specific to the back office, or they might also support the front office. It doesn’t matter if there’s some overlap, as long as you know where things are. \n\nA cafe might have one electricity connection that supplies all areas. Or a co-working space might have one wifi connection for back office staff and front office tenants. \n\nIn both cases, they prefer to store their bills and other paperwork in back office. (Hint: just write yourself a note in your JDex if this applies to you.)\n\nThis would also be a good place to put troubleshooting tips related to a service. \n\nFor instance, under ‘water’ save instructions for how to turn the water main off. Under ‘electricity’ save a diagram of the fuse box layout and what to do in a blackout or power surge. Under ‘internet’ save instructions for how to reset the wifi router."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.22",
+    "title": "Keep us secure",
+    "description": "Security, safety, and emergencies.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.120Z",
+      "updatedDate": "2025-02-12T02:54:04.120Z"
+    },
+    "smallBusiness": {
+      "examples": "Bills and paperwork for any paid security services; building access passes and codes; emergency and evacuation plans; bills for fire safety equipment; contact details for security services; instructions for how to turn the alarm on/off and entering/leaving the building; location of spare keys; surveillance camera installation; smoke or gas detector installation; who to call in different types of emergency (fire, flood, storm damage, robbery); Material Safety Data Sheets (MSDS).",
+      "moreInfo": "A place for anything to do with ensuring your back office building is safe and secure, and what to do if there’s an emergency. \n\nThis isn't for staff occupational health and safety, but there may be some overlap with training and other compliance obligations.\n\nAs well as bills and paperwork for equipment and services, this would be a good place to put processes for things like:\n- ordering keys and access passes, \n- entering/leaving the building, \n- rebooting the security system, \n- backing up surveillance camera footage, \n- what important documents go in the safe (and who has the code), etc.",
+      "exceptions": "This is not your business risk and emergency management plans, they’re in [[11.23]].",
+      "alsoSee": "If anything here helps you meet compliance obligations (e.g. installing fire doors and smoke alarms), store the paperwork here and note it in [[11.13]].\n\nEnsure anything relevant in [[11.51]] is aligned with information here."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.23",
+    "title": "Keep it nice for us",
+    "description": "Cleaning, gardening, decor, and waste removal.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.121Z",
+      "updatedDate": "2025-02-12T02:54:04.121Z"
+    },
+    "smallBusiness": {
+      "examples": "Cleaners; paid or municipal garbage collection; paper shredding and recycling; indoor plant watering; outdoor gardening; window washing; non-structural decorations like framed prints or plastic plants; anything to do with buying general cleaning and hygiene supplies (like kitchen roll, dishwashing liquid, tea towels, sponges, sprays, hand sanitiser, soap dispensers, toilet paper, etc.).",
+      "moreInfo": "Whether it’s just you in a home office, or a team of staff in a warehouse, keeping your work area clean and tidy can make a big difference to a long day. \n\nYou might have contracts with suppliers for ongoing services, or you might do everything yourself. \n\nOr maybe you’re the person who secretly makes those signs with cartoon dogs that say “please unload the dishwasher”. Either way, track it all here.",
+      "exceptions": "This is not for repairs and maintenance, that’s in [[12.15]]."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.24",
+    "title": "Keep the back office well equipped",
+    "description": "Office equipment and stationery.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.121Z",
+      "updatedDate": "2025-02-12T02:54:04.121Z"
+    },
+    "smallBusiness": {
+      "examples": "Buying standard office furniture like desks, chairs, cupboards and drawers; ordering anything you’d consider stationery from pens and sticky notes to paper and toner; ongoing lease and maintenance contracts for specialised equipment (maybe you lease a photocopier).",
+      "moreInfo": "This is for any kind of equipment and supplies that you use to run the back office. \n\nMost likely, this will be classic ‘office stuff’. However, if ‘back office’ means something very specific to your business, then include whatever is relevant for you.",
+      "exceptions": "Furniture that is a permanent fixture built during a fit-out goes in [[12.14]].\n\nIf you lease any IT equipment like computers, printers, or photocopiers, put it here. If you buy it, put it in [[14.10]].",
+      "rationale": "We made a decision to separate lease-as-service IT equipment versus one-off purchases. A supplier is providing an ongoing service to you, so managing that becomes part of daily operations. \n\nBut if you buy computers, printers, or other IT gadgets outright, store the records and product manuals with your other technology in [[14.10]]."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.25",
+    "title": "Keep us fed and watered",
+    "description": "Staff food, beverage, and kitchen equipment.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.121Z",
+      "updatedDate": "2025-02-12T02:54:04.121Z"
+    },
+    "smallBusiness": {
+      "examples": "Buying anything to do with eating and drinking (like teabags, coffee, sugar, milk, cutlery, cups, glasses, crockery, etc.); ongoing delivery services like weekly fruit boxes; kitchen appliances and product manuals; water cooler services; staff meals.",
+      "exceptions": "Kitchen supplies related to cleaning, such as kitchen towel and dishwashing liquid, go in [[12.23]]. This is for things related to eating or drinking.\n\nIf you provide complimentary food or beverages to customers, that goes in front office operations at [[12.15]]."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.26",
+    "title": "Keep us posted",
+    "description": "Shipping, postage, and couriers.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.121Z",
+      "updatedDate": "2025-02-12T02:54:04.121Z"
+    },
+    "smallBusiness": {
+      "examples": "Post office receipts; tracking numbers; courier accounts; document exchange (DX) and other business postal services; ordering postage supplies (like stamps, envelopes, parcel satchels, packing materials, etc.); specialised shipping or air services; dealing with customs and import/export regulations.",
+      "moreInfo": "If you send or receive it and it’s related to back (or front) office operations, manage it here. \n\nRealistically this includes front office operations as well. It’s unlikely you’d have different postal requirements for both parts of the business, but who knows. If you do, then there’s plenty of room in [[12.30]] for another ID.",
+      "exceptions": "This is not for sending your product to customers, that goes in [[20-29]]."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.30",
+    "title": "Front office equipment & operations",
+    "description": "Anything that supports the delivery of your product or service (open for business).",
+    "type": "id",
+    "emoji": "🛎️",
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.122Z",
+      "updatedDate": "2025-02-12T02:54:04.122Z"
+    },
+    "smallBusiness": {
+      "examples": "If you run a beauty salon, your front office is:\n\n- your shopfront, customer reception area, and treatment rooms.\n\nIf you’re a personal trainer, your front office might be:\n\n- a gym where you rent space, or\n- a registered area in a park (and your equipment is part of front office operations).\n\nIf you’re a freelance writer, your front office might be:\n\n- non-existent because you only meet clients at their office, or\n- a co-working space that you meet clients in, or\n- the same as your back office, clients come to you for meetings (and the fancy coffee and snacks you offer are part of front office operations).",
+      "moreInfo": "By ‘front office’ we mean the part of your business premises that is customer facing and supports the delivery of your product or service.\n\nBut it is _not_ the thing you sell. Some industries call this ‘front of house’ if that makes it easier to think about.\n\nFor instance:\n\n- A baker’s sausage roll is their product, the branded napkins for customers are a front office supply (and they’re not what staff get in the back office).\n- A haircut is a hairdresser’s product, the coffee and biscuits for customers are front office supplies.\n- A clean dog is a dog groomer’s product, the hose used to wash it is a front office supply.\n\nIt might be an actual office, a retail store, the front of a cafe or bar, or a public space. It’s wherever you interact with your customers and the equipment or services you use during these interactions.\n\nAnd while many businesses might have a similar back office set-up, your front office will be tailored to you.",
+      "exceptions": "If you do everything in your back office and never interact with customers, this section will be empty. That’s okay.\n\nParts of this system will be very quiet for many businesses and super busy for others.\n\nFor instance, Johnny.Decimal HQ operates solely in a rented back office, with two staff, and no vehicles. Most of our business administration is money-related, and even then, our accountant does the heavy lifting.\n\nWhen Lucy was a freelance writer, everything happened in her back office – a desk with a laptop. Pretty simple.",
+      "rationale": "As mentioned in [[12.20]], we decided to separate back office and front office because, depending on the business, these areas might have quite different equipment, suppliers, and daily operations.\n\nAnd different people might manage each area (you don’t want people trying to open the same spreadsheet at the same time).\n\nWhen we were thinking about this, we often referred to the TV show, The Bear. If you haven’t seen it, it’s about a restaurant in Chicago.\n\nThe back office is run by Natalie. She’s in a room with a desk and a computer, sorting out all their administrative chaos.\n\nThe front office is run by Richie. He’s in charge of the restaurant area where the customers are and the delivery of the product.\n\nThe ‘product’ is run by Carmy. He’s in charge of the kitchen where the food is made, i.e. the product that they sell.\n\nSome business are simpler than this, some might be more complicated. But hopefully this conveys the basic idea of ‘staff only’ versus ‘customer facing’ areas."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.31",
+    "title": "Keep the basics running",
+    "description": "Additional utility connections and services.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.122Z",
+      "updatedDate": "2025-02-12T02:54:04.122Z"
+    },
+    "smallBusiness": {
+      "examples": "Utility connections and bills (electricity, gas, water, telephone, internet); any other fees related to heating or cooling (like a generator or ice); industry-specific software subscriptions; troubleshooting instructions.",
+      "moreInfo": "This is a place for any basic utilities and services that are _only_ in the front office. \n\nThis might be empty if your back office utilities cover both areas. But if not, keep all the account paperwork and bills here, neatly sorted by year-month. \n\nAnd if you have more than one front office (maybe you have a couple of retail outlets), use per-site subfolders and keep things consistent.\n\nSome scenarios might include:\n- A hair salon has an internet connection in the back office for staff and a separate wifi account for customer use. \n\t- They also have a customer-management software subscription that’s only on the front office computer. \n- A cafe has a food truck with gas bottles, but they don’t need gas in their back office. \n- A coffee cart uses a power outlet provided by the city, which is a separate account to their back office electricity. \n- A mobile beer cart has a generator to cool it’s kegs, but the brewery back office has a standard electricity connection.\n- A market stall uses ice to keep its product cool on hot days, a purely front office expense.\n\nThis would also be a good place to put troubleshooting tips related to a service. For instance, under ‘internet’ save instructions for how to reset the wifi router. Under ‘gas’ save the preferred locations to swap the gas bottles.",
+      "alsoSee": "If you do have front office software, be sure to also note it in [[14.31]] or [[14.32]] to help your IT support person."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.32",
+    "title": "Keep our customers secure",
+    "description": "Security, safety, and emergencies.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.122Z",
+      "updatedDate": "2025-02-12T02:54:04.122Z"
+    },
+    "smallBusiness": {
+      "examples": "Bills and paperwork for any paid security services; building access passes and codes; emergency and evacuation plans; bills for fire safety equipment; contact details for security services; instructions for how to turn the alarm on/off and entering/leaving the building; location of spare keys; surveillance camera installation; smoke or gas detector installation; who to call in different types of emergency (fire, flood, storm damage, robbery); Material Safety Data Sheets (MSDS).",
+      "moreInfo": "This is a place for bills, paperwork, and anything else related to the security and safety of the front office. This might be empty if your back office set up covers both areas.\n\nThis is not for staff occupational health and safety, but there may be some overlap with training and other compliance obligations.\n\nAs per [[12.22]], this would be a good place to put processes. \n\nFor instance, your restaurant’s front office with flames and sharp knives will have very different safety procedures and equipment to the back office where you sit at a desk doing accounts. \n\nAnd there might be a completely different way to access your front office (a computerised alarm system and automatic doors) versus the back office (a padlocked roller door in a loading dock).",
+      "exceptions": "This is not your business risk and emergency management plans, they’re in [[11.23]].",
+      "alsoSee": "If anything here helps you meet compliance obligations (e.g. installing exit signs and a sprinkler system), store the paperwork here and note it in [[11.13]].\nEnsure anything relevant in [[11.51]] is aligned with information here."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.33",
+    "title": "Keep it nice for our customers",
+    "description": "Cleaning, gardening, decor, and waste.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.122Z",
+      "updatedDate": "2025-02-12T02:54:04.122Z"
+    },
+    "smallBusiness": {
+      "examples": "Cleaners; paid or municipal garbage collection; paper shredding and recycling; indoor plant watering; outdoor gardening; window washing; music instructions; anything to do with buying general cleaning and hygiene supplies that’s separate to the back office (like fancy hand wash and moisturiser for customer bathrooms); non-structural decorations like framed prints or plastic plants.",
+      "moreInfo": "This is about keeping up appearances and creating a nice environment for your customers. \n\nYou might have contracts with suppliers for ongoing services, or you might do everything yourself. Either way, track it all here.",
+      "exceptions": "This is not for repairs and maintenance, that’s in [[12.15]].\n\nThis is not for digital music subscriptions, we’ve classified those as ‘technology’ – they live in [[14.32]] and should also be noted in [[13.35]]."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.34",
+    "title": "Keep the front office well equipped",
+    "description": "Supplies and equipment that help us deliver our product or service.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.123Z",
+      "updatedDate": "2025-02-12T02:54:04.123Z"
+    },
+    "smallBusiness": {
+      "examples": "Free-standing furniture that isn’t part of a fit-out; branded items like napkins and paper shopping bags; ongoing lease and maintenance contracts for specialised equipment; electrical appliances; payment equipment like tills and handheld ‘tap and go’ units; general office supplies and stationery.",
+      "moreInfo": "This is for any kind of equipment and supplies that you use to run the front office and deliver your product or service to customers. \n\nWhat’s in this ID is going to vary widely for different businesses.\n\nFor instance, we would classify a personal trainer’s exercise equipment, a gardener’s lawnmower, and a hairdresser’s scissors as front office equipment. These items _support_ the products they sell – fitness, cut grass, and hair cuts, respectively.\n\nA photographer’s screens, cameras, and lights are front office – they support the delivery of their product, the photographs. \n\nA plumber’s tools and logo-bearing work shirt are front office – they support the delivery of their product, the unblocked toilet. \n\nHowever, if the plumber replaces a broken part in a toilet with a spare from their van, then that would be classified under ‘product’ – they are on-selling the spare part, so that gets tracked in [[20-29]].",
+      "exceptions": "Furniture that is a permanent fixture built during a fit-out goes in [[12.14]].\n\nIf you lease any IT equipment like computers, printers, or photocopiers, put it here. If you buy it, put it in [[14.10]].\n\nAny item that you sell goes in [[20-29]]. So if you’re a retail shop, that’s your product inventory and that does not go here (your branded shopping bags do though).",
+      "rationale": "We made a decision to separate lease-as-service IT equipment versus one-off purchases. A supplier is providing an ongoing service to you, so managing that becomes part of daily operations. \n\nBut if you buy computers, printers, or other IT gadgets outright, store the records and product manuals with your other technology in [[14.10]]."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.35",
+    "title": "Keep our customers fed and watered",
+    "description": "Food, beverage, and kitchen equipment that help us deliver our product or service.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.123Z",
+      "updatedDate": "2025-02-12T02:54:04.123Z"
+    },
+    "smallBusiness": {
+      "examples": "Anything complimentary you provide for customers/clients like tea, coffee, biscuits, lollies, or filtered water; any equipment that you use to prepare complimentary food or beverages for customers.",
+      "moreInfo": "This is all about the nice touches you offer to your customers. \n\nA cup of herbal tea or a glass of Prosecco at a beauty salon. A coffee and a biscuit at a hair salon. A water cooler in the reception area of your dental surgery. \n\nThe theme here is that food and beverage is not your core business, it’s a complimentary add-on. \n\nSo if you sell food and beverages in a cafe, bar, restaurant, retail shop, market stall, or anywhere else, that goes in [[20-29]].",
+      "exceptions": "If food and/or beverage is the product you sell, that’s managed in [[20-29]].",
+      "rationale": "Depending on how generous you are ;-) ... the teabags and other items for customers are probably fancier than those in the staff break room. \n\nSo we made space here to track these items since they might come from different suppliers."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.40",
+    "title": "Getting around",
+    "description": "For any part of your business involving wheels, wings, or propellers.",
+    "type": "id",
+    "emoji": "🚚",
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.123Z",
+      "updatedDate": "2025-02-12T02:54:04.123Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "Whether they’re part of your back office or front office, the following section is a place to manage motor vehicles and anything else that moves.",
+      "rationale": "Many businesses manage all kinds of vehicles that are part of their daily operations. But the more we thought about it, we weren’t sure that a one-size-fits-all approach was the right way.\n\nSo in this section we’ve suggested that vehicles be classified into two buckets – ‘formal’ and ‘informal’.\n\nFormal vehicles include anything that requires official registrations and inspections, whether it’s motorised or not.\n\nIf it travels on a public road and requires insurance, or does anything serious like carrying passengers or dangerous goods, then manage it in [[12.41]], [[12.42]], [[12.43]], [[12.44]], and [[12.45]].\n\nInformal vehicles do not fit the above description. Manage those, as well as any public or shared transportation that your business uses, in [[12.46]].\n\nIf you disagree with this classification, do what works for you and note where everything is in your JDex."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.41",
+    "title": "Official documents (formal)",
+    "description": "The important documents associated with owning, leasing, or selling a vehicle.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.124Z",
+      "updatedDate": "2025-02-12T02:54:04.124Z"
+    },
+    "smallBusiness": {
+      "examples": "Proof of ownership; government registrations and taxes; financing, leases; hire-purchase agreements; log books.",
+      "moreInfo": "This isn’t limited to things like cars, vans, and trucks. \n\nA farm might have motorbikes, tractors, and a harvester. A fishing business will have boats. A flight training school will have a plane or a helicopter. A tree surgeon will have a cherry picker. \n\nWe know someone whose agricultural business uses drones that must be registered with the Civil Aviation Safety Authority. \n\nThen there’s things that can be towed and require a registration to travel on roads. Such as trailers used by gardeners, and converted caravans for food or coffee service. \n\nAnd of course there’ll be grey areas. Maybe you have a hot air balloon business. Not a traditional motor vehicle, but they need to be certified and transported on a registered trailer. So they go here. \n\nWhat if you have an unregistered tractor that never leaves your farm? You’ll have proof of ownership documents and you might register it _someday_. So it goes here.\n\nHere’s another niche, but relevant, example. What if you run a Hansom cab (horse and carriage) business? The carriage isn’t a traditional motor vehicle. But it carries passengers, often in busy cities. \n\nYou’ll no doubt have registrations, inspections, and other paperwork for this vehicle. So it goes here. And your horses fit nicely in [[11.45]].\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.\n\nThis can also include the future, so store your new vehicle searches here too.",
+      "exceptions": "This does not include renting a car as part of a business trip. Store that with the trip down in [[15.XX]].",
+      "rationale": "When we say ‘formal vehicle’, ‘motor vehicle’, or ‘registered vehicle’, it doesn’t matter if it’s a car, trailer, boat, seaplane, caravan, hot-air balloon, or Hansom cab. \n\nIf it’s core to your business and requires some kind of official paperwork, put it up here. \n\nAs always, if you disagree with our rationale then do what works for you and note what you did in your JDex."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.42",
+    "title": "Vehicle insurance, incidents, & claims (formal)",
+    "description": "Policies, coverage details, incident reports, and claim forms for your vehicles.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.124Z",
+      "updatedDate": "2025-02-12T02:54:04.124Z"
+    },
+    "smallBusiness": {
+      "examples": "Comprehensive car or motorcycle insurance; third party car or motorcycle insurance; caravan insurance; trailer insurance; boat insurance; any other form of commercial vehicle insurance.",
+      "moreInfo": "Again, when we say ‘vehicle’ this will mean different things to different businesses. But we needed a catch-all label here. \n\nIt could be a car, boat, or rickshaw. But if it’s covered under a vehicle insurance policy, put it here. Contrast with a bicycle or e-scooter, which might be covered as a mobile item under your office/home contents policy.\n\nAs noted at [[12.12]], if you store equipment in both a fixed location and a vehicle, there might be some overlap here. Just do what makes sense to you. For instance, if you’re a plumber your equipment might be insured in your home garage and also in your van. If these are separate policies then save them where relevant.\n\nWe’ve noted in our research that insurance companies often have commercial policies that are specifically designed for business owners. So it might pay to look around to see what’s right for you.\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.\n\nSome of these insurances may be required by law. For instance, in Australia third party personal injury insurance is compulsory for business vehicles.\n\nThis is also a place to save incident reports that might become part of a claim. For example, something is stolen and you file a police report.",
+      "alsoSee": "Having an up-to-date inventory at [[XX.XX]] will be helpful if you need to make a claim.",
+      "rationale": "As mentioned previously, we recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.43",
+    "title": "Permits, tolls, fees, & other running expenses (formal)",
+    "description": "Anything that says you have permission to go through, or stay in, a certain area, plus daily vehicle running expenses.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.124Z",
+      "updatedDate": "2025-02-12T02:54:04.124Z"
+    },
+    "smallBusiness": {
+      "examples": "Permits for parking, deliveries, or general entry; e-tag accounts and toll road passes; fees or exemptions for congestion charge zones; short-term parking fees; daily running expenses such as fuel, EV charging, oil, wiper fluid, and cleaning.",
+      "moreInfo": "These examples are car focused for simplicity. But if you have different types of vehicles, adapt as needed. \n\nFor instance, you might have to pay marina or airport fees for a boat or plane that are equivalent to car parking.\n\nRegarding running expenses, these are the everyday transactions related to your vehicles like buying fuel or going to the car wash. \n\nContrast with repairs and maintenance, which are less frequent transactions and are managed separately below.\n\nDepending on your business, this might be a busy ID if you have a lot of running expenses. But as long as you reconcile any receipts in your inbox regularly and archive them neatly here, you’ll stay on top of what you’re spending.\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.",
+      "exceptions": "Repairs, maintenance, and associated purchases go in [[12.45]].\n\nFuel tax credits or other government grants go in [[13.25]].\n\nFines and penalties go in [[13.55]]."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.44",
+    "title": "Fit-outs, renovations, & improvements (formal)",
+    "description": "A place for larger projects that aren’t general upkeep.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.124Z",
+      "updatedDate": "2025-02-12T02:54:04.124Z"
+    },
+    "smallBusiness": {
+      "examples": "- Fitting-out a caravan for food service with flooring, cabinetry, utility connections, and a service hatch.\n- Renovating a dog grooming van by replacing the sinks, hoses, and taps, and re-waterproofing the interior.\n- Installing custom-made, fixed tool boxes in the back of a tradesperson’s ute/truck.\n- Mood boards, measurements, and a budget spreadsheet for reupholstering a boat.\n- Research, designs, and quotes for a full van signage wrap.",
+      "moreInfo": "This is a place to manage larger projects, specific to vehicles, that have an end. And once done, you move into front or back office operations mode. \n\nAs such, we recommend that any equipment ordered as part of the project be stored in [[12.24]] or [[12.34]].\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.",
+      "exceptions": "Repairs, maintenance, and associated purchases go in [[12.45]].\n\nFront or back office equipment ordered as part of a project goes in [[12.24]] or [[12.34]].",
+      "rationale": "As mentioned in [[12.14]], we made a decision that these type of projects are about building and/or installing things that are designed for a specific vehicle – and they might not have an ops manual. \n\nWhereas front or back office equipment ordered as part of the project might have service contracts, or staff training and cleaning manuals linked to them, so they belong in operations. For instance, a coffee cart’s espresso machine or till."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.45",
+    "title": "Repairs & maintenance (formal)",
+    "description": "A place for fixing things and taking care of your vehicles.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.125Z",
+      "updatedDate": "2025-02-12T02:54:04.125Z"
+    },
+    "smallBusiness": {
+      "examples": "Quotes from mechanics and other tradespeople; research on how to repair things; annual service appointments and logs; less frequent running expenses such as new tyres and other spare parts; maintenance manuals, instructions, and checklists.",
+      "moreInfo": "When something that’s part of a vehicle breaks, or you’re trying to prevent it from breaking, manage it here. \n\nThis is for daily repairs and maintenance specific to the vehicle, not any equipment in or on it. \n\nFor instance, if your ice cream van’s radiator bursts, record the repair details here. But the soft serve machine’s maintenance goes in [[12.34]].\n\nAs per [[12.43]], reconcile receipts in your inbox as required and archive them neatly here.\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.",
+      "exceptions": "Repairing and maintaining equipment that’s in/on the vehicle is part of [[12.24]] or [[12.34]].\n\nThis is not for daily running expenses, put those in [[12.43]].",
+      "rationale": "We made a decision to include less frequent purchases up here, such as tyres and spare parts. \n\nThey’re still running expenses, but you only buy them sporadically. And they tend to be linked directly to a repair or discovered during routine maintenance. \n\nHere they won’t be lost among receipts for daily running expenses like fuel and other consumables. And they’ll be close to maintenance and service records, which may be relevant for warranties or future re-sale value. \n\nBut if you feel differently, do what works for you."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.46",
+    "title": "Public or shared transport & other ‘informal’ vehicles",
+    "description": "All the other ways to get around, either shared with the public or that you own and maintain.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.125Z",
+      "updatedDate": "2025-02-12T02:54:04.125Z"
+    },
+    "smallBusiness": {
+      "examples": "Public transport like buses, trains, light rail, taxis, or ferries; ride sharing services; accounts to use share cars, e-scooters, or e-bikes; any other type of informal vehicle you own.",
+      "moreInfo": "This is a place to manage anything to do with using public or shared transport, or owning ‘informal’ vehicles. \n\nAs noted earlier, by ‘informal’ we mean the vehicle probably doesn’t need official paperwork like registrations, inspections, or mandatory insurance. \n\nWho knows what other kinds of vehicle are part of your business. If it can be pedalled, stood on, sat on, or pulled along, put it here. \n\nThese type of vehicles may or may not have their own insurance. Perhaps they’re covered under a policy related to your home office or other fixed-location premises. If not, store the details here and note it in your JDex.\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or unique identifier. And use one of the recommended date patterns to start file names so they sort neatly."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.50",
+    "title": "The community",
+    "description": "You’re part of something bigger – interactions with the neighbourhood, the region, the planet.",
+    "type": "id",
+    "emoji": "🧩",
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.125Z",
+      "updatedDate": "2025-02-12T02:54:04.125Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "Your business is part of a wider community – schools, hospitals, clubs, local government and media, the environment, etc. And sometimes it will interact with the community in different ways.\n\nThis section isn’t about your core business, your employees, suppliers, or professional bodies. It’s a place for civics, community engagement, and being a good business citizen. It’s giving versus getting.\n\nThis is a broad umbrella and may not be that relevant for many businesses. But if this sounds like you, then put any relevant contact details, notes, and other documents here.",
+      "rationale": "After seeing folder structures kindly provided by some business owners, we realised that civics and community engagement can be a big deal.\n\nSo we wanted to make sure there was a place for this stuff to keep it separate from daily operations.\n\nEspecially if you participate in recurring events. You’ll want to be able to easily find and reuse certain items each time."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.51",
+    "title": "Your business & local neighbourhood",
+    "description": "People that your business interacts with next door and nearby.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.126Z",
+      "updatedDate": "2025-02-12T02:54:04.126Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "This is a place for anything to do with relationships that you maintain that are close by – your direct neighbours or surrounding streets. You’re probably on a first-name basis and know each other reasonably well.\n\nMaybe you store the contact details, opening hours, or annual holidays, of other businesses in your shopping centre in case of emergency. Or you might have reminders to bring in mail or garbage bins for your neighbours sometimes. \n\nPerhaps you offer discounts to certain neighbourhood businesses and you keep a list of what these are. Or maybe you’re part of a ‘neighbourhood watch’-style group where everyone keeps an eye on things. Either way, store any notes or documents here.",
+      "exceptions": "This is not for networking, seeking advice and support, or interactions with professional bodies, that’s in [11.60]]."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.52",
+    "title": "Your business & city, state, & country",
+    "description": "People that your business interacts with further away.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.126Z",
+      "updatedDate": "2025-02-12T02:54:04.126Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "This is a place for anything to do with relationships that you maintain that are a bit further away – your town or city, state or province, or country.\n\nMaybe you have interactions with your local chamber of commerce. Or perhaps your business donates its product or services to an annual charity event, parade, or community group. \n\nYou might host high school work experience students each year. Or your staff might do regular volunteer work or mentoring.\n\nWhat’s that? There’s chocolate fundraising boxes in the kitchen? Save me a Picnic while I store the documentation here!",
+      "exceptions": "This is not for any external policies that your business may have, those go in [[11.32]].\n\nThis is not for networking, seeking advice and support, or interactions with professional bodies, that’s in [11.60]].\n\nThis is not active marketing or self-promotion, that’s in [[20-29]]."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.53",
+    "title": "Your business & planet",
+    "description": "People that your business interacts with globally.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.126Z",
+      "updatedDate": "2025-02-12T02:54:04.126Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "This is a place for any global relationships that you maintain, either with individuals or larger organisations.\n\nYou might mentor a small business owner in another country. Or maybe your business participates in global environmental initiatives like Just One Tree or the 1% for the Planet network. \n\nOr perhaps you support other international charities or small business loan providers. Either way, store the details here.",
+      "exceptions": "This is not for any external policies that your business may have, those go in [[11.32]].\n\nThis is not for networking, seeking advice and support, or interactions with professional bodies, that’s in [11.60]].\n\nThis is not active marketing or self-promotion, that’s in [[20-29]]."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "12.90",
+    "title": "Where I trade & how I get around library",
+    "description": "A place to put information that’s related to this category, kinda interesting, mostly unimportant, and definitely doesn’t fit elsewhere.",
+    "type": "id",
+    "emoji": "📚",
+    "metadata": {
+      "createdDate": "2025-02-12T02:54:04.127Z",
+      "updatedDate": "2025-02-12T02:54:04.127Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "Caution. This is a place for when there is no other place. Don’t get lazy and dump stuff here that is important and/or has a home elsewhere in the system.\n\nThis might be information that you found interesting or might be useful someday. But right now, it’s not strongly related to any other ID. And it would not make sense to clutter an existing ID or create a new one for it.\n\nIt’s a library so we want to keep it neat. Label any files with clear descriptions and use the year-month method in case the information is time sensitive.\n\n### Why are there no IDs here?\n\nIt’s difficult to imagine how these libraries might be used. So we didn’t want to commit to IDs just yet. By leaving these sections blank, we thought it might be a good way to introduce everyone to the careful consideration that goes into making a new ID.\n\nIf you’re ready to save things in this library, come over to the [[community]] and see what others are doing or ask us for advice. We’ll figure it out together and eventually settle on some standard IDs. In the meantime, just keep things neat and tidy here.\n\n### Leave yourself JDex notes\n\nRemember to leave a note in your JDex when you save things in this library so you can find them easily.\n\n(This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)",
+      "exceptions": "Things that contain information that is specific to your business, and that don’t fit elsewhere, should go in [[13.14]].",
+      "rationale": "We wanted to be realistic and acknowledge that sometimes there is miscellanea that accumulates over time.\n\nIt could be anything – a document, photo, URL, email, note, or a physical item. But it’s not the _work_ that you do. It’s things that you’ve found online or in real life, or perhaps that you’ve created.\n\nIt doesn’t fit anywhere else. It’s just a thing you wanted to save. And you don’t want it muddying other folders where work happens.\n\nImportantly, it’s not that important. It has nothing to do with business operations. If it wasn’t backed up it wouldn’t matter. If you lose it, you could probably download it again."
+    },
+    "isPublic": false
   },
   {
     "number": "20-29",
