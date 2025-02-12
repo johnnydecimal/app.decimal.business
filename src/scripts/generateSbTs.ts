@@ -3,7 +3,7 @@ import { fileURLToPath } from "url";
 import { dirname } from "path";
 import { promises as fs } from "fs";
 import * as path from "path";
-import type { IdEntry } from "@data/smallBusinessFlat";
+import type { IdEntry, CategoryEntry } from "@data/smallBusinessFlat";
 import matter from "gray-matter";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -108,21 +108,36 @@ async function generateTsFiles() {
       const { data: frontmatter, content: markdown } = matter(markdownContent);
       const parsed = parseMarkdown(markdown);
 
-      // Construct a final entry conforming to IdEntry.
-      const finalEntry: IdEntry = {
-        number: parsed.number,
-        title: parsed.title,
-        description: parsed.description || "",
-        type: "id",
-        isPublic: frontmatter.isPublic || false,
-        isHeader: frontmatter.isHeader || false,
-        emoji: frontmatter.emoji || undefined,
-        metadata: {
-          createdDate: new Date().toISOString(),
-          updatedDate: new Date().toISOString(),
-        },
-        extensions: { smallBusiness: {} },
-      };
+      let finalEntry: IdEntry | CategoryEntry;
+      if (parsed.number.match(/^\d\d$/)) {
+        finalEntry = {
+          number: parsed.number,
+          title: parsed.title,
+          description: parsed.description || "",
+          type: "category",
+          emoji: frontmatter.emoji || undefined,
+          metadata: {
+            createdDate: new Date().toISOString(),
+            updatedDate: new Date().toISOString(),
+          },
+          extensions: { smallBusiness: {} },
+        };
+      } else {
+        finalEntry = {
+          number: parsed.number,
+          title: parsed.title,
+          description: parsed.description || "",
+          type: "id",
+          isPublic: frontmatter.isPublic || false,
+          isHeader: frontmatter.isHeader || false,
+          emoji: frontmatter.emoji || undefined,
+          metadata: {
+            createdDate: new Date().toISOString(),
+            updatedDate: new Date().toISOString(),
+          },
+          extensions: { smallBusiness: {} },
+        };
+      }
 
       const extKeys: (keyof SmallBusinessEntry)[] = [
         "opsManual",
@@ -147,8 +162,8 @@ async function generateTsFiles() {
 
       const tsObject = JSON.stringify(finalEntry, null, 2);
       const tsContent = `// Auto-generated from ${file}
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = ${tsObject};
+import type { IdEntry, CategoryEntry } from "@data/smallBusinessFlat";
+const entry: IdEntry | CategoryEntry = ${tsObject};
 export default entry;
 `;
 

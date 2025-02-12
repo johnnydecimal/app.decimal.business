@@ -43,7 +43,7 @@ export interface AreaEntry extends BaseEntry {
 
 export interface CategoryEntry extends BaseEntry {
   type: "category";
-  extensions?: {
+  extensions: {
     smallBusiness?: SmallBusinessExtension;
   };
 }
@@ -247,8 +247,6 @@ const flattenedData: FlattenedData = {
           "Just some text in an exceptions field so we can **see** _how_ `it` renders with a [[11.11]] wiki-link for good measure.",
         rationale:
           "It helps us design these pages if there's more than one descriptive item.",
-        // moreInfo:
-        //   "In theory, you should be able to keep the same business structure, but completely change your offering and still use this area. Whereas, [[20-29]] is specific to how you create and market what you sell.\n\nFor example, you are a gardener and your registered business structure is ‘sole trader’. After 5 years you decide to trade as a freelance hairdresser, another skill you have. You don’t want or need to change your structure. Sole trader is fine. And all the other IDs in this area are still relevant, you’ll just be saving some revised information in them. The government doesn’t care, as long as you keep sending them those tax dollars.\n\nFor example, over the years our company, Coruscade, has been used to run a dance production, manage an IT contractor business, and now Johnny.Decimal. Coruscade could have used [[10-19]] to administer any of these businesses. But the dance production and Johnny.Decimal need their own product and marketing areas.\n\nFor example, a shell company might have several products and/or operate several business at once. But it just has one batch of government tax reporting. The ‘timber’ business in New Zealand has a similar situation – one entity, several businesses. [[10-19]] is designed to accommodate this scenario.",
       },
     },
   },
@@ -287,30 +285,6 @@ const flattenedData: FlattenedData = {
   },
   "11.11": {
     ...id_11_11,
-    // number: "11.11",
-    //     // type: "id",
-    // title: "Structure & registrations",
-    // description:
-    //   "Proof of the business’ existence, **trading MODIFIED TEST structure**, `and name` -- where it all begins! LINK> [[11.12]] <LINK",
-    // metadata: {
-    //   createdDate: "2024-11-19",
-    //   updatedDate: "2024-11-19",
-    // },
-    // extensions: {
-    //   smallBusiness: {
-    //     examples:
-    //       "Business entity registrations; trading name registrations; income and sales tax registrations; trademark records for trading names; company director identity applications.",
-    //     moreInfo:
-    //       "This ID is about your business being born. Think of it like your birth certificate and proof of name. Deciding on a trading structure and name are the first steps to starting a business. This affects how you will operate and the various obligations you will have, especially government taxes.\n\nWhether you want to trade alone under your own name, or as a company with staff and its own name, you will have to complete certain registrations to ‘exist’. The more complicated the structure, the more paperwork there will be. But for many people with simple structures, once you’re set up, this ID should be pretty quiet (apart from ensuring registrations stay active). ",
-    //     exceptions:
-    //       "Put product or brand-related patents, trademarks, and copyrights in [[XX.XX]]. ",
-    //     alsoSee:
-    //       "Using as an example of an &lt;ol&gt;.\n\n1. First item, which is long enough to flow over not just one but two lines.\n2. Second item.\n3. Third item.\nThe list is finished.",
-    //     rationale:
-    //       "This ID is not related to your product or service. You might conduct different types of business under one entity. Hence, we recommend that any trademark records for the business name should go here. And if you have other patents, trademarks, or copyrights, they should live with the things they protect. ",
-    //     links: "",
-    //   },
-    // },
   },
   "11.11+HOW1": {
     number: "11.11+HOW1",
@@ -742,9 +716,15 @@ const flattenedData: FlattenedData = {
     emoji: "💻",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
-      smallBusiness: {},
+      smallBusiness: {
+        overview:
+          "This is a place to manage all the common computer-y things that most businesses have. Like hardware and software, setting up your online presence, and staying safe in cyberspace.\n\nAnd to be an honorary IT professional, this includes notes about configuration (i.e. all the stuff you did when you set something up). This is a nice example of ‘working the Decimal way’ – keeping notes to help your future self. It might be as simple as bullet points in your JDex or maybe a diagram, depending on what you’re documenting. Now you’ll never forget what you did.",
+        exceptions:
+          "This category is for managing computer-y things that are common to _most_ businesses. Not for any ‘computerised machines’ that are specific to your operations or product, those go in [[12.20]], [[12.30]], or [[20-29]].\n\nThis category is for managing _your_ technology. If your product or service is related (e.g. you’re an IT consultant or run a computer repair shop) that goes in [[20-29]].\n\nThis category is not for managing technology related to workplace security or access (e.g cameras, passcards), that goes in [[12.22]] or [[12.32]].",
+      },
     },
   },
+  // TODO on Thursday, 14 as a category doesn't have the feature where it looks up further readings, imlpement tha
   "20-29": {
     type: "area",
     number: "20-29",
