@@ -1,0 +1,20 @@
+// Auto-generated from 11.50.md
+import type { IdEntry } from "@data/smallBusinessFlat";
+const entry: IdEntry = {
+  "number": "11.50",
+  "title": "Training & professional development",
+  "description": "Anything to do with maintaining or updating skills and credentials, or other self-improvement.",
+  "type": "id",
+  "isPublic": false,
+  "isHeader": true,
+  "metadata": {
+    "createdDate": "2025-02-12T01:15:17.893Z",
+    "updatedDate": "2025-02-12T01:15:17.893Z"
+  },
+  "extensions": {
+    "smallBusiness": {
+      "emoji": "Graduation cap"
+    }
+  }
+};
+export default entry;
