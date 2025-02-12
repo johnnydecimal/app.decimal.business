@@ -9,7 +9,7 @@ import Category from "@components/Category.astro";
 import ID from "@components/ID.astro";
 // import OpsManual from "@components/OpsManual.astro";
 // import HowTo from "@components/HowTo.astro";
-import MoreInfo from "@components/MoreInfo.astro";
+import FurtherReading from "@components/FurtherReading.astro";
 import AdHoc from "@components/AdHoc.astro";
 
 const { slug } = Astro.params;
@@ -60,7 +60,11 @@ if (!slug) {
   {entryType === "id" ? <ID id={slug!} /> : null}
   <!-- {entryType === "ops" ? <OpsManual id={slug!} /> : null} -->
   <!-- {entryType === "howTo" ? <HowTo howToId={slug!} /> : null} -->
-  {entryType === "moreInfo" ? <MoreInfo moreInfoId={slug!} /> : null}
+  {
+    entryType === "furtherReading" ? (
+      <FurtherReading furtherReadingId={slug!} />
+    ) : null
+  }
   {entryType === "adHoc" ? <AdHoc id={slug!} /> : null}
   {entryType === "no-match" ? <System /> : null}
 </Layout>

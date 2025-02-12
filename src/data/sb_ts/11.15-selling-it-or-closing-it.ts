@@ -8,12 +8,12 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.338Z",
-    "updatedDate": "2025-02-12T03:25:47.338Z"
+    "createdDate": "2025-02-12T04:13:58.316Z",
+    "updatedDate": "2025-02-12T04:13:58.316Z"
   },
   "extensions": {
     "smallBusiness": {
-      "moreInfo": "Businesses can end for many reasons, happy, sad, or indifferent.\n\nYou might want to retire or just try something new. Or perhaps another business is interested in a merger or acquisition. Or there may be involuntary reasons like bankruptcy or a natural disaster.\n\nWe haven’t seen Succession, the TV show, but we get the gist. This kind of planning would also be something to consider here. Hopefully your situation is less dramatic.\n\nAnd even if you’re a sole trader with a simple set up, there might be things for you to store here. For instance, you decide to return to regular employment and want to deregister or pause your business entity to avoid ongoing fees or tax obligations.",
+      "overview": "Businesses can end for many reasons, happy, sad, or indifferent.\n\nYou might want to retire or just try something new. Or perhaps another business is interested in a merger or acquisition. Or there may be involuntary reasons like bankruptcy or a natural disaster.\n\nWe haven’t seen Succession, the TV show, but we get the gist. This kind of planning would also be something to consider here. Hopefully your situation is less dramatic.\n\nAnd even if you’re a sole trader with a simple set up, there might be things for you to store here. For instance, you decide to return to regular employment and want to deregister or pause your business entity to avoid ongoing fees or tax obligations.",
       "alsoSee": "Don’t forget to include this Johnny.Decimal small business system in [[13.45]]."
     }
   }

@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.356Z",
-    "updatedDate": "2025-02-12T03:25:47.356Z"
+    "createdDate": "2025-02-12T04:13:58.335Z",
+    "updatedDate": "2025-02-12T04:13:58.335Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Bills and paperwork for any paid security services; building access passes and codes; emergency and evacuation plans; bills for fire safety equipment; contact details for security services; instructions for how to turn the alarm on/off and entering/leaving the building; location of spare keys; surveillance camera installation; smoke or gas detector installation; who to call in different types of emergency (fire, flood, storm damage, robbery); Material Safety Data Sheets (MSDS).",
-      "moreInfo": "A place for anything to do with ensuring your back office building is safe and secure, and what to do if there’s an emergency.\n\nThis isn't for staff occupational health and safety, but there may be some overlap with training and other compliance obligations.\n\nAs well as bills and paperwork for equipment and services, this would be a good place to put processes for things like:\n\n- ordering keys and access passes,\n- entering/leaving the building,\n- rebooting the security system,\n- backing up surveillance camera footage,\n- what important documents go in the safe (and who has the code), etc.",
+      "overview": "A place for anything to do with ensuring your back office building is safe and secure, and what to do if there’s an emergency.\n\nThis isn't for staff occupational health and safety, but there may be some overlap with training and other compliance obligations.\n\nAs well as bills and paperwork for equipment and services, this would be a good place to put processes for things like:\n\n- ordering keys and access passes,\n- entering/leaving the building,\n- rebooting the security system,\n- backing up surveillance camera footage,\n- what important documents go in the safe (and who has the code), etc.",
       "exceptions": "This is not your business risk and emergency management plans, they’re in [[11.23]].",
       "alsoSee": "If anything here helps you meet compliance obligations (e.g. installing fire doors and smoke alarms), store the paperwork here and note it in [[11.13]].\n\nEnsure anything relevant in [[11.51]] is aligned with information here."
     }

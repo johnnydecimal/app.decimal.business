@@ -8,12 +8,12 @@ const entry: IdEntry = {
   "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.353Z",
-    "updatedDate": "2025-02-12T03:25:47.353Z"
+    "createdDate": "2025-02-12T04:13:58.328Z",
+    "updatedDate": "2025-02-12T04:13:58.328Z"
   },
   "extensions": {
     "smallBusiness": {
-      "moreInfo": "Whether you meet in person or online, jot down anything important and save it here.\n\nFor instance, their name, contact details, what they do, what you discussed, and their social, LinkedIn, or website links. If they gave you their business card, you could take a photo of it and add it to your JDex note or file system.\n\nConsider linking these people to an ID. For example, if they’re a potential front office supplier, add a link in your JDex to [[12.0X]]."
+      "overview": "Whether you meet in person or online, jot down anything important and save it here.\n\nFor instance, their name, contact details, what they do, what you discussed, and their social, LinkedIn, or website links. If they gave you their business card, you could take a photo of it and add it to your JDex note or file system.\n\nConsider linking these people to an ID. For example, if they’re a potential front office supplier, add a link in your JDex to [[12.0X]]."
     }
   }
 };

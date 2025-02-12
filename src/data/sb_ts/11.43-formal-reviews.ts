@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.349Z",
-    "updatedDate": "2025-02-12T03:25:47.349Z"
+    "createdDate": "2025-02-12T04:13:58.325Z",
+    "updatedDate": "2025-02-12T04:13:58.325Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Performance review templates; completed forms from staff; the follow-up process; resources and strategies for managing underperformance or misconduct; how you deliver warnings and disciplinary action.",
-      "moreInfo": "Getting the best out of your people includes being open about your expectations for their performance, periodically reviewing it, and ensuring they have an opportunity to speak freely about how things are for them.\n\nConducting formal reviews against pre-defined criteria is now commonplace. Most people expect to be reviewed during their employment and might think it was odd if they weren’t. \n\nPlus if a relationship sours, having evidence that the employee had opportunities to voice concerns and they were taken seriously can be an important protection for business owners.",
+      "overview": "Getting the best out of your people includes being open about your expectations for their performance, periodically reviewing it, and ensuring they have an opportunity to speak freely about how things are for them.\n\nConducting formal reviews against pre-defined criteria is now commonplace. Most people expect to be reviewed during their employment and might think it was odd if they weren’t.\n\nPlus if a relationship sours, having evidence that the employee had opportunities to voice concerns and they were taken seriously can be an important protection for business owners.",
       "alsoSee": "Ensure staff are clear on anything relevant at [[11.31]].",
       "links": "[Managing performance and warnings](https://www.fairwork.gov.au/employment-conditions/performance-in-the-workplace) from the Australian Government Fair Work Ombudsman."
     }

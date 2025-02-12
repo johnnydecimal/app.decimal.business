@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.355Z",
-    "updatedDate": "2025-02-12T03:25:47.355Z"
+    "createdDate": "2025-02-12T04:13:58.330Z",
+    "updatedDate": "2025-02-12T04:13:58.330Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Quotes from tradespeople; research on how to repair things; maintenance and repair requests to facilities management in multi-occupancy properties; recurring tasks to remember like oiling the squeaky front door, or monitoring your farm’s fence line for damage.",
-      "moreInfo": "When something that’s part of the building (or land) breaks, or you’re trying to prevent it from breaking, manage it here. \n\nThis is for daily repairs and maintenance related to the structure, not the equipment in it. \n\nAnd not general cleaning and keeping things ‘nice’. The latter are part of back and front office operations."
+      "overview": "When something that’s part of the building (or land) breaks, or you’re trying to prevent it from breaking, manage it here.\n\nThis is for daily repairs and maintenance related to the structure, not the equipment in it.\n\nAnd not general cleaning and keeping things ‘nice’. The latter are part of back and front office operations."
     }
   }
 };

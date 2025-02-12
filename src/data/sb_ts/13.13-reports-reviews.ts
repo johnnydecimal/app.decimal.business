@@ -8,14 +8,14 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.366Z",
-    "updatedDate": "2025-02-12T03:25:47.366Z"
+    "createdDate": "2025-02-12T04:13:58.344Z",
+    "updatedDate": "2025-02-12T04:13:58.344Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Traditional annual company reports; review documents that entities such as not-for-profits, charities, school associations, or clubs must submit; informal internal review documents for staff updates or other stakeholders; or anything else you prepare in order to reflect on finances.",
-      "moreInfo": "How’s everything going? Checking in on the business’ finances is something we should all do when we can. This might take the form of mandatory reporting, or just some notes in your JDex. Or perhaps you send emails, presentations, or other documents to keep staff, subscribers, or potential investors updated. Either way, do the work here.",
-      "links": "[Information about annual financial reports](https://www.acnc.gov.au/for-charities/manage-your-charity/obligations-acnc/reporting-annually-acnc/annual-financial-reports) from the Australian Charities and Not-for-profits Commission.\n\n[Information about not-for-profit self-reviews](https://www.ato.gov.au/businesses-and-organisations/not-for-profit-organisations/your-organisation/not-for-profit-self-review) from the Australian Taxation Office.\n\n\n[Information about changes in reporting requirements for sporting organisations](https://www.ato.gov.au/businesses-and-organisations/not-for-profit-organisations/not-for-profit-newsroom/changes-in-reporting-requirements-for-sporting-clubs) from the Australian Taxation Office."
+      "overview": "How’s everything going? Checking in on the business’ finances is something we should all do when we can. This might take the form of mandatory reporting, or just some notes in your JDex. Or perhaps you send emails, presentations, or other documents to keep staff, subscribers, or potential investors updated. Either way, do the work here.",
+      "links": "[Information about annual financial reports](https://www.acnc.gov.au/for-charities/manage-your-charity/obligations-acnc/reporting-annually-acnc/annual-financial-reports) from the Australian Charities and Not-for-profits Commission.\n\n[Information about not-for-profit self-reviews](https://www.ato.gov.au/businesses-and-organisations/not-for-profit-organisations/your-organisation/not-for-profit-self-review) from the Australian Taxation Office.\n\n[Information about changes in reporting requirements for sporting organisations](https://www.ato.gov.au/businesses-and-organisations/not-for-profit-organisations/not-for-profit-newsroom/changes-in-reporting-requirements-for-sporting-clubs) from the Australian Taxation Office."
     }
   }
 };

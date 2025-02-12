@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.372Z",
-    "updatedDate": "2025-02-12T03:25:47.372Z"
+    "createdDate": "2025-02-12T04:13:58.355Z",
+    "updatedDate": "2025-02-12T04:13:58.355Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Tickets; fines; late fees; penalties; infringements.",
-      "moreInfo": "Whoops. The business owes someone money because it did something wrong. It happens to the best of us. Process it, file it, learn from it, and move on."
+      "overview": "Whoops. The business owes someone money because it did something wrong. It happens to the best of us. Process it, file it, learn from it, and move on."
     }
   }
 };

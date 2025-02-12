@@ -8,12 +8,12 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.348Z",
-    "updatedDate": "2025-02-12T03:25:47.348Z"
+    "createdDate": "2025-02-12T04:13:58.324Z",
+    "updatedDate": "2025-02-12T04:13:58.324Z"
   },
   "extensions": {
     "smallBusiness": {
-      "moreInfo": "In Australia, staff records must be kept for up to 7 years. Your government may have different requirements. \n\nWe suggest storing the records in this ID as per the image below. Each employee has a subfolder labelled with the year-month-day they joined (so it sorts neatly) and their name. Inside that is a standard template. \n\nWe have provided an example template in the folder system. Adjust this to your needs as required, just remember to be consistent.\n\n2014-07-08 Slydell, Bob\n2017-08-21 Bolton, Michael\n2019-02-14 Lumbergh, Bill\n\t\t\t\t\t10 Personal details\n\t\t\t\t\t20 Payments and deductions\n\t\t\t\t\t30 Work hours and overtime\n\t\t\t\t\t40 Leave taken and accrued\n\t\t\t\t\t50 Pension contributions\n\t\t\t\t\t60 Training completed\n\t\t\t\t\t70 Ending the employment\n\nOther records you might consider keeping include: CVs/resumes, job applications and pre-employment checks, employment contracts, performance reviews, trade or registration certificates, details of uniforms and equipment allocated, roles held and promotions.",
+      "overview": "In Australia, staff records must be kept for up to 7 years. Your government may have different requirements.\n\nWe suggest storing the records in this ID as per the image below. Each employee has a subfolder labelled with the year-month-day they joined (so it sorts neatly) and their name. Inside that is a standard template.\n\nWe have provided an example template in the folder system. Adjust this to your needs as required, just remember to be consistent.\n\n2014-07-08 Slydell, Bob\n2017-08-21 Bolton, Michael\n2019-02-14 Lumbergh, Bill\n10 Personal details\n20 Payments and deductions\n30 Work hours and overtime\n40 Leave taken and accrued\n50 Pension contributions\n60 Training completed\n70 Ending the employment\n\nOther records you might consider keeping include: CVs/resumes, job applications and pre-employment checks, employment contracts, performance reviews, trade or registration certificates, details of uniforms and equipment allocated, roles held and promotions.",
       "links": "An interview with the ATO Assistant Commissioner about tax obligations when hiring your first worker from the [Australian Business Podcast](https://www.youtube.com/watch?v=6MwO1g0F9IY)."
     }
   }

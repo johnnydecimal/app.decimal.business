@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.368Z",
-    "updatedDate": "2025-02-12T03:25:47.368Z"
+    "createdDate": "2025-02-12T04:13:58.346Z",
+    "updatedDate": "2025-02-12T04:13:58.346Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Tax relief, credits, or incentives; concessions and allowances; grants and schemes; cash back and refunds; prizes and gifts.",
-      "moreInfo": "If you receive any kind of one-off or ongoing financial assistance, store the records here after the income has been processed. And if you had to apply for it, store the application here too.\n\nThis kind of thing often comes from the government, but it might also come from private industry, academia, or anywhere else. Whatever it is, it’s not a loan and you don’t need to pay it back. Hooray."
+      "overview": "If you receive any kind of one-off or ongoing financial assistance, store the records here after the income has been processed. And if you had to apply for it, store the application here too.\n\nThis kind of thing often comes from the government, but it might also come from private industry, academia, or anywhere else. Whatever it is, it’s not a loan and you don’t need to pay it back. Hooray."
     }
   }
 };

@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.372Z",
-    "updatedDate": "2025-02-12T03:25:47.372Z"
+    "createdDate": "2025-02-12T04:13:58.354Z",
+    "updatedDate": "2025-02-12T04:13:58.354Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Vendor financing/trade credit; hire purchase or rent to buy agreements.",
-      "moreInfo": "You owe someone money for goods that you haven’t paid for yet.\n\nThis might be for products or services from a supplier who didn’t require upfront payment. Or perhaps a vehicle that you have a hire purchase agreement for.\n\nAfter payments are processed, file the records here using the year-month method so everything sorts neatly. And subfolder by account issuer."
+      "overview": "You owe someone money for goods that you haven’t paid for yet.\n\nThis might be for products or services from a supplier who didn’t require upfront payment. Or perhaps a vehicle that you have a hire purchase agreement for.\n\nAfter payments are processed, file the records here using the year-month method so everything sorts neatly. And subfolder by account issuer."
     }
   }
 };

@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.361Z",
-    "updatedDate": "2025-02-12T03:25:47.361Z"
+    "createdDate": "2025-02-12T04:13:58.340Z",
+    "updatedDate": "2025-02-12T04:13:58.340Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Permits for parking, deliveries, or general entry; e-tag accounts and toll road passes; fees or exemptions for congestion charge zones; short-term parking fees; daily running expenses such as fuel, EV charging, oil, wiper fluid, and cleaning.",
-      "moreInfo": "These examples are car focused for simplicity. But if you have different types of vehicles, adapt as needed. \n\nFor instance, you might have to pay marina or airport fees for a boat or plane that are equivalent to car parking.\n\nRegarding running expenses, these are the everyday transactions related to your vehicles like buying fuel or going to the car wash. \n\nContrast with repairs and maintenance, which are less frequent transactions and are managed separately below.\n\nDepending on your business, this might be a busy ID if you have a lot of running expenses. But as long as you reconcile any receipts in your inbox regularly and archive them neatly here, you’ll stay on top of what you’re spending.\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.",
+      "overview": "These examples are car focused for simplicity. But if you have different types of vehicles, adapt as needed.\n\nFor instance, you might have to pay marina or airport fees for a boat or plane that are equivalent to car parking.\n\nRegarding running expenses, these are the everyday transactions related to your vehicles like buying fuel or going to the car wash.\n\nContrast with repairs and maintenance, which are less frequent transactions and are managed separately below.\n\nDepending on your business, this might be a busy ID if you have a lot of running expenses. But as long as you reconcile any receipts in your inbox regularly and archive them neatly here, you’ll stay on top of what you’re spending.\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.",
       "exceptions": "Repairs, maintenance, and associated purchases go in [[12.45]].\n\nFuel tax credits or other government grants go in [[13.25]].\n\nFines and penalties go in [[13.55]]."
     }
   }

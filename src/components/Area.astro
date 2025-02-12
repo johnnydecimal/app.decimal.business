@@ -26,7 +26,7 @@ const areaTitle = areaEntry.title;
 const areaDescription = await parseMd(areaEntry.description);
 const sb = areaEntry.extensions?.smallBusiness;
 const areaExamples = sb?.examples && (await parseMd(sb.examples));
-const areaMoreInfo = sb?.moreInfo && (await parseMd(sb.moreInfo));
+const areaOverview = sb?.overview && (await parseMd(sb.overview));
 const areaExceptions = sb?.exceptions && (await parseMd(sb.exceptions));
 const areaAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
 const areaRationale = sb?.rationale && (await parseMd(sb?.rationale));
@@ -80,11 +80,11 @@ const parentSTitle = parentSEntry.title;
 }
 
 {
-  areaMoreInfo ? (
+  areaOverview ? (
     <Slice id="AreaMoreInfo" className="descriptive-text">
       <div class="layout-grid-left-right">
         <h3 class="layout-left-item">More info</h3>
-        <div class="layout-right-item" set:html={areaMoreInfo} />
+        <div class="layout-right-item" set:html={areaOverview} />
       </div>
     </Slice>
   ) : null

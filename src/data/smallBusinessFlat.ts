@@ -12,7 +12,7 @@ export type EntryType =
   | "id"
   | "ops"
   | "howTo"
-  | "moreInfo"
+  | "furtherReading"
   | "adHoc";
 
 // Base interface for common fields
@@ -50,7 +50,7 @@ export interface CategoryEntry extends BaseEntry {
 
 interface SmallBusinessExtension {
   examples?: string;
-  moreInfo?: string;
+  overview?: string;
   exceptions?: string;
   alsoSee?: string;
   rationale?: string;
@@ -92,13 +92,13 @@ export interface HowToEntry extends BaseEntry {
   };
 }
 
-export interface MoreInfoEntry extends BaseEntry {
+export interface FurtherReadingEntry extends BaseEntry {
   // These entries don't need an ID; or rather, we don't _use_ the ID
   // They're just 11.11+ …words, not 11.11+HOW1 or whatever
-  type: "moreInfo";
+  type: "furtherReading";
   isPublic?: boolean;
   extensions: {
-    moreInfo: {
+    furtherReading: {
       text: string; // freeform
     };
   };
@@ -117,7 +117,7 @@ export type FlattenedEntry =
   | IdEntry
   | OpsEntry
   | HowToEntry
-  | MoreInfoEntry
+  | FurtherReadingEntry
   | AdHocEntry;
 
 // Flattened data structure type
@@ -278,7 +278,7 @@ const flattenedData: FlattenedData = {
     extensions: {
       smallBusiness: {
         examples: "Example of category management",
-        moreInfo: "More information about this ID",
+        overview: "More information about this ID",
       },
     },
   },
@@ -330,7 +330,7 @@ const flattenedData: FlattenedData = {
   },
   "11.11+1": {
     number: "11.11+1",
-    type: "moreInfo",
+    type: "furtherReading",
     title: "Why would you want to register a business in Australia?",
     isPublic: true,
     description:
@@ -340,14 +340,14 @@ const flattenedData: FlattenedData = {
       updatedDate: "2024-11-19",
     },
     extensions: {
-      moreInfo: {
+      furtherReading: {
         text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
       },
     },
   },
   "11.11+2": {
     number: "11.11+2",
-    type: "moreInfo",
+    type: "furtherReading",
     title:
       "Some other more info article whose title I can't be bothered making up",
     description:
@@ -357,7 +357,7 @@ const flattenedData: FlattenedData = {
       updatedDate: "2024-11-19",
     },
     extensions: {
-      moreInfo: {
+      furtherReading: {
         text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
       },
     },
@@ -415,7 +415,7 @@ const flattenedData: FlattenedData = {
   },
   "11.13+1": {
     number: "11.13+1",
-    type: "moreInfo",
+    type: "furtherReading",
     title: "Just an example of a more info for testing",
     isPublic: true,
     description:
@@ -425,7 +425,7 @@ const flattenedData: FlattenedData = {
       updatedDate: "2024-11-19",
     },
     extensions: {
-      moreInfo: {
+      furtherReading: {
         text: "# Why?\n\nThere are many important reasons to register as a proprietary company in Australia.\n\n## It protects you\n\nFrom **demons** no not really, from lawyers!\n\n# How?\n\nProbably speak to an accountant.\n\n## That's a cop-out\n\nDeal with it.\n\n# What does it cost is a long header!\n\nIsn't it.\n\n",
       },
     },
@@ -809,7 +809,7 @@ export function getChildren(
     // ID provided. Get all sub-IDs.
     return Object.values(data).filter(
       (entry) =>
-        (entry.type === "moreInfo" ||
+        (entry.type === "furtherReading" ||
           entry.type === "howTo" ||
           entry.type === "ops") &&
         entry.number.startsWith(parentNumber)

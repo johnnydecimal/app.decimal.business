@@ -1,13 +1,13 @@
 ---
 /**
- * The MoreInfo view component. So we're at /11.11+[0-9].
+ * The FurtherReading view component. So we're at /11.11+[0-9].
  */
 
 // #region Props --------------------------------------------------------------
 interface Props {
-  moreInfoId: string;
+  furtherReadingId: string;
 }
-const { moreInfoId } = Astro.props;
+const { furtherReadingId } = Astro.props;
 // #endregion
 
 // #region Clerk user
@@ -21,7 +21,7 @@ import system, {
   type AreaEntry,
   type CategoryEntry,
   type IdEntry,
-  type MoreInfoEntry,
+  type FurtherReadingEntry,
 } from "@data/smallBusinessFlat";
 // Utils
 import parseMd from "@utils/parseMd";
@@ -30,27 +30,36 @@ import Slice from "./common/Slice.astro";
 // #endregion
 
 // #region Entry: core details ------------------------------------------------
-const moreInfoEntry = system[moreInfoId] as MoreInfoEntry;
-const isPublic = moreInfoEntry.isPublic || false;
-const moreInfoIdForDisplay = moreInfoEntry.number.replace(/^\d\d\.\d\d/, "");
+const furtherReadingEntry = system[furtherReadingId] as FurtherReadingEntry;
+const isPublic = furtherReadingEntry.isPublic || false;
+const furtherReadingIdForDisplay = furtherReadingEntry.number.replace(
+  /^\d\d\.\d\d/,
+  ""
+);
 
-let moreInfoTitle: string;
-let moreInfoDescription: string;
-let moreInfoEntryText: string;
+let furtherReadingTitle: string;
+let furtherReadingDescription: string;
+let furtherReadingEntryText: string;
 if (userId) {
-  moreInfoTitle = moreInfoEntry.title;
-  moreInfoDescription = await parseMd(moreInfoEntry.description);
-  moreInfoEntryText = await parseMd(moreInfoEntry.extensions?.moreInfo.text);
+  furtherReadingTitle = furtherReadingEntry.title;
+  furtherReadingDescription = await parseMd(furtherReadingEntry.description);
+  furtherReadingEntryText = await parseMd(
+    furtherReadingEntry.extensions?.furtherReading.text
+  );
 } else {
-  moreInfoTitle = await parseMd(moreInfoEntry.title, false, isPublic);
-  moreInfoDescription = await parseMd(
-    moreInfoEntry.description,
+  furtherReadingTitle = await parseMd(
+    furtherReadingEntry.title,
+    false,
+    isPublic
+  );
+  furtherReadingDescription = await parseMd(
+    furtherReadingEntry.description,
     true,
     isPublic
   );
-  console.log("🚀 ~ moreInfoDescription:", moreInfoDescription);
-  moreInfoEntryText = await parseMd(
-    moreInfoEntry.extensions?.moreInfo.text,
+  console.log("🚀 ~ furtherReadingDescription:", furtherReadingDescription);
+  furtherReadingEntryText = await parseMd(
+    furtherReadingEntry.extensions?.furtherReading.text,
     true,
     isPublic
   );
@@ -60,7 +69,7 @@ if (userId) {
 
 // For moreInfo entries (and similar types), rule 0 applies:
 // The parent for these entries is the first 5 characters of the number.
-const parentIdNumber = moreInfoEntry.number.substring(0, 5);
+const parentIdNumber = furtherReadingEntry.number.substring(0, 5);
 const parentIdEntry = system[parentIdNumber] as IdEntry;
 const parentIdTitle = parentIdEntry.title;
 
@@ -123,25 +132,28 @@ const parentSTitle = parentSEntry.title;
 
 <Slice id="Header" className="active-top">
   <div class="layout-grid-left-right phone-only">
-    <h1 class="layout-left-item">{moreInfoIdForDisplay} {moreInfoTitle}</h1>
+    <h1 class="layout-left-item">
+      {furtherReadingIdForDisplay}
+      {furtherReadingTitle}
+    </h1>
   </div>
   <div class="layout-grid-left-right tablet-portrait-up">
-    <h1 class="layout-left-item">{moreInfoIdForDisplay}</h1>
-    <h1 class="layout-right-item">{moreInfoTitle}</h1>
+    <h1 class="layout-left-item">{furtherReadingIdForDisplay}</h1>
+    <h1 class="layout-right-item">{furtherReadingTitle}</h1>
   </div>
 </Slice>
 
 <Slice id="HowToDescription" className="descriptive-text">
   <div class="layout-grid-left-right">
     <div></div>
-    <div class="layout-right-item" set:html={moreInfoDescription} />
+    <div class="layout-right-item" set:html={furtherReadingDescription} />
   </div>
 </Slice>
 
-<Slice id="MoreInfoEntryText" className="descriptive-text">
+<Slice id="FurtherReadingEntryText" className="descriptive-text">
   <div class="layout-grid-left-right">
     <div></div>
-    <div class="layout-right-item" set:html={moreInfoEntryText} />
+    <div class="layout-right-item" set:html={furtherReadingEntryText} />
   </div>
 </Slice>
 

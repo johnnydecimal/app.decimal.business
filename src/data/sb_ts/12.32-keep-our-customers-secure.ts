@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.358Z",
-    "updatedDate": "2025-02-12T03:25:47.358Z"
+    "createdDate": "2025-02-12T04:13:58.338Z",
+    "updatedDate": "2025-02-12T04:13:58.338Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Bills and paperwork for any paid security services; building access passes and codes; emergency and evacuation plans; bills for fire safety equipment; contact details for security services; instructions for how to turn the alarm on/off and entering/leaving the building; location of spare keys; surveillance camera installation; smoke or gas detector installation; who to call in different types of emergency (fire, flood, storm damage, robbery); Material Safety Data Sheets (MSDS).",
-      "moreInfo": "This is a place for bills, paperwork, and anything else related to the security and safety of the front office. This might be empty if your back office set up covers both areas.\n\nThis is not for staff occupational health and safety, but there may be some overlap with training and other compliance obligations.\n\nAs per [[12.22]], this would be a good place to put processes. \n\nFor instance, your restaurant’s front office with flames and sharp knives will have very different safety procedures and equipment to the back office where you sit at a desk doing accounts. \n\nAnd there might be a completely different way to access your front office (a computerised alarm system and automatic doors) versus the back office (a padlocked roller door in a loading dock).",
+      "overview": "This is a place for bills, paperwork, and anything else related to the security and safety of the front office. This might be empty if your back office set up covers both areas.\n\nThis is not for staff occupational health and safety, but there may be some overlap with training and other compliance obligations.\n\nAs per [[12.22]], this would be a good place to put processes.\n\nFor instance, your restaurant’s front office with flames and sharp knives will have very different safety procedures and equipment to the back office where you sit at a desk doing accounts.\n\nAnd there might be a completely different way to access your front office (a computerised alarm system and automatic doors) versus the back office (a padlocked roller door in a loading dock).",
       "exceptions": "This is not your business risk and emergency management plans, they’re in [[11.23]].",
       "alsoSee": "If anything here helps you meet compliance obligations (e.g. installing exit signs and a sprinkler system), store the paperwork here and note it in [[11.13]].\nEnsure anything relevant in [[11.51]] is aligned with information here."
     }

@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.368Z",
-    "updatedDate": "2025-02-12T03:25:47.368Z"
+    "createdDate": "2025-02-12T04:13:58.347Z",
+    "updatedDate": "2025-02-12T04:13:58.347Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Land; buildings; computer equipment; furniture; machinery; vehicles.",
-      "moreInfo": "If you sell assets that are owned by the business, store the records here after the income has been processed. \n\nThis is the kind of higher-value item that your accountant wants to know about because they’ll need to update your balance sheet.",
+      "overview": "If you sell assets that are owned by the business, store the records here after the income has been processed.\n\nThis is the kind of higher-value item that your accountant wants to know about because they’ll need to update your balance sheet.",
       "exceptions": "This is not the act of selling the asset – manage that where the item lives (i.e. don’t store photos of a car for an online ad here, those go in [[12.41]])."
     }
   }

@@ -8,12 +8,12 @@ const entry: IdEntry = {
   "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.364Z",
-    "updatedDate": "2025-02-12T03:25:47.364Z"
+    "createdDate": "2025-02-12T04:13:58.342Z",
+    "updatedDate": "2025-02-12T04:13:58.342Z"
   },
   "extensions": {
     "smallBusiness": {
-      "moreInfo": "This is a place for anything to do with relationships that you maintain that are close by – your direct neighbours or surrounding streets. You’re probably on a first-name basis and know each other reasonably well.\n\nMaybe you store the contact details, opening hours, or annual holidays, of other businesses in your shopping centre in case of emergency. Or you might have reminders to bring in mail or garbage bins for your neighbours sometimes.\n\nPerhaps you offer discounts to certain neighbourhood businesses and you keep a list of what these are. Or maybe you’re part of a ‘neighbourhood watch’-style group where everyone keeps an eye on things. Either way, store any notes or documents here.",
+      "overview": "This is a place for anything to do with relationships that you maintain that are close by – your direct neighbours or surrounding streets. You’re probably on a first-name basis and know each other reasonably well.\n\nMaybe you store the contact details, opening hours, or annual holidays, of other businesses in your shopping centre in case of emergency. Or you might have reminders to bring in mail or garbage bins for your neighbours sometimes.\n\nPerhaps you offer discounts to certain neighbourhood businesses and you keep a list of what these are. Or maybe you’re part of a ‘neighbourhood watch’-style group where everyone keeps an eye on things. Either way, store any notes or documents here.",
       "exceptions": "This is not for networking, seeking advice and support, or interactions with professional bodies, that’s in [11.60]]."
     }
   }

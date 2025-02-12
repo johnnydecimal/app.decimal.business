@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.352Z",
-    "updatedDate": "2025-02-12T03:25:47.352Z"
+    "createdDate": "2025-02-12T04:13:58.327Z",
+    "updatedDate": "2025-02-12T04:13:58.327Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Certified Practising Accountants Australia; Australian Computer Society; Australasian Medical Writers’ Association; Media Entertainment & Arts Alliance; Australian Physiotherapy Association; Personal Trainers Association of Australia.",
-      "moreInfo": "A place for any documents or notes related to your interactions with professional organisations. This might include membership records, literature they send you, meeting or event reminders, contact details, and website or social links."
+      "overview": "A place for any documents or notes related to your interactions with professional organisations. This might include membership records, literature they send you, meeting or event reminders, contact details, and website or social links."
     }
   }
 };

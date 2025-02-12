@@ -8,13 +8,13 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.338Z",
-    "updatedDate": "2025-02-12T03:25:47.338Z"
+    "createdDate": "2025-02-12T04:13:58.315Z",
+    "updatedDate": "2025-02-12T04:13:58.315Z"
   },
   "extensions": {
     "smallBusiness": {
       "examples": "Statutory declarations; affidavits; documents related to proof of ownership; non-disclosure or confidentiality agreements; change of company director paperwork; contracts that don’t fit elsewhere; financial disputes that make it to court.",
-      "moreInfo": "It’s hard to predict what other core documents a business may have around the world. Or any legal matters that may need to be dealt with. But if it’s important and doesn’t fit elsewhere, put it here in this legal catch-all. And note its location in your JDex.",
+      "overview": "It’s hard to predict what other core documents a business may have around the world. Or any legal matters that may need to be dealt with. But if it’s important and doesn’t fit elsewhere, put it here in this legal catch-all. And note its location in your JDex.",
       "exceptions": "We’re still dealing with the business entity here, not employees, products, or suppliers. Any legal matters or ‘serious’ documents related to those things live with them."
     }
   }

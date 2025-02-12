@@ -8,12 +8,12 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.364Z",
-    "updatedDate": "2025-02-12T03:25:47.364Z"
+    "createdDate": "2025-02-12T04:13:58.342Z",
+    "updatedDate": "2025-02-12T04:13:58.342Z"
   },
   "extensions": {
     "smallBusiness": {
-      "moreInfo": "This is a place for any global relationships that you maintain, either with individuals or larger organisations.\n\nYou might mentor a small business owner in another country. Or maybe your business participates in global environmental initiatives like Just One Tree or the 1% for the Planet network. \n\nOr perhaps you support other international charities or small business loan providers. Either way, store the details here.",
+      "overview": "This is a place for any global relationships that you maintain, either with individuals or larger organisations.\n\nYou might mentor a small business owner in another country. Or maybe your business participates in global environmental initiatives like Just One Tree or the 1% for the Planet network.\n\nOr perhaps you support other international charities or small business loan providers. Either way, store the details here.",
       "exceptions": "This is not for any external policies that your business may have, those go in [[11.32]].\n\nThis is not for networking, seeking advice and support, or interactions with professional bodies, that’s in [11.60]].\n\nThis is not active marketing or self-promotion, that’s in [[20-29]]."
     }
   }

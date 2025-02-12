@@ -15,7 +15,7 @@ const SECTION_MAP: { [header: string]: keyof SmallBusinessEntry } = {
   description: "description",
   "ops manual": "opsManual",
   examples: "examples",
-  "more info": "moreInfo",
+  overview: "overview",
   exceptions: "exceptions",
   "also see": "alsoSee",
   rationale: "rationale",
@@ -30,7 +30,7 @@ interface SmallBusinessEntry {
   // These fields go into the `extensions.smallBusiness` object.
   opsManual?: string;
   examples?: string;
-  moreInfo?: string;
+  overview?: string;
   exceptions?: string;
   alsoSee?: string;
   rationale?: string;
@@ -127,7 +127,7 @@ async function generateTsFiles() {
       const extKeys: (keyof SmallBusinessEntry)[] = [
         "opsManual",
         "examples",
-        "moreInfo",
+        "overview",
         "exceptions",
         "alsoSee",
         "rationale",

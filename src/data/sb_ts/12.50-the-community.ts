@@ -9,12 +9,12 @@ const entry: IdEntry = {
   "isHeader": true,
   "emoji": "🧩",
   "metadata": {
-    "createdDate": "2025-02-12T03:25:47.363Z",
-    "updatedDate": "2025-02-12T03:25:47.363Z"
+    "createdDate": "2025-02-12T04:13:58.342Z",
+    "updatedDate": "2025-02-12T04:13:58.342Z"
   },
   "extensions": {
     "smallBusiness": {
-      "moreInfo": "Your business is part of a wider community – schools, hospitals, clubs, local government and media, the environment, etc. And sometimes it will interact with the community in different ways.\n\nThis section isn’t about your core business, your employees, suppliers, or professional bodies. It’s a place for civics, community engagement, and being a good business citizen. It’s giving versus getting.\n\nThis is a broad umbrella and may not be that relevant for many businesses. But if this sounds like you, then put any relevant contact details, notes, and other documents here.",
+      "overview": "Your business is part of a wider community – schools, hospitals, clubs, local government and media, the environment, etc. And sometimes it will interact with the community in different ways.\n\nThis section isn’t about your core business, your employees, suppliers, or professional bodies. It’s a place for civics, community engagement, and being a good business citizen. It’s giving versus getting.\n\nThis is a broad umbrella and may not be that relevant for many businesses. But if this sounds like you, then put any relevant contact details, notes, and other documents here.",
       "rationale": "After seeing folder structures kindly provided by some business owners, we realised that civics and community engagement can be a big deal.\n\nSo we wanted to make sure there was a place for this stuff to keep it separate from daily operations.\n\nEspecially if you participate in recurring events. You’ll want to be able to easily find and reuse certain items each time."
     }
   }
