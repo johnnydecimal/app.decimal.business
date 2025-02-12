@@ -2,16 +2,12 @@
 
 10-19 Business administration
 
----
-
 ## Description
 ## Ops manual
 ## Examples
 ## More info
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
@@ -23,16 +19,11 @@ For example, over the years our company, Coruscade, has been used to run a dance
 
 For example, a shell company might have several products and/or operate several business at once. But it just has one batch of government tax reporting. The ‘timber’ business in New Zealand has a similar situation – one entity, several businesses. [[10-19]] is designed to accommodate this scenario.
 
----
-
 ## Links
 ## Emoji
 
----
-
 ## Disclaimer (tbc)
 
--------------------------------------------------------------------------------------
 NOTES:
 Intro: words to help us in our ‘positioning’, make a map!
 Social events for the business: do we have a travel events & entertainment section?
@@ -45,31 +36,21 @@ It includes NFP, clubs, charities, & volunteering
 
 11 🙋 The business & its people
 
----
-
 ## Description
 
 This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.
-
----
 
 ## Ops manual
 ## Examples
 ## More info
 
----
-
 ## Exceptions
 
 This category is for managing _your_ entity and staff – if your product or service is related (e.g. you work in business set up or human resources) that goes in [[20-29]].
 
----
-
 ## Also see
 ## Rationale
 ## Links
-
----
 
 ## Emoji
 
@@ -78,8 +59,6 @@ Person raising one hand
 
 # 11.00 ■ The business & its people category management ⚙️
 
----
-
 ## Description
 ## Ops manual
 ## Examples
@@ -88,8 +67,6 @@ Person raising one hand
 ## Also see
 ## Rationale
 ## Links
-
----
 
 ## Emoji
 
@@ -98,13 +75,9 @@ Gear
 
 # 11.10 ■ Official documents 🗂️
 
----
-
 ## Description
 
 The official paperwork that you need in order to start and maintain a business.
-
----
 
 ## Ops manual
 ## Examples
@@ -113,8 +86,6 @@ The official paperwork that you need in order to start and maintain a business.
 ## Also see
 ## Rationale
 ## Links
-
----
 
 ## Emoji
 
@@ -123,23 +94,16 @@ Card index dividers
 
 # 11.11 Structure & registrations
 
----
-
 ## Description
 
 Proof of the business’ existence, trading structure, and name – where it all begins!
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Business entity registrations; trading name registrations; income and sales tax registrations; trademark records for trading names; company director identity applications.
 
---
 
 ## More info
 
@@ -147,23 +111,15 @@ This ID is about your business being born. Think of it like your birth certifica
 
 Whether you want to trade alone under your own name, or as a company with staff and its own name, you will have to complete certain registrations to ‘exist’. The more complicated the structure, the more paperwork there will be. But for many people with simple structures, once you’re set up, this ID should be pretty quiet (apart from ensuring registrations stay active). 
 
----
-
 ## Exceptions
 
 Put product or brand-related patents, trademarks, and copyrights in [[20-29]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
 This ID is not related to your product or service. You might conduct different types of business under one entity. Hence, we recommend that any trademark records for the business name should go here. And if you have other patents, trademarks, or copyrights, they should live with the things they protect.
-
----
 
 ## Links
 ## Emoji
@@ -171,23 +127,15 @@ This ID is not related to your product or service. You might conduct different t
 
 # 11.12 Licences, permits, & accreditations
 
----
-
 ## Description
 
 Documents that you apply for, or are earned via training, so you can legally provide a service or operate in a particular location.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Liquor licence; safe food handling certificate; truck or taxi licence; police check; zoning permit; government security clearance; market stall holder permit; working with children check; tradesperson licence; responsible service of alcohol certificate; environmental permit; any other legally-required core qualification.
-
----
 
 ## More info
 
@@ -201,27 +149,19 @@ However, licences, permits, and accreditations are static documents. Probably a 
 
 This is an important ID to keep up-to-date in your JDex and to set reminders for to ensure nothing expires.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 Manage ongoing training or education in [[11.50]], but store a copy of the proof of completion here if it’s essential to your ability to trade.
 
----
 ## Rationale
 
 If an inspector turns up at your door, having copies of these core documents in one place will be very handy. They’re also highly visible at the top of your system so they’re not lost or forgotten.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 JDex: importance level high
 Video: the inspector knocks, you want to just show them this folder and breathe easy
@@ -229,23 +169,15 @@ Video: the inspector knocks, you want to just show them this folder and breathe 
 
 # 11.13 Compliance
 
----
-
 ## Description
 
 Any laws, codes, or standards relevant to your business, including inspections and audits that may be required.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Workplace health and safety compliance; environmental laws; industry manufacturing standards; payroll governance, building standards and safety inspections; retail fair trading laws; codes of conduct for advertising and marketing; food safety inspections; financial audits; local and international import/export regulations; laws around the supply of alcohol; employment and unfair dismissal laws; privacy and data protection laws.
-
----
 
 ## More info
 
@@ -261,23 +193,16 @@ Compliance might mean that:
 
 Either way, store copies of regulations and proof that you’re complying with them here. This is an important ID to keep up-to-date in your JDex and to set reminders for to ensure you stay above board.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 Manage ongoing training or education in [[11.50]], but store a copy of the proof of completion here if it helps you meet compliance obligations.
 
----
-
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 JDex: importance level high
 Ops manual: recurring compliance obligations
@@ -285,60 +210,41 @@ Ops manual: recurring compliance obligations
 
 # 11.14 Other legal matters
 
----
-
 ## Description
 
 A place for any other legal matters or ‘serious’ documents related to the business entity that a lawyer may have prepared, were issued by the government, or certified by a public official.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Statutory declarations; affidavits; documents related to proof of ownership; non-disclosure or confidentiality agreements; change of company director paperwork; contracts that don’t fit elsewhere; financial disputes that make it to court.
 
----
-
 ## More info
 
 It’s hard to predict what other core documents a business may have around the world. Or any legal matters that may need to be dealt with. But if it’s important and doesn’t fit elsewhere, put it here in this legal catch-all. And note its location in your JDex.
 
----
-
 ## Exceptions
 
 We’re still dealing with the business entity here, not employees, products, or suppliers. Any legal matters or ‘serious’ documents related to those things live with them.
-
----
 
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Ops manual: how do you deal with contracts overall? Suppliers, employees, other
 Re: last point, ensure we consider legal stuff in those sections
 
 # 11.15 Selling it or closing it
 
----
-
 ## Description
 
 Whether you sell the business, pass it on to a family member, or close it down, this is a place to work out the details.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -350,17 +256,11 @@ We haven’t seen Succession, the TV show, but we get the gist. This kind of pla
 
 And even if you’re a sole trader with a simple set up, there might be things for you to store here. For instance, you decide to return to regular employment and want to deregister or pause your business entity to avoid ongoing fees or tax obligations.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 Don’t forget to include this Johnny.Decimal small business system in [[13.45]].
-
----
 
 ## Rationale
 ## Links
@@ -369,13 +269,9 @@ Don’t forget to include this Johnny.Decimal small business system in [[13.45]]
 
 # 11.20 ■ Planning, contingencies, & insurance 🧭
 
----
-
 ## Description
 
 The documents you write to guide the business in the short and longer term, what to do when something bad happens, and insurance for the entity and its people.
-
----
 
 ## Ops manual
 ## Examples
@@ -385,8 +281,6 @@ The documents you write to guide the business in the short and longer term, what
 ## Rationale
 ## Links
 
----
-
 ## Emoji
 
 Compass
@@ -394,18 +288,12 @@ Compass
 
 # 11.21 Business plan
 
----
-
 ## Description
 
 The indispensable guide to where you are, where you want to be, and what to do to get there.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -415,11 +303,7 @@ A business plan contains all the good stuff like your mission and vision stateme
 
 If you’ve never written one, government business websites often have handy templates to get you started.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
@@ -427,11 +311,7 @@ If you have a confidentiality agreement to protect your business plan, store it 
 
 When it’s time to update your business plan, don’t forget to review [[11.23]].
 
----
-
 ## Rationale
-
----
 
 ## Links
 
@@ -441,11 +321,8 @@ When it’s time to update your business plan, don’t forget to review [[11.23]
 
 [Business plan resources and templates](https://www.sba.gov/business-guide/plan-your-business/write-your-business-plan) from the US Government.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Ops manual: nice e.g. of a link, exactly _how_ should one save the previous version?
 Some sort of link-scheme 
@@ -453,23 +330,15 @@ How do we easily refer people in these contexts to another place in the pack?
 
 # 11.22 Business insurance, incidents, & claims
 
----
-
 ## Description
 
 Policies, coverage details, incident reports, and claim forms for your business entity and people.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Public liability insurance; professional indemnity insurance; workers compensation insurance.
-
----
 
 ## More info
 
@@ -485,8 +354,6 @@ This is also where to store incident reports that might become part of a claim. 
 
 We’re not insurance brokers, so we can’t advise you on what to get. But one of the things we’ve learned in our research for this system is that there is _a lot_ of insurance options for businesses. It’s a bit overwhelming. We now understand the value of a trustworthy insurance professional to provide sensible, tailored advice.
 
----
-
 ## Exceptions
 
 Staff health insurance as part of a salary package goes in [[13.34]].
@@ -501,17 +368,11 @@ Cyber insurance goes in [[14.44]].
 
 Product insurance goes in [[20-29]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
 We recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal. Hence, business insurance goes up here and there’s room allocated for other insurances in the categories below.
-
----
 
 ## Links
 
@@ -519,30 +380,20 @@ An overview of all the [types of insurances](https://business.gov.au/risk-manage
 
 This is not an endorsement, just an example of a company that offers policies for different occupations – [NRMA business insurance](https://www.nrma.com.au/business-insurance#).
 
----
-
 ## Emoji
 
 
 # 11.23 Risk & emergency management plans
 
----
-
 ## Description
 
 Awareness of the risks that can affect your business and instructions for what to do if they occur.
-
----
 
 ## Ops manual
 
 [Action: DIY ops manual - you need to write your own in your JDex or whatever]
 
----
-
 ## Examples
-
----
 
 ## More info
 
@@ -562,17 +413,11 @@ In our [Life Admin System](https://jdcm.al/14.11/), we discuss the concept of an
 
 This will obviously contain sensitive information, so don’t leave it lying around! There’s a good chance that your password manager can help you manage this kind of thing securely.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 Ensure you can access a _printed_ copy of your data recovery instructions from [[14.23]] in the event that something bad happens to your computers (e.g. theft, accident, natural disaster, ransomware attack).
-
----
 
 ## Rationale
 ## Links
@@ -580,34 +425,22 @@ Ensure you can access a _printed_ copy of your data recovery instructions from [
 
 # 11.24 Collected wisdom & analysis
 
----
-
 ## Description
 
 A place to record and analyse what’s working, what needs improvement, and ideas for making it happen.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 What went well today/this week/this month/this year; ‘lessons learned’ to avoid repeat mistakes; miscellaneous anecdotes from staff meetings; and any other notes, dreams, or ideas related to the business.
 
----
-
 ## More info
 ## Exceptions
-
----
 
 ## Also see
 
 When it’s time to update [[11.21]], this ID should be a gold mine.
-
----
 
 ## Rationale
 ## Links
@@ -615,13 +448,9 @@ When it’s time to update [[11.21]], this ID should be a gold mine.
 
 # 11.30 ■ Behaviours, ethics, & culture 👍
 
----
-
 ## Description
 
 The things we do to be a good business to work in or deal with.
-
----
 
 ## Ops manual
 ## Examples
@@ -631,31 +460,21 @@ The things we do to be a good business to work in or deal with.
 ## Rationale
 ## Links
 
----
-
 ## Emoji
 
 Thumbs up
 
 # 11.31 Internal policies
 
----
-
 ## Description
 
 How the business will behave towards staff and expectations for staff behaviour.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Company values; enterprise or other registered agreements between employers and employees; formal policies that staff will be assessed against during reviews; how you communicate news and updates; dress code and grooming expectations; buddy systems for new staff; culture-related policies on things like working from home, pets or kids in the workplace, or social activities.
-
----
 
 ## More info
 
@@ -665,49 +484,31 @@ For instance, official policies for how staff can expect to be treated and shoul
 
 If you’re a sole trader, maybe you decide on some internal policies with yourself (why not!). Such as what your working hours are, how often you will check email or other channels, taking regular days off to avoid burn out, or making time for business admin each week. Anything that maintains morale and keeps you motivated.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 Be sure to make any formal policies clear to staff before doing [[11.43]].
 
----
-
 ## Rationale
-
----
 
 ## Links
 
 [Enterprise agreements and other registered agreements](https://www.fairwork.gov.au/employment-conditions/agreements) from the Australian Government Fair Work Ombudsman.
 
----
-
 ## Emoji
 
 # 11.32 External policies
-
----
 
 ## Description
 
 How the business will behave towards customers, suppliers, and the wider world.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Customer service policy; refund policy; retail terms and conditions; privacy policy; disclaimers; timely payment process for suppliers; environmental and sustainability policy; equal opportunity employer statement; anti-slavery or land acknowledgement statements.
-
----
 
 ## More info
 
@@ -717,48 +518,32 @@ We’re not talking about operations as such, or nice things your business might
 
 For instance, on your website you might have administrative policies or social, ethical, or environmental statements. Or maybe you have a policy to use local suppliers and pay their invoices early because you want to support others like you. 
 
----
-
 ## Exceptions
 
 This is not related to front office operations, that’s at [[12.30]].
 
 This is not related to being part of a community, that’s at [[12.50]].
 
----
-
 ## Also see
 ## Rationale
-
----
 
 ## Links
 
 An article about [environmental, social and governance (ESG) practices in business](https://business.gov.au/environmental-management/use-environmental-social-and-governance-esg-practices-in-your-business) from the Australian Government.
 
----
-
 ## Emoji
 
 # 11.33 Dispute resolution
-
----
 
 ## Description
 
 Solving problems and complaints professionally and calmly.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Procedures for managing customer complaints or negative feedback; guidelines for replying to social media comments and online reviews; strategies for disputes with suppliers.
-
----
 
 ## More info
 
@@ -766,31 +551,21 @@ How do you solve problems and deal with sticky situations? This is a place for a
 
 It’s hard to predict what can go wrong. But having some guidelines in place for how you approach disputes can help you stay calm and in control, represent the business well, and hopefully get a good outcome.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
-
----
 
 ## Links
 
 An article about [managing online reviews](https://business.gov.au/online-and-digital/online-reviews) from the Australian Government.
 
----
-
 ## Emoji
 
 # 11.40 ■ Our people 🦸
 
----
-
 ## Description
 
 Getting, keeping, & farewelling staff.
-
----
 
 ## Ops manual
 ## Examples
@@ -799,8 +574,6 @@ Getting, keeping, & farewelling staff.
 ## Also see
 ## Rationale
 ## Links
-
----
 
 ## Emoji
 
@@ -808,28 +581,18 @@ Superhero
 
 # 11.41 Hiring
 
----
-
 ## Description
 
 Anything to do with finding, choosing, & onboarding new staff.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Recruitment agencies or online employment platforms you use’ role descriptions for job ads; CVs/resumes received; the interview process and questions; candidate shortlists; the onboarding process; information for new employees; a checklist that covers the entire hiring process.
 
----
-
 ## More info
 ## Exceptions
-
----
 
 ## Also see
 
@@ -837,31 +600,22 @@ Recruitment agencies or online employment platforms you use’ role descriptions
 
 [[14.10]] and [[14.41]] for assigning and setting up new devices and accounts.
 
----
-
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 What about volunteers? See Johnny’s ‘people’  thing in his  OG mind map 
 
 
 # 11.42 Staff record keeping
 
----
-
 ## Description
 
 The official staff records that a business must keep for a certain period of time, neatly templated.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -884,23 +638,16 @@ We have provided an example template in the folder system. Adjust this to your n
 
 Other records you might consider keeping include: CVs/resumes, job applications and pre-employment checks, employment contracts, performance reviews, trade or registration certificates, details of uniforms and equipment allocated, roles held and promotions.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
-
----
 
 ## Links
 
 An interview with the ATO Assistant Commissioner about tax obligations when hiring your first worker from the [Australian Business Podcast](https://www.youtube.com/watch?v=6MwO1g0F9IY).
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Template
 Ops manual: choose a naming pattern
@@ -908,23 +655,15 @@ Ops manual: choose a naming pattern
 
 # 11.43 Formal reviews
 
----
-
 ## Description
 
 How’s everybody doing?
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Performance review templates; completed forms from staff; the follow-up process; resources and strategies for managing underperformance or misconduct; how you deliver warnings and disciplinary action. 
-
----
 
 ## More info
 
@@ -934,49 +673,31 @@ Conducting formal reviews against pre-defined criteria is now commonplace. Most 
 
 Plus if a relationship sours, having evidence that the employee had opportunities to voice concerns and they were taken seriously can be an important protection for business owners.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 Ensure staff are clear on anything relevant at [[11.31]].
 
----
-
 ## Rationale
-
----
 
 ## Links
 
 [Managing performance and warnings](https://www.fairwork.gov.au/employment-conditions/performance-in-the-workplace) from the Australian Government Fair Work Ombudsman.
 
----
-
 ## Emoji
 
 # 11.44 Farewells
-
----
 
 ## Description
 
 Anything to do with ending employment and offboarding staff.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 The offboarding process and paperwork; checklists for handing things back; exit interview templates; handover documents and meetings; notice periods for resignations, redundancies, or dismissals.
-
----
 
 ## More info
 
@@ -986,53 +707,35 @@ Clearly communicate your expectations of what they need to achieve before they g
 
 While this is a normal part of running a business, it can sometimes be sad or stressful. Review your local employment laws if you have to deal with a dismissal or redundancy. And remember to seek advice or support if you need help.
 
----
-
 ## Exceptions
 
 Calculate final payouts over in [[13.34]] and record the details in [[11.42]] to close the loop.
 
 If you organise a farewell social gathering or gift, that goes in [[15.XX]].
 
----
-
 ## Also see
 
 [[14.10]] and [[14.41]] for collecting devices and closing accounts.
 
----
-
 ## Rationale
-
----
 
 ## Links
 
 [Ending employment](https://www.fairwork.gov.au/ending-employment) from the Australian Government Fair Work Ombudsman
 
----
-
 ## Emoji
 
 # 11.45 Animals as staff
-
----
 
 ## Description
 
 For all (working) creatures, great and small.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Dogs or horses that work in tourism or muster livestock; birds who help with biological pest control; dogs trained for a service such as companionship or search and rescue; truffle pigs or dogs.
-
----
 
 ## More info
 
@@ -1049,17 +752,11 @@ Some basic things to consider include:
 
 If this is integral to your business and you need more room, feel free to use the spare IDs in this section. We’d love it if you chat to us first on the Discord so we can help you get the best result (which will help other people who need this).
 
----
-
 ## Exceptions
 
 If you’re a farmer and sell livestock or other animal products such as wool, milk, eggs, or genetic material for breeding, then how you manage all of that should be in [[20-29]] or another area that you create yourself (or we can help!).
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -1071,20 +768,14 @@ But if you run, say, a Hansom cab or sled dog tourism business, you might classi
 
 If you need this ID, you know who you are. If you don’t, it’s highly unlikely you ever will, so just ignore it.
 
----
-
 ## Links
 ## Emoji
 
 # 11.50 ■ Training & professional development 🎓
 
----
-
 ## Description
 
 Anything to do with maintaining or updating skills and credentials, or other self-improvement.
-
----
 
 ## Ops manual
 ## Examples
@@ -1094,8 +785,6 @@ Anything to do with maintaining or updating skills and credentials, or other sel
 ## Rationale
 ## Links
 
----
-
 ## Emoji
 
 Graduation cap
@@ -1103,23 +792,15 @@ Graduation cap
 
 # 11.51 Mandatory training
 
----
-
 ## Description
 
 The basic, compulsory training that must be done, including general training common to many workplaces or that is specific to yours. 
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Fire drills and general safety training; job-specific software or equipment training; keeping a first aid qualification up-to-date; getting a safe food handling certificate; how to run the reception desk of a dental surgery; on-the-job training during an apprenticeship; how to open and close a cafe or set up a food truck; any other mandatory role-based training, certifications, or competencies.
-
----
 
 ## More info
 
@@ -1129,11 +810,7 @@ And what’s mandatory for some staff may not be for others. Everyone might need
 
 Some mandatory training will need to be maintained or renewed. For example, demonstrating first aid skills periodically to keep a qualification.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
@@ -1147,46 +824,31 @@ If you have preferred in-person or online training suppliers, store their detail
 
 If the training is based on any ops manuals in [[12.20]] or [[12.30]], ensure any changes are reflected here.
 
----
-
 ## Rationale
 
 We’ve called this ‘mandatory’ as it’s the kind of training you tend to be given as a new employee. Or it might be required due to workplace compliance laws. Or it’s related to how you or staff are expected to do their job. Either way, it must be done.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Pattern: date based?
 
 
 # 11.52 Optional training
 
----
-
 ## Description
 
 Extra training to gain or maintain a credential that is nice to have, but not mandatory.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Doing an Excel or Xero course to improve your skills; attending an advanced hairdressing or bar tending course to learn new techniques; completing an MBA or specialist dental qualification; gaining the project management professional (PMP) certification.
 
----
-
 ## More info
 ## Exceptions
-
----
 
 ## Also see
 
@@ -1196,38 +858,26 @@ If you have preferred in-person or online training suppliers, store their detail
 
 If the training is based on any ops manuals in [[12.20]] or [[12.30]], ensure any changes are reflected here.
 
----
-
 ## Rationale
 
 We’ve called this ‘optional’ as it’s the kind of training or credential you might add on to basic requirements. It’s nice to have, it might make you better at your job, but it’s not required by the business or the law.
 
 If you have multiple staff, everyone might do different things depending on their role and skill set. And it may be a formal qualification that is recognised anywhere, as opposed to training that is specific to your business.
 
----
-
 ## Links
 ## Emoji
 
 # 11.53 Other learning & self-improvement
 
----
-
 ## Description
 
 A place to record any other general learning that doesn’t fit elsewhere.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Materials you collect at industry conferences; notes in your JDex from YouTube software tutorials; a list of business-related books you plan to read; presentations from webinars or Meetups you attended; paid media subscriptions like specialty podcasts, blogs, newsletters, journals, periodicals, and magazines.
-
----
 
 ## More info
 
@@ -1241,13 +891,9 @@ As an aside, we know some businesses that include budgets for this kind of thing
 
 **Nerd tip:** this may sound obvious but we only just did it ourselves. Go to your government’s small business and/or tax website and see if they have newsletters. Sign up! We’ve subscribed to about ten different newsletters and so far they’re _full_ of useful stuff. 
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
-
----
 
 ## Links
 
@@ -1257,13 +903,9 @@ As an aside, we know some businesses that include budgets for this kind of thing
 
 # 11.60 ■ Other people & organisations 🤝
 
----
-
 ## Description
 
 External people and organisations that you interact with in a business capacity who are not suppliers or customers. 
-
----
 
 ## Ops manual
 ## Examples
@@ -1272,8 +914,6 @@ External people and organisations that you interact with in a business capacity 
 ## Also see
 ## Rationale
 ## Links
-
----
 
 ## Emoji
 
@@ -1281,29 +921,19 @@ Handshake
 
 # 11.61 Professional bodies
 
----
-
 ## Description
 
 Any kind of industry association, professional body, union, society, or similar group that you deal with.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Certified Practising Accountants Australia; Australian Computer Society; Australasian Medical Writers’ Association; Media Entertainment & Arts Alliance; Australian Physiotherapy Association; Personal Trainers Association of Australia.
 
----
-
 ## More info
 
 A place for any documents or notes related to your interactions with professional organisations. This might include membership records, literature they send you, meeting or event reminders, contact details, and website or social links.
-
----
 
 ## Exceptions
 ## Also see
@@ -1311,42 +941,29 @@ A place for any documents or notes related to your interactions with professiona
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Choose a pattern to store this information
 
 
 # 11.62 Seeking advice & support
 
----
-
 ## Description
 
 Where to go for help with running the business or your wellbeing as a business owner.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Government small business or finance websites; helplines; mentors; peers/other business owners; professional bodies; unions; ombudsman and watchdogs; mental health organisations.
 
----
-
 ## More info
 
 This might include the contact details of anyone you know personally, or a list of websites that you have used previously or have been recommended. Or perhaps a library of useful downloads that you’ve saved on different topics.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
-
----
 
 ## Links
 
@@ -1366,29 +983,20 @@ This might include the contact details of anyone you know personally, or a list 
 
 [Business Mental Fitness Collection](https://www.smilingmind.com.au/business-mental-fitness) from Smiling Mind.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Choose a pattern to store this information
 
 
 # 11.63 Networking & new business
 
----
-
 ## Description
 
 Anyone you meet that you might develop a business relationship with one day.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -1398,32 +1006,23 @@ For instance, their name, contact details, what they do, what you discussed, and
 
 Consider linking these people to an ID. For example, if they’re a potential front office supplier, add a link in your JDex to [[12.0X]].
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Choose a pattern to store this information
 
 # 11.90 ■ The business & its people library 📚
 
----
-
 ## Description
 
 A place to put information that’s related to this category, kinda interesting, mostly unimportant, and definitely doesn’t fit elsewhere.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -1445,17 +1044,11 @@ Remember to leave a note in your JDex when you save things in this library so yo
 
 (This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)
 
----
-
 ## Exceptions
 
 Things that contain information that is specific to your business, and that don’t fit elsewhere, should go in [[13.14]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -1467,47 +1060,32 @@ It doesn’t fit anywhere else. It’s just a thing you wanted to save. And you 
 
 Importantly, it’s not that important. It has nothing to do with business operations. If it wasn’t backed up it wouldn’t matter. If you lose it, you could probably download it again.
 
----
-
 ## Links
-
----
 
 ## Emoji
 
 Books
 
--------------------------------------------------------------------------------------
 NOTES:
 The library copy is repeated for each iteration.
 
 12 🗺️ Where I trade & how I get around
 
----
-
 ## Description
 
 This category is all about your business premises and its operations, and how you get from A to B.
-
----
 
 ## Ops manual
 ## Examples
 ## More info
 
----
-
 ## Exceptions
 
 This category is for managing _your_ premises, operations, and vehicles – if your product or service is related (e.g. you work in real estate, office management, or car sales) that goes in [[20-29]].
 
----
-
 ## Also see
 ## Rationale
 ## Links
-
----
 
 ## Emoji
 
@@ -1515,8 +1093,6 @@ World map
 
 # 12.00 ■ Where I trade & how I get around category management ⚙️
 
----
-
 ## Description
 ## Ops manual
 ## Examples
@@ -1525,8 +1101,6 @@ World map
 ## Also see
 ## Rationale
 ## Links
-
----
 
 ## Emoji
 
@@ -1535,18 +1109,12 @@ Gear
 
 # 12.0X Inventory
 
----
-
 ## Description
 
 A list of everything you have in your back and/or front office and vehicles.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -1554,15 +1122,12 @@ This is a document, spreadsheet, database, JDex note, or whatever you prefer. It
 
 This might sound boring but you will love your past self next time you ask for a removalist quote, apply for insurance, or make a claim.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Note on wall: “This is a collection not a catch all”
 Johnny to decide how he feels about these 2 IDs and where they should go
@@ -1570,24 +1135,16 @@ Johnny to decide how he feels about these 2 IDs and where they should go
 
 # 12.0X Supplier library [title tbc]
 
----
-
 ## Description
 
 A library of real-world or online suppliers of goods and services that you use for your back and/or front office and vehicles.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
 This is a place to store contact details, agreements, contracts, and other over-arching records, all neatly templated. 
-
----
 
 ## Exceptions
 
@@ -1595,11 +1152,7 @@ This is not for specialised suppliers that directly relate to the product or ser
 
 For example, if you’re a baker, the flour and seeds to make bread sit with the product. But the napkins provided for customers are part of front office operations.
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -1622,12 +1175,9 @@ Office and operations:
 Vehicles:
 - mechanics; tyres, accessories, and spare parts retailers; panel beating and body repairs; painting and sign writing; custom alterations.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Note on wall: “This is a collection not a catch all”
 Johnny to decide how he feels about these 2 IDs and where they should go
@@ -1646,13 +1196,9 @@ Do what you like, but we can provide guidance with a template?
 
 # 12.10 ■ Fixed locations 🏢
 
----
-
 ## Description
 
 Finding a place, renovating & maintaining it, & moving to a new place.
-
----
 
 ## Ops manual
 ## Examples
@@ -1662,31 +1208,21 @@ Finding a place, renovating & maintaining it, & moving to a new place.
 ## Rationale
 ## Links
 
----
-
 ## Emoji
 
 Office building
 
 # 12.11 Official documents
 
----
-
 ## Description
 
 The important documents associated with owning, leasing, or selling a business premises with an address.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Leases and renewals; security deposits; inspection reports; purchasing contracts; property deeds; co-working space agreements.
-
----
 
 ## More info
 
@@ -1696,17 +1232,11 @@ You might have more than one fixed location – that’s fine, just use subfolde
 
 This can also include the future, so store your lease applications or property searches here too.
 
----
-
 ## Exceptions
 
 If your business ‘premises’ is mobile, like a food truck, van, or trailer, manage it down in [[12.40]]. 
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -1718,29 +1248,20 @@ So we suggest keeping the fixed locations here and anything mobile below in [[12
 
 Motor vehicles or anything else that can move or be towed have their own types of documentation, so it felt more logical to keep them separate.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Choose a template and/or naming pattern
 
 # 12.12 Office insurance, incidents, & claims
 
----
-
 ## Description
 
 Policies, coverage details, incident reports, and claim forms for your business premises and contents.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -1754,8 +1275,6 @@ For instance, if you’re a plumber your equipment might be insured in your home
 
 This is also a place to save incident reports that might become part of a claim. For example, something is stolen and you file a police report. 
 
----
-
 ## Exceptions
 
 If your business ‘premises’ is mobile, like a food truck, van, or trailer, put the insurance details in [[12.42]].
@@ -1764,26 +1283,19 @@ If you’re a market stall holder or similar, store your equipment in [[12.30]] 
 
 If you’re a digital nomad with no fixed location, you might cover your valuables under a personal travel insurance policy.
 
----
-
 ## Also see
 
 Having an up-to-date inventory at [[12.0X]] will be helpful if you need to make a claim. 
 
 If you have separate insurance for high-value computers, devices, or accessories, you might decide to store that down in [[14.44]].
 
----
-
 ## Rationale
 
 As mentioned previously, we recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Comment from JN:
 “and what we do is create a 10.XX linking note, 
@@ -1791,23 +1303,15 @@ this includes the contents of your office as per 12.XX”.
 
 # 12.13 Rates, taxes, & fees
 
----
-
 ## Description
 
 The unavoidable bills and levies associated with owning, leasing, or selling a business premises.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Local council rates; government land tax; capital gains tax; stamp duty; body corporate/owner’s corporation fees for multi-occupancy properties; legal fees; local environmental taxes.
-
----
 
 ## More info
 
@@ -1817,35 +1321,23 @@ Whether leasing or buying a property, ensure you’re clear on what mandatory on
 
 And watch out for unscrupulous landlords asking for illegal fees. We recently learned about the practice of asking for ‘key money’ when signing retail leases. This is prohibited in Australia and might also be wherever you are.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
-
----
 
 ## Links
 
 [Information about key money](https://www.vsbc.vic.gov.au/your-rights-and-responsibilities/paying-key-money/) from the Victorian Small Business Commission
 
----
-
 ## Emoji
 
 # 12.14 Fit-outs, renovations, & improvements
-
----
 
 ## Description
 
 A place for larger projects that aren’t general upkeep.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -1854,8 +1346,6 @@ A place for larger projects that aren’t general upkeep.
 - Installing custom-made, fixed benches and planter boxes at the front of a bar.
 - Improvements to a workshop in a home garage that include building a new workbench and fixed shelving.
 - Mood boards, measurements, and a budget spreadsheet for repainting a cafe.
-
----
 
 ## More info
 
@@ -1867,8 +1357,6 @@ This ID might be empty for many businesses. Like us. Our office is a room in a r
 
 However, it will be very busy for others. The hair salon above is based on a friend who spent a hectic 6 months fitting out a new space.
 
----
-
 ## Exceptions
 
 Daily fix-its and ongoing maintenance goes in [[12.15]].
@@ -1877,11 +1365,7 @@ Back or front office equipment ordered as part of a project goes in [[12.24]] or
 
 Fit-outs and renovations for mobile premises go in [[12.44]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -1891,30 +1375,20 @@ Whereas back or front office equipment ordered as part of the project might have
 
 For instance, the hair salon’s espresso machine in the kitchen area and massage chairs by the sinks.
 
----
-
 ## Links
 ## Emoji
 
 # 12.15 Repairs & maintenance
 
----
-
 ## Description
 
 A place for fixing things and taking care of your business premises.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Quotes from tradespeople; research on how to repair things; maintenance and repair requests to facilities management in multi-occupancy properties; recurring tasks to remember like oiling the squeaky front door, or monitoring your farm’s fence line for damage.
-
----
 
 ## More info
 
@@ -1924,8 +1398,6 @@ This is for daily repairs and maintenance related to the structure, not the equi
 
 And not general cleaning and keeping things ‘nice’. The latter are part of back and front office operations.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
@@ -1934,39 +1406,25 @@ And not general cleaning and keeping things ‘nice’. The latter are part of b
 
 # 12.16 Moving
 
----
-
 ## Description
 
 Anything related to the act of moving from one location to another.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Removalist quotes and contracts; checklists; a list of accounts to update with your new postal address.
 
----
-
 ## More info
-
----
 
 ## Exceptions
 
 Property searches for new locations go in [[12.11].
 
----
-
 ## Also see
 
 [[12.0X]] will come in very handy for removalist quotes.
-
----
 
 ## Rationale
 ## Links
@@ -1974,17 +1432,11 @@ Property searches for new locations go in [[12.11].
 
 # 12.20 ■ Back office equipment & operations ⛔️
 
----
-
 ## Description
 
 Anything that supports the business behind the scenes (staff only).
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -1998,8 +1450,6 @@ If you’re a mobile personal trainer, your back office might be:
 
 If you’re a freelance writer, your back office might be:
 - your home office where you manage the business and do your work. 
-
----
 
 ## More info
 
@@ -2015,12 +1465,8 @@ As always, there will be grey areas. When Lucy was a freelancer writer, as per t
 
 But if she had another (fancier) room to hold meetings in, that would have been her front office. Some businesses might be 100% front office. It all depends. ¯\_(ツ)_/¯
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
@@ -2038,13 +1484,10 @@ The ‘product’ is run by Carmy. He’s in charge of the kitchen where the foo
 
 Some businesses are simpler than this, some might be more complicated. But hopefully this conveys the basic idea of ‘staff only’ versus ‘customer facing’ areas.
 
----
-
 ## Links
 ## Emoji
 No entry
 
--------------------------------------------------------------------------------------
 NOTES:
 Where do we store receipts and warranties, with the thing?
 Starter/endorsed list of things that go here
@@ -2059,23 +1502,15 @@ Apply anything relevant to front office too
 
 # 12.21 Keep the basics running
 
----
-
 ## Description
 
 Basic utility connections and services.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Utility connections and bills (electricity, gas, water, telephone, internet); troubleshooting instructions; staff mobile phone contracts; parking bills; HVAC services.
-
----
 
 ## More info
 
@@ -2093,38 +1528,27 @@ This would also be a good place to put troubleshooting tips related to a service
 
 For instance, under ‘water’ save instructions for how to turn the water main off. Under ‘electricity’ save a diagram of the fuse box layout and what to do in a blackout or power surge. Under ‘internet’ save instructions for how to reset the wifi router.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template
 Choose a pattern for the per-site subfolders and for saving/re-naming utility bills And all supplier bills, consistently, and using the date to sort
 
 # 12.22 Keep us secure
 
----
-
 ## Description
 
 Security, safety, and emergencies.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Bills and paperwork for any paid security services; building access passes and codes; emergency and evacuation plans; bills for fire safety equipment; contact details for security services; instructions for how to turn the alarm on/off and entering/leaving the building; location of spare keys; surveillance camera installation; smoke or gas detector installation; who to call in different types of emergency (fire, flood, storm damage, robbery); Material Safety Data Sheets (MSDS).
-
----
 
 ## More info
 
@@ -2139,13 +1563,9 @@ As well as bills and paperwork for equipment and services, this would be a good 
 - backing up surveillance camera footage, 
 - what important documents go in the safe (and who has the code), etc.
 
----
-
 ## Exceptions
 
 This is not your business risk and emergency management plans, they’re in [[11.23]].
-
----
 
 ## Also see
 
@@ -2153,13 +1573,10 @@ If anything here helps you meet compliance obligations (e.g. installing fire doo
 
 Ensure anything relevant in [[11.51]] is aligned with information here.
 
----
-
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template;
 Ops manual: remember to periodically check that fire equipment isn't out of date 
@@ -2170,23 +1587,15 @@ Conduct periodic reviews
 
 # 12.23 Keep it nice for us
 
----
-
 ## Description
 
 Cleaning, gardening, decor, and waste removal.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Cleaners; paid or municipal garbage collection; paper shredding and recycling; indoor plant watering; outdoor gardening; window washing; non-structural decorations like framed prints or plastic plants; anything to do with buying general cleaning and hygiene supplies (like kitchen roll, dishwashing liquid, tea towels, sponges, sprays, hand sanitiser, soap dispensers, toilet paper, etc.).
-
----
 
 ## More info
 
@@ -2196,20 +1605,15 @@ You might have contracts with suppliers for ongoing services, or you might do ev
 
 Or maybe you’re the person who secretly makes those signs with cartoon dogs that say “please unload the dishwasher”. Either way, track it all here.
 
----
-
 ## Exceptions
 
 This is not for repairs and maintenance, that’s in [[12.15]].
-
----
 
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template 
 Ops manual: the cleaners haven't turned up for 2 weeks, who do I call?
@@ -2217,23 +1621,15 @@ Ops manual: the cleaners haven't turned up for 2 weeks, who do I call?
 
 # 12.24 Keep the back office well equipped
 
----
-
 ## Description
 
 Office equipment and stationery.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Buying standard office furniture like desks, chairs, cupboards and drawers; ordering anything you’d consider stationery from pens and sticky notes to paper and toner; ongoing lease and maintenance contracts for specialised equipment (maybe you lease a photocopier).
-
----
 
 ## More info
 
@@ -2241,19 +1637,13 @@ This is for any kind of equipment and supplies that you use to run the back offi
 
 Most likely, this will be classic ‘office stuff’. However, if ‘back office’ means something very specific to your business, then include whatever is relevant for you.
 
----
-
 ## Exceptions
 
 Furniture that is a permanent fixture built during a fit-out goes in [[12.14]].
 
 If you lease any IT equipment like computers, printers, or photocopiers, put it here. If you buy it, put it in [[14.10]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -2261,39 +1651,26 @@ We made a decision to separate lease-as-service IT equipment versus one-off purc
 
 But if you buy computers, printers, or other IT gadgets outright, store the records and product manuals with your other technology in [[14.10]].
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template
 
 
 # 12.25 Keep us fed and watered
 
----
-
 ## Description
 
 Staff food, beverage, and kitchen equipment.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Buying anything to do with eating and drinking (like teabags, coffee, sugar, milk, cutlery, cups, glasses, crockery, etc.); ongoing delivery services like weekly fruit boxes; kitchen appliances and product manuals; water cooler services; staff meals.
 
----
-
 ## More info
-
----
 
 ## Exceptions
 
@@ -2301,14 +1678,11 @@ Kitchen supplies related to cleaning, such as kitchen towel and dishwashing liqu
 
 If you provide complimentary food or beverages to customers, that goes in front office operations at [[12.15]]. 
 
----
-
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template
 Ops manual: Janine drives to Harris Farm with the credit card and buys $100 of fruit
@@ -2316,23 +1690,15 @@ Ops manual: Janine drives to Harris Farm with the credit card and buys $100 of f
 
 # 12.26 Keep us posted
 
----
-
 ## Description
 
 Shipping, postage, and couriers.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Post office receipts; tracking numbers; courier accounts; document exchange (DX) and other business postal services; ordering postage supplies (like stamps, envelopes, parcel satchels, packing materials, etc.); specialised shipping or air services; dealing with customs and import/export regulations.
-
----
 
 ## More info
 
@@ -2340,20 +1706,15 @@ If you send or receive it and it’s related to back (or front) office operation
 
 Realistically this includes front office operations as well. It’s unlikely you’d have different postal requirements for both parts of the business, but who knows. If you do, then there’s plenty of room in [[12.30]] for another ID.
 
----
-
 ## Exceptions
 
 This is not for sending your product to customers, that goes in [[20-29]].
-
----
 
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template
 Ops manual: how do I send something nationally or internationally? 
@@ -2366,17 +1727,11 @@ Before you didn't have a place for this; Video demo?
 
 # 12.30 ■ Front office equipment & operations 🛎️
 
----
-
 ## Description
 
 Anything that supports the delivery of your product or service (open for business).
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -2391,8 +1746,6 @@ If you’re a freelance writer, your front office might be:
 - non-existent because you only meet clients at their office, or
 - a co-working space that you meet clients in, or 
 - the same as your back office, clients come to you for meetings (and the fancy coffee and snacks you offer are part of front office operations).
-
----
 
 ## More info
 
@@ -2409,8 +1762,6 @@ It might be an actual office, a retail store, the front of a cafe or bar, or a p
 
 And while many businesses might have a similar back office set-up, your front office will be tailored to you.
 
----
-
 ## Exceptions
 
 If you do everything in your back office and never interact with customers, this section will be empty. That’s okay. 
@@ -2421,11 +1772,7 @@ For instance, Johnny.Decimal HQ operates solely in a rented back office, with tw
 
 When Lucy was a freelance writer, everything happened in her back office – a desk with a laptop. Pretty simple.
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -2443,17 +1790,12 @@ The ‘product’ is run by Carmy. He’s in charge of the kitchen where the foo
 
 Some business are simpler than this, some might be more complicated. But hopefully this conveys the basic idea of ‘staff only’ versus ‘customer facing’ areas.
 
----
-
 ## Links
-
----
 
 ## Emoji
 
 Concierge bell
 
--------------------------------------------------------------------------------------
 NOTES:
 The personal trainer: notes about parking at the park
 How to get through the bollards if the site hasn't been opened at 6am
@@ -2461,23 +1803,15 @@ How to get through the bollards if the site hasn't been opened at 6am
 
 # 12.31 Keep the basics running
 
----
-
 ## Description
 
 Additional utility connections and services.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Utility connections and bills (electricity, gas, water, telephone, internet); any other fees related to heating or cooling (like a generator or ice); industry-specific software subscriptions; troubleshooting instructions.
-
----
 
 ## More info
 
@@ -2497,45 +1831,30 @@ Some scenarios might include:
 
 This would also be a good place to put troubleshooting tips related to a service. For instance, under ‘internet’ save instructions for how to reset the wifi router. Under ‘gas’ save the preferred locations to swap the gas bottles.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 If you do have front office software, be sure to also note it in [[14.31]] or [[14.32]] to help your IT support person.
 
----
-
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template, choose a pattern for files and subfolders
 
 # 12.32 Keep our customers secure
 
----
-
 ## Description
 
 Security, safety, and emergencies.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Bills and paperwork for any paid security services; building access passes and codes; emergency and evacuation plans; bills for fire safety equipment; contact details for security services; instructions for how to turn the alarm on/off and entering/leaving the building; location of spare keys; surveillance camera installation; smoke or gas detector installation; who to call in different types of emergency (fire, flood, storm damage, robbery); Material Safety Data Sheets (MSDS).
-
----
 
 ## More info
 
@@ -2549,26 +1868,19 @@ For instance, your restaurant’s front office with flames and sharp knives will
 
 And there might be a completely different way to access your front office (a computerised alarm system and automatic doors) versus the back office (a padlocked roller door in a loading dock). 
 
----
-
 ## Exceptions
 
 This is not your business risk and emergency management plans, they’re in [[11.23]].
-
----
 
 ## Also see
 
 If anything here helps you meet compliance obligations (e.g. installing exit signs and a sprinkler system), store the paperwork here and note it in [[11.13]].
 Ensure anything relevant in [[11.51]] is aligned with information here.
 
----
-
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template
 Ops manual: Remember to periodically check that fire equipment isn't out of date
@@ -2579,23 +1891,15 @@ Conduct periodic reviews
 
 # 12.33 Keep it nice for our customers
 
----
-
 ## Description
 
 Cleaning, gardening, decor, and waste.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Cleaners; paid or municipal garbage collection; paper shredding and recycling; indoor plant watering; outdoor gardening; window washing; music instructions; anything to do with buying general cleaning and hygiene supplies that’s separate to the back office (like fancy hand wash and moisturiser for customer bathrooms); non-structural decorations like framed prints or plastic plants.
-
----
 
 ## More info
 
@@ -2603,45 +1907,32 @@ This is about keeping up appearances and creating a nice environment for your cu
 
 You might have contracts with suppliers for ongoing services, or you might do everything yourself. Either way, track it all here.
 
----
-
 ## Exceptions
 
 This is not for repairs and maintenance, that’s in [[12.15]].
 
 This is not for digital music subscriptions, we’ve classified those as ‘technology’ – they live in [[14.32]] and should also be noted in [[13.35]].
 
----
-
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template
 
 
 # 12.34 Keep the front office well equipped
 
----
-
 ## Description
 
 Supplies and equipment that help us deliver our product or service.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Free-standing furniture that isn’t part of a fit-out; branded items like napkins and paper shopping bags; ongoing lease and maintenance contracts for specialised equipment; electrical appliances; payment equipment like tills and handheld ‘tap and go’ units; general office supplies and stationery.
-
----
 
 ## More info
 
@@ -2657,8 +1948,6 @@ A plumber’s tools and logo-bearing work shirt are front office – they suppor
 
 However, if the plumber replaces a broken part in a toilet with a spare from their van, then that would be classified under ‘product’ – they are on-selling the spare part, so that gets tracked in [[20-29]].
 
----
-
 ## Exceptions
 
 Furniture that is a permanent fixture built during a fit-out goes in [[12.14]].
@@ -2667,11 +1956,7 @@ If you lease any IT equipment like computers, printers, or photocopiers, put it 
 
 Any item that you sell goes in [[20-29]]. So if you’re a retail shop, that’s your product inventory and that does not go here (your branded shopping bags do though).
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -2679,12 +1964,9 @@ We made a decision to separate lease-as-service IT equipment versus one-off purc
 
 But if you buy computers, printers, or other IT gadgets outright, store the records and product manuals with your other technology in [[14.10]].
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template
 Observation: Andrew’s plumbing staff used an old tyre to store the ‘snake’ pieces They coiled it inside, FOH equipment
@@ -2692,23 +1974,15 @@ Observation: Andrew’s plumbing staff used an old tyre to store the ‘snake’
 
 # 12.35 Keep our customers fed and watered
 
----
-
 ## Description
 
 Food, beverage, and kitchen equipment that help us deliver our product or service.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Anything complimentary you provide for customers/clients like tea, coffee, biscuits, lollies, or filtered water; any equipment that you use to prepare complimentary food or beverages for customers.
-
----
 
 ## More info
 
@@ -2720,17 +1994,11 @@ The theme here is that food and beverage is not your core business, it’s a com
 
 So if you sell food and beverages in a cafe, bar, restaurant, retail shop, market stall, or anywhere else, that goes in [[20-29]].
 
----
-
 ## Exceptions
 
 If food and/or beverage is the product you sell, that’s managed in [[20-29]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -2738,42 +2006,27 @@ Depending on how generous you are ;-) ... the teabags and other items for custom
 
 So we made space here to track these items since they might come from different suppliers.
 
----
-
 ## Links
 ## Emoji
--------------------------------------------------------------------------------------
 NOTES:
 Create processes and/or template
 
 # 12.40 ■ Getting around 🚚
 
----
-
 ## Description
 
 For any part of your business involving wheels, wings, or propellers.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
 Whether they’re part of your back office or front office, the following section is a place to manage motor vehicles and anything else that moves.
 
----
-
 ## Exceptions
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -2789,40 +2042,27 @@ Informal vehicles do not fit the above description. Manage those, as well as any
 
 If you disagree with this classification, do what works for you and note where everything is in your JDex.
 
----
-
 ## Links
-
----
 
 ## Emoji
 
 Delivery truck
 
--------------------------------------------------------------------------------------
 NOTES:
 What about permits and fees for informal vehicles? 
 What if you do a mini fit-out to your bicycle to put a box on the back?
 
 # 12.41 Official documents (formal)
 
----
-
 ## Description
 
 The important documents associated with owning, leasing, or selling a vehicle.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Proof of ownership; government registrations and taxes; financing, leases; hire-purchase agreements; log books.
-
----
 
 ## More info
 
@@ -2846,17 +2086,11 @@ If you have many vehicles, store their documents in subfolders labelled with the
 
 This can also include the future, so store your new vehicle searches here too.
 
----
-
 ## Exceptions
 
 This does not include renting a car as part of a business trip. Store that with the trip down in [[15.XX]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -2866,12 +2100,9 @@ If it’s core to your business and requires some kind of official paperwork, pu
 
 As always, if you disagree with our rationale then do what works for you and note what you did in your JDex.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Ops manual/training: setting up and cleaning the food truck or dog washing van
 Is this here or in front office or HR
@@ -2880,23 +2111,15 @@ Keeping it nice? Staff training? It’s operations
 
 # 12.42 Vehicle insurance, incidents, & claims (formal)
 
----
-
 ## Description
 
 Policies, coverage details, incident reports, and claim forms for your vehicles.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Comprehensive car or motorcycle insurance; third party car or motorcycle insurance; caravan insurance; trailer insurance; boat insurance; any other form of commercial vehicle insurance.
-
----
 
 ## More info
 
@@ -2914,46 +2137,30 @@ Some of these insurances may be required by law. For instance, in Australia thir
 
 This is also a place to save incident reports that might become part of a claim. For example, something is stolen and you file a police report.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 Having an up-to-date inventory at [[XX.XX]] will be helpful if you need to make a claim. 
 
----
-
 ## Rationale
 
 As mentioned previously, we recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal.
-
----
 
 ## Links
 ## Emoji
 
 # 12.43 Permits, tolls, fees, & other running expenses (formal)
 
----
-
 ## Description
 
 Anything that says you have permission to go through, or stay in, a certain area, plus daily vehicle running expenses.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Permits for parking, deliveries, or general entry; e-tag accounts and toll road passes; fees or exemptions for congestion charge zones; short-term parking fees; daily running expenses such as fuel, EV charging, oil, wiper fluid, and cleaning.
-
----
 
 ## More info
 
@@ -2969,8 +2176,6 @@ Depending on your business, this might be a busy ID if you have a lot of running
 
 If you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.
 
----
-
 ## Exceptions
 
 Repairs, maintenance, and associated purchases go in [[12.45]].
@@ -2979,16 +2184,12 @@ Fuel tax credits or other government grants go in [[13.25]].
 
 Fines and penalties go in [[13.55]].
 
----
-
 ## Also see
 ## Rationale
 ## Links
 ## Emoji 
 
--------------------------------------------------------------------------------------
-
-Notes:
+----------------------------------------------------------------------------------Notes:
 Template? Or just handle with a file naming pattern and tax-year subfolders?
 Consider tax year-quarter naming, doesn’t always have to be year-month-day
 Ops manual: what e-tag/permit is associated with each vehicle
@@ -2999,17 +2200,11 @@ Recurring short-term tasks like checking oil, tyre pressure
 
 # 12.44 Fit-outs, renovations, & improvements (formal)
 
----
-
 ## Description
 
 A place for larger projects that aren’t general upkeep.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -3019,8 +2214,6 @@ A place for larger projects that aren’t general upkeep.
 - Mood boards, measurements, and a budget spreadsheet for reupholstering a boat.
 - Research, designs, and quotes for a full van signage wrap.
 
----
-
 ## More info
 
 This is a place to manage larger projects, specific to vehicles, that have an end. And once done, you move into front or back office operations mode. 
@@ -3029,19 +2222,13 @@ As such, we recommend that any equipment ordered as part of the project be store
 
 If you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.
 
----
-
 ## Exceptions
 
 Repairs, maintenance, and associated purchases go in [[12.45]].
 
 Front or back office equipment ordered as part of a project goes in [[12.24]] or [[12.34]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -3049,30 +2236,20 @@ As mentioned in [[12.14]], we made a decision that these type of projects are ab
 
 Whereas front or back office equipment ordered as part of the project might have service contracts, or staff training and cleaning manuals linked to them, so they belong in operations. For instance, a coffee cart’s espresso machine or till.
 
----
-
 ## Links
 ## Emoji
 
 # 12.45 Repairs & maintenance (formal)
 
----
-
 ## Description
 
 A place for fixing things and taking care of your vehicles.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Quotes from mechanics and other tradespeople; research on how to repair things; annual service appointments and logs; less frequent running expenses such as new tyres and other spare parts; maintenance manuals, instructions, and checklists.
-
----
 
 ## More info
 
@@ -3086,19 +2263,13 @@ As per [[12.43]], reconcile receipts in your inbox as required and archive them 
 
 If you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.
 
----
-
 ## Exceptions
 
 Repairing and maintaining equipment that’s in/on the vehicle is part of [[12.24]] or [[12.34]].
 
 This is not for daily running expenses, put those in [[12.43]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -3110,12 +2281,9 @@ Here they won’t be lost among receipts for daily running expenses like fuel an
 
 But if you feel differently, do what works for you. 
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Ops manual: longer term recurring tasks
 As opposed to tyre pressure and oil checks in 12.43
@@ -3126,23 +2294,15 @@ They’re just less frequent purchases versus things like fuel
 
 # 12.46 Public or shared transport & other ‘informal’ vehicles
 
----
-
 ## Description
 
 All the other ways to get around, either shared with the public or that you own and maintain.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Public transport like buses, trains, light rail, taxis, or ferries; ride sharing services; accounts to use share cars, e-scooters, or e-bikes; any other type of informal vehicle you own. 
-
----
 
 ## More info
 
@@ -3156,15 +2316,12 @@ These type of vehicles may or may not have their own insurance. Perhaps they’r
 
 If you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or unique identifier. And use one of the recommended date patterns to start file names so they sort neatly.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Use the template from the blog post here 
 What about permits and fees? 01? Insurance?
@@ -3177,18 +2334,12 @@ What about permits and fees? 01? Insurance?
 
 # 12.50 ■ The community 🧩
 
----
-
 ## Description
 
 You’re part of something bigger – interactions with the neighbourhood, the region, the planet.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -3198,12 +2349,8 @@ This section isn’t about your core business, your employees, suppliers, or pro
 
 This is a broad umbrella and may not be that relevant for many businesses. But if this sounds like you, then put any relevant contact details, notes, and other documents here.
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
@@ -3213,10 +2360,7 @@ So we wanted to make sure there was a place for this stuff to keep it separate f
 
 Especially if you participate in recurring events. You’ll want to be able to easily find and reuse certain items each time.
 
----
 ## Links
-
----
 
 ## Emoji
 
@@ -3225,18 +2369,12 @@ Jigsaw puzzle piece
 
 # 12.51 Your business & local neighbourhood
 
----
-
 ## Description
 
 People that your business interacts with next door and nearby.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -3246,13 +2384,9 @@ Maybe you store the contact details, opening hours, or annual holidays, of other
 
 Perhaps you offer discounts to certain neighbourhood businesses and you keep a list of what these are. Or maybe you’re part of a ‘neighbourhood watch’-style group where everyone keeps an eye on things. Either way, store any notes or documents here.
 
----
-
 ## Exceptions
 
 This is not for networking, seeking advice and support, or interactions with professional bodies, that’s in [11.60]].
-
----
 
 ## Also see
 ## Rationale
@@ -3261,18 +2395,12 @@ This is not for networking, seeking advice and support, or interactions with pro
 
 # 12.52 Your business & city, state, & country
 
----
-
 ## Description
 
 People that your business interacts with further away.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -3284,8 +2412,6 @@ You might host high school work experience students each year. Or your staff mig
 
 What’s that? There’s chocolate fundraising boxes in the kitchen? Save me a Picnic while I store the documentation here!
 
----
-
 ## Exceptions
 
 This is not for any external policies that your business may have, those go in [[11.32]].
@@ -3294,8 +2420,6 @@ This is not for networking, seeking advice and support, or interactions with pro
 
 This is not active marketing or self-promotion, that’s in [[20-29]].
 
----
-
 ## Also see
 ## Rationale
 ## Links
@@ -3303,18 +2427,12 @@ This is not active marketing or self-promotion, that’s in [[20-29]].
 
 # 12.53 Your business & planet
 
----
-
 ## Description
 
 People that your business interacts with globally.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -3324,8 +2442,6 @@ You might mentor a small business owner in another country. Or maybe your busine
 
 Or perhaps you support other international charities or small business loan providers. Either way, store the details here.
 
----
-
 ## Exceptions
 
 This is not for any external policies that your business may have, those go in [[11.32]].
@@ -3334,8 +2450,6 @@ This is not for networking, seeking advice and support, or interactions with pro
 
 This is not active marketing or self-promotion, that’s in [[20-29]].
 
----
-
 ## Also see
 ## Rationale
 ## Links
@@ -3343,18 +2457,12 @@ This is not active marketing or self-promotion, that’s in [[20-29]].
 
 # 12.90 ■ Where I trade & how I get around library 📚
 
----
-
 ## Description
 
 A place to put information that’s related to this category, kinda interesting, mostly unimportant, and definitely doesn’t fit elsewhere.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -3376,17 +2484,11 @@ Remember to leave a note in your JDex when you save things in this library so yo
 
 (This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)
 
----
-
 ## Exceptions
 
 Things that contain information that is specific to your business, and that don’t fit elsewhere, should go in [[13.14]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -3398,36 +2500,23 @@ It doesn’t fit anywhere else. It’s just a thing you wanted to save. And you 
 
 Importantly, it’s not that important. It has nothing to do with business operations. If it wasn’t backed up it wouldn’t matter. If you lose it, you could probably download it again.
 
----
-
 ## Links
-
----
 
 ## Emoji
 
 Books
 
--------------------------------------------------------------------------------------
 NOTES:
 
 13 💰 Money earned, spent, saved, & owed
-
----
 
 ## Description
 
 This category is all about keeping track of your finances, from planning and budgeting, to reconciling and submitting your annual returns.
 
----
-
 ## Ops manual
 
----
-
 ## Examples
-
----
 
 ## More info
 
@@ -3460,17 +2549,11 @@ This is okay. It’s part of being able to see the whole picture.
 
 *By ‘static’ we mean things that were sent to you that can’t be changed (e.g. a PDF). As compared to internal files that you work on (e.g. a spreadsheet). You should never have multiple copies of the latter. You’ll end up working on the wrong version and being very sad when you realise. This is not the Decimal way.
 
----
-
 ## Exceptions
 
 This category is for managing _your_ finances – if your product or service is related (e.g. you’re an accountant, bookkeeper, or financial adviser) that goes in [[20-29]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -3510,17 +2593,12 @@ Who knows what other variations occur in real life. An eBay store with an income
 
 Otherwise, just manage your standard business bank account in [[13.42]].
 
----
-
 ## Links
-
----
 
 ## Emoji
 
 Money bag
 
--------------------------------------------------------------------------------------
 NOTES:
 Supplier examples for the zero
 Money and legal related: accountant or tax agent
@@ -3529,8 +2607,6 @@ Where do gift cards & vouchers go again? Is that a liability?
 
 # 13.00 ■ Money earned, spent, saved, & owed category management ⚙️
 
----
-
 ## Description
 ## Ops manual
 ## Examples
@@ -3539,26 +2615,19 @@ Where do gift cards & vouchers go again? Is that a liability?
 ## Also see
 ## Rationale
 ## Links
-
----
 
 ## Emoji
 
 Gear
 
--------------------------------------------------------------------------------------
 NOTES:
 
 
 # 13.10 ■ Plan, protect, & reflect 🧘
 
----
-
 ## Description
 
 Money management for peace of mind.
-
----
 
 ## Ops manual
 ## Examples
@@ -3568,29 +2637,19 @@ Money management for peace of mind.
 ## Rationale
 ## Links
 
----
-
 ## Emoji
 
 Person in lotus position
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.11 Financial planning
-
----
 
 ## Description
 
 Calculations, budgets, goals, and strategies to help you know where you stand.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -3605,8 +2664,6 @@ Things you might research and plan here include:
 - if relevant, how will you deal with cash (e.g. currency conversions, cash floats, petty cash, cash books),
 - whether you need help protecting your profits (e.g. diversifying investments to reduce risk),
 - or whatever else you need to figure out.
-
----
 
 ## More info
 
@@ -3630,19 +2687,13 @@ Most important for Lucy was maintaining a cashflow ‘safety net’ so she could
 Everyone’s safety net will be different. But Lucy learned quickly that having no safety net is stressful because nobody pays your invoice on the day you send it. And the bigger the company, the slower the payroll department. So that might be another thing to consider here.
 
 *Such as ‘the 80/20 PSI rule’ and GST threshold in Australia.
----
-
 ## Exceptions
 
 This isn’t for costing out how much you charge for your product or service, that goes in [[20-29]].
 
----
-
 ## Also see
 
 When you’re writing or updating [[11.21]], do the money calculations here.
-
----
 
 ## Rationale
 
@@ -3654,42 +2705,28 @@ If you know what you need to spend each month to meet obligations and then make 
 
 After some initial busywork and tedium, you’ll hopefully feel more informed, calm, and in control. Which is the goal of this ID.
 
----
-
 ## Links
 
 [Tips for good small business habits](https://www.ato.gov.au/businesses-and-organisations/starting-registering-or-closing-a-business/starting-your-own-business/small-business-habits#atid=e821a9acaa940339) from the Australian Taxation Office.
 
 [Tips for planning business tax payments to avoid debt](https://www.ato.gov.au/individuals-and-families/paying-the-ato/help-with-paying/managing-payments) from the Australian Taxation Office.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 Hard subfolder recommendation: file by tax year
 
 # 13.12 Financial insurance, incidents, & claims
-
----
 
 ## Description
 
 Policies, coverage details, incident reports, and claim forms for your finances.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Income protection insurance; tax audit insurance; lenders mortgage insurance; any other kind of loan protection insurance.
-
----
 
 ## More info
 
@@ -3697,57 +2734,37 @@ This is a place for any insurance that is specific to money. Whether you’ve ea
 
 This is also where to store incident reports that might become part of a claim. For example, if you are injured and cannot work for an extended period you might decide to claim on an income protection policy. If so, put the details and medical report here. 
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
 As mentioned previously, we recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.13 Reports & reviews
-
----
 
 ## Description
 
 A place to write any official or informal financial reports and reflect on how the business is going.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Traditional annual company reports; review documents that entities such as not-for-profits, charities, school associations, or clubs must submit; informal internal review documents for staff updates or other stakeholders; or anything else you prepare in order to reflect on finances.
 
----
-
 ## More info
 
 How’s everything going? Checking in on the business’ finances is something we should all do when we can. This might take the form of mandatory reporting, or just some notes in your JDex. Or perhaps you send emails, presentations, or other documents to keep staff, subscribers, or potential investors updated. Either way, do the work here.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
-
----
 
 ## Links
 
@@ -3758,33 +2775,21 @@ How’s everything going? Checking in on the business’ finances is something w
 
 [Information about changes in reporting requirements for sporting organisations](https://www.ato.gov.au/businesses-and-organisations/not-for-profit-organisations/not-for-profit-newsroom/changes-in-reporting-requirements-for-sporting-clubs) from the Australian Taxation Office.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.14 Financial catch-all
-
----
 
 ## Description
 
 A place for any finance records or documents that definitely don’t fit elsewhere.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Documents related to your credit rating and history.
-
----
 
 ## More info
 
@@ -3793,8 +2798,6 @@ Ideally you should be able to find a place for random things below. But it’s n
 Remember to leave a note in your JDex when you save things in this ID so you can find them easily. 
 
 (This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)
-
----
 
 ## Exceptions
 
@@ -3807,17 +2810,11 @@ This is not a place for anything that relates to an account. That paperwork shou
 - [[13.62]], 
 - or any other accounts you may have.
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
 We’ve used credit rating as an example above. Some people might classify a great credit rating as an asset. But we’re not accountants. This is where we would file it. And if our accountant asked for it, we’d know exactly where it is.
-
----
 
 ## Links
 ## Emoji
@@ -3825,13 +2822,9 @@ We’ve used credit rating as an example above. Some people might classify a gre
 
 # 13.20 ■ Income 🤑
 
----
-
 ## Description
 
 Money that is earned by the business.
-
----
 
 ## Ops manual
 ## Examples
@@ -3841,25 +2834,17 @@ Money that is earned by the business.
 ## Rationale
 ## Links
 
----
-
 ## Emoji
 
 Money-mouth face
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.21 Inbox and processing of income
-
----
 
 ## Description
 
 Confirm you’ve been paid, tally up earnings, and file the records.
-
----
 
 ## Ops manual
 
@@ -3867,11 +2852,7 @@ Confirm you’ve been paid, tally up earnings, and file the records.
 
 Follow the steps in the ops manual and set up a regular time to process your income inbox.
 
----
-
 ## Examples
-
----
 
 ## More info
 
@@ -3889,12 +2870,8 @@ And if you need to do any messy calculations as you process the income, there’
 
 If you use point-of-sale and/or accounting software then a lot of work will be automated. However, it’s still important to cross-check that everything is as it should be and the income is in your bank account.
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
@@ -3904,34 +2881,22 @@ We don’t want to accidentally overlook these things because we’re busy keepi
 
 And if you need space to be messy and do some calculations, then we wanted to ensure there’s room for that too. For instance, every month Johnny has to download inscrutable income data from Stripe and fuss with it until it’s in a format our accountant can use. This is where he would do that work.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.22 Accounts that deliver income
-
----
 
 ## Description
 
 The formal statements and paperwork for accounts or platforms that are primarily used to receive income.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Standard bank accounts; online payment processors like Stripe, PayPal, or Payoneer; merchant accounts for ‘buy now, pay later’ services like Afterpay or Klarna; digital wallet services like WeChat Pay or Grab; money-transfer services like Western Union; creator support platforms like Patreon; crowdfunding services like Kickstarter.
-
----
 
 ## More info
 
@@ -3953,17 +2918,11 @@ Static documents supplied by a platform or bank (e.g. PDFs). As opposed to raw d
 
 We recommend using the year-month method when saving paperwork and statements so everything sorts neatly. And subfolder by account issuer.
 
----
-
 ## Exceptions
 
 If you just use a standard bank account for both incomings and outgoings, that goes in [[13.42]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -3979,32 +2938,20 @@ fyi, your accountant might pull a face at our classification of crowdfunding as 
 
 Let them pull their face and then do what they need to do on the balance sheet. As we’ve said, we’re not accountants, we’re here to help you find stuff. And we think many people would think of crowdfunding as income and look for it here.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.23 Invoices & sales for your work
-
----
 
 ## Description
 
 The place to file processed invoices or point-of-sale reports.
 
----
-
 ## Ops manual
 
----
-
 ## Examples
-
----
 
 ## More info
 
@@ -4020,54 +2967,36 @@ Not everyone uses software to generate invoices. For those who use a template, w
 
 *Your accountant might refer to this as ‘accounts receivable’.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 What pattern is recommended here, +customer?
 
 # 13.24 Passive income
-
----
 
 ## Description
 
 The place to file processed investment returns.  
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Interest; dividends; rental payments.
 
----
-
 ## More info
 
 If you receive any kind of passive income, store the formal records here after they’ve been processed as income. For instance, the statements and letters that say you’ve earned money from a cash investment or other asset.
-
----
 
 ## Exceptions
 
 This is not for ownership paperwork – that lives with the asset/investment itself (i.e. don’t store share certificates here, those go in [[13.43]]). 
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -4084,34 +3013,22 @@ Shares                Dividend
 Property              Rent
 ```
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.25 Assistance, grants, & gifts
-
----
 
 ## Description
 
 The place to file processed records of financial help or bonuses.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Tax relief, credits, or incentives; concessions and allowances; grants and schemes; cash back and refunds; prizes and gifts.
-
----
 
 ## More info
 
@@ -4119,37 +3036,25 @@ If you receive any kind of one-off or ongoing financial assistance, store the re
 
 This kind of thing often comes from the government, but it might also come from private industry, academia, or anywhere else. Whatever it is, it’s not a loan and you don’t need to pay it back. Hooray.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.26 Sale of assets
-
----
 
 ## Description
 
 The place to file processed records for high-value items that were sold by the business.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Land; buildings; computer equipment; furniture; machinery; vehicles.
-
----
 
 ## More info
 
@@ -4157,32 +3062,22 @@ If you sell assets that are owned by the business, store the records here after 
 
 This is the kind of higher-value item that your accountant wants to know about because they’ll need to update your balance sheet.
 
----
-
 ## Exceptions
 
 This is not the act of selling the asset – manage that where the item lives (i.e. don’t store photos of a car for an online ad here, those go in [[12.41]]).
-
----
 
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.30 ■ Expenses 🛍️
-
----
 
 ## Description
 
 Money that was spent by the business.
-
----
 
 ## Ops manual
 ## Examples
@@ -4192,25 +3087,17 @@ Money that was spent by the business.
 ## Rationale
 ## Links
 
----
-
 ## Emoji
 
 Shopping bags
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.31 Inbox and processing of expenses
-
----
 
 ## Description
 
 Categorise your expenses, tally up spending, and file the records.
-
----
 
 ## Ops manual
 
@@ -4218,11 +3105,7 @@ Categorise your expenses, tally up spending, and file the records.
 
 Follow the steps in the ops manual and set up a regular time to process your expenses inbox.
 
----
-
 ## Examples
-
----
 
 ## More info
 
@@ -4232,12 +3115,8 @@ It contains an inbox where expense records are held until you process and perman
 
 And if you need to do any messy calculations as you process the expenses, there’s room here. 
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
@@ -4245,30 +3124,20 @@ The goal of the five ‘inbox and processing’ IDs in this category is to add a
 
 We don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings.
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.32 Accounts that handle expenses
-
----
 
 ## Description
 
 The formal statements and paperwork for accounts or platforms that are primarily used to pay expenses.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Online payment processors like PayPal or Payoneer; ‘buy now, pay later’ services like Afterpay or Klarna; digital wallet services like WeChat Pay or Grab; money-transfer services like Western Union; a standard bank account.
-
----
 
 ## More info
 
@@ -4290,46 +3159,30 @@ We recommend using the year-month method when saving paperwork and statements so
 
 *Note that if you become an Afterpay merchant one day, you could 'promote' it up to [[13.22]]). 
 
----
-
 ## Exceptions
 
 If you just use a standard bank account for both incomings and outgoings, that goes in [[13.42]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
 Many businesses won’t need this ID if they just use a regular bank account to handle income and expenses. But we wanted to leave space for other types of ‘one-way’ accounts that send money out. You don’t want to miss anything in case it’s deductible.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 2024-12-22: we discussed whether people would want to keep proper accounts with suppliers here. I was agin it. Johnny could see some positives. The community will hopefully tell us.
 
 # 13.33 Receipts
-
----
 
 ## Description
 
 The place to file processed receipts.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -4349,17 +3202,11 @@ For instance, you buy a new laptop. The receipt sits in the expenses inbox until
 
 We recommend using the year-month method when saving this kind of paperwork so everything sorts neatly. And subfolder by expense category.
 
----
-
 ## Exceptions
 
 These are not bills that you set aside time to pay manually, manage those in [[13.50]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -4369,28 +3216,18 @@ Normally we think of the bills that we receive by email or post as liabilities. 
 
 For instance, you’ve set up direct debits for your utility bills. They’re paid automatically on the due date. Now they’re just expense transactions on your bank statement that you process and file here.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES: 
+----------------------------------------------------------------------------------NOTES: 
 
 # 13.34 Payroll
-
----
 
 ## Description
 
 The place to manage anything to do with wages, leave, pensions, health insurance, and other benefits.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -4405,8 +3242,6 @@ If you have staff, the kinds of things you might manage here include:
 - any benefits, bonuses, rewards, or incentives in salary packages,
 - expense reimbursement.
 
----
-
 ## More info
 
 Payroll is serious stuff. Depending on where you are in the world, there are strict governance and compliance obligations to meet. And harsh penalties if you don’t. 
@@ -4419,23 +3254,15 @@ But we do think that payroll lives over here with all the money and numbers. It�
 
 *Perhaps one day, after community discussion with experienced business owners and accountants/bookkeepers, we can develop an ops manual that covers payroll basics.
 
----
-
 ## Exceptions
 
 If you receive bills for payroll tax, process them in [[13.51]] and file the records in [[13.62]].
-
----
 
 ## Also see
 
 Store copies of final payroll records with the individual in [[11.42]] – this is not only good practice, but likely a legal requirement.
 
----
-
 ## Rationale
-
----
 
 ## Links
 
@@ -4443,36 +3270,24 @@ Store copies of final payroll records with the individual in [[11.42]] – this 
 
 [An article about managing payroll in small business](https://www.nerdwallet.com/article/small-business/how-to-manage-payroll-for-your-small-business) from NerdWallet.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 Can/should we at least do a simple numbered template using the examples list? 
 Maybe one day after community consultation we could do an ops manual, but not now.
 
 
 # 13.35 Subscriptions, memberships, & other recurring expenses
 
----
-
 ## Description
 
 A master list of everything you’ve signed up for so you can keep track of it.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Software; apps; web services like hosting and domains; cloud storage; media and streaming services; food, beverage, or other office supply subscriptions; carshare or other transport subscriptions; staff memberships for gyms and clubs; recurring charity donations; crowdfunding or financial support platforms; memberships for things like online communities and newsletters; payment agreements for professional services like your accountant; plus any sort of automatic payments (i.e. direct debits) for recurring expenses.
-
----
 
 ## More info
 
@@ -4484,8 +3299,6 @@ It’s for services where you have given someone permission to take money on a r
 
 Seeing it all in one place can help you know what outgoings to expect each week, month, or year. And if you want to pause or cancel anything, you’re not searching all over the place to remember what you’ve got.
 
----
-
 ## Exceptions
 
 This is not the place to keep formal paperwork related to these services. Store that in the relevant place in the system, for example:
@@ -4493,11 +3306,7 @@ This is not the place to keep formal paperwork related to these services. Store 
 - A (front office) digital music subscription lives in [[12.33]],
 - A carshare subscription lives in [[12.46]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -4505,25 +3314,17 @@ This ID came about from a desire to not be surprised by annual payments for soft
 
 But it’s also nice for cash flow purposes to know exactly how much money is going to get sucked out of your bank accounts. So we wanted to leave a place to collect everything like this in a list.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.40 ■ Assets 📈
 
----
-
 ## Description
 
 Money that is saved or ‘parked’ in the business.
-
----
 
 ## Ops manual
 ## Examples
@@ -4533,25 +3334,17 @@ Money that is saved or ‘parked’ in the business.
 ## Rationale
 ## Links
 
----
-
 ## Emoji
 
 Graph with upwards trend
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.41 Inbox and processing of assets
-
----
 
 ## Description
 
 Classify any asset purchases or sales and file the records.
-
----
 
 ## Ops manual
 
@@ -4559,11 +3352,7 @@ Classify any asset purchases or sales and file the records.
 
 Follow the steps in the ops manual and set up a regular time to process your assets inbox.
 
----
-
 ## Examples
-
----
 
 ## More info
 
@@ -4577,12 +3366,8 @@ It contains an inbox where asset records are held until you process and permanen
 
 And if you need to do any messy calculations as you process the assets, there’s room here. 
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
@@ -4590,29 +3375,19 @@ The goal of the five ‘inbox and processing’ IDs in this category is to add a
 
 We don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.42 Accounts that handle cash
-
----
 
 ## Description
 
 The formal statements and paperwork for accounts or platforms that are used for both incomings and outgoings.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -4632,39 +3407,27 @@ Static documents supplied by a platform or bank (e.g. PDFs). As opposed to raw d
 
 We recommend using the year-month method when saving paperwork and statements so everything sorts neatly. And subfolder by account issuer.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 Ops manual: when you update/change, tell the tax office 
 (and the other list that you'll update for people)
 
 # 13.43 Investments
 
----
-
 ## Description
 
 Anything you class as an investment that you hope to receive returns from, or whose value you hope will appreciate.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Shares; managed funds; bonds; term deposits; property unrelated to the business; high-value items like art or jewellery; trusts; director’s loans (aka Division 7A in Australia); digital currency; micro-investment apps.
-
----
 
 ## More info
 
@@ -4681,19 +3444,13 @@ These are probably longer term investments. If they’re short term, your accoun
 
 Also, if you have any share trading accounts, this _might_ be a place to store any paperwork for them. Otherwise consider [[13.22]]. In Australia, this could include things like Computershare.
 
----
-
 ## Exceptions
 
 This is not for statements of earnings – after processing the income, file those in [[13.24]].
 
----
-
 ## Also see
 
 If you intend to sell all or part of an investment, remember to consider any tax implications such as capital gains in your budget and/or master finance record in [[13.11]].
-
----
 
 ## Rationale
 
@@ -4711,34 +3468,22 @@ Our recommendation is:
 
 If this sounds like madness, we can discuss it in the community. :-)
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.44 Fixed assets
-
----
 
 ## Description
 
 Things owned for a longer term that help you run the business, like equipment, vehicles, and property.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Land; buildings; furniture; machinery; vehicles; computer equipment. 
-
----
 
 ## More info
 
@@ -4754,32 +3499,22 @@ This ID should contain copies of records saved elsewhere in the system. That’s
 
 For instance, an electrician’s business premises, van, and computers are fixed assets. She manages the business premises in [[12.10]], the vehicle in [[12.40]], and the computers in [[14.10]]. She copies the proof of ownership, valuations, and receipts here for her accountant. And she also has a master finance record in [[13.11]] that includes a summary of her fixed assets because that’s how she rolls.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.45 Current assets
-
----
 
 ## Description
 
 Things owned for less than a year that help you run the business, like stock and inventory.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -4793,37 +3528,25 @@ This ID should contain copies of records saved elsewhere in the system. That’s
 
 For instance, a furniture maker’s stock (finished products to sell to customers) and inventory (raw materials used to make the products) are current assets. He manages these in [[20-29]]. He copies valuations and receipts here for his accountant. And he also has a master finance record in [[13.11]] that includes a summary of his current assets because that’s how he rolls.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 # 13.46 Intangible assets
-
----
 
 ## Description
 
 Things you own that cannot be touched, like intellectual property, brand equity, and goodwill.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Intellectual property such as patents, copyrights, trademarks, and trade secrets; digital assets such as domain names, software, and proprietary technology; goodwill assets such as brand equity and customer loyalty; licences and permits such as taxi medallions, liquor licences, and franchises.
-
----
 
 ## More info
 
@@ -4839,27 +3562,19 @@ For instance, a scientist’s R&D and patent are intangible assets. She manages 
 
 *For the pedants, in the case of, say, a licence or permit, we’re talking about the concept of the thing here, not a printout of it. 
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.50 ■ Liabilities 💸
 
----
-
 ## Description
 
 Money that the business owes to others.
-
----
 
 ## Ops manual
 ## Examples
@@ -4869,26 +3584,18 @@ Money that the business owes to others.
 ## Rationale
 ## Links
 
----
-
 ## Emoji
 
 Money with wings
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.51 Inbox and processing of liabilities
 
----
-
 ## Description
 
 Pay what needs paying, tally up anything outstanding, and file the records.
-
----
 
 ## Ops manual
 
@@ -4896,11 +3603,7 @@ Pay what needs paying, tally up anything outstanding, and file the records.
 
 Follow the steps in the ops manual and set up a regular time to process your liabilities inbox.
 
----
-
 ## Examples
-
----
 
 ## More info
 
@@ -4914,12 +3617,8 @@ It contains an inbox where liability records are held until you process and perm
 
 And if you need to do any messy calculations as you process the liabilities, there’s room here. 
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
@@ -4927,30 +3626,20 @@ The goal of the five ‘inbox and processing’ IDs in this category is to add a
 
 We don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings.
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.52 Cash loan accounts
-
----
 
 ## Description
 
 The place to file processed statements and other formal paperwork for any cash accounts that you owe money to. 
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Credit card; mortgage; line of credit; overdraft; promissory note; commercial bill/bill of exchange; any other formal cash loan; refinancing paperwork; any form of investor financing that must be repaid.
-
----
 
 ## More info
 
@@ -4958,52 +3647,34 @@ You owe someone money because they lent you money.
 
 After payments are processed, file the records here using the year-month method so everything sorts neatly. And subfolder by account issuer.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 If an investor also receives equity, manage that in [[13.64]].
 
----
-
 ## Rationale
 
 We made a decision to include any sort of repayable investor financing here as a cash loan account. Depending on who it’s from, it might not be set up like a typical bank loan account. But you’ll still have some form of repayment obligations and/or ‘statements’ to track, process, and file. 
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 This was an interesting equipment financing company I found: https://finlease.com.au
 
 
 # 13.53 Non-cash loan accounts
 
----
-
 ## Description
 
 The place to file processed statements and other formal paperwork for non-cash accounts that you owe money to.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Vendor financing/trade credit; hire purchase or rent to buy agreements.
-
----
 
 ## More info
 
@@ -5013,36 +3684,24 @@ This might be for products or services from a supplier who didn’t require upfr
 
 After payments are processed, file the records here using the year-month method so everything sorts neatly. And subfolder by account issuer.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.54 Bills
-
----
 
 ## Description
 
 The place to file processed bills.
 
----
-
 ## Ops manual
 
----
-
 ## Examples
-
----
 
 ## More info
 
@@ -5056,17 +3715,11 @@ For instance, let’s say you have a food truck and receive a one-off bill from 
 
 If you can, consider paying invoices from sole traders on the day they’re received. One company used to do this for Lucy. She didn’t ask them to, they just did it. Every time. It was an amazing gesture towards the smallest of business owners and made a huge difference to her cashflow and ability to trade.
 
----
-
 ## Exceptions
 
 These are not expenses that are paid on the spot or automatically, manage those in [[13.30]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -5080,14 +3733,10 @@ Compare this to other bills that arrive unpredictably that you must pay manually
 
 These are standalone bills for specific jobs. They all have different payment terms. As they arrive, put them in the liabilities inbox. Then set aside time later to pay them in order of urgency. The processed invoices are permanently filed here. And you might decide to add copies of them to [[12.14]], [[12.45]], and [[12.34]], respectively.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 ### Classifying automated bill payments as expenses
 
 Normally we think of the bills that we receive by email or post as liabilities. But as noted in [[13.54]], we made a decision to classify _direct debits_ of bill payments as going ‘straight to expenses’. They’re paid automatically and you don’t need to plan a time to physically transfer money. 
@@ -5096,29 +3745,19 @@ For instance, you’ve set up direct debits for your utility bills. They’re pa
 
 # 13.55 Fines & penalties
 
----
-
 ## Description
 
 The place to store processed notices that say you did something wrong.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Tickets; fines; late fees; penalties; infringements.
 
----
-
 ## More info
 
 Whoops. The business owes someone money because it did something wrong. It happens to the best of us. Process it, file it, learn from it, and move on.
-
----
 
 ## Exceptions
 ## Also see
@@ -5126,20 +3765,14 @@ Whoops. The business owes someone money because it did something wrong. It happe
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.60 ■ Reconciliation & returns 🧮
 
----
-
 ## Description
 
 The final reckonings.
-
----
 
 ## Ops manual
 ## Examples
@@ -5149,26 +3782,18 @@ The final reckonings.
 ## Rationale
 ## Links
 
----
-
 ## Emoji
 
 Abacus
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.61 Inbox and processing of government taxes
 
----
-
 ## Description
 
 Tally up final figures, pay what needs paying, and file the records.
-
----
 
 ## Ops manual
 
@@ -5176,11 +3801,7 @@ Tally up final figures, pay what needs paying, and file the records.
 
 Follow the steps in the ops manual and set up a regular time to process your government taxes inbox.
 
----
-
 ## Examples
-
----
 
 ## More info
 
@@ -5190,12 +3811,8 @@ It contains an inbox where government tax records are held until you process and
 
 And if you need to do any messy calculations as you process government taxes, there’s room here. 
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
@@ -5203,36 +3820,24 @@ The goal of the five ‘inbox and processing’ IDs in this category is to add a
 
 We don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings. And ensuring our data is shipshape for tax time.
 
----
-
 ## Links
 
 [An overview of fringe benefits tax](https://www.ato.gov.au/businesses-and-organisations/hiring-and-paying-your-workers/fringe-benefits-tax/how-fringe-benefits-tax-works) from the Australian Taxation Office.
 
 [Due dates for lodging and paying taxes and superannuation](https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/reports-and-returns/due-dates-for-lodging-and-paying) from the Australian Taxation Office.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.62 Accounts that handle tax
-
----
 
 ## Description
 
 The formal paperwork and statements for your official government tax ledgers.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -5244,8 +3849,6 @@ Depending on what you do and where you trade in the world, the following may app
 - payroll tax, 
 - land tax, 
 - stamp duty.
-
----
 
 ## More info
 
@@ -5259,19 +3862,13 @@ And any other important documents related to your quarterly or annual tax return
 
 Depending on where you’re from, you might have more than one account for different types of tax. Just subfolder everything neatly using the date and account name, as per previous guidance.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 If you receive a bill for taxes owed, put that in your liabilities inbox at [[13.51]], process it, then file it here.
 
 Ditto for your accountant’s invoices for managing your affairs.
-
----
 
 ## Rationale
 
@@ -5281,35 +3878,23 @@ Whether a business is paying income, sales, fringe benefits, or payroll tax, it 
 
 Having everything tax related in the one place feels helpful. You can always duplicate any records that you would like to add elsewhere in the system. 
 
----
-
 ## Links
 
 [An overview on what payroll tax is](https://www.revenue.nsw.gov.au/taxes-duties-levies-royalties/payroll-tax/getting-started/what-is-payroll-tax) from the NSW Government.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.63 Dividends
-
----
 
 ## Description
 
 If you need to deal with dividends, manage the details here.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -5319,33 +3904,23 @@ But we do think that anything to do with dividends lives over here with all the 
 
 *Perhaps one day, after community discussion with experienced business owners and accountants/bookkeepers, we can develop an ops manual that covers dividend basics.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.64 Equity
-
----
 
 ## Description
 
 If you need to deal with owner’s equity, manage the details here.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -5355,33 +3930,23 @@ But we do think that anything to do with owner’s equity, including drawings, l
 
 *Perhaps one day, after community discussion with experienced business owners and accountants/bookkeepers, we can develop an ops manual that covers owner’s equity basics.
 
----
-
 ## Exceptions
 ## Also see
 ## Rationale
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 # 13.90 ■ Money earned, spent, saved, & owed library 📚
-
----
 
 ## Description
 
 A place to put information that’s related to this category, kinda interesting, mostly unimportant, and definitely doesn’t fit elsewhere.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -5403,17 +3968,11 @@ Remember to leave a note in your JDex when you save things in this library so yo
 
 (This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)
 
----
-
 ## Exceptions
 
 Things that contain financial information that is specific to your business, and that don’t fit elsewhere, should go in [[13.14]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -5425,43 +3984,29 @@ It doesn’t fit anywhere else. It’s just a thing you wanted to save. And you 
 
 Importantly, it’s not that important. It has nothing to do with business operations. If it wasn’t backed up it wouldn’t matter. If you lose it, you could probably download it again.
 
----
-
 ## Links
-
----
 
 ## Emoji
 
 Books
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 14 💻 Technology
-
----
 
 ## Description
 
 This category is all about your business in the digital world.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## Intro
 
 This is a place to manage all the common computer-y things that most businesses have. Like hardware and software, setting up your online presence, and staying safe in cyberspace. 
 
 And to be an honorary IT professional, this includes notes about configuration (i.e. all the stuff you did when you set something up). This is a nice example of ‘working the Decimal way’ – keeping notes to help your future self. It might be as simple as bullet points in your JDex or maybe a diagram, depending on what you’re documenting. Now you’ll never forget what you did. 
-
----
 
 ## Exceptions
 
@@ -5471,11 +4016,7 @@ This category is for managing _your_ technology. If your product or service is r
 
 This category is not for managing technology related to workplace security or access (e.g cameras, passcards), that goes in [[12.22]] or [[12.32]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -5491,27 +4032,20 @@ Same goes for our dentist. Their x-ray machine sends scans to a computer in the 
 
 See [[14.14#When is an accessory ‘technology’ versus ‘front office operations’?]] for further rationale on this decision.
 
----
-
 ## More info
 ## How-to
 ## Links
-
----
 
 ## Emoji
 
 Laptop
 
--------------------------------------------------------------------------------------
 NOTES:
 Supplier examples for the zero: IT support
 
 
 # 14.00 ■ Technology category management ⚙️
 
----
-
 ## Description
 ## Ops manual
 ## Examples
@@ -5522,25 +4056,18 @@ Supplier examples for the zero: IT support
 ## More info
 ## How-to
 ## Links
-
----
 
 ## Emoji
 
 Gear
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.10 ■ Computers & other devices 🖥️
 
----
-
 ## Description
 
 A place to manage all the physical gadgets and gizmos.
-
----
 
 ## Ops manual
 ## Examples
@@ -5552,34 +4079,23 @@ A place to manage all the physical gadgets and gizmos.
 ## How-to
 ## Links
 
----
-
 ## Emoji
 
 Desktop computer
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.11 Computers & servers
-
----
 
 ## Description
 
 Anything related to buying, maintaining, or selling a computer.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Laptops; desktop computers, including things like Mac minis; physical servers; anything else classified as a computer, such as a Raspberry Pi.
-
----
 
 ## Intro
 
@@ -5591,23 +4107,17 @@ This is also a place to keep any troubleshooting notes that you’ve written and
 
 We recommend naming subfolders by purchase date and model.
 
----
-
 ## Exceptions
 
 This is for physical computers that you control. If you pay for space on a virtual private server or offsite ‘dedicated hosting service’ in a data centre, those go in [[14.32]].
 
 This is not for bills related to paying off or leasing a computer, manage those in [[13.30]] or [[13.50]].
 
----
-
 ## Also see
 
 If you sell a computer, record the details in [[13.26]] after processing the income.
 
 If you purchase a computer, record the details in [[13.44]] after processing the asset.
-
----
 
 ## Rationale
 
@@ -5619,35 +4129,24 @@ We decided that notes related to the configuration of any computer in this categ
 
 If you lease your computers, we recommend keeping the overarching contracts and agreements here. It felt logical that computers should stay down in technology world. Conversely, in [[14.12]] we recommend that overarching mobile phone contracts and agreements should live up in operations. Because that feels like something that should be alongside other utilities. But the device itself is separate to the contract, so it’s managed down here in technology. If you feel strongly either way, let’s discuss it.
 
----
-
 ## More info
 ## How-to
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.12 Mobile devices
-
----
 
 ## Description
 
 Anything related to buying, maintaining, or selling a smaller, handheld device.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Phones; tablets; e-readers.
-
----
 
 ## Intro
 
@@ -5661,23 +4160,17 @@ This is also a place to keep any troubleshooting notes that you’ve written and
 
 We recommend naming subfolders by purchase date and model.
 
----
-
 ## Exceptions
 
 This is not for overarching mobile phone contracts or payment plan agreements, store those in operations at [[12.21]] or [[12.31]].
 
 This is not for mobile phone bills or ‘pay as you go’ fees, manage those in [[13.30]] or [[13.50]].
 
----
-
 ## Also see
 
 If you sell a high-value mobile device, record the details in [[13.26]] after processing the income.
 
 If you purchase a high-value mobile device, record the details in [[13.44]] after processing the asset.
-
----
 
 ## Rationale
 
@@ -5689,36 +4182,26 @@ We decided that notes related to the configuration of any mobile device in this 
 
 We’ve also (tentatively) assumed that mobile devices are classed as fixed assets, like computers. But it’ll be up to your accountant and local tax guidelines if this is the case.
 
----
-
 ## More info
 ## How-to
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 
 # 14.13 Network devices
 
----
-
 ## Description
 
 Anything related to buying, maintaining, or selling the devices that connect you to a network or the internet.
 
----
-
 ## Ops manual
 
---
 
 ## Examples
 
 Modems; routers; portable wifi dongles; mesh networks; firewalls.
-
----
 
 ## Intro
 
@@ -5730,13 +4213,9 @@ This is also a place to keep any troubleshooting notes that you’ve written and
 
 We recommend naming subfolders by purchase date and model.
 
----
-
 ## Exceptions
 
 This is not for bills related to paying off a network device, manage those in [[13.30]] or [[13.50]].
-
----
 
 ## Also see
 
@@ -5745,8 +4224,6 @@ If you sell a high-value network device, record the details in [[13.26]] after p
 If you purchase a high-value network device, record the details in [[13.44]] after processing the asset.
 
 See [[14.31]] for the overall service that a network device contributes to (e.g. user login, internet connectivity, wifi connectivity, printing, file services).
-
----
 
 ## Rationale
 
@@ -5758,36 +4235,25 @@ We decided that notes related to the configuration of any network device in this
 
 We’ve also (tentatively) assumed that network devices are classed as fixed assets, like computers. But it’ll be up to your accountant and local tax guidelines if this is the case.
 
----
-
 ## More info
 ## How-to
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 
 # 14.14 Accessories
 
----
-
 ## Description
 
 Anything related to buying, maintaining, or selling all the other hangers-on and pluggers-in.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Printers and copiers; monitors; keyboards; mice and touchpads; styluses and pencils; cables and connectors; scanners; headphones and earbuds; watches; CD/DVD burners.
-
----
 
 ## Intro
 
@@ -5796,8 +4262,6 @@ This is a place to store important documents that come with the accessory, such 
 This is also a place to keep any troubleshooting notes that you’ve written and settings/configuration you’ve applied. This comes in handy when you need to replace your accessory or set up new accessories for staff.
 
 We recommend naming subfolders by purchase date and model.
-
----
 
 ## Exceptions
 
@@ -5809,8 +4273,6 @@ This is not for bills related to paying off an accessory, manage those in [[13.3
 
 If you lease an accessory from a third party, manage that in [[12.24]] or [[12.34]] (e.g. a photocopier with a service and maintenance contract).
 
----
-
 ## Also see
 
 If you sell a high-value accessory, record the details in [[13.26]] after processing the income.
@@ -5818,8 +4280,6 @@ If you sell a high-value accessory, record the details in [[13.26]] after proces
 If you purchase a high-value accessory, record the details in [[13.44]] after processing the asset.
 
 See [[14.31]] for the overall service that an accessory contributes to (e.g. printing, scanning, photocopying).
-
----
 
 ## Rationale
 
@@ -5850,8 +4310,6 @@ We would also classify accessories that process payments as part of front office
 
 Note that if you use your tablet as a point-of-sale (POS) system to control a card reader, that tablet still lives in [[14.12]]. It’s still a mobile device, plus you might use it for any number of things, not just payments.
 
----
-
 ## More info
 
 # The power of wiki links in JDex notes
@@ -5862,35 +4320,24 @@ In the example above, we store our card reader in [[12.34]]. In that JDex note, 
 
 This advice goes for anything else in your system where there’s a little ambiguity. Links are our friends.
 
----
-
 ## How-to
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.20 ■ Storage, data, & backups 🗃️
-
----
 
 ## Description
 
 How you store data, what is where, and backing it all up.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## Intro
 
 This section is an opportunity to tell yourself where everything is and how it links together. Keeping this organised and up to date will help tremendously if something happens to you, your staff, business premises, or computer equipment.
-
----
 
 ## Exceptions
 ## Also see
@@ -5899,37 +4346,26 @@ This section is an opportunity to tell yourself where everything is and how it l
 ## How-to
 ## Links
 
----
-
 ## Emoji
 
 Card file box
 
--------------------------------------------------------------------------------------
 NOTES:
 subfolder template - we will recommend one of the handful we have
 
 
 # 14.21 Storage
 
----
-
 ## Description
 
 The physical devices and cloud services that store your data.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Physical storage devices like hard drives and USB sticks; cloud storage services
 like Dropbox, iCloud, Google Drive, Amazon Web Services, or OneDrive/SharePoint.
-
----
 
 ## Intro
 
@@ -5941,15 +4377,11 @@ This is also a place to keep any troubleshooting notes that you’ve written and
 
 We recommend naming subfolders by purchase date and model.
 
----
-
 ## Exceptions
 
 This is for devices and services that you save data to and that you (mostly) control. Third-party software and applications that perform a task _and_ contain data are noted in [[14.22]].
 
 This is not for bills related to paying off a storage device, manage those in [[13.30]] or [[13.50]].
-
----
 
 ## Also see
 
@@ -5958,8 +4390,6 @@ If you sell a high-value storage device, record the details in [[13.26]] after p
 If you purchase a high-value storage device, record the details in [[13.44]] after processing the asset.
 
 See [[14.31]] for the overall service that a storage device contributes to (e.g. file services, backups and recovery).
-
----
 
 ## Rationale
 
@@ -5971,11 +4401,7 @@ We decided that notes related to the configuration of any storage device or serv
 
 We’ve also (tentatively) assumed that some high-value storage devices are classed as fixed assets, like computers. But it’ll be up to your accountant and local tax guidelines if this is the case.
 
----
-
 ## More info
-
----
 
 ## How-to
 
@@ -5987,34 +4413,23 @@ We recommend recording their usual location. This might just be a note in your J
 
 It might be worth having regular audits or reviews so you know where your stuff is. You don’t want someone carrying around your company's intellectual property on an insecure USB stick.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 ops manual - 6-monthly data and storage review?
 
 # 14.22 Data
 
----
-
 ## Description
 
 A summary of the kinds of data you have and where it is.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Documents in your computer’s documents folder; notes in a notes app; emails in an email client; other bespoke files in apps, software, or online platforms that you use; real-world data in a ledger or cashbook.
-
----
 
 ## Intro
 
@@ -6024,11 +4439,7 @@ _Some_ of this data will live on a device you control or a cloud service in [[14
 
 Also, if you use a file synchronisation service, like Syncthing, store details about that here.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
@@ -6042,13 +4453,9 @@ refer to the relevant sections of this system, such as:
 - [[11.32]],
 - [[14.40]].
 
----
-
 ## Rationale
 
 Note that we have not differentiated here between your data and your customers’ data. It’s too difficult. If you’re storing something you’re responsible for treating it carefully, regardless of the source. If you _do_ hold customer data, then you’ll need to be aware of applicable laws and regulations, as mentioned above.
-
----
 
 ## More info
 
@@ -6068,8 +4475,6 @@ And remember not to trust that important data is backed up by the third party th
 
 If you deal with customer data or anything else that’s sensitive, you’ll need a policy about this. It should outline how your business saves, retains, and backs up data in accordance with industry standards and compliance legislation.
 
----
-
 ## How-to
 
 # Recording information about your data
@@ -6082,40 +4487,27 @@ We also recommend noting how important your data is (i.e. what classifies as a d
 
 If there’s demand, we could develop a database template like Johnny’s for everyone to use.
 
----
-
 ## Links
 
 The GDPR is the [EU’s data protection law](https://gdpr.eu/what-is-gdpr/) – if you hold data from EU citizens, then you’ll need to read up on this.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.23 Backups & recovery
-
----
 
 ## Description
 
 Processes, schedules, and tests to ensure you don’t lose anything.
 
----
-
 ## Ops manual
 
 [Do this one for first release]
 
----
-
 ## Examples
 
 Descriptions of what backup services you use, such as Time Machine, Windows Backup, Backblaze, Arq; notes on what data is backed up by which service; a summary of backup jobs, including the schedule.
-
----
 
 ## Intro
 
@@ -6127,21 +4519,13 @@ A crucial component of backups, which everyone tends to neglect, is _testing tha
 
 For future reference, remember to note any configuration details you’ve chosen in your backup service. And if you have sensitive stuff, like customer data, that should also be encrypted.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 Remember to include a _printed_ copy of your data recovery instructions in [[11.23]]. Printed because you might not be able to access your computer in an emergency (e.g. due to damage, theft, or ransomware). Do not put passwords in these printouts, they never leave your password manager.
 
----
-
 ## Rationale
-
----
 
 ## More info
 
@@ -6166,11 +4550,7 @@ Whether you conduct all, or most, of your business in the digital world, organis
 
 We all have data spread around the internet. Remember that it’s _yours_. There are usually ways to export it from third-party services if you want to back it up. For instance, services like Gmail, Xero, and Instagram publish instructions on how to do this.
 
----
-
 ## How-to
-
----
 
 ## Links
 
@@ -6186,40 +4566,27 @@ How to export data from [Instagram](https://help.instagram.com/181231772500920).
 
 An article about how to back up emails in [Gmail, Outlook, and iCloud](https://www.wired.com/story/how-to-back-up-email-gmail-outlook-icloud/).
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES: 
 Show people our Airtable backup schedule.
 Recommend a subfolder template. 
 
 # 14.30 ■ Software, services, & support 💾
 
----
-
 ## Description
 
 A place to manage all the non-physical things you install or sign in to. 
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## Intro
 
 This section is about the things that sit ‘on top of’ your computers and devices. The stuff that they run. It might be a piece of software that does something on a computer. Or a broader ‘service’ that is made possible by a combination of devices. For instance, a computer, printer, and network work together to provide a printing service.
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
@@ -6235,35 +4602,24 @@ So if you’ve looked ahead and are thinking “what on Earth are internal and e
 
 If we can start thinking more like them, even just a little bit, we’ll better understand our own setups, how to troubleshoot problems, when to ask for help, and the right questions to ask to get things fixed quickly.
 
----
-
 ## More info
 ## How-to
 ## Links
-
----
 
 ## Emoji
 
 Floppy disk
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.31 Internal software & services
-
----
 
 ## Description
 
 Software and services that we create and/or manage.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## Intro
 
@@ -6294,18 +4650,12 @@ The base set of internal services that a business might supply to staff includes
 
 This ID is a place to describe how the internal service was set up, for the administrator. And instructions for how to connect to the internal service, for users. Which might just be you wearing two different hats. 
 
----
-
 ## Exceptions
 
 This is not for software that you’ve developed for sale – that goes in [[20-29]].
 
----
-
 ## Also see
 ## Rationale
-
----
 
 ## More info
 
@@ -6356,8 +4706,6 @@ Basically, just tell yourself a story on what you did so you’ll remember in th
 
 5. When we get a new iPad, we connect it to the wifi with the instructions in step 4.
 
----
-
 ## How-to
 
 # Using sub-IDs to create separate JDex notes
@@ -6375,33 +4723,22 @@ We encourage you to use this method whenever you would like more room in your JD
 
 This is one of the Decimal superpowers.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.32 External software & services
-
----
 
 ## Description
 
 Software and services created and/or managed by a third party.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
 Internet service providers (ISPs); antivirus software; notes apps; accounting software; database services; software for creating graphics or editing videos; cloud storage services; virtual private network (VPN) providers; backup services; word processing or spreadsheet apps and software; task management software; domain registrars; web and email hosting; learning platforms; webinar and conferencing services; digital music subscriptions.
-
----
 
 ## Intro
 
@@ -6413,8 +4750,6 @@ As mentioned elsewhere in this category, remember to record any settings/configu
 
 And remember, we made this ID so that there is space to save things _if you need to_. If you don’t have anything to save, that’s fine. If all you have is an account login, store it securely in your password manager and note its existence in [[14.41]].
 
----
-
 ## Exceptions
 
 This is not a place to save account logins – note their existence in [[14.41]] and store the logins securely in your password manager*.
@@ -6423,21 +4758,15 @@ This is not a place to manage ‘real-world’ subscriptions and orders (e.g. fr
 
 *Don’t have a password manager? Please stop reading this right now, and go and get a reputable one that you can use on all your business computers and devices. We use and recommend 1Password.
 
----
-
 ## Also see
 
 Add any technology subscriptions from here to the master list at [[13.35]] so you can track all of your recurring outgoings. 
-
----
 
 ## Rationale
 
 This is the companion to [[14.31]], but for stuff that you don't have direct control over. Software that you _buy or use for free_ rather than develop. Services that you _consume_ rather than provide. 
 
 Note that an internal service might use an external service as one of its components. For example, our office network is an internal service. It is made possible by the devices that are stored in [[14.13]]. As well as some external services, such as the ISP, Aussie Broadband. And eero Plus, which offers extra security, among other things. We would store those here.
-
----
 
 ## More info
 
@@ -6480,8 +4809,6 @@ Here’s a list of the kinds of external software and services that a small busi
 
 Depending on what you do, there’ll be a bunch of other stuff here. And depending on where you live, there might also be paid government software and services that are also relevant.
 
----
-
 ## How-to
 
 # Storing details about external software and services
@@ -6496,30 +4823,21 @@ Then use the numbered template provided to store specific items:
 - 05 Settings/configuration,
 - ...
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Now: make a numbered template
 Someday: make a Baserow of all the great software
 
 # 14.33 Support contracts
 
----
-
 ## Description
 
 Any paid agreement that means you can contact a human for technical support.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## Intro
 
@@ -6529,15 +4847,11 @@ It might be a contract or service level agreement (SLA) with a real-world IT sup
 
 Either way, keep any relevant official documents and/or notes on how to access help here.
 
----
-
 ## Exceptions
 
 This is not for internal troubleshooting instructions that you have written, those live with the device or service they relate to.
 
 This is not for customer management and support, that’s over in [[20-29]]. But if you use some sort of ‘technology’ that creates tickets to deal with customer feedback (e.g. Zendesk), that’s a third-party service, so note it in [[14.32]].
-
----
 
 ## Also see
 ## Rationale
@@ -6546,18 +4860,13 @@ This is not for customer management and support, that’s over in [[20-29]]. But
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.40 ■ Accounts, cybersecurity, & policies 🔐
 
----
-
 ## Description
 
 Stay safe, it’s a jungle out there.
-
----
 
 ## Ops manual
 ## Examples
@@ -6569,34 +4878,23 @@ Stay safe, it’s a jungle out there.
 ## How-to
 ## Links
 
----
-
 ## Emoji
 
 Closed padlock with key
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.41 Accounts, passwords, & access
-
----
 
 ## Description
 
 A record of all your logins and how you manage account access.
 
----
-
 ## Ops manual
 
 [See notes below]
 
----
-
 ## Examples
-
----
 
 ## Intro
 
@@ -6608,17 +4906,12 @@ If this ID starts to get busy, consider using the extend-the-end method with the
 
 The actual logins (i.e. usernames and passwords) should be in a reputable password manager. Or something else that’s encrypted. Never store your passwords in a plain text file. Ask us if you need help with password management.
 
----
-
 ## Exceptions
 
---
 
 ## Also see
 
 Knowing how to set up and disable accounts, and who has access to what, will be handy when onboarding and offboarding staff in [[11.40]].
-
----
 
 ## Rationale
 
@@ -6627,8 +4920,6 @@ We made a decision that [[14]] feels like the most logical place to manage _all_
 By _internal_ we mean things related to an internal service in your workplace, like logging in to your laptop or file servers. And by _external_ we mean any form of third-party website or software or app.
 
 And an account doesn’t have to be related to technology to be in this list. A weekly fruit box delivery to the back office isn’t ‘technology’ just because it’s ordered online. Keep any details about the everyday _management_ of the fruit box delivery in [[12.25]]. The fact that you have a login is noted here with all your other accounts.
-
----
 
 ## More info
 
@@ -6670,8 +4961,6 @@ Johnny once had a developer subscription that enabled him to access many differe
 
 He kept links to all the login pages, plus clear instructions on what to do. This was a direct replacement for browser bookmarks, where it’s easy for this sort of thing to get lost. Hopefully your work life isn’t this complex. But this is one of the many things you could use this ID for to create a little bit of serenity.
 
----
-
 ## How-to
 
 # Using IDs in your password manager
@@ -6685,17 +4974,12 @@ For example, searching for:
 - ‘12.25 coffee’ will go straight to your coffee subscription login.
 - ‘12.42’ will go straight to your vehicle insurance login, etc.
 
----
-
 ## Links
 
 An example of a password manager with a version designed for business, [1Password](https://1password.com/business-security).
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Ops manual:
 Somebody has asked for access to a system - should they have it? If so, how to do it, where do you record that they have access? Onboarding and offboarding: setting up new accounts and disabling access, disabling email account on Google Workspace console, how do you ensure that someone who left has their access taken away? And their devices returned? And their licences re-pooled? And their software deactivated?
@@ -6704,18 +4988,12 @@ See 14.41 text file for words we deleted for future consideration about location
 
 # 14.42 Technical cybersecurity
 
----
-
 ## Description
 
 Defining the threats to the business and actively protecting against them.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## Intro
 
@@ -6740,25 +5018,17 @@ Some initial practical steps to take might include:
 
 The Cyber Wardens site (link below) is a handy resource for small businesses. Even if you don’t live in Australia, it outlines the kinds of things you need to be aware of. There might be a similar initiative in your country – let us know and we’ll add it to the list.
 
----
-
 ## Exceptions
 
 This is for your overall cybersecurity plan – the devices or software involved are managed elsewhere (e.g. a firewall lives in [[14.13]], antivirus software lives in [[14.32]]).
-
----
 
 ## Also see
 
 [[14.43]] for the human side of things.
 
----
-
 ## Rationale
 ## More info
 ## How-to
-
----
 
 ## Links
 
@@ -6768,26 +5038,17 @@ This is for your overall cybersecurity plan – the devices or software involved
 
 [Advice on how to protect yourself online](https://www.cyber.gov.au/protect-yourself) from the Australian Cyber Security Centre.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.43 Behavioural cybersecurity
-
----
 
 ## Description
 
 How the business will behave when interacting with the digital world.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -6803,8 +5064,6 @@ A cybersecurity policy might address behaviours around things like:
 - responsible data handling,
 - use of storage devices,
 - and how to report a threat, or get help if a security event occurs.
-
----
 
 ## Intro
 
@@ -6832,15 +5091,11 @@ We also recommend having a _verbal_ password that you and your staff can use on 
 
 It goes like this. A business owner went overseas to a conference. They mentioned specific details in their out-of-office message. A scammer got the message, called the office, and pretended to be the boss. “Hey, Paris is great, quick favour, my card failed, can you transfer $$$ to this other account, thanks, gotta run!”. This is where you say, “sure, what’s the password?” and they hang up.
 
----
-
 ## Exceptions
 
 Compliance obligations around things like privacy and data handling go in [[11.13]].
 
 If you need to write a data retention policy, that lives in [[14.22]].
-
----
 
 ## Also see
 
@@ -6850,13 +5105,9 @@ If you organise formal cybersecurity training, manage that in [[11.50]] and, if 
 
 Having good policies and behaviours here will help with [[14.44]].
 
----
-
 ## Rationale
 ## More info
 ## How-to
-
----
 
 ## Links
 
@@ -6866,26 +5117,17 @@ Having good policies and behaviours here will help with [[14.44]].
 
 This festive guide by the CyberWarden initiative has [cybersecurity tips] (https://cyberwardens.com.au/cyber-security-holiday-guide-for-your-small-business/#elementor-toc__heading-anchor-0) that are relevant all year round.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.44 Cyber insurance, incidents, & claims
-
----
 
 ## Description
 
 Policies, coverage details, incident reports, and claim forms for your digital world.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -6896,8 +5138,6 @@ Depending on the policy, cyber insurance may cover costs related to:
 - interruptions to business operations caused by a cyber event, 
 - recovery of lost business data,
 - being sued by a third party for damages caused by a cyber event.
-
----
 
 ## Intro
 
@@ -6911,49 +5151,32 @@ And if your business sells a technology product or provides technology services,
 
 This is also where to store incident reports that might become part of a claim.
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
 We recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal.
 
----
-
 ## More info
 ## How-to
-
----
 
 ## Links
 
 [An article about cyber insurance](https://www.nerdwallet.com/article/small-business/cybersecurity-insurance) from Nerd Wallet.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.50 ■ Our online presence 🌏
-
----
 
 ## Description
 
 The administration of sites and accounts where your business is represented online.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## Intro
 
@@ -6961,15 +5184,11 @@ Think about this section as being similar to your office deeds, vehicle registra
 
 It’s _not_ the words, images, or videos that you publish. Anything that you add to a website, blog, or social media account is a creative job. Any email newsletter you send is a creative job. And that is managed over in your creative inputs and outputs categories.
 
----
-
 ## Exceptions
 
 This is not where you produce and store the content that you publish online, that happens in [[80-89]] and [[90-99]].
 
 This is not where you manage anything to do with a marketing campaign or other self-promotion, that happens in [[XX-XX]].
-
----
 
 ## Also see
 ## Rationale
@@ -6977,29 +5196,20 @@ This is not where you manage anything to do with a marketing campaign or other s
 ## How-to
 ## Links
 
----
-
 ## Emoji
 
 Globe showing Asia and Australia
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.51 Domain & DNS management
-
----
 
 ## Description
 
 Anything related to registering domains and DNS management.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## Intro
 
@@ -7013,21 +5223,13 @@ You might also keep research and shortlists here when you’re searching for a d
 
 Your domain name is very important because you can usually only ‘buy’ them for a year (technically it’s a rental). So people forget to renew them and then whoops, everything’s gone. So put a reminder in your calendar. You can build another website anytime. But if someone else gets your domain name, it’s all over.
 
----
-
 ## Exceptions
-
----
 
 ## Also see
 
 Any services you use that are related to registering a domain or DNS management live in [[14.32]].
 
----
-
 ## Rationale
-
----
 
 ## More info
 
@@ -7045,11 +5247,7 @@ It’s like the most important address book. So when someone wants to visit our 
 
 In the future, we could make an ops manual to help with this kind of thing. Let us know if that’s something you’d like.
 
----
-
 ## How-to
-
----
 
 ## Links
 
@@ -7057,26 +5255,17 @@ Tips on [registering a domain name](https://business.gov.au/online-and-digital/b
 
 Tips on [setting up a business website](https://business.gov.au/online-and-digital/business-website/set-up-a-business-website) from the Australian Government.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.52 Websites, blogs, & communities
-
----
 
 ## Description
 
 The general admin related to setting up and managing websites, blogs, and communities.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -7089,8 +5278,6 @@ Whether you set up your site with a third-party service, hired a web designer, o
 - links to the master creative files,
 - and anything else that’s important.
 
----
-
 ## Intro
 
 This is a place to store any details related to the set up and ongoing management of websites that you control. It’s about the underlying _administration_ of a website. Not what’s on it.
@@ -7101,23 +5288,15 @@ We also recommend recording any configuration or behind-the-scenes settings. For
 
 This includes _blogs and communities_. But for simplicity, we’ve focused on websites here. If you do manage a blog or community, just follow the same advice.
 
----
-
 ## Exceptions
 
 This is not where you create and save the content that you publish on a website, that happens in [[80-89]] and [[90-99]].
-
----
 
 ## Also see
 
 Any services related to building or hosting a website, blog, or community are noted in [[14.32]] (e.g. things like Squarespace, Netlify, WordPress, Discourse, Discord).
 
----
-
 ## Rationale
-
----
 
 ## More info
 
@@ -7128,8 +5307,6 @@ Your website is just a bunch of files on a disk somewhere. Your web server (the 
 There’s nothing stopping you hosting a website yourself. But that’d be daft. What happens when your internet is down or when you move house? And do you really want thousands of people using your home internet connection to access the website? 
 
 So instead, there are website hosting services. We use Netlify, but there’s many others. This is their business so you get all sorts of advantages. For example, their web servers are all around the world so people don’t have to connect to a server where we live. That’s all ‘hosting’ is.
-
----
 
 ## How-to
 
@@ -7151,27 +5328,18 @@ We need to get out of the habit of having 50 copies of our important creative as
 
 We discuss this in more detail in the creative categories.
 
----
-
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 # 14.53 Social media
-
----
 
 ## Description
 
 The general admin related to setting up and managing social media accounts.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -7188,8 +5356,6 @@ Whether you have one account, or multiple, you might record things like:
 - how to set up your AV equipment for a video shoot,
 - and anything else that’s important.
 
----
-
 ## Intro
 
 Similar to [[14.52]], this is a place to store any details related to the set up and ongoing management of social media accounts that you control. It’s about the underlying _administration_ of a social media account. Not what’s on it.
@@ -7202,29 +5368,19 @@ If you decide to close an account and download your data, you could store that h
 
 *If you _are_ an expert, it would be great to see you in this community thread.
 
----
-
 ## Exceptions
 
 This is not where you create and save the content that you post on social media, that happens in [[80-89]] and [[90-99]].
-
----
 
 ## Also see
 
 Any services related to using a social media account are noted in [[14.32]] (e.g. things like Linktree or Canva).
 
----
-
 ## Rationale
 
 By social media, we mean any third-party platform where you can post and publish words, images, or video, that _isn’t_ your own website, blog, community, or newsletter. And that people can interact with in some way. For simplicity, we recommend that it sits under one umbrella here.
 
----
-
 ## More info
-
----
 
 ## How-to
 
@@ -7255,33 +5411,22 @@ We need to get out of the habit of having 50 copies of our important creative as
 
 We discuss this in more detail in the creative categories.
 
----
-
 ## Links
 
 Tips on [claiming social media handles](https://www.godaddy.com/resources/skills/how-to-claim-social-media-handles-and-why-you-should-do-it-now) from GoDaddy.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Template/subfolder recommendation for if you have several accounts
 
 # 14.54 Electronic mailing lists & updates
 
----
-
 ## Description
 
 The general admin related to setting up and managing electronic mailing lists and updates.
 
----
-
 ## Ops manual
-
----
 
 ## Examples
 
@@ -7295,8 +5440,6 @@ Whether you use a third-party service or manage this yourself, you might record 
 - troubleshooting tips,
 - and anything else that’s important.
 
----
-
 ## Intro
 
 Similar to [[14.53]], this is a place to store any details related to the set up and ongoing management of updates that you control. Things like email newsletters and SMS updates. It’s about the underlying _administration_ of the account and mailing list. Not what you send out.
@@ -7307,8 +5450,6 @@ We also recommend recording any configuration or behind-the-scenes settings. For
 
 If you’d like to start doing this kind of thing, it’s worth researching different platforms. Most people have heard of Mailchimp because they’ve been around for years. But a quick search shows there’s lots of options now. So have a look at the features and pricing and see which platform is right for your business.
 
----
-
 ## Exceptions
 
 This is not where you manage your actual email account, that’s up in [[14.32]] and [[14.41]].
@@ -7317,23 +5458,17 @@ This is not where you create and save the content you send out, that happens in 
 
 If you do printed mail-outs, manage the mailing lists in [[XX-XX]], and the content development in [[80-89]] and [[90-99]].  
 
----
-
 ## Also see
 
 Any services related to managing newsletters and updates are noted in [[14.32]].
 
 Keep in mind any applicable privacy and data protection laws when dealing with mailing lists, as noted in [[11.13]] and [[14.22]].
 
----
-
 ## Rationale
 
 Most businesses use a third-party platform for newsletters and updates. So that’s where your mailing list lives. Because Johnny’s a nerd, he manages email newsletters himself. He’ll _probably_ store his (encrypted) list here. But there is some overlap with customer management. In times like this we ask ourselves “where would a new staff member look for this?”. We reckon they’d try here first. 
 
 And remember, mailing lists contain personal data. So you need to be aware of applicable privacy and data protection laws (like the GDPR). Especially if you decide to switch platforms and need to export data, or if a subscriber requests a copy of their data from you. 
-
----
 
 ## More info
 
@@ -7345,7 +5480,6 @@ For example, you subscribe to a third-party service and send out four email news
 
 If you do all your work inside your newsletter platform and have nothing to put here right now, don’t stress. You don’t need to fill IDs just because we made them. _Other people_ will put things here. We want to ensure they have a place.
 
---
 
 ## How-to
 
@@ -7367,37 +5501,26 @@ We need to get out of the habit of having 50 copies of our important creative as
 
 We discuss this in more detail in the creative categories.
 
----
-
 ## Links
 
 The GDPR is the [EU’s data protection law](https://gdpr.eu/what-is-gdpr/) – if you hold data from EU citizens, then you’ll need to read up on this.
 
 A genuine endorsement – if you’re looking to set up a newsletter for your business, check out [Buttondown](https://buttondown.com/), a nice service run by nice humans.
 
----
-
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 
 
 
 # 14.90 ■ Technology library 📚
 
----
-
 ## Description
 
 A place to put information that’s related to this category, kinda interesting, mostly unimportant, and definitely doesn’t fit elsewhere.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## Intro
 
@@ -7419,17 +5542,11 @@ Remember to leave a note in your JDex when you save things in this library so yo
 
 (This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)
 
----
-
 ## Exceptions
 
 Things that contain information that is specific to your business, and that don’t fit elsewhere, should go in [[13.14]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -7443,36 +5560,25 @@ Importantly, it’s not that important. It has nothing to do with business opera
 
 
 
----
-
 ## More info
 ## How-to
 ## Links
-
----
 
 ## Emoji
 
 Books
 
--------------------------------------------------------------------------------------
 NOTES:
 
 
 # 14.91 Curated lists of online resources
 
----
-
 ## Description
 
 If you have treasured collections of links that you don’t want to lose, store them here.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## Intro
 
@@ -7480,58 +5586,41 @@ xxxx
 
 NB. this is just one ID, organise the rest as you wish if you make a general library
 
----
-
 ## Exceptions
 ## Also see
-
----
 
 ## Rationale
 
 see mind map - explain why this extra ID is here
-
----
 
 ## More info
 ## How-to
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 
 
 15 ✈️ Travel, events, & social
-
----
 
 ## Description
 ## Ops manual
 ## Examples
 ## More info
 
----
-
 ## Exceptions
 
 This category is for managing _your_ travel and events – if your product or service is related (e.g. you’re a travel agent or event coordinator) that goes in [[20-29]].
-
----
 
 ## Also see
 ## Rationale
 ## How-to
 ## Links
 
----
-
 ## Emoji
 
 Aeroplane
 
--------------------------------------------------------------------------------------
 NOTES:
 Gift ideas for farewells
 Hospitality & gifts - under expenses 
@@ -7540,8 +5629,6 @@ You’re leaving, it’s your birthday, you had a baby, get well soon
 
 # 15.00 ■ Travel, events, & social category management ⚙️
 
----
-
 ## Description
 ## Ops manual
 ## Examples
@@ -7552,26 +5639,18 @@ You’re leaving, it’s your birthday, you had a baby, get well soon
 ## How-to
 ## Links
 
----
-
 ## Emoji
 
 Gear
 
 # 15.XX Business travel
 
----
-
 ## Description
 
 A neat template to organise work-related trips.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -7593,22 +5672,16 @@ That’s why we created a work trip template, so everything stays neat and tidy:
 - 50 Itineraries & schedules
 - 60 Expenses to claim
 
----
-
 ## Exceptions
 
 This is not for daily vehicle running expenses or deductions, those go in [[12.43]].
-
----
 
 ## Also see
 ## Rationale
 ## How-to
 ## Links
 ## Emoji
--------------------------------------------------------------------------------------
-
-NOTES:
+----------------------------------------------------------------------------------NOTES:
 tbc, is this here? 
 I kept business travel with product
 It was related to a job, I had a ‘travel and expenses’ folder in the job folder 
@@ -7633,18 +5706,12 @@ Extend the template?
 
 # 15.90 ■ Travel, events, & social library 📚
 
----
-
 ## Description
 
 A place to put information that’s related to this category, kinda interesting, mostly unimportant, and definitely doesn’t fit elsewhere.
 
----
-
 ## Ops manual
 ## Examples
-
----
 
 ## More info
 
@@ -7666,17 +5733,11 @@ Remember to leave a note in your JDex when you save things in this library so yo
 
 (This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)
 
----
-
 ## Exceptions
 
 Things that contain information that is specific to your business, and that don’t fit elsewhere, should go in [[13.14]].
 
----
-
 ## Also see
-
----
 
 ## Rationale
 
@@ -7688,26 +5749,19 @@ It doesn’t fit anywhere else. It’s just a thing you wanted to save. And you 
 
 Importantly, it’s not that important. It has nothing to do with business operations. If it wasn’t backed up it wouldn’t matter. If you lose it, you could probably download it again.
 
----
-
 ## How-to
 ## Links
-
----
 
 ## Emoji
 
 Books
 
--------------------------------------------------------------------------------------
 NOTES:SUPPLIERS examples for the zero in each category:
 - **Human resources related:** contract staff who are not employees, recruitment and labour hire agencies, training providers.
 - **Communications related:** graphic or web designer, marketing agency, sign writer.
 
 
 20-29 The product or service
-
----
 
 ## Description
 ## Ops manual
@@ -7720,7 +5774,6 @@ NOTES:SUPPLIERS examples for the zero in each category:
 ## Links
 ## Emoji
 
--------------------------------------------------------------------------------------
 NOTES:
 Remember to add an insurance ID in the same pattern as other categories
 e.g. product liability insurance, what else?

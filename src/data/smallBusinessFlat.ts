@@ -127,6 +127,9 @@ import { area_00_09 } from "./area_00_09";
 import id_11_11 from "@data/sb_ts/11.11";
 import id_11_12 from "@data/sb_ts/11.12";
 import id_11_13 from "@data/sb_ts/11.13";
+import id_11_14 from "@data/sb_ts/11.14";
+import id_11_15 from "@data/sb_ts/11.15";
+import id_11_20 from "@data/sb_ts/11.20";
 
 const flattenedData: FlattenedData = {
   J82: {
@@ -354,74 +357,13 @@ const flattenedData: FlattenedData = {
     },
   },
   "11.14": {
-    number: "11.14",
-    type: "id",
-    title: "Other legal matters",
-    description:
-      "A place for any other legal matters or ‘serious’ documents related to the business entity that a lawyer may have prepared, were issued by the government, or certified by a public official. ",
-    metadata: {
-      createdDate: "2024-11-19",
-      updatedDate: "2024-11-19",
-    },
-    extensions: {
-      smallBusiness: {
-        examples:
-          "Statutory declarations; affidavits; documents related to proof of ownership; non-disclosure or confidentiality agreements; change of company director paperwork; contracts that don’t fit elsewhere; court appearances. ",
-        moreInfo:
-          "It’s hard to predict what other core documents a business may have around the world. Or any legal matters that may need to be dealt with. But if it’s important and doesn’t fit elsewhere, put it here and note its location in your JDex. ",
-        exceptions:
-          "We’re still dealing with the business entity here, not employees, products, or suppliers. Any legal matters or ‘serious’ documents related to those things live with them. ",
-        alsoSee: "",
-        rationale: "",
-        links: "",
-      },
-    },
+    ...id_11_14,
   },
   "11.15": {
-    number: "11.15",
-    type: "id",
-    title: "Selling it or closing it",
-    description:
-      "Whether you sell the business, pass it on to a family member, or close it down, this is a place to work out the details. ",
-    metadata: {
-      createdDate: "2024-11-19",
-      updatedDate: "2024-11-19",
-    },
-    extensions: {
-      smallBusiness: {
-        examples: "",
-        moreInfo:
-          "Businesses can end for many reasons, happy, sad, or indifferent. You might want to retire or just try something new. Or perhaps another business is interested in a merger or acquisition. Or there may be involuntary reasons like bankruptcy or a natural disaster. We haven’t seen Succession, the TV show, but we get the gist. This kind of planning would also be something to consider here. Hopefully your situation is less dramatic. And even if you’re a sole trader with a simple set up, there might be things for you to store here. For instance, you decide to return to regular employment and want to deregister or pause your business entity to avoid ongoing fees or tax obligations. ",
-        exceptions: "",
-        alsoSee:
-          "Don’t forget to include this Johny.Decimal small business system in [[13.34]]. ",
-        rationale: "",
-        links: "",
-      },
-    },
+    ...id_11_15,
   },
   "11.20": {
-    number: "11.20",
-    type: "id",
-    title: "Planning, contingencies, & insurance",
-    isHeader: true,
-    emoji: "🧭",
-    description:
-      "The documents you write to guide the business in the short and longer term, what to do when something bad happens, and insurance for the entity and its people. ",
-    metadata: {
-      createdDate: "2024-11-19",
-      updatedDate: "2024-11-19",
-    },
-    extensions: {
-      smallBusiness: {
-        examples: "",
-        moreInfo: "",
-        exceptions: "",
-        alsoSee: "",
-        rationale: "",
-        links: "",
-      },
-    },
+    ...id_11_20,
   },
   "11.21": {
     number: "11.21",

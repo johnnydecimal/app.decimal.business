@@ -6,9 +6,10 @@ const entry: IdEntry = {
   "description": "Any laws, codes, or standards relevant to your business, including inspections and audits that may be required.",
   "type": "id",
   "isPublic": false,
+  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T00:03:04.047Z",
-    "updatedDate": "2025-02-12T00:03:04.047Z"
+    "createdDate": "2025-02-12T00:19:00.373Z",
+    "updatedDate": "2025-02-12T00:19:00.373Z"
   },
   "extensions": {
     "smallBusiness": {

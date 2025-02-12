@@ -6,9 +6,10 @@ const entry: IdEntry = {
   "description": "Proof of the business' existence, trading structure, and name – where it all begins!",
   "type": "id",
   "isPublic": true,
+  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T00:03:04.045Z",
-    "updatedDate": "2025-02-12T00:03:04.046Z"
+    "createdDate": "2025-02-12T00:19:00.371Z",
+    "updatedDate": "2025-02-12T00:19:00.372Z"
   },
   "extensions": {
     "smallBusiness": {

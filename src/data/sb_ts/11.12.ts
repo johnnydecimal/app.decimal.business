@@ -6,9 +6,10 @@ const entry: IdEntry = {
   "description": "Documents that you apply for, or are earned via training, so you can legally provide a service or operate in a particular location.",
   "type": "id",
   "isPublic": false,
+  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-12T00:03:04.047Z",
-    "updatedDate": "2025-02-12T00:03:04.047Z"
+    "createdDate": "2025-02-12T00:19:00.372Z",
+    "updatedDate": "2025-02-12T00:19:00.372Z"
   },
   "extensions": {
     "smallBusiness": {
