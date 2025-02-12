@@ -9,8 +9,8 @@ const entry: IdEntry = {
   "isHeader": true,
   "emoji": "⛔",
   "metadata": {
-    "createdDate": "2025-02-12T02:55:28.329Z",
-    "updatedDate": "2025-02-12T02:55:28.329Z"
+    "createdDate": "2025-02-12T03:25:47.356Z",
+    "updatedDate": "2025-02-12T03:25:47.356Z"
   },
   "extensions": {
     "smallBusiness": {

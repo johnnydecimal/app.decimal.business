@@ -28,6 +28,18 @@
     "isPublic": true
   },
   {
+    "number": "13",
+    "title": "Money earned, spent, saved, & owed",
+    "description": "This category is all about keeping track of your finances, from planning and budgeting, to reconciling and submitting your annual returns.",
+    "type": "category",
+    "emoji": "💰",
+    "metadata": {
+      "createdDate": "2024-11-18",
+      "updatedDate": "2024-11-18"
+    },
+    "isPublic": true
+  },
+  {
     "number": "21",
     "title": "TESTENV Twenty-one with as long as a word is practicable?",
     "description": "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
@@ -194,8 +206,8 @@
     "type": "id",
     "emoji": "🗂️",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.104Z",
-      "updatedDate": "2025-02-12T02:54:04.104Z"
+      "createdDate": "2025-02-12T03:25:47.335Z",
+      "updatedDate": "2025-02-12T03:25:47.336Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -207,8 +219,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.105Z",
-      "updatedDate": "2025-02-12T02:54:04.105Z"
+      "createdDate": "2025-02-12T03:25:47.337Z",
+      "updatedDate": "2025-02-12T03:25:47.337Z"
     },
     "smallBusiness": {
       "examples": "Business entity registrations; trading name registrations; income and sales tax registrations; trademark records for trading names; company director identity applications.",
@@ -287,8 +299,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.106Z",
-      "updatedDate": "2025-02-12T02:54:04.106Z"
+      "createdDate": "2025-02-12T03:25:47.337Z",
+      "updatedDate": "2025-02-12T03:25:47.337Z"
     },
     "smallBusiness": {
       "examples": "Liquor licence; safe food handling certificate; truck or taxi licence; police check; zoning permit; government security clearance; market stall holder permit; working with children check; tradesperson licence; responsible service of alcohol certificate; environmental permit; any other legally-required core qualification.",
@@ -305,8 +317,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.106Z",
-      "updatedDate": "2025-02-12T02:54:04.106Z"
+      "createdDate": "2025-02-12T03:25:47.337Z",
+      "updatedDate": "2025-02-12T03:25:47.337Z"
     },
     "smallBusiness": {
       "examples": "Workplace health and safety compliance; environmental laws; industry manufacturing standards; payroll governance, building standards and safety inspections; retail fair trading laws; codes of conduct for advertising and marketing; food safety inspections; financial audits; local and international import/export regulations; laws around the supply of alcohol; employment and unfair dismissal laws; privacy and data protection laws.",
@@ -337,8 +349,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.106Z",
-      "updatedDate": "2025-02-12T02:54:04.106Z"
+      "createdDate": "2025-02-12T03:25:47.338Z",
+      "updatedDate": "2025-02-12T03:25:47.338Z"
     },
     "smallBusiness": {
       "examples": "Statutory declarations; affidavits; documents related to proof of ownership; non-disclosure or confidentiality agreements; change of company director paperwork; contracts that don’t fit elsewhere; financial disputes that make it to court.",
@@ -354,8 +366,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.107Z",
-      "updatedDate": "2025-02-12T02:54:04.107Z"
+      "createdDate": "2025-02-12T03:25:47.338Z",
+      "updatedDate": "2025-02-12T03:25:47.338Z"
     },
     "smallBusiness": {
       "moreInfo": "Businesses can end for many reasons, happy, sad, or indifferent.\n\nYou might want to retire or just try something new. Or perhaps another business is interested in a merger or acquisition. Or there may be involuntary reasons like bankruptcy or a natural disaster.\n\nWe haven’t seen Succession, the TV show, but we get the gist. This kind of planning would also be something to consider here. Hopefully your situation is less dramatic.\n\nAnd even if you’re a sole trader with a simple set up, there might be things for you to store here. For instance, you decide to return to regular employment and want to deregister or pause your business entity to avoid ongoing fees or tax obligations.",
@@ -370,8 +382,8 @@
     "type": "id",
     "emoji": "🧭",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.107Z",
-      "updatedDate": "2025-02-12T02:54:04.107Z"
+      "createdDate": "2025-02-12T03:25:47.339Z",
+      "updatedDate": "2025-02-12T03:25:47.339Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -383,8 +395,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.108Z",
-      "updatedDate": "2025-02-12T02:54:04.108Z"
+      "createdDate": "2025-02-12T03:25:47.339Z",
+      "updatedDate": "2025-02-12T03:25:47.339Z"
     },
     "smallBusiness": {
       "moreInfo": "This may be less relevant if you’re, say, a freelance graphic designer working on a project-by-project basis. But for most other businesses, whether new or existing, this is something you shouldn’t skip.\n\nA business plan contains all the good stuff like your mission and vision statements, goals, risk analysis, and financial position. Do periodic reviews and remember to save the previous version of the document when updating it. And if you have innovative services or practices, you may wish to protect the plan with a confidentiality agreement. \n\nIf you’ve never written one, government business websites often have handy templates to get you started.",
@@ -400,8 +412,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.108Z",
-      "updatedDate": "2025-02-12T02:54:04.108Z"
+      "createdDate": "2025-02-12T03:25:47.339Z",
+      "updatedDate": "2025-02-12T03:25:47.339Z"
     },
     "smallBusiness": {
       "examples": "Public liability insurance; professional indemnity insurance; workers compensation insurance.",
@@ -419,8 +431,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.108Z",
-      "updatedDate": "2025-02-12T02:54:04.108Z"
+      "createdDate": "2025-02-12T03:25:47.341Z",
+      "updatedDate": "2025-02-12T03:25:47.341Z"
     },
     "smallBusiness": {
       "moreInfo": "It’s important to identify events that can negatively impact your business. And then plan how to make decisions and operate during the event, and recover afterwards (often referred to as ‘business continuity and disaster recovery’). Your future self will thank you for having a process in place if disaster strikes.\n\nA business risk might be specific to your product or service. While emergencies might be location-specific natural disasters, human-caused events like crime, or municipal events like a water main rupturing.\n\nFor example, if you sell croissants, your risk management plan might include what to do if the price of butter rises. If your business is next to a river, your emergency management plan might include flood evacuation procedures.\n\nEither way, don’t forget to securely store contact numbers for local emergency, police, fire, and ambulance services, as well as recovery contacts for things like insurance, banking, and suppliers.\n\n### Emergency digital recovery kit\n\nAnother risk you might consider here is – what if something happens to you? Who do you trust the most to log in to things, pay bills, and contact people on your behalf?\n\nIn our [Life Admin System](https://jdcm.al/14.11/), we discuss the concept of an emergency recovery kit. Which is basically just a list of instructions, stored in a secure location, that outlines your digital life for a trusted person in an emergency. In this case, it’s for your business.\n\nThis will obviously contain sensitive information, so don’t leave it lying around! There’s a good chance that your password manager can help you manage this kind of thing securely.",
@@ -435,8 +447,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.109Z",
-      "updatedDate": "2025-02-12T02:54:04.109Z"
+      "createdDate": "2025-02-12T03:25:47.344Z",
+      "updatedDate": "2025-02-12T03:25:47.344Z"
     },
     "smallBusiness": {
       "examples": "What went well today/this week/this month/this year; ‘lessons learned’ to avoid repeat mistakes; miscellaneous anecdotes from staff meetings; and any other notes, dreams, or ideas related to the business.",
@@ -451,8 +463,8 @@
     "type": "id",
     "emoji": "👍",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.112Z",
-      "updatedDate": "2025-02-12T02:54:04.112Z"
+      "createdDate": "2025-02-12T03:25:47.344Z",
+      "updatedDate": "2025-02-12T03:25:47.345Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -464,8 +476,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.113Z",
-      "updatedDate": "2025-02-12T02:54:04.113Z"
+      "createdDate": "2025-02-12T03:25:47.345Z",
+      "updatedDate": "2025-02-12T03:25:47.345Z"
     },
     "smallBusiness": {
       "examples": "Company values; enterprise or other registered agreements between employers and employees; formal policies that staff will be assessed against during reviews; how you communicate news and updates; dress code and grooming expectations; buddy systems for new staff; culture-related policies on things like working from home, pets or kids in the workplace, or social activities.",
@@ -482,8 +494,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.113Z",
-      "updatedDate": "2025-02-12T02:54:04.113Z"
+      "createdDate": "2025-02-12T03:25:47.345Z",
+      "updatedDate": "2025-02-12T03:25:47.345Z"
     },
     "smallBusiness": {
       "examples": "Customer service policy; refund policy; retail terms and conditions; privacy policy; disclaimers; timely payment process for suppliers; environmental and sustainability policy; equal opportunity employer statement; anti-slavery or land acknowledgement statements.",
@@ -500,8 +512,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.114Z",
-      "updatedDate": "2025-02-12T02:54:04.114Z"
+      "createdDate": "2025-02-12T03:25:47.346Z",
+      "updatedDate": "2025-02-12T03:25:47.346Z"
     },
     "smallBusiness": {
       "examples": "Procedures for managing customer complaints or negative feedback; guidelines for replying to social media comments and online reviews; strategies for disputes with suppliers.",
@@ -517,8 +529,8 @@
     "type": "id",
     "emoji": "🦸",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.114Z",
-      "updatedDate": "2025-02-12T02:54:04.114Z"
+      "createdDate": "2025-02-12T03:25:47.346Z",
+      "updatedDate": "2025-02-12T03:25:47.346Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -530,8 +542,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.115Z",
-      "updatedDate": "2025-02-12T02:54:04.115Z"
+      "createdDate": "2025-02-12T03:25:47.347Z",
+      "updatedDate": "2025-02-12T03:25:47.347Z"
     },
     "smallBusiness": {
       "examples": "Recruitment agencies or online employment platforms you use’ role descriptions for job ads; CVs/resumes received; the interview process and questions; candidate shortlists; the onboarding process; information for new employees; a checklist that covers the entire hiring process.",
@@ -546,8 +558,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.115Z",
-      "updatedDate": "2025-02-12T02:54:04.115Z"
+      "createdDate": "2025-02-12T03:25:47.348Z",
+      "updatedDate": "2025-02-12T03:25:47.348Z"
     },
     "smallBusiness": {
       "moreInfo": "In Australia, staff records must be kept for up to 7 years. Your government may have different requirements. \n\nWe suggest storing the records in this ID as per the image below. Each employee has a subfolder labelled with the year-month-day they joined (so it sorts neatly) and their name. Inside that is a standard template. \n\nWe have provided an example template in the folder system. Adjust this to your needs as required, just remember to be consistent.\n\n2014-07-08 Slydell, Bob\n2017-08-21 Bolton, Michael\n2019-02-14 Lumbergh, Bill\n\t\t\t\t\t10 Personal details\n\t\t\t\t\t20 Payments and deductions\n\t\t\t\t\t30 Work hours and overtime\n\t\t\t\t\t40 Leave taken and accrued\n\t\t\t\t\t50 Pension contributions\n\t\t\t\t\t60 Training completed\n\t\t\t\t\t70 Ending the employment\n\nOther records you might consider keeping include: CVs/resumes, job applications and pre-employment checks, employment contracts, performance reviews, trade or registration certificates, details of uniforms and equipment allocated, roles held and promotions.",
@@ -562,8 +574,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.115Z",
-      "updatedDate": "2025-02-12T02:54:04.115Z"
+      "createdDate": "2025-02-12T03:25:47.349Z",
+      "updatedDate": "2025-02-12T03:25:47.349Z"
     },
     "smallBusiness": {
       "examples": "Performance review templates; completed forms from staff; the follow-up process; resources and strategies for managing underperformance or misconduct; how you deliver warnings and disciplinary action.",
@@ -580,8 +592,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.115Z",
-      "updatedDate": "2025-02-12T02:54:04.115Z"
+      "createdDate": "2025-02-12T03:25:47.350Z",
+      "updatedDate": "2025-02-12T03:25:47.350Z"
     },
     "smallBusiness": {
       "examples": "The offboarding process and paperwork; checklists for handing things back; exit interview templates; handover documents and meetings; notice periods for resignations, redundancies, or dismissals.",
@@ -599,8 +611,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.116Z",
-      "updatedDate": "2025-02-12T02:54:04.116Z"
+      "createdDate": "2025-02-12T03:25:47.350Z",
+      "updatedDate": "2025-02-12T03:25:47.350Z"
     },
     "smallBusiness": {
       "examples": "Dogs or horses that work in tourism or muster livestock; birds who help with biological pest control; dogs trained for a service such as companionship or search and rescue; truffle pigs or dogs.",
@@ -617,8 +629,8 @@
     "type": "id",
     "emoji": "🎓",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.116Z",
-      "updatedDate": "2025-02-12T02:54:04.116Z"
+      "createdDate": "2025-02-12T03:25:47.351Z",
+      "updatedDate": "2025-02-12T03:25:47.351Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -630,8 +642,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.116Z",
-      "updatedDate": "2025-02-12T02:54:04.116Z"
+      "createdDate": "2025-02-12T03:25:47.351Z",
+      "updatedDate": "2025-02-12T03:25:47.351Z"
     },
     "smallBusiness": {
       "examples": "Fire drills and general safety training; job-specific software or equipment training; keeping a first aid qualification up-to-date; getting a safe food handling certificate; how to run the reception desk of a dental surgery; on-the-job training during an apprenticeship; how to open and close a cafe or set up a food truck; any other mandatory role-based training, certifications, or competencies.",
@@ -648,8 +660,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.117Z",
-      "updatedDate": "2025-02-12T02:54:04.117Z"
+      "createdDate": "2025-02-12T03:25:47.351Z",
+      "updatedDate": "2025-02-12T03:25:47.351Z"
     },
     "smallBusiness": {
       "examples": "Doing an Excel or Xero course to improve your skills; attending an advanced hairdressing or bar tending course to learn new techniques; completing an MBA or specialist dental qualification; gaining the project management professional (PMP) certification.",
@@ -665,8 +677,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.117Z",
-      "updatedDate": "2025-02-12T02:54:04.117Z"
+      "createdDate": "2025-02-12T03:25:47.352Z",
+      "updatedDate": "2025-02-12T03:25:47.352Z"
     },
     "smallBusiness": {
       "examples": "Materials you collect at industry conferences; notes in your JDex from YouTube software tutorials; a list of business-related books you plan to read; presentations from webinars or Meetups you attended; paid media subscriptions like specialty podcasts, blogs, newsletters, journals, periodicals, and magazines.",
@@ -682,8 +694,8 @@
     "type": "id",
     "emoji": "🤝",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.117Z",
-      "updatedDate": "2025-02-12T02:54:04.117Z"
+      "createdDate": "2025-02-12T03:25:47.352Z",
+      "updatedDate": "2025-02-12T03:25:47.352Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -695,8 +707,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.117Z",
-      "updatedDate": "2025-02-12T02:54:04.117Z"
+      "createdDate": "2025-02-12T03:25:47.352Z",
+      "updatedDate": "2025-02-12T03:25:47.352Z"
     },
     "smallBusiness": {
       "examples": "Certified Practising Accountants Australia; Australian Computer Society; Australasian Medical Writers’ Association; Media Entertainment & Arts Alliance; Australian Physiotherapy Association; Personal Trainers Association of Australia.",
@@ -711,8 +723,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.117Z",
-      "updatedDate": "2025-02-12T02:54:04.117Z"
+      "createdDate": "2025-02-12T03:25:47.353Z",
+      "updatedDate": "2025-02-12T03:25:47.353Z"
     },
     "smallBusiness": {
       "examples": "Government small business or finance websites; helplines; mentors; peers/other business owners; professional bodies; unions; ombudsman and watchdogs; mental health organisations.",
@@ -728,8 +740,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.118Z",
-      "updatedDate": "2025-02-12T02:54:04.118Z"
+      "createdDate": "2025-02-12T03:25:47.353Z",
+      "updatedDate": "2025-02-12T03:25:47.353Z"
     },
     "smallBusiness": {
       "moreInfo": "Whether you meet in person or online, jot down anything important and save it here.\n\nFor instance, their name, contact details, what they do, what you discussed, and their social, LinkedIn, or website links. If they gave you their business card, you could take a photo of it and add it to your JDex note or file system.\n\nConsider linking these people to an ID. For example, if they’re a potential front office supplier, add a link in your JDex to [[12.0X]]."
@@ -743,8 +755,8 @@
     "type": "id",
     "emoji": "🗺️",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.118Z",
-      "updatedDate": "2025-02-12T02:54:04.118Z"
+      "createdDate": "2025-02-12T03:25:47.353Z",
+      "updatedDate": "2025-02-12T03:25:47.353Z"
     },
     "smallBusiness": {
       "moreInfo": "Caution. This is a place for when there is no other place. Don’t get lazy and dump stuff here that is important and/or has a home elsewhere in the system.\n\nThis might be information that you found interesting or might be useful someday. But right now, it’s not strongly related to any other ID. And it would not make sense to clutter an existing ID or create a new one for it.\n\nIt’s a library so we want to keep it neat. Label any files with clear descriptions and use the year-month method in case the information is time sensitive.\n\n### Why are there no IDs here?\n\nIt’s difficult to imagine how these libraries might be used. So we didn’t want to commit to IDs just yet. By leaving these sections blank, we thought it might be a good way to introduce everyone to the careful consideration that goes into making a new ID.\n\nIf you’re ready to save things in this library, come over to the [[community]] and see what others are doing or ask us for advice. We’ll figure it out together and eventually settle on some standard IDs. In the meantime, just keep things neat and tidy here.\n\n### Leave yourself JDex notes\n\nRemember to leave a note in your JDex when you save things in this library so you can find them easily.\n\n(This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)",
@@ -760,8 +772,8 @@
     "type": "id",
     "emoji": "🏢",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.119Z",
-      "updatedDate": "2025-02-12T02:54:04.119Z"
+      "createdDate": "2025-02-12T03:25:47.353Z",
+      "updatedDate": "2025-02-12T03:25:47.353Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -773,16 +785,16 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.119Z",
-      "updatedDate": "2025-02-12T02:54:04.119Z"
+      "createdDate": "2025-02-12T03:25:47.354Z",
+      "updatedDate": "2025-02-12T03:25:47.354Z"
     },
     "smallBusiness": {
       "examples": "Leases and renewals; security deposits; inspection reports; purchasing contracts; property deeds; co-working space agreements.",
-      "moreInfo": "This ID is for business premises with an address where you work privately, trade with the public, or just use as storage. It could be a building or land. \n\nYou might have more than one fixed location – that’s fine, just use subfolders labelled with the address to separate them. And remember to name files consistently and use the year-month-day method so everything sorts neatly. \n\nThis can also include the future, so store your lease applications or property searches here too.",
+      "moreInfo": "This ID is for business premises with an address where you work privately, trade with the public, or just use as storage. It could be a building or land.\n\nYou might have more than one fixed location – that’s fine, just use subfolders labelled with the address to separate them. And remember to name files consistently and use the year-month-day method so everything sorts neatly.\n\nThis can also include the future, so store your lease applications or property searches here too.",
       "exceptions": "If your business ‘premises’ is mobile, like a food truck, van, or trailer, manage it down in [[12.40]].",
-      "rationale": "Many businesses do their work out of multiple locations, which might be fixed or mobile. \n\nFor instance, an electrician might have a home office and a van. A cafe might have a retail space and a food truck. A personal trainer might have a home office, a van, and a storage unit for their equipment. \n\nSo we suggest keeping the fixed locations here and anything mobile below in [[12.40]], even if you mentally lump them together. \n\nMotor vehicles or anything else that can move or be towed have their own types of documentation, so it felt more logical to keep them separate."
+      "rationale": "Many businesses do their work out of multiple locations, which might be fixed or mobile.\n\nFor instance, an electrician might have a home office and a van. A cafe might have a retail space and a food truck. A personal trainer might have a home office, a van, and a storage unit for their equipment.\n\nSo we suggest keeping the fixed locations here and anything mobile below in [[12.40]], even if you mentally lump them together.\n\nMotor vehicles or anything else that can move or be towed have their own types of documentation, so it felt more logical to keep them separate."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.12",
@@ -791,8 +803,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.119Z",
-      "updatedDate": "2025-02-12T02:54:04.119Z"
+      "createdDate": "2025-02-12T03:25:47.354Z",
+      "updatedDate": "2025-02-12T03:25:47.354Z"
     },
     "smallBusiness": {
       "moreInfo": "When we say ‘office’, we mean whatever your fixed business premises means to you. \n\nWhether you have a room in your house, a commercial warehouse lease, or own a bakery, this is where the insurance for that address goes. \n\nAnd if you store equipment in both a fixed and mobile location, there might be some overlap here. Just do what makes sense to you. \n\nFor instance, if you’re a plumber your equipment might be insured in your home garage and also in your van. If these are separate policies then save them where relevant. \n\nThis is also a place to save incident reports that might become part of a claim. For example, something is stolen and you file a police report.",
@@ -809,8 +821,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.119Z",
-      "updatedDate": "2025-02-12T02:54:04.119Z"
+      "createdDate": "2025-02-12T03:25:47.354Z",
+      "updatedDate": "2025-02-12T03:25:47.354Z"
     },
     "smallBusiness": {
       "examples": "Local council rates; government land tax; capital gains tax; stamp duty; body corporate/owner’s corporation fees for multi-occupancy properties; legal fees; local environmental taxes.",
@@ -826,8 +838,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.119Z",
-      "updatedDate": "2025-02-12T02:54:04.119Z"
+      "createdDate": "2025-02-12T03:25:47.355Z",
+      "updatedDate": "2025-02-12T03:25:47.355Z"
     },
     "smallBusiness": {
       "examples": "- Fitting-out a hair salon with walls, flooring, cabinetry, sinks, and a kitchen area.\n- Renovating a warehouse’s plumbing, ventilation, and concrete floor, and upgrading the internet connection.\n- Installing custom-made, fixed benches and planter boxes at the front of a bar.\n- Improvements to a workshop in a home garage that include building a new workbench and fixed shelving.\n- Mood boards, measurements, and a budget spreadsheet for repainting a cafe.",
@@ -844,8 +856,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.120Z",
-      "updatedDate": "2025-02-12T02:54:04.120Z"
+      "createdDate": "2025-02-12T03:25:47.355Z",
+      "updatedDate": "2025-02-12T03:25:47.355Z"
     },
     "smallBusiness": {
       "examples": "Quotes from tradespeople; research on how to repair things; maintenance and repair requests to facilities management in multi-occupancy properties; recurring tasks to remember like oiling the squeaky front door, or monitoring your farm’s fence line for damage.",
@@ -860,8 +872,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.120Z",
-      "updatedDate": "2025-02-12T02:54:04.120Z"
+      "createdDate": "2025-02-12T03:25:47.355Z",
+      "updatedDate": "2025-02-12T03:25:47.355Z"
     },
     "smallBusiness": {
       "examples": "Removalist quotes and contracts; checklists; a list of accounts to update with your new postal address.",
@@ -877,8 +889,8 @@
     "type": "id",
     "emoji": "⛔",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.120Z",
-      "updatedDate": "2025-02-12T02:54:04.120Z"
+      "createdDate": "2025-02-12T03:25:47.356Z",
+      "updatedDate": "2025-02-12T03:25:47.356Z"
     },
     "smallBusiness": {
       "examples": "If you run a beauty salon, your back office might be:\n\n- a room out the back with a desk where you manage the business, and\n- a small kitchen area for staff.\n\nIf you’re a mobile personal trainer, your back office might be:\n\n- your home office where you manage the business, and\n- shelves in your garage for your equipment.\n\nIf you’re a freelance writer, your back office might be:\n\n- your home office where you manage the business and do your work.",
@@ -894,8 +906,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.120Z",
-      "updatedDate": "2025-02-12T02:54:04.120Z"
+      "createdDate": "2025-02-12T03:25:47.356Z",
+      "updatedDate": "2025-02-12T03:25:47.356Z"
     },
     "smallBusiness": {
       "examples": "Utility connections and bills (electricity, gas, water, telephone, internet); troubleshooting instructions; staff mobile phone contracts; parking bills; HVAC services.",
@@ -910,16 +922,16 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.120Z",
-      "updatedDate": "2025-02-12T02:54:04.120Z"
+      "createdDate": "2025-02-12T03:25:47.356Z",
+      "updatedDate": "2025-02-12T03:25:47.356Z"
     },
     "smallBusiness": {
       "examples": "Bills and paperwork for any paid security services; building access passes and codes; emergency and evacuation plans; bills for fire safety equipment; contact details for security services; instructions for how to turn the alarm on/off and entering/leaving the building; location of spare keys; surveillance camera installation; smoke or gas detector installation; who to call in different types of emergency (fire, flood, storm damage, robbery); Material Safety Data Sheets (MSDS).",
-      "moreInfo": "A place for anything to do with ensuring your back office building is safe and secure, and what to do if there’s an emergency. \n\nThis isn't for staff occupational health and safety, but there may be some overlap with training and other compliance obligations.\n\nAs well as bills and paperwork for equipment and services, this would be a good place to put processes for things like:\n- ordering keys and access passes, \n- entering/leaving the building, \n- rebooting the security system, \n- backing up surveillance camera footage, \n- what important documents go in the safe (and who has the code), etc.",
+      "moreInfo": "A place for anything to do with ensuring your back office building is safe and secure, and what to do if there’s an emergency.\n\nThis isn't for staff occupational health and safety, but there may be some overlap with training and other compliance obligations.\n\nAs well as bills and paperwork for equipment and services, this would be a good place to put processes for things like:\n\n- ordering keys and access passes,\n- entering/leaving the building,\n- rebooting the security system,\n- backing up surveillance camera footage,\n- what important documents go in the safe (and who has the code), etc.",
       "exceptions": "This is not your business risk and emergency management plans, they’re in [[11.23]].",
       "alsoSee": "If anything here helps you meet compliance obligations (e.g. installing fire doors and smoke alarms), store the paperwork here and note it in [[11.13]].\n\nEnsure anything relevant in [[11.51]] is aligned with information here."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.23",
@@ -928,8 +940,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.121Z",
-      "updatedDate": "2025-02-12T02:54:04.121Z"
+      "createdDate": "2025-02-12T03:25:47.356Z",
+      "updatedDate": "2025-02-12T03:25:47.356Z"
     },
     "smallBusiness": {
       "examples": "Cleaners; paid or municipal garbage collection; paper shredding and recycling; indoor plant watering; outdoor gardening; window washing; non-structural decorations like framed prints or plastic plants; anything to do with buying general cleaning and hygiene supplies (like kitchen roll, dishwashing liquid, tea towels, sponges, sprays, hand sanitiser, soap dispensers, toilet paper, etc.).",
@@ -945,8 +957,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.121Z",
-      "updatedDate": "2025-02-12T02:54:04.121Z"
+      "createdDate": "2025-02-12T03:25:47.357Z",
+      "updatedDate": "2025-02-12T03:25:47.357Z"
     },
     "smallBusiness": {
       "examples": "Buying standard office furniture like desks, chairs, cupboards and drawers; ordering anything you’d consider stationery from pens and sticky notes to paper and toner; ongoing lease and maintenance contracts for specialised equipment (maybe you lease a photocopier).",
@@ -963,8 +975,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.121Z",
-      "updatedDate": "2025-02-12T02:54:04.121Z"
+      "createdDate": "2025-02-12T03:25:47.357Z",
+      "updatedDate": "2025-02-12T03:25:47.357Z"
     },
     "smallBusiness": {
       "examples": "Buying anything to do with eating and drinking (like teabags, coffee, sugar, milk, cutlery, cups, glasses, crockery, etc.); ongoing delivery services like weekly fruit boxes; kitchen appliances and product manuals; water cooler services; staff meals.",
@@ -979,8 +991,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.121Z",
-      "updatedDate": "2025-02-12T02:54:04.121Z"
+      "createdDate": "2025-02-12T03:25:47.357Z",
+      "updatedDate": "2025-02-12T03:25:47.357Z"
     },
     "smallBusiness": {
       "examples": "Post office receipts; tracking numbers; courier accounts; document exchange (DX) and other business postal services; ordering postage supplies (like stamps, envelopes, parcel satchels, packing materials, etc.); specialised shipping or air services; dealing with customs and import/export regulations.",
@@ -996,8 +1008,8 @@
     "type": "id",
     "emoji": "🛎️",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.122Z",
-      "updatedDate": "2025-02-12T02:54:04.122Z"
+      "createdDate": "2025-02-12T03:25:47.358Z",
+      "updatedDate": "2025-02-12T03:25:47.358Z"
     },
     "smallBusiness": {
       "examples": "If you run a beauty salon, your front office is:\n\n- your shopfront, customer reception area, and treatment rooms.\n\nIf you’re a personal trainer, your front office might be:\n\n- a gym where you rent space, or\n- a registered area in a park (and your equipment is part of front office operations).\n\nIf you’re a freelance writer, your front office might be:\n\n- non-existent because you only meet clients at their office, or\n- a co-working space that you meet clients in, or\n- the same as your back office, clients come to you for meetings (and the fancy coffee and snacks you offer are part of front office operations).",
@@ -1014,8 +1026,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.122Z",
-      "updatedDate": "2025-02-12T02:54:04.122Z"
+      "createdDate": "2025-02-12T03:25:47.358Z",
+      "updatedDate": "2025-02-12T03:25:47.358Z"
     },
     "smallBusiness": {
       "examples": "Utility connections and bills (electricity, gas, water, telephone, internet); any other fees related to heating or cooling (like a generator or ice); industry-specific software subscriptions; troubleshooting instructions.",
@@ -1031,8 +1043,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.122Z",
-      "updatedDate": "2025-02-12T02:54:04.122Z"
+      "createdDate": "2025-02-12T03:25:47.358Z",
+      "updatedDate": "2025-02-12T03:25:47.358Z"
     },
     "smallBusiness": {
       "examples": "Bills and paperwork for any paid security services; building access passes and codes; emergency and evacuation plans; bills for fire safety equipment; contact details for security services; instructions for how to turn the alarm on/off and entering/leaving the building; location of spare keys; surveillance camera installation; smoke or gas detector installation; who to call in different types of emergency (fire, flood, storm damage, robbery); Material Safety Data Sheets (MSDS).",
@@ -1049,15 +1061,15 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.122Z",
-      "updatedDate": "2025-02-12T02:54:04.122Z"
+      "createdDate": "2025-02-12T03:25:47.359Z",
+      "updatedDate": "2025-02-12T03:25:47.359Z"
     },
     "smallBusiness": {
       "examples": "Cleaners; paid or municipal garbage collection; paper shredding and recycling; indoor plant watering; outdoor gardening; window washing; music instructions; anything to do with buying general cleaning and hygiene supplies that’s separate to the back office (like fancy hand wash and moisturiser for customer bathrooms); non-structural decorations like framed prints or plastic plants.",
-      "moreInfo": "This is about keeping up appearances and creating a nice environment for your customers. \n\nYou might have contracts with suppliers for ongoing services, or you might do everything yourself. Either way, track it all here.",
+      "moreInfo": "This is about keeping up appearances and creating a nice environment for your customers.\n\nYou might have contracts with suppliers for ongoing services, or you might do everything yourself. Either way, track it all here.",
       "exceptions": "This is not for repairs and maintenance, that’s in [[12.15]].\n\nThis is not for digital music subscriptions, we’ve classified those as ‘technology’ – they live in [[14.32]] and should also be noted in [[13.35]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.34",
@@ -1066,8 +1078,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.123Z",
-      "updatedDate": "2025-02-12T02:54:04.123Z"
+      "createdDate": "2025-02-12T03:25:47.359Z",
+      "updatedDate": "2025-02-12T03:25:47.359Z"
     },
     "smallBusiness": {
       "examples": "Free-standing furniture that isn’t part of a fit-out; branded items like napkins and paper shopping bags; ongoing lease and maintenance contracts for specialised equipment; electrical appliances; payment equipment like tills and handheld ‘tap and go’ units; general office supplies and stationery.",
@@ -1084,8 +1096,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.123Z",
-      "updatedDate": "2025-02-12T02:54:04.123Z"
+      "createdDate": "2025-02-12T03:25:47.360Z",
+      "updatedDate": "2025-02-12T03:25:47.360Z"
     },
     "smallBusiness": {
       "examples": "Anything complimentary you provide for customers/clients like tea, coffee, biscuits, lollies, or filtered water; any equipment that you use to prepare complimentary food or beverages for customers.",
@@ -1102,8 +1114,8 @@
     "type": "id",
     "emoji": "🚚",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.123Z",
-      "updatedDate": "2025-02-12T02:54:04.123Z"
+      "createdDate": "2025-02-12T03:25:47.360Z",
+      "updatedDate": "2025-02-12T03:25:47.360Z"
     },
     "smallBusiness": {
       "moreInfo": "Whether they’re part of your back office or front office, the following section is a place to manage motor vehicles and anything else that moves.",
@@ -1118,8 +1130,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.124Z",
-      "updatedDate": "2025-02-12T02:54:04.124Z"
+      "createdDate": "2025-02-12T03:25:47.360Z",
+      "updatedDate": "2025-02-12T03:25:47.360Z"
     },
     "smallBusiness": {
       "examples": "Proof of ownership; government registrations and taxes; financing, leases; hire-purchase agreements; log books.",
@@ -1136,8 +1148,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.124Z",
-      "updatedDate": "2025-02-12T02:54:04.124Z"
+      "createdDate": "2025-02-12T03:25:47.361Z",
+      "updatedDate": "2025-02-12T03:25:47.361Z"
     },
     "smallBusiness": {
       "examples": "Comprehensive car or motorcycle insurance; third party car or motorcycle insurance; caravan insurance; trailer insurance; boat insurance; any other form of commercial vehicle insurance.",
@@ -1154,8 +1166,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.124Z",
-      "updatedDate": "2025-02-12T02:54:04.124Z"
+      "createdDate": "2025-02-12T03:25:47.361Z",
+      "updatedDate": "2025-02-12T03:25:47.361Z"
     },
     "smallBusiness": {
       "examples": "Permits for parking, deliveries, or general entry; e-tag accounts and toll road passes; fees or exemptions for congestion charge zones; short-term parking fees; daily running expenses such as fuel, EV charging, oil, wiper fluid, and cleaning.",
@@ -1171,16 +1183,16 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.124Z",
-      "updatedDate": "2025-02-12T02:54:04.124Z"
+      "createdDate": "2025-02-12T03:25:47.362Z",
+      "updatedDate": "2025-02-12T03:25:47.362Z"
     },
     "smallBusiness": {
       "examples": "- Fitting-out a caravan for food service with flooring, cabinetry, utility connections, and a service hatch.\n- Renovating a dog grooming van by replacing the sinks, hoses, and taps, and re-waterproofing the interior.\n- Installing custom-made, fixed tool boxes in the back of a tradesperson’s ute/truck.\n- Mood boards, measurements, and a budget spreadsheet for reupholstering a boat.\n- Research, designs, and quotes for a full van signage wrap.",
-      "moreInfo": "This is a place to manage larger projects, specific to vehicles, that have an end. And once done, you move into front or back office operations mode. \n\nAs such, we recommend that any equipment ordered as part of the project be stored in [[12.24]] or [[12.34]].\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.",
+      "moreInfo": "This is a place to manage larger projects, specific to vehicles, that have an end. And once done, you move into front or back office operations mode.\n\nAs such, we recommend that any equipment ordered as part of the project be stored in [[12.24]] or [[12.34]].\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.",
       "exceptions": "Repairs, maintenance, and associated purchases go in [[12.45]].\n\nFront or back office equipment ordered as part of a project goes in [[12.24]] or [[12.34]].",
-      "rationale": "As mentioned in [[12.14]], we made a decision that these type of projects are about building and/or installing things that are designed for a specific vehicle – and they might not have an ops manual. \n\nWhereas front or back office equipment ordered as part of the project might have service contracts, or staff training and cleaning manuals linked to them, so they belong in operations. For instance, a coffee cart’s espresso machine or till."
+      "rationale": "As mentioned in [[12.14]], we made a decision that these type of projects are about building and/or installing things that are designed for a specific vehicle – and they might not have an ops manual.\n\nWhereas front or back office equipment ordered as part of the project might have service contracts, or staff training and cleaning manuals linked to them, so they belong in operations. For instance, a coffee cart’s espresso machine or till."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.45",
@@ -1189,8 +1201,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.125Z",
-      "updatedDate": "2025-02-12T02:54:04.125Z"
+      "createdDate": "2025-02-12T03:25:47.362Z",
+      "updatedDate": "2025-02-12T03:25:47.362Z"
     },
     "smallBusiness": {
       "examples": "Quotes from mechanics and other tradespeople; research on how to repair things; annual service appointments and logs; less frequent running expenses such as new tyres and other spare parts; maintenance manuals, instructions, and checklists.",
@@ -1207,8 +1219,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.125Z",
-      "updatedDate": "2025-02-12T02:54:04.125Z"
+      "createdDate": "2025-02-12T03:25:47.362Z",
+      "updatedDate": "2025-02-12T03:25:47.362Z"
     },
     "smallBusiness": {
       "examples": "Public transport like buses, trains, light rail, taxis, or ferries; ride sharing services; accounts to use share cars, e-scooters, or e-bikes; any other type of informal vehicle you own.",
@@ -1223,8 +1235,8 @@
     "type": "id",
     "emoji": "🧩",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.125Z",
-      "updatedDate": "2025-02-12T02:54:04.125Z"
+      "createdDate": "2025-02-12T03:25:47.363Z",
+      "updatedDate": "2025-02-12T03:25:47.363Z"
     },
     "smallBusiness": {
       "moreInfo": "Your business is part of a wider community – schools, hospitals, clubs, local government and media, the environment, etc. And sometimes it will interact with the community in different ways.\n\nThis section isn’t about your core business, your employees, suppliers, or professional bodies. It’s a place for civics, community engagement, and being a good business citizen. It’s giving versus getting.\n\nThis is a broad umbrella and may not be that relevant for many businesses. But if this sounds like you, then put any relevant contact details, notes, and other documents here.",
@@ -1239,14 +1251,14 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.126Z",
-      "updatedDate": "2025-02-12T02:54:04.126Z"
+      "createdDate": "2025-02-12T03:25:47.364Z",
+      "updatedDate": "2025-02-12T03:25:47.364Z"
     },
     "smallBusiness": {
-      "moreInfo": "This is a place for anything to do with relationships that you maintain that are close by – your direct neighbours or surrounding streets. You’re probably on a first-name basis and know each other reasonably well.\n\nMaybe you store the contact details, opening hours, or annual holidays, of other businesses in your shopping centre in case of emergency. Or you might have reminders to bring in mail or garbage bins for your neighbours sometimes. \n\nPerhaps you offer discounts to certain neighbourhood businesses and you keep a list of what these are. Or maybe you’re part of a ‘neighbourhood watch’-style group where everyone keeps an eye on things. Either way, store any notes or documents here.",
+      "moreInfo": "This is a place for anything to do with relationships that you maintain that are close by – your direct neighbours or surrounding streets. You’re probably on a first-name basis and know each other reasonably well.\n\nMaybe you store the contact details, opening hours, or annual holidays, of other businesses in your shopping centre in case of emergency. Or you might have reminders to bring in mail or garbage bins for your neighbours sometimes.\n\nPerhaps you offer discounts to certain neighbourhood businesses and you keep a list of what these are. Or maybe you’re part of a ‘neighbourhood watch’-style group where everyone keeps an eye on things. Either way, store any notes or documents here.",
       "exceptions": "This is not for networking, seeking advice and support, or interactions with professional bodies, that’s in [11.60]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.52",
@@ -1255,8 +1267,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.126Z",
-      "updatedDate": "2025-02-12T02:54:04.126Z"
+      "createdDate": "2025-02-12T03:25:47.364Z",
+      "updatedDate": "2025-02-12T03:25:47.364Z"
     },
     "smallBusiness": {
       "moreInfo": "This is a place for anything to do with relationships that you maintain that are a bit further away – your town or city, state or province, or country.\n\nMaybe you have interactions with your local chamber of commerce. Or perhaps your business donates its product or services to an annual charity event, parade, or community group. \n\nYou might host high school work experience students each year. Or your staff might do regular volunteer work or mentoring.\n\nWhat’s that? There’s chocolate fundraising boxes in the kitchen? Save me a Picnic while I store the documentation here!",
@@ -1271,8 +1283,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.126Z",
-      "updatedDate": "2025-02-12T02:54:04.126Z"
+      "createdDate": "2025-02-12T03:25:47.364Z",
+      "updatedDate": "2025-02-12T03:25:47.364Z"
     },
     "smallBusiness": {
       "moreInfo": "This is a place for any global relationships that you maintain, either with individuals or larger organisations.\n\nYou might mentor a small business owner in another country. Or maybe your business participates in global environmental initiatives like Just One Tree or the 1% for the Planet network. \n\nOr perhaps you support other international charities or small business loan providers. Either way, store the details here.",
@@ -1287,13 +1299,614 @@
     "type": "id",
     "emoji": "📚",
     "metadata": {
-      "createdDate": "2025-02-12T02:54:04.127Z",
-      "updatedDate": "2025-02-12T02:54:04.127Z"
+      "createdDate": "2025-02-12T03:25:47.364Z",
+      "updatedDate": "2025-02-12T03:25:47.364Z"
     },
     "smallBusiness": {
       "moreInfo": "Caution. This is a place for when there is no other place. Don’t get lazy and dump stuff here that is important and/or has a home elsewhere in the system.\n\nThis might be information that you found interesting or might be useful someday. But right now, it’s not strongly related to any other ID. And it would not make sense to clutter an existing ID or create a new one for it.\n\nIt’s a library so we want to keep it neat. Label any files with clear descriptions and use the year-month method in case the information is time sensitive.\n\n### Why are there no IDs here?\n\nIt’s difficult to imagine how these libraries might be used. So we didn’t want to commit to IDs just yet. By leaving these sections blank, we thought it might be a good way to introduce everyone to the careful consideration that goes into making a new ID.\n\nIf you’re ready to save things in this library, come over to the [[community]] and see what others are doing or ask us for advice. We’ll figure it out together and eventually settle on some standard IDs. In the meantime, just keep things neat and tidy here.\n\n### Leave yourself JDex notes\n\nRemember to leave a note in your JDex when you save things in this library so you can find them easily.\n\n(This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)",
       "exceptions": "Things that contain information that is specific to your business, and that don’t fit elsewhere, should go in [[13.14]].",
       "rationale": "We wanted to be realistic and acknowledge that sometimes there is miscellanea that accumulates over time.\n\nIt could be anything – a document, photo, URL, email, note, or a physical item. But it’s not the _work_ that you do. It’s things that you’ve found online or in real life, or perhaps that you’ve created.\n\nIt doesn’t fit anywhere else. It’s just a thing you wanted to save. And you don’t want it muddying other folders where work happens.\n\nImportantly, it’s not that important. It has nothing to do with business operations. If it wasn’t backed up it wouldn’t matter. If you lose it, you could probably download it again."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.10",
+    "title": "Plan, protect, & reflect",
+    "description": "Money management for peace of mind.",
+    "type": "id",
+    "emoji": "🧘",
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.365Z",
+      "updatedDate": "2025-02-12T03:25:47.365Z"
+    },
+    "smallBusiness": {},
+    "isPublic": false
+  },
+  {
+    "number": "13.11",
+    "title": "Financial planning",
+    "description": "Calculations, budgets, goals, and strategies to help you know where you stand.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.365Z",
+      "updatedDate": "2025-02-12T03:25:47.365Z"
+    },
+    "smallBusiness": {
+      "examples": "Things you might research and plan here include:\n- calculating if the business is viable,\n- start-up and ongoing operating budgets,\n- what taxes may apply to you (e.g. income, sales, fringe benefits, capital gains, payroll, land, stamp duty),\n- your financial goals and strategies to reach them,\n- whether you’ll use accounting, time-tracking, or payroll software, or other digital tools,\n- will you rely on your bookkeeper or accountant or do as much as you can yourself,\n- what kind of bank account/s you’ll need,\n- if relevant, how will you deal with cash (e.g. currency conversions, cash floats, petty cash, cash books),\n- whether you need help protecting your profits (e.g. diversifying investments to reduce risk),\n- or whatever else you need to figure out.",
+      "moreInfo": "Whether you’ve received professional financial advice or you’re figuring things out yourself, this is a place to do the work. \n\nThis ID will probably end up full of notes, calculations, or spreadsheets. Whatever you do here, we recommend subfolder-ing things by year to keep it neat and relevant to each accounting period.\n\n### Even a little planning helps\n\nYou might be fancy and have software doing all sorts of analyses for you. But a lot of us with simple businesses can rest easier with even a little due diligence.\n\nFor instance, as a sole trader for many years Lucy didn’t do that much financial planning. But she always had an up-to-date spreadsheet covering things like:\n- expected business and living expenses, \n- mandatory tax obligations like sales and income taxes, \n- voluntary pension contributions,\n- income thresholds that would affect the entity*,\n- and other more aspirational buckets for savings and fun stuff.\n\nMost important for Lucy was maintaining a cashflow ‘safety net’ so she could operate while waiting for people to pay her. Hers covered about 6 months worth of living expenses.\n\nEveryone’s safety net will be different. But Lucy learned quickly that having no safety net is stressful because nobody pays your invoice on the day you send it. And the bigger the company, the slower the payroll department. So that might be another thing to consider here.\n\n*Such as ‘the 80/20 PSI rule’ and GST threshold in Australia.",
+      "exceptions": "This isn’t for costing out how much you charge for your product or service, that goes in [[20-29]].",
+      "alsoSee": "When you’re writing or updating [[11.21]], do the money calculations here.",
+      "rationale": "We reckon it’s worthwhile to look under every rock and not be afraid of what you might find. Especially when you’re starting out and need to ensure your business is financially viable. If it’s not, it’s a hobby. And that’s not why we’re here.\n\nFor instance, how many customers does a burger truck need every hour to be profitable? When we see local businesses failing, we often worry that too many people aren’t working this out truthfully before they fully commit to an idea.\n\nIf you know what you need to spend each month to meet obligations and then make a profit, you know what you need to earn. Even if you’re a not-for-profit, you’ve still got obligations.\n\nAfter some initial busywork and tedium, you’ll hopefully feel more informed, calm, and in control. Which is the goal of this ID.",
+      "links": "[Tips for good small business habits](https://www.ato.gov.au/businesses-and-organisations/starting-registering-or-closing-a-business/starting-your-own-business/small-business-habits#atid=e821a9acaa940339) from the Australian Taxation Office.\n\n[Tips for planning business tax payments to avoid debt](https://www.ato.gov.au/individuals-and-families/paying-the-ato/help-with-paying/managing-payments) from the Australian Taxation Office."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.12",
+    "title": "Financial insurance, incidents, & claims",
+    "description": "Policies, coverage details, incident reports, and claim forms for your finances.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.366Z",
+      "updatedDate": "2025-02-12T03:25:47.366Z"
+    },
+    "smallBusiness": {
+      "examples": "Income protection insurance; tax audit insurance; lenders mortgage insurance; any other kind of loan protection insurance.",
+      "moreInfo": "This is a place for any insurance that is specific to money. Whether you’ve earned it, are yet to earn it, or have borrowed it.\n\nThis is also where to store incident reports that might become part of a claim. For example, if you are injured and cannot work for an extended period you might decide to claim on an income protection policy. If so, put the details and medical report here.",
+      "rationale": "As mentioned previously, we recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.13",
+    "title": "Reports & reviews",
+    "description": "A place to write any official or informal financial reports and reflect on how the business is going.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.366Z",
+      "updatedDate": "2025-02-12T03:25:47.366Z"
+    },
+    "smallBusiness": {
+      "examples": "Traditional annual company reports; review documents that entities such as not-for-profits, charities, school associations, or clubs must submit; informal internal review documents for staff updates or other stakeholders; or anything else you prepare in order to reflect on finances.",
+      "moreInfo": "How’s everything going? Checking in on the business’ finances is something we should all do when we can. This might take the form of mandatory reporting, or just some notes in your JDex. Or perhaps you send emails, presentations, or other documents to keep staff, subscribers, or potential investors updated. Either way, do the work here.",
+      "links": "[Information about annual financial reports](https://www.acnc.gov.au/for-charities/manage-your-charity/obligations-acnc/reporting-annually-acnc/annual-financial-reports) from the Australian Charities and Not-for-profits Commission.\n\n[Information about not-for-profit self-reviews](https://www.ato.gov.au/businesses-and-organisations/not-for-profit-organisations/your-organisation/not-for-profit-self-review) from the Australian Taxation Office.\n\n\n[Information about changes in reporting requirements for sporting organisations](https://www.ato.gov.au/businesses-and-organisations/not-for-profit-organisations/not-for-profit-newsroom/changes-in-reporting-requirements-for-sporting-clubs) from the Australian Taxation Office."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.14",
+    "title": "Financial catch-all",
+    "description": "A place for any finance records or documents that definitely don’t fit elsewhere.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.366Z",
+      "updatedDate": "2025-02-12T03:25:47.366Z"
+    },
+    "smallBusiness": {
+      "examples": "Documents related to your credit rating and history.",
+      "moreInfo": "Ideally you should be able to find a place for random things below. But it’s not uncommon to get financial documents that are one-offs or don’t fit elsewhere. We don’t know what kind of miscellaneous paperwork is issued to businesses around the world. So we wanted to leave space just in case.\n\nRemember to leave a note in your JDex when you save things in this ID so you can find them easily. \n\n(This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)",
+      "exceptions": "This is not a place for anything that relates to an account. That paperwork should fit into either:\n- [[13.22]],\n- [[13.32]], \n- [[13.42]], \n- [[13.52]], \n- [[13.53]], \n- [[13.62]], \n- or any other accounts you may have.",
+      "rationale": "We’ve used credit rating as an example above. Some people might classify a great credit rating as an asset. But we’re not accountants. This is where we would file it. And if our accountant asked for it, we’d know exactly where it is."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.20",
+    "title": "Income",
+    "description": "Money that is earned by the business.",
+    "type": "id",
+    "emoji": "🤑",
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.366Z",
+      "updatedDate": "2025-02-12T03:25:47.366Z"
+    },
+    "smallBusiness": {},
+    "isPublic": false
+  },
+  {
+    "number": "13.21",
+    "title": "Inbox and processing of income",
+    "description": "Confirm you’ve been paid, tally up earnings, and file the records.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.367Z",
+      "updatedDate": "2025-02-12T03:25:47.367Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where income records are held until you process and permanently file them in either:\n\n- [[13.23]],\n- [[13.24]],\n- [[13.25]],\n- [[13.26]].\n\nAnd if you need to do any messy calculations as you process the income, there’s room here.\n\n### What if I use software?\n\nIf you use point-of-sale and/or accounting software then a lot of work will be automated. However, it’s still important to cross-check that everything is as it should be and the income is in your bank account.",
+      "rationale": "The goal of the five ‘inbox and processing’ IDs in this category is to add a little rigour to ensure you don’t miss anything. Income payments and tax deductible expenses are like treasure. And forgetting to pay other people is bad form.\n\nWe don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings.\n\nAnd if you need space to be messy and do some calculations, then we wanted to ensure there’s room for that too. For instance, every month Johnny has to download inscrutable income data from Stripe and fuss with it until it’s in a format our accountant can use. This is where he would do that work."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.22",
+    "title": "Accounts that deliver income",
+    "description": "The formal statements and paperwork for accounts or platforms that are primarily used to receive income.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.367Z",
+      "updatedDate": "2025-02-12T03:25:47.367Z"
+    },
+    "smallBusiness": {
+      "examples": "Standard bank accounts; online payment processors like Stripe, PayPal, or Payoneer; merchant accounts for ‘buy now, pay later’ services like Afterpay or Klarna; digital wallet services like WeChat Pay or Grab; money-transfer services like Western Union; creator support platforms like Patreon; crowdfunding services like Kickstarter.",
+      "moreInfo": "This is a place for any accounts whose primary function is _delivering_ money to you. \n\nThis might sound strange, but it’s increasingly common for many businesses. For instance, the accounts that online payment processors or sales channels deliver earnings through. If you sell things on Etsy or eBay, this might be PayPal.\n\nIn our case, we have online courses on a learning platform. They process payments via Stripe. We want to track this account because it contains data that we need to calculate income. And depending on where a customer lives, we may need to pay sales tax on the transaction. \n\nThis account is _only_ incomings, we can’t pay expenses with it. It holds money until they release it to a nominated bank account. Therefore, we would store the formal Stripe account statements here. \n\nOr maybe you have a bank account that is only for deposits. Store those formal statements here too.\n\n### What do you mean by ‘formal’ statements and paperwork?\n\nStatic documents supplied by a platform or bank (e.g. PDFs). As opposed to raw data that you might download into a spreadsheet and manipulate. Do that kind of work in [[13.21]]. \n\n### Saving files\n\nWe recommend using the year-month method when saving paperwork and statements so everything sorts neatly. And subfolder by account issuer.",
+      "exceptions": "If you just use a standard bank account for both incomings and outgoings, that goes in [[13.42]].",
+      "rationale": "Many businesses won’t need this ID if they just use a regular bank account for income and expenses. But we wanted to leave space for other types of ‘one-way’ accounts that bring money in because they’re becoming more common. \n\nWhether you sell things online or in person, these services process payments, collect earnings, and then transfer them to your designated bank account. They are important because they handle income. If you get audited and forget to mention them, the tax man might have something to say about that.\n\nAs per the Johnny.Decimal rule, if it logically fits higher up in the system, put it in the first place that makes sense. So that’s why we recommend differentiating these accounts and storing their paperwork and statements up here.\n\n### A note on crowdfunding\n\nfyi, your accountant might pull a face at our classification of crowdfunding as income. They probably prefer terms such as ‘deferred or unearned revenue’ and think it should live down in [[13.50]]. \n\nLet them pull their face and then do what they need to do on the balance sheet. As we’ve said, we’re not accountants, we’re here to help you find stuff. And we think many people would think of crowdfunding as income and look for it here."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.23",
+    "title": "Invoices & sales for your work",
+    "description": "The place to file processed invoices or point-of-sale reports.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.367Z",
+      "updatedDate": "2025-02-12T03:25:47.367Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "However you actively earn money, store the processed records here. \n\nWhether you send out invoices for your work*, download reports from a till or online platform, or tally up a cash book, these are your sales. This includes long-term income for things like royalties and book sales. You did the work once and continue to get paid for it.\n\nAnd if you have to deal with bad debts, we recommend noting those here too. They’re still sales, you just didn’t receive the money.\n\n### Where do I create my invoice?\n\nNot everyone uses software to generate invoices. For those who use a template, we recommend saving it here. Export the completed invoice as a PDF to the income inbox and send it. Then process it when it’s paid and move it here for permanent filing. \n\n*Your accountant might refer to this as ‘accounts receivable’."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.24",
+    "title": "Passive income",
+    "description": "The place to file processed investment returns.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.367Z",
+      "updatedDate": "2025-02-12T03:25:47.367Z"
+    },
+    "smallBusiness": {
+      "examples": "Interest; dividends; rental payments.",
+      "moreInfo": "If you receive any kind of passive income, store the formal records here after they’ve been processed as income. For instance, the statements and letters that say you’ve earned money from a cash investment or other asset.",
+      "exceptions": "This is not for ownership paperwork – that lives with the asset/investment itself (i.e. don’t store share certificates here, those go in [[13.43]]).",
+      "rationale": "We decided to separate the ownership records for assets/investments and their earnings for clarity and neatness. In this ID we’re only interested in filing the processed income earned.\n\nFor instance:\n\n```\nASSET/INVESTMENT      PASSIVE INCOME\n(stored in 13.40)     (stored here)\n═════════════════════════════════════\nCash term deposit     Interest\nShares                Dividend\nProperty              Rent\n```"
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.25",
+    "title": "Assistance, grants, & gifts",
+    "description": "The place to file processed records of financial help or bonuses.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.368Z",
+      "updatedDate": "2025-02-12T03:25:47.368Z"
+    },
+    "smallBusiness": {
+      "examples": "Tax relief, credits, or incentives; concessions and allowances; grants and schemes; cash back and refunds; prizes and gifts.",
+      "moreInfo": "If you receive any kind of one-off or ongoing financial assistance, store the records here after the income has been processed. And if you had to apply for it, store the application here too.\n\nThis kind of thing often comes from the government, but it might also come from private industry, academia, or anywhere else. Whatever it is, it’s not a loan and you don’t need to pay it back. Hooray."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.26",
+    "title": "Sale of assets",
+    "description": "The place to file processed records for high-value items that were sold by the business.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.368Z",
+      "updatedDate": "2025-02-12T03:25:47.368Z"
+    },
+    "smallBusiness": {
+      "examples": "Land; buildings; computer equipment; furniture; machinery; vehicles.",
+      "moreInfo": "If you sell assets that are owned by the business, store the records here after the income has been processed. \n\nThis is the kind of higher-value item that your accountant wants to know about because they’ll need to update your balance sheet.",
+      "exceptions": "This is not the act of selling the asset – manage that where the item lives (i.e. don’t store photos of a car for an online ad here, those go in [[12.41]])."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.30",
+    "title": "Expenses",
+    "description": "Money that was spent by the business.",
+    "type": "id",
+    "emoji": "🛍️",
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.368Z",
+      "updatedDate": "2025-02-12T03:25:47.368Z"
+    },
+    "smallBusiness": {},
+    "isPublic": false
+  },
+  {
+    "number": "13.31",
+    "title": "Inbox and processing of expenses",
+    "description": "Categorise your expenses, tally up spending, and file the records.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.368Z",
+      "updatedDate": "2025-02-12T03:25:47.368Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where expense records are held until you process and permanently file them in [[13.33]].\n\nAnd if you need to do any messy calculations as you process the expenses, there’s room here.",
+      "rationale": "The goal of the five ‘inbox and processing’ IDs in this category is to add a little rigour to ensure you don’t miss anything. Income payments and tax deductible expenses are like treasure. And forgetting to pay other people is bad form.\n\nWe don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.32",
+    "title": "Accounts that handle expenses",
+    "description": "The formal statements and paperwork for accounts or platforms that are primarily used to pay expenses.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.368Z",
+      "updatedDate": "2025-02-12T03:25:47.368Z"
+    },
+    "smallBusiness": {
+      "examples": "Online payment processors like PayPal or Payoneer; ‘buy now, pay later’ services like Afterpay or Klarna; digital wallet services like WeChat Pay or Grab; money-transfer services like Western Union; a standard bank account.",
+      "moreInfo": "This is a place for any accounts whose primary function is _spending_ money. \n\nAs per the note in [[13.22]], ignore this ID if it’s not relevant to you. We don’t have an account like this, but we wanted to leave room for those that do.\n\nPerhaps your business uses a service like Payoneer to handle payments to international suppliers. Or maybe you buy things via a platform like Afterpay*. Manage your relationship with those organisations here.\n\nOr maybe you have a bank account that is only for outgoings. Store those formal statements here too.\n\n### What do you mean by ‘formal’ statements and paperwork?\n\nStatic documents supplied by a platform or bank (e.g. PDFs). As opposed to raw data that you might download into a spreadsheet and manipulate. Do that kind of work in [[13.31]]. \n\n### Saving files\n\nWe recommend using the year-month method when saving paperwork and statements so everything sorts neatly. And subfolder by account issuer.\n\n*Note that if you become an Afterpay merchant one day, you could 'promote' it up to [[13.22]]).",
+      "exceptions": "If you just use a standard bank account for both incomings and outgoings, that goes in [[13.42]].",
+      "rationale": "Many businesses won’t need this ID if they just use a regular bank account to handle income and expenses. But we wanted to leave space for other types of ‘one-way’ accounts that send money out. You don’t want to miss anything in case it’s deductible."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.33",
+    "title": "Receipts",
+    "description": "The place to file processed receipts.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.369Z",
+      "updatedDate": "2025-02-12T03:25:47.369Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "We’ve classified an ‘expense’ as something that you have already paid for either on the spot (i.e. with a card), or via an automatic payment (i.e. a direct debit).\n\nAs per the ops manual, once you’ve processed expenses in [[13.31]], permanently file any receipts here. \n\n### Is the receipt important?\n\nThere’ll probably be lots of receipts that you don’t consider to be that important. Such as everyday consumables like petrol or milk for the office fridge. Just keep them all here for however long you’re required to by law.\n\nBut for ‘important’ receipts for higher-value items and/or anything with a warranty, you might like to add a copy to where the thing lives in the system. \n\nFor instance, you buy a new laptop. The receipt sits in the expenses inbox until you process it. You then permanently file it here and also add a copy to [[14.11]].\n\n### Saving files\n\nWe recommend using the year-month method when saving this kind of paperwork so everything sorts neatly. And subfolder by expense category.",
+      "exceptions": "These are not bills that you set aside time to pay manually, manage those in [[13.50]].",
+      "rationale": "### Classifying automated bill payments as expenses\n\nNormally we think of the bills that we receive by email or post as liabilities. But as noted in [[13.54]], we made a decision to classify _direct debits_ of bill payments as going ‘straight to expenses’. They’re paid automatically and you don’t need to plan a time to physically transfer money. \n\nFor instance, you’ve set up direct debits for your utility bills. They’re paid automatically on the due date. Now they’re just expense transactions on your bank statement that you process and file here."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.34",
+    "title": "Payroll",
+    "description": "The place to manage anything to do with wages, leave, pensions, health insurance, and other benefits.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.369Z",
+      "updatedDate": "2025-02-12T03:25:47.369Z"
+    },
+    "smallBusiness": {
+      "examples": "If you have staff, the kinds of things you might manage here include:\n- timekeeping (e.g. rosters, records of attendance, overtime, project timesheets),\n- wages, payslips, and remittance,\n- income tax withholding,\n- pension payments,\n- health insurance,\n- paid or unpaid leave of any kind,\n- allowances (e.g. for meals, clothing, training),\n- any benefits, bonuses, rewards, or incentives in salary packages,\n- expense reimbursement.",
+      "moreInfo": "Payroll is serious stuff. Depending on where you are in the world, there are strict governance and compliance obligations to meet. And harsh penalties if you don’t. \n\nNo matter how nice your business is, realistically, your staff are primarily here for the money. So payroll must go seamlessly every single cycle.\n\nTherefore, we can’t advise you how to do it.* It’s beyond our scope. We recommend outsourcing the process to an accountant or bookkeeper who specialises in payroll, and/or using payroll software.\n\nBut we do think that payroll lives over here with all the money and numbers. It’s just an expense.\n\n*Perhaps one day, after community discussion with experienced business owners and accountants/bookkeepers, we can develop an ops manual that covers payroll basics.",
+      "exceptions": "If you receive bills for payroll tax, process them in [[13.51]] and file the records in [[13.62]].",
+      "alsoSee": "Store copies of final payroll records with the individual in [[11.42]] – this is not only good practice, but likely a legal requirement.",
+      "links": "[Guidance on hiring and paying workers](https://www.ato.gov.au/businesses-and-organisations/hiring-and-paying-your-workers) from the Australian Taxation Office.\n\n[An article about managing payroll in small business](https://www.nerdwallet.com/article/small-business/how-to-manage-payroll-for-your-small-business) from NerdWallet."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.35",
+    "title": "Subscriptions, memberships, & other recurring expenses",
+    "description": "A master list of everything you’ve signed up for so you can keep track of it.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.369Z",
+      "updatedDate": "2025-02-12T03:25:47.369Z"
+    },
+    "smallBusiness": {
+      "examples": "Software; apps; web services like hosting and domains; cloud storage; media and streaming services; food, beverage, or other office supply subscriptions; carshare or other transport subscriptions; staff memberships for gyms and clubs; recurring charity donations; crowdfunding or financial support platforms; memberships for things like online communities and newsletters; payment agreements for professional services like your accountant; plus any sort of automatic payments (i.e. direct debits) for recurring expenses.",
+      "moreInfo": "It’s easy to lose track of automatic payments. Especially those that renew annually. So this is a place to list them all in a JDex note, spreadsheet, or however you prefer. \n\nThis ID is not for occasional scheduled payments that you do yourself (i.e. you schedule a bill payment 3 days from now). \n\nIt’s for services where you have given someone permission to take money on a recurring basis, and it might be the only way they receive payment. \n\nSeeing it all in one place can help you know what outgoings to expect each week, month, or year. And if you want to pause or cancel anything, you’re not searching all over the place to remember what you’ve got.",
+      "exceptions": "This is not the place to keep formal paperwork related to these services. Store that in the relevant place in the system, for example:\n- A (back office) fruit box delivery subscription lives in [[12.25]],\n- A (front office) digital music subscription lives in [[12.33]],\n- A carshare subscription lives in [[12.46]].",
+      "rationale": "This ID came about from a desire to not be surprised by annual payments for software and other online services. Sometimes you forget about them because you no longer need them. And depending on the company, they may not be interested in your sob story if you ask for a refund. \n\nBut it’s also nice for cash flow purposes to know exactly how much money is going to get sucked out of your bank accounts. So we wanted to leave a place to collect everything like this in a list."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.40",
+    "title": "Assets",
+    "description": "Money that is saved or ‘parked’ in the business.",
+    "type": "id",
+    "emoji": "📈",
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.369Z",
+      "updatedDate": "2025-02-12T03:25:47.369Z"
+    },
+    "smallBusiness": {},
+    "isPublic": false
+  },
+  {
+    "number": "13.41",
+    "title": "Inbox and processing of assets",
+    "description": "Classify any asset purchases or sales and file the records.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.369Z",
+      "updatedDate": "2025-02-12T03:25:47.369Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where asset records are held until you process and permanently file them in either:\n\n- [[13.43]],\n- [[13.44]],\n- [[13.45]],\n- [[13.46]].\n\nAnd if you need to do any messy calculations as you process the assets, there’s room here.",
+      "rationale": "The goal of the five ‘inbox and processing’ IDs in this category is to add a little rigour to ensure you don’t miss anything. Income payments and tax deductible expenses are like treasure. And forgetting to pay other people is bad form.\n\nWe don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.42",
+    "title": "Accounts that handle cash",
+    "description": "The formal statements and paperwork for accounts or platforms that are used for both incomings and outgoings.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.370Z",
+      "updatedDate": "2025-02-12T03:25:47.370Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "This is the place to store all formal paperwork and statements for accounts that are used to both receive income and pay expenses.\n\nFor most small businesses this will be a traditional bank account – probably your main account. But it might also include other types of specialised account, platform, or app.\n\nNote that in Australia and potentially other countries, companies, partnerships, and trusts must have a business account for tax purposes. Sole traders can use a personal account, but a business account is still recommended. So if you’re just starting out, spend a little time figuring out what kind of account is best for you.\n\nAnd if you’re a cyborg from the future and only deal with digital currency, then store those records here too.\n\n### What do you mean by ‘formal’ statements and paperwork?\n\nStatic documents supplied by a platform or bank (e.g. PDFs). As opposed to raw data that you might download into a spreadsheet and manipulate. Do that kind of work in [[13.21]] or [[13.31]]. \n\n### Saving files\n\nWe recommend using the year-month method when saving paperwork and statements so everything sorts neatly. And subfolder by account issuer."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.43",
+    "title": "Investments",
+    "description": "Anything you class as an investment that you hope to receive returns from, or whose value you hope will appreciate.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.370Z",
+      "updatedDate": "2025-02-12T03:25:47.370Z"
+    },
+    "smallBusiness": {
+      "examples": "Shares; managed funds; bonds; term deposits; property unrelated to the business; high-value items like art or jewellery; trusts; director’s loans (aka Division 7A in Australia); digital currency; micro-investment apps.",
+      "moreInfo": "This is a place to store proof of ownership documents for any investments the business may have.\n\nFor instance:\n- a certificate confirming you own shares, \n- a letter that confirms the conditions for a cash term deposit,\n- a letter that confirms the number of units owned in a managed fund,\n- a title deed for a rental property,\n- a certificate of authenticity for that Caravaggio painting in the boardroom. \n\nThese are probably longer term investments. If they’re short term, your accountant might want to classify them as current assets, but that’s up to them.\n\nAlso, if you have any share trading accounts, this _might_ be a place to store any paperwork for them. Otherwise consider [[13.22]]. In Australia, this could include things like Computershare.",
+      "exceptions": "This is not for statements of earnings – after processing the income, file those in [[13.24]].",
+      "alsoSee": "If you intend to sell all or part of an investment, remember to consider any tax implications such as capital gains in your budget and/or master finance record in [[13.11]].",
+      "rationale": "### Property as an investment\n\nTo reiterate, we’re not accountants. And when we discussed property ownership, the conversation kept going around in circles. \n\nIf you own your business premises that’s a fixed asset. But a lot of us would think, “hey, isn’t that also an investment?”. And vice versa, if the business owns a rental property as an investment, that’s still a fixed asset right?\n\nWe’re not going to get involved in international balance sheet science. But we _can_ make a decision about folders.\n\nOur recommendation is:\n- If you own your business premises, the title deed lives in [[12.11]] and because it’s a fixed asset, copy it to [[13.44]]. \n- And if the business also owns a rental property that is _not_ where you trade, we consider that an investment. The rent is your earnings. So the title deed lives here. You could also copy it to [[13.44]] if you prefer.\n\nIf this sounds like madness, we can discuss it in the community. :-)"
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.44",
+    "title": "Fixed assets",
+    "description": "Things owned for a longer term that help you run the business, like equipment, vehicles, and property.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.370Z",
+      "updatedDate": "2025-02-12T03:25:47.370Z"
+    },
+    "smallBusiness": {
+      "examples": "Land; buildings; furniture; machinery; vehicles; computer equipment.",
+      "moreInfo": "This is a place to note any physical items you own for a longer term that are involved in running the business. Longer term means for more than one accounting period (i.e. more than 1 year).\n\nThese type of assets are classified as ‘tangible’ because you can physically touch them. And they’re often labelled as ‘property, plant and equipment’ on balance sheets. \n\nSelling this type of asset might be a taxable event so your accountant will want to know about it. They’ll also need to track everything for depreciation purposes. And if you need to deal with repossession of an asset, note that here too.\n\n### Saving files\n\nThis ID should contain copies of records saved elsewhere in the system. That’s okay because these are static records. We want a place where you and/or your accountant can go to see the proof of ownership and value of any fixed assets in one place.\n\nFor instance, an electrician’s business premises, van, and computers are fixed assets. She manages the business premises in [[12.10]], the vehicle in [[12.40]], and the computers in [[14.10]]. She copies the proof of ownership, valuations, and receipts here for her accountant. And she also has a master finance record in [[13.11]] that includes a summary of her fixed assets because that’s how she rolls."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.45",
+    "title": "Current assets",
+    "description": "Things owned for less than a year that help you run the business, like stock and inventory.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.371Z",
+      "updatedDate": "2025-02-12T03:25:47.371Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "This is a place to note any physical items you own in the shorter term that are involved in running the business. Shorter term means for less than one accounting period (i.e. less than 1 year). \n\nDuring this time you expect to sell or consume these items. And/or they’re the type of thing that can be easily converted to cash if needed. These type of assets are classified as ‘tangible’ because you can physically touch them.\n\n### Saving files\n\nThis ID should contain copies of records saved elsewhere in the system. That’s okay because these are static records. We want a place where you and/or your accountant can go to see the proof of ownership and value of any current assets in one place.\n\nFor instance, a furniture maker’s stock (finished products to sell to customers) and inventory (raw materials used to make the products) are current assets. He manages these in [[20-29]]. He copies valuations and receipts here for his accountant. And he also has a master finance record in [[13.11]] that includes a summary of his current assets because that’s how he rolls."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.46",
+    "title": "Intangible assets",
+    "description": "Things you own that cannot be touched, like intellectual property, brand equity, and goodwill.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.371Z",
+      "updatedDate": "2025-02-12T03:25:47.371Z"
+    },
+    "smallBusiness": {
+      "examples": "Intellectual property such as patents, copyrights, trademarks, and trade secrets; digital assets such as domain names, software, and proprietary technology; goodwill assets such as brand equity and customer loyalty; licences and permits such as taxi medallions, liquor licences, and franchises.",
+      "moreInfo": "This is a place to note any non-physical items you own that are involved in running the business or contribute to its future worth. \n\nThese type of assets are classified as ‘intangible’ because you can’t physically touch them.* Depending on what they are, intangible assets might be much more valuable than any fixed or current assets.\n\n### Saving files\n\nThis ID should contain copies of records saved elsewhere in the system. That’s okay because these are static records. We want a place where you and/or your accountant can go to see the proof of ownership and value of any intangible assets in one place.\n\nFor instance, a scientist’s R&D and patent are intangible assets. She manages these in [[20-29]]. She copies the key records here for her accountant. And she also has a master finance record in [[13.11]] that includes a summary of her intangible assets because that’s how she rolls.\n\n*For the pedants, in the case of, say, a licence or permit, we’re talking about the concept of the thing here, not a printout of it."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.50",
+    "title": "Liabilities",
+    "description": "Money that the business owes to others.",
+    "type": "id",
+    "emoji": "💸",
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.371Z",
+      "updatedDate": "2025-02-12T03:25:47.371Z"
+    },
+    "smallBusiness": {},
+    "isPublic": false
+  },
+  {
+    "number": "13.51",
+    "title": "Inbox and processing of liabilities",
+    "description": "Pay what needs paying, tally up anything outstanding, and file the records.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.372Z",
+      "updatedDate": "2025-02-12T03:25:47.372Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where liability records are held until you process and permanently file them in either:\n\n- [[13.52]],\n- [[13.53]],\n- [[13.54]],\n- [[13.55]].\n\nAnd if you need to do any messy calculations as you process the liabilities, there’s room here.",
+      "rationale": "The goal of the five ‘inbox and processing’ IDs in this category is to add a little rigour to ensure you don’t miss anything. Income payments and tax deductible expenses are like treasure. And forgetting to pay other people is bad form.\n\nWe don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.52",
+    "title": "Cash loan accounts",
+    "description": "The place to file processed statements and other formal paperwork for any cash accounts that you owe money to.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.372Z",
+      "updatedDate": "2025-02-12T03:25:47.372Z"
+    },
+    "smallBusiness": {
+      "examples": "Credit card; mortgage; line of credit; overdraft; promissory note; commercial bill/bill of exchange; any other formal cash loan; refinancing paperwork; any form of investor financing that must be repaid.",
+      "moreInfo": "You owe someone money because they lent you money.\n\nAfter payments are processed, file the records here using the year-month method so everything sorts neatly. And subfolder by account issuer.",
+      "alsoSee": "If an investor also receives equity, manage that in [[13.64]].",
+      "rationale": "We made a decision to include any sort of repayable investor financing here as a cash loan account. Depending on who it’s from, it might not be set up like a typical bank loan account. But you’ll still have some form of repayment obligations and/or ‘statements’ to track, process, and file."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.53",
+    "title": "Non-cash loan accounts",
+    "description": "The place to file processed statements and other formal paperwork for non-cash accounts that you owe money to.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.372Z",
+      "updatedDate": "2025-02-12T03:25:47.372Z"
+    },
+    "smallBusiness": {
+      "examples": "Vendor financing/trade credit; hire purchase or rent to buy agreements.",
+      "moreInfo": "You owe someone money for goods that you haven’t paid for yet.\n\nThis might be for products or services from a supplier who didn’t require upfront payment. Or perhaps a vehicle that you have a hire purchase agreement for.\n\nAfter payments are processed, file the records here using the year-month method so everything sorts neatly. And subfolder by account issuer."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.54",
+    "title": "Bills",
+    "description": "The place to file processed bills.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.372Z",
+      "updatedDate": "2025-02-12T03:25:47.372Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "We’ve defined a ‘bill’ as something you must make time to pay. It’s outstanding and requires action, probably by a due date. As opposed to expenses that you have already paid for either on the spot (i.e. with a card), or via an automatic payment (i.e. a direct debit).\n\nAs per the ops manual, once you’ve processed the bill in [[13.51]], store it here. We recommend using the year-month method when saving this kind of paperwork so everything sorts neatly. And subfolder by bill issuer.\n\nFor instance, let’s say you have a food truck and receive a one-off bill from someone who delivered extra gas bottles for an event. Put the bill in the liabilities inbox until you process it. Then permanently file it here and, if you want, add a copy to [[12.31]].\n\n### How to be a small hero\n\nIf you can, consider paying invoices from sole traders on the day they’re received. One company used to do this for Lucy. She didn’t ask them to, they just did it. Every time. It was an amazing gesture towards the smallest of business owners and made a huge difference to her cashflow and ability to trade.",
+      "exceptions": "These are not expenses that are paid on the spot or automatically, manage those in [[13.30]].",
+      "rationale": "### Classifying automated bill payments as expenses\n\nNormally we think of the bills that we receive by email or post as liabilities. But we made a decision here to classify things like _direct debits_ of bill payments as going ‘straight to expenses’. They’re paid automatically and you don’t need to plan a time to physically transfer money. Those types of liabilities tend to recur predictably, either monthly or quarterly. \n\nFor instance, you’ve set up direct debits for your utility bills. They’re paid automatically on the due date. Now they’re just expense transactions on your bank statement that you process and file in [[13.30]].\n\nCompare this to other bills that arrive unpredictably that you must pay manually. During one month you receive invoices from a carpenter, a car mechanic, and a new supplier who serviced your front office coffee machine. \n\nThese are standalone bills for specific jobs. They all have different payment terms. As they arrive, put them in the liabilities inbox. Then set aside time later to pay them in order of urgency. The processed invoices are permanently filed here. And you might decide to add copies of them to [[12.14]], [[12.45]], and [[12.34]], respectively."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.55",
+    "title": "Fines & penalties",
+    "description": "The place to store processed notices that say you did something wrong.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.372Z",
+      "updatedDate": "2025-02-12T03:25:47.372Z"
+    },
+    "smallBusiness": {
+      "examples": "Tickets; fines; late fees; penalties; infringements.",
+      "moreInfo": "Whoops. The business owes someone money because it did something wrong. It happens to the best of us. Process it, file it, learn from it, and move on."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.60",
+    "title": "Reconciliation & returns",
+    "description": "The final reckonings.",
+    "type": "id",
+    "emoji": "🧮",
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.373Z",
+      "updatedDate": "2025-02-12T03:25:47.373Z"
+    },
+    "smallBusiness": {},
+    "isPublic": false
+  },
+  {
+    "number": "13.61",
+    "title": "Inbox and processing of government taxes",
+    "description": "Tally up final figures, pay what needs paying, and file the records.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.373Z",
+      "updatedDate": "2025-02-12T03:25:47.373Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where government tax records are held until you process and permanently file them in [[13.62]].\n\nAnd if you need to do any messy calculations as you process government taxes, there’s room here.",
+      "rationale": "The goal of the five ‘inbox and processing’ IDs in this category is to add a little rigour to ensure you don’t miss anything. Income payments and tax deductible expenses are like treasure. And forgetting to pay other people is bad form – especially the government.\n\nWe don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings. And ensuring our data is shipshape for tax time.",
+      "links": "[An overview of fringe benefits tax](https://www.ato.gov.au/businesses-and-organisations/hiring-and-paying-your-workers/fringe-benefits-tax/how-fringe-benefits-tax-works) from the Australian Taxation Office.\n\n[Due dates for lodging and paying taxes and superannuation](https://www.ato.gov.au/businesses-and-organisations/preparing-lodging-and-paying/reports-and-returns/due-dates-for-lodging-and-paying) from the Australian Taxation Office."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.62",
+    "title": "Accounts that handle tax",
+    "description": "The formal paperwork and statements for your official government tax ledgers.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.373Z",
+      "updatedDate": "2025-02-12T03:25:47.373Z"
+    },
+    "smallBusiness": {
+      "examples": "Depending on what you do and where you trade in the world, the following may apply: \n- income tax, \n- sales tax, \n- fringe benefits tax, \n- capital gains tax, \n- payroll tax, \n- land tax, \n- stamp duty.",
+      "moreInfo": "Here we are at the final stop. The big ledger in the sky. \n\nThis is the place to store all the official paperwork and statements related to government tax account/s for the business.\n\nAnd any other important documents related to your quarterly or annual tax returns (including the final tax return itself). Plus any correspondence with your accountant around preparing these returns.\n\n### Saving files\n\nDepending on where you’re from, you might have more than one account for different types of tax. Just subfolder everything neatly using the date and account name, as per previous guidance.",
+      "alsoSee": "If you receive a bill for taxes owed, put that in your liabilities inbox at [[13.51]], process it, then file it here.\n\nDitto for your accountant’s invoices for managing your affairs.",
+      "rationale": "We recommend that all government tax records should be permanently filed here after processing. Not just income tax returns.\n\nWhether a business is paying income, sales, fringe benefits, or payroll tax, it all goes to an account somewhere with your name on it. So we wanted to ensure there’s a resting place for all the final documents.\n\nHaving everything tax related in the one place feels helpful. You can always duplicate any records that you would like to add elsewhere in the system.",
+      "links": "[An overview on what payroll tax is](https://www.revenue.nsw.gov.au/taxes-duties-levies-royalties/payroll-tax/getting-started/what-is-payroll-tax) from the NSW Government."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.63",
+    "title": "Dividends",
+    "description": "If you need to deal with dividends, manage the details here.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.373Z",
+      "updatedDate": "2025-02-12T03:25:47.373Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "We can’t advise you on how to manage dividends.* It’s beyond our scope. We recommend outsourcing the process to an accountant or bookkeeper who specialises in this type of thing.\n\nBut we do think that anything to do with dividends lives over here with all the money and numbers. And it feels logical to put dividends after government taxes since they are paid from post-tax profits. \n\n*Perhaps one day, after community discussion with experienced business owners and accountants/bookkeepers, we can develop an ops manual that covers dividend basics."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.64",
+    "title": "Equity",
+    "description": "If you need to deal with owner’s equity, manage the details here.",
+    "type": "id",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.373Z",
+      "updatedDate": "2025-02-12T03:25:47.373Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "We can’t advise you on how to manage owner’s equity.* It’s beyond our scope. We recommend outsourcing the process to an accountant or bookkeeper who specialises in this type of thing.\n\nBut we do think that anything to do with owner’s equity, including drawings, lives over here with all the money and numbers. And it feels logical to put owner’s equity close to dividends. \n\n*Perhaps one day, after community discussion with experienced business owners and accountants/bookkeepers, we can develop an ops manual that covers owner’s equity basics."
+    },
+    "isPublic": false
+  },
+  {
+    "number": "13.90",
+    "title": "Money earned, spent, saved, & owed library",
+    "description": "A place to put information that’s related to this category, kinda interesting, mostly unimportant, and definitely doesn’t fit elsewhere.",
+    "type": "id",
+    "emoji": "📚",
+    "metadata": {
+      "createdDate": "2025-02-12T03:25:47.374Z",
+      "updatedDate": "2025-02-12T03:25:47.374Z"
+    },
+    "smallBusiness": {
+      "moreInfo": "Caution. This is a place for when there is no other place. Don’t get lazy and dump stuff here that is important and/or has a home elsewhere in the system.\n\nThis might be information that you found interesting or might be useful someday. But right now, it’s not strongly related to any other ID. And it would not make sense to clutter an existing ID or create a new one for it.\n\nIt’s a library so we want to keep it neat. Label any files with clear descriptions and use the year-month method in case the information is time sensitive.\n\n### Why are there no IDs here?\n\nIt’s difficult to imagine how these libraries might be used. So we didn’t want to commit to IDs just yet. By leaving these sections blank, we thought it might be a good way to introduce everyone to the careful consideration that goes into making a new ID.\n\nIf you’re ready to save things in this library, come over to the [[community]] and see what others are doing or ask us for advice. We’ll figure it out together and eventually settle on some standard IDs. In the meantime, just keep things neat and tidy here.\n\n### Leave yourself JDex notes\n\nRemember to leave a note in your JDex when you save things in this library so you can find them easily.\n\n(This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)",
+      "exceptions": "Things that contain financial information that is specific to your business, and that don’t fit elsewhere, should go in [[13.14]].",
+      "rationale": "We wanted to be realistic and acknowledge that sometimes there is miscellanea that accumulates over time.\n\nIt could be anything – a document, photo, URL, email, note, or a physical item. But it’s not the _work_ that you do. It’s things that you’ve found online or in real life, or perhaps that you’ve created.\n\nIt doesn’t fit anywhere else. It’s just a thing you wanted to save. And you don’t want it muddying other places where work happens.\n\nImportantly, it’s not that important. It has nothing to do with business operations. If it wasn’t backed up it wouldn’t matter. If you lose it, you could probably download it again."
     },
     "isPublic": false
   },

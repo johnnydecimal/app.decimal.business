@@ -187,6 +187,44 @@ import id_12_52 from "@data/sb_ts/12.52-your-business-city-state-country";
 import id_12_53 from "@data/sb_ts/12.53-your-business-planet";
 import id_12_90 from "@data/sb_ts/12.90-where-i-trade-how-i-get-around-library";
 
+import id_13_10 from "@data/sb_ts/13.10-plan-protect-reflect";
+import id_13_11 from "@data/sb_ts/13.11-financial-planning";
+import id_13_12 from "@data/sb_ts/13.12-financial-insurance-incidents-claims";
+import id_13_13 from "@data/sb_ts/13.13-reports-reviews";
+import id_13_14 from "@data/sb_ts/13.14-financial-catch-all";
+import id_13_20 from "@data/sb_ts/13.20-income";
+import id_13_21 from "@data/sb_ts/13.21-inbox-processing-income";
+import id_13_22 from "@data/sb_ts/13.22-accounts-deliver-income";
+import id_13_23 from "@data/sb_ts/13.23-invoices-sales-your-work";
+import id_13_24 from "@data/sb_ts/13.24-passive-income";
+import id_13_25 from "@data/sb_ts/13.25-assistance-grants-gifts";
+import id_13_26 from "@data/sb_ts/13.26-sale-assets";
+import id_13_30 from "@data/sb_ts/13.30-expenses";
+import id_13_31 from "@data/sb_ts/13.31-inbox-processing-expenses";
+import id_13_32 from "@data/sb_ts/13.32-accounts-handle-expenses";
+import id_13_33 from "@data/sb_ts/13.33-receipts";
+import id_13_34 from "@data/sb_ts/13.34-payroll";
+import id_13_35 from "@data/sb_ts/13.35-subscriptions-memberships-other-recurring-expenses";
+import id_13_40 from "@data/sb_ts/13.40-assets";
+import id_13_41 from "@data/sb_ts/13.41-inbox-processing-assets";
+import id_13_42 from "@data/sb_ts/13.42-accounts-handle-cash";
+import id_13_43 from "@data/sb_ts/13.43-investments";
+import id_13_44 from "@data/sb_ts/13.44-fixed-assets";
+import id_13_45 from "@data/sb_ts/13.45-current-assets";
+import id_13_46 from "@data/sb_ts/13.46-intangible-assets";
+import id_13_50 from "@data/sb_ts/13.50-liabilities";
+import id_13_51 from "@data/sb_ts/13.51-inbox-processing-liabilities";
+import id_13_52 from "@data/sb_ts/13.52-cash-loan-accounts";
+import id_13_53 from "@data/sb_ts/13.53-non-cash-loan-accounts";
+import id_13_54 from "@data/sb_ts/13.54-bills";
+import id_13_55 from "@data/sb_ts/13.55-fines-penalties";
+import id_13_60 from "@data/sb_ts/13.60-reconciliation-returns";
+import id_13_61 from "@data/sb_ts/13.61-inbox-processing-government-taxes";
+import id_13_62 from "@data/sb_ts/13.62-accounts-handle-tax";
+import id_13_63 from "@data/sb_ts/13.63-dividends";
+import id_13_64 from "@data/sb_ts/13.64-equity";
+import id_13_90 from "@data/sb_ts/13.90-money-earned-spent-saved-owed-library";
+
 const flattenedData: FlattenedData = {
   J82: {
     number: "J82",
@@ -574,6 +612,138 @@ const flattenedData: FlattenedData = {
   },
   "12.90": {
     ...id_12_90,
+  },
+  "13": {
+    number: "13",
+    type: "category",
+    title: "Money earned, spent, saved, & owed",
+    description:
+      "This category is all about keeping track of your finances, from planning and budgeting, to reconciling and submitting your annual returns.",
+    emoji: "💰",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+  },
+  "13.10": {
+    ...id_13_10,
+  },
+  "13.11": {
+    ...id_13_11,
+  },
+  "13.12": {
+    ...id_13_12,
+  },
+  "13.13": {
+    ...id_13_13,
+  },
+  "13.14": {
+    ...id_13_14,
+  },
+  "13.20": {
+    ...id_13_20,
+  },
+  "13.21": {
+    ...id_13_21,
+  },
+  "13.22": {
+    ...id_13_22,
+  },
+  "13.23": {
+    ...id_13_23,
+  },
+  "13.24": {
+    ...id_13_24,
+  },
+  "13.25": {
+    ...id_13_25,
+  },
+  "13.26": {
+    ...id_13_26,
+  },
+  "13.30": {
+    ...id_13_30,
+  },
+  "13.31": {
+    ...id_13_31,
+  },
+  "13.32": {
+    ...id_13_32,
+  },
+  "13.33": {
+    ...id_13_33,
+  },
+  "13.34": {
+    ...id_13_34,
+  },
+  "13.35": {
+    ...id_13_35,
+  },
+  "13.40": {
+    ...id_13_40,
+  },
+  "13.41": {
+    ...id_13_41,
+  },
+  "13.42": {
+    ...id_13_42,
+  },
+  "13.43": {
+    ...id_13_43,
+  },
+  "13.44": {
+    ...id_13_44,
+  },
+  "13.45": {
+    ...id_13_45,
+  },
+  "13.46": {
+    ...id_13_46,
+  },
+  "13.50": {
+    ...id_13_50,
+  },
+  "13.51": {
+    ...id_13_51,
+  },
+  "13.52": {
+    ...id_13_52,
+  },
+  "13.53": {
+    ...id_13_53,
+  },
+  "13.54": {
+    ...id_13_54,
+  },
+  "13.55": {
+    ...id_13_55,
+  },
+  "13.60": {
+    ...id_13_60,
+  },
+  "13.61": {
+    ...id_13_61,
+  },
+  "13.62": {
+    ...id_13_62,
+  },
+  "13.63": {
+    ...id_13_63,
+  },
+  "13.64": {
+    ...id_13_64,
+  },
+  "13.90": {
+    ...id_13_90,
+  },
+  "14": {
+    type: "category",
+    number: "14",
+    title: "Technology",
+    description:
+      "This category is all about your business in the digital world.",
+    emoji: "💻",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {},
+    },
   },
   "20-29": {
     type: "area",

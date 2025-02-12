@@ -1,0 +1,23 @@
+// Auto-generated from 13.52-cash-loan-accounts.md
+import type { IdEntry } from "@data/smallBusinessFlat";
+const entry: IdEntry = {
+  "number": "13.52",
+  "title": "Cash loan accounts",
+  "description": "The place to file processed statements and other formal paperwork for any cash accounts that you owe money to.",
+  "type": "id",
+  "isPublic": false,
+  "isHeader": false,
+  "metadata": {
+    "createdDate": "2025-02-12T03:25:47.372Z",
+    "updatedDate": "2025-02-12T03:25:47.372Z"
+  },
+  "extensions": {
+    "smallBusiness": {
+      "examples": "Credit card; mortgage; line of credit; overdraft; promissory note; commercial bill/bill of exchange; any other formal cash loan; refinancing paperwork; any form of investor financing that must be repaid.",
+      "moreInfo": "You owe someone money because they lent you money.\n\nAfter payments are processed, file the records here using the year-month method so everything sorts neatly. And subfolder by account issuer.",
+      "alsoSee": "If an investor also receives equity, manage that in [[13.64]].",
+      "rationale": "We made a decision to include any sort of repayable investor financing here as a cash loan account. Depending on who it’s from, it might not be set up like a typical bank loan account. But you’ll still have some form of repayment obligations and/or ‘statements’ to track, process, and file."
+    }
+  }
+};
+export default entry;
