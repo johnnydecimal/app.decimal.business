@@ -24,6 +24,7 @@
     "@zip.js/zip.js": "^2.7.57",
     "astro": "^5.1.7",
     "fuse.js": "^7.0.0",
+    "gray-matter": "^4.0.3",
     "jszip": "^3.10.1",
     "marked": "^15.0.6",
     "marked-smartypants": "^1.1.9",
@@ -35,7 +36,7 @@
   "devDependencies": {
     "@clerk/testing": "^1.4.19",
     "@playwright/test": "^1.50.0",
-    "tsx": "^4.19.2",
-    "ts-node": "^10.x"
+    "ts-node": "^10.x",
+    "tsx": "^4.19.2"
   }
 }

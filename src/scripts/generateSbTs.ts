@@ -4,6 +4,7 @@ import { dirname } from "path";
 import { promises as fs } from "fs";
 import * as path from "path";
 import type { IdEntry } from "@data/smallBusinessFlat";
+import matter from "gray-matter";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -101,17 +102,19 @@ async function generateTsFiles() {
   for (const file of files) {
     if (file.endsWith(".md")) {
       const filePath = path.join(inputDir, file);
-      const markdown = await fs.readFile(filePath, "utf-8");
+      const markdownContent = await fs.readFile(filePath, "utf-8");
+
+      // Parse the markdown content with gray-matter
+      const { data: frontmatter, content: markdown } = matter(markdownContent);
       const parsed = parseMarkdown(markdown);
 
       // Construct a final entry conforming to IdEntry.
-      // Note: Since markdown doesn't provide all required fields (e.g. parentNumber),
-      // we are defaulting them. Adjust as needed.
       const finalEntry: IdEntry = {
         number: parsed.number,
         title: parsed.title,
         description: parsed.description || "",
         type: "id",
+        isPublic: frontmatter.isPublic || false,
         metadata: {
           createdDate: new Date().toISOString(),
           updatedDate: new Date().toISOString(),
