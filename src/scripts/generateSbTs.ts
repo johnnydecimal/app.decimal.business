@@ -91,6 +91,11 @@ function parseMarkdown(markdown: string): SmallBusinessEntry {
   return entry;
 }
 
+// Type guard to check if the entry is a CategoryEntry
+function isCategoryEntry(number: string): boolean {
+  return /^\d\d$/.test(number);
+}
+
 async function generateTsFiles() {
   const inputDir = path.join(__dirname, "../data/sb_markdown");
   const outputDir = path.join(__dirname, "../data/sb_ts");
@@ -109,7 +114,8 @@ async function generateTsFiles() {
       const parsed = parseMarkdown(markdown);
 
       let finalEntry: IdEntry | CategoryEntry;
-      if (parsed.number.match(/^\d\d$/)) {
+      let entryType: string;
+      if (isCategoryEntry(parsed.number)) {
         finalEntry = {
           number: parsed.number,
           title: parsed.title,
@@ -122,6 +128,7 @@ async function generateTsFiles() {
           },
           extensions: { smallBusiness: {} },
         };
+        entryType = "CategoryEntry";
       } else {
         finalEntry = {
           number: parsed.number,
@@ -137,6 +144,7 @@ async function generateTsFiles() {
           },
           extensions: { smallBusiness: {} },
         };
+        entryType = "IdEntry";
       }
 
       const extKeys: (keyof SmallBusinessEntry)[] = [
@@ -162,8 +170,8 @@ async function generateTsFiles() {
 
       const tsObject = JSON.stringify(finalEntry, null, 2);
       const tsContent = `// Auto-generated from ${file}
-import type { IdEntry, CategoryEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry | CategoryEntry = ${tsObject};
+import type { ${entryType} } from "@data/smallBusinessFlat";
+const entry: ${entryType} = ${tsObject};
 export default entry;
 `;
 
