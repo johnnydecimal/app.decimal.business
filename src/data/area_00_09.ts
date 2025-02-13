@@ -75,6 +75,7 @@ export const area_00_09: FlattenedData = {
     type: "category",
     description: "Get your file system folders & JDex files here.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
   },
   "05.11": {
     number: "05.11",
@@ -82,5 +83,6 @@ export const area_00_09: FlattenedData = {
     type: "adHoc",
     description: "Get your file system folders & JDex files here.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
   },
 };
