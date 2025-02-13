@@ -22,70 +22,36 @@ function parseMarkdownFile(filePath) {
     crlfDelay: Infinity, // Recognize all instances of CR LF ('\r\n') as a single line break
   });
 
-  // Initialize variables to store the current header and its content
-  let currentH1 = null;
+  let arrayOfEntries = [];
   let currentEntry = [];
-  let currentNumber = null;
-  let currentTitle = null;
-  let currentFilename = null;
-  let furtherReadingEntry = false;
-  let furtherReadingId = 1;
 
-  // Event listener for each line read from the file
+  // Step 1: take this one monster input and split it in to a bunch of more
+  // manageable sections.
+  // arrayOfEntries will end up being an array of arrays containing lines from
+  // the file. In another function we'll iterate over that, and do the bits
+  // where we calculate filenames etc.
   lineReader.on("line", (line) => {
-    // console.log("🚀 ~ lineReader.on ~ line:", line);
-    const currentLineArray = line
-      .toLowerCase()
-      .replaceAll("&", "and")
-      .replaceAll("■ ", "")
-      .replaceAll(",", "")
-      .split(" ");
+    const currentLine = line.split(" ");
+    if (currentLine[0] === "#" && currentLine[1].match(/^\d\d/)) {
+      // We're starting a new entry. If there's a current entry, write it to
+      // the output array and clear it.
+      if (currentEntry.length) {
+        arrayOfEntries.push(currentEntry);
+        currentEntry = [];
+      }
 
-    // Are we in a further reading entry section?
-    if (furtherReadingEntry) {
-    }
-
-    // Is this line a legitimate header? If so, start a new entry after writing
-    // out the current entry and clearing some values
-    if (currentLineArray[0] === "#" && currentLineArray[1].match(/^\d\d/)) {
-      // Write the current buffer
-      writeLinesToFile(
-        `src/data/sb_markdown/parsed/${currentFilename}`,
-        currentEntry
-      );
-      // Clear values
-      currentEntry = [];
-      currentNumber = null;
-      currentTitle = null;
-      currentFilename = null;
-
-      // Process this entry
-      // Add the header line to the entry
+      // Push this line to currentEntry
       currentEntry.push(line);
-
-      // Figure out our number & title
-      currentNumber = currentLineArray[1];
-      console.log("🚀 ~ lineReader.on ~ currentNumber:", currentNumber);
-      currentTitle = currentLineArray.slice(2).join("-");
-      console.log("🚀 ~ lineReader.on ~ currentTitle:", currentTitle);
-      currentFilename = `${currentNumber}-${currentTitle}.md`;
-      console.log("🚀 ~ lineReader.on ~ currentFilename:", currentFilename);
-    } else if (line.startsWith("## Further reading")) {
-      // Obviously we've hit a further reading
-      // Set the flag so on our next line-loop we know we're looking for it
-      furtherReadingEntry = true;
     } else {
-      // This is just another line of the entry
       currentEntry.push(line);
     }
   });
 
   lineReader.on("close", () => {
-    writeLinesToFile(
-      `src/data/sb_markdown/parsed/${currentFilename}`,
-      currentEntry
-    );
     console.log("~~ EOF ~~");
+    arrayOfEntries.push(currentEntry);
+    console.log("🚀 ~ parseMarkdownFile ~ arrayOfEntries", arrayOfEntries);
+    return arrayOfEntries;
   });
 }
 
