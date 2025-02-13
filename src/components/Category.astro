@@ -5,26 +5,19 @@
 
 interface Props {
   category: string;
-  testRun?: boolean;
 }
 const { category } = Astro.props;
 
-// #region Clerk user
-const { userId } = Astro.locals.auth();
-// #endregion
-
 import system, {
-  getChildren,
   type SystemEntry,
   type AreaEntry,
   type CategoryEntry,
-  type IdEntry,
-  type FurtherReadingEntry,
 } from "@data/smallBusinessFlat";
 import parseMd from "@utils/parseMd";
-import Slice from "./common/Slice.astro";
-import FurtherReadingLinks from "./common/FurtherReadingLinks.astro";
-import ChildrenInParent from "./common/ChildrenInParent.astro";
+import Slice from "@components/common/Slice.astro";
+import FurtherReadingLinks from "@components/common/FurtherReadingLinks.astro";
+import ChildrenInParent from "@components/common/ChildrenInParent.astro";
+
 // Get this entry's details
 const categoryEntry = system[category] as CategoryEntry;
 const categoryTitle = categoryEntry.title;
@@ -76,6 +69,7 @@ const parentSTitle = parentSEntry.title;
   </div>
 </Slice>
 
+<!-- #region Optional fields -------------------------------------------------->
 {
   categoryDescription ? (
     <Slice id="CategoryDescription" className="descriptive-text">
@@ -141,6 +135,7 @@ const parentSTitle = parentSEntry.title;
     </Slice>
   ) : null
 }
+<!-- #endregion -------------------------------------------------------------->
 
 <FurtherReadingLinks number={category} />
 

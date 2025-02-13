@@ -3,18 +3,14 @@
  * The system list view component. So we've navigated to /.
  */
 
-import system, {
-  getAllByType,
-  getChildren,
-  type SystemEntry,
-  type AreaEntry,
-} from "@data/smallBusinessFlat";
+import system, { type SystemEntry } from "@data/smallBusinessFlat";
+
 import parseMd from "@utils/parseMd";
-import Slice from "./common/Slice.astro";
-import FurtherReadingLinks from "./common/FurtherReadingLinks.astro";
-import ChildrenInParent from "./common/ChildrenInParent.astro";
-// Get this entry's details
-const systemEntry = getAllByType(system, "system")[0] as SystemEntry;
+import Slice from "@components/common/Slice.astro";
+import FurtherReadingLinks from "@components/common/FurtherReadingLinks.astro";
+import ChildrenInParent from "@components/common/ChildrenInParent.astro";
+
+const systemEntry = system["J82"] as SystemEntry;
 const systemTitle = systemEntry.title;
 const systemDescription = await parseMd(systemEntry.description);
 ---

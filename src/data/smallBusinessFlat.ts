@@ -249,7 +249,6 @@ const flattenedData: FlattenedData = {
     number: "10-19",
     title: "Company administration",
     type: "area",
-    isPublic: true,
     description:
       "In [[10-19]], our goal is that these categories could be the foundation of _any_ business, regardless of the product or service you offer.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
@@ -279,7 +278,6 @@ const flattenedData: FlattenedData = {
     number: "11",
     title: "The business & its people",
     type: "category",
-    isPublic: true,
     description:
       "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
     emoji: "🙋",

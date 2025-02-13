@@ -60,8 +60,10 @@ const processedIds = await Promise.all(
       return null;
     }
 
+    // Obfuscate IDs, if there's no signed-in user. Never obfuscate areas or
+    // categories.
     let entryTitle, entryDescription;
-    if (userId) {
+    if (userId || entry.type === "area" || entry.type === "category") {
       entryTitle = entry.title;
       entryDescription = await parseMd(entry.description);
     } else {

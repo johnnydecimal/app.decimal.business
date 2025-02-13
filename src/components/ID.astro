@@ -3,33 +3,27 @@
  * The ID view component. So we're at /11.11.
  */
 
-// #region Props --------------------------------------------------------------
 interface Props {
   id: string;
 }
 const { id } = Astro.props;
-// #endregion
 
-// #region Clerk user
 const { userId } = Astro.locals.auth();
-// #endregion
 
 // #region Imports ------------------------------------------------------------
 // Data
 import system, {
-  getChildren,
   type SystemEntry,
   type AreaEntry,
   type CategoryEntry,
   type IdEntry,
-  type FurtherReadingEntry,
-} from "src/data/smallBusinessFlat";
+} from "@data/smallBusinessFlat";
 // Utils
 import parseMd from "@utils/parseMd";
 // Components
-import Slice from "./common/Slice.astro";
-import ObsidianVaultLink from "./common/ObsidianVaultLink.astro";
-import FurtherReadingLinks from "./common/FurtherReadingLinks.astro";
+import Slice from "@components/common/Slice.astro";
+import ObsidianVaultLink from "@components/common/ObsidianVaultLink.astro";
+import FurtherReadingLinks from "@components/common/FurtherReadingLinks.astro";
 // #endregion
 
 // #region Entry: core details ------------------------------------------------
@@ -54,20 +48,13 @@ if (userId) {
   idExceptions = sb.exceptions && (await parseMd(sb.exceptions, true, true));
   idAlsoSee = sb.alsoSee && (await parseMd(sb.alsoSee, true, true));
 } else {
-  idTitle = await parseMd(system[id]?.title, false, !!idEntry.isPublic);
-  idDescription = await parseMd(
-    system[id]?.description,
-    true,
-    !!idEntry.isPublic
-  );
-  idExamples =
-    sb.examples && (await parseMd(sb.examples, true, !!idEntry.isPublic));
-  idOverview =
-    sb.overview && (await parseMd(sb.overview, true, !!idEntry.isPublic));
+  idTitle = await parseMd(system[id]?.title, false, !!isPublic);
+  idDescription = await parseMd(system[id]?.description, true, !!isPublic);
+  idExamples = sb.examples && (await parseMd(sb.examples, true, !!isPublic));
+  idOverview = sb.overview && (await parseMd(sb.overview, true, !!isPublic));
   idExceptions =
-    sb.exceptions && (await parseMd(sb.exceptions, true, !!idEntry.isPublic));
-  idAlsoSee =
-    sb.alsoSee && (await parseMd(sb.alsoSee, true, !!idEntry.isPublic));
+    sb.exceptions && (await parseMd(sb.exceptions, true, !!isPublic));
+  idAlsoSee = sb.alsoSee && (await parseMd(sb.alsoSee, true, !!isPublic));
 }
 
 const parentCNumber = idEntry.number.split(".")[0];

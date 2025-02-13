@@ -5,26 +5,21 @@
 
 interface Props {
   area: string;
-  testRun?: boolean;
 }
 const { area } = Astro.props;
 
 import system, {
-  getChildren,
   type SystemEntry,
   type AreaEntry,
-  type CategoryEntry,
 } from "@data/smallBusinessFlat";
 import parseMd from "@utils/parseMd";
-import Slice from "./common/Slice.astro";
-import ChildrenInParent from "./common/ChildrenInParent.astro";
-import FurtherReadingLinks from "./common/FurtherReadingLinks.astro";
+import Slice from "@components/common/Slice.astro";
+import ChildrenInParent from "@components/common/ChildrenInParent.astro";
+import FurtherReadingLinks from "@components/common/FurtherReadingLinks.astro";
 
-// Get this entry's details
 const areaEntry = system[area] as AreaEntry;
 const areaTitle = areaEntry.title;
 
-// All of its other details for the main content.
 const areaDescription = await parseMd(areaEntry.description);
 const sb = areaEntry.extensions?.smallBusiness;
 const areaExamples = sb?.examples && (await parseMd(sb.examples));
@@ -33,10 +28,6 @@ const areaExceptions = sb?.exceptions && (await parseMd(sb.exceptions));
 const areaAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
 const areaRationale = sb?.rationale && (await parseMd(sb?.rationale));
 
-// Get all of the categories that this area contains
-const categories = getChildren(system, area) as CategoryEntry[];
-
-// For area entries, the parent's system number is always "J82".
 const parentSNumber = "J82";
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
@@ -59,6 +50,7 @@ const parentSTitle = parentSEntry.title;
   </div>
 </Slice>
 
+<!-- #region Optional fields -------------------------------------------------->
 {
   areaDescription ? (
     <Slice id="AreaDescription" className="descriptive-text">
@@ -124,6 +116,7 @@ const parentSTitle = parentSEntry.title;
     </Slice>
   ) : null
 }
+<!-- #endregion -------------------------------------------------------------->
 
 <FurtherReadingLinks number={area} />
 
