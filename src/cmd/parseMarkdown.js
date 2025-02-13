@@ -44,7 +44,6 @@ function generateArrayOfEntries(filePath) {
         arrayOfEntries.push(currentEntry);
       }
       console.log("~~ EOF ~~");
-      console.log("🚀 ~ parseMarkdownFile ~ arrayOfEntries", arrayOfEntries);
       resolve(arrayOfEntries);
     });
 
@@ -64,7 +63,12 @@ function processArrayOfEntries(arrayOfEntries) {
     // Figure out this entry's title
     const number = entry[0].split(" ")[1];
     const title = entry[0].split(" ").slice(2);
-    const fileTitle = title.join("-").toLowerCase().replaceAll("-&-", "-and-");
+    const fileTitle = title
+      .join("-")
+      .toLowerCase()
+      .replaceAll("-&-", "-and-")
+      .replaceAll("■-", "")
+      .replaceAll(",", "");
     const fileName = `${number}-${fileTitle}.md`;
 
     // Use the fileName to create the full path
@@ -77,7 +81,6 @@ function processArrayOfEntries(arrayOfEntries) {
 
 generateArrayOfEntries(inputFilePath)
   .then((arrayOfEntries) => {
-    console.log(arrayOfEntries);
     processArrayOfEntries(arrayOfEntries);
   })
   .catch((error) => {
