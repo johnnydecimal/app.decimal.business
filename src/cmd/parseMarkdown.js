@@ -57,6 +57,7 @@ function generateArrayOfEntries(filePath) {
 const inputFilePath = process.argv[2] || "path/to/your/markdown/file.md";
 
 function processArrayOfEntries(arrayOfEntries) {
+  let entryWithoutFR = [];
   arrayOfEntries.forEach((entry) => {
     // entry is an array of lines
 
@@ -74,8 +75,30 @@ function processArrayOfEntries(arrayOfEntries) {
     // Use the fileName to create the full path
     const fullPath = `./src/data/sb_markdown/parsed/${fileName}`;
 
+    // Extract any Further Reading text
+    let furtherReading = [];
+    let inFRSection = false;
+    entry.forEach((line) => {
+      if (!inFRSection) {
+        if (line.startsWith("## Further reading")) {
+          furtherReading.push(line);
+          inFRSection = true;
+        } else {
+          entryWithoutFR.push(line);
+        }
+      } else {
+        // We're in a FR section
+        if (line.startsWith("## Ops manual")) {
+          inFRSection = false;
+        } else {
+          furtherReading.push(line);
+        }
+      }
+    });
+
     // Write the entry to the file
-    writeLinesToFile(fullPath, entry);
+    writeLinesToFile(fullPath, entryWithoutFR);
+    entryWithoutFR = [];
   });
 }
 
