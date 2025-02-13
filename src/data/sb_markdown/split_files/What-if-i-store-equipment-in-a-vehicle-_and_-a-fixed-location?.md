@@ -1,0 +1,4 @@
+# What if I store equipment in a vehicle _and_ a fixed location?
+
+As noted at [[12.12]], if you store equipment in both a vehicle and a fixed location, there might be some overlap here. Just do what makes sense to you. For instance, if you’re a plumber your equipment might be insured in your home garage and also in your van. If these are separate policies then save them where relevant and leave a note in your JDex.
+

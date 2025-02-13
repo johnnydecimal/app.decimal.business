@@ -1,0 +1,20 @@
+# Using sub-IDs to create separate JDex notes
+
+If you’d like more room for this information, consider using the sub-ID method to create separate JDex notes.
+
+For example:
+
+- ‘14.31+ Google dashboard’,
+- ‘14.31+ Excel script’,
+- ‘14.31+ Airtable automation’.
+
+These notes will sort neatly under the parent ID. And they’re instantly findable by typing ‘14.31+’ in your search box.
+
+We encourage you to use this method whenever you would like more room in your JDex. This way you won’t over-clutter the note for the parent ID.
+
+This is one of the Decimal superpowers.
+
+## Links
+
+## Emoji
+

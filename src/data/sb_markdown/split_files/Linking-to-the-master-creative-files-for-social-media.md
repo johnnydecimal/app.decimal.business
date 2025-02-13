@@ -1,0 +1,27 @@
+# Linking to the master creative files for social media
+
+We recommend that this ID includes links to the location of the master creative files for your social media accounts. _Because they do not live here_. For example, logos, banners, photos, videos, and approved profile pics and wording.
+
+If these are files that you reuse over and over, there should be one copy in [[80-89]]. When you need something for a job, you go there and get it. This might include your logo or profile pic, colour palette details, or product shots.
+
+Conversely, if there are files that are specific to a particular job, they should live in that job’s folder in [[90-99]]. For example, you make a new product video for reels – the raw footage, hashtags, and approved post wording live in that job’s folder.
+
+## Order and calm
+
+Our goal for the two creative categories is that they’re orderly, calm places. The type of files and projects that go here are often littered throughout your entire system. And so much time is wasted clicking around trying to find them.
+
+“When did I last use the logo?”. “Is this the hi-res version?”. “Where’s the final PDF of the new menu design?”.
+
+We need to get out of the habit of having 50 copies of our important creative assets, with different names, in multiple locations. And into the habit of having a neat set of folders containing a master copy of everything. As well as a separate place to work on new projects that doesn’t clutter where we do our daily business admin.
+
+We discuss this in more detail in the creative categories.
+
+## Links
+
+Tips on [claiming social media handles](https://www.godaddy.com/resources/skills/how-to-claim-social-media-handles-and-why-you-should-do-it-now) from GoDaddy.
+
+## Emoji
+
+NOTES:
+Template/subfolder recommendation for if you have several accounts
+

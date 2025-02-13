@@ -1,0 +1,4 @@
+# Are accessories fixed assets?
+
+We’ve also (tentatively) assumed that some high-value accessories are classed as fixed assets, like computers. But it’ll be up to your accountant and local tax guidelines if this is the case.
+

@@ -1,0 +1,10 @@
+# Storing details for multiple social media accounts
+
+To avoid cluttering this JDex note, we recommend using the extend-the-end method to create sub-IDs under this parent ID. For example:
+
+- ‘14.53+ Instagram’,
+- ‘14.53+ LinkedIn’,
+- ‘14.53+ YouTube’,
+
+And to neatly store files in your file system, create one subfolder per platform so they sort alphabetically. Then use the year-month method to name files so they sort by date.
+

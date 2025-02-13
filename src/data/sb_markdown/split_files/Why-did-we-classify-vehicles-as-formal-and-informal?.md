@@ -1,0 +1,28 @@
+# Why did we classify vehicles as formal and informal?
+
+Many businesses manage all kinds of vehicles that are part of their daily operations. But the more we thought about it, we weren’t sure that a one-size-fits-all approach was the right way. So in this section we’ve suggested that vehicles be classified into two buckets – ‘formal’ and ‘informal’.
+
+_Formal_ vehicles include anything that requires official registrations and inspections, whether it’s motorised or not. If it travels on a public road and requires insurance, or does anything serious like carrying passengers or dangerous goods, then manage it in:
+
+- [[12.41]],
+- [[12.42]],
+- [[12.43]],
+- [[12.44]], and
+- [[12.45]].
+
+_Informal_ vehicles do not fit the above description. Manage those, as well as any public or shared transportation that your business uses, in [[12.46]].
+
+As always, if you can’t decide what goes where, don’t stress. Just make a decision and note what you did in your JDex. And if you want to discuss our classification, head over to the [[community]].
+
+## Ops manual
+
+## Links
+
+## Emoji
+
+Delivery truck
+
+NOTES:
+What about permits and fees for informal vehicles?
+What if you do a mini fit-out to your bicycle to put a box on the back?
+

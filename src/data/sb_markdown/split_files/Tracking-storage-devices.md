@@ -1,0 +1,17 @@
+# Tracking storage devices
+
+Physical storage devices have a certain security profile because many of them can be carried around in public. This is something to consider in [[14.40]].
+
+We recommend recording their usual location. This might just be a note in your JDex. Are they in a drawer, cupboard, vehicle, locked safe? Are they used by a particular staff member and/or taken offsite?
+
+It might be worth having regular audits or reviews so you know where your stuff is. You don’t want someone carrying around your company's intellectual property on an insecure USB stick.
+
+## Ops manual
+
+## Links
+
+## Emoji
+
+NOTES:
+ops manual - 6-monthly data and storage review?
+

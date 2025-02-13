@@ -1,0 +1,26 @@
+# What are some other formal vehicles?
+
+This isn’t limited to cars, vans, and trucks.
+
+A farm might have motorbikes, tractors, and a harvester. A fishing business will have boats. A flight training school will have a plane or a helicopter. A tree surgeon will have a cherry picker. We know someone whose agricultural business uses drones that must be registered with the Civil Aviation Safety Authority.
+
+Then there’s things that can be towed and require a registration to travel on roads. Such as trailers used by gardeners, and converted caravans for food or coffee service.
+
+And of course there’ll be grey areas. Maybe you have a hot air balloon business. Not a traditional motor vehicle, but they need to be certified and transported on a registered trailer. So they go here.
+
+What if you have an unregistered tractor that never leaves your farm? You’ll have proof of ownership documents and you might register it _someday_. So it goes here.
+
+Here’s another niche, but relevant, example. What if you run a Hansom cab (horse and carriage) business? The carriage isn’t a traditional motor vehicle. But it carries passengers, often in busy cities. You’ll no doubt have registrations, inspections, and other paperwork for this vehicle. So it goes here. And your horses fit nicely in [[11.45]].
+
+## Ops manual
+
+## Links
+
+## Emoji
+
+NOTES:
+Ops manual/training: setting up and cleaning the food truck or dog washing van
+Is this here or in front office
+Maybe its home is here but it’s an ‘also see’ link elsewhere?
+Keeping it nice? Staff training? It’s operations
+

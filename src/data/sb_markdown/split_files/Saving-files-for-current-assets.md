@@ -1,0 +1,16 @@
+# Saving files for current assets
+
+This ID should contain copies of records saved elsewhere in the system. That’s okay because these are static records. We want a place where you and/or your accountant can go to see the proof of ownership and value of any current assets in one place.
+
+For instance, a furniture maker’s stock (finished products to sell to customers) and inventory (raw materials used to make the products) are current assets:
+
+- He manages the stock and inventory in [[20-29]].
+- He copies valuations and receipts here for his accountant.
+- And he also has a master finance record in [[13.11]] that includes a summary of his current assets because that’s how he rolls.
+
+## Ops manual
+
+## Links
+
+## Emoji
+

@@ -1,0 +1,18 @@
+# Backing up versus saving a copy
+
+Many of us, Lucy included, used to think that ‘backing up’ meant saving important files to a hard drive or Dropbox at the end of the work day. People like Johnny will tell us that this is a copy, not a backup, and we should not rely on it.
+
+You might _think_ that you have a backup because you store your data in the cloud. But if you mess up a file and don’t realise for a week, that isn’t going to help. You can’t ‘roll back’ to a version of that file from a week ago like you can with a backup. Sure, some cloud services offer restoring features, but they are _not_ backups.
+
+A backup service is dedicated software that:
+
+- automatically keeps historical versions of your data,
+- at a schedule you define,
+- that is easy to recover.
+
+The magic of a backup means that you can step back in time and recover whatever version of a file you need. And you don’t have to think about it – it’s happening constantly in the background.
+
+Whereas a copy ‘saved as’ to a hard drive is singular, it happened at a particular time point. This might not be so useful when your computer crashes before you hit save. It also relies on you _remembering_ to do it.
+
+Whether you conduct all, or most, of your business in the digital world, organising a trustworthy backup service is worth every penny.
+

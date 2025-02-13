@@ -1,0 +1,21 @@
+# Property as an investment
+
+To reiterate, we’re not accountants. And when we discussed property ownership, the conversation kept going around in circles.
+
+If you own your business premises that’s a fixed asset. But a lot of us would think, “hey, isn’t that also an investment?”. And vice versa, if the business owns a rental property as an investment, that’s still a fixed asset right?
+
+We’re not going to get involved in international balance sheet science. But we _can_ make a decision about folders.
+
+Our recommendation is:
+
+- If you own your business premises, the title deed lives in [[12.11]] and because it’s a fixed asset, copy it to [[13.44]].
+- And if the business also owns a rental property that is _not_ where you trade, we consider that an investment. The rent is your earnings. So the title deed lives here. You could also copy it to [[13.44]] if you prefer.
+
+If this sounds like madness, we can discuss it in the [[community]].
+
+## Ops manual
+
+## Links
+
+## Emoji
+

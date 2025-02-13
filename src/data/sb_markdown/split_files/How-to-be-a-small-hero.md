@@ -1,0 +1,12 @@
+# How to be a small hero
+
+If you can, consider paying invoices from sole traders on the day they’re received. One company used to do this for Lucy. She didn’t ask them to, they just did it. Every time. It was an amazing gesture towards the smallest of business owners and made a huge difference to her cashflow and ability to trade.
+
+## Ops manual
+
+[We say there is one in the text]
+
+## Links
+
+## Emoji
+

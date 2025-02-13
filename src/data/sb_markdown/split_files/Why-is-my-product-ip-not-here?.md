@@ -1,0 +1,10 @@
+# Why is my product IP not here?
+
+This ID is _not_ related to your product or service. You might conduct different types of business under one entity. Hence, we recommend that any trademark records for the business name should go here. But if you have other patents, trademarks, or copyrights, they should live with the things they protect.
+
+## Ops manual
+
+## Links
+
+## Emoji
+

@@ -1,2 +1,0 @@
-- Removing header `## Ops manual` from text files.
-- Removing between-section `---` from text files.

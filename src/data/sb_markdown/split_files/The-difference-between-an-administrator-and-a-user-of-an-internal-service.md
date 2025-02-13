@@ -1,0 +1,23 @@
+# The difference between an administrator and a user of an internal service
+
+The _administrator_ is interested in notes and diagrams on how the internal service was set up so they can remember how to do it next time, and help with troubleshooting.
+
+And the _user_ is interested in instructions on how to connect to, and use, each service. As well as troubleshooting advice and how to seek help. This is especially handy when you get new staff. Just point them to this ID.
+
+The key difference is that the administrator is concerned with the devices and configurations that deliver a service. But the user couldn’t care less. They just want to get on the wifi, or print, or save their files.
+
+So you, as the administrator, might end up with:
+
+- A nice diagram on how your internet, network, and wifi are set up.
+- Clear notes on how to set up and disable user logins for all your systems.
+- Instructions to follow when a service isn’t working.
+
+And a bunch of cheat sheets for users that answer questions like:
+
+- How do I log in to my laptop and other systems?
+- How do I access the file server from the office?
+- How do I connect to the wifi?
+- How do I print and scan?
+- How do I access our systems if I’m working from home?
+- How do I get help if I can’t do any of these things?
+
