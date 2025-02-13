@@ -10,10 +10,9 @@ export type EntryType =
   | "area"
   | "category"
   | "id"
-  | "ops"
-  | "howTo"
   | "furtherReading"
-  | "adHoc";
+  | "opsManual"
+  | "adHoc"; // Each of these is a unique Astro component
 
 // Base interface for common fields
 interface BaseEntry {
@@ -23,11 +22,18 @@ interface BaseEntry {
   description: string; // Late change: everything must have a description; document the rationale later
   emoji?: string;
   isPublic?: boolean;
+  isHeader?: boolean; // Really only applies to IDs but KISS
   metadata: Metadata;
   extensions?: {};
 }
 
-// Specialized interfaces
+interface SmallBusinessExtension {
+  examples?: string;
+  overview?: string;
+  exceptions?: string;
+  alsoSee?: string;
+  links?: string;
+}
 export interface SystemEntry extends BaseEntry {
   type: "system";
   extensions?: {
@@ -49,18 +55,8 @@ export interface CategoryEntry extends BaseEntry {
   };
 }
 
-interface SmallBusinessExtension {
-  examples?: string;
-  overview?: string;
-  exceptions?: string;
-  alsoSee?: string;
-  rationale?: string;
-  links?: string;
-}
-
 export interface IdEntry extends BaseEntry {
   type: "id";
-  isHeader?: boolean;
   extensions: {
     smallBusiness: SmallBusinessExtension;
   };

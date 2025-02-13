@@ -13,9 +13,9 @@ import system, {
   type AreaEntry,
 } from "@data/smallBusinessFlat";
 import parseMd from "@utils/parseMd";
-import Slice from "@components/common/Slice.astro";
-import ChildrenInParent from "@components/common/ChildrenInParent.astro";
-import FurtherReadingLinks from "@components/common/FurtherReadingLinks.astro";
+import Slice from "./common/Slice.astro";
+import ChildrenInParent from "./common/ChildrenInParent.astro";
+import FurtherReadingLinks from "./common/FurtherReadingLinks.astro";
 
 const areaEntry = system[area] as AreaEntry;
 const areaTitle = areaEntry.title;

@@ -5,11 +5,10 @@ const entry: CategoryEntry = {
   "title": "Technology",
   "description": "This category is all about your business in the digital world.",
   "type": "category",
-  "isPublic": true,
   "emoji": "💻",
   "metadata": {
-    "createdDate": "2025-02-13T03:34:05.417Z",
-    "updatedDate": "2025-02-13T03:34:05.417Z"
+    "createdDate": "2025-02-13T04:38:41.839Z",
+    "updatedDate": "2025-02-13T04:38:41.839Z"
   },
   "extensions": {
     "smallBusiness": {

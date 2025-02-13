@@ -8,12 +8,12 @@ const entry: IdEntry = {
   "isPublic": false,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-13T03:34:05.407Z",
-    "updatedDate": "2025-02-13T03:34:05.407Z"
+    "createdDate": "2025-02-13T04:38:41.830Z",
+    "updatedDate": "2025-02-13T04:38:41.830Z"
   },
   "extensions": {
     "smallBusiness": {
-      "examples": "Interest; dividends; rental payments.",
+      "examples": "Interest; dividends; rental payments. are all **very cool**",
       "overview": "If you receive any kind of passive income, store the formal records here after they’ve been processed as income. For instance, the statements and letters that say you’ve earned money from a cash investment or other asset.",
       "exceptions": "This is not for ownership paperwork – that lives with the asset/investment itself (i.e. don’t store share certificates here, those go in [[13.43]]).",
       "rationale": "We decided to separate the ownership records for assets/investments and their earnings for clarity and neatness. In this ID we’re only interested in filing the processed income earned.\n\nFor instance:\n\n```\nASSET/INVESTMENT      PASSIVE INCOME\n(stored in 13.40)     (stored here)\n═════════════════════════════════════\nCash term deposit     Interest\nShares                Dividend\nProperty              Rent\n```"
