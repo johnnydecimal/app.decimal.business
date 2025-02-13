@@ -12,7 +12,7 @@ function writeLinesToFile(filePath, linesArray) {
 }
 
 // Function to parse a Markdown file and extract H1 headers and their content
-function parseMarkdownFile(filePath) {
+function generateArrayOfEntries(filePath) {
   // Create a readable stream from the file
   const fileStream = fs.createReadStream(filePath);
 
@@ -57,4 +57,20 @@ function parseMarkdownFile(filePath) {
 
 // Call the function with the path to your Markdown file
 const inputFilePath = process.argv[2] || "path/to/your/markdown/file.md";
-parseMarkdownFile(inputFilePath);
+const arrayOfEntries = generateArrayOfEntries(inputFilePath);
+
+function processArrayOfEntries(arrayOfEntries) {
+  arrayOfEntries.forEach((entry) => {
+    // entry is an array of lines
+
+    // Figure out this entry's title
+    const number = entry[0].split(" ")[1];
+    const title = entry[0].split(" ").slice(2);
+    const fileTitle = title.join("-").toLowerCase().replaceAll("-&-", "-and-");
+    const fileName = `${number}=${fileTitle}.md`;
+
+    writeLinesToFile("src/data/sb_markdown/parsed", entry);
+  });
+}
+
+processArrayOfEntries(arrayOfEntries);
