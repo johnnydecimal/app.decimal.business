@@ -2,15 +2,15 @@
 import type { IdEntry } from "@data/smallBusinessFlat";
 const entry: IdEntry = {
   "number": "11.20",
-  "title": "■ Planning, contingencies, & insurance",
+  "title": "Planning, contingencies, & insurance",
   "description": "The documents you write to guide the business in the short and longer term, what to do when something bad happens, and insurance for the entity and its people.",
   "type": "id",
   "isPublic": false,
   "isHeader": true,
   "emoji": "🧭",
   "metadata": {
-    "createdDate": "2025-02-13T01:26:09.388Z",
-    "updatedDate": "2025-02-13T01:26:09.388Z"
+    "createdDate": "2025-02-13T03:34:05.372Z",
+    "updatedDate": "2025-02-13T03:34:05.372Z"
   },
   "extensions": {
     "smallBusiness": {}

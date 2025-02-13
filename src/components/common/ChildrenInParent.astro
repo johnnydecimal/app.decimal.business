@@ -84,7 +84,21 @@ const processedIds = await Promise.all(
 <Slice id="ChildrenInParentLabel" className="secondary-content-bg">
   <div class="layout-grid-left-right">
     <div></div>
-    <h2 class="layout-right-item">IDs in this category</h2>
+    {
+      parentType === "system" && (
+        <h2 class="layout-right-item">Areas in this system</h2>
+      )
+    }
+    {
+      parentType === "area" && (
+        <h2 class="layout-right-item">Categories in this area</h2>
+      )
+    }
+    {
+      parentType === "category" && (
+        <h2 class="layout-right-item">IDs in this category</h2>
+      )
+    }
   </div>
 </Slice>
 

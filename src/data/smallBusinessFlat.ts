@@ -249,6 +249,7 @@ const flattenedData: FlattenedData = {
     number: "10-19",
     title: "Company administration",
     type: "area",
+    isPublic: true,
     description:
       "In [[10-19]], our goal is that these categories could be the foundation of _any_ business, regardless of the product or service you offer.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
@@ -278,6 +279,7 @@ const flattenedData: FlattenedData = {
     number: "11",
     title: "The business & its people",
     type: "category",
+    isPublic: true,
     description:
       "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
     emoji: "🙋",
@@ -526,11 +528,13 @@ const flattenedData: FlattenedData = {
   "12": {
     type: "category",
     number: "12",
+    isPublic: true,
     title: "Where I trade & how I get around",
     description:
       "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
     emoji: "🗺️",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: { smallBusiness: {} },
   },
   "12.10": {
     ...id_12_10,
@@ -631,11 +635,13 @@ const flattenedData: FlattenedData = {
   "13": {
     number: "13",
     type: "category",
+    isPublic: true,
     title: "Money earned, spent, saved, & owed",
     description:
       "This category is all about keeping track of your finances, from planning and budgeting, to reconciling and submitting your annual returns.",
     emoji: "💰",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: { smallBusiness: {} },
   },
   "13.10": {
     ...id_13_10,
@@ -767,6 +773,7 @@ const flattenedData: FlattenedData = {
     type: "area",
     number: "20-29",
     title: "A longer area title that definitely wraps",
+    isPublic: true,
     description: "The twenties",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },

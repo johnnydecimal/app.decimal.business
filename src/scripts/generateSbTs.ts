@@ -121,6 +121,7 @@ async function generateTsFiles() {
           title: parsed.title,
           description: parsed.description || "",
           type: "category",
+          isPublic: frontmatter.isPublic || false,
           emoji: frontmatter.emoji || undefined,
           metadata: {
             createdDate: new Date().toISOString(),

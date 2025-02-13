@@ -5,6 +5,7 @@ export const area_00_09: FlattenedData = {
     number: "00-09",
     title: "About the system",
     type: "area",
+    isPublic: true,
     description: "This area is used to manage the system.",
     metadata: {
       createdDate: "2025-01-01",
@@ -21,6 +22,7 @@ export const area_00_09: FlattenedData = {
       createdDate: "2025-01-01",
       updatedDate: "2025-01-01",
     },
+    extensions: { smallBusiness: {} },
   },
   "00.00": {
     number: "00.00",

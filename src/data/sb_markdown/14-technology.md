@@ -1,5 +1,6 @@
 ---
 emoji: 💻
+isPublic: true
 ---
 
 # 14 Technology
