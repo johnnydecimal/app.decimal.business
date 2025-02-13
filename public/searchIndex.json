@@ -46,10 +46,13 @@
     "type": "category",
     "emoji": "💻",
     "metadata": {
-      "createdDate": "2024-11-18",
-      "updatedDate": "2024-11-18"
+      "createdDate": "2025-02-12T05:47:44.781Z",
+      "updatedDate": "2025-02-12T05:47:44.781Z"
     },
-    "smallBusiness": {},
+    "smallBusiness": {
+      "overview": "This is a place to manage all the common computer-y things that most businesses have. Like hardware and software, setting up your online presence, and staying safe in cyberspace.\n\nAnd to be an honorary IT professional, this includes notes about configuration (i.e. all the stuff you did when you set something up). This is a nice example of ‘working the Decimal way’ – keeping notes to help your future self. It might be as simple as bullet points in your JDex or maybe a diagram, depending on what you’re documenting. Now you’ll never forget what you did.",
+      "exceptions": "This category is for managing computer-y things that are common to _most_ businesses. Not for any ‘computerised machines’ that are specific to your operations or product, those go in [[12.20]], [[12.30]], or [[20-29]].\n\nThis category is for managing _your_ technology. If your product or service is related (e.g. you’re an IT consultant or run a computer repair shop) that goes in [[20-29]].\n\nThis category is not for managing technology related to workplace security or access (e.g cameras, passcards), that goes in [[12.22]] or [[12.32]]."
+    },
     "isPublic": true
   },
   {
@@ -62,6 +65,7 @@
       "createdDate": "2024-11-18",
       "updatedDate": "2024-11-18"
     },
+    "smallBusiness": {},
     "isPublic": true
   },
   {
@@ -219,8 +223,8 @@
     "type": "id",
     "emoji": "🗂️",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.311Z",
-      "updatedDate": "2025-02-12T04:13:58.312Z"
+      "createdDate": "2025-02-12T05:47:44.737Z",
+      "updatedDate": "2025-02-12T05:47:44.738Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -232,8 +236,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.314Z",
-      "updatedDate": "2025-02-12T04:13:58.314Z"
+      "createdDate": "2025-02-12T05:47:44.739Z",
+      "updatedDate": "2025-02-12T05:47:44.739Z"
     },
     "smallBusiness": {
       "examples": "Business entity registrations; trading name registrations; income and sales tax registrations; trademark records for trading names; company director identity applications.",
@@ -312,8 +316,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.315Z",
-      "updatedDate": "2025-02-12T04:13:58.315Z"
+      "createdDate": "2025-02-12T05:47:44.740Z",
+      "updatedDate": "2025-02-12T05:47:44.740Z"
     },
     "smallBusiness": {
       "examples": "Liquor licence; safe food handling certificate; truck or taxi licence; police check; zoning permit; government security clearance; market stall holder permit; working with children check; tradesperson licence; responsible service of alcohol certificate; environmental permit; any other legally-required core qualification.",
@@ -330,8 +334,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.315Z",
-      "updatedDate": "2025-02-12T04:13:58.315Z"
+      "createdDate": "2025-02-12T05:47:44.740Z",
+      "updatedDate": "2025-02-12T05:47:44.740Z"
     },
     "smallBusiness": {
       "examples": "Workplace health and safety compliance; environmental laws; industry manufacturing standards; payroll governance, building standards and safety inspections; retail fair trading laws; codes of conduct for advertising and marketing; food safety inspections; financial audits; local and international import/export regulations; laws around the supply of alcohol; employment and unfair dismissal laws; privacy and data protection laws.",
@@ -362,8 +366,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.315Z",
-      "updatedDate": "2025-02-12T04:13:58.315Z"
+      "createdDate": "2025-02-12T05:47:44.741Z",
+      "updatedDate": "2025-02-12T05:47:44.741Z"
     },
     "smallBusiness": {
       "examples": "Statutory declarations; affidavits; documents related to proof of ownership; non-disclosure or confidentiality agreements; change of company director paperwork; contracts that don’t fit elsewhere; financial disputes that make it to court.",
@@ -379,8 +383,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.316Z",
-      "updatedDate": "2025-02-12T04:13:58.316Z"
+      "createdDate": "2025-02-12T05:47:44.741Z",
+      "updatedDate": "2025-02-12T05:47:44.741Z"
     },
     "smallBusiness": {
       "overview": "Businesses can end for many reasons, happy, sad, or indifferent.\n\nYou might want to retire or just try something new. Or perhaps another business is interested in a merger or acquisition. Or there may be involuntary reasons like bankruptcy or a natural disaster.\n\nWe haven’t seen Succession, the TV show, but we get the gist. This kind of planning would also be something to consider here. Hopefully your situation is less dramatic.\n\nAnd even if you’re a sole trader with a simple set up, there might be things for you to store here. For instance, you decide to return to regular employment and want to deregister or pause your business entity to avoid ongoing fees or tax obligations.",
@@ -395,8 +399,8 @@
     "type": "id",
     "emoji": "🧭",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.316Z",
-      "updatedDate": "2025-02-12T04:13:58.316Z"
+      "createdDate": "2025-02-12T05:47:44.742Z",
+      "updatedDate": "2025-02-12T05:47:44.742Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -408,8 +412,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.317Z",
-      "updatedDate": "2025-02-12T04:13:58.317Z"
+      "createdDate": "2025-02-12T05:47:44.742Z",
+      "updatedDate": "2025-02-12T05:47:44.742Z"
     },
     "smallBusiness": {
       "overview": "This may be less relevant if you’re, say, a freelance graphic designer working on a project-by-project basis. But for most other businesses, whether new or existing, this is something you shouldn’t skip.\n\nA business plan contains all the good stuff like your mission and vision statements, goals, risk analysis, and financial position. Do periodic reviews and remember to save the previous version of the document when updating it. And if you have innovative services or practices, you may wish to protect the plan with a confidentiality agreement.\n\nIf you’ve never written one, government business websites often have handy templates to get you started.",
@@ -425,8 +429,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.318Z",
-      "updatedDate": "2025-02-12T04:13:58.318Z"
+      "createdDate": "2025-02-12T05:47:44.743Z",
+      "updatedDate": "2025-02-12T05:47:44.743Z"
     },
     "smallBusiness": {
       "examples": "Public liability insurance; professional indemnity insurance; workers compensation insurance.",
@@ -444,8 +448,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.318Z",
-      "updatedDate": "2025-02-12T04:13:58.318Z"
+      "createdDate": "2025-02-12T05:47:44.744Z",
+      "updatedDate": "2025-02-12T05:47:44.744Z"
     },
     "smallBusiness": {
       "overview": "It’s important to identify events that can negatively impact your business. And then plan how to make decisions and operate during the event, and recover afterwards (often referred to as ‘business continuity and disaster recovery’). Your future self will thank you for having a process in place if disaster strikes.\n\nA business risk might be specific to your product or service. While emergencies might be location-specific natural disasters, human-caused events like crime, or municipal events like a water main rupturing.\n\nFor example, if you sell croissants, your risk management plan might include what to do if the price of butter rises. If your business is next to a river, your emergency management plan might include flood evacuation procedures.\n\nEither way, don’t forget to securely store contact numbers for local emergency, police, fire, and ambulance services, as well as recovery contacts for things like insurance, banking, and suppliers.\n\n### Emergency digital recovery kit\n\nAnother risk you might consider here is – what if something happens to you? Who do you trust the most to log in to things, pay bills, and contact people on your behalf?\n\nIn our [Life Admin System](https://jdcm.al/14.11/), we discuss the concept of an emergency recovery kit. Which is basically just a list of instructions, stored in a secure location, that outlines your digital life for a trusted person in an emergency. In this case, it’s for your business.\n\nThis will obviously contain sensitive information, so don’t leave it lying around! There’s a good chance that your password manager can help you manage this kind of thing securely.",
@@ -460,8 +464,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.319Z",
-      "updatedDate": "2025-02-12T04:13:58.319Z"
+      "createdDate": "2025-02-12T05:47:44.744Z",
+      "updatedDate": "2025-02-12T05:47:44.744Z"
     },
     "smallBusiness": {
       "examples": "What went well today/this week/this month/this year; ‘lessons learned’ to avoid repeat mistakes; miscellaneous anecdotes from staff meetings; and any other notes, dreams, or ideas related to the business.",
@@ -476,8 +480,8 @@
     "type": "id",
     "emoji": "👍",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.320Z",
-      "updatedDate": "2025-02-12T04:13:58.320Z"
+      "createdDate": "2025-02-12T05:47:44.745Z",
+      "updatedDate": "2025-02-12T05:47:44.745Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -489,8 +493,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.321Z",
-      "updatedDate": "2025-02-12T04:13:58.321Z"
+      "createdDate": "2025-02-12T05:47:44.745Z",
+      "updatedDate": "2025-02-12T05:47:44.745Z"
     },
     "smallBusiness": {
       "examples": "Company values; enterprise or other registered agreements between employers and employees; formal policies that staff will be assessed against during reviews; how you communicate news and updates; dress code and grooming expectations; buddy systems for new staff; culture-related policies on things like working from home, pets or kids in the workplace, or social activities.",
@@ -507,8 +511,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.322Z",
-      "updatedDate": "2025-02-12T04:13:58.322Z"
+      "createdDate": "2025-02-12T05:47:44.745Z",
+      "updatedDate": "2025-02-12T05:47:44.745Z"
     },
     "smallBusiness": {
       "examples": "Customer service policy; refund policy; retail terms and conditions; privacy policy; disclaimers; timely payment process for suppliers; environmental and sustainability policy; equal opportunity employer statement; anti-slavery or land acknowledgement statements.",
@@ -525,8 +529,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.323Z",
-      "updatedDate": "2025-02-12T04:13:58.323Z"
+      "createdDate": "2025-02-12T05:47:44.746Z",
+      "updatedDate": "2025-02-12T05:47:44.746Z"
     },
     "smallBusiness": {
       "examples": "Procedures for managing customer complaints or negative feedback; guidelines for replying to social media comments and online reviews; strategies for disputes with suppliers.",
@@ -542,8 +546,8 @@
     "type": "id",
     "emoji": "🦸",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.323Z",
-      "updatedDate": "2025-02-12T04:13:58.323Z"
+      "createdDate": "2025-02-12T05:47:44.747Z",
+      "updatedDate": "2025-02-12T05:47:44.747Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -555,8 +559,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.324Z",
-      "updatedDate": "2025-02-12T04:13:58.324Z"
+      "createdDate": "2025-02-12T05:47:44.747Z",
+      "updatedDate": "2025-02-12T05:47:44.747Z"
     },
     "smallBusiness": {
       "examples": "Recruitment agencies or online employment platforms you use’ role descriptions for job ads; CVs/resumes received; the interview process and questions; candidate shortlists; the onboarding process; information for new employees; a checklist that covers the entire hiring process.",
@@ -571,8 +575,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.324Z",
-      "updatedDate": "2025-02-12T04:13:58.324Z"
+      "createdDate": "2025-02-12T05:47:44.748Z",
+      "updatedDate": "2025-02-12T05:47:44.748Z"
     },
     "smallBusiness": {
       "overview": "In Australia, staff records must be kept for up to 7 years. Your government may have different requirements.\n\nWe suggest storing the records in this ID as per the image below. Each employee has a subfolder labelled with the year-month-day they joined (so it sorts neatly) and their name. Inside that is a standard template.\n\nWe have provided an example template in the folder system. Adjust this to your needs as required, just remember to be consistent.\n\n2014-07-08 Slydell, Bob\n2017-08-21 Bolton, Michael\n2019-02-14 Lumbergh, Bill\n10 Personal details\n20 Payments and deductions\n30 Work hours and overtime\n40 Leave taken and accrued\n50 Pension contributions\n60 Training completed\n70 Ending the employment\n\nOther records you might consider keeping include: CVs/resumes, job applications and pre-employment checks, employment contracts, performance reviews, trade or registration certificates, details of uniforms and equipment allocated, roles held and promotions.",
@@ -587,8 +591,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.325Z",
-      "updatedDate": "2025-02-12T04:13:58.325Z"
+      "createdDate": "2025-02-12T05:47:44.748Z",
+      "updatedDate": "2025-02-12T05:47:44.748Z"
     },
     "smallBusiness": {
       "examples": "Performance review templates; completed forms from staff; the follow-up process; resources and strategies for managing underperformance or misconduct; how you deliver warnings and disciplinary action.",
@@ -605,8 +609,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.325Z",
-      "updatedDate": "2025-02-12T04:13:58.325Z"
+      "createdDate": "2025-02-12T05:47:44.748Z",
+      "updatedDate": "2025-02-12T05:47:44.748Z"
     },
     "smallBusiness": {
       "examples": "The offboarding process and paperwork; checklists for handing things back; exit interview templates; handover documents and meetings; notice periods for resignations, redundancies, or dismissals.",
@@ -624,8 +628,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.325Z",
-      "updatedDate": "2025-02-12T04:13:58.325Z"
+      "createdDate": "2025-02-12T05:47:44.749Z",
+      "updatedDate": "2025-02-12T05:47:44.749Z"
     },
     "smallBusiness": {
       "examples": "Dogs or horses that work in tourism or muster livestock; birds who help with biological pest control; dogs trained for a service such as companionship or search and rescue; truffle pigs or dogs.",
@@ -642,8 +646,8 @@
     "type": "id",
     "emoji": "🎓",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.326Z",
-      "updatedDate": "2025-02-12T04:13:58.326Z"
+      "createdDate": "2025-02-12T05:47:44.749Z",
+      "updatedDate": "2025-02-12T05:47:44.749Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -655,8 +659,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.326Z",
-      "updatedDate": "2025-02-12T04:13:58.326Z"
+      "createdDate": "2025-02-12T05:47:44.750Z",
+      "updatedDate": "2025-02-12T05:47:44.750Z"
     },
     "smallBusiness": {
       "examples": "Fire drills and general safety training; job-specific software or equipment training; keeping a first aid qualification up-to-date; getting a safe food handling certificate; how to run the reception desk of a dental surgery; on-the-job training during an apprenticeship; how to open and close a cafe or set up a food truck; any other mandatory role-based training, certifications, or competencies.",
@@ -673,8 +677,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.326Z",
-      "updatedDate": "2025-02-12T04:13:58.326Z"
+      "createdDate": "2025-02-12T05:47:44.750Z",
+      "updatedDate": "2025-02-12T05:47:44.750Z"
     },
     "smallBusiness": {
       "examples": "Doing an Excel or Xero course to improve your skills; attending an advanced hairdressing or bar tending course to learn new techniques; completing an MBA or specialist dental qualification; gaining the project management professional (PMP) certification.",
@@ -690,8 +694,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.327Z",
-      "updatedDate": "2025-02-12T04:13:58.327Z"
+      "createdDate": "2025-02-12T05:47:44.750Z",
+      "updatedDate": "2025-02-12T05:47:44.750Z"
     },
     "smallBusiness": {
       "examples": "Materials you collect at industry conferences; notes in your JDex from YouTube software tutorials; a list of business-related books you plan to read; presentations from webinars or Meetups you attended; paid media subscriptions like specialty podcasts, blogs, newsletters, journals, periodicals, and magazines.",
@@ -707,8 +711,8 @@
     "type": "id",
     "emoji": "🤝",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.327Z",
-      "updatedDate": "2025-02-12T04:13:58.327Z"
+      "createdDate": "2025-02-12T05:47:44.751Z",
+      "updatedDate": "2025-02-12T05:47:44.751Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -720,8 +724,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.327Z",
-      "updatedDate": "2025-02-12T04:13:58.327Z"
+      "createdDate": "2025-02-12T05:47:44.751Z",
+      "updatedDate": "2025-02-12T05:47:44.751Z"
     },
     "smallBusiness": {
       "examples": "Certified Practising Accountants Australia; Australian Computer Society; Australasian Medical Writers’ Association; Media Entertainment & Arts Alliance; Australian Physiotherapy Association; Personal Trainers Association of Australia.",
@@ -736,8 +740,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.328Z",
-      "updatedDate": "2025-02-12T04:13:58.328Z"
+      "createdDate": "2025-02-12T05:47:44.751Z",
+      "updatedDate": "2025-02-12T05:47:44.751Z"
     },
     "smallBusiness": {
       "examples": "Government small business or finance websites; helplines; mentors; peers/other business owners; professional bodies; unions; ombudsman and watchdogs; mental health organisations.",
@@ -753,8 +757,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.328Z",
-      "updatedDate": "2025-02-12T04:13:58.328Z"
+      "createdDate": "2025-02-12T05:47:44.752Z",
+      "updatedDate": "2025-02-12T05:47:44.752Z"
     },
     "smallBusiness": {
       "overview": "Whether you meet in person or online, jot down anything important and save it here.\n\nFor instance, their name, contact details, what they do, what you discussed, and their social, LinkedIn, or website links. If they gave you their business card, you could take a photo of it and add it to your JDex note or file system.\n\nConsider linking these people to an ID. For example, if they’re a potential front office supplier, add a link in your JDex to [[12.0X]]."
@@ -768,8 +772,8 @@
     "type": "id",
     "emoji": "🗺️",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.328Z",
-      "updatedDate": "2025-02-12T04:13:58.328Z"
+      "createdDate": "2025-02-12T05:47:44.752Z",
+      "updatedDate": "2025-02-12T05:47:44.752Z"
     },
     "smallBusiness": {
       "overview": "Caution. This is a place for when there is no other place. Don’t get lazy and dump stuff here that is important and/or has a home elsewhere in the system.\n\nThis might be information that you found interesting or might be useful someday. But right now, it’s not strongly related to any other ID. And it would not make sense to clutter an existing ID or create a new one for it.\n\nIt’s a library so we want to keep it neat. Label any files with clear descriptions and use the year-month method in case the information is time sensitive.\n\n### Why are there no IDs here?\n\nIt’s difficult to imagine how these libraries might be used. So we didn’t want to commit to IDs just yet. By leaving these sections blank, we thought it might be a good way to introduce everyone to the careful consideration that goes into making a new ID.\n\nIf you’re ready to save things in this library, come over to the [[community]] and see what others are doing or ask us for advice. We’ll figure it out together and eventually settle on some standard IDs. In the meantime, just keep things neat and tidy here.\n\n### Leave yourself JDex notes\n\nRemember to leave a note in your JDex when you save things in this library so you can find them easily.\n\n(This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)",
@@ -785,8 +789,8 @@
     "type": "id",
     "emoji": "🏢",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.329Z",
-      "updatedDate": "2025-02-12T04:13:58.329Z"
+      "createdDate": "2025-02-12T05:47:44.752Z",
+      "updatedDate": "2025-02-12T05:47:44.752Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -798,8 +802,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.329Z",
-      "updatedDate": "2025-02-12T04:13:58.329Z"
+      "createdDate": "2025-02-12T05:47:44.753Z",
+      "updatedDate": "2025-02-12T05:47:44.753Z"
     },
     "smallBusiness": {
       "examples": "Leases and renewals; security deposits; inspection reports; purchasing contracts; property deeds; co-working space agreements.",
@@ -816,8 +820,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.329Z",
-      "updatedDate": "2025-02-12T04:13:58.329Z"
+      "createdDate": "2025-02-12T05:47:44.753Z",
+      "updatedDate": "2025-02-12T05:47:44.753Z"
     },
     "smallBusiness": {
       "overview": "When we say ‘office’, we mean whatever your fixed business premises means to you.\n\nWhether you have a room in your house, a commercial warehouse lease, or own a bakery, this is where the insurance for that address goes.\n\nAnd if you store equipment in both a fixed and mobile location, there might be some overlap here. Just do what makes sense to you.\n\nFor instance, if you’re a plumber your equipment might be insured in your home garage and also in your van. If these are separate policies then save them where relevant.\n\nThis is also a place to save incident reports that might become part of a claim. For example, something is stolen and you file a police report.",
@@ -834,8 +838,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.330Z",
-      "updatedDate": "2025-02-12T04:13:58.330Z"
+      "createdDate": "2025-02-12T05:47:44.753Z",
+      "updatedDate": "2025-02-12T05:47:44.753Z"
     },
     "smallBusiness": {
       "examples": "Local council rates; government land tax; capital gains tax; stamp duty; body corporate/owner’s corporation fees for multi-occupancy properties; legal fees; local environmental taxes.",
@@ -851,8 +855,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.330Z",
-      "updatedDate": "2025-02-12T04:13:58.330Z"
+      "createdDate": "2025-02-12T05:47:44.754Z",
+      "updatedDate": "2025-02-12T05:47:44.754Z"
     },
     "smallBusiness": {
       "examples": "- Fitting-out a hair salon with walls, flooring, cabinetry, sinks, and a kitchen area.\n- Renovating a warehouse’s plumbing, ventilation, and concrete floor, and upgrading the internet connection.\n- Installing custom-made, fixed benches and planter boxes at the front of a bar.\n- Improvements to a workshop in a home garage that include building a new workbench and fixed shelving.\n- Mood boards, measurements, and a budget spreadsheet for repainting a cafe.",
@@ -869,8 +873,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.330Z",
-      "updatedDate": "2025-02-12T04:13:58.330Z"
+      "createdDate": "2025-02-12T05:47:44.754Z",
+      "updatedDate": "2025-02-12T05:47:44.754Z"
     },
     "smallBusiness": {
       "examples": "Quotes from tradespeople; research on how to repair things; maintenance and repair requests to facilities management in multi-occupancy properties; recurring tasks to remember like oiling the squeaky front door, or monitoring your farm’s fence line for damage.",
@@ -885,8 +889,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.331Z",
-      "updatedDate": "2025-02-12T04:13:58.331Z"
+      "createdDate": "2025-02-12T05:47:44.754Z",
+      "updatedDate": "2025-02-12T05:47:44.754Z"
     },
     "smallBusiness": {
       "examples": "Removalist quotes and contracts; checklists; a list of accounts to update with your new postal address.",
@@ -902,8 +906,8 @@
     "type": "id",
     "emoji": "⛔",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.332Z",
-      "updatedDate": "2025-02-12T04:13:58.332Z"
+      "createdDate": "2025-02-12T05:47:44.756Z",
+      "updatedDate": "2025-02-12T05:47:44.756Z"
     },
     "smallBusiness": {
       "examples": "If you run a beauty salon, your back office might be:\n\n- a room out the back with a desk where you manage the business, and\n- a small kitchen area for staff.\n\nIf you’re a mobile personal trainer, your back office might be:\n\n- your home office where you manage the business, and\n- shelves in your garage for your equipment.\n\nIf you’re a freelance writer, your back office might be:\n\n- your home office where you manage the business and do your work.",
@@ -919,8 +923,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.335Z",
-      "updatedDate": "2025-02-12T04:13:58.335Z"
+      "createdDate": "2025-02-12T05:47:44.759Z",
+      "updatedDate": "2025-02-12T05:47:44.759Z"
     },
     "smallBusiness": {
       "examples": "Utility connections and bills (electricity, gas, water, telephone, internet); troubleshooting instructions; staff mobile phone contracts; parking bills; HVAC services.",
@@ -935,8 +939,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.335Z",
-      "updatedDate": "2025-02-12T04:13:58.335Z"
+      "createdDate": "2025-02-12T05:47:44.759Z",
+      "updatedDate": "2025-02-12T05:47:44.759Z"
     },
     "smallBusiness": {
       "examples": "Bills and paperwork for any paid security services; building access passes and codes; emergency and evacuation plans; bills for fire safety equipment; contact details for security services; instructions for how to turn the alarm on/off and entering/leaving the building; location of spare keys; surveillance camera installation; smoke or gas detector installation; who to call in different types of emergency (fire, flood, storm damage, robbery); Material Safety Data Sheets (MSDS).",
@@ -953,8 +957,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.336Z",
-      "updatedDate": "2025-02-12T04:13:58.336Z"
+      "createdDate": "2025-02-12T05:47:44.759Z",
+      "updatedDate": "2025-02-12T05:47:44.759Z"
     },
     "smallBusiness": {
       "examples": "Cleaners; paid or municipal garbage collection; paper shredding and recycling; indoor plant watering; outdoor gardening; window washing; non-structural decorations like framed prints or plastic plants; anything to do with buying general cleaning and hygiene supplies (like kitchen roll, dishwashing liquid, tea towels, sponges, sprays, hand sanitiser, soap dispensers, toilet paper, etc.).",
@@ -970,8 +974,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.336Z",
-      "updatedDate": "2025-02-12T04:13:58.336Z"
+      "createdDate": "2025-02-12T05:47:44.760Z",
+      "updatedDate": "2025-02-12T05:47:44.760Z"
     },
     "smallBusiness": {
       "examples": "Buying standard office furniture like desks, chairs, cupboards and drawers; ordering anything you’d consider stationery from pens and sticky notes to paper and toner; ongoing lease and maintenance contracts for specialised equipment (maybe you lease a photocopier).",
@@ -988,8 +992,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.337Z",
-      "updatedDate": "2025-02-12T04:13:58.337Z"
+      "createdDate": "2025-02-12T05:47:44.760Z",
+      "updatedDate": "2025-02-12T05:47:44.760Z"
     },
     "smallBusiness": {
       "examples": "Buying anything to do with eating and drinking (like teabags, coffee, sugar, milk, cutlery, cups, glasses, crockery, etc.); ongoing delivery services like weekly fruit boxes; kitchen appliances and product manuals; water cooler services; staff meals.",
@@ -1004,8 +1008,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.337Z",
-      "updatedDate": "2025-02-12T04:13:58.337Z"
+      "createdDate": "2025-02-12T05:47:44.761Z",
+      "updatedDate": "2025-02-12T05:47:44.761Z"
     },
     "smallBusiness": {
       "examples": "Post office receipts; tracking numbers; courier accounts; document exchange (DX) and other business postal services; ordering postage supplies (like stamps, envelopes, parcel satchels, packing materials, etc.); specialised shipping or air services; dealing with customs and import/export regulations.",
@@ -1021,8 +1025,8 @@
     "type": "id",
     "emoji": "🛎️",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.337Z",
-      "updatedDate": "2025-02-12T04:13:58.337Z"
+      "createdDate": "2025-02-12T05:47:44.761Z",
+      "updatedDate": "2025-02-12T05:47:44.761Z"
     },
     "smallBusiness": {
       "examples": "If you run a beauty salon, your front office is:\n\n- your shopfront, customer reception area, and treatment rooms.\n\nIf you’re a personal trainer, your front office might be:\n\n- a gym where you rent space, or\n- a registered area in a park (and your equipment is part of front office operations).\n\nIf you’re a freelance writer, your front office might be:\n\n- non-existent because you only meet clients at their office, or\n- a co-working space that you meet clients in, or\n- the same as your back office, clients come to you for meetings (and the fancy coffee and snacks you offer are part of front office operations).",
@@ -1039,8 +1043,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.338Z",
-      "updatedDate": "2025-02-12T04:13:58.338Z"
+      "createdDate": "2025-02-12T05:47:44.762Z",
+      "updatedDate": "2025-02-12T05:47:44.762Z"
     },
     "smallBusiness": {
       "examples": "Utility connections and bills (electricity, gas, water, telephone, internet); any other fees related to heating or cooling (like a generator or ice); industry-specific software subscriptions; troubleshooting instructions.",
@@ -1056,8 +1060,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.338Z",
-      "updatedDate": "2025-02-12T04:13:58.338Z"
+      "createdDate": "2025-02-12T05:47:44.762Z",
+      "updatedDate": "2025-02-12T05:47:44.762Z"
     },
     "smallBusiness": {
       "examples": "Bills and paperwork for any paid security services; building access passes and codes; emergency and evacuation plans; bills for fire safety equipment; contact details for security services; instructions for how to turn the alarm on/off and entering/leaving the building; location of spare keys; surveillance camera installation; smoke or gas detector installation; who to call in different types of emergency (fire, flood, storm damage, robbery); Material Safety Data Sheets (MSDS).",
@@ -1074,8 +1078,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.338Z",
-      "updatedDate": "2025-02-12T04:13:58.338Z"
+      "createdDate": "2025-02-12T05:47:44.762Z",
+      "updatedDate": "2025-02-12T05:47:44.762Z"
     },
     "smallBusiness": {
       "examples": "Cleaners; paid or municipal garbage collection; paper shredding and recycling; indoor plant watering; outdoor gardening; window washing; music instructions; anything to do with buying general cleaning and hygiene supplies that’s separate to the back office (like fancy hand wash and moisturiser for customer bathrooms); non-structural decorations like framed prints or plastic plants.",
@@ -1091,8 +1095,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.339Z",
-      "updatedDate": "2025-02-12T04:13:58.339Z"
+      "createdDate": "2025-02-12T05:47:44.762Z",
+      "updatedDate": "2025-02-12T05:47:44.762Z"
     },
     "smallBusiness": {
       "examples": "Free-standing furniture that isn’t part of a fit-out; branded items like napkins and paper shopping bags; ongoing lease and maintenance contracts for specialised equipment; electrical appliances; payment equipment like tills and handheld ‘tap and go’ units; general office supplies and stationery.",
@@ -1109,8 +1113,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.339Z",
-      "updatedDate": "2025-02-12T04:13:58.339Z"
+      "createdDate": "2025-02-12T05:47:44.763Z",
+      "updatedDate": "2025-02-12T05:47:44.763Z"
     },
     "smallBusiness": {
       "examples": "Anything complimentary you provide for customers/clients like tea, coffee, biscuits, lollies, or filtered water; any equipment that you use to prepare complimentary food or beverages for customers.",
@@ -1127,8 +1131,8 @@
     "type": "id",
     "emoji": "🚚",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.339Z",
-      "updatedDate": "2025-02-12T04:13:58.339Z"
+      "createdDate": "2025-02-12T05:47:44.763Z",
+      "updatedDate": "2025-02-12T05:47:44.763Z"
     },
     "smallBusiness": {
       "overview": "Whether they’re part of your back office or front office, the following section is a place to manage motor vehicles and anything else that moves.",
@@ -1143,8 +1147,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.340Z",
-      "updatedDate": "2025-02-12T04:13:58.340Z"
+      "createdDate": "2025-02-12T05:47:44.763Z",
+      "updatedDate": "2025-02-12T05:47:44.763Z"
     },
     "smallBusiness": {
       "examples": "Proof of ownership; government registrations and taxes; financing, leases; hire-purchase agreements; log books.",
@@ -1161,8 +1165,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.340Z",
-      "updatedDate": "2025-02-12T04:13:58.340Z"
+      "createdDate": "2025-02-12T05:47:44.764Z",
+      "updatedDate": "2025-02-12T05:47:44.764Z"
     },
     "smallBusiness": {
       "examples": "Comprehensive car or motorcycle insurance; third party car or motorcycle insurance; caravan insurance; trailer insurance; boat insurance; any other form of commercial vehicle insurance.",
@@ -1179,8 +1183,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.340Z",
-      "updatedDate": "2025-02-12T04:13:58.340Z"
+      "createdDate": "2025-02-12T05:47:44.764Z",
+      "updatedDate": "2025-02-12T05:47:44.764Z"
     },
     "smallBusiness": {
       "examples": "Permits for parking, deliveries, or general entry; e-tag accounts and toll road passes; fees or exemptions for congestion charge zones; short-term parking fees; daily running expenses such as fuel, EV charging, oil, wiper fluid, and cleaning.",
@@ -1196,8 +1200,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.341Z",
-      "updatedDate": "2025-02-12T04:13:58.341Z"
+      "createdDate": "2025-02-12T05:47:44.764Z",
+      "updatedDate": "2025-02-12T05:47:44.764Z"
     },
     "smallBusiness": {
       "examples": "- Fitting-out a caravan for food service with flooring, cabinetry, utility connections, and a service hatch.\n- Renovating a dog grooming van by replacing the sinks, hoses, and taps, and re-waterproofing the interior.\n- Installing custom-made, fixed tool boxes in the back of a tradesperson’s ute/truck.\n- Mood boards, measurements, and a budget spreadsheet for reupholstering a boat.\n- Research, designs, and quotes for a full van signage wrap.",
@@ -1214,8 +1218,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.341Z",
-      "updatedDate": "2025-02-12T04:13:58.341Z"
+      "createdDate": "2025-02-12T05:47:44.765Z",
+      "updatedDate": "2025-02-12T05:47:44.765Z"
     },
     "smallBusiness": {
       "examples": "Quotes from mechanics and other tradespeople; research on how to repair things; annual service appointments and logs; less frequent running expenses such as new tyres and other spare parts; maintenance manuals, instructions, and checklists.",
@@ -1232,8 +1236,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.341Z",
-      "updatedDate": "2025-02-12T04:13:58.341Z"
+      "createdDate": "2025-02-12T05:47:44.765Z",
+      "updatedDate": "2025-02-12T05:47:44.765Z"
     },
     "smallBusiness": {
       "examples": "Public transport like buses, trains, light rail, taxis, or ferries; ride sharing services; accounts to use share cars, e-scooters, or e-bikes; any other type of informal vehicle you own.",
@@ -1248,8 +1252,8 @@
     "type": "id",
     "emoji": "🧩",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.342Z",
-      "updatedDate": "2025-02-12T04:13:58.342Z"
+      "createdDate": "2025-02-12T05:47:44.765Z",
+      "updatedDate": "2025-02-12T05:47:44.765Z"
     },
     "smallBusiness": {
       "overview": "Your business is part of a wider community – schools, hospitals, clubs, local government and media, the environment, etc. And sometimes it will interact with the community in different ways.\n\nThis section isn’t about your core business, your employees, suppliers, or professional bodies. It’s a place for civics, community engagement, and being a good business citizen. It’s giving versus getting.\n\nThis is a broad umbrella and may not be that relevant for many businesses. But if this sounds like you, then put any relevant contact details, notes, and other documents here.",
@@ -1264,8 +1268,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.342Z",
-      "updatedDate": "2025-02-12T04:13:58.342Z"
+      "createdDate": "2025-02-12T05:47:44.766Z",
+      "updatedDate": "2025-02-12T05:47:44.766Z"
     },
     "smallBusiness": {
       "overview": "This is a place for anything to do with relationships that you maintain that are close by – your direct neighbours or surrounding streets. You’re probably on a first-name basis and know each other reasonably well.\n\nMaybe you store the contact details, opening hours, or annual holidays, of other businesses in your shopping centre in case of emergency. Or you might have reminders to bring in mail or garbage bins for your neighbours sometimes.\n\nPerhaps you offer discounts to certain neighbourhood businesses and you keep a list of what these are. Or maybe you’re part of a ‘neighbourhood watch’-style group where everyone keeps an eye on things. Either way, store any notes or documents here.",
@@ -1280,8 +1284,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.342Z",
-      "updatedDate": "2025-02-12T04:13:58.342Z"
+      "createdDate": "2025-02-12T05:47:44.766Z",
+      "updatedDate": "2025-02-12T05:47:44.766Z"
     },
     "smallBusiness": {
       "overview": "This is a place for anything to do with relationships that you maintain that are a bit further away – your town or city, state or province, or country.\n\nMaybe you have interactions with your local chamber of commerce. Or perhaps your business donates its product or services to an annual charity event, parade, or community group.\n\nYou might host high school work experience students each year. Or your staff might do regular volunteer work or mentoring.\n\nWhat’s that? There’s chocolate fundraising boxes in the kitchen? Save me a Picnic while I store the documentation here!",
@@ -1296,8 +1300,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.342Z",
-      "updatedDate": "2025-02-12T04:13:58.342Z"
+      "createdDate": "2025-02-12T05:47:44.766Z",
+      "updatedDate": "2025-02-12T05:47:44.766Z"
     },
     "smallBusiness": {
       "overview": "This is a place for any global relationships that you maintain, either with individuals or larger organisations.\n\nYou might mentor a small business owner in another country. Or maybe your business participates in global environmental initiatives like Just One Tree or the 1% for the Planet network.\n\nOr perhaps you support other international charities or small business loan providers. Either way, store the details here.",
@@ -1312,8 +1316,8 @@
     "type": "id",
     "emoji": "📚",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.343Z",
-      "updatedDate": "2025-02-12T04:13:58.343Z"
+      "createdDate": "2025-02-12T05:47:44.767Z",
+      "updatedDate": "2025-02-12T05:47:44.767Z"
     },
     "smallBusiness": {
       "overview": "Caution. This is a place for when there is no other place. Don’t get lazy and dump stuff here that is important and/or has a home elsewhere in the system.\n\nThis might be information that you found interesting or might be useful someday. But right now, it’s not strongly related to any other ID. And it would not make sense to clutter an existing ID or create a new one for it.\n\nIt’s a library so we want to keep it neat. Label any files with clear descriptions and use the year-month method in case the information is time sensitive.\n\n### Why are there no IDs here?\n\nIt’s difficult to imagine how these libraries might be used. So we didn’t want to commit to IDs just yet. By leaving these sections blank, we thought it might be a good way to introduce everyone to the careful consideration that goes into making a new ID.\n\nIf you’re ready to save things in this library, come over to the [[community]] and see what others are doing or ask us for advice. We’ll figure it out together and eventually settle on some standard IDs. In the meantime, just keep things neat and tidy here.\n\n### Leave yourself JDex notes\n\nRemember to leave a note in your JDex when you save things in this library so you can find them easily.\n\n(This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)",
@@ -1329,8 +1333,8 @@
     "type": "id",
     "emoji": "🧘",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.343Z",
-      "updatedDate": "2025-02-12T04:13:58.343Z"
+      "createdDate": "2025-02-12T05:47:44.767Z",
+      "updatedDate": "2025-02-12T05:47:44.767Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -1342,8 +1346,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.344Z",
-      "updatedDate": "2025-02-12T04:13:58.344Z"
+      "createdDate": "2025-02-12T05:47:44.767Z",
+      "updatedDate": "2025-02-12T05:47:44.767Z"
     },
     "smallBusiness": {
       "examples": "Things you might research and plan here include:\n\n- calculating if the business is viable,\n- start-up and ongoing operating budgets,\n- what taxes may apply to you (e.g. income, sales, fringe benefits, capital gains, payroll, land, stamp duty),\n- your financial goals and strategies to reach them,\n- whether you’ll use accounting, time-tracking, or payroll software, or other digital tools,\n- will you rely on your bookkeeper or accountant or do as much as you can yourself,\n- what kind of bank account/s you’ll need,\n- if relevant, how will you deal with cash (e.g. currency conversions, cash floats, petty cash, cash books),\n- whether you need help protecting your profits (e.g. diversifying investments to reduce risk),\n- or whatever else you need to figure out.",
@@ -1362,8 +1366,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.344Z",
-      "updatedDate": "2025-02-12T04:13:58.344Z"
+      "createdDate": "2025-02-12T05:47:44.768Z",
+      "updatedDate": "2025-02-12T05:47:44.768Z"
     },
     "smallBusiness": {
       "examples": "Income protection insurance; tax audit insurance; lenders mortgage insurance; any other kind of loan protection insurance.",
@@ -1379,8 +1383,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.344Z",
-      "updatedDate": "2025-02-12T04:13:58.344Z"
+      "createdDate": "2025-02-12T05:47:44.768Z",
+      "updatedDate": "2025-02-12T05:47:44.768Z"
     },
     "smallBusiness": {
       "examples": "Traditional annual company reports; review documents that entities such as not-for-profits, charities, school associations, or clubs must submit; informal internal review documents for staff updates or other stakeholders; or anything else you prepare in order to reflect on finances.",
@@ -1396,8 +1400,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.344Z",
-      "updatedDate": "2025-02-12T04:13:58.344Z"
+      "createdDate": "2025-02-12T05:47:44.768Z",
+      "updatedDate": "2025-02-12T05:47:44.768Z"
     },
     "smallBusiness": {
       "examples": "Documents related to your credit rating and history.",
@@ -1414,8 +1418,8 @@
     "type": "id",
     "emoji": "🤑",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.345Z",
-      "updatedDate": "2025-02-12T04:13:58.345Z"
+      "createdDate": "2025-02-12T05:47:44.769Z",
+      "updatedDate": "2025-02-12T05:47:44.769Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -1427,8 +1431,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.345Z",
-      "updatedDate": "2025-02-12T04:13:58.345Z"
+      "createdDate": "2025-02-12T05:47:44.769Z",
+      "updatedDate": "2025-02-12T05:47:44.769Z"
     },
     "smallBusiness": {
       "overview": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where income records are held until you process and permanently file them in either:\n\n- [[13.23]],\n- [[13.24]],\n- [[13.25]],\n- [[13.26]].\n\nAnd if you need to do any messy calculations as you process the income, there’s room here.\n\n### What if I use software?\n\nIf you use point-of-sale and/or accounting software then a lot of work will be automated. However, it’s still important to cross-check that everything is as it should be and the income is in your bank account.",
@@ -1443,8 +1447,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.345Z",
-      "updatedDate": "2025-02-12T04:13:58.345Z"
+      "createdDate": "2025-02-12T05:47:44.770Z",
+      "updatedDate": "2025-02-12T05:47:44.770Z"
     },
     "smallBusiness": {
       "examples": "Standard bank accounts; online payment processors like Stripe, PayPal, or Payoneer; merchant accounts for ‘buy now, pay later’ services like Afterpay or Klarna; digital wallet services like WeChat Pay or Grab; money-transfer services like Western Union; creator support platforms like Patreon; crowdfunding services like Kickstarter.",
@@ -1461,8 +1465,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.346Z",
-      "updatedDate": "2025-02-12T04:13:58.346Z"
+      "createdDate": "2025-02-12T05:47:44.770Z",
+      "updatedDate": "2025-02-12T05:47:44.770Z"
     },
     "smallBusiness": {
       "overview": "However you actively earn money, store the processed records here.\n\nWhether you send out invoices for your work\\*, download reports from a till or online platform, or tally up a cash book, these are your sales. This includes long-term income for things like royalties and book sales. You did the work once and continue to get paid for it.\n\nAnd if you have to deal with bad debts, we recommend noting those here too. They’re still sales, you just didn’t receive the money.\n\n### Where do I create my invoice?\n\nNot everyone uses software to generate invoices. For those who use a template, we recommend saving it here. Export the completed invoice as a PDF to the income inbox and send it. Then process it when it’s paid and move it here for permanent filing.\n\n\\*Your accountant might refer to this as ‘accounts receivable’."
@@ -1476,8 +1480,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.346Z",
-      "updatedDate": "2025-02-12T04:13:58.346Z"
+      "createdDate": "2025-02-12T05:47:44.770Z",
+      "updatedDate": "2025-02-12T05:47:44.770Z"
     },
     "smallBusiness": {
       "examples": "Interest; dividends; rental payments.",
@@ -1494,8 +1498,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.346Z",
-      "updatedDate": "2025-02-12T04:13:58.346Z"
+      "createdDate": "2025-02-12T05:47:44.771Z",
+      "updatedDate": "2025-02-12T05:47:44.771Z"
     },
     "smallBusiness": {
       "examples": "Tax relief, credits, or incentives; concessions and allowances; grants and schemes; cash back and refunds; prizes and gifts.",
@@ -1510,8 +1514,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.347Z",
-      "updatedDate": "2025-02-12T04:13:58.347Z"
+      "createdDate": "2025-02-12T05:47:44.771Z",
+      "updatedDate": "2025-02-12T05:47:44.771Z"
     },
     "smallBusiness": {
       "examples": "Land; buildings; computer equipment; furniture; machinery; vehicles.",
@@ -1527,8 +1531,8 @@
     "type": "id",
     "emoji": "🛍️",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.347Z",
-      "updatedDate": "2025-02-12T04:13:58.347Z"
+      "createdDate": "2025-02-12T05:47:44.771Z",
+      "updatedDate": "2025-02-12T05:47:44.771Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -1540,8 +1544,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.347Z",
-      "updatedDate": "2025-02-12T04:13:58.347Z"
+      "createdDate": "2025-02-12T05:47:44.772Z",
+      "updatedDate": "2025-02-12T05:47:44.772Z"
     },
     "smallBusiness": {
       "overview": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where expense records are held until you process and permanently file them in [[13.33]].\n\nAnd if you need to do any messy calculations as you process the expenses, there’s room here.",
@@ -1556,8 +1560,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.348Z",
-      "updatedDate": "2025-02-12T04:13:58.348Z"
+      "createdDate": "2025-02-12T05:47:44.772Z",
+      "updatedDate": "2025-02-12T05:47:44.772Z"
     },
     "smallBusiness": {
       "examples": "Online payment processors like PayPal or Payoneer; ‘buy now, pay later’ services like Afterpay or Klarna; digital wallet services like WeChat Pay or Grab; money-transfer services like Western Union; a standard bank account.",
@@ -1574,8 +1578,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.348Z",
-      "updatedDate": "2025-02-12T04:13:58.348Z"
+      "createdDate": "2025-02-12T05:47:44.773Z",
+      "updatedDate": "2025-02-12T05:47:44.773Z"
     },
     "smallBusiness": {
       "overview": "We’ve classified an ‘expense’ as something that you have already paid for either on the spot (i.e. with a card), or via an automatic payment (i.e. a direct debit).\n\nAs per the ops manual, once you’ve processed expenses in [[13.31]], permanently file any receipts here.\n\n### Is the receipt important?\n\nThere’ll probably be lots of receipts that you don’t consider to be that important. Such as everyday consumables like petrol or milk for the office fridge. Just keep them all here for however long you’re required to by law.\n\nBut for ‘important’ receipts for higher-value items and/or anything with a warranty, you might like to add a copy to where the thing lives in the system.\n\nFor instance, you buy a new laptop. The receipt sits in the expenses inbox until you process it. You then permanently file it here and also add a copy to [[14.11]].\n\n### Saving files\n\nWe recommend using the year-month method when saving this kind of paperwork so everything sorts neatly. And subfolder by expense category.",
@@ -1591,8 +1595,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.348Z",
-      "updatedDate": "2025-02-12T04:13:58.348Z"
+      "createdDate": "2025-02-12T05:47:44.773Z",
+      "updatedDate": "2025-02-12T05:47:44.773Z"
     },
     "smallBusiness": {
       "examples": "If you have staff, the kinds of things you might manage here include:\n\n- timekeeping (e.g. rosters, records of attendance, overtime, project timesheets),\n- wages, payslips, and remittance,\n- income tax withholding,\n- pension payments,\n- health insurance,\n- paid or unpaid leave of any kind,\n- allowances (e.g. for meals, clothing, training),\n- any benefits, bonuses, rewards, or incentives in salary packages,\n- expense reimbursement.",
@@ -1610,8 +1614,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.349Z",
-      "updatedDate": "2025-02-12T04:13:58.349Z"
+      "createdDate": "2025-02-12T05:47:44.773Z",
+      "updatedDate": "2025-02-12T05:47:44.773Z"
     },
     "smallBusiness": {
       "examples": "Software; apps; web services like hosting and domains; cloud storage; media and streaming services; food, beverage, or other office supply subscriptions; carshare or other transport subscriptions; staff memberships for gyms and clubs; recurring charity donations; crowdfunding or financial support platforms; memberships for things like online communities and newsletters; payment agreements for professional services like your accountant; plus any sort of automatic payments (i.e. direct debits) for recurring expenses.",
@@ -1628,8 +1632,8 @@
     "type": "id",
     "emoji": "📈",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.350Z",
-      "updatedDate": "2025-02-12T04:13:58.350Z"
+      "createdDate": "2025-02-12T05:47:44.774Z",
+      "updatedDate": "2025-02-12T05:47:44.774Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -1641,8 +1645,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.350Z",
-      "updatedDate": "2025-02-12T04:13:58.350Z"
+      "createdDate": "2025-02-12T05:47:44.774Z",
+      "updatedDate": "2025-02-12T05:47:44.774Z"
     },
     "smallBusiness": {
       "overview": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where asset records are held until you process and permanently file them in either:\n\n- [[13.43]],\n- [[13.44]],\n- [[13.45]],\n- [[13.46]].\n\nAnd if you need to do any messy calculations as you process the assets, there’s room here.",
@@ -1657,8 +1661,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.351Z",
-      "updatedDate": "2025-02-12T04:13:58.351Z"
+      "createdDate": "2025-02-12T05:47:44.775Z",
+      "updatedDate": "2025-02-12T05:47:44.775Z"
     },
     "smallBusiness": {
       "overview": "This is the place to store all formal paperwork and statements for accounts that are used to both receive income and pay expenses.\n\nFor most small businesses this will be a traditional bank account – probably your main account. But it might also include other types of specialised account, platform, or app.\n\nNote that in Australia and potentially other countries, companies, partnerships, and trusts must have a business account for tax purposes. Sole traders can use a personal account, but a business account is still recommended. So if you’re just starting out, spend a little time figuring out what kind of account is best for you.\n\nAnd if you’re a cyborg from the future and only deal with digital currency, then store those records here too.\n\n### What do you mean by ‘formal’ statements and paperwork?\n\nStatic documents supplied by a platform or bank (e.g. PDFs). As opposed to raw data that you might download into a spreadsheet and manipulate. Do that kind of work in [[13.21]] or [[13.31]].\n\n### Saving files\n\nWe recommend using the year-month method when saving paperwork and statements so everything sorts neatly. And subfolder by account issuer."
@@ -1672,8 +1676,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.351Z",
-      "updatedDate": "2025-02-12T04:13:58.351Z"
+      "createdDate": "2025-02-12T05:47:44.775Z",
+      "updatedDate": "2025-02-12T05:47:44.775Z"
     },
     "smallBusiness": {
       "examples": "Shares; managed funds; bonds; term deposits; property unrelated to the business; high-value items like art or jewellery; trusts; director’s loans (aka Division 7A in Australia); digital currency; micro-investment apps.",
@@ -1691,8 +1695,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.352Z",
-      "updatedDate": "2025-02-12T04:13:58.352Z"
+      "createdDate": "2025-02-12T05:47:44.775Z",
+      "updatedDate": "2025-02-12T05:47:44.775Z"
     },
     "smallBusiness": {
       "examples": "Land; buildings; furniture; machinery; vehicles; computer equipment.",
@@ -1707,8 +1711,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.352Z",
-      "updatedDate": "2025-02-12T04:13:58.352Z"
+      "createdDate": "2025-02-12T05:47:44.776Z",
+      "updatedDate": "2025-02-12T05:47:44.776Z"
     },
     "smallBusiness": {
       "overview": "This is a place to note any physical items you own in the shorter term that are involved in running the business. Shorter term means for less than one accounting period (i.e. less than 1 year).\n\nDuring this time you expect to sell or consume these items. And/or they’re the type of thing that can be easily converted to cash if needed. These type of assets are classified as ‘tangible’ because you can physically touch them.\n\n### Saving files\n\nThis ID should contain copies of records saved elsewhere in the system. That’s okay because these are static records. We want a place where you and/or your accountant can go to see the proof of ownership and value of any current assets in one place.\n\nFor instance, a furniture maker’s stock (finished products to sell to customers) and inventory (raw materials used to make the products) are current assets. He manages these in [[20-29]]. He copies valuations and receipts here for his accountant. And he also has a master finance record in [[13.11]] that includes a summary of his current assets because that’s how he rolls."
@@ -1722,8 +1726,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.353Z",
-      "updatedDate": "2025-02-12T04:13:58.353Z"
+      "createdDate": "2025-02-12T05:47:44.776Z",
+      "updatedDate": "2025-02-12T05:47:44.776Z"
     },
     "smallBusiness": {
       "examples": "Intellectual property such as patents, copyrights, trademarks, and trade secrets; digital assets such as domain names, software, and proprietary technology; goodwill assets such as brand equity and customer loyalty; licences and permits such as taxi medallions, liquor licences, and franchises.",
@@ -1738,8 +1742,8 @@
     "type": "id",
     "emoji": "💸",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.353Z",
-      "updatedDate": "2025-02-12T04:13:58.353Z"
+      "createdDate": "2025-02-12T05:47:44.776Z",
+      "updatedDate": "2025-02-12T05:47:44.776Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -1751,8 +1755,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.353Z",
-      "updatedDate": "2025-02-12T04:13:58.353Z"
+      "createdDate": "2025-02-12T05:47:44.777Z",
+      "updatedDate": "2025-02-12T05:47:44.777Z"
     },
     "smallBusiness": {
       "overview": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where liability records are held until you process and permanently file them in either:\n\n- [[13.52]],\n- [[13.53]],\n- [[13.54]],\n- [[13.55]].\n\nAnd if you need to do any messy calculations as you process the liabilities, there’s room here.",
@@ -1767,8 +1771,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.354Z",
-      "updatedDate": "2025-02-12T04:13:58.354Z"
+      "createdDate": "2025-02-12T05:47:44.777Z",
+      "updatedDate": "2025-02-12T05:47:44.777Z"
     },
     "smallBusiness": {
       "examples": "Credit card; mortgage; line of credit; overdraft; promissory note; commercial bill/bill of exchange; any other formal cash loan; refinancing paperwork; any form of investor financing that must be repaid.",
@@ -1785,8 +1789,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.354Z",
-      "updatedDate": "2025-02-12T04:13:58.354Z"
+      "createdDate": "2025-02-12T05:47:44.777Z",
+      "updatedDate": "2025-02-12T05:47:44.777Z"
     },
     "smallBusiness": {
       "examples": "Vendor financing/trade credit; hire purchase or rent to buy agreements.",
@@ -1801,8 +1805,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.354Z",
-      "updatedDate": "2025-02-12T04:13:58.354Z"
+      "createdDate": "2025-02-12T05:47:44.778Z",
+      "updatedDate": "2025-02-12T05:47:44.778Z"
     },
     "smallBusiness": {
       "overview": "We’ve defined a ‘bill’ as something you must make time to pay. It’s outstanding and requires action, probably by a due date. As opposed to expenses that you have already paid for either on the spot (i.e. with a card), or via an automatic payment (i.e. a direct debit).\n\nAs per the ops manual, once you’ve processed the bill in [[13.51]], store it here. We recommend using the year-month method when saving this kind of paperwork so everything sorts neatly. And subfolder by bill issuer.\n\nFor instance, let’s say you have a food truck and receive a one-off bill from someone who delivered extra gas bottles for an event. Put the bill in the liabilities inbox until you process it. Then permanently file it here and, if you want, add a copy to [[12.31]].\n\n### How to be a small hero\n\nIf you can, consider paying invoices from sole traders on the day they’re received. One company used to do this for Lucy. She didn’t ask them to, they just did it. Every time. It was an amazing gesture towards the smallest of business owners and made a huge difference to her cashflow and ability to trade.",
@@ -1818,8 +1822,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.355Z",
-      "updatedDate": "2025-02-12T04:13:58.355Z"
+      "createdDate": "2025-02-12T05:47:44.778Z",
+      "updatedDate": "2025-02-12T05:47:44.778Z"
     },
     "smallBusiness": {
       "examples": "Tickets; fines; late fees; penalties; infringements.",
@@ -1834,8 +1838,8 @@
     "type": "id",
     "emoji": "🧮",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.355Z",
-      "updatedDate": "2025-02-12T04:13:58.355Z"
+      "createdDate": "2025-02-12T05:47:44.779Z",
+      "updatedDate": "2025-02-12T05:47:44.779Z"
     },
     "smallBusiness": {},
     "isPublic": false
@@ -1847,8 +1851,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.355Z",
-      "updatedDate": "2025-02-12T04:13:58.355Z"
+      "createdDate": "2025-02-12T05:47:44.779Z",
+      "updatedDate": "2025-02-12T05:47:44.779Z"
     },
     "smallBusiness": {
       "overview": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where government tax records are held until you process and permanently file them in [[13.62]].\n\nAnd if you need to do any messy calculations as you process government taxes, there’s room here.",
@@ -1864,8 +1868,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.356Z",
-      "updatedDate": "2025-02-12T04:13:58.356Z"
+      "createdDate": "2025-02-12T05:47:44.779Z",
+      "updatedDate": "2025-02-12T05:47:44.779Z"
     },
     "smallBusiness": {
       "examples": "Depending on what you do and where you trade in the world, the following may apply:\n\n- income tax,\n- sales tax,\n- fringe benefits tax,\n- capital gains tax,\n- payroll tax,\n- land tax,\n- stamp duty.",
@@ -1883,8 +1887,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.356Z",
-      "updatedDate": "2025-02-12T04:13:58.356Z"
+      "createdDate": "2025-02-12T05:47:44.780Z",
+      "updatedDate": "2025-02-12T05:47:44.780Z"
     },
     "smallBusiness": {
       "overview": "We can’t advise you on how to manage dividends.\\* It’s beyond our scope. We recommend outsourcing the process to an accountant or bookkeeper who specialises in this type of thing.\n\nBut we do think that anything to do with dividends lives over here with all the money and numbers. And it feels logical to put dividends after government taxes since they are paid from post-tax profits.\n\n\\*Perhaps one day, after community discussion with experienced business owners and accountants/bookkeepers, we can develop an ops manual that covers dividend basics."
@@ -1898,8 +1902,8 @@
     "type": "id",
     "emoji": null,
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.356Z",
-      "updatedDate": "2025-02-12T04:13:58.356Z"
+      "createdDate": "2025-02-12T05:47:44.780Z",
+      "updatedDate": "2025-02-12T05:47:44.780Z"
     },
     "smallBusiness": {
       "overview": "We can’t advise you on how to manage owner’s equity.\\* It’s beyond our scope. We recommend outsourcing the process to an accountant or bookkeeper who specialises in this type of thing.\n\nBut we do think that anything to do with owner’s equity, including drawings, lives over here with all the money and numbers. And it feels logical to put owner’s equity close to dividends.\n\n\\*Perhaps one day, after community discussion with experienced business owners and accountants/bookkeepers, we can develop an ops manual that covers owner’s equity basics."
@@ -1913,8 +1917,8 @@
     "type": "id",
     "emoji": "📚",
     "metadata": {
-      "createdDate": "2025-02-12T04:13:58.357Z",
-      "updatedDate": "2025-02-12T04:13:58.357Z"
+      "createdDate": "2025-02-12T05:47:44.780Z",
+      "updatedDate": "2025-02-12T05:47:44.780Z"
     },
     "smallBusiness": {
       "overview": "Caution. This is a place for when there is no other place. Don’t get lazy and dump stuff here that is important and/or has a home elsewhere in the system.\n\nThis might be information that you found interesting or might be useful someday. But right now, it’s not strongly related to any other ID. And it would not make sense to clutter an existing ID or create a new one for it.\n\nIt’s a library so we want to keep it neat. Label any files with clear descriptions and use the year-month method in case the information is time sensitive.\n\n### Why are there no IDs here?\n\nIt’s difficult to imagine how these libraries might be used. So we didn’t want to commit to IDs just yet. By leaving these sections blank, we thought it might be a good way to introduce everyone to the careful consideration that goes into making a new ID.\n\nIf you’re ready to save things in this library, come over to the [[community]] and see what others are doing or ask us for advice. We’ll figure it out together and eventually settle on some standard IDs. In the meantime, just keep things neat and tidy here.\n\n### Leave yourself JDex notes\n\nRemember to leave a note in your JDex when you save things in this library so you can find them easily.\n\n(This is a good habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.)",
@@ -1922,6 +1926,20 @@
       "rationale": "We wanted to be realistic and acknowledge that sometimes there is miscellanea that accumulates over time.\n\nIt could be anything – a document, photo, URL, email, note, or a physical item. But it’s not the _work_ that you do. It’s things that you’ve found online or in real life, or perhaps that you’ve created.\n\nIt doesn’t fit anywhere else. It’s just a thing you wanted to save. And you don’t want it muddying other places where work happens.\n\nImportantly, it’s not that important. It has nothing to do with business operations. If it wasn’t backed up it wouldn’t matter. If you lose it, you could probably download it again."
     },
     "isPublic": false
+  },
+  {
+    "number": "14+FR1",
+    "title": "Isn’t everything ‘technology’ these days?",
+    "description": "",
+    "type": "furtherReading",
+    "emoji": null,
+    "metadata": {
+      "createdDate": "2024-11-18",
+      "updatedDate": "2024-11-18"
+    },
+    "furtherReading": {
+      "text": "We have so many gadgets now, so there’s a lot of potential crossover between general technology, operations, and product. But we made a decision that this category is for classic computers, mobile devices, accessories, and other digital services that are common to _most_ businesses. The things that underpin everything else. And that you probably have more control over.\n\nAnd it’s _not_ for computerised machines that are specific to your operations or product. Anything from card readers and payment machines, medical devices, manufacturing equipment, or that fancy robot vacuum cleaner in the back office.\n\nHere’s one scenario. A gift shop has a card reader at the till (which is really just a paid service that happens to come with a gadget). The card reader needs a computer or iPad, network, and wifi to run – these are managed here. And the card reader and its subscription go in [[12.34]] and [[14.32]], respectively.\n\nSame goes for our dentist. Their x-ray machine sends scans to a computer in the treatment room via the network. Whether they own or lease this machine, they’ll be paying someone to ensure it is mechanically sound and the software is updated. As above, the computers and network are managed here. And the x-ray machine and its support contract go in [[12.34]] and [[14.33]], respectively.\n\nSee [[14.14#When is an accessory ‘technology’ versus ‘front office operations’?]] for further rationale on this decision."
+    }
   },
   {
     "number": "20-29",

@@ -25,11 +25,11 @@ import system, {
   type FurtherReadingEntry,
 } from "src/data/smallBusinessFlat";
 // Utils
-import obfuscate from "@utils/obfuscate";
-import parseAndObfuscate from "@utils/parseAndObfuscate";
+import parseMd from "@utils/parseMd";
 // Components
 import Slice from "./common/Slice.astro";
 import ObsidianVaultLink from "./common/ObsidianVaultLink.astro";
+import FurtherReadingLinks from "./common/FurtherReadingLinks.astro";
 // #endregion
 
 // #region Entry: core details ------------------------------------------------
@@ -44,53 +44,30 @@ let idExamples: string | undefined;
 let idOverview: string | undefined;
 let idExceptions: string | undefined;
 let idAlsoSee: string | undefined;
-let idRationale: string | undefined;
 
 // If we have a signed-in user, show them the ID. If not, obfuscate it.
 if (userId) {
   idTitle = idEntry.title;
-  idDescription = await parseAndObfuscate(true, system[id]?.description);
-  idExamples = await parseAndObfuscate(true, sb.examples);
-  idOverview = await parseAndObfuscate(true, sb.overview);
-  idExceptions = await parseAndObfuscate(true, sb.exceptions);
-  idAlsoSee = await parseAndObfuscate(true, sb.alsoSee);
-  idRationale = await parseAndObfuscate(true, sb.rationale);
+  idDescription = await parseMd(system[id]?.description, true, true);
+  idExamples = sb.examples && (await parseMd(sb.examples, true, true));
+  idOverview = sb.overview && (await parseMd(sb.overview, true, true));
+  idExceptions = sb.exceptions && (await parseMd(sb.exceptions, true, true));
+  idAlsoSee = sb.alsoSee && (await parseMd(sb.alsoSee, true, true));
 } else {
-  // Don't parseAndObfuscate the title, it returns HTML
-  idTitle = obfuscate(isPublic, system[id]?.title);
-  idDescription = await parseAndObfuscate(isPublic, system[id]?.description);
-  idExamples = await parseAndObfuscate(isPublic, sb?.examples);
-  idOverview = await parseAndObfuscate(isPublic, sb?.overview);
-  idExceptions = await parseAndObfuscate(isPublic, sb?.exceptions);
-  idAlsoSee = await parseAndObfuscate(isPublic, sb?.alsoSee);
-  idRationale = await parseAndObfuscate(isPublic, sb?.rationale);
-}
-
-// Get all of the sub-IDs that this ID contains
-const subIds = getChildren(system, id);
-
-// let howTos, opsManuals;
-let furtherReadings: { number: string; title: string }[] = [];
-
-if (subIds) {
-  // Generate furtherReadings
-  const furtherReadingEntries = subIds.filter((child) =>
-    child.number.match(/^\d\d\.\d\d\+[0-9]/)
-  ) as FurtherReadingEntry[];
-  furtherReadings = furtherReadingEntries.map((entry) => {
-    if (!userId) {
-      return {
-        number: entry.number,
-        title: obfuscate(isPublic, entry.title),
-      };
-    }
-    return {
-      number: entry.number,
-      title: entry.title,
-    };
-  });
-  // Generate howTos
-  // Generate opsManuals
+  idTitle = await parseMd(system[id]?.title, false, !!idEntry.isPublic);
+  idDescription = await parseMd(
+    system[id]?.description,
+    true,
+    !!idEntry.isPublic
+  );
+  idExamples =
+    sb.examples && (await parseMd(sb.examples, true, !!idEntry.isPublic));
+  idOverview =
+    sb.overview && (await parseMd(sb.overview, true, !!idEntry.isPublic));
+  idExceptions =
+    sb.exceptions && (await parseMd(sb.exceptions, true, !!idEntry.isPublic));
+  idAlsoSee =
+    sb.alsoSee && (await parseMd(sb.alsoSee, true, !!idEntry.isPublic));
 }
 
 const parentCNumber = idEntry.number.split(".")[0];
@@ -202,66 +179,8 @@ const parentSTitle = parentSEntry.title;
   ) : null
 }
 
-{
-  idRationale ? (
-    <Slice id="IDRationale" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">Rationale</h3>
-        <div class="layout-right-item" set:html={idRationale} />
-      </div>
-    </Slice>
-  ) : null
-}
+<FurtherReadingLinks number={id} />
 
-{
-  furtherReadings.length ? (
-    <Slice id="FurtherReadings" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">Further reading</h3>
-        <div class="layout-right-item">
-          <ul>
-            {furtherReadings.map((furtherReading) => {
-              return (
-                <li>
-                  <a href={`/${furtherReading.number}`}>
-                    {furtherReading.number.replace(/^\d\d\.\d\d\+[0-9]/, "")}
-                    {furtherReading.title}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
-    </Slice>
-  ) : null
-}
-
-{
-  /*
-  opsManuals.length > 0 ? (
-    <Slice id="OpsManuals" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">Ops manuals</h3>
-        <div class="layout-right-item">
-          <ul>
-            {opsManuals.map((opsManual) => {
-              return (
-                <li>
-                  <a href={`/${opsManual.number}`}>
-                    {opsManual.number.replace(/^\d\d\.\d\d\+OPS[0-9]+/, "")}
-                    {opsManual.title}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
-    </Slice>
-  ) : null
-*/
-}
 <!-- #endregion -->
 
 <ObsidianVaultLink id={id} idTitle={idTitle} />

@@ -1,0 +1,70 @@
+---
+/**
+ * This component takes a number, which can be an ID, Category, or Area. It
+ * finds the sub-IDs of this number and, for those that are
+ * type="furtherReading", renders them in a Slice.
+ *
+ * If there are no items to render, no Slice is rendered.
+ *
+ * Compare this to the FurtherReading component, which renders the entry.
+ */
+
+interface Props {
+  number: string;
+}
+const { number } = Astro.props;
+
+import Slice from "@components/common/Slice.astro";
+import sb, {
+  getChildren,
+  type FurtherReadingEntry,
+} from "@data/smallBusinessFlat";
+
+const subIds = getChildren(sb, number);
+if (!subIds) {
+  return null;
+}
+
+// subIds is an array of all the children of the number. We only want those
+// items that are furtherReading, and where their number before the + is
+// the same as the number passed in.
+const furtherReadings = subIds.filter(
+  (child) =>
+    child.type === "furtherReading" && child.number.split("+")[0] === number
+) as FurtherReadingEntry[];
+
+if (furtherReadings.length === 0) {
+  return null;
+}
+---
+
+<Slice id="FurtherReadings" className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Further reading</h3>
+    <div class="layout-right-item">
+      <ul>
+        {
+          furtherReadings.map((furtherReading: FurtherReadingEntry) => (
+            <li>
+              <p>
+                <a href={`/${furtherReading.number}`}>
+                  {furtherReading.number.replace(/^.*\+FR[0-9]/, "")}
+                  {furtherReading.title}
+                </a>
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+</style>

@@ -2,15 +2,8 @@ import { marked } from "marked";
 import { markedSmartypants } from "marked-smartypants";
 marked.use(markedSmartypants());
 
+import obfuscate from "./obfuscate";
 import wikiLinkify from "./wikiLinkify";
-
-function obfuscate(markdown: string, isPublic: boolean): string {
-  if (isPublic) {
-    return markdown;
-  }
-  // Replace all alphabetic characters with the Unicode light shade character
-  return markdown.replace(/[a-zA-Z‘’]/g, "░");
-}
 
 /**
  * # parseMd
@@ -20,6 +13,11 @@ function obfuscate(markdown: string, isPublic: boolean): string {
  * Otherwise, it will be obfuscated.
  *
  * Returns the Markdown as HTML.
+ *
+ * @param markdown - The Markdown to parse.
+ * @param returnHtml - Whether to return the Markdown as HTML. Defaults to true.
+ * @param isPublic - Whether the Markdown is public. Defaults to true.
+ * @returns The Markdown as HTML.
  */
 export default async function parseMd(
   markdown: string,

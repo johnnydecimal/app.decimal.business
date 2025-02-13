@@ -1,4 +1,4 @@
-export default function obfuscate(isPublic: boolean, markdown: string): string {
+export default function obfuscate(markdown: string, isPublic: boolean): string {
   if (isPublic) {
     return markdown;
   }

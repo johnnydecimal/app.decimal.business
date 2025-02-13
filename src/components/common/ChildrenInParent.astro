@@ -1,0 +1,115 @@
+---
+/**
+ * ChildrenInParent shows the [Areas | Categories | IDs] in this
+ * [System | Area | Category] list.
+ *
+ * This is _not_ used for any of the lists of sub-IDs like further reading.
+ */
+
+interface Props {
+  number: string;
+}
+const { number } = Astro.props;
+
+import Slice from "@components/common/Slice.astro";
+import sb, {
+  getChildren,
+  type AreaEntry,
+  type CategoryEntry,
+  type IdEntry,
+} from "@data/smallBusinessFlat";
+import parseMd from "@utils/parseMd";
+
+const { userId } = Astro.locals.auth();
+
+// Figure out if the parent is a system, area, or category
+let parentType: "system" | "area" | "category";
+if (number.match("J82")) {
+  parentType = "system";
+} else if (number.match(/^\d\d-\d\d$/)) {
+  parentType = "area";
+} else if (number.match(/^\d\d$/)) {
+  parentType = "category";
+} else if (number.match(/^\d\d\.\d\d$/)) {
+  // This isn't what this component is for
+  throw new Error(`ChildrenInParent: IDs are not allowed to have children`);
+} else {
+  throw new Error(`ChildrenInParent: Unknown parent type for ${number}`);
+}
+
+const subIds = getChildren(sb, number) as (
+  | AreaEntry
+  | CategoryEntry
+  | IdEntry
+)[];
+if (!subIds) {
+  return null;
+}
+
+const processedIds = await Promise.all(
+  subIds.map(async (id) => {
+    // We only want 'pure' entries here, not +FR or +OPS etc.
+    if (parentType === "system" && !id.number.match(/^\d\d-\d\d$/)) {
+      return null;
+    }
+    if (parentType === "area" && !id.number.match(/^\d\d$/)) {
+      return null;
+    }
+    if (parentType === "category" && !id.number.match(/^\d\d\.\d\d$/)) {
+      return null;
+    }
+
+    let entryTitle, entryDescription;
+    if (userId) {
+      entryTitle = id.title;
+      entryDescription = await parseMd(id.description);
+    } else {
+      entryTitle = await parseMd(id.title, false, !!id.isPublic);
+      entryDescription = await parseMd(id.description, true, !!id.isPublic);
+    }
+    return {
+      ...id,
+      title: entryTitle,
+      description: entryDescription,
+    };
+  })
+).then((results) => results.filter((id): id is IdEntry => id !== null));
+---
+
+<Slice id="ChildrenInParentLabel" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <div></div>
+    <h2 class="layout-right-item">IDs in this category</h2>
+  </div>
+</Slice>
+
+<Slice id="ChildrenInParentList" className="secondary-content-bg">
+  <ol class="acid-list">
+    {
+      processedIds.map((id) => {
+        return (
+          <li
+            class={`layout-grid-left-right ${id.isHeader ? "header-item" : ""}`}
+          >
+            <h3 class="layout-left-item">
+              <a href={`/${id.number}`}>{id.number}</a>
+            </h3>
+            <div class="layout-right-item">
+              <h3>
+                <a class="blackSquare" href={`/${id.number}`}>
+                  {id.isHeader ? "■ " : ""}
+                </a>
+                <a href={`/${id.number}`}>{id.title}</a>
+              </h3>
+              <div set:html={id.description} />
+            </div>
+          </li>
+        );
+      })
+    }
+  </ol>
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+</style>

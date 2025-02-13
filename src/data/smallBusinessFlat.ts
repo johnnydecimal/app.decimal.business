@@ -22,6 +22,7 @@ interface BaseEntry {
   type: EntryType;
   description: string; // Late change: everything must have a description; document the rationale later
   emoji?: string;
+  isPublic?: boolean;
   metadata: Metadata;
   extensions?: {};
 }
@@ -60,7 +61,6 @@ interface SmallBusinessExtension {
 export interface IdEntry extends BaseEntry {
   type: "id";
   isHeader?: boolean;
-  isPublic?: boolean;
   extensions: {
     smallBusiness: SmallBusinessExtension;
   };
@@ -84,7 +84,6 @@ export interface OpsEntry extends BaseEntry {
 
 export interface HowToEntry extends BaseEntry {
   type: "howTo";
-  isPublic?: boolean;
   extensions: {
     howTo: {
       text: string; // freeform
@@ -96,7 +95,6 @@ export interface FurtherReadingEntry extends BaseEntry {
   // These entries don't need an ID; or rather, we don't _use_ the ID
   // They're just 11.11+ …words, not 11.11+HOW1 or whatever
   type: "furtherReading";
-  isPublic?: boolean;
   extensions: {
     furtherReading: {
       text: string; // freeform
@@ -264,6 +262,23 @@ const flattenedData: FlattenedData = {
         alsoSee: "Just an 'also see' to test rendering'.",
         rationale:
           "Some rationale so that we have a little more to go on, and the rationale is that more is better right?\n\n- A simple.\n- Bullet.",
+      },
+    },
+  },
+  "11+FR1": {
+    number: "11+FR1",
+    type: "furtherReading",
+    title:
+      "Just an example of a further reading attached to a category (11) for testing",
+    description:
+      "A simple guide to registering a proprietary company in Australia.",
+    metadata: {
+      createdDate: "2024-11-19",
+      updatedDate: "2024-11-19",
+    },
+    extensions: {
+      furtherReading: {
+        text: "Just an example of a further reading for testing",
       },
     },
   },
