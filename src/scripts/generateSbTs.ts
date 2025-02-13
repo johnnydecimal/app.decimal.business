@@ -13,29 +13,24 @@ const __dirname = dirname(__filename);
 // We map markdown header names (in lowercase) to our schema keys.
 const SECTION_MAP: { [header: string]: keyof SmallBusinessEntry } = {
   description: "description",
-  "ops manual": "opsManual",
   examples: "examples",
   overview: "overview",
   exceptions: "exceptions",
   "also see": "alsoSee",
-  rationale: "rationale",
   links: "links",
-  emoji: "emoji",
 };
 
 interface SmallBusinessEntry {
   number: string;
   title: string;
+  emoji?: string;
   description?: string;
   // These fields go into the `extensions.smallBusiness` object.
-  opsManual?: string;
   examples?: string;
   overview?: string;
   exceptions?: string;
   alsoSee?: string;
-  rationale?: string;
   links?: string;
-  emoji?: string;
 }
 
 // Parse a markdown file into a Partial<SmallBusinessEntry>
