@@ -36,39 +36,44 @@ if (number.match("J82")) {
 } else {
   throw new Error(`ChildrenInParent: Unknown parent type for ${number}`);
 }
+console.log("🚀 ~ parentType:", parentType);
 
-const subIds = getChildren(sb, number) as (
+const subEntries = getChildren(sb, number) as (
   | AreaEntry
   | CategoryEntry
   | IdEntry
 )[];
-if (!subIds) {
+if (!subEntries) {
   return null;
 }
 
 const processedIds = await Promise.all(
-  subIds.map(async (id) => {
+  subEntries.map(async (entry) => {
     // We only want 'pure' entries here, not +FR or +OPS etc.
-    if (parentType === "system" && !id.number.match(/^\d\d-\d\d$/)) {
+    if (parentType === "system" && !entry.number.match(/^\d\d-\d\d$/)) {
       return null;
     }
-    if (parentType === "area" && !id.number.match(/^\d\d$/)) {
+    if (parentType === "area" && !entry.number.match(/^\d\d$/)) {
       return null;
     }
-    if (parentType === "category" && !id.number.match(/^\d\d\.\d\d$/)) {
+    if (parentType === "category" && !entry.number.match(/^\d\d\.\d\d$/)) {
       return null;
     }
 
     let entryTitle, entryDescription;
     if (userId) {
-      entryTitle = id.title;
-      entryDescription = await parseMd(id.description);
+      entryTitle = entry.title;
+      entryDescription = await parseMd(entry.description);
     } else {
-      entryTitle = await parseMd(id.title, false, !!id.isPublic);
-      entryDescription = await parseMd(id.description, true, !!id.isPublic);
+      entryTitle = await parseMd(entry.title, false, !!entry.isPublic);
+      entryDescription = await parseMd(
+        entry.description,
+        true,
+        !!entry.isPublic
+      );
     }
     return {
-      ...id,
+      ...entry,
       title: entryTitle,
       description: entryDescription,
     };

@@ -11,14 +11,12 @@ import system, {
 } from "@data/smallBusinessFlat";
 import parseMd from "@utils/parseMd";
 import Slice from "./common/Slice.astro";
-
+import FurtherReadingLinks from "./common/FurtherReadingLinks.astro";
+import ChildrenInParent from "./common/ChildrenInParent.astro";
 // Get this entry's details
 const systemEntry = getAllByType(system, "system")[0] as SystemEntry;
 const systemTitle = systemEntry.title;
 const systemDescription = await parseMd(systemEntry.description);
-
-// Get all of the areas that this system contains
-const areas = getChildren(system, systemEntry.number) as AreaEntry[];
 ---
 
 <!-- This duplication isn't actually required here, but it keeps
@@ -44,35 +42,9 @@ const areas = getChildren(system, systemEntry.number) as AreaEntry[];
   ) : null
 }
 
-<Slice id="ChildrenInParentLabel" className="secondary-content-bg">
-  <div class="layout-grid-left-right">
-    <div></div>
-    <h2 class="layout-right-item">Areas in this system</h2>
-  </div>
-</Slice>
+<FurtherReadingLinks number={systemEntry.number} label="Help" />
 
-<Slice id="ChildrenInParentList" className="secondary-content-bg">
-  <ol class="acid-list">
-    {
-      areas.map(async (area) => {
-        const areaDescription = await parseMd(area.description);
-        return (
-          <li class="layout-grid-left-right">
-            <h3 class="layout-left-item">
-              <a href={`/${area.number}`}>{area.number}</a>
-            </h3>
-            <div class="layout-right-item">
-              <h3>
-                <a href={`/${area.number}`}>{area.title}</a>
-              </h3>
-              <div set:html={areaDescription} />
-            </div>
-          </li>
-        );
-      })
-    }
-  </ol>
-</Slice>
+<ChildrenInParent number={systemEntry.number} />
 
 <style lang="scss">
   @use "@styles/common" as *;

@@ -38,71 +38,11 @@ const categoryExceptions = sb?.exceptions && (await parseMd(sb.exceptions));
 const categoryAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
 const categoryRationale = sb?.rationale && (await parseMd(sb.rationale));
 
-// // Get all of the IDs and further readings that this category contains
-// const subEntries = getChildren(system, category) as (
-//   | IdEntry
-//   | FurtherReadingEntry
-// )[];
-
-// We need to process IDs separately from furtherReadings, because we need
-// two output arrays to render in separate places.
-// const processedIds = await Promise.all(
-//   subEntries.map(async (id) => {
-//     // If id isn't a pure JD ID, e.g. it might be +OPS: ignore
-//     if (!id.number.match(/^\d\d\.\d\d$/)) {
-//       return null; // Return null to filter out later
-//     }
-
-//     let idTitle, idDescription;
-//     if (userId) {
-//       idTitle = id.title;
-//       idDescription = await parseMd(id.description);
-//     } else {
-//       idTitle = await parseMd(id.title, false, !!id.isPublic);
-//       idDescription = await parseMd(id.description, true, !!id.isPublic);
-//     }
-//     return {
-//       ...id,
-//       title: idTitle,
-//       description: idDescription,
-//     };
-//   })
-// ).then((results) => results.filter((id): id is IdEntry => id !== null));
-
-// const furtherReadings = await Promise.all(
-//   subEntries.map(async (id) => {
-//     if (id.type !== "furtherReading") {
-//       return null;
-//     }
-//     let furtherReadingTitle, furtherReadingDescription;
-//     if (userId) {
-//       furtherReadingTitle = id.title;
-//       // furtherReadingDescription = await parseMd(id.description);
-//     } else {
-//       furtherReadingTitle = await parseMd(id.title, false, !!id.isPublic);
-//       // furtherReadingDescription = await parseMd(
-//       //   id.description,
-//       //   true,
-//       //   !!id.isPublic
-//       // );
-//     }
-//     return {
-//       ...id,
-//       title: furtherReadingTitle,
-//       // description: furtherReadingDescription,
-//     };
-//   })
-// ).then((results) =>
-//   results.filter((id): id is FurtherReadingEntry => id !== null)
-// );
-
-// For category entries, compute the parent area number from the category's first digit.
-const firstDigit = categoryEntry.number.charAt(0);
-const parentANumber = `${firstDigit}0-${firstDigit}9`;
+const parentADigit = categoryEntry.number.charAt(0);
+const parentANumber = `${parentADigit}0-${parentADigit}9`;
 const parentAEntry = system[parentANumber] as AreaEntry;
 const parentATitle = parentAEntry.title;
 
-// The system parent's number is always "J82".
 const parentSNumber = "J82";
 const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;

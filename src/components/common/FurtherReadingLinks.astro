@@ -11,8 +11,9 @@
 
 interface Props {
   number: string;
+  label?: string;
 }
-const { number } = Astro.props;
+const { number, label } = Astro.props;
 
 import Slice from "@components/common/Slice.astro";
 import sb, {
@@ -21,6 +22,7 @@ import sb, {
 } from "@data/smallBusinessFlat";
 
 const subIds = getChildren(sb, number);
+console.log("🚀 ~ subIds:", subIds);
 if (!subIds) {
   return null;
 }
@@ -40,7 +42,9 @@ if (furtherReadings.length === 0) {
 
 <Slice id="FurtherReadings" className="descriptive-text">
   <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">Further reading</h3>
+    <h3 class="layout-left-item">
+      {label ?? "Further reading"}
+    </h3>
     <div class="layout-right-item">
       <ul>
         {

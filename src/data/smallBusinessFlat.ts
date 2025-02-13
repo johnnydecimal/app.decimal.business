@@ -232,6 +232,18 @@ const flattenedData: FlattenedData = {
     type: "system",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
+  "J82+FR1": {
+    number: "J82+FR1",
+    type: "furtherReading",
+    title: "Where do I get help?",
+    description: "The system help pages.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      furtherReading: {
+        text: "The system help pages.",
+      },
+    },
+  },
   ...area_00_09,
   "10-19": {
     number: "10-19",
@@ -246,6 +258,19 @@ const flattenedData: FlattenedData = {
           "Just some text in an exceptions field so we can **see** _how_ `it` renders with a [[11.11]] wiki-link for good measure.",
         rationale:
           "It helps us design these pages if there's more than one descriptive item.",
+      },
+    },
+  },
+  "10-19+FR1": {
+    number: "10-19+FR1",
+    type: "furtherReading",
+    title: "A further reading in area 10-19",
+    description:
+      "Just an example of a further reading for testing. This is a longer description that should wrap. This is in area 10-19.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      furtherReading: {
+        text: "Just an example of a further reading for testing",
       },
     },
   },
@@ -776,25 +801,37 @@ export function getAllByType(
 }
 
 // Utility function to get all children of a given parent ID
+// By 'supplemental entries' we mean furtherReading & opsManual, i.e. not a
+// core entry.
 export function getChildren(
   data: FlattenedData,
   parentNumber: string
 ): FlattenedEntry[] | undefined {
   if (parentNumber.match(/[A-Z]\d\d/)) {
-    // System provided. Get areas.
-    return Object.values(data).filter((entry) => entry.type === "area");
+    // System provided as parent.
+    // Return all areas, and any supplemental entries that start with the
+    // system number, J82.
+    // TODO: system number should be an app-wide constant
+    return Object.values(data).filter(
+      (entry) =>
+        entry.type === "area" ||
+        ((entry.type === "furtherReading" || entry.type === "ops") &&
+          entry.number.match(/^J82/))
+    );
   } else if (parentNumber.match(/\d0-\d9/)) {
-    // Area provided. Get categories that match.
+    // Area provided. Get categories and further readings that match.
     console.log("Area number:", parentNumber);
     // This is an area. Find all entries whose number starts with the first
     // two digits of the area number.
     return Object.values(data).filter(
       (entry) =>
-        entry.type === "category" &&
-        entry.number.charAt(0) === parentNumber.charAt(0)
+        (entry.type === "category" &&
+          entry.number.charAt(0) === parentNumber.charAt(0)) ||
+        (entry.type === "furtherReading" &&
+          entry.number.startsWith(parentNumber))
     );
   } else if (parentNumber.match(/^\d\d$/)) {
-    // Category provided. Get IDs that match and further readings that match.
+    // Category provided. Get IDs and further readings that match.
     console.log("Category number:", parentNumber);
     return Object.values(data).filter(
       (entry) =>
