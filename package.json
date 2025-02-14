@@ -12,7 +12,7 @@
     "astro": "astro",
     "test": "playwright test && echo '\n\nYou might wanna git commit now.\n'",
     "test:update": "playwright test --update-snapshots && echo '\n\nYou might wanna git commit now.\n'",
-    "generate-sb": "tsx ./src/scripts/generateSbTs.ts"
+    "generate-sb": "tsx ./src/scripts/generateSbTypeScriptFilesFromMarkdown.ts"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
