@@ -57,6 +57,7 @@ function generateArrayOfEntries(filePath) {
 const inputFilePath = process.argv[2] || "path/to/your/markdown/file.md";
 
 function processArrayOfEntries(arrayOfEntries) {
+  let furtherReadings = [];
   let entryWithoutFR = [];
   arrayOfEntries.forEach((entry) => {
     // entry is an array of lines
@@ -81,7 +82,8 @@ function processArrayOfEntries(arrayOfEntries) {
     entry.forEach((line) => {
       if (!inFRSection) {
         if (line.startsWith("## Further reading")) {
-          furtherReading.push(line);
+          furtherReading.push(`${entry[0]}`);
+          // furtherReading.push(line); // We don't need it
           inFRSection = true;
         } else {
           entryWithoutFR.push(line);
@@ -98,14 +100,15 @@ function processArrayOfEntries(arrayOfEntries) {
 
     // Write the entry to the file
     writeLinesToFile(fullPath, entryWithoutFR);
+    // Push this further reading on to our global further readings
+    furtherReadings.push(furtherReading);
     entryWithoutFR = [];
+
+    // Return further readings for future handling
   });
+  return furtherReadings;
 }
 
-generateArrayOfEntries(inputFilePath)
-  .then((arrayOfEntries) => {
-    processArrayOfEntries(arrayOfEntries);
-  })
-  .catch((error) => {
-    console.error("Error reading file:", error);
-  });
+const arrayOfEntries = await generateArrayOfEntries(inputFilePath);
+const furtherReadings = processArrayOfEntries(arrayOfEntries);
+console.log("🚀 ~ furtherReadings:", furtherReadings);
