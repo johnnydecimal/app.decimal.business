@@ -1,11 +1,14 @@
 /**
- * 1. Export the Pages file as plain text.
- * 2. Here, replace all `---` and the other Pages block stuff.
- * 3. At the command line:
- *    node src/scripts/generateSbMarkdownFilesFromPagesExport.js \
- *         name_of_large_pages_output.md
- * 4. In each of the generated files, replace `## Emoji[\s\S]*` with "".
- * 5. `npm run generate-sb` to turn those files in to TypeScript.
+ * - Export the Pages file as Markdown.
+ * - Open it here and save it so the linter puts spaces between empty headers.
+ * - _In-file_, replace all `---` and the other Pages block stuff.
+ * - Tidy up the stuff at the front.
+ * - Replace `## Emoji[\n\s\S]*?# ` with `# `.
+ * - Fold the doc and make sure it all looks good.
+ * - At the command line:
+ *   node src/scripts/generateSbMarkdownFilesFromPagesExport.js \
+ *        name_of_large_pages_output.md
+ * - `npm run generate-sb` to turn those files in to TypeScript.
  */
 
 // Import the 'fs' module to interact with the file system

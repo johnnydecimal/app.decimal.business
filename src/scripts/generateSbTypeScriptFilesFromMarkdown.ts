@@ -149,12 +149,10 @@ async function generateTsFiles() {
       }
 
       const extKeys: (keyof SmallBusinessEntry)[] = [
-        "opsManual",
         "examples",
         "overview",
         "exceptions",
         "alsoSee",
-        "rationale",
         "links",
         "emoji",
       ];

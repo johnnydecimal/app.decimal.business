@@ -29,7 +29,6 @@ const categoryExamples = sb?.examples && (await parseMd(sb.examples));
 const categoryOverview = sb?.overview && (await parseMd(sb.overview));
 const categoryExceptions = sb?.exceptions && (await parseMd(sb.exceptions));
 const categoryAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
-const categoryRationale = sb?.rationale && (await parseMd(sb.rationale));
 
 const parentADigit = categoryEntry.number.charAt(0);
 const parentANumber = `${parentADigit}0-${parentADigit}9`;
@@ -120,17 +119,6 @@ const parentSTitle = parentSEntry.title;
       <div class="layout-grid-left-right">
         <h3 class="layout-left-item">Also see</h3>
         <div class="layout-right-item" set:html={categoryAlsoSee} />
-      </div>
-    </Slice>
-  ) : null
-}
-
-{
-  categoryRationale ? (
-    <Slice id="CategoryRationale" className="descriptive-text">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">Rationale</h3>
-        <div class="layout-right-item" set:html={categoryRationale} />
       </div>
     </Slice>
   ) : null

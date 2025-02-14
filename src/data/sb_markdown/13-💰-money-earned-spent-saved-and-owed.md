@@ -24,12 +24,5 @@ This category is for managing _your_ finances – if your product or service is 
 
 ## Also see
 
+
 ## Links
-
-Money bag
-
-NOTES:
-Supplier examples for the zero
-Money and legal related: accountant or tax agent
-Bank manager, business adviser, financial counsellor, lawyer or solicitor (this might go in the first planning ID?)
-Where do gift cards & vouchers go again? Is that a liability?

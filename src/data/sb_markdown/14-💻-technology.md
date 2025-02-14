@@ -22,9 +22,5 @@ This category is not for managing technology related to workplace security or ac
 
 ## Also see
 
+
 ## Links
-
-Laptop
-
-NOTES:
-Supplier examples for the zero: IT support

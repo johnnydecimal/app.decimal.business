@@ -14,6 +14,5 @@ This category is for managing _your_ premises, operations, and vehicles – if y
 
 ## Also see
 
-## Links
 
-World map
+## Links

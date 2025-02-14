@@ -14,6 +14,5 @@ This category is for managing _your_ entity and staff – if your product or ser
 
 ## Also see
 
-## Links
 
-Person raising one hand
+## Links
