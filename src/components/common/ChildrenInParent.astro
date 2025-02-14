@@ -36,7 +36,6 @@ if (number.match("J82")) {
 } else {
   throw new Error(`ChildrenInParent: Unknown parent type for ${number}`);
 }
-console.log("🚀 ~ parentType:", parentType);
 
 const subEntries = getChildren(sb, number) as (
   | AreaEntry

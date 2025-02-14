@@ -811,7 +811,6 @@ export function getChildren(
     );
   } else if (parentNumber.match(/\d0-\d9/)) {
     // Area provided. Get categories and further readings that match.
-    console.log("Area number:", parentNumber);
     // This is an area. Find all entries whose number starts with the first
     // two digits of the area number.
     return Object.values(data).filter(
@@ -823,7 +822,6 @@ export function getChildren(
     );
   } else if (parentNumber.match(/^\d\d$/)) {
     // Category provided. Get IDs and further readings that match.
-    console.log("Category number:", parentNumber);
     return Object.values(data).filter(
       (entry) =>
         (entry.type === "id" || entry.type === "furtherReading") &&
