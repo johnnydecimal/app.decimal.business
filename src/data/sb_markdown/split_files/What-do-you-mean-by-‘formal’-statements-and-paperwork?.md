@@ -1,4 +1,0 @@
-# What do you mean by ‘formal’ statements and paperwork?
-
-Static documents supplied by a platform or bank (e.g. PDFs). As opposed to raw data that you might download into a spreadsheet and manipulate. Do that kind of work in [[13.41]].
-

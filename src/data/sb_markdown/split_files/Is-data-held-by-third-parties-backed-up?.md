@@ -1,6 +1,0 @@
-# Is data held by third parties backed up?
-
-Don’t trust that important data is backed up by the third party that stores it.
-
-Maybe important customer data is in your email account or an online database. Or all your financial data is in accounting software. Don't assume that those services can/will recover your data if it's lost. There are ways to export and back this up yourself. We’ll discuss this further in [[14.23]].
-

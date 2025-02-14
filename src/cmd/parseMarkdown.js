@@ -109,6 +109,83 @@ function processArrayOfEntries(arrayOfEntries) {
   return furtherReadings;
 }
 
+/**
+ * @param {string[][]} furtherReadings
+ */
+function processFurtherReadings(furtherReadings) {
+  furtherReadings.forEach((frBlock) => {
+    // frBlock is a whole block from the original text. It starts with the
+    // # ID Title of the item it relates to, then follows with one or more
+    // # Further reading... sections
+
+    // Get its parent entry details
+    const entryNumber = frBlock[0].split(" ")[1];
+
+    // We're done with it now, get rid of it
+    frBlock.shift();
+
+    // Start processing the remaining lines
+    let frId = 1;
+    let inFR = false;
+    let thisFR = [];
+    let thisFRFileTitle = "";
+    // For every line
+    frBlock.forEach((line) => {
+      if (line.startsWith("# ")) {
+        if (!inFR) {
+          // We've found the first header
+          // Write it
+          thisFR.push(line);
+          thisFRFileTitle = line
+            .split(" ")
+            .slice(1)
+            .join("-")
+            .replaceAll("?", "")
+            .replaceAll(",", "")
+            .replaceAll("‘", "")
+            .replaceAll("’", "")
+            .toLowerCase();
+          inFR = true;
+        } else {
+          // We've found a subsequent header
+          // Write out our current entry
+          writeLinesToFile(
+            `src/data/sb_markdown/parsed/${entryNumber}+FR${frId}-${thisFRFileTitle}.md`,
+            thisFR
+          );
+          // Increment the FR
+          frId++;
+          thisFR = [];
+          thisFR.push(line);
+          thisFRFileTitle = line
+            .split(" ")
+            .slice(1)
+            .join("-")
+            .replaceAll("?", "")
+            .replaceAll(",", "")
+            .replaceAll("‘", "")
+            .replaceAll("’", "")
+            .toLowerCase();
+        }
+      } else {
+        // This line isn't a header
+        // We must be in an FR
+        // Write it
+        thisFR.push(line);
+      }
+    });
+    // And close out the final in-buffer FR
+    if (thisFR.length !== 1) {
+      writeLinesToFile(
+        `src/data/sb_markdown/parsed/${entryNumber}+FR${frId}-${thisFRFileTitle}.md`,
+        thisFR
+      );
+    }
+  });
+}
+
 const arrayOfEntries = await generateArrayOfEntries(inputFilePath);
 const furtherReadings = processArrayOfEntries(arrayOfEntries);
-console.log("🚀 ~ furtherReadings:", furtherReadings);
+// console.log("🚀 ~ furtherReadings:", furtherReadings);
+
+processFurtherReadings(furtherReadings);

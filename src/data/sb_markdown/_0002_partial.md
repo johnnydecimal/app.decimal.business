@@ -26,6 +26,12 @@ This is some more lorem ipsum.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
+# Three further reading headers
+
+This is some more lorem ipsum.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
 ## Ops manual
 
 ## Links
