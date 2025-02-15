@@ -1,0 +1,170 @@
+import type { FlattenedData } from "@data/smallBusinessFlat";
+
+import cat_14 from "@data/sb_ts/14-technology";
+import id_14_10 from "@data/sb_ts/14.10-computers-and-other-devices";
+import id_14_11 from "@data/sb_ts/14.11-computers-and-servers";
+import id_14_12 from "@data/sb_ts/14.12-mobile-devices";
+import id_14_13 from "@data/sb_ts/14.13-network-devices";
+import id_14_14 from "@data/sb_ts/14.14-accessories";
+import id_14_20 from "@data/sb_ts/14.20-storage-data-and-backups";
+import id_14_21 from "@data/sb_ts/14.21-storage";
+import id_14_22 from "@data/sb_ts/14.22-data";
+import id_14_23 from "@data/sb_ts/14.23-backups-and-recovery";
+import id_14_30 from "@data/sb_ts/14.30-software-services-and-support";
+import id_14_31 from "@data/sb_ts/14.31-internal-software-and-services";
+import id_14_32 from "@data/sb_ts/14.32-external-software-and-services";
+import id_14_33 from "@data/sb_ts/14.33-support-contracts";
+import id_14_40 from "@data/sb_ts/14.40-accounts-cybersecurity-and-policies";
+import id_14_41 from "@data/sb_ts/14.41-accounts-passwords-and-access";
+import id_14_42 from "@data/sb_ts/14.42-technical-cybersecurity";
+import id_14_43 from "@data/sb_ts/14.43-behavioural-cybersecurity";
+import id_14_44 from "@data/sb_ts/14.44-cyber-insurance-incidents-and-claims";
+import id_14_50 from "@data/sb_ts/14.50-our-online-presence";
+import id_14_51 from "@data/sb_ts/14.51-domain-and-dns-management";
+import id_14_52 from "@data/sb_ts/14.52-websites-blogs-and-communities";
+import id_14_53 from "@data/sb_ts/14.53-social-media";
+import id_14_54 from "@data/sb_ts/14.54-electronic-mailing-lists-and-updates";
+import id_14_90 from "@data/sb_ts/14.90-technology-library";
+import id_14_91 from "@data/sb_ts/14.91-curated-lists-of-online-resources";
+
+import fr_14_FR_1 from "@data/sb_ts/14+FR1-isnt-everything-technology-these-days";
+import fr_14_11_FR1 from "@data/sb_ts/14.11+FR1-configuration-notes";
+import fr_14_11_FR2 from "@data/sb_ts/14.11+FR2-computer-lease-contracts-and-agreements";
+import fr_14_12_FR1 from "@data/sb_ts/14.12+FR1-configuration-notes";
+import fr_14_12_FR2 from "@data/sb_ts/14.12+FR2-are-mobile-devices-fixed-assets";
+import fr_14_13_FR1 from "@data/sb_ts/14.13+FR1-configuration-notes";
+import fr_14_13_FR2 from "@data/sb_ts/14.13+FR2-are-network-devices-fixed-assets";
+import fr_14_14_FR1 from "@data/sb_ts/14.14+FR1-configuration-notes";
+import fr_14_14_FR2 from "@data/sb_ts/14.14+FR2-are-accessories-fixed-assets";
+import fr_14_14_FR3 from "@data/sb_ts/14.14+FR3-when-is-an-accessory-technology-versus-operations";
+import fr_14_14_FR4 from "@data/sb_ts/14.14+FR4-i-cant-decide-where-my-accessory-goes";
+import fr_14_21_FR1 from "@data/sb_ts/14.21+FR1-configuration-notes";
+import fr_14_21_FR2 from "@data/sb_ts/14.21+FR2-are-storage-devices-fixed-assets";
+import fr_14_21_FR3 from "@data/sb_ts/14.21+FR3-tracking-storage-devices";
+import fr_14_22_FR1 from "@data/sb_ts/14.22+FR1-what-do-you-mean-by-data";
+import fr_14_22_FR2 from "@data/sb_ts/14.22+FR2-recording-information-about-your-data";
+import fr_14_22_FR3 from "@data/sb_ts/14.22+FR3-is-data-held-by-third-parties-backed-up";
+import fr_14_22_FR4 from "@data/sb_ts/14.22+FR4-do-you-need-a-data-retention-policy";
+import fr_14_23_FR1 from "@data/sb_ts/14.23+FR1-backing-up-versus-saving-a-copy";
+import fr_14_23_FR2 from "@data/sb_ts/14.23+FR2-backing-up-data-on-third-party-services";
+import fr_14_23_FR3 from "@data/sb_ts/14.23+FR3-testing-our-backups-on-march-31st-each-year";
+import fr_14_30_FR1 from "@data/sb_ts/14.30+FR1-putting-our-it-pants-on";
+import fr_14_31_FR1 from "@data/sb_ts/14.31+FR1-the-difference-between-an-administrator-and-a-user-of-an-internal-service";
+import fr_14_31_FR2 from "@data/sb_ts/14.31+FR2-the-difference-between-providing-and-connecting-to-an-internal-service";
+import fr_14_31_FR3 from "@data/sb_ts/14.31+FR3-using-sub-ids-to-create-separate-jdex-notes";
+import fr_14_32_FR1 from "@data/sb_ts/14.32+FR1-tell-me-more-about-external-software-and-services";
+import fr_14_32_FR2 from "@data/sb_ts/14.32+FR2-a-sample-list-of-external-software-and-services";
+import fr_14_32_FR3 from "@data/sb_ts/14.32+FR3-storing-details-about-external-software-and-services";
+import fr_14_41_FR1 from "@data/sb_ts/14.41+FR1-why-create-a-master-list-of-accounts-here";
+import fr_14_41_FR2 from "@data/sb_ts/14.41+FR2-the-case-for-a-password-manager";
+import fr_14_41_FR3 from "@data/sb_ts/14.41+FR3-using-ids-in-your-password-manager";
+import fr_14_41_FR4 from "@data/sb_ts/14.41+FR4-enabling-and-disabling-account-access";
+import fr_14_41_FR5 from "@data/sb_ts/14.41+FR5-instructions-on-how-you-access-government-services";
+import fr_14_41_FR6 from "@data/sb_ts/14.41+FR6-an-example-how-johnny-managed-microsoft-logins";
+import fr_14_42_FR1 from "@data/sb_ts/14.42+FR1-where-do-i-even-start-with-cybersecurity";
+import fr_14_43_FR1 from "@data/sb_ts/14.43+FR1-what-kind-of-things-are-in-a-cybersecurity-policy";
+import fr_14_43_FR2 from "@data/sb_ts/14.43+FR2-how-do-you-and-your-staff-behave-online";
+import fr_14_43_FR3 from "@data/sb_ts/14.43+FR3-what-makes-a-good-password";
+import fr_14_44_FR1 from "@data/sb_ts/14.44+FR1-why-is-cyber-insurance-here";
+import fr_14_44_FR2 from "@data/sb_ts/14.44+FR2-what-other-related-insurances-might-go-here";
+import fr_14_51_FR1 from "@data/sb_ts/14.51+FR1-your-domain-is-very-important";
+import fr_14_51_FR2 from "@data/sb_ts/14.51+FR2-a-domain-is-not-a-website";
+import fr_14_52_FR1 from "@data/sb_ts/14.52+FR1-what-is-website-hosting";
+import fr_14_52_FR2 from "@data/sb_ts/14.52+FR2-linking-to-the-master-creative-files-for-websites";
+import fr_14_53_FR1 from "@data/sb_ts/14.53+FR1-what-do-you-mean-by-social-media";
+import fr_14_53_FR2 from "@data/sb_ts/14.53+FR2-storing-details-for-multiple-social-media-accounts";
+import fr_14_53_FR3 from "@data/sb_ts/14.53+FR3-linking-to-the-master-creative-files-for-social-media";
+import fr_14_54_FR1 from "@data/sb_ts/14.54+FR1-choosing-a-platform";
+import fr_14_54_FR2 from "@data/sb_ts/14.54+FR2-storing-mailing-lists";
+import fr_14_54_FR3 from "@data/sb_ts/14.54+FR3-what-if-i-dont-need-to-put-anything-here";
+import fr_14_54_FR4 from "@data/sb_ts/14.54+FR4-linking-to-the-master-creative-files-for-updates";
+import fr_14_90_FR1 from "@data/sb_ts/14.90+FR1-why-did-you-include-a-library-in-each-category";
+import fr_14_90_FR2 from "@data/sb_ts/14.90+FR2-why-are-there-no-ids-here";
+import fr_14_90_FR3 from "@data/sb_ts/14.90+FR3-leave-yourself-jdex-notes";
+import fr_14_91_FR1 from "@data/sb_ts/14.91+FR1-why-did-you-put-this-id-here";
+import fr_14_91_FR2 from "@data/sb_ts/14.91+FR2-14.91-curated-lists-of-online-resources";
+
+export const category_14: FlattenedData = {
+  "14": { ...cat_14 },
+  "14.FR+1": { ...fr_14_FR_1 },
+  "14.10": { ...id_14_10 },
+  "14.11": { ...id_14_11 },
+  "14.11+FR1": { ...fr_14_11_FR1 },
+  "14.11+FR2": { ...fr_14_11_FR2 },
+  "14.12": { ...id_14_12 },
+  "14.12+FR1": { ...fr_14_12_FR1 },
+  "14.12+FR2": { ...fr_14_12_FR2 },
+  "14.13": { ...id_14_13 },
+  "14.13+FR1": { ...fr_14_13_FR1 },
+  "14.13+FR2": { ...fr_14_13_FR2 },
+  "14.14": { ...id_14_14 },
+  "14.14+FR1": { ...fr_14_14_FR1 },
+  "14.14+FR2": { ...fr_14_14_FR2 },
+  "14.14+FR3": { ...fr_14_14_FR3 },
+  "14.14+FR4": { ...fr_14_14_FR4 },
+  "14.20": { ...id_14_20 },
+  "14.21": { ...id_14_21 },
+  "14.21+FR1": { ...fr_14_21_FR1 },
+  "14.21+FR2": { ...fr_14_21_FR2 },
+  "14.21+FR3": { ...fr_14_21_FR3 },
+  "14.22": { ...id_14_22 },
+  "14.22+FR1": { ...fr_14_22_FR1 },
+  "14.22+FR2": { ...fr_14_22_FR2 },
+  "14.22+FR3": { ...fr_14_22_FR3 },
+  "14.22+FR4": { ...fr_14_22_FR4 },
+  "14.23": { ...id_14_23 },
+  "14.23+FR1": { ...fr_14_23_FR1 },
+  "14.23+FR2": { ...fr_14_23_FR2 },
+  "14.23+FR3": { ...fr_14_23_FR3 },
+  "14.30": { ...id_14_30 },
+  "14.30+FR1": { ...fr_14_30_FR1 },
+  "14.31": { ...id_14_31 },
+  "14.31+FR1": { ...fr_14_31_FR1 },
+  "14.31+FR2": { ...fr_14_31_FR2 },
+  "14.31+FR3": { ...fr_14_31_FR3 },
+  "14.32": { ...id_14_32 },
+  "14.32+FR1": { ...fr_14_32_FR1 },
+  "14.32+FR2": { ...fr_14_32_FR2 },
+  "14.32+FR3": { ...fr_14_32_FR3 },
+  "14.33": { ...id_14_33 },
+  "14.40": { ...id_14_40 },
+  "14.41": { ...id_14_41 },
+  "14.41+FR1": { ...fr_14_41_FR1 },
+  "14.41+FR2": { ...fr_14_41_FR2 },
+  "14.41+FR3": { ...fr_14_41_FR3 },
+  "14.41+FR4": { ...fr_14_41_FR4 },
+  "14.41+FR5": { ...fr_14_41_FR5 },
+  "14.41+FR6": { ...fr_14_41_FR6 },
+  "14.42": { ...id_14_42 },
+  "14.42+FR1": { ...fr_14_42_FR1 },
+  "14.43": { ...id_14_43 },
+  "14.43+FR1": { ...fr_14_43_FR1 },
+  "14.43+FR2": { ...fr_14_43_FR2 },
+  "14.43+FR3": { ...fr_14_43_FR3 },
+  "14.44": { ...id_14_44 },
+  "14.44+FR1": { ...fr_14_44_FR1 },
+  "14.44+FR2": { ...fr_14_44_FR2 },
+  "14.50": { ...id_14_50 },
+  "14.51": { ...id_14_51 },
+  "14.51+FR1": { ...fr_14_51_FR1 },
+  "14.51+FR2": { ...fr_14_51_FR2 },
+  "14.52": { ...id_14_52 },
+  "14.52+FR1": { ...fr_14_52_FR1 },
+  "14.52+FR2": { ...fr_14_52_FR2 },
+  "14.53": { ...id_14_53 },
+  "14.53+FR1": { ...fr_14_53_FR1 },
+  "14.53+FR2": { ...fr_14_53_FR2 },
+  "14.53+FR3": { ...fr_14_53_FR3 },
+  "14.54": { ...id_14_54 },
+  "14.54+FR1": { ...fr_14_54_FR1 },
+  "14.54+FR2": { ...fr_14_54_FR2 },
+  "14.54+FR3": { ...fr_14_54_FR3 },
+  "14.54+FR4": { ...fr_14_54_FR4 },
+  "14.90": { ...id_14_90 },
+  "14.91": { ...id_14_91 },
+  "14.90+FR1": { ...fr_14_90_FR1 },
+  "14.90+FR2": { ...fr_14_90_FR2 },
+  "14.90+FR3": { ...fr_14_90_FR3 },
+  "14.91+FR1": { ...fr_14_91_FR1 },
+  "14.91+FR2": { ...fr_14_91_FR2 },
+};

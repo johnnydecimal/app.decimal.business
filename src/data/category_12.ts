@@ -1,0 +1,124 @@
+import type { FlattenedData } from "@data/smallBusinessFlat";
+
+import cat_12 from "@data/sb_ts/12-where-i-trade-and-how-i-get-around";
+import id_12_10 from "@data/sb_ts/12.10-fixed-locations";
+import id_12_11 from "@data/sb_ts/12.11-official-documents";
+import id_12_12 from "@data/sb_ts/12.12-office-insurance-incidents-and-claims";
+import id_12_13 from "@data/sb_ts/12.13-rates-taxes-and-fees";
+import id_12_14 from "@data/sb_ts/12.14-fit-outs-renovations-and-improvements";
+import id_12_15 from "@data/sb_ts/12.15-repairs-and-maintenance";
+import id_12_16 from "@data/sb_ts/12.16-moving";
+import id_12_20 from "@data/sb_ts/12.20-back-office-equipment-and-operations";
+import id_12_21 from "@data/sb_ts/12.21-keep-the-lights-on";
+import id_12_22 from "@data/sb_ts/12.22-keep-us-secure";
+import id_12_23 from "@data/sb_ts/12.23-keep-it-nice-for-us";
+import id_12_24 from "@data/sb_ts/12.24-keep-the-back-office-well-equipped";
+import id_12_25 from "@data/sb_ts/12.25-keep-us-fed-and-watered";
+import id_12_26 from "@data/sb_ts/12.26-keep-us-posted";
+import id_12_30 from "@data/sb_ts/12.30-front-office-equipment-and-operations";
+import id_12_31 from "@data/sb_ts/12.31-keep-the-lights-on";
+import id_12_32 from "@data/sb_ts/12.32-keep-our-customers-secure";
+import id_12_33 from "@data/sb_ts/12.33-keep-it-nice-for-our-customers";
+import id_12_34 from "@data/sb_ts/12.34-keep-the-front-office-well-equipped";
+import id_12_35 from "@data/sb_ts/12.35-keep-our-customers-fed-and-watered";
+import id_12_40 from "@data/sb_ts/12.40-getting-around";
+import id_12_41 from "@data/sb_ts/12.41-official-documents-formal";
+import id_12_42 from "@data/sb_ts/12.42-vehicle-insurance-incidents-and-claims-formal";
+import id_12_43 from "@data/sb_ts/12.43-permits-tolls-fees-and-other-running-expenses-formal";
+import id_12_44 from "@data/sb_ts/12.44-fit-outs-renovations-and-improvements-formal";
+import id_12_45 from "@data/sb_ts/12.45-repairs-and-maintenance-formal";
+import id_12_46 from "@data/sb_ts/12.46-public-or-shared-transport-and-other-informal-vehicles";
+import id_12_50 from "@data/sb_ts/12.50-the-community";
+import id_12_51 from "@data/sb_ts/12.51-your-business-and-local-neighbourhood";
+import id_12_52 from "@data/sb_ts/12.52-your-business-and-city-state-and-country";
+import id_12_53 from "@data/sb_ts/12.53-your-business-and-planet";
+import id_12_90 from "@data/sb_ts/12.90-where-i-trade-and-how-i-get-around-library";
+
+import fr_12_11_FR1 from "@data/sb_ts/12.11+FR1-why-did-you-separate-fixed-and-mobile-business-premises";
+import fr_12_12_FR1 from "@data/sb_ts/12.12+FR1-why-is-office-insurance-here";
+import fr_12_14_FR1 from "@data/sb_ts/12.14+FR1-why-did-you-separate-equipment-from-the-overall-building-project";
+import fr_12_20_FR1 from "@data/sb_ts/12.20+FR1-why-did-you-separate-back-office-and-front-office";
+import fr_12_20_FR2 from "@data/sb_ts/12.20+FR2-a-restaurant-in-chicago";
+import fr_12_24_FR1 from "@data/sb_ts/12.24+FR1-why-is-third-party-controlled-it-equipment-in-operations";
+import fr_12_26_FR1 from "@data/sb_ts/12.26+FR1-why-is-product-related-shipping-not-managed-here";
+import fr_12_30_FR1 from "@data/sb_ts/12.30+FR1-examples-of-product-versus-front-office-operations";
+import fr_12_30_FR2 from "@data/sb_ts/12.30+FR2-why-did-you-separate-back-office-and-front-office";
+import fr_12_30_FR3 from "@data/sb_ts/12.30+FR3-a-restaurant-in-chicago";
+import fr_12_30_FR4 from "@data/sb_ts/12.30+FR4-i-dont-have-a-front-office";
+import fr_12_31_FR1 from "@data/sb_ts/12.31+FR1-examples-of-front-office-versus-back-office-utilities";
+import fr_12_34_FR1 from "@data/sb_ts/12.34+FR1-what-do-you-mean-by-front-office-equipment";
+import fr_12_34_FR2 from "@data/sb_ts/12.34+FR2-why-is-third-party-controlled-it-equipment-in-operations";
+import fr_12_35_FR1 from "@data/sb_ts/12.35+FR1-why-is-there-a-separate-front-office-id-for-this";
+import fr_12_40_FR1 from "@data/sb_ts/12.40+FR1-why-did-we-classify-vehicles-as-formal-and-informal";
+import fr_12_41_FR1 from "@data/sb_ts/12.41+FR1-what-do-you-mean-by-formal-vehicle";
+import fr_12_41_FR2 from "@data/sb_ts/12.41+FR2-what-are-some-other-formal-vehicles";
+import fr_12_42_FR1 from "@data/sb_ts/12.42+FR1-what-if-i-store-equipment-in-a-vehicle-and-a-fixed-location";
+import fr_12_42_FR2 from "@data/sb_ts/12.42+FR2-why-is-vehicle-insurance-here";
+import fr_12_44_FR1 from "@data/sb_ts/12.44+FR1-why-did-you-separate-equipment-from-the-overall-building-project";
+import fr_12_45_FR1 from "@data/sb_ts/12.45+FR1-why-did-you-include-less-frequent-running-expenses-here";
+import fr_12_50_FR1 from "@data/sb_ts/12.50+FR1-why-did-you-include-this-section";
+import fr_12_90_FR1 from "@data/sb_ts/12.90+FR1-why-did-you-include-a-library-in-each-category";
+import fr_12_90_FR2 from "@data/sb_ts/12.90+FR2-why-are-there-no-ids-here";
+import fr_12_90_FR3 from "@data/sb_ts/12.90+FR3-leave-yourself-jdex-notes";
+
+export const category_12: FlattenedData = {
+  "12": { ...cat_12 },
+  "12.10": { ...id_12_10 },
+  "12.11": { ...id_12_11 },
+  "12.11+FR1": { ...fr_12_11_FR1 },
+  "12.12": { ...id_12_12 },
+  "12.12+FR1": { ...fr_12_12_FR1 },
+  "12.13": { ...id_12_13 },
+  "12.14": { ...id_12_14 },
+  "12.14+FR1": { ...fr_12_14_FR1 },
+  "12.15": { ...id_12_15 },
+  "12.16": { ...id_12_16 },
+  "12.20": { ...id_12_20 },
+  "12.20+FR1": { ...fr_12_20_FR1 },
+  "12.20+FR2": { ...fr_12_20_FR2 },
+  "12.21": { ...id_12_21 },
+  "12.22": { ...id_12_22 },
+  "12.23": { ...id_12_23 },
+  "12.24": { ...id_12_24 },
+  "12.24+FR1": { ...fr_12_24_FR1 },
+  "12.25": { ...id_12_25 },
+  "12.26": { ...id_12_26 },
+  "12.26+FR1": { ...fr_12_26_FR1 },
+  "12.30": { ...id_12_30 },
+  "12.30+FR1": { ...fr_12_30_FR1 },
+  "12.30+FR2": { ...fr_12_30_FR2 },
+  "12.30+FR3": { ...fr_12_30_FR3 },
+  "12.30+FR4": { ...fr_12_30_FR4 },
+  "12.31": { ...id_12_31 },
+  "12.31+FR1": { ...fr_12_31_FR1 },
+  "12.32": { ...id_12_32 },
+  "12.33": { ...id_12_33 },
+  "12.34": { ...id_12_34 },
+  "12.34+FR1": { ...fr_12_34_FR1 },
+  "12.34+FR2": { ...fr_12_34_FR2 },
+  "12.35": { ...id_12_35 },
+  "12.35+FR1": { ...fr_12_35_FR1 },
+  "12.40": { ...id_12_40 },
+  "12.40+FR1": { ...fr_12_40_FR1 },
+  "12.41": { ...id_12_41 },
+  "12.41+FR1": { ...fr_12_41_FR1 },
+  "12.41+FR2": { ...fr_12_41_FR2 },
+  "12.42": { ...id_12_42 },
+  "12.42+FR1": { ...fr_12_42_FR1 },
+  "12.42+FR2": { ...fr_12_42_FR2 },
+  "12.43": { ...id_12_43 },
+  "12.44": { ...id_12_44 },
+  "12.44+FR1": { ...fr_12_44_FR1 },
+  "12.45": { ...id_12_45 },
+  "12.45+FR1": { ...fr_12_45_FR1 },
+  "12.46": { ...id_12_46 },
+  "12.50": { ...id_12_50 },
+  "12.50+FR1": { ...fr_12_50_FR1 },
+  "12.51": { ...id_12_51 },
+  "12.52": { ...id_12_52 },
+  "12.53": { ...id_12_53 },
+  "12.90": { ...id_12_90 },
+  "12.90+FR1": { ...fr_12_90_FR1 },
+  "12.90+FR2": { ...fr_12_90_FR2 },
+  "12.90+FR3": { ...fr_12_90_FR3 },
+};

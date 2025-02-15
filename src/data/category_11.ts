@@ -1,0 +1,95 @@
+import type { FlattenedData } from "@data/smallBusinessFlat";
+
+import cat_11 from "@data/sb_ts/11-the-business-and-its-people";
+import id_11_10 from "@data/sb_ts/11.10-official-documents";
+import id_11_11 from "@data/sb_ts/11.11-structure-and-registrations";
+import id_11_12 from "@data/sb_ts/11.12-licences-permits-and-accreditations";
+import id_11_13 from "@data/sb_ts/11.13-compliance";
+import id_11_14 from "@data/sb_ts/11.14-other-legal-matters";
+import id_11_15 from "@data/sb_ts/11.15-selling-it-or-closing-it";
+import id_11_20 from "@data/sb_ts/11.20-planning-contingencies-and-insurance";
+import id_11_21 from "@data/sb_ts/11.21-business-plan";
+import id_11_22 from "@data/sb_ts/11.22-business-insurance-incidents-and-claims";
+import id_11_23 from "@data/sb_ts/11.23-risk-and-emergency-management-plans";
+import id_11_24 from "@data/sb_ts/11.24-collected-wisdom-and-analysis";
+import id_11_30 from "@data/sb_ts/11.30-behaviours-ethics-and-culture";
+import id_11_31 from "@data/sb_ts/11.31-internal-policies";
+import id_11_32 from "@data/sb_ts/11.32-external-policies";
+import id_11_33 from "@data/sb_ts/11.33-dispute-resolution";
+import id_11_40 from "@data/sb_ts/11.40-our-people";
+import id_11_41 from "@data/sb_ts/11.41-hiring";
+import id_11_42 from "@data/sb_ts/11.42-staff-record-keeping";
+import id_11_43 from "@data/sb_ts/11.43-formal-reviews";
+import id_11_44 from "@data/sb_ts/11.44-farewells";
+import id_11_45 from "@data/sb_ts/11.45-animals-as-staff";
+import id_11_50 from "@data/sb_ts/11.50-training-and-professional-development";
+import id_11_51 from "@data/sb_ts/11.51-mandatory-training";
+import id_11_52 from "@data/sb_ts/11.52-optional-training";
+import id_11_53 from "@data/sb_ts/11.53-other-learning-and-self-improvement";
+import id_11_60 from "@data/sb_ts/11.60-other-people-and-organisations";
+import id_11_61 from "@data/sb_ts/11.61-professional-bodies";
+import id_11_62 from "@data/sb_ts/11.62-seeking-advice-and-support";
+import id_11_63 from "@data/sb_ts/11.63-networking-and-new-business";
+import id_11_90 from "@data/sb_ts/11.90-the-business-and-its-people-library";
+import fr_11_11_FR1 from "@data/sb_ts/11.11+FR1-why-is-my-product-ip-not-here";
+import fr_11_12_FR1 from "@data/sb_ts/11.12+FR1-keeping-copies-of-static-documents";
+import fr_11_12_FR2 from "@data/sb_ts/11.12+FR2-why-did-we-create-this-id";
+import fr_11_22_FR1 from "@data/sb_ts/11.22+FR1-theres-a-lot-of-insurance-out-there";
+import fr_11_22_FR2 from "@data/sb_ts/11.22+FR2-why-is-business-insurance-here";
+import fr_11_23_FR1 from "@data/sb_ts/11.23+FR1-do-you-need-an-emergency-digital-recovery-kit";
+import fr_11_42_FR1 from "@data/sb_ts/11.42+FR1-an-example-template-for-staff-records";
+import fr_11_45_FR1 from "@data/sb_ts/11.45+FR1-why-classify-animals-as-staff";
+import fr_11_51_FR1 from "@data/sb_ts/11.51+FR1-why-did-you-call-this-mandatory-training";
+import fr_11_52_FR1 from "@data/sb_ts/11.52+FR1-why-did-you-call-this-optional-training";
+import fr_11_53_FR1 from "@data/sb_ts/11.53+FR1-sign-up-for-newsletters-and-updates";
+import fr_11_90_FR1 from "@data/sb_ts/11.90+FR1-why-did-you-include-a-library-in-each-category";
+import fr_11_90_FR2 from "@data/sb_ts/11.90+FR2-why-are-there-no-ids-here";
+import fr_11_90_FR3 from "@data/sb_ts/11.90+FR3-leave-yourself-jdex-notes";
+
+export const category_11: FlattenedData = {
+  "11": { ...cat_11 },
+  "11.10": { ...id_11_10 },
+  "11.11": { ...id_11_11 },
+  "11.11+FR1": { ...fr_11_11_FR1 },
+  "11.12": { ...id_11_12 },
+  "11.12+FR1": { ...fr_11_12_FR1 },
+  "11.12+FR2": { ...fr_11_12_FR2 },
+  "11.13": { ...id_11_13 },
+  "11.14": { ...id_11_14 },
+  "11.15": { ...id_11_15 },
+  "11.20": { ...id_11_20 },
+  "11.21": { ...id_11_21 },
+  "11.22": { ...id_11_22 },
+  "11.22+FR1": { ...fr_11_22_FR1 },
+  "11.22+FR2": { ...fr_11_22_FR2 },
+  "11.23": { ...id_11_23 },
+  "11.23+FR1": { ...fr_11_23_FR1 },
+  "11.24": { ...id_11_24 },
+  "11.30": { ...id_11_30 },
+  "11.31": { ...id_11_31 },
+  "11.32": { ...id_11_32 },
+  "11.33": { ...id_11_33 },
+  "11.40": { ...id_11_40 },
+  "11.41": { ...id_11_41 },
+  "11.42": { ...id_11_42 },
+  "11.42+FR1": { ...fr_11_42_FR1 },
+  "11.43": { ...id_11_43 },
+  "11.44": { ...id_11_44 },
+  "11.45": { ...id_11_45 },
+  "11.45+FR1": { ...fr_11_45_FR1 },
+  "11.50": { ...id_11_50 },
+  "11.51": { ...id_11_51 },
+  "11.51+FR1": { ...fr_11_51_FR1 },
+  "11.52": { ...id_11_52 },
+  "11.52+FR1": { ...fr_11_52_FR1 },
+  "11.53": { ...id_11_53 },
+  "11.53+FR1": { ...fr_11_53_FR1 },
+  "11.60": { ...id_11_60 },
+  "11.61": { ...id_11_61 },
+  "11.62": { ...id_11_62 },
+  "11.63": { ...id_11_63 },
+  "11.90": { ...id_11_90 },
+  "11.90+FR1": { ...fr_11_90_FR1 },
+  "11.90+FR2": { ...fr_11_90_FR2 },
+  "11.90+FR3": { ...fr_11_90_FR3 },
+};

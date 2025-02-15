@@ -1,0 +1,160 @@
+import type { FlattenedData } from "@data/smallBusinessFlat";
+
+import cat_13 from "@data/sb_ts/13-money-earned-spent-saved-and-owed";
+import id_13_10 from "@data/sb_ts/13.10-plan-protect-and-reflect";
+import id_13_11 from "@data/sb_ts/13.11-financial-planning";
+import id_13_12 from "@data/sb_ts/13.12-financial-insurance-incidents-and-claims";
+import id_13_13 from "@data/sb_ts/13.13-reports-and-reviews";
+import id_13_14 from "@data/sb_ts/13.14-financial-catch-all";
+import id_13_20 from "@data/sb_ts/13.20-income";
+import id_13_21 from "@data/sb_ts/13.21-inbox-and-processing-of-income";
+import id_13_22 from "@data/sb_ts/13.22-accounts-that-deliver-income";
+import id_13_23 from "@data/sb_ts/13.23-invoices-and-sales-for-your-work";
+import id_13_24 from "@data/sb_ts/13.24-passive-income";
+import id_13_25 from "@data/sb_ts/13.25-assistance-grants-and-gifts";
+import id_13_26 from "@data/sb_ts/13.26-sale-of-assets";
+import id_13_30 from "@data/sb_ts/13.30-expenses";
+import id_13_31 from "@data/sb_ts/13.31-inbox-and-processing-of-expenses";
+import id_13_32 from "@data/sb_ts/13.32-accounts-that-handle-expenses";
+import id_13_33 from "@data/sb_ts/13.33-receipts";
+import id_13_34 from "@data/sb_ts/13.34-payroll";
+import id_13_35 from "@data/sb_ts/13.35-subscriptions-memberships-and-other-recurring-expenses";
+import id_13_40 from "@data/sb_ts/13.40-assets";
+import id_13_41 from "@data/sb_ts/13.41-inbox-and-processing-of-assets";
+import id_13_42 from "@data/sb_ts/13.42-accounts-that-handle-cash";
+import id_13_43 from "@data/sb_ts/13.43-investments";
+import id_13_44 from "@data/sb_ts/13.44-fixed-assets";
+import id_13_45 from "@data/sb_ts/13.45-current-assets";
+import id_13_46 from "@data/sb_ts/13.46-intangible-assets";
+import id_13_50 from "@data/sb_ts/13.50-liabilities";
+import id_13_51 from "@data/sb_ts/13.51-inbox-and-processing-of-liabilities";
+import id_13_52 from "@data/sb_ts/13.52-cash-loan-accounts";
+import id_13_53 from "@data/sb_ts/13.53-non-cash-loan-accounts";
+import id_13_54 from "@data/sb_ts/13.54-bills";
+import id_13_55 from "@data/sb_ts/13.55-fines-and-penalties";
+import id_13_60 from "@data/sb_ts/13.60-reconciliation-and-returns";
+import id_13_61 from "@data/sb_ts/13.61-inbox-and-processing-of-government-taxes";
+import id_13_62 from "@data/sb_ts/13.62-accounts-that-handle-tax";
+import id_13_63 from "@data/sb_ts/13.63-dividends";
+import id_13_64 from "@data/sb_ts/13.64-equity";
+import id_13_90 from "@data/sb_ts/13.90-money-earned-spent-saved-and-owed-library";
+
+import fr_13_FR_1 from "@data/sb_ts/13+FR1-this-category-will-be-busier-for-some-than-others";
+import fr_13_FR_2 from "@data/sb_ts/13+FR2-copying-is-okay-sometimes";
+import fr_13_FR_3 from "@data/sb_ts/13+FR3-use-of-the-word-account-in-this-category";
+import fr_13_11_FR1 from "@data/sb_ts/13.11+FR1-what-is-the-goal-of-this-id";
+import fr_13_11_FR2 from "@data/sb_ts/13.11+FR2-questions-you-might-ask-yourself-here";
+import fr_13_11_FR3 from "@data/sb_ts/13.11+FR3-even-a-little-planning-helps";
+import fr_13_12_FR1 from "@data/sb_ts/13.12+FR1-why-is-financial-insurance-here";
+import fr_13_14_FR1 from "@data/sb_ts/13.14+FR1-why-did-you-use-credit-rating-as-an-example";
+import fr_13_21_FR1 from "@data/sb_ts/13.21+FR1-why-did-you-create-inboxes";
+import fr_13_21_FR2 from "@data/sb_ts/13.21+FR2-what-if-i-use-software";
+import fr_13_22_FR1 from "@data/sb_ts/13.22+FR1-why-did-you-leave-space-for-income-only-accounts";
+import fr_13_22_FR2 from "@data/sb_ts/13.22+FR2-an-example-of-an-income-only-account";
+import fr_13_22_FR3 from "@data/sb_ts/13.22+FR3-what-do-you-mean-by-formal-statements-and-paperwork";
+import fr_13_23_FR1 from "@data/sb_ts/13.23+FR1-where-do-i-create-my-invoices";
+import fr_13_24_FR1 from "@data/sb_ts/13.24+FR1-why-did-you-separate-ownership-records-from-earnings";
+import fr_13_31_FR1 from "@data/sb_ts/13.31+FR1-why-did-you-create-inboxes";
+import fr_13_32_FR1 from "@data/sb_ts/13.32+FR1-why-did-you-leave-space-for-expense-only-accounts";
+import fr_13_32_FR2 from "@data/sb_ts/13.32+FR2-what-do-you-mean-by-formal-statements-and-paperwork";
+import fr_13_33_FR1 from "@data/sb_ts/13.33+FR1-is-the-receipt-important";
+import fr_13_33_FR2 from "@data/sb_ts/13.33+FR2-classifying-automated-bill-payments-as-expenses";
+import fr_13_34_FR1 from "@data/sb_ts/13.34+FR1-what-kinds-of-things-might-go-here";
+import fr_13_35_FR1 from "@data/sb_ts/13.35+FR1-why-did-you-create-this-id";
+import fr_13_41_FR1 from "@data/sb_ts/13.41+FR1-why-did-you-create-inboxes";
+import fr_13_42_FR1 from "@data/sb_ts/13.42+FR1-what-do-you-mean-by-formal-statements-and-paperwork";
+import fr_13_42_FR2 from "@data/sb_ts/13.42+FR2-do-i-need-a-business-bank-account";
+import fr_13_43_FR1 from "@data/sb_ts/13.43+FR1-property-as-an-investment";
+import fr_13_44_FR1 from "@data/sb_ts/13.44+FR1-saving-files-for-fixed-assets";
+import fr_13_45_FR1 from "@data/sb_ts/13.45+FR1-saving-files-for-current-assets";
+import fr_13_46_FR1 from "@data/sb_ts/13.46+FR1-saving-files-for-intangible-assets";
+import fr_13_51_FR1 from "@data/sb_ts/13.51+FR1-why-did-you-create-inboxes";
+import fr_13_52_FR1 from "@data/sb_ts/13.52+FR1-why-is-repayable-investor-financing-included-here";
+import fr_13_54_FR1 from "@data/sb_ts/13.54+FR1-classifying-automated-bill-payments-as-expenses";
+import fr_13_54_FR2 from "@data/sb_ts/13.54+FR2-how-to-be-a-small-hero";
+import fr_13_61_FR1 from "@data/sb_ts/13.61+FR1-why-did-you-create-inboxes";
+import fr_13_61_FR2 from "@data/sb_ts/13.61+FR2-a-calendar-for-lodgements-and-payments";
+import fr_13_62_FR1 from "@data/sb_ts/13.62+FR1-why-put-all-processed-tax-records-here";
+import fr_13_90_FR1 from "@data/sb_ts/13.90+FR1-why-did-you-include-a-library-in-each-category";
+import fr_13_90_FR2 from "@data/sb_ts/13.90+FR2-why-are-there-no-ids-here";
+import fr_13_90_FR3 from "@data/sb_ts/13.90+FR3-leave-yourself-jdex-notes";
+
+export const category_13: FlattenedData = {
+  "13": { ...cat_13 },
+  "13+FR1": { ...fr_13_FR_1 },
+  "13+FR2": { ...fr_13_FR_2 },
+  "13+FR3": { ...fr_13_FR_3 },
+  "13.10": { ...id_13_10 },
+  "13.11": { ...id_13_11 },
+  "13.11+FR1": { ...fr_13_11_FR1 },
+  "13.11+FR2": { ...fr_13_11_FR2 },
+  "13.11+FR3": { ...fr_13_11_FR3 },
+  "13.12": { ...id_13_12 },
+  "13.12+FR1": { ...fr_13_12_FR1 },
+  "13.13": { ...id_13_13 },
+  "13.14": { ...id_13_14 },
+  "13.14+FR1": { ...fr_13_14_FR1 },
+  "13.20": { ...id_13_20 },
+  "13.21": { ...id_13_21 },
+  "13.21+FR1": { ...fr_13_21_FR1 },
+  "13.21+FR2": { ...fr_13_21_FR2 },
+  "13.22": { ...id_13_22 },
+  "13.22+FR1": { ...fr_13_22_FR1 },
+  "13.22+FR2": { ...fr_13_22_FR2 },
+  "13.22+FR3": { ...fr_13_22_FR3 },
+  "13.23": { ...id_13_23 },
+  "13.23+FR1": { ...fr_13_23_FR1 },
+  "13.24": { ...id_13_24 },
+  "13.24+FR1": { ...fr_13_24_FR1 },
+  "13.25": { ...id_13_25 },
+  "13.26": { ...id_13_26 },
+  "13.30": { ...id_13_30 },
+  "13.31": { ...id_13_31 },
+  "13.31+FR1": { ...fr_13_31_FR1 },
+  "13.32": { ...id_13_32 },
+  "13.32+FR1": { ...fr_13_32_FR1 },
+  "13.32+FR2": { ...fr_13_32_FR2 },
+  "13.33": { ...id_13_33 },
+  "13.33+FR1": { ...fr_13_33_FR1 },
+  "13.33+FR2": { ...fr_13_33_FR2 },
+  "13.34": { ...id_13_34 },
+  "13.34+FR1": { ...fr_13_34_FR1 },
+  "13.35": { ...id_13_35 },
+  "13.35+FR1": { ...fr_13_35_FR1 },
+  "13.40": { ...id_13_40 },
+  "13.41": { ...id_13_41 },
+  "13.41+FR1": { ...fr_13_41_FR1 },
+  "13.42": { ...id_13_42 },
+  "13.42+FR1": { ...fr_13_42_FR1 },
+  "13.42+FR2": { ...fr_13_42_FR2 },
+  "13.43": { ...id_13_43 },
+  "13.43+FR1": { ...fr_13_43_FR1 },
+  "13.44": { ...id_13_44 },
+  "13.44+FR1": { ...fr_13_44_FR1 },
+  "13.45": { ...id_13_45 },
+  "13.45+FR1": { ...fr_13_45_FR1 },
+  "13.46": { ...id_13_46 },
+  "13.46+FR1": { ...fr_13_46_FR1 },
+  "13.50": { ...id_13_50 },
+  "13.51": { ...id_13_51 },
+  "13.51+FR1": { ...fr_13_51_FR1 },
+  "13.52": { ...id_13_52 },
+  "13.52+FR1": { ...fr_13_52_FR1 },
+  "13.53": { ...id_13_53 },
+  "13.54": { ...id_13_54 },
+  "13.54+FR1": { ...fr_13_54_FR1 },
+  "13.54+FR2": { ...fr_13_54_FR2 },
+  "13.55": { ...id_13_55 },
+  "13.60": { ...id_13_60 },
+  "13.61": { ...id_13_61 },
+  "13.61+FR1": { ...fr_13_61_FR1 },
+  "13.61+FR2": { ...fr_13_61_FR2 },
+  "13.62": { ...id_13_62 },
+  "13.62+FR1": { ...fr_13_62_FR1 },
+  "13.63": { ...id_13_63 },
+  "13.64": { ...id_13_64 },
+  "13.90": { ...id_13_90 },
+  "13.90+FR1": { ...fr_13_90_FR1 },
+  "13.90+FR2": { ...fr_13_90_FR2 },
+  "13.90+FR3": { ...fr_13_90_FR3 },
+};
