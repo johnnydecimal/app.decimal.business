@@ -1,18 +1,18 @@
 // Auto-generated from 11.22+FR2-why-is-business-insurance-here.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "is business insurance here?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "11.22+FR2",
+  "title": "Why is business insurance here?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.954Z",
-    "updatedDate": "2025-02-14T02:55:22.954Z"
+    "createdDate": "2025-02-15T00:37:09.307Z",
+    "updatedDate": "2025-02-15T00:37:09.307Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"We recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal. Hence, business insurance goes up here and there’s room allocated for other insurances in the categories below.\""
+    }
   }
 };
 export default entry;

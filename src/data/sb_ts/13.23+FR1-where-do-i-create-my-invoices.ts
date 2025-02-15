@@ -1,18 +1,18 @@
 // Auto-generated from 13.23+FR1-where-do-i-create-my-invoices.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Where",
-  "title": "do I create my invoices?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.23+FR1",
+  "title": "Where do I create my invoices?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.998Z",
-    "updatedDate": "2025-02-14T02:55:22.998Z"
+    "createdDate": "2025-02-15T00:37:09.325Z",
+    "updatedDate": "2025-02-15T00:37:09.325Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"Not everyone uses software to generate invoices. For those who use a template, we recommend saving it here. Export the completed invoice as a PDF to the income inbox and send it. Then process it when it’s paid and move it here for permanent filing.\""
+    }
   }
 };
 export default entry;

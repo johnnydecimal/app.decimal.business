@@ -1,18 +1,18 @@
 // Auto-generated from 13.61+FR2-a-calendar-for-lodgements-and-payments.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "A",
-  "title": "calendar for lodgements and payments",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.61+FR2",
+  "title": "A calendar for lodgements and payments",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.028Z",
-    "updatedDate": "2025-02-14T02:55:23.028Z"
+    "createdDate": "2025-02-15T00:37:09.332Z",
+    "updatedDate": "2025-02-15T00:37:09.332Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"If you have lots of different payment obligations, we’d recommend creating a calendar of due dates. This might include government taxes, as well as pension and health insurance payments for you and/or your staff. Since these dates may change slightly each year, remember to update them as needed. And if you use accounting software, check if this kind of reminder feature is enabled.\""
+    }
   }
 };
 export default entry;

@@ -1,18 +1,18 @@
 // Auto-generated from 14.11+FR2-computer-lease-contracts-and-agreements.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Computer",
-  "title": "lease contracts and agreements",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.11+FR2",
+  "title": "Computer lease contracts and agreements",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.039Z",
-    "updatedDate": "2025-02-14T02:55:23.039Z"
+    "createdDate": "2025-02-15T00:37:09.334Z",
+    "updatedDate": "2025-02-15T00:37:09.334Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"If you lease your computers, we recommend keeping the overarching contracts and agreements here. It felt logical that computers should stay down in technology world.\\n\\nConversely, in [[14.12]] we recommend that overarching mobile phone contracts and agreements should live up in operations. Because that feels like something that should be alongside other utilities. In this case, the device itself is separate to the contract, so it’s managed down here in technology. If you feel strongly either way, let’s discuss it.\""
+    }
   }
 };
 export default entry;

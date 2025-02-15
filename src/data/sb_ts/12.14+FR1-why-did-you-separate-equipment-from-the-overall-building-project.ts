@@ -1,18 +1,18 @@
 // Auto-generated from 12.14+FR1-why-did-you-separate-equipment-from-the-overall-building-project.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "did you separate equipment from the overall building project?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "12.14+FR1",
+  "title": "Why did you separate equipment from the overall building project?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.967Z",
-    "updatedDate": "2025-02-14T02:55:22.967Z"
+    "createdDate": "2025-02-15T00:37:09.312Z",
+    "updatedDate": "2025-02-15T00:37:09.312Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"We made a decision that these projects are about building and installing things that you can’t really take with you – they were designed for a specific location – and they’re unlikely to have an ops manual. For instance, a built-in shelf.\\n\\nWhereas back or front office _equipment_ ordered as part of a project might have service contracts, or staff training and cleaning manuals, so that belongs in operations. For instance, the hair salon’s espresso machine in the kitchen area and massage chairs by the sinks.\""
+    }
   }
 };
 export default entry;

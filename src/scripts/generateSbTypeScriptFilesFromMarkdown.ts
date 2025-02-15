@@ -106,7 +106,7 @@ async function generateTsFiles() {
   // Get all markdown files in the input directory
   const files = await fs.readdir(inputDir);
   for (const file of files) {
-    if (file.endsWith(".md")) {
+    if (file.endsWith(".md") && !file.includes("+FR")) {
       const filePath = path.join(inputDir, file);
       const markdownContent = await fs.readFile(filePath, "utf-8");
 
@@ -174,7 +174,11 @@ const entry: ${entryType} = ${tsObject};
 export default entry;
 `;
 
-      const outputFileName = file.replace(/\.md$/, ".ts");
+      const outputFileName = file
+        .replace(/\.md$/, ".ts")
+        .replace(/[^a-zA-Z0-9-\.\+]/gu, "")
+        .replace("-.", ".")
+        .replace("--", "-");
       const outputPath = path.join(outputDir, outputFileName);
       await fs.writeFile(outputPath, tsContent, "utf-8");
       console.log(`Generated ${outputFileName}`);

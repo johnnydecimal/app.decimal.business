@@ -1,18 +1,18 @@
 // Auto-generated from 12.12+FR1-why-is-office-insurance-here.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "is office insurance here?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "12.12+FR1",
+  "title": "Why is office insurance here?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.966Z",
-    "updatedDate": "2025-02-14T02:55:22.966Z"
+    "createdDate": "2025-02-15T00:37:09.311Z",
+    "updatedDate": "2025-02-15T00:37:09.311Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"We recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal.\""
+    }
   }
 };
 export default entry;

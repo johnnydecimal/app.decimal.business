@@ -1,18 +1,18 @@
 // Auto-generated from 14.22+FR3-is-data-held-by-third-parties-backed-up.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Is",
-  "title": "data held by third parties backed up?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.22+FR3",
+  "title": "Is data held by third parties backed up?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.066Z",
-    "updatedDate": "2025-02-14T02:55:23.066Z"
+    "createdDate": "2025-02-15T00:37:09.337Z",
+    "updatedDate": "2025-02-15T00:37:09.337Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"Don’t trust that important data is backed up by the third party that stores it.\\n\\nMaybe important customer data is in your email account or an online database. Or all your financial data is in accounting software. Don't assume that those services can/will recover your data if it's lost. There are ways to export and back this up yourself. We’ll discuss this further in [[14.23]].\""
+    }
   }
 };
 export default entry;

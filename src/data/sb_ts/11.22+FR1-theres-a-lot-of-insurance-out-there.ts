@@ -1,18 +1,18 @@
 // Auto-generated from 11.22+FR1-theres-a-lot-of-insurance-out-there.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "There’s",
-  "title": "a lot of insurance out there",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "11.22+FR1",
+  "title": "There’s a lot of insurance out there",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.954Z",
-    "updatedDate": "2025-02-14T02:55:22.954Z"
+    "createdDate": "2025-02-15T00:37:09.307Z",
+    "updatedDate": "2025-02-15T00:37:09.307Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"We can’t advise you on what to get. But one thing we’ve learned in our research is that there are _a lot_ of business insurance options. It’s a bit overwhelming. We now understand the value of a trustworthy insurance professional to provide tailored advice.\\n\\nWe’ve also noticed that insurance companies often have commercial policies that are designed for certain occupations. So it might pay to look around to see if that’s an option for you.\""
+    }
   }
 };
 export default entry;

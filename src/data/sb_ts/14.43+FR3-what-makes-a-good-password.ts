@@ -1,18 +1,18 @@
 // Auto-generated from 14.43+FR3-what-makes-a-good-password.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "What",
-  "title": "makes a good password?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.43+FR3",
+  "title": "What makes a good password?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.074Z",
-    "updatedDate": "2025-02-14T02:55:23.074Z"
+    "createdDate": "2025-02-15T00:37:09.342Z",
+    "updatedDate": "2025-02-15T00:37:09.342Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"There’s plenty of advice online about creating strong passwords. But we’d recommend deferring to your trusty password manager to generate them for you.\\n\\nThere are times when _you_ might need to create a strong, memorable password. For example, the password that unlocks your password manager. You can’t store this in the app, it has to live in your head. **Never ever write that password down.** We will disown you.\\n\\nWe also recommend having a _verbal_ password that you and your staff can use on the phone to verify your identities. We read an article about a scam where people impersonate business owners, hence the warning.\\n\\nIt goes like this. A business owner went overseas to a conference. They mentioned specific details in their out-of-office message. A scammer got the message, called the office, and pretended to be the boss. “Hey, Paris is great, quick favour, my card failed, can you transfer $$$ to this other account, thanks, gotta run!”. This is where you say, “sure, what’s the password?” and they hang up.\""
+    }
   }
 };
 export default entry;

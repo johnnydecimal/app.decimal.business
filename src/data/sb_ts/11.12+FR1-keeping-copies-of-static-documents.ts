@@ -1,18 +1,18 @@
 // Auto-generated from 11.12+FR1-keeping-copies-of-static-documents.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Keeping",
-  "title": "copies of ‘static’ documents",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "11.12+FR1",
+  "title": "Keeping copies of ‘static’ documents",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.951Z",
-    "updatedDate": "2025-02-14T02:55:22.951Z"
+    "createdDate": "2025-02-15T00:37:09.306Z",
+    "updatedDate": "2025-02-15T00:37:09.306Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"You might be thinking, “hey Johnny Decimal, you’ve always said not to have copies of things in different places”. Absolutely – for documents that _change_, like a budget spreadsheet. You should never have multiple copies of things like that because someone will inevitably update the wrong version.\\n\\nHowever, licences, permits, and accreditations are static documents. Probably a PDF or a piece of paper. It’s okay to put copies of them where it’s helpful and makes sense to do so. They’re not going to change unless they are renewed.\""
+    }
   }
 };
 export default entry;

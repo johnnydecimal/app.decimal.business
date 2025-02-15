@@ -1,18 +1,18 @@
 // Auto-generated from 12.30+FR1-examples-of-product-versus-front-office-operations.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Examples",
-  "title": "of product versus front office operations",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "12.30+FR1",
+  "title": "Examples of product versus front office operations",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.971Z",
-    "updatedDate": "2025-02-14T02:55:22.971Z"
+    "createdDate": "2025-02-15T00:37:09.313Z",
+    "updatedDate": "2025-02-15T00:37:09.313Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"A baker’s pie is their product. The branded napkins for customers are a front office supply (and they’re not what staff get in the back office).\\n\\nA haircut is a hairdresser’s product. The coffee and biscuits for customers are front office supplies.\\n\\nA clean dog is a dog groomer’s product. The hose used to wash it is a front office supply.\""
+    }
   }
 };
 export default entry;

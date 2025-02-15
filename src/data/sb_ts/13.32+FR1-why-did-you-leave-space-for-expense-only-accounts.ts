@@ -1,18 +1,18 @@
 // Auto-generated from 13.32+FR1-why-did-you-leave-space-for-expense-only-accounts.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "did you leave space for expense-only accounts?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.32+FR1",
+  "title": "Why did you leave space for expense-only accounts?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.005Z",
-    "updatedDate": "2025-02-14T02:55:23.005Z"
+    "createdDate": "2025-02-15T00:37:09.326Z",
+    "updatedDate": "2025-02-15T00:37:09.326Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"Many businesses won’t need this ID if they just use a regular bank account to handle income and expenses. But we wanted to leave space for other types of ‘one-way’ accounts that send money out. You don’t want to miss anything in case it’s deductible.\""
+    }
   }
 };
 export default entry;

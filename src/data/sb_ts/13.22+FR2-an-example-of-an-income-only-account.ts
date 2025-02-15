@@ -1,18 +1,18 @@
 // Auto-generated from 13.22+FR2-an-example-of-an-income-only-account.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "An",
-  "title": "example of an income-only account",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.22+FR2",
+  "title": "An example of an income-only account",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.997Z",
-    "updatedDate": "2025-02-14T02:55:22.997Z"
+    "createdDate": "2025-02-15T00:37:09.325Z",
+    "updatedDate": "2025-02-15T00:37:09.325Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"At JDHQ, we have online courses on a learning platform. They process payments via Stripe. We want to track this account because it contains data that we need to calculate income. And depending on where a customer lives, we may need to pay sales tax on the transaction.\\n\\nThis account is _only_ incomings, we can’t pay expenses with it. It holds money until they release it to a nominated bank account. Therefore, we would store the formal Stripe account statements here.\""
+    }
   }
 };
 export default entry;

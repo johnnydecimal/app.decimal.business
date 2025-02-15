@@ -1,18 +1,18 @@
 // Auto-generated from 14.22+FR4-do-you-need-a-data-retention-policy.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Do",
-  "title": "you need a data retention policy?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.22+FR4",
+  "title": "Do you need a data retention policy?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.066Z",
-    "updatedDate": "2025-02-14T02:55:23.066Z"
+    "createdDate": "2025-02-15T00:37:09.337Z",
+    "updatedDate": "2025-02-15T00:37:09.337Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"If you deal with customer data or anything else that’s sensitive, you’ll need a policy about this. It should outline how your business saves, retains, and backs up data in accordance with industry standards and compliance legislation.\""
+    }
   }
 };
 export default entry;

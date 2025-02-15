@@ -1,18 +1,18 @@
 // Auto-generated from 13+FR1-this-category-will-be-busier-for-some-than-others.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "This",
-  "title": "category will be busier for some than others",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13+FR1",
+  "title": "This category will be busier for some than others",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.984Z",
-    "updatedDate": "2025-02-14T02:55:22.984Z"
+    "createdDate": "2025-02-15T00:37:09.318Z",
+    "updatedDate": "2025-02-15T00:37:09.318Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"If you’re a sole trader, you might just be tracking basic incomings and outgoings. Compared with someone who manages things like payroll, investments, or company equity. Although, the more complex your affairs, the more we’re assuming you have software and/or a professional to handle a lot of the money stuff for you.\""
+    }
   }
 };
 export default entry;

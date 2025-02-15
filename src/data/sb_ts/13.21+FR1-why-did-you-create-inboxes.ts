@@ -1,18 +1,18 @@
 // Auto-generated from 13.21+FR1-why-did-you-create-inboxes.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "did you create inboxes?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.21+FR1",
+  "title": "Why did you create inboxes?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.994Z",
-    "updatedDate": "2025-02-14T02:55:22.994Z"
+    "createdDate": "2025-02-15T00:37:09.324Z",
+    "updatedDate": "2025-02-15T00:37:09.324Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"The goal of the five ‘inbox and processing’ IDs in this category is to add a little rigour to ensure you don’t miss anything. Income payments and tax deductible expenses are like treasure. And forgetting to pay other people is bad form.\\n\\nWe don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings.\\n\\nAnd if you need space to be messy and do some calculations, then we wanted to make room for that too. For instance, every month Johnny has to download inscrutable income data from Stripe and fuss with it until it’s in a format our accountant can use. This is where he would do that work.\""
+    }
   }
 };
 export default entry;

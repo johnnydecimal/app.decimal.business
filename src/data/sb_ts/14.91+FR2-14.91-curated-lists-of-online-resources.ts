@@ -1,18 +1,18 @@
 // Auto-generated from 14.91+FR2-14.91-curated-lists-of-online-resources.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "14.91",
-  "title": "Curated lists of online resources",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.91+FR2",
+  "title": "14.91 Curated lists of online resources",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.088Z",
-    "updatedDate": "2025-02-14T02:55:23.088Z"
+    "createdDate": "2025-02-15T00:37:09.348Z",
+    "updatedDate": "2025-02-15T00:37:09.348Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"\""
+    }
   }
 };
 export default entry;

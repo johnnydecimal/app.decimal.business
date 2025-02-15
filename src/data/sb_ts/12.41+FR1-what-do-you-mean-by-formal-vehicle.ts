@@ -1,18 +1,18 @@
 // Auto-generated from 12.41+FR1-what-do-you-mean-by-formal-vehicle.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "What",
-  "title": "do you mean by formal vehicle?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "12.41+FR1",
+  "title": "What do you mean by formal vehicle?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.976Z",
-    "updatedDate": "2025-02-14T02:55:22.976Z"
+    "createdDate": "2025-02-15T00:37:09.316Z",
+    "updatedDate": "2025-02-15T00:37:09.316Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"When we say ‘formal vehicle’, ‘motor vehicle’, or ‘registered vehicle’, it doesn’t matter if it’s a car, trailer, boat, seaplane, caravan, hot-air balloon, or Hansom cab. If it’s core to your business and requires some kind of official paperwork, put it up here.\""
+    }
   }
 };
 export default entry;

@@ -1,18 +1,18 @@
 // Auto-generated from 14.54+FR1-choosing-a-platform.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Choosing",
-  "title": "a platform",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.54+FR1",
+  "title": "Choosing a platform",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.080Z",
-    "updatedDate": "2025-02-14T02:55:23.080Z"
+    "createdDate": "2025-02-15T00:37:09.346Z",
+    "updatedDate": "2025-02-15T00:37:09.346Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"If you’d like to start doing this kind of thing, it’s worth researching different platforms. Most people have heard of Mailchimp because they’ve been around for years. But a quick search shows there’s lots of options now. So have a look at the features and pricing and see which platform is right for your business.\""
+    }
   }
 };
 export default entry;

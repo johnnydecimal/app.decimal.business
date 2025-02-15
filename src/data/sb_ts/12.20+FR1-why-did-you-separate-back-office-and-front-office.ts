@@ -1,18 +1,18 @@
 // Auto-generated from 12.20+FR1-why-did-you-separate-back-office-and-front-office.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "did you separate back office and front office?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "12.20+FR1",
+  "title": "Why did you separate back office and front office?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.968Z",
-    "updatedDate": "2025-02-14T02:55:22.968Z"
+    "createdDate": "2025-02-15T00:37:09.312Z",
+    "updatedDate": "2025-02-15T00:37:09.312Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"We decided to separate back office and front office because, depending on the business, these areas might have quite different suppliers, equipment, and daily operations. And different people might manage each area (you don’t want people trying to open the same spreadsheet at the same time).\""
+    }
   }
 };
 export default entry;

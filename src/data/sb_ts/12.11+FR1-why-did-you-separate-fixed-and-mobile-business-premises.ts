@@ -1,18 +1,18 @@
 // Auto-generated from 12.11+FR1-why-did-you-separate-fixed-and-mobile-business-premises.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "did you separate fixed and mobile business premises?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "12.11+FR1",
+  "title": "Why did you separate fixed and mobile business premises?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.966Z",
-    "updatedDate": "2025-02-14T02:55:22.966Z"
+    "createdDate": "2025-02-15T00:37:09.311Z",
+    "updatedDate": "2025-02-15T00:37:09.311Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"Many businesses do their work out of multiple locations, which might be fixed or mobile. For instance, an electrician with a home office and a van. A cafe with a retail space and a food truck. A personal trainer with a home office, van, and storage unit for their equipment.\\n\\nSo we suggest keeping the fixed locations here and anything mobile below in [[12.40]], even if you mentally lump them together. Motor vehicles or anything else that can move or be towed have their own types of documentation, so it felt more logical to keep them separate.\""
+    }
   }
 };
 export default entry;

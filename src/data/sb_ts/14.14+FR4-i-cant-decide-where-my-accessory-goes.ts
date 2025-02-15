@@ -1,18 +1,18 @@
 // Auto-generated from 14.14+FR4-i-cant-decide-where-my-accessory-goes.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "I",
-  "title": "can’t decide where my accessory goes",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.14+FR4",
+  "title": "I can’t decide where my accessory goes",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.058Z",
-    "updatedDate": "2025-02-14T02:55:23.058Z"
+    "createdDate": "2025-02-15T00:37:09.335Z",
+    "updatedDate": "2025-02-15T00:37:09.335Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"If you are torn about where any accessories should live, don’t stress. Remember that we can create wiki links in our JDex notes to other IDs. If we do this, we’re not going to lose anything.\\n\\nIn the example above, we store our card reader in [[12.34]]. In that JDex note, we add a bullet point that says “The iPad that controls this card reader is at [[14.12]]”.\\n\\nThis advice goes for anything else in your system where there’s a little ambiguity. Links are our friends.\""
+    }
   }
 };
 export default entry;

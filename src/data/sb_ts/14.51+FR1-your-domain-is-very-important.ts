@@ -1,18 +1,18 @@
 // Auto-generated from 14.51+FR1-your-domain-is-very-important.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Your",
-  "title": "domain is very important",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.51+FR1",
+  "title": "Your domain is very important",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.077Z",
-    "updatedDate": "2025-02-14T02:55:23.077Z"
+    "createdDate": "2025-02-15T00:37:09.343Z",
+    "updatedDate": "2025-02-15T00:37:09.343Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"Your domain name is very important because you can usually only ‘buy’ them for a year (technically it’s a rental). So people forget to renew them and then whoops, everything’s gone.\\n\\nSo put a reminder in your calendar. You can build another website anytime. But if someone else gets your domain name, it’s all over.\""
+    }
   }
 };
 export default entry;

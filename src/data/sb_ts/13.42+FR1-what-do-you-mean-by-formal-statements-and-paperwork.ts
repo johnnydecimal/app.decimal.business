@@ -1,18 +1,18 @@
 // Auto-generated from 13.42+FR1-what-do-you-mean-by-formal-statements-and-paperwork.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "What",
-  "title": "do you mean by ‘formal’ statements and paperwork?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.42+FR1",
+  "title": "What do you mean by ‘formal’ statements and paperwork?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.011Z",
-    "updatedDate": "2025-02-14T02:55:23.011Z"
+    "createdDate": "2025-02-15T00:37:09.329Z",
+    "updatedDate": "2025-02-15T00:37:09.329Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"Static documents supplied by a platform or bank (e.g. PDFs). As opposed to raw data that you might download into a spreadsheet and manipulate. Do that kind of work in [[13.41]].\""
+    }
   }
 };
 export default entry;

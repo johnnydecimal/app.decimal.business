@@ -1,18 +1,18 @@
 // Auto-generated from 14.32+FR3-storing-details-about-external-software-and-services.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Storing",
-  "title": "details about external software and services",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.32+FR3",
+  "title": "Storing details about external software and services",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.071Z",
-    "updatedDate": "2025-02-14T02:55:23.071Z"
+    "createdDate": "2025-02-15T00:37:09.339Z",
+    "updatedDate": "2025-02-15T00:37:09.339Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"Label subfolders with the name of the external software or service so they sort alphabetically.\\n\\nThen use the numbered template provided to store specific items:\\n\\n- 01 Receipts,\\n- 02 Downloads,\\n- 03 Licence keys,\\n- 04 Documentation, manuals, training material,\\n- 05 Settings/configuration,\\n- ...\""
+    }
   }
 };
 export default entry;

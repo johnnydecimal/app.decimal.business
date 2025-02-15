@@ -1,18 +1,18 @@
 // Auto-generated from 13.12+FR1-why-is-financial-insurance-here.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "is financial insurance here?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.12+FR1",
+  "title": "Why is financial insurance here?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.989Z",
-    "updatedDate": "2025-02-14T02:55:22.989Z"
+    "createdDate": "2025-02-15T00:37:09.324Z",
+    "updatedDate": "2025-02-15T00:37:09.324Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"We recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal.\""
+    }
   }
 };
 export default entry;

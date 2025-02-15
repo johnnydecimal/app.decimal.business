@@ -1,18 +1,18 @@
 // Auto-generated from 12.50+FR1-why-did-you-include-this-section.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "did you include this section?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "12.50+FR1",
+  "title": "Why did you include this section?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.979Z",
-    "updatedDate": "2025-02-14T02:55:22.979Z"
+    "createdDate": "2025-02-15T00:37:09.317Z",
+    "updatedDate": "2025-02-15T00:37:09.317Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"After seeing some folder structures from other business owners, we realised that civics and community engagement can be a big deal. So we wanted to make sure there was a place for this stuff to keep it separate from daily operations. Especially if you participate in recurring events, you’ll want to easily find and reuse certain items each time.\""
+    }
   }
 };
 export default entry;

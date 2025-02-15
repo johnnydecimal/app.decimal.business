@@ -1,18 +1,18 @@
 // Auto-generated from 14.23+FR3-testing-our-backups-on-march-31st-each-year.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Testing",
-  "title": "our backups on March 31st each year",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.23+FR3",
+  "title": "Testing our backups on March 31st each year",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.067Z",
-    "updatedDate": "2025-02-14T02:55:23.067Z"
+    "createdDate": "2025-02-15T00:37:09.337Z",
+    "updatedDate": "2025-02-15T00:37:09.337Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"A crucial component of backups, which everyone tends to neglect, is _testing that they work_. This should happen at least once a year. So we'll use World Backup Day (March 31st) to test our own and encourage others to do the same.\""
+    }
   }
 };
 export default entry;

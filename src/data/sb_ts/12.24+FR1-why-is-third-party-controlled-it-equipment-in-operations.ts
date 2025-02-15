@@ -1,18 +1,18 @@
 // Auto-generated from 12.24+FR1-why-is-third-party-controlled-it-equipment-in-operations.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "is third-party-controlled IT equipment in operations?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "12.24+FR1",
+  "title": "Why is third-party-controlled IT equipment in operations?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.970Z",
-    "updatedDate": "2025-02-14T02:55:22.970Z"
+    "createdDate": "2025-02-15T00:37:09.313Z",
+    "updatedDate": "2025-02-15T00:37:09.313Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"We made a decision to separate third-party-controlled IT equipment versus things that you control. If a supplier is providing an ongoing service to you, managing that becomes part of daily operations.\\n\\nBut if you buy computers, printers, or other IT gadgets outright and control them, store the records and product manuals with your other technology in [[14.10]].\""
+    }
   }
 };
 export default entry;

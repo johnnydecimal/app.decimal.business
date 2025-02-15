@@ -1,18 +1,18 @@
 // Auto-generated from 14.41+FR5-instructions-on-how-you-access-government-services.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Instructions",
-  "title": "on how you access government services",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.41+FR5",
+  "title": "Instructions on how you access government services",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.073Z",
-    "updatedDate": "2025-02-14T02:55:23.073Z"
+    "createdDate": "2025-02-15T00:37:09.340Z",
+    "updatedDate": "2025-02-15T00:37:09.340Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"This also feels like a good place to remind yourself and other key staff how the business accesses online government services. Things like portals for lodging and paying taxes or receiving assistance.\\n\\nLogging in to such services often requires a physics degree and a lot of patience. So be kind to your future selves and write some instructions here.\""
+    }
   }
 };
 export default entry;

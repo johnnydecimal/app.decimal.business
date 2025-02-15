@@ -1,18 +1,18 @@
 // Auto-generated from 13.14+FR1-why-did-you-use-credit-rating-as-an-example.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "did you use credit rating as an example?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.14+FR1",
+  "title": "Why did you use credit rating as an example?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.992Z",
-    "updatedDate": "2025-02-14T02:55:22.992Z"
+    "createdDate": "2025-02-15T00:37:09.324Z",
+    "updatedDate": "2025-02-15T00:37:09.324Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"We’ve used credit rating as an example of something that might go here. Some people might classify a great credit rating as an asset. But we’re not accountants. This is where we would file it. And if our accountant asked for it, we’d know exactly where it is.\""
+    }
   }
 };
 export default entry;

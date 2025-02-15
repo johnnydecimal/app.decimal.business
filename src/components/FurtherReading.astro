@@ -38,11 +38,9 @@ const furtherReadingIdForDisplay = furtherReadingEntry.number.replace(
 );
 
 let furtherReadingTitle: string;
-let furtherReadingDescription: string;
 let furtherReadingEntryText: string;
 if (userId) {
   furtherReadingTitle = furtherReadingEntry.title;
-  furtherReadingDescription = await parseMd(furtherReadingEntry.description);
   furtherReadingEntryText = await parseMd(
     furtherReadingEntry.extensions?.furtherReading.text
   );
@@ -50,11 +48,6 @@ if (userId) {
   furtherReadingTitle = await parseMd(
     furtherReadingEntry.title,
     false,
-    isPublic
-  );
-  furtherReadingDescription = await parseMd(
-    furtherReadingEntry.description,
-    true,
     isPublic
   );
   furtherReadingEntryText = await parseMd(
@@ -139,13 +132,6 @@ const parentSTitle = parentSEntry.title;
   <div class="layout-grid-left-right tablet-portrait-up">
     <h1 class="layout-left-item">{furtherReadingIdForDisplay}</h1>
     <h1 class="layout-right-item">{furtherReadingTitle}</h1>
-  </div>
-</Slice>
-
-<Slice id="HowToDescription" className="descriptive-text">
-  <div class="layout-grid-left-right">
-    <div></div>
-    <div class="layout-right-item" set:html={furtherReadingDescription} />
   </div>
 </Slice>
 

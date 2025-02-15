@@ -1,4 +1,7 @@
 /**
+ * This is NOT GOOD CODE. But this is a one-time pull from Lucy's Pages doc
+ * to Markdown files here. So don't worry about it.
+ *
  * - Export the Pages file as Markdown.
  * - Open it here and save it so the linter puts spaces between empty headers.
  * - _In-file_, replace all `---` and the other Pages block stuff.

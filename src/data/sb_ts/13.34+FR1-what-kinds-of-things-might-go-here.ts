@@ -1,18 +1,18 @@
 // Auto-generated from 13.34+FR1-what-kinds-of-things-might-go-here.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "What",
-  "title": "kinds of things might go here?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.34+FR1",
+  "title": "What kinds of things might go here?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.008Z",
-    "updatedDate": "2025-02-14T02:55:23.008Z"
+    "createdDate": "2025-02-15T00:37:09.328Z",
+    "updatedDate": "2025-02-15T00:37:09.328Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"If you have staff, the kinds of things you might manage here include:\\n\\n- timekeeping (e.g. rosters, records of attendance, overtime, project timesheets),\\n- wages, payslips, and remittance,\\n- income tax withholding,\\n- pension payments,\\n- health insurance,\\n- paid or unpaid leave of any kind,\\n- allowances (e.g. for meals, clothing, training),\\n- any benefits, bonuses, rewards, or incentives in salary packages,\\n- expense reimbursement.\""
+    }
   }
 };
 export default entry;

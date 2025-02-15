@@ -1,18 +1,18 @@
 // Auto-generated from 13.46+FR1-saving-files-for-intangible-assets.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Saving",
-  "title": "files for intangible assets",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.46+FR1",
+  "title": "Saving files for intangible assets",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.018Z",
-    "updatedDate": "2025-02-14T02:55:23.018Z"
+    "createdDate": "2025-02-15T00:37:09.330Z",
+    "updatedDate": "2025-02-15T00:37:09.330Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"This ID should contain copies of records saved elsewhere in the system. That’s okay because these are static records. We want a place where you and/or your accountant can go to see the proof of ownership and value of any intangible assets in one place.\\n\\nFor instance, a scientist’s R&D and patent are intangible assets:\\n\\n- She manages the R&D and patent in [[20-29]].\\n- She copies the key records here for her accountant.\\n- And she also has a master finance record in [[13.11]] that includes a summary of her intangible assets because that’s how she rolls.\""
+    }
   }
 };
 export default entry;

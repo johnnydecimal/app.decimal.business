@@ -1,18 +1,18 @@
 // Auto-generated from 11.90+FR2-why-are-there-no-ids-here.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Why",
-  "title": "are there no IDs here?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "11.90+FR2",
+  "title": "Why are there no IDs here?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.961Z",
-    "updatedDate": "2025-02-14T02:55:22.961Z"
+    "createdDate": "2025-02-15T00:37:09.310Z",
+    "updatedDate": "2025-02-15T00:37:09.310Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"It’s difficult to imagine how these libraries might be used. So we didn’t want to commit to IDs yet. By leaving these sections blank, we can introduce everyone to the careful consideration that goes into making a new ID.\\n\\nIf you’re ready to save things in this library, come over to the [[community]] and see what others are doing. Or ask us for advice. We’ll figure it out together and eventually settle on some standard IDs. In the meantime, just keep things neat and tidy here.\""
+    }
   }
 };
 export default entry;

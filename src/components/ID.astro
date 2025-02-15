@@ -42,14 +42,14 @@ let idAlsoSee: string | undefined;
 // If we have a signed-in user, show them the ID. If not, obfuscate it.
 if (userId) {
   idTitle = idEntry.title;
-  idDescription = await parseMd(system[id]?.description, true, true);
-  idExamples = sb.examples && (await parseMd(sb.examples, true, true));
-  idOverview = sb.overview && (await parseMd(sb.overview, true, true));
-  idExceptions = sb.exceptions && (await parseMd(sb.exceptions, true, true));
-  idAlsoSee = sb.alsoSee && (await parseMd(sb.alsoSee, true, true));
+  idDescription = await parseMd(idEntry.description);
+  idExamples = sb.examples && (await parseMd(sb.examples));
+  idOverview = sb.overview && (await parseMd(sb.overview));
+  idExceptions = sb.exceptions && (await parseMd(sb.exceptions));
+  idAlsoSee = sb.alsoSee && (await parseMd(sb.alsoSee));
 } else {
-  idTitle = await parseMd(system[id]?.title, false, !!isPublic);
-  idDescription = await parseMd(system[id]?.description, true, !!isPublic);
+  idTitle = await parseMd(idEntry.title, false, !!isPublic);
+  idDescription = await parseMd(idEntry.description, true, !!isPublic);
   idExamples = sb.examples && (await parseMd(sb.examples, true, !!isPublic));
   idOverview = sb.overview && (await parseMd(sb.overview, true, !!isPublic));
   idExceptions =

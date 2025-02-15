@@ -1,18 +1,18 @@
 // Auto-generated from 14.44+FR2-what-other-related-insurances-might-go-here.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "What",
-  "title": "other related insurances might go here?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.44+FR2",
+  "title": "What other related insurances might go here?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.075Z",
-    "updatedDate": "2025-02-14T02:55:23.075Z"
+    "createdDate": "2025-02-15T00:37:09.342Z",
+    "updatedDate": "2025-02-15T00:37:09.342Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"If you have specific theft or damage insurance for high-value computers, devices, or accessories consider storing that here too. Otherwise, that would go in [[12.12]].\\n\\nAnd if your business sells a technology product or provides technology services, then you might also have ‘technology errors and omissions’ (E&O) insurance. This protects against an incident that affects customers because of an error in your product or service. Consider storing that here too. Otherwise, that would go in [[11.22]].\""
+    }
   }
 };
 export default entry;

@@ -1,18 +1,18 @@
 // Auto-generated from 14.14+FR1-configuration-notes.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Configuration",
-  "title": "notes",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.14+FR1",
+  "title": "Configuration notes",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.056Z",
-    "updatedDate": "2025-02-14T02:55:23.056Z"
+    "createdDate": "2025-02-15T00:37:09.335Z",
+    "updatedDate": "2025-02-15T00:37:09.335Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"We decided that notes related to the configuration of any accessory in this category would live with the thing itself. For instance, when you get a new printer there’s usually settings to choose and maybe a password. When you get a new monitor, you might choose certain colour, brightness, and energy settings. Record what you did here.\""
+    }
   }
 };
 export default entry;

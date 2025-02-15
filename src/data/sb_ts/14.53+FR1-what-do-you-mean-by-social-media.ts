@@ -1,18 +1,18 @@
 // Auto-generated from 14.53+FR1-what-do-you-mean-by-social-media.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "What",
-  "title": "do you mean by social media?",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "14.53+FR1",
+  "title": "What do you mean by social media?",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.078Z",
-    "updatedDate": "2025-02-14T02:55:23.078Z"
+    "createdDate": "2025-02-15T00:37:09.344Z",
+    "updatedDate": "2025-02-15T00:37:09.344Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"By social media, we mean any third-party platform where you can post and publish words, images, or video, that _isn’t_ your own website, blog, community, or newsletter. And that people can interact with in some way. For simplicity, we recommend that it sits under one umbrella here.\""
+    }
   }
 };
 export default entry;

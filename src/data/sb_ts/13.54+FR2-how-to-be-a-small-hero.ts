@@ -1,18 +1,18 @@
 // Auto-generated from 13.54+FR2-how-to-be-a-small-hero.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "How",
-  "title": "to be a small hero",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "13.54+FR2",
+  "title": "How to be a small hero",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:23.026Z",
-    "updatedDate": "2025-02-14T02:55:23.026Z"
+    "createdDate": "2025-02-15T00:37:09.332Z",
+    "updatedDate": "2025-02-15T00:37:09.332Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"If you can, consider paying invoices from sole traders on the day they’re received. One company used to do this for Lucy. She didn’t ask them to, they just did it. Every time. It was an amazing gesture towards the smallest of business owners and made a huge difference to her cashflow and ability to trade.\""
+    }
   }
 };
 export default entry;

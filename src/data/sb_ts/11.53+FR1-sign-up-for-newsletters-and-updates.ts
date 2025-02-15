@@ -1,18 +1,18 @@
 // Auto-generated from 11.53+FR1-sign-up-for-newsletters-and-updates.md
-import type { IdEntry } from "@data/smallBusinessFlat";
-const entry: IdEntry = {
-  "number": "Sign",
-  "title": "up for newsletters and updates",
-  "description": "",
-  "type": "id",
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+const entry: FurtherReadingEntry = {
+  "number": "11.53+FR1",
+  "title": "Sign up for newsletters and updates",
+  "type": "furtherReading",
   "isPublic": false,
-  "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-14T02:55:22.959Z",
-    "updatedDate": "2025-02-14T02:55:22.959Z"
+    "createdDate": "2025-02-15T00:37:09.309Z",
+    "updatedDate": "2025-02-15T00:37:09.309Z"
   },
   "extensions": {
-    "smallBusiness": {}
+    "furtherReading": {
+      "text": "\"Nerd tip: this may sound obvious but we only just did it ourselves.\\n\\n1. Go to your government’s small business and/or tax website.\\n2. See if they have newsletters.\\n3. Sign up!\\n\\nWe’ve subscribed to about ten different newsletters and so far they’re _full_ of useful stuff.\""
+    }
   }
 };
 export default entry;
