@@ -2,12 +2,12 @@
 import type { CategoryEntry } from "@data/smallBusinessFlat";
 const entry: CategoryEntry = {
   "number": "12",
-  "title": "🗺️ Where I trade & how I get around",
+  "title": "Where I trade & how I get around",
   "description": "This category is all about your business premises and its operations, and how you get from A to B.",
   "type": "category",
   "metadata": {
-    "createdDate": "2025-02-17T03:03:34.105Z",
-    "updatedDate": "2025-02-17T03:03:34.105Z"
+    "createdDate": "2025-02-17T03:25:42.021Z",
+    "updatedDate": "2025-02-17T03:25:42.021Z"
   },
   "extensions": {
     "smallBusiness": {

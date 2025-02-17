@@ -2,12 +2,12 @@
 import type { CategoryEntry } from "@data/smallBusinessFlat";
 const entry: CategoryEntry = {
   "number": "11",
-  "title": "🙋 The business & its people",
+  "title": "The business & its people",
   "description": "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
   "type": "category",
   "metadata": {
-    "createdDate": "2025-02-17T03:03:34.089Z",
-    "updatedDate": "2025-02-17T03:03:34.089Z"
+    "createdDate": "2025-02-17T03:25:42.001Z",
+    "updatedDate": "2025-02-17T03:25:42.001Z"
   },
   "extensions": {
     "smallBusiness": {

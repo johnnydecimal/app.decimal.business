@@ -86,7 +86,7 @@ import fr_14_91_FR2 from "@data/sb_ts/14.91+FR2-14.91-curated-lists-of-online-re
 
 export const category_14: FlattenedData = {
   "14": { ...cat_14 },
-  "14.FR+1": { ...fr_14_FR_1 },
+  "14+FR1": { ...fr_14_FR_1 },
   "14.10": { ...id_14_10 },
   "14.11": { ...id_14_11 },
   "14.11+FR1": { ...fr_14_11_FR1 },

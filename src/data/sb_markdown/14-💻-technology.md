@@ -1,4 +1,4 @@
-# 14 💻 Technology
+# 14 Technology
 
 ## Description
 
@@ -21,6 +21,5 @@ This category is for managing _your_ technology. If your product or service is r
 This category is not for managing technology related to workplace security or access (e.g cameras, passcards), that goes in [[12.22]] or [[12.32]].
 
 ## Also see
-
 
 ## Links

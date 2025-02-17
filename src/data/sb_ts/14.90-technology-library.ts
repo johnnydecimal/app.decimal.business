@@ -2,14 +2,14 @@
 import type { IdEntry } from "@data/smallBusinessFlat";
 const entry: IdEntry = {
   "number": "14.90",
-  "title": "■ Technology library 📚",
+  "title": "Technology library",
   "description": "A place to put information that’s related to this category, kinda interesting, mostly unimportant, and definitely doesn’t fit elsewhere.",
   "type": "id",
   "isPublic": false,
-  "isHeader": false,
+  "isHeader": true,
   "metadata": {
-    "createdDate": "2025-02-17T03:03:34.133Z",
-    "updatedDate": "2025-02-17T03:03:34.133Z"
+    "createdDate": "2025-02-17T03:25:42.059Z",
+    "updatedDate": "2025-02-17T03:25:42.059Z"
   },
   "extensions": {
     "smallBusiness": {

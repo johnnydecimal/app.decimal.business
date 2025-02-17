@@ -2,12 +2,12 @@
 import type { CategoryEntry } from "@data/smallBusinessFlat";
 const entry: CategoryEntry = {
   "number": "13",
-  "title": "💰 Money earned, spent, saved, & owed",
+  "title": "Money earned, spent, saved, & owed",
   "description": "This category is all about keeping track of your finances, from planning and budgeting, to reconciling and submitting your annual returns.",
   "type": "category",
   "metadata": {
-    "createdDate": "2025-02-17T03:03:34.118Z",
-    "updatedDate": "2025-02-17T03:03:34.118Z"
+    "createdDate": "2025-02-17T03:25:42.040Z",
+    "updatedDate": "2025-02-17T03:25:42.040Z"
   },
   "extensions": {
     "smallBusiness": {

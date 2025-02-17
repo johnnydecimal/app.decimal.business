@@ -1,4 +1,4 @@
-# 13 💰 Money earned, spent, saved, & owed
+# 13 Money earned, spent, saved, & owed
 
 ## Description
 
@@ -23,6 +23,5 @@ There are some accounting terms here. But we didn’t get too technical. If an a
 This category is for managing _your_ finances – if your product or service is related (e.g. you’re an accountant, bookkeeper, or financial adviser) that goes in [[20-29]].
 
 ## Also see
-
 
 ## Links

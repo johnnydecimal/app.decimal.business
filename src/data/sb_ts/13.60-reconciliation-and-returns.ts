@@ -2,14 +2,14 @@
 import type { IdEntry } from "@data/smallBusinessFlat";
 const entry: IdEntry = {
   "number": "13.60",
-  "title": "■ Reconciliation & returns 🧮",
+  "title": "Reconciliation & returns",
   "description": "The final reckonings.",
   "type": "id",
   "isPublic": false,
-  "isHeader": false,
+  "isHeader": true,
   "metadata": {
-    "createdDate": "2025-02-17T03:03:34.125Z",
-    "updatedDate": "2025-02-17T03:03:34.125Z"
+    "createdDate": "2025-02-17T03:25:42.049Z",
+    "updatedDate": "2025-02-17T03:25:42.049Z"
   },
   "extensions": {
     "smallBusiness": {}

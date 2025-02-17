@@ -1,6 +1,7 @@
 ---
 /**
- * The FurtherReading view component. So we're at /11.11+[0-9].
+ * The FurtherReading view component. Note that they can be attached to AC.IDs.
+ * So that complicates things a bit.
  */
 
 // #region Props --------------------------------------------------------------
@@ -30,28 +31,40 @@ import Slice from "./common/Slice.astro";
 // #endregion
 
 // #region Entry: core details ------------------------------------------------
-const furtherReadingEntry = system[furtherReadingId] as FurtherReadingEntry;
-const isPublic = furtherReadingEntry.isPublic || false;
-const furtherReadingIdForDisplay = furtherReadingEntry.number.replace(
-  /^\d\d\.\d\d/,
-  ""
-);
+const frEntry = system[furtherReadingId] as FurtherReadingEntry;
+const isPublic = frEntry.isPublic || false;
+
+let parentEntryType: "id" | "category" | "area" | "system";
+let parentEntryNumber: string;
+if (frEntry.number.match(/^\d\d\.\d\d\+/)) {
+  parentEntryType = "id";
+  parentEntryNumber = frEntry.number.replace(/^(\d\d\.\d\d).*/, "$1");
+} else if (frEntry.number.match(/^\d\d\+/)) {
+  parentEntryType = "category";
+  parentEntryNumber = frEntry.number.replace(/^(\d\d).*/, "$1");
+} else if (frEntry.number.match(/^\d\d-\d\d\+/)) {
+  parentEntryType = "area";
+  parentEntryNumber = frEntry.number.replace(/^(\d\d-\d\d).*/, "$1");
+} else if (frEntry.number === "J82") {
+  parentEntryType = "system";
+  parentEntryNumber = "J82";
+} else {
+  throw new Error(`Unknown further reading ID: ${furtherReadingId}`);
+}
+
+const furtherReadingIdForDisplay = frEntry.number.replace(/(.*)(\+.*)/, "$2");
 
 let furtherReadingTitle: string;
 let furtherReadingEntryText: string;
 if (userId) {
-  furtherReadingTitle = furtherReadingEntry.title;
+  furtherReadingTitle = frEntry.title;
   furtherReadingEntryText = await parseMd(
-    furtherReadingEntry.extensions?.furtherReading.text
+    frEntry.extensions?.furtherReading.text
   );
 } else {
-  furtherReadingTitle = await parseMd(
-    furtherReadingEntry.title,
-    false,
-    isPublic
-  );
+  furtherReadingTitle = await parseMd(frEntry.title, false, isPublic);
   furtherReadingEntryText = await parseMd(
-    furtherReadingEntry.extensions?.furtherReading.text,
+    frEntry.extensions?.furtherReading.text,
     true,
     isPublic
   );
@@ -59,27 +72,70 @@ if (userId) {
 // TODO Build something that pulls out the H1s from this text and puts them
 // in the left side as a header. .map(etc...)
 
-// For moreInfo entries (and similar types), rule 0 applies:
-// The parent for these entries is the first 5 characters of the number.
-const parentIdNumber = furtherReadingEntry.number.substring(0, 5);
-const parentIdEntry = system[parentIdNumber] as IdEntry;
-const parentIdTitle = parentIdEntry.title;
+/**
+ * Working out the breadcrumbs.
+ *
+ * If this entry's parent is an ID, we need them all.
+ */
 
-// For the category parent (of the parent id), use Rule 1:
-const parentCNumber = parentIdEntry.number.split(".")[0];
-const parentCEntry = system[parentCNumber] as CategoryEntry;
-const parentCTitle = parentCEntry.title;
-
-// For the area parent, use Rule 2:
-const firstDigit = parentCEntry.number.charAt(0);
-const parentANumber = `${firstDigit}0-${firstDigit}9`;
-const parentAEntry = system[parentANumber] as AreaEntry;
-const parentATitle = parentAEntry.title;
-
-// And for the system parent, use Rule 3:
-const parentSNumber = "J82";
-const parentSEntry = system[parentSNumber] as SystemEntry;
-const parentSTitle = parentSEntry.title;
+let parentIdNumber,
+  parentIdEntry,
+  parentIdTitle,
+  parentCNumber,
+  parentCEntry,
+  parentCTitle,
+  firstDigit,
+  parentANumber,
+  parentAEntry,
+  parentATitle,
+  parentSNumber,
+  parentSEntry,
+  parentSTitle = null;
+if (parentEntryType === "id") {
+  parentIdNumber = parentEntryNumber;
+  parentIdEntry = system[parentIdNumber] as IdEntry;
+  parentIdTitle = parentIdEntry.title;
+  // Category
+  parentCNumber = parentIdEntry.number.split(".")[0];
+  parentCEntry = system[parentCNumber] as CategoryEntry;
+  parentCTitle = parentCEntry.title;
+  // Area
+  firstDigit = parentCEntry.number.charAt(0);
+  parentANumber = `${firstDigit}0-${firstDigit}9`;
+  parentAEntry = system[parentANumber] as AreaEntry;
+  parentATitle = parentAEntry.title;
+  // System
+  parentSNumber = "J82";
+  parentSEntry = system[parentSNumber] as SystemEntry;
+  parentSTitle = parentSEntry.title;
+} else if (parentEntryType === "category") {
+  parentCNumber = parentEntryNumber;
+  parentCEntry = system[parentCNumber] as CategoryEntry;
+  parentCTitle = parentCEntry.title;
+  // Area
+  firstDigit = parentCNumber.charAt(0);
+  parentANumber = `${firstDigit}0-${firstDigit}9`;
+  parentAEntry = system[parentANumber] as AreaEntry;
+  parentATitle = parentAEntry.title;
+  // System
+  parentSNumber = "J82";
+  parentSEntry = system[parentSNumber] as SystemEntry;
+  parentSTitle = parentSEntry.title;
+} else if (parentEntryType === "area") {
+  parentANumber = parentEntryNumber;
+  parentAEntry = system[parentANumber] as AreaEntry;
+  parentATitle = parentAEntry.title;
+  // System
+  parentSNumber = "J82";
+  parentSEntry = system[parentSNumber] as SystemEntry;
+  parentSTitle = parentSEntry.title;
+} else if (parentEntryType === "system") {
+  parentSNumber = parentEntryNumber;
+  parentSEntry = system[parentSNumber] as SystemEntry;
+  parentSTitle = parentSEntry.title;
+} else {
+  throw new Error(`Unknown parent entry type: ${parentEntryType}`);
+}
 ---
 
 <Slice id="SystemBreadcrumb" className="secondary-content-bg">
@@ -89,38 +145,52 @@ const parentSTitle = parentSEntry.title;
   </div>
 </Slice>
 
-<Slice id="AreaBreadcrumb" className="secondary-content-bg">
-  <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">
-      <a href={parentANumber}>{parentANumber}</a>
-    </h3>
-    <h3 class="layout-right-item">
-      <a href={parentANumber}>{parentATitle}</a>
-    </h3>
-  </div>
-</Slice>
+{
+  parentEntryType === "area" ||
+  parentEntryType === "category" ||
+  parentEntryType === "id" ? (
+    <Slice id="AreaBreadcrumb" className="secondary-content-bg">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">
+          <a href={parentANumber}>{parentANumber}</a>
+        </h3>
+        <h3 class="layout-right-item">
+          <a href={parentANumber}>{parentATitle}</a>
+        </h3>
+      </div>
+    </Slice>
+  ) : null
+}
 
-<Slice id="CategoryBreadcrumb" className="secondary-content-bg">
-  <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">
-      <a href={parentCNumber}>{parentCNumber}</a>
-    </h3>
-    <h3 class="layout-right-item">
-      <a href={parentCNumber}>{parentCTitle}</a>
-    </h3>
-  </div>
-</Slice>
+{
+  parentEntryType === "category" || parentEntryType === "id" ? (
+    <Slice id="CategoryBreadcrumb" className="secondary-content-bg">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">
+          <a href={parentCNumber}>{parentCNumber}</a>
+        </h3>
+        <h3 class="layout-right-item">
+          <a href={parentCNumber}>{parentCTitle}</a>
+        </h3>
+      </div>
+    </Slice>
+  ) : null
+}
 
-<Slice id="IdBreadcrumb" className="secondary-content-bg">
-  <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">
-      <a href={parentIdNumber}>{parentIdNumber}</a>
-    </h3>
-    <h3 class="layout-right-item">
-      <a href={parentIdNumber}>{parentIdTitle}</a>
-    </h3>
-  </div>
-</Slice>
+{
+  parentEntryType === "id" ? (
+    <Slice id="IdBreadcrumb" className="secondary-content-bg">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">
+          <a href={parentIdNumber}>{parentIdNumber}</a>
+        </h3>
+        <h3 class="layout-right-item">
+          <a href={parentIdNumber}>{parentIdTitle}</a>
+        </h3>
+      </div>
+    </Slice>
+  ) : null
+}
 
 <Slice id="Header" className="active-top">
   <div class="layout-grid-left-right phone-only">
