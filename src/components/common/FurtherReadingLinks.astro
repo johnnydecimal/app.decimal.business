@@ -45,7 +45,7 @@ if (furtherReadings.length === 0) {
       {label ?? "Further reading"}
     </h3>
     <div class="layout-right-item">
-      <ul>
+      <ol>
         {
           furtherReadings.map((furtherReading: FurtherReadingEntry) => (
             <li>
@@ -58,7 +58,7 @@ if (furtherReadings.length === 0) {
             </li>
           ))
         }
-      </ul>
+      </ol>
     </div>
   </div>
 </Slice>
@@ -66,8 +66,8 @@ if (furtherReadings.length === 0) {
 <style lang="scss">
   @use "@styles/common" as *;
 
-  ul {
-    list-style-type: none;
-    padding-left: 0;
+  ol {
+    margin-top: 0;
+    padding-inline-start: 33px;
   }
 </style>
