@@ -1,0 +1,1 @@
+- ChildrenInParent looks like it needs some sort of manual override to handle ad-hoc pages. E.g. it's not showing 05.11.

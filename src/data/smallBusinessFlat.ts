@@ -220,7 +220,9 @@ export function getChildren(
     // Category provided. Get IDs and further readings that match.
     return Object.values(data).filter(
       (entry) =>
-        (entry.type === "id" || entry.type === "furtherReading") &&
+        (entry.type === "id" ||
+          entry.type === "furtherReading" ||
+          entry.type === "adHoc") &&
         entry.number.slice(0, 2) === parentNumber
     );
   } else if (parentNumber.match(/^\d\d\.\d\d$/)) {

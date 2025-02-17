@@ -17,6 +17,7 @@ import sb, {
   type AreaEntry,
   type CategoryEntry,
   type IdEntry,
+  type AdHocEntry,
 } from "@data/smallBusinessFlat";
 import parseMd from "@utils/parseMd";
 
@@ -41,7 +42,9 @@ const subEntries = getChildren(sb, number) as (
   | AreaEntry
   | CategoryEntry
   | IdEntry
+  | AdHocEntry
 )[];
+console.log("🚀 ~ subEntries:", subEntries);
 if (!subEntries) {
   return null;
 }
@@ -79,7 +82,9 @@ const processedIds = await Promise.all(
       description: entryDescription,
     };
   })
-).then((results) => results.filter((id): id is IdEntry => id !== null));
+).then((results) =>
+  results.filter((entry): entry is IdEntry | AdHocEntry => entry !== null)
+);
 ---
 
 <Slice id="ChildrenInParentLabel" className="secondary-content-bg">
