@@ -26,6 +26,7 @@ import system, {
 
 import AdHoc_00_21 from "@components/AdHoc/AdHoc_00_21.astro";
 import AdHoc_05_11 from "@components/AdHoc/AdHoc_05_11.astro";
+import AdHoc_00_91 from "@components/AdHoc/AdHoc_00_91.astro";
 
 /* --------------------------- This item's details -------------------------- */
 const idTitle = system[id]?.title;
@@ -100,6 +101,7 @@ const parentSTitle = parentSEntry.title;
 
 {id === "00.21" ? <AdHoc_00_21 /> : null}
 {id === "05.11" ? <AdHoc_05_11 /> : null}
+{id === "00.91" ? <AdHoc_00_91 /> : null}
 
 <!-- TODO fix this nonsense -->
 <div id="EndOfIDsBorder"></div>

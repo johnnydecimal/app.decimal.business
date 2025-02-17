@@ -87,7 +87,25 @@ export const area_00_09: FlattenedData = {
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
+  "00.90": {
+    number: "00.90",
+    title: "Public pages",
+    type: "id",
+    isHeader: true,
+    isPublic: true,
+    description:
+      "These pages describe the system to visitors who haven't signed up yet.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
+  },
   "00.91": {
-    ...id_00_91,
+    number: "00.91",
+    title: "Welcome to the small business system",
+    type: "adHoc",
+    isPublic: true,
+    description:
+      "The Johnny.Decimal System tackles the chaos of business by bringing order to everything — files, emails, tasks, notes — so you always know where things belong and can stay focused on what matters.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
   },
 };

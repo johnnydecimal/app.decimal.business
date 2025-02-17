@@ -59,10 +59,10 @@ const { title } = Astro.props;
     </script> -->
   </head>
   <body>
-    <!-- In this new world, we're not using Clerk's components at this level.
-         We handle all auth stuff down at the component level. -->
-    <SignedIn>You are signed in</SignedIn>
-    <SignedOut>You are not signed in</SignedOut>
+    {
+      /* In this new world, we're not using Clerk's components at this level.
+         We handle all auth stuff down at the component level. */
+    }
     <Search />
     <main>
       <slot />
