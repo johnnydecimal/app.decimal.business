@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.325Z",
-    "updatedDate": "2025-02-15T00:37:09.325Z"
+    "createdDate": "2025-02-17T02:50:20.929Z",
+    "updatedDate": "2025-02-17T02:50:20.929Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We decided to separate the ownership records for assets/investments and their earnings for clarity and neatness. In this ID we’re only interested in filing the processed income earned.\\n\\nFor example:\\n\\n```\\nASSET/INVESTMENT      PASSIVE INCOME\\n(stored in 13.40)     (stored here)\\n═════════════════════════════════════\\nCash term deposit     Interest\\nShares                Dividend\\nProperty              Rent\\n```\""
+      "text": "We decided to separate the ownership records for assets/investments and their earnings for clarity and neatness. In this ID we’re only interested in filing the processed income earned.\n\nFor example:\n\n```\nASSET/INVESTMENT      PASSIVE INCOME\n(stored in 13.40)     (stored here)\n═════════════════════════════════════\nCash term deposit     Interest\nShares                Dividend\nProperty              Rent\n```"
     }
   }
 };

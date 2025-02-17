@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.334Z",
-    "updatedDate": "2025-02-15T00:37:09.334Z"
+    "createdDate": "2025-02-17T02:50:20.935Z",
+    "updatedDate": "2025-02-17T02:50:20.935Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We decided that notes related to the configuration of any mobile device in this category would live with the thing itself. For instance, you might have a preferred way to set up staff phones, such as ensuring they all have face ID activated, company wallpaper, and cloud storage and backup. Save those details here for future reference.\""
+      "text": "We decided that notes related to the configuration of any mobile device in this category would live with the thing itself. For instance, you might have a preferred way to set up staff phones, such as ensuring they all have face ID activated, company wallpaper, and cloud storage and backup. Save those details here for future reference."
     }
   }
 };

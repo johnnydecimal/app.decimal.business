@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.328Z",
-    "updatedDate": "2025-02-15T00:37:09.328Z"
+    "createdDate": "2025-02-17T02:50:20.931Z",
+    "updatedDate": "2025-02-17T02:50:20.931Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"If you have staff, the kinds of things you might manage here include:\\n\\n- timekeeping (e.g. rosters, records of attendance, overtime, project timesheets),\\n- wages, payslips, and remittance,\\n- income tax withholding,\\n- pension payments,\\n- health insurance,\\n- paid or unpaid leave of any kind,\\n- allowances (e.g. for meals, clothing, training),\\n- any benefits, bonuses, rewards, or incentives in salary packages,\\n- expense reimbursement.\""
+      "text": "If you have staff, the kinds of things you might manage here include:\n\n- timekeeping (e.g. rosters, records of attendance, overtime, project timesheets),\n- wages, payslips, and remittance,\n- income tax withholding,\n- pension payments,\n- health insurance,\n- paid or unpaid leave of any kind,\n- allowances (e.g. for meals, clothing, training),\n- any benefits, bonuses, rewards, or incentives in salary packages,\n- expense reimbursement."
     }
   }
 };

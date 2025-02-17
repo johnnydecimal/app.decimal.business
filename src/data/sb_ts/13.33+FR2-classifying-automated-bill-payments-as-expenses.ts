@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.327Z",
-    "updatedDate": "2025-02-15T00:37:09.327Z"
+    "createdDate": "2025-02-17T02:50:20.930Z",
+    "updatedDate": "2025-02-17T02:50:20.930Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Normally we think of the bills that we receive by email or post as liabilities. But as noted in [[13.54]], we made a decision to classify _direct debits_ of bill payments as going ‘straight to expenses’. They’re paid automatically and you don’t need to plan a time to physically transfer money.\\n\\nFor instance, you’ve set up direct debits for your utility bills. They’re paid automatically on the due date. Now they’re just expense transactions on your bank statement that you process and file here.\""
+      "text": "Normally we think of the bills that we receive by email or post as liabilities. But as noted in [[13.54]], we made a decision to classify _direct debits_ of bill payments as going ‘straight to expenses’. They’re paid automatically and you don’t need to plan a time to physically transfer money.\n\nFor instance, you’ve set up direct debits for your utility bills. They’re paid automatically on the due date. Now they’re just expense transactions on your bank statement that you process and file here."
     }
   }
 };

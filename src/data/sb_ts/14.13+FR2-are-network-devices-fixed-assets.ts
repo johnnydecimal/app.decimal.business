@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.334Z",
-    "updatedDate": "2025-02-15T00:37:09.334Z"
+    "createdDate": "2025-02-17T02:50:20.936Z",
+    "updatedDate": "2025-02-17T02:50:20.936Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We’ve (tentatively) assumed that network devices are classed as fixed assets, like computers. But it’ll be up to your accountant and local tax guidelines if this is the case.\""
+      "text": "We’ve (tentatively) assumed that network devices are classed as fixed assets, like computers. But it’ll be up to your accountant and local tax guidelines if this is the case."
     }
   }
 };

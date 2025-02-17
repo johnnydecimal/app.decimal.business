@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.316Z",
-    "updatedDate": "2025-02-15T00:37:09.316Z"
+    "createdDate": "2025-02-17T02:50:20.919Z",
+    "updatedDate": "2025-02-17T02:50:20.919Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"When we say ‘formal vehicle’, ‘motor vehicle’, or ‘registered vehicle’, it doesn’t matter if it’s a car, trailer, boat, seaplane, caravan, hot-air balloon, or Hansom cab. If it’s core to your business and requires some kind of official paperwork, put it up here.\""
+      "text": "When we say ‘formal vehicle’, ‘motor vehicle’, or ‘registered vehicle’, it doesn’t matter if it’s a car, trailer, boat, seaplane, caravan, hot-air balloon, or Hansom cab. If it’s core to your business and requires some kind of official paperwork, put it up here."
     }
   }
 };

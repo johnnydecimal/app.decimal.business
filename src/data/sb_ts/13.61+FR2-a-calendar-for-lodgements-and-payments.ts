@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.332Z",
-    "updatedDate": "2025-02-15T00:37:09.332Z"
+    "createdDate": "2025-02-17T02:50:20.933Z",
+    "updatedDate": "2025-02-17T02:50:20.933Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"If you have lots of different payment obligations, we’d recommend creating a calendar of due dates. This might include government taxes, as well as pension and health insurance payments for you and/or your staff. Since these dates may change slightly each year, remember to update them as needed. And if you use accounting software, check if this kind of reminder feature is enabled.\""
+      "text": "If you have lots of different payment obligations, we’d recommend creating a calendar of due dates. This might include government taxes, as well as pension and health insurance payments for you and/or your staff. Since these dates may change slightly each year, remember to update them as needed. And if you use accounting software, check if this kind of reminder feature is enabled."
     }
   }
 };

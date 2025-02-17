@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.335Z",
-    "updatedDate": "2025-02-15T00:37:09.335Z"
+    "createdDate": "2025-02-17T02:50:20.936Z",
+    "updatedDate": "2025-02-17T02:50:20.936Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We decided that notes related to the configuration of any accessory in this category would live with the thing itself. For instance, when you get a new printer there’s usually settings to choose and maybe a password. When you get a new monitor, you might choose certain colour, brightness, and energy settings. Record what you did here.\""
+      "text": "We decided that notes related to the configuration of any accessory in this category would live with the thing itself. For instance, when you get a new printer there’s usually settings to choose and maybe a password. When you get a new monitor, you might choose certain colour, brightness, and energy settings. Record what you did here."
     }
   }
 };

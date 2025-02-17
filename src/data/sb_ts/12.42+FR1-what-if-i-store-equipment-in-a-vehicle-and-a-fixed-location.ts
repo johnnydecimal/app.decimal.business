@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.317Z",
-    "updatedDate": "2025-02-15T00:37:09.317Z"
+    "createdDate": "2025-02-17T02:50:20.920Z",
+    "updatedDate": "2025-02-17T02:50:20.920Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"As noted at [[12.12]], if you store equipment in both a vehicle and a fixed location, there might be some overlap here. Just do what makes sense to you. For instance, if you’re a plumber your equipment might be insured in your home garage and also in your van. If these are separate policies then save them where relevant and leave a note in your JDex.\""
+      "text": "As noted at [[12.12]], if you store equipment in both a vehicle and a fixed location, there might be some overlap here. Just do what makes sense to you. For instance, if you’re a plumber your equipment might be insured in your home garage and also in your van. If these are separate policies then save them where relevant and leave a note in your JDex."
     }
   }
 };

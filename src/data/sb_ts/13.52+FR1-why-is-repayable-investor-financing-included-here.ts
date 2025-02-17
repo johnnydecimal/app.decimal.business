@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.331Z",
-    "updatedDate": "2025-02-15T00:37:09.331Z"
+    "createdDate": "2025-02-17T02:50:20.933Z",
+    "updatedDate": "2025-02-17T02:50:20.933Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We made a decision to include any sort of repayable investor financing here as a cash loan account. Depending on who it’s from, it might not be set up like a typical bank loan account. But you’ll still have some form of repayment obligations and/or ‘statements’ to track, process, and file.\""
+      "text": "We made a decision to include any sort of repayable investor financing here as a cash loan account. Depending on who it’s from, it might not be set up like a typical bank loan account. But you’ll still have some form of repayment obligations and/or ‘statements’ to track, process, and file."
     }
   }
 };

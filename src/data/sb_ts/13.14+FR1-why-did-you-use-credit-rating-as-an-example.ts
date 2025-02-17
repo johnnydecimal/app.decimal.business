@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.324Z",
-    "updatedDate": "2025-02-15T00:37:09.324Z"
+    "createdDate": "2025-02-17T02:50:20.928Z",
+    "updatedDate": "2025-02-17T02:50:20.928Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We’ve used credit rating as an example of something that might go here. Some people might classify a great credit rating as an asset. But we’re not accountants. This is where we would file it. And if our accountant asked for it, we’d know exactly where it is.\""
+      "text": "We’ve used credit rating as an example of something that might go here. Some people might classify a great credit rating as an asset. But we’re not accountants. This is where we would file it. And if our accountant asked for it, we’d know exactly where it is."
     }
   }
 };

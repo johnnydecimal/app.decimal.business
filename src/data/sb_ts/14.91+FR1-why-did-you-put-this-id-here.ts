@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.347Z",
-    "updatedDate": "2025-02-15T00:37:09.347Z"
+    "createdDate": "2025-02-17T02:50:20.948Z",
+    "updatedDate": "2025-02-17T02:50:20.948Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"If you keep lists like this, they’ll no doubt contain information relevant to all categories, not just technology. But we’ve recommended putting them here because they’re accessible _on_ technology. And it might be handy to have them all in one ID.\\n\\nIf you actively use your browser bookmarks and keep them well organised, you might not need this ID. But for those of us who don’t, here’s an alternative.\""
+      "text": "If you keep lists like this, they’ll no doubt contain information relevant to all categories, not just technology. But we’ve recommended putting them here because they’re accessible _on_ technology. And it might be handy to have them all in one ID.\n\nIf you actively use your browser bookmarks and keep them well organised, you might not need this ID. But for those of us who don’t, here’s an alternative."
     }
   }
 };

@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.330Z",
-    "updatedDate": "2025-02-15T00:37:09.330Z"
+    "createdDate": "2025-02-17T02:50:20.931Z",
+    "updatedDate": "2025-02-17T02:50:20.931Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"In Australia, companies, partnerships, and trusts must have a business account for tax purposes. Sole traders can use a personal account, but a business account is still recommended. So if you’re just starting out, find out what’s required in your country and the kind of account that’s right for you.\""
+      "text": "In Australia, companies, partnerships, and trusts must have a business account for tax purposes. Sole traders can use a personal account, but a business account is still recommended. So if you’re just starting out, find out what’s required in your country and the kind of account that’s right for you."
     }
   }
 };

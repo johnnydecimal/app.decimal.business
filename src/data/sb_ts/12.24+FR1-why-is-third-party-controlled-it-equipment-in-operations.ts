@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.313Z",
-    "updatedDate": "2025-02-15T00:37:09.313Z"
+    "createdDate": "2025-02-17T02:50:20.916Z",
+    "updatedDate": "2025-02-17T02:50:20.916Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We made a decision to separate third-party-controlled IT equipment versus things that you control. If a supplier is providing an ongoing service to you, managing that becomes part of daily operations.\\n\\nBut if you buy computers, printers, or other IT gadgets outright and control them, store the records and product manuals with your other technology in [[14.10]].\""
+      "text": "We made a decision to separate third-party-controlled IT equipment versus things that you control. If a supplier is providing an ongoing service to you, managing that becomes part of daily operations.\n\nBut if you buy computers, printers, or other IT gadgets outright and control them, store the records and product manuals with your other technology in [[14.10]]."
     }
   }
 };

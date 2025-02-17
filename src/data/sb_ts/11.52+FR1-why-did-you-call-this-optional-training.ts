@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.309Z",
-    "updatedDate": "2025-02-15T00:37:09.309Z"
+    "createdDate": "2025-02-17T02:50:20.913Z",
+    "updatedDate": "2025-02-17T02:50:20.913Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We’ve called this ‘optional’ as it’s the kind of training or credential you might add on to basic requirements. It’s nice to have, it might make you better at your job, but it’s not required by the business or the law.\\n\\nIf you have multiple staff, everyone might do different things depending on their role and skill set. And it may be a formal qualification that is recognised anywhere, as opposed to training that is specific to your business.\""
+      "text": "We’ve called this ‘optional’ as it’s the kind of training or credential you might add on to basic requirements. It’s nice to have, it might make you better at your job, but it’s not required by the business or the law.\n\nIf you have multiple staff, everyone might do different things depending on their role and skill set. And it may be a formal qualification that is recognised anywhere, as opposed to training that is specific to your business."
     }
   }
 };

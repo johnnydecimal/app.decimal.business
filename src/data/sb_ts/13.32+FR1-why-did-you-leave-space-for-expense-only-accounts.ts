@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.326Z",
-    "updatedDate": "2025-02-15T00:37:09.326Z"
+    "createdDate": "2025-02-17T02:50:20.930Z",
+    "updatedDate": "2025-02-17T02:50:20.930Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Many businesses won’t need this ID if they just use a regular bank account to handle income and expenses. But we wanted to leave space for other types of ‘one-way’ accounts that send money out. You don’t want to miss anything in case it’s deductible.\""
+      "text": "Many businesses won’t need this ID if they just use a regular bank account to handle income and expenses. But we wanted to leave space for other types of ‘one-way’ accounts that send money out. You don’t want to miss anything in case it’s deductible."
     }
   }
 };

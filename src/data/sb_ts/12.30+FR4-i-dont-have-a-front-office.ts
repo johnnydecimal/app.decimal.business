@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.314Z",
-    "updatedDate": "2025-02-15T00:37:09.314Z"
+    "createdDate": "2025-02-17T02:50:20.918Z",
+    "updatedDate": "2025-02-17T02:50:20.918Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"If you do everything in your back office and never interact with customers, this section will be empty. That’s okay. Parts of this system will be very quiet for many businesses and super busy for others.\\n\\nFor example, Johnny.Decimal HQ operates solely in a rented back office, with two staff, and no vehicles. Most of our business administration is money related, and even then, our accountant does the heavy lifting. When Lucy was a freelance writer, everything happened in her back office – a desk with a laptop. Pretty simple.\""
+      "text": "If you do everything in your back office and never interact with customers, this section will be empty. That’s okay. Parts of this system will be very quiet for many businesses and super busy for others.\n\nFor example, Johnny.Decimal HQ operates solely in a rented back office, with two staff, and no vehicles. Most of our business administration is money related, and even then, our accountant does the heavy lifting. When Lucy was a freelance writer, everything happened in her back office – a desk with a laptop. Pretty simple."
     }
   }
 };

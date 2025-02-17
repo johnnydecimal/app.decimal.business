@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.337Z",
-    "updatedDate": "2025-02-15T00:37:09.337Z"
+    "createdDate": "2025-02-17T02:50:20.938Z",
+    "updatedDate": "2025-02-17T02:50:20.938Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Don’t trust that important data is backed up by the third party that stores it.\\n\\nMaybe important customer data is in your email account or an online database. Or all your financial data is in accounting software. Don't assume that those services can/will recover your data if it's lost. There are ways to export and back this up yourself. We’ll discuss this further in [[14.23]].\""
+      "text": "Don’t trust that important data is backed up by the third party that stores it.\n\nMaybe important customer data is in your email account or an online database. Or all your financial data is in accounting software. Don't assume that those services can/will recover your data if it's lost. There are ways to export and back this up yourself. We’ll discuss this further in [[14.23]]."
     }
   }
 };

@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.313Z",
-    "updatedDate": "2025-02-15T00:37:09.313Z"
+    "createdDate": "2025-02-17T02:50:20.917Z",
+    "updatedDate": "2025-02-17T02:50:20.917Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"A baker’s pie is their product. The branded napkins for customers are a front office supply (and they’re not what staff get in the back office).\\n\\nA haircut is a hairdresser’s product. The coffee and biscuits for customers are front office supplies.\\n\\nA clean dog is a dog groomer’s product. The hose used to wash it is a front office supply.\""
+      "text": "A baker’s pie is their product. The branded napkins for customers are a front office supply (and they’re not what staff get in the back office).\n\nA haircut is a hairdresser’s product. The coffee and biscuits for customers are front office supplies.\n\nA clean dog is a dog groomer’s product. The hose used to wash it is a front office supply."
     }
   }
 };

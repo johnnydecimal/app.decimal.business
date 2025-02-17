@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.333Z",
-    "updatedDate": "2025-02-15T00:37:09.333Z"
+    "createdDate": "2025-02-17T02:50:20.935Z",
+    "updatedDate": "2025-02-17T02:50:20.935Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We decided that notes related to the configuration of any computer in this category would live with the thing itself.\\n\\nFor example, Johnny has configured a particular user account for when he logs in to his laptop. You might have a specific way to set up staff laptops, such as ensuring they all have the same applications, desktop background, and company screensaver. Save those details here for future reference.\""
+      "text": "We decided that notes related to the configuration of any computer in this category would live with the thing itself.\n\nFor example, Johnny has configured a particular user account for when he logs in to his laptop. You might have a specific way to set up staff laptops, such as ensuring they all have the same applications, desktop background, and company screensaver. Save those details here for future reference."
     }
   }
 };

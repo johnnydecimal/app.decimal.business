@@ -118,7 +118,6 @@ import { category_14 } from "./category_14";
 
 import fr_15_90_FR1 from "@data/sb_ts/15.90+FR1-why-are-there-no-ids-here";
 import fr_15_90_FR2 from "@data/sb_ts/15.90+FR2-leave-yourself-jdex-notes";
-import fr_15_90_FR3 from "@data/sb_ts/15.90+FR3-15.90-travel-events-social-library";
 
 const flattenedData: FlattenedData = {
   J82: {
@@ -149,7 +148,6 @@ const flattenedData: FlattenedData = {
   ...category_14,
   "15.90+FR1": { ...fr_15_90_FR1 },
   "15.90+FR2": { ...fr_15_90_FR2 },
-  "15.90+FR3": { ...fr_15_90_FR3 },
 
   "20-29": {
     type: "area",

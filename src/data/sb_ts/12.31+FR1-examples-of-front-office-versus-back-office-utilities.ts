@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.314Z",
-    "updatedDate": "2025-02-15T00:37:09.314Z"
+    "createdDate": "2025-02-17T02:50:20.918Z",
+    "updatedDate": "2025-02-17T02:50:20.918Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"A hair salon has:\\n\\n- a wifi account for customer use (front office),\\n- and a separate internet connection in the back office for staff.\\n\\nA cafe has:\\n\\n- a food truck with gas bottles (front office),\\n- but they don’t need gas in their back office.\\n\\nA coffee cart uses:\\n\\n- a power outlet provided by the city (front office),\\n- which is a separate account to their back office electricity.\\n\\nA mobile beer cart has:\\n\\n- a generator to cool its kegs (front office),\\n- but the brewery back office has a standard electricity connection.\\n\\nA market stall uses:\\n\\n- ice to keep its product cool on hot days (front office),\\n- but they don’t use ice in their back office.\""
+      "text": "A hair salon has:\n\n- a wifi account for customer use (front office),\n- and a separate internet connection in the back office for staff.\n\nA cafe has:\n\n- a food truck with gas bottles (front office),\n- but they don’t need gas in their back office.\n\nA coffee cart uses:\n\n- a power outlet provided by the city (front office),\n- which is a separate account to their back office electricity.\n\nA mobile beer cart has:\n\n- a generator to cool its kegs (front office),\n- but the brewery back office has a standard electricity connection.\n\nA market stall uses:\n\n- ice to keep its product cool on hot days (front office),\n- but they don’t use ice in their back office."
     }
   }
 };

@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.332Z",
-    "updatedDate": "2025-02-15T00:37:09.332Z"
+    "createdDate": "2025-02-17T02:50:20.934Z",
+    "updatedDate": "2025-02-17T02:50:20.934Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We recommend that all government tax records should be permanently filed here after processing. Not just income tax returns.\\n\\nWhether a business is paying income, sales, fringe benefits, or payroll tax, it all goes to an account somewhere with your name on it. So we wanted to ensure there’s a resting place for all the final documents.\\n\\nHaving everything tax related in the one place feels helpful. You can always duplicate any records that you would like to add elsewhere in the system.\""
+      "text": "We recommend that all government tax records should be permanently filed here after processing. Not just income tax returns.\n\nWhether a business is paying income, sales, fringe benefits, or payroll tax, it all goes to an account somewhere with your name on it. So we wanted to ensure there’s a resting place for all the final documents.\n\nHaving everything tax related in the one place feels helpful. You can always duplicate any records that you would like to add elsewhere in the system."
     }
   }
 };

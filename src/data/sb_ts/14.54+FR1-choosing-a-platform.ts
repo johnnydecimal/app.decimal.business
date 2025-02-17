@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.346Z",
-    "updatedDate": "2025-02-15T00:37:09.346Z"
+    "createdDate": "2025-02-17T02:50:20.947Z",
+    "updatedDate": "2025-02-17T02:50:20.947Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"If you’d like to start doing this kind of thing, it’s worth researching different platforms. Most people have heard of Mailchimp because they’ve been around for years. But a quick search shows there’s lots of options now. So have a look at the features and pricing and see which platform is right for your business.\""
+      "text": "If you’d like to start doing this kind of thing, it’s worth researching different platforms. Most people have heard of Mailchimp because they’ve been around for years. But a quick search shows there’s lots of options now. So have a look at the features and pricing and see which platform is right for your business."
     }
   }
 };

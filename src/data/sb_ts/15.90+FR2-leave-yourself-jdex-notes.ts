@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.348Z",
-    "updatedDate": "2025-02-15T00:37:09.348Z"
+    "createdDate": "2025-02-17T02:50:20.949Z",
+    "updatedDate": "2025-02-17T02:50:20.949Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Remember to leave a note in your JDex when you save things in this library so you can find them easily. This is an important habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again.\""
+      "text": "Remember to leave a note in your JDex when you save things in this library so you can find them easily. This is an important habit to get into, by the way. Don’t agonise if you’re unsure where something should go. Find the first relevant ID, make a decision, and leave yourself a note. Having a well-maintained JDex means you’ll never lose anything again."
     }
   }
 };

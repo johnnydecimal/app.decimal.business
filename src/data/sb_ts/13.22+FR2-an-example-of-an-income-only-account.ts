@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.325Z",
-    "updatedDate": "2025-02-15T00:37:09.325Z"
+    "createdDate": "2025-02-17T02:50:20.928Z",
+    "updatedDate": "2025-02-17T02:50:20.928Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"At JDHQ, we have online courses on a learning platform. They process payments via Stripe. We want to track this account because it contains data that we need to calculate income. And depending on where a customer lives, we may need to pay sales tax on the transaction.\\n\\nThis account is _only_ incomings, we can’t pay expenses with it. It holds money until they release it to a nominated bank account. Therefore, we would store the formal Stripe account statements here.\""
+      "text": "At JDHQ, we have online courses on a learning platform. They process payments via Stripe. We want to track this account because it contains data that we need to calculate income. And depending on where a customer lives, we may need to pay sales tax on the transaction.\n\nThis account is _only_ incomings, we can’t pay expenses with it. It holds money until they release it to a nominated bank account. Therefore, we would store the formal Stripe account statements here."
     }
   }
 };

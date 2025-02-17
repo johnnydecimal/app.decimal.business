@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.339Z",
-    "updatedDate": "2025-02-15T00:37:09.339Z"
+    "createdDate": "2025-02-17T02:50:20.940Z",
+    "updatedDate": "2025-02-17T02:50:20.940Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"This is the companion to [[14.31]], but for stuff that you don't have direct control over. Software that you _buy or use for free_ rather than develop. Services that you _consume_ rather than provide.\\n\\nNote that an internal service might use an external service as one of its components.\\n\\nFor example, our office network is an internal service. It is made possible by the devices that are stored in [[14.13]].\\n\\nIt also uses some external services, such as the ISP, Aussie Broadband. And eero Plus, which offers extra security, among other things. We would store those here.\""
+      "text": "This is the companion to [[14.31]], but for stuff that you don't have direct control over. Software that you _buy or use for free_ rather than develop. Services that you _consume_ rather than provide.\n\nNote that an internal service might use an external service as one of its components.\n\nFor example, our office network is an internal service. It is made possible by the devices that are stored in [[14.13]].\n\nIt also uses some external services, such as the ISP, Aussie Broadband. And eero Plus, which offers extra security, among other things. We would store those here."
     }
   }
 };

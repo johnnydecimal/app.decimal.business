@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.337Z",
-    "updatedDate": "2025-02-15T00:37:09.337Z"
+    "createdDate": "2025-02-17T02:50:20.938Z",
+    "updatedDate": "2025-02-17T02:50:20.938Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"If you deal with customer data or anything else that’s sensitive, you’ll need a policy about this. It should outline how your business saves, retains, and backs up data in accordance with industry standards and compliance legislation.\""
+      "text": "If you deal with customer data or anything else that’s sensitive, you’ll need a policy about this. It should outline how your business saves, retains, and backs up data in accordance with industry standards and compliance legislation."
     }
   }
 };

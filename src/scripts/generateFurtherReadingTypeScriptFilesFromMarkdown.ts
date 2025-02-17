@@ -57,7 +57,7 @@ async function generateFurtherReadingTypeScriptFilesFromMarkdown() {
         },
         extensions: {
           furtherReading: {
-            text: JSON.stringify(remainingText),
+            text: remainingText,
           },
         },
       };

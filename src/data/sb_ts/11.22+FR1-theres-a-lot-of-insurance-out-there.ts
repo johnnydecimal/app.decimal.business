@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.307Z",
-    "updatedDate": "2025-02-15T00:37:09.307Z"
+    "createdDate": "2025-02-17T02:50:20.911Z",
+    "updatedDate": "2025-02-17T02:50:20.911Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We can’t advise you on what to get. But one thing we’ve learned in our research is that there are _a lot_ of business insurance options. It’s a bit overwhelming. We now understand the value of a trustworthy insurance professional to provide tailored advice.\\n\\nWe’ve also noticed that insurance companies often have commercial policies that are designed for certain occupations. So it might pay to look around to see if that’s an option for you.\""
+      "text": "We can’t advise you on what to get. But one thing we’ve learned in our research is that there are _a lot_ of business insurance options. It’s a bit overwhelming. We now understand the value of a trustworthy insurance professional to provide tailored advice.\n\nWe’ve also noticed that insurance companies often have commercial policies that are designed for certain occupations. So it might pay to look around to see if that’s an option for you."
     }
   }
 };

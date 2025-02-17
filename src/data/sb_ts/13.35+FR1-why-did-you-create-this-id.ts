@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.329Z",
-    "updatedDate": "2025-02-15T00:37:09.329Z"
+    "createdDate": "2025-02-17T02:50:20.931Z",
+    "updatedDate": "2025-02-17T02:50:20.931Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"This ID came about from a desire to not be surprised by annual payments for software and other online services. You might forget about them because you no longer need them. And depending on the company, they may not be interested in your sob story if you ask for a refund.\\n\\nBut it’s also nice for cash flow purposes to know exactly how much money is going to get sucked out of your bank accounts. So we wanted to leave a place to collect everything like this in a list.\""
+      "text": "This ID came about from a desire to not be surprised by annual payments for software and other online services. You might forget about them because you no longer need them. And depending on the company, they may not be interested in your sob story if you ask for a refund.\n\nBut it’s also nice for cash flow purposes to know exactly how much money is going to get sucked out of your bank accounts. So we wanted to leave a place to collect everything like this in a list."
     }
   }
 };

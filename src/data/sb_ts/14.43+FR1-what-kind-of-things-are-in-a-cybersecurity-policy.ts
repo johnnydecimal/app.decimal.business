@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.341Z",
-    "updatedDate": "2025-02-15T00:37:09.341Z"
+    "createdDate": "2025-02-17T02:50:20.944Z",
+    "updatedDate": "2025-02-17T02:50:20.944Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"A cybersecurity policy might address behaviours around things like:\\n\\n- passwords, passphrases, and multi-factor authentication,\\n- threat awareness when using email, websites, and search engines,\\n- threat awareness when answering phone calls,\\n- what is ‘acceptable use’ of the business’ network, computers, and devices,\\n- use of personal devices for business purposes,\\n- working from home,\\n- network protection,\\n- keeping operating systems and antivirus software up to date,\\n- responsible data handling,\\n- use of storage devices,\\n- and how to report a threat or get help if a security event occurs.\""
+      "text": "A cybersecurity policy might address behaviours around things like:\n\n- passwords, passphrases, and multi-factor authentication,\n- threat awareness when using email, websites, and search engines,\n- threat awareness when answering phone calls,\n- what is ‘acceptable use’ of the business’ network, computers, and devices,\n- use of personal devices for business purposes,\n- working from home,\n- network protection,\n- keeping operating systems and antivirus software up to date,\n- responsible data handling,\n- use of storage devices,\n- and how to report a threat or get help if a security event occurs."
     }
   }
 };

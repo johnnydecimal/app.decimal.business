@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.315Z",
-    "updatedDate": "2025-02-15T00:37:09.315Z"
+    "createdDate": "2025-02-17T02:50:20.919Z",
+    "updatedDate": "2025-02-17T02:50:20.919Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Depending on how generous you are, the teabags and other items for customers (front office) are probably fancier than those in the staff break room (back office). So we made space here to track these items since they might come from different suppliers.\""
+      "text": "Depending on how generous you are, the teabags and other items for customers (front office) are probably fancier than those in the staff break room (back office). So we made space here to track these items since they might come from different suppliers."
     }
   }
 };

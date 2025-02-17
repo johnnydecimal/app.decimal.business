@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.334Z",
-    "updatedDate": "2025-02-15T00:37:09.334Z"
+    "createdDate": "2025-02-17T02:50:20.936Z",
+    "updatedDate": "2025-02-17T02:50:20.936Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We decided that notes related to the configuration of any network device in this category would live with the thing itself. For instance, an ADSL modem/router needs to be configured so that it broadcasts wifi with a certain password. It has a web interface where you type things in boxes to create the wifi network. Record what you did here.\""
+      "text": "We decided that notes related to the configuration of any network device in this category would live with the thing itself. For instance, an ADSL modem/router needs to be configured so that it broadcasts wifi with a certain password. It has a web interface where you type things in boxes to create the wifi network. Record what you did here."
     }
   }
 };

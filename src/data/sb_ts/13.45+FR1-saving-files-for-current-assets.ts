@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.330Z",
-    "updatedDate": "2025-02-15T00:37:09.330Z"
+    "createdDate": "2025-02-17T02:50:20.932Z",
+    "updatedDate": "2025-02-17T02:50:20.932Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"This ID should contain copies of records saved elsewhere in the system. That’s okay because these are static records. We want a place where you and/or your accountant can go to see the proof of ownership and value of any current assets in one place.\\n\\nFor instance, a furniture maker’s stock (finished products to sell to customers) and inventory (raw materials used to make the products) are current assets:\\n\\n- He manages the stock and inventory in [[20-29]].\\n- He copies valuations and receipts here for his accountant.\\n- And he also has a master finance record in [[13.11]] that includes a summary of his current assets because that’s how he rolls.\""
+      "text": "This ID should contain copies of records saved elsewhere in the system. That’s okay because these are static records. We want a place where you and/or your accountant can go to see the proof of ownership and value of any current assets in one place.\n\nFor instance, a furniture maker’s stock (finished products to sell to customers) and inventory (raw materials used to make the products) are current assets:\n\n- He manages the stock and inventory in [[20-29]].\n- He copies valuations and receipts here for his accountant.\n- And he also has a master finance record in [[13.11]] that includes a summary of his current assets because that’s how he rolls."
     }
   }
 };

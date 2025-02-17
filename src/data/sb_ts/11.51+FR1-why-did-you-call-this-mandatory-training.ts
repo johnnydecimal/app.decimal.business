@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.308Z",
-    "updatedDate": "2025-02-15T00:37:09.308Z"
+    "createdDate": "2025-02-17T02:50:20.913Z",
+    "updatedDate": "2025-02-17T02:50:20.913Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We’ve called this ‘mandatory’ as it’s the kind of training you tend to be given as a new employee. Or it might be required due to workplace compliance laws. Or it’s related to how you or staff are expected to do their job. Either way, it must be done.\""
+      "text": "We’ve called this ‘mandatory’ as it’s the kind of training you tend to be given as a new employee. Or it might be required due to workplace compliance laws. Or it’s related to how you or staff are expected to do their job. Either way, it must be done."
     }
   }
 };

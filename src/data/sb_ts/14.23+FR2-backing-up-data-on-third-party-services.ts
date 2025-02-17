@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.337Z",
-    "updatedDate": "2025-02-15T00:37:09.337Z"
+    "createdDate": "2025-02-17T02:50:20.939Z",
+    "updatedDate": "2025-02-17T02:50:20.939Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We all have data spread around the internet. Remember that it’s _yours_. There are usually ways to export it from third-party services if you want to back it up. For instance, services like Gmail, Xero, and Instagram publish instructions on how to do this.\""
+      "text": "We all have data spread around the internet. Remember that it’s _yours_. There are usually ways to export it from third-party services if you want to back it up. For instance, services like Gmail, Xero, and Instagram publish instructions on how to do this."
     }
   }
 };

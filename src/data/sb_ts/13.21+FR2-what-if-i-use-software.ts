@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.324Z",
-    "updatedDate": "2025-02-15T00:37:09.324Z"
+    "createdDate": "2025-02-17T02:50:20.928Z",
+    "updatedDate": "2025-02-17T02:50:20.928Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"If you use point-of-sale and/or accounting software then a lot of work will be automated. However, it’s still important to cross-check that everything is as it should be and the income is in your bank account.\""
+      "text": "If you use point-of-sale and/or accounting software then a lot of work will be automated. However, it’s still important to cross-check that everything is as it should be and the income is in your bank account."
     }
   }
 };

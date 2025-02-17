@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.329Z",
-    "updatedDate": "2025-02-15T00:37:09.329Z"
+    "createdDate": "2025-02-17T02:50:20.931Z",
+    "updatedDate": "2025-02-17T02:50:20.931Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Static documents supplied by a platform or bank (e.g. PDFs). As opposed to raw data that you might download into a spreadsheet and manipulate. Do that kind of work in [[13.41]].\""
+      "text": "Static documents supplied by a platform or bank (e.g. PDFs). As opposed to raw data that you might download into a spreadsheet and manipulate. Do that kind of work in [[13.41]]."
     }
   }
 };

@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.340Z",
-    "updatedDate": "2025-02-15T00:37:09.340Z"
+    "createdDate": "2025-02-17T02:50:20.943Z",
+    "updatedDate": "2025-02-17T02:50:20.943Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"This also feels like a good place to remind yourself and other key staff how the business accesses online government services. Things like portals for lodging and paying taxes or receiving assistance.\\n\\nLogging in to such services often requires a physics degree and a lot of patience. So be kind to your future selves and write some instructions here.\""
+      "text": "This also feels like a good place to remind yourself and other key staff how the business accesses online government services. Things like portals for lodging and paying taxes or receiving assistance.\n\nLogging in to such services often requires a physics degree and a lot of patience. So be kind to your future selves and write some instructions here."
     }
   }
 };

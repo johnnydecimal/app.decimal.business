@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.343Z",
-    "updatedDate": "2025-02-15T00:37:09.343Z"
+    "createdDate": "2025-02-17T02:50:20.945Z",
+    "updatedDate": "2025-02-17T02:50:20.945Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Your domain name is very important because you can usually only ‘buy’ them for a year (technically it’s a rental). So people forget to renew them and then whoops, everything’s gone.\\n\\nSo put a reminder in your calendar. You can build another website anytime. But if someone else gets your domain name, it’s all over.\""
+      "text": "Your domain name is very important because you can usually only ‘buy’ them for a year (technically it’s a rental). So people forget to renew them and then whoops, everything’s gone.\n\nSo put a reminder in your calendar. You can build another website anytime. But if someone else gets your domain name, it’s all over."
     }
   }
 };

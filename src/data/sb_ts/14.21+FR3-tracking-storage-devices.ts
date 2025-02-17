@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.336Z",
-    "updatedDate": "2025-02-15T00:37:09.336Z"
+    "createdDate": "2025-02-17T02:50:20.937Z",
+    "updatedDate": "2025-02-17T02:50:20.937Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Physical storage devices have a certain security profile because many of them can be carried around in public. This is something to consider in [[14.40]].\\n\\nWe recommend recording their usual location. This might just be a note in your JDex. Are they in a drawer, cupboard, vehicle, locked safe? Are they used by a particular staff member and/or taken offsite?\\n\\nIt might be worth having regular audits or reviews so you know where your stuff is. You don’t want someone carrying around your company's intellectual property on an insecure USB stick.\""
+      "text": "Physical storage devices have a certain security profile because many of them can be carried around in public. This is something to consider in [[14.40]].\n\nWe recommend recording their usual location. This might just be a note in your JDex. Are they in a drawer, cupboard, vehicle, locked safe? Are they used by a particular staff member and/or taken offsite?\n\nIt might be worth having regular audits or reviews so you know where your stuff is. You don’t want someone carrying around your company's intellectual property on an insecure USB stick."
     }
   }
 };

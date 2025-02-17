@@ -4,14 +4,14 @@ const entry: FurtherReadingEntry = {
   "number": "11.11+FR1",
   "title": "Why is my product IP not here?",
   "type": "furtherReading",
-  "isPublic": false,
+  "isPublic": true,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.304Z",
-    "updatedDate": "2025-02-15T00:37:09.305Z"
+    "createdDate": "2025-02-17T02:50:20.907Z",
+    "updatedDate": "2025-02-17T02:50:20.908Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"This ID is _not_ related to your product or service. You might conduct different types of business under one entity. Hence, we recommend that any trademark records for the business name should go here. But if you have other patents, trademarks, or copyrights, they should live with the things they protect.\""
+      "text": "This ID is _not_ related to your product or service. You might conduct different types of business under one entity. Hence, we recommend that any trademark records for the business name should go here. But if you have other patents, trademarks, or copyrights, they should live with the things they protect."
     }
   }
 };

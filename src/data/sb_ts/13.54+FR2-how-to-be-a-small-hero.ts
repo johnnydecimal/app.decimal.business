@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.332Z",
-    "updatedDate": "2025-02-15T00:37:09.332Z"
+    "createdDate": "2025-02-17T02:50:20.933Z",
+    "updatedDate": "2025-02-17T02:50:20.933Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"If you can, consider paying invoices from sole traders on the day they’re received. One company used to do this for Lucy. She didn’t ask them to, they just did it. Every time. It was an amazing gesture towards the smallest of business owners and made a huge difference to her cashflow and ability to trade.\""
+      "text": "If you can, consider paying invoices from sole traders on the day they’re received. One company used to do this for Lucy. She didn’t ask them to, they just did it. Every time. It was an amazing gesture towards the smallest of business owners and made a huge difference to her cashflow and ability to trade."
     }
   }
 };

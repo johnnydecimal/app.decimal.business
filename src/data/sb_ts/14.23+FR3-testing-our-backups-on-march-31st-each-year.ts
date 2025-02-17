@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.337Z",
-    "updatedDate": "2025-02-15T00:37:09.337Z"
+    "createdDate": "2025-02-17T02:50:20.939Z",
+    "updatedDate": "2025-02-17T02:50:20.939Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"A crucial component of backups, which everyone tends to neglect, is _testing that they work_. This should happen at least once a year. So we'll use World Backup Day (March 31st) to test our own and encourage others to do the same.\""
+      "text": "A crucial component of backups, which everyone tends to neglect, is _testing that they work_. This should happen at least once a year. So we'll use World Backup Day (March 31st) to test our own and encourage others to do the same."
     }
   }
 };

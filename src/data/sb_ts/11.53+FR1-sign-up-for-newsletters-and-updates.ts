@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.309Z",
-    "updatedDate": "2025-02-15T00:37:09.309Z"
+    "createdDate": "2025-02-17T02:50:20.913Z",
+    "updatedDate": "2025-02-17T02:50:20.913Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Nerd tip: this may sound obvious but we only just did it ourselves.\\n\\n1. Go to your government’s small business and/or tax website.\\n2. See if they have newsletters.\\n3. Sign up!\\n\\nWe’ve subscribed to about ten different newsletters and so far they’re _full_ of useful stuff.\""
+      "text": "Nerd tip: this may sound obvious but we only just did it ourselves.\n\n1. Go to your government’s small business and/or tax website.\n2. See if they have newsletters.\n3. Sign up!\n\nWe’ve subscribed to about ten different newsletters and so far they’re _full_ of useful stuff."
     }
   }
 };

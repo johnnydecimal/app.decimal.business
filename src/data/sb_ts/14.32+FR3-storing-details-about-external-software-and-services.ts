@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.339Z",
-    "updatedDate": "2025-02-15T00:37:09.339Z"
+    "createdDate": "2025-02-17T02:50:20.941Z",
+    "updatedDate": "2025-02-17T02:50:20.941Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Label subfolders with the name of the external software or service so they sort alphabetically.\\n\\nThen use the numbered template provided to store specific items:\\n\\n- 01 Receipts,\\n- 02 Downloads,\\n- 03 Licence keys,\\n- 04 Documentation, manuals, training material,\\n- 05 Settings/configuration,\\n- ...\""
+      "text": "Label subfolders with the name of the external software or service so they sort alphabetically.\n\nThen use the numbered template provided to store specific items:\n\n- 01 Receipts,\n- 02 Downloads,\n- 03 Licence keys,\n- 04 Documentation, manuals, training material,\n- 05 Settings/configuration,\n- ..."
     }
   }
 };

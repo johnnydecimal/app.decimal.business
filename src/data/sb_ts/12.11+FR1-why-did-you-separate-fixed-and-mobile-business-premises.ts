@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.311Z",
-    "updatedDate": "2025-02-15T00:37:09.311Z"
+    "createdDate": "2025-02-17T02:50:20.915Z",
+    "updatedDate": "2025-02-17T02:50:20.915Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Many businesses do their work out of multiple locations, which might be fixed or mobile. For instance, an electrician with a home office and a van. A cafe with a retail space and a food truck. A personal trainer with a home office, van, and storage unit for their equipment.\\n\\nSo we suggest keeping the fixed locations here and anything mobile below in [[12.40]], even if you mentally lump them together. Motor vehicles or anything else that can move or be towed have their own types of documentation, so it felt more logical to keep them separate.\""
+      "text": "Many businesses do their work out of multiple locations, which might be fixed or mobile. For instance, an electrician with a home office and a van. A cafe with a retail space and a food truck. A personal trainer with a home office, van, and storage unit for their equipment.\n\nSo we suggest keeping the fixed locations here and anything mobile below in [[12.40]], even if you mentally lump them together. Motor vehicles or anything else that can move or be towed have their own types of documentation, so it felt more logical to keep them separate."
     }
   }
 };

@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.314Z",
-    "updatedDate": "2025-02-15T00:37:09.314Z"
+    "createdDate": "2025-02-17T02:50:20.917Z",
+    "updatedDate": "2025-02-17T02:50:20.917Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"As mentioned in [[12.20]], we decided to separate back office and front office because, depending on the business, these areas might have quite different equipment, suppliers, and daily operations. And different people might manage each area (you don’t want people trying to open the same spreadsheet at the same time).\""
+      "text": "As mentioned in [[12.20]], we decided to separate back office and front office because, depending on the business, these areas might have quite different equipment, suppliers, and daily operations. And different people might manage each area (you don’t want people trying to open the same spreadsheet at the same time)."
     }
   }
 };

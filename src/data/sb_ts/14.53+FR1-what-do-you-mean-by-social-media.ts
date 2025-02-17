@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.344Z",
-    "updatedDate": "2025-02-15T00:37:09.344Z"
+    "createdDate": "2025-02-17T02:50:20.946Z",
+    "updatedDate": "2025-02-17T02:50:20.946Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"By social media, we mean any third-party platform where you can post and publish words, images, or video, that _isn’t_ your own website, blog, community, or newsletter. And that people can interact with in some way. For simplicity, we recommend that it sits under one umbrella here.\""
+      "text": "By social media, we mean any third-party platform where you can post and publish words, images, or video, that _isn’t_ your own website, blog, community, or newsletter. And that people can interact with in some way. For simplicity, we recommend that it sits under one umbrella here."
     }
   }
 };

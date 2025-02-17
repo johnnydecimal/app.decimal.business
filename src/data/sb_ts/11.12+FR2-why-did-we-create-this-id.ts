@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.306Z",
-    "updatedDate": "2025-02-15T00:37:09.306Z"
+    "createdDate": "2025-02-17T02:50:20.910Z",
+    "updatedDate": "2025-02-17T02:50:20.910Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"If an inspector turns up at your door, having copies of these core documents in one place will be very handy. They’re also highly visible at the top of your system so they’re not lost or forgotten.\""
+      "text": "If an inspector turns up at your door, having copies of these core documents in one place will be very handy. They’re also highly visible at the top of your system so they’re not lost or forgotten."
     }
   }
 };

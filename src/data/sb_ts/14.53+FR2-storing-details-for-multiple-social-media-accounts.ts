@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.345Z",
-    "updatedDate": "2025-02-15T00:37:09.345Z"
+    "createdDate": "2025-02-17T02:50:20.947Z",
+    "updatedDate": "2025-02-17T02:50:20.947Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"To avoid cluttering this JDex note, we recommend using the extend-the-end method to create sub-IDs under this parent ID. For example:\\n\\n- ‘14.53+ Instagram’,\\n- ‘14.53+ LinkedIn’,\\n- ‘14.53+ YouTube’,\\n\\nAnd to neatly store files in your file system, create one subfolder per platform so they sort alphabetically. Then use the year-month method to name files so they sort by date.\""
+      "text": "To avoid cluttering this JDex note, we recommend using the extend-the-end method to create sub-IDs under this parent ID. For example:\n\n- ‘14.53+ Instagram’,\n- ‘14.53+ LinkedIn’,\n- ‘14.53+ YouTube’,\n\nAnd to neatly store files in your file system, create one subfolder per platform so they sort alphabetically. Then use the year-month method to name files so they sort by date."
     }
   }
 };

@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.314Z",
-    "updatedDate": "2025-02-15T00:37:09.314Z"
+    "createdDate": "2025-02-17T02:50:20.918Z",
+    "updatedDate": "2025-02-17T02:50:20.918Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"When we were thinking about this, we often referred to the TV show, The Bear. If you haven’t seen it, it’s about a restaurant in Chicago.\\n\\nThe back office is run by Natalie. She’s in a room with a desk and a computer, sorting out all their administrative chaos. The front office is run by Richie. He’s in charge of the restaurant area where the customers are and the delivery of the product. The ‘product’ is run by Carmy. He’s in charge of the kitchen where the food is made, i.e. the product that they sell.\\n\\nSome business are simpler than this, some might be more complicated. But hopefully this conveys the basic idea of ‘staff only’ versus ‘customer facing’ areas.\""
+      "text": "When we were thinking about this, we often referred to the TV show, The Bear. If you haven’t seen it, it’s about a restaurant in Chicago.\n\nThe back office is run by Natalie. She’s in a room with a desk and a computer, sorting out all their administrative chaos. The front office is run by Richie. He’s in charge of the restaurant area where the customers are and the delivery of the product. The ‘product’ is run by Carmy. He’s in charge of the kitchen where the food is made, i.e. the product that they sell.\n\nSome business are simpler than this, some might be more complicated. But hopefully this conveys the basic idea of ‘staff only’ versus ‘customer facing’ areas."
     }
   }
 };

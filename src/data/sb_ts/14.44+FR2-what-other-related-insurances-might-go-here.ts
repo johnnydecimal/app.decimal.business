@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.342Z",
-    "updatedDate": "2025-02-15T00:37:09.342Z"
+    "createdDate": "2025-02-17T02:50:20.945Z",
+    "updatedDate": "2025-02-17T02:50:20.945Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"If you have specific theft or damage insurance for high-value computers, devices, or accessories consider storing that here too. Otherwise, that would go in [[12.12]].\\n\\nAnd if your business sells a technology product or provides technology services, then you might also have ‘technology errors and omissions’ (E&O) insurance. This protects against an incident that affects customers because of an error in your product or service. Consider storing that here too. Otherwise, that would go in [[11.22]].\""
+      "text": "If you have specific theft or damage insurance for high-value computers, devices, or accessories consider storing that here too. Otherwise, that would go in [[12.12]].\n\nAnd if your business sells a technology product or provides technology services, then you might also have ‘technology errors and omissions’ (E&O) insurance. This protects against an incident that affects customers because of an error in your product or service. Consider storing that here too. Otherwise, that would go in [[11.22]]."
     }
   }
 };

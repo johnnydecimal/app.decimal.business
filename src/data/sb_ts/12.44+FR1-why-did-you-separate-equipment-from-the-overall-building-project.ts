@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.317Z",
-    "updatedDate": "2025-02-15T00:37:09.317Z"
+    "createdDate": "2025-02-17T02:50:20.921Z",
+    "updatedDate": "2025-02-17T02:50:20.921Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"Similar to [[12.14]], we made a decision that these type of projects are about building and installing things that are designed for a specific vehicle – and they’re unlikely to have an ops manual. For instance, a built-in bench in a food truck.\\n\\nWhereas front or back office _equipment_ ordered as part of a project might have service contracts, or staff training and cleaning manuals, so that belongs in operations. For instance, a coffee cart’s espresso machine or till.\""
+      "text": "Similar to [[12.14]], we made a decision that these type of projects are about building and installing things that are designed for a specific vehicle – and they’re unlikely to have an ops manual. For instance, a built-in bench in a food truck.\n\nWhereas front or back office _equipment_ ordered as part of a project might have service contracts, or staff training and cleaning manuals, so that belongs in operations. For instance, a coffee cart’s espresso machine or till."
     }
   }
 };

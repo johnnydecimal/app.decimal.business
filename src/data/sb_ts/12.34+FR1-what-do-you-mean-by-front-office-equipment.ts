@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.315Z",
-    "updatedDate": "2025-02-15T00:37:09.315Z"
+    "createdDate": "2025-02-17T02:50:20.918Z",
+    "updatedDate": "2025-02-17T02:50:20.918Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"We would classify a personal trainer’s exercise equipment, a gardener’s lawnmower, and a hairdresser’s scissors as front office equipment. These items _support_ the products they sell – fitness, cut grass, and hair cuts, respectively.\\n\\nA photographer’s screens, cameras, and lights are front office – they support the delivery of their product, the photographs.\\n\\nA plumber’s tools and logo-bearing work shirt are front office – they support the delivery of their product, the unblocked toilet.\\n\\nHowever, if the plumber replaces a broken part in a toilet with a spare from their van, then that would be classified under ‘product’. They are on-selling the spare part, so that gets tracked in [[20-29]].\""
+      "text": "We would classify a personal trainer’s exercise equipment, a gardener’s lawnmower, and a hairdresser’s scissors as front office equipment. These items _support_ the products they sell – fitness, cut grass, and hair cuts, respectively.\n\nA photographer’s screens, cameras, and lights are front office – they support the delivery of their product, the photographs.\n\nA plumber’s tools and logo-bearing work shirt are front office – they support the delivery of their product, the unblocked toilet.\n\nHowever, if the plumber replaces a broken part in a toilet with a spare from their van, then that would be classified under ‘product’. They are on-selling the spare part, so that gets tracked in [[20-29]]."
     }
   }
 };

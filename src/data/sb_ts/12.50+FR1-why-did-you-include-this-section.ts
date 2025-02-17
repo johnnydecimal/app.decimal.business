@@ -6,12 +6,12 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-15T00:37:09.317Z",
-    "updatedDate": "2025-02-15T00:37:09.317Z"
+    "createdDate": "2025-02-17T02:50:20.921Z",
+    "updatedDate": "2025-02-17T02:50:20.921Z"
   },
   "extensions": {
     "furtherReading": {
-      "text": "\"After seeing some folder structures from other business owners, we realised that civics and community engagement can be a big deal. So we wanted to make sure there was a place for this stuff to keep it separate from daily operations. Especially if you participate in recurring events, you’ll want to easily find and reuse certain items each time.\""
+      "text": "After seeing some folder structures from other business owners, we realised that civics and community engagement can be a big deal. So we wanted to make sure there was a place for this stuff to keep it separate from daily operations. Especially if you participate in recurring events, you’ll want to easily find and reuse certain items each time."
     }
   }
 };
