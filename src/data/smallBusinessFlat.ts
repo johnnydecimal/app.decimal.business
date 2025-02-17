@@ -152,28 +152,106 @@ const flattenedData: FlattenedData = {
   "20-29": {
     type: "area",
     number: "20-29",
-    title: "A longer area title that definitely wraps",
-    isPublic: true,
-    description: "The twenties",
+    title: "Product, marketing, customers, & sales",
+    description:
+      "Everything to do with _your_ product: suppliers, product, manufacturing, marketing, and sales.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
   "21": {
-    type: "category",
     number: "21",
-    title: "TESTENV Twenty-one with as long as a word is practicable?",
-    description:
-      "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
-    emoji: "🗺️",
+    title: "Products",
+    type: "category",
+    description: "What they are, and how you make them.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
-    extensions: { smallBusiness: {} },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
   },
-  "21.11": {
-    type: "id",
-    number: "21.11",
-    title: "TESTENV Twenty-one-eleven-lots-of-hyphens",
-    description: "This is a test ID",
+  "22": {
+    number: "22",
+    title: "Suppliers",
+    type: "category",
+    description: "Where you buy the stuff you need.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
-    extensions: { smallBusiness: {} },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "23": {
+    number: "23",
+    title: "Equipment & tools",
+    type: "category",
+    description: "The gear you need to make your product.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "24": {
+    number: "24",
+    title: "Inventory & stock",
+    type: "category",
+    description: "What you have on hand to sell.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "25": {
+    number: "25",
+    title: "Marketing",
+    type: "category",
+    description: "How you get the word out about your product.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "26": {
+    number: "26",
+    title: "Channels",
+    type: "category",
+    description: "Where you sell your product.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "27": {
+    number: "27",
+    title: "Customers",
+    type: "category",
+    description: "Who buys your product.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "28": {
+    number: "28",
+    title: "Sales",
+    type: "category",
+    description: "It's why we're all here, right?",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
   },
 };
 
