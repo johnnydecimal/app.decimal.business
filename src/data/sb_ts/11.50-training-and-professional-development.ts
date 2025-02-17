@@ -2,14 +2,14 @@
 import type { IdEntry } from "@data/smallBusinessFlat";
 const entry: IdEntry = {
   "number": "11.50",
-  "title": "■ Training & professional development 🎓",
+  "title": "Training & professional development",
   "description": "Anything to do with maintaining or updating skills and credentials, or other self-improvement.",
   "type": "id",
   "isPublic": false,
-  "isHeader": false,
+  "isHeader": true,
   "metadata": {
-    "createdDate": "2025-02-17T02:50:20.614Z",
-    "updatedDate": "2025-02-17T02:50:20.614Z"
+    "createdDate": "2025-02-17T03:03:34.102Z",
+    "updatedDate": "2025-02-17T03:03:34.102Z"
   },
   "extensions": {
     "smallBusiness": {}
