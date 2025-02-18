@@ -1,0 +1,60 @@
+---
+/**
+ * We only show IdBreadcrumbs on sub-IDs, e.g. Further Reading.
+ * TODO will need to extend to Ops Manuals when the day comes.
+ */
+
+interface Props {
+  thisEntry: FurtherReadingEntry;
+}
+const { thisEntry } = Astro.props;
+
+import Slice from "@components/common/Slice.astro";
+import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+
+function getParentId(thisEntry: FurtherReadingEntry): {
+  parentIdNumber: string;
+  parentIdTitle: string;
+} {
+  if (thisEntry.number.match(/^\d\d\.\d\d\+/)) {
+    return {
+      parentIdNumber: thisEntry.number.replace(/^(\d\d\.\d\d).*/, "$1"),
+      parentIdTitle: thisEntry.title,
+    };
+  } else if (thisEntry.number.match(/^\d\d\+/)) {
+    return {
+      parentIdNumber: thisEntry.number.replace(/^(\d\d).*/, "$1"),
+      parentIdTitle: thisEntry.title,
+    };
+  } else if (thisEntry.number.match(/^\d\d-\d\d\+/)) {
+    return {
+      parentIdNumber: thisEntry.number.replace(/^(\d\d-\d\d).*/, "$1"),
+      parentIdTitle: thisEntry.title,
+    };
+  } else if (thisEntry.number === "J82") {
+    return {
+      parentIdNumber: "J82",
+      parentIdTitle: "J82",
+    };
+  } else {
+    throw new Error("IdBreadcrumb: Unknown entry type");
+  }
+}
+
+const { parentIdNumber, parentIdTitle } = getParentId(thisEntry);
+---
+
+<Slice id="IdBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">
+      <a href={parentIdNumber}>{parentIdTitle}</a>
+    </h3>
+    <h3 class="layout-right-item">
+      <a href={parentIdNumber}>{parentIdTitle}</a>
+    </h3>
+  </div>
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+</style>

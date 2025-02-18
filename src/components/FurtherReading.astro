@@ -29,29 +29,13 @@ import parseMd from "@utils/parseMd";
 // Components
 import Slice from "@components/common/Slice.astro";
 import SystemBreadcrumb from "@components/common/SystemBreadcrumb.astro";
+import CategoryBreadcrumb from "@components/common/CategoryBreadcrumb.astro";
+import AreaBreadcrumb from "@components/common/AreaBreadcrumb.astro";
+import IdBreadcrumb from "@components/common/IdBreadcrumb.astro";
 // #endregion
 
 const frEntry = system[furtherReadingId] as FurtherReadingEntry;
 const isPublic = frEntry.isPublic || false;
-
-let parentEntryType: "id" | "category" | "area" | "system";
-let parentEntryNumber: string;
-if (frEntry.number.match(/^\d\d\.\d\d\+/)) {
-  parentEntryType = "id";
-  parentEntryNumber = frEntry.number.replace(/^(\d\d\.\d\d).*/, "$1");
-} else if (frEntry.number.match(/^\d\d\+/)) {
-  parentEntryType = "category";
-  parentEntryNumber = frEntry.number.replace(/^(\d\d).*/, "$1");
-} else if (frEntry.number.match(/^\d\d-\d\d\+/)) {
-  parentEntryType = "area";
-  parentEntryNumber = frEntry.number.replace(/^(\d\d-\d\d).*/, "$1");
-} else if (frEntry.number === "J82") {
-  parentEntryType = "system";
-  parentEntryNumber = "J82";
-} else {
-  throw new Error(`Unknown further reading ID: ${furtherReadingId}`);
-}
-
 const furtherReadingIdForDisplay = frEntry.number.replace(/(.*)(\+.*)/, "$2");
 
 let furtherReadingTitle: string;
@@ -72,74 +56,22 @@ if (userId) {
 // TODO Build something that pulls out the H1s from this text and puts them
 // in the left side as a header. .map(etc...)
 
-/**
- * Working out the breadcrumbs.
- *
- * If this entry's parent is an ID, we need them all.
- *
- * TODO when you refactor FR, ID, Category, Area so that all of this getting-
- * -the-parent-for-a-breadcrumb logic is in the <_Breadcrumb> component itself,
- * this one is the doozy. You started briefly but rolled it back because what
- * you have works for now. Re-think the whole thing. Go for a walk.
- */
-
-let parentIdNumber,
-  parentIdEntry,
-  parentIdTitle,
-  parentCNumber,
-  parentCEntry,
-  parentCTitle,
-  firstDigit,
-  parentANumber,
-  parentAEntry,
-  parentATitle,
-  parentSNumber,
-  parentSEntry,
-  parentSTitle = null;
-if (parentEntryType === "id") {
-  parentIdNumber = parentEntryNumber;
-  parentIdEntry = system[parentIdNumber] as IdEntry;
-  parentIdTitle = parentIdEntry.title;
-  // Category
-  parentCNumber = parentIdEntry.number.split(".")[0];
-  parentCEntry = system[parentCNumber] as CategoryEntry;
-  parentCTitle = parentCEntry.title;
-  // Area
-  firstDigit = parentCEntry.number.charAt(0);
-  parentANumber = `${firstDigit}0-${firstDigit}9`;
-  parentAEntry = system[parentANumber] as AreaEntry;
-  parentATitle = parentAEntry.title;
-  // System
-  parentSNumber = "J82";
-  parentSEntry = system[parentSNumber] as SystemEntry;
-  parentSTitle = parentSEntry.title;
-} else if (parentEntryType === "category") {
-  parentCNumber = parentEntryNumber;
-  parentCEntry = system[parentCNumber] as CategoryEntry;
-  parentCTitle = parentCEntry.title;
-  // Area
-  firstDigit = parentCNumber.charAt(0);
-  parentANumber = `${firstDigit}0-${firstDigit}9`;
-  parentAEntry = system[parentANumber] as AreaEntry;
-  parentATitle = parentAEntry.title;
-  // System
-  parentSNumber = "J82";
-  parentSEntry = system[parentSNumber] as SystemEntry;
-  parentSTitle = parentSEntry.title;
-} else if (parentEntryType === "area") {
-  parentANumber = parentEntryNumber;
-  parentAEntry = system[parentANumber] as AreaEntry;
-  parentATitle = parentAEntry.title;
-  // System
-  parentSNumber = "J82";
-  parentSEntry = system[parentSNumber] as SystemEntry;
-  parentSTitle = parentSEntry.title;
-} else if (parentEntryType === "system") {
-  parentSNumber = parentEntryNumber;
-  parentSEntry = system[parentSNumber] as SystemEntry;
-  parentSTitle = parentSEntry.title;
+let parentEntryType: "id" | "category" | "area" | "system";
+let parentEntryNumber: string;
+if (frEntry.number.match(/^\d\d\.\d\d\+/)) {
+  parentEntryType = "id";
+  parentEntryNumber = frEntry.number.replace(/^(\d\d\.\d\d).*/, "$1");
+} else if (frEntry.number.match(/^\d\d\+/)) {
+  parentEntryType = "category";
+  parentEntryNumber = frEntry.number.replace(/^(\d\d).*/, "$1");
+} else if (frEntry.number.match(/^\d\d-\d\d\+/)) {
+  parentEntryType = "area";
+  parentEntryNumber = frEntry.number.replace(/^(\d\d-\d\d).*/, "$1");
+} else if (frEntry.number === "J82") {
+  parentEntryType = "system";
+  parentEntryNumber = "J82";
 } else {
-  throw new Error(`Unknown parent entry type: ${parentEntryType}`);
+  throw new Error(`Unknown further reading ID: ${furtherReadingId}`);
 }
 ---
 
@@ -149,48 +81,17 @@ if (parentEntryType === "id") {
   parentEntryType === "area" ||
   parentEntryType === "category" ||
   parentEntryType === "id" ? (
-    <Slice id="AreaBreadcrumb" className="secondary-content-bg">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">
-          <a href={parentANumber}>{parentANumber}</a>
-        </h3>
-        <h3 class="layout-right-item">
-          <a href={parentANumber}>{parentATitle}</a>
-        </h3>
-      </div>
-    </Slice>
+    <AreaBreadcrumb thisEntry={frEntry} />
   ) : null
 }
 
 {
   parentEntryType === "category" || parentEntryType === "id" ? (
-    <Slice id="CategoryBreadcrumb" className="secondary-content-bg">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">
-          <a href={parentCNumber}>{parentCNumber}</a>
-        </h3>
-        <h3 class="layout-right-item">
-          <a href={parentCNumber}>{parentCTitle}</a>
-        </h3>
-      </div>
-    </Slice>
+    <CategoryBreadcrumb thisEntry={frEntry} />
   ) : null
 }
 
-{
-  parentEntryType === "id" ? (
-    <Slice id="IdBreadcrumb" className="secondary-content-bg">
-      <div class="layout-grid-left-right">
-        <h3 class="layout-left-item">
-          <a href={parentIdNumber}>{parentIdNumber}</a>
-        </h3>
-        <h3 class="layout-right-item">
-          <a href={parentIdNumber}>{parentIdTitle}</a>
-        </h3>
-      </div>
-    </Slice>
-  ) : null
-}
+{parentEntryType === "id" ? <IdBreadcrumb thisEntry={frEntry} /> : null}
 
 <Slice id="Header" className="active-top">
   <div class="layout-grid-left-right phone-only">

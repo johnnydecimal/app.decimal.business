@@ -59,26 +59,13 @@ if (userId) {
     sb.exceptions && (await parseMd(sb.exceptions, true, !!isPublic));
   idAlsoSee = sb.alsoSee && (await parseMd(sb.alsoSee, true, !!isPublic));
 }
-
-const parentCNumber = idEntry.number.split(".")[0];
-const parentCEntry = system[parentCNumber] as CategoryEntry;
-const parentCTitle = parentCEntry.title;
-
-const firstDigit = parentCEntry.number.charAt(0);
-const parentANumber = `${firstDigit}0-${firstDigit}9`;
-const parentAEntry = system[parentANumber] as AreaEntry;
-const parentATitle = parentAEntry.title;
-
-const parentSNumber = "J82";
-const parentSEntry = system[parentSNumber] as SystemEntry;
-const parentSTitle = parentSEntry.title;
 ---
 
-<SystemBreadcrumb parentSTitle={parentSTitle} />
+<SystemBreadcrumb />
 
-<AreaBreadcrumb parentANumber={parentANumber} parentATitle={parentATitle} />
+<AreaBreadcrumb thisEntry={idEntry} />
 
-<CategoryBreadcrumb parentCNumber={parentCNumber} parentCTitle={parentCTitle} />
+<CategoryBreadcrumb thisEntry={idEntry} />
 
 <Slice id="Header" className="active-top">
   <div class="layout-grid-left-right phone-only">

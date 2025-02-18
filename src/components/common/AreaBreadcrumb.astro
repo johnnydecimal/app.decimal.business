@@ -1,11 +1,43 @@
 ---
+/**
+ * When do I need an Area breadcrumb?
+ *
+ * 1. When I'm viewing any ID.
+ * 2. When I'm viewing any category.
+ * 3. When I'm viewing an ID:FR.
+ * 3. When I'm viewing a C:FR.
+ * 4. When I'm viewing an A:FR.
+ */
 interface Props {
-  parentANumber: string;
-  parentATitle: string;
+  thisEntry: IdEntry | CategoryEntry | FurtherReadingEntry;
 }
-const { parentANumber, parentATitle } = Astro.props;
+const { thisEntry } = Astro.props;
 
 import Slice from "@components/common/Slice.astro";
+import system, {
+  type AreaEntry,
+  type CategoryEntry,
+  type IdEntry,
+  type FurtherReadingEntry,
+} from "@data/smallBusinessFlat";
+
+function getParentArea(
+  thisEntry: IdEntry | CategoryEntry | FurtherReadingEntry
+): {
+  parentANumber: string;
+  parentATitle: string;
+} {
+  const parentADigit = thisEntry.number.charAt(0);
+  const parentANumber = `${parentADigit}0-${parentADigit}9`;
+  const parentAEntry = system[parentANumber] as AreaEntry;
+  const parentATitle = parentAEntry.title;
+  return {
+    parentANumber,
+    parentATitle,
+  };
+}
+
+const { parentANumber, parentATitle } = getParentArea(thisEntry);
 ---
 
 <Slice id="AreaBreadcrumb" className="secondary-content-bg">

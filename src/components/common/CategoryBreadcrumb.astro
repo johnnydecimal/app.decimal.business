@@ -1,11 +1,38 @@
 ---
+/**
+ * When do I need a Category breadcrumb?
+ *
+ * 1. When I'm viewing any ID.
+ * 2. When I'm viewing an ID:FR.
+ * 3. When I'm viewing a C:FR.
+ */
 interface Props {
-  parentCNumber: string;
-  parentCTitle: string;
+  thisEntry: IdEntry | FurtherReadingEntry;
 }
-const { parentCNumber, parentCTitle } = Astro.props;
+const { thisEntry } = Astro.props;
 
 import Slice from "@components/common/Slice.astro";
+import system, {
+  type AreaEntry,
+  type CategoryEntry,
+  type IdEntry,
+  type FurtherReadingEntry,
+} from "@data/smallBusinessFlat";
+
+function getParentArea(thisEntry: IdEntry | FurtherReadingEntry): {
+  parentCNumber: string;
+  parentCTitle: string;
+} {
+  const parentCNumber = thisEntry.number.slice(0, 2);
+  const parentCEntry = system[parentCNumber] as CategoryEntry;
+  const parentCTitle = parentCEntry.title;
+  return {
+    parentCNumber,
+    parentCTitle,
+  };
+}
+
+const { parentCNumber, parentCTitle } = getParentArea(thisEntry);
 ---
 
 <Slice id="CategoryBreadcrumb" className="secondary-content-bg">
