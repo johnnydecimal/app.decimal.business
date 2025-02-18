@@ -15,7 +15,7 @@ We're experts at this, so we made it our job to solve this inefficiency. Leave t
 const how = `
 The [Johnny.Decimal system](https://johnnydecimal.com) sets out a methodical way to structure your files. Thousands of people have used it to organise their lives for over a decade. It's simple, and it works.
 
-But you don't have time to figure out how to apply this to your business. So we've done that for you.
+But you don't have time to figure out how to apply this to your business. And why reinvent the wheel? We've done it for you.
 
 The small business system is a pre-built framework. It gives you a place for everything. **All you have to do is move in**.
 `;
@@ -23,27 +23,28 @@ The small business system is a pre-built framework. It gives you a place for eve
 const what = `
 This site -- the one you're reading -- _is_ the system. So you can try-before-you-buy. Just click around. You'll find about 20% of the content is unlocked.
 
-When you sign up, you get full access to this site. It contains 235 hand-crafted IDs across 15 categories, in 4 areas. It's a complete business operations manual: there are 35,000+ words of content, and we're not finished.
+When you sign up, you get full access. There are 235 hand-crafted IDs across 15 categories, in 4 areas. It's a complete business operations manual: there are 35,000+ words of content, and we're not finished.
 
 Search is fully functional. Try it out: think of the last thing you couldn't find, and search for it.
 
-_Your_ files live on _your_ computer. **I never have access to your files**. So you get a complete folder structure that mirrors this site, as well as text files that you can use to set up your local [index](https://jdcm.al/11.05/).
+_Your_ files live on _your_ computer. **We never have access to your files**. You download a complete folder structure that mirrors this site, as well as text files that you can use to set up your local [index](https://jdcm.al/11.05/).
 
 There are many other benefits, which we'll explore on the coming pages.
 `;
 
 const cost = `
-Platinum membership is for life. It gets you access to **everything we ever create, for all of time, for a [one-off payment of US$300](https://store.johnnydecimal.com/cart/43063017111688:1)**.
+Platinum membership is for life. It gets you access to **everything we ever create, for all of time, for a [one-off payment of US$300](https://store.johnnydecimal.com/cart/43063017111688:1)**.<sup>1</sup>
 
-Gold membership is for one year. You have access to everything we do for as long as you're a member. It costs [US$150 a year](https://store.johnnydecimal.com/cart/43069054648456:1).<sup>1</sup>
+Gold membership is for one year. You have access to everything we do for as long as you're a member. It costs [US$150 a year](https://store.johnnydecimal.com/cart/43069054648456:1).<sup>2</sup>
 
 These are pre-sale prices. They will increase when we launch the system.
 
-This is what Johnny and his partner Lucy do full-time: we quit our jobs to do this. Your membership supports two humans who hand-craft everything you see. There's no faceless corporation. No lazy AI-generated slop. No automated helpdesk. You email me, I answer.
+This is what me and my partner Lucy do full-time: we quit our jobs to do this. Your membership supports two humans who hand-craft everything you see. There's no faceless corporation. No lazy AI-generated slop. No automated helpdesk. You email me, I answer.
 
 Think of this like having us on your staff.
 
-> 1. You'll never lose access to your system. If you choose not to renew, you'll stop getting updates.
+> 1. Prices include GST in Australia.
+> 2. You'll _never_ lose access to your system. If you choose not to renew, you'll just stop getting updates.
 `;
 
 const when = `
@@ -62,18 +63,30 @@ const whenHtml = await marked.parse(when);
     <h3 class="layout-left-item">Why?</h3>
     <div class="layout-right-item" set:html={whyHtml} />
   </div>
+</Slice>
+
+<Slice>
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">How?</h3>
     <div class="layout-right-item" set:html={howHtml} />
   </div>
+</Slice>
+
+<Slice>
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">What?</h3>
     <div class="layout-right-item" set:html={whatHtml} />
   </div>
+</Slice>
+
+<Slice>
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Cost?</h3>
     <div class="layout-right-item" set:html={costHtml} />
   </div>
+</Slice>
+
+<Slice>
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">When?</h3>
     <div class="layout-right-item" set:html={whenHtml} />

@@ -1,7 +1,5 @@
 import type { FlattenedData } from "./smallBusinessFlat";
 
-import id_00_91 from "@data/sb_ts/00.91-welcome-to-the-small-business-system";
-
 export const area_00_09: FlattenedData = {
   "00-09": {
     number: "00-09",
@@ -104,6 +102,16 @@ export const area_00_09: FlattenedData = {
     type: "adHoc",
     isPublic: true,
     description: "A framework and global standard for every small business.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
+  },
+  "00.92": {
+    number: "00.92",
+    title: "A community based around standards",
+    type: "adHoc",
+    isPublic: true,
+    description:
+      "An open community sharing a common language makes us all more effective.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },

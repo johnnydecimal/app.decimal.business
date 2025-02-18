@@ -1,0 +1,73 @@
+---
+import Slice from "@components/common/Slice.astro";
+import { marked } from "marked";
+
+const open = `
+Community systems like this boast of their closed 'private community' as if having less people is a good thing. We disagree.
+
+Our community is open. We believe that we can become more efficient if we work together. You're welcome to join us and ask for help even if you're not a member.
+`;
+
+const language = `
+One problem with existing communities is that they lack a shared language. This is the same problem you face with your file system: there are any number of ways to refer to the same concept. Confusion results from the ambiguity.
+
+Our system defines a language. When we're talking about payroll, that's _always_ [13.34 Payroll](/13.34). So now you can ask for help in a really specific place.
+
+We have two communities, [Discord](#) and [the forum](#). Both have dedicated small business sections whose structure mirrors the system.<sup>1</sup>
+
+So you won't find yourself asking for payroll help in a channel full of people talking about their tax returns. We'll keep everything in the right channel. Jump in, get targeted help, then get back to work.
+
+> 1. As the system is a work-in-progress these channels have not been set up yet.
+`;
+
+const feedback = `
+A problem with communities is that knowledge can be really hard to find. If you didn't see it scroll past the first time, you're probably _never_ going to see it.
+
+This is why I built this system as a website. Lucy and I will be constantly monitoring our communities, and feeding information that should be persistent back in to the system.
+
+If it's useful, it'll become permanent. You shouldn't have to worry about searching a forum for information. We'll do that for you.
+`;
+
+const subscribe = `
+A [Platinum](https://store.johnnydecimal.com/cart/43063017111688:1) membership is for life and is only [US$300](https://store.johnnydecimal.com/cart/43063017111688:1) while we are in pre-launch. [Gold is US$150](https://store.johnnydecimal.com/cart/43069054648456:1) for one year.
+
+Prices will increase when the system is launched. Gold will renew one year after the full system is released, not one year after your initial payment.
+`;
+
+const openHtml = await marked.parse(open);
+const languageHtml = await marked.parse(language);
+const feedbackHtml = await marked.parse(feedback);
+const subscribeHtml = await marked.parse(subscribe);
+---
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Open for business</h3>
+    <div class="layout-right-item" set:html={openHtml} />
+  </div>
+</Slice>
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Common language</h3>
+    <div class="layout-right-item" set:html={languageHtml} />
+  </div>
+</Slice>
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Feedback loop</h3>
+    <div class="layout-right-item" set:html={feedbackHtml} />
+  </div>
+</Slice>
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Subscribe</h3>
+    <div class="layout-right-item" set:html={subscribeHtml} />
+  </div>
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+</style>
