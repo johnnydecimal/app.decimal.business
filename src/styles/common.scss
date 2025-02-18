@@ -281,7 +281,8 @@ select {
     margin: 0; // Surrounding <p> handles it
     text-align: right;
     @include phone-only {
-      font-size: 1.2rem; // Pop the headers a bit
+      font-size: 1.1rem; // Pop the headers a bit
+      margin-top: 0.5rem; // Room to breathe
       text-decoration: underline;
     }
     @include tablet-portrait-up {
