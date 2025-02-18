@@ -25,17 +25,19 @@ This site -- the one you're reading -- _is_ the system. So you can try-before-yo
 
 When you sign up, you get full access. There are 235 hand-crafted IDs across 15 categories, in 4 areas. It's a complete business operations manual: there are 35,000+ words of content, and we're not finished.
 
-Search is fully functional. Try it out: think of the last thing you couldn't find, and search for it.
+Search is in demo mode. Try it out: think of the last thing you couldn't find, and search for it.<sup>1</sup>
 
 _Your_ files live on _your_ computer. **We never have access to your files**. You download a complete folder structure that mirrors this site, as well as text files that you can use to set up your local [index](https://jdcm.al/11.05/).
 
 There are many other benefits, which we'll explore on the coming pages.
+
+> 1. We're still building the system; search is incomplete.
 `;
 
 const cost = `
 Platinum membership is for life. It gets you access to **everything we ever create, for all of time, for a [one-off payment of US$300](https://store.johnnydecimal.com/cart/43063017111688:1)**.<sup>1</sup>
 
-Gold membership is for one year. You have access to everything we do for as long as you're a member. It costs [US$150 a year](https://store.johnnydecimal.com/cart/43069054648456:1).<sup>2</sup>
+Gold membership is for one year.<sup>2</sup> You have access to everything we do for as long as you're a member. It costs [US$150 a year](https://store.johnnydecimal.com/cart/43069054648456:1).<sup>3</sup>
 
 These are pre-sale prices. They will increase when we launch the system.
 
@@ -44,11 +46,22 @@ This is what me and my partner Lucy do full-time: we quit our jobs to do this. Y
 Think of this like having us on your staff.
 
 > 1. Prices include GST in Australia.
-> 2. You'll _never_ lose access to your system. If you choose not to renew, you'll just stop getting updates.
+> 2. Renews one year after the full system is released, not one year after your initial payment.
+> 3. You'll _never_ lose access to your system. If you choose not to renew, you'll just stop getting updates.
 `;
 
 const when = `
-As you'll see when you browse the site, we're still building the system. We are targeting a first release of end-March 2025.
+As you'll see when you're browsing the site, we're still building the system. We are targeting a first release of end-March 2025.
+`;
+
+const also = `
+As this is a Johnny.Decimal membership, you get **everything else** that we produce.
+
+That's the [workshop](https://jdcm.al/14.22/) ($90), [workbook](https://jdcm.al/14.21/), and [life admin system](https://jdcm.al/14.11/). Platinum also includes our 14-hour beginner Excel course, [Learn with Lucy](https://learnwithlucy.rocks).
+`;
+
+const next = `
+Check out our plans for the [community](/00.92).
 `;
 
 const whyHtml = await marked.parse(why);
@@ -56,40 +69,56 @@ const howHtml = await marked.parse(how);
 const whatHtml = await marked.parse(what);
 const costHtml = await marked.parse(cost);
 const whenHtml = await marked.parse(when);
+const alsoHtml = await marked.parse(also);
+const nextHtml = await marked.parse(next);
 ---
 
-<Slice className="descriptive-text">
+<Slice id="why" className="descriptive-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Why?</h3>
     <div class="layout-right-item" set:html={whyHtml} />
   </div>
 </Slice>
 
-<Slice>
+<Slice id="how" className="descriptive-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">How?</h3>
     <div class="layout-right-item" set:html={howHtml} />
   </div>
 </Slice>
 
-<Slice>
+<Slice id="what" className="descriptive-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">What?</h3>
     <div class="layout-right-item" set:html={whatHtml} />
   </div>
 </Slice>
 
-<Slice>
+<Slice id="cost" className="descriptive-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Cost?</h3>
     <div class="layout-right-item" set:html={costHtml} />
   </div>
 </Slice>
 
-<Slice>
+<Slice id="when" className="descriptive-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">When?</h3>
     <div class="layout-right-item" set:html={whenHtml} />
+  </div>
+</Slice>
+
+<Slice id="also" className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Also…</h3>
+    <div class="layout-right-item" set:html={alsoHtml} />
+  </div>
+</Slice>
+
+<Slice id="next" className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Next</h3>
+    <div class="layout-right-item" set:html={nextHtml} />
   </div>
 </Slice>
 
