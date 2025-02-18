@@ -35,7 +35,8 @@ if (Astro.url.searchParams.get("env") === "test") {
             }</span
           >
         </p>
-        &copy; {environment !== "test" ? year : "20__"} Johnny.Decimal
+        &copy; {environment !== "test" ? year : "20__"}
+        <a href="https://jdcm.al/01.01/" id="jd-link">Johnny.Decimal</a>
       </div>
     </div>
   </Slice>
@@ -56,5 +57,17 @@ if (Astro.url.searchParams.get("env") === "test") {
   }
   .env-test {
     background-color: lime;
+  }
+
+  a#jd-link {
+    color: light-dark(CanvasText, CanvasText);
+    text-decoration: none;
+    &:visited {
+      color: light-dark(CanvasText, CanvasText);
+    }
+    &:hover {
+      background: light-dark(CanvasText, CanvasText);
+      color: light-dark(Canvas, Canvas);
+    }
   }
 </style>
