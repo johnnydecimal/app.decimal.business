@@ -27,10 +27,10 @@ import system, {
 // Utils
 import parseMd from "@utils/parseMd";
 // Components
-import Slice from "./common/Slice.astro";
+import Slice from "@components/common/Slice.astro";
+import SystemBreadcrumb from "@components/common/SystemBreadcrumb.astro";
 // #endregion
 
-// #region Entry: core details ------------------------------------------------
 const frEntry = system[furtherReadingId] as FurtherReadingEntry;
 const isPublic = frEntry.isPublic || false;
 
@@ -76,6 +76,11 @@ if (userId) {
  * Working out the breadcrumbs.
  *
  * If this entry's parent is an ID, we need them all.
+ *
+ * TODO when you refactor FR, ID, Category, Area so that all of this getting-
+ * -the-parent-for-a-breadcrumb logic is in the <_Breadcrumb> component itself,
+ * this one is the doozy. You started briefly but rolled it back because what
+ * you have works for now. Re-think the whole thing. Go for a walk.
  */
 
 let parentIdNumber,
@@ -138,12 +143,7 @@ if (parentEntryType === "id") {
 }
 ---
 
-<Slice id="SystemBreadcrumb" className="secondary-content-bg">
-  <div class="layout-grid-left-right">
-    <div></div>
-    <h3 class="layout-right-item"><a href="/">{parentSTitle}</a></h3>
-  </div>
-</Slice>
+<SystemBreadcrumb parentSTitle={parentSTitle} />
 
 {
   parentEntryType === "area" ||
