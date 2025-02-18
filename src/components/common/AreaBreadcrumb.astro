@@ -1,0 +1,24 @@
+---
+interface Props {
+  parentANumber: string;
+  parentATitle: string;
+}
+const { parentANumber, parentATitle } = Astro.props;
+
+import Slice from "@components/common/Slice.astro";
+---
+
+<Slice id="AreaBreadcrumb" className="secondary-content-bg">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">
+      <a href={parentANumber}>{parentANumber}</a>
+    </h3>
+    <h3 class="layout-right-item">
+      <a href={parentANumber}>{parentATitle}</a>
+    </h3>
+  </div>
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+</style>

@@ -15,6 +15,8 @@ import system, {
 } from "@data/smallBusinessFlat";
 import parseMd from "@utils/parseMd";
 import Slice from "@components/common/Slice.astro";
+import SystemBreadcrumb from "@components/common/SystemBreadcrumb.astro";
+import AreaBreadcrumb from "@components/common/AreaBreadcrumb.astro";
 import FurtherReadingLinks from "@components/common/FurtherReadingLinks.astro";
 import ChildrenInParent from "@components/common/ChildrenInParent.astro";
 
@@ -40,23 +42,9 @@ const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 ---
 
-<Slice id="SystemBreadcrumb" className="secondary-content-bg">
-  <div class="layout-grid-left-right">
-    <div></div>
-    <h3 class="layout-right-item"><a href="/">{parentSTitle}</a></h3>
-  </div>
-</Slice>
+<SystemBreadcrumb parentSTitle={parentSTitle} />
 
-<Slice id="AreaBreadcrumb" className="secondary-content-bg">
-  <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">
-      <a href={parentANumber}>{parentANumber}</a>
-    </h3>
-    <h3 class="layout-right-item">
-      <a href={parentANumber}>{parentATitle}</a>
-    </h3>
-  </div>
-</Slice>
+<AreaBreadcrumb parentANumber={parentANumber} parentATitle={parentATitle} />
 
 <Slice id="Header" className="active-top">
   <div class="layout-grid-left-right phone-only">

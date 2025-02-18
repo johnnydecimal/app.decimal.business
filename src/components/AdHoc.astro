@@ -15,7 +15,7 @@ const { id } = Astro.props;
 import parseMd from "@utils/parseMd";
 
 import Slice from "@components/common/Slice.astro";
-// import wikiLinkify from "@utils/wikiLinkify";
+import SystemBreadcrumb from "@components/common/SystemBreadcrumb.astro";
 
 import system, {
   type SystemEntry,
@@ -49,12 +49,7 @@ const parentSEntry = system[parentSNumber] as SystemEntry;
 const parentSTitle = parentSEntry.title;
 ---
 
-<Slice id="SystemBreadcrumb" className="secondary-content-bg">
-  <div class="layout-grid-left-right">
-    <div></div>
-    <h3 class="layout-right-item"><a href="/">{parentSTitle}</a></h3>
-  </div>
-</Slice>
+<SystemBreadcrumb parentSTitle={parentSTitle} />
 
 <Slice id="AreaBreadcrumb" className="secondary-content-bg">
   <div class="layout-grid-left-right">

@@ -1,0 +1,36 @@
+---
+import Slice from "@components/common/Slice.astro";
+
+interface Props {
+  parentSTitle: string;
+}
+const { parentSTitle } = Astro.props;
+
+const { userId } = Astro.locals.auth();
+---
+
+{
+  userId ? (
+    <Slice id="SystemBreadcrumb" className="secondary-content-bg">
+      <div class="layout-grid-left-right">
+        <div class="layout-left-item" />
+        <h3 class="layout-right-item">
+          <a href="/">{parentSTitle}</a>
+        </h3>
+      </div>
+    </Slice>
+  ) : (
+    <Slice id="SystemBreadcrumb" className="secondary-content-bg">
+      <div class="layout-grid-left-right">
+        <div class="layout-left-item" />
+        <h3 class="layout-right-item">
+          <a href="/00.91">{parentSTitle}</a>
+        </h3>
+      </div>
+    </Slice>
+  )
+}
+
+<style lang="scss">
+  @use "@styles/common" as *;
+</style>
