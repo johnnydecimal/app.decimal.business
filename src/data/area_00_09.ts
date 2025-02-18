@@ -103,8 +103,7 @@ export const area_00_09: FlattenedData = {
     title: "Welcome to the small business system",
     type: "adHoc",
     isPublic: true,
-    description:
-      "The Johnny.Decimal System tackles the chaos of business by bringing order to everything — files, emails, tasks, notes — so you always know where things belong and can stay focused on what matters.",
+    description: "A framework and global standard for every small business.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },

@@ -99,6 +99,14 @@
 }
 
 /* -------------------------------- Elements -------------------------------- */
+:global(blockquote) {
+  border-top: 1px dashed var(--border-accent);
+  border-bottom: 1px dashed var(--border-accent);
+  font-size: 0.8rem;
+  // font-style: italic;
+  margin: 0 0 1rem 0;
+}
+
 code {
   background-color: var(--secondary-content-bg);
   border: 1px dotted var(--border-strong);
@@ -267,8 +275,15 @@ select {
   h3 {
     font-size: 1rem;
     font-weight: bold;
-    margin: 0 0 1rem 0;
+    margin: 0; // Surrounding <p> handles it
     text-align: right;
+    @include phone-only {
+      font-size: 1.2rem; // Pop the headers a bit
+      text-decoration: underline;
+    }
+    @include tablet-portrait-up {
+      margin: 0 0 1rem 0; // Spaces out multi-line headers
+    }
 
     // Actually, if you have a double-height label and a single-height text,
     // which might be the case in our user-prefs layout, it's a bit tight. Fix:
