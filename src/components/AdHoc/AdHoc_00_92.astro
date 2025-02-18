@@ -11,13 +11,14 @@ Our community is open. We believe that we can become more efficient if we work t
 const language = `
 One problem with existing communities is that they lack a shared language. This is the same problem you face with your file system: there are any number of ways to refer to the same concept. Confusion results from the ambiguity.
 
-Our system defines a language. When we're talking about payroll, that's _always_ [13.34 Payroll](/13.34). So now you can ask for help in a really specific place.
+Our system defines a language. When we're talking about payroll, that's _always_ [13.34 Payroll](/13.34).<sup>1</sup> So now you can ask for help in a really specific place.
 
-We have two communities, [Discord](http://discord.gg/KYWzAJhmPv) and [the forum](https://forum.johnnydecimal.com/c/small-business/18). Both have dedicated small business sections whose structure mirrors the system.<sup>1</sup>
+We have two communities, [Discord](http://discord.gg/KYWzAJhmPv) and [the forum](https://forum.johnnydecimal.com/c/small-business/18). Both have dedicated small business sections whose structure mirrors the system.<sup>2</sup>
 
 So you won't find yourself asking for payroll help in a channel full of people talking about their tax returns. We'll keep everything in the right channel. Jump in, get targeted help, then get back to work.
 
-> 1. As the system is a work-in-progress these channels have not been set up yet.
+> 1. If you searched for \`payroll\` on the previous page, do you now find yourself remembering the number? :-) 
+> 2. As the system is a work-in-progress these channels have not been set up yet.
 `;
 
 const feedback = `
@@ -34,10 +35,15 @@ A [Platinum](https://store.johnnydecimal.com/cart/43063017111688:1) membership i
 Prices will increase when the system is launched.
 `;
 
+const next = `
+Let's talk about these [numbers](/00.93).
+`;
+
 const openHtml = await marked.parse(open);
 const languageHtml = await marked.parse(language);
 const feedbackHtml = await marked.parse(feedback);
 const subscribeHtml = await marked.parse(subscribe);
+const nextHtml = await marked.parse(next);
 ---
 
 <Slice className="descriptive-text">
@@ -65,6 +71,13 @@ const subscribeHtml = await marked.parse(subscribe);
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Subscribe</h3>
     <div class="layout-right-item" set:html={subscribeHtml} />
+  </div>
+</Slice>
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Next</h3>
+    <div class="layout-right-item" set:html={nextHtml} />
   </div>
 </Slice>
 

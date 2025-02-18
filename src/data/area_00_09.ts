@@ -115,4 +115,14 @@ export const area_00_09: FlattenedData = {
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
+  "00.93": {
+    number: "00.93",
+    title: "About those numbers",
+    type: "adHoc",
+    isPublic: true,
+    description:
+      "Yeah, there are a lot of numbers. Here's why they're so useful (and why you shouldn't be afraid of them).",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
+  },
 };

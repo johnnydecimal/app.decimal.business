@@ -1,0 +1,101 @@
+---
+import Slice from "@components/common/Slice.astro";
+import { marked } from "marked";
+
+const numbers = `
+There's a really simple system behind the numbers that makes it impossible to get lost.
+
+All of your stuff -- your files, notes, emails -- lives inside an ID. The page you're reading is an ID: its number is \`00.93\`.
+
+The number tells you where this thing is. This one's in category \`00\`. Where's category \`00\`? It's in area \`00-09\`. You can see this structure in the links above.
+
+This structure is mirrored on your computer. Guess how you organise your files?
+
+<picture>
+  <source
+    media="(prefers-color-scheme: light)"
+    srcset="/public/img/00.93A-Finder-light-792x294.png"
+  />
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="/public/img/00.93A-Finder-dark-792x294.png"
+  />
+  <img
+    alt="A screenshot of the macOS finder showing a simple hierarchy. Folder '10-19 Company admin' contains folder '13 Money earned, spent, saved, & owed', which in turn contains folder '13.34 Payroll'."
+    id="finder"
+    src="/public/img/00.93A-Finder-light-792x294.png"
+    width="396"
+    height="147"
+  />
+</picture>
+
+This makes it really hard to lose stuff.
+
+You don't even have to create these folders yourself. You download the complete structure from this site.<sup>1</sup>
+
+> 1. When the system is released.
+`;
+
+const outloud = `
+These numbers give you a superpower: now you can tell anyone where anything is, instantly.
+
+_'Hey Susan, where's the payroll stuff?'_  
+**— Thirteen-thirty-four**.
+
+Think how convenient this is when you're on a video call. No more trying to explain to someone which one of your 'finance' folders they have to try to find...
+`;
+
+const noMaths = `
+In case it's not obvious: there's no maths here. You can put the slide rule away.
+
+The numbers are just a convenient reference. So it doesn't matter if you're '_not a numbers person_'. There's nothing to be afraid of.
+`;
+
+const subscribe = `
+Get everything, forever, with [Platinum](https://store.johnnydecimal.com/cart/43063017111688:1). Or go [Gold](https://store.johnnydecimal.com/cart/43069054648456:1) for a year. 
+`;
+
+const numbersHtml = await marked.parse(numbers);
+const outloudHtml = await marked.parse(outloud);
+const noMathsHtml = await marked.parse(noMaths);
+const subscribeHtml = await marked.parse(subscribe);
+---
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">A simple hierarchy</h3>
+    <div class="layout-right-item" set:html={numbersHtml} />
+  </div>
+</Slice>
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Read them aloud</h3>
+    <div class="layout-right-item" set:html={outloudHtml} />
+  </div>
+</Slice>
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">No maths</h3>
+    <div class="layout-right-item" set:html={noMathsHtml} />
+  </div>
+</Slice>
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Subscribe</h3>
+    <div class="layout-right-item" set:html={subscribeHtml} />
+  </div>
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+
+  :global(img#finder) {
+    border: 1px solid var(--border-accent);
+    height: auto;
+    max-width: 95%;
+    object-fit: cover;
+  }
+</style>
