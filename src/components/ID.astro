@@ -12,12 +12,7 @@ const { userId } = Astro.locals.auth();
 
 // #region Imports ------------------------------------------------------------
 // Data
-import system, {
-  type SystemEntry,
-  type AreaEntry,
-  type CategoryEntry,
-  type IdEntry,
-} from "@data/smallBusinessFlat";
+import system, { type IdEntry } from "@data/smallBusinessFlat";
 // Utils
 import parseMd from "@utils/parseMd";
 // Components

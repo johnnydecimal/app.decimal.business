@@ -20,7 +20,6 @@ import FurtherReadingLinks from "./common/FurtherReadingLinks.astro";
 
 const areaEntry = system[area] as AreaEntry;
 const areaTitle = areaEntry.title;
-
 const areaDescription = await parseMd(areaEntry.description);
 const sb = areaEntry.extensions?.smallBusiness;
 const areaExamples = sb?.examples && (await parseMd(sb.examples));

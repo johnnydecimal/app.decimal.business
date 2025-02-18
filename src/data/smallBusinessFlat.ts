@@ -119,6 +119,7 @@ import { category_14 } from "./category_14";
 import fr_15_90_FR1 from "@data/sb_ts/15.90+FR1-why-are-there-no-ids-here";
 import fr_15_90_FR2 from "@data/sb_ts/15.90+FR2-leave-yourself-jdex-notes";
 
+// TODO you could add a testEnv: property and filter those out in prod
 const flattenedData: FlattenedData = {
   J82: {
     number: "J82",
@@ -126,6 +127,30 @@ const flattenedData: FlattenedData = {
     description: "The best small business system.",
     type: "system",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+  },
+  "11+FR1": {
+    number: "11+FR1",
+    title: "Cat11 TEST FR",
+    type: "furtherReading",
+    isPublic: true,
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      furtherReading: {
+        text: "yeah",
+      },
+    },
+  },
+  "10-19+FR1": {
+    number: "10-19+FR1",
+    title: "Area10-19 TEST FR",
+    type: "furtherReading",
+    isPublic: true,
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      furtherReading: {
+        text: "yeah",
+      },
+    },
   },
   ...area_00_09,
   "10-19": {

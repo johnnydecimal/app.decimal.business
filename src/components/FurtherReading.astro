@@ -57,25 +57,21 @@ if (userId) {
 // in the left side as a header. .map(etc...)
 
 let parentEntryType: "id" | "category" | "area" | "system";
-let parentEntryNumber: string;
 if (frEntry.number.match(/^\d\d\.\d\d\+/)) {
   parentEntryType = "id";
-  parentEntryNumber = frEntry.number.replace(/^(\d\d\.\d\d).*/, "$1");
 } else if (frEntry.number.match(/^\d\d\+/)) {
   parentEntryType = "category";
-  parentEntryNumber = frEntry.number.replace(/^(\d\d).*/, "$1");
 } else if (frEntry.number.match(/^\d\d-\d\d\+/)) {
   parentEntryType = "area";
-  parentEntryNumber = frEntry.number.replace(/^(\d\d-\d\d).*/, "$1");
-} else if (frEntry.number === "J82") {
+} else if (frEntry.number.match(/^J82\+/)) {
   parentEntryType = "system";
-  parentEntryNumber = "J82";
 } else {
+  // Don't think it's possible to get this far in the render chain but
   throw new Error(`Unknown further reading ID: ${furtherReadingId}`);
 }
 ---
 
-<SystemBreadcrumb parentSTitle={parentSTitle} />
+<SystemBreadcrumb />
 
 {
   parentEntryType === "area" ||
