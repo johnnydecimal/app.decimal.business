@@ -20,10 +20,22 @@ But you don't have time to figure out how to apply this to your business. And wh
 The small business system is a pre-built framework. It gives you a place for everything. **All you have to do is move in**.
 `;
 
-const what = `
-This site -- the one you're reading -- _is_ the system. So you can try-before-you-buy. Just click around. You'll find about 20% of the content is unlocked.
+/*
+const who = `
+We've designed this for all small businesses. So it doesn't matter what you do: you might make stuff, either physical or digital; you might sell a service, in the real world or online; or you might manage a club, or charity.
 
-When you sign up, you get full access. There will be over 200 hand-crafted IDs organised in 20 categories, within 5 areas. It's a complete business operations manual: there are 35,000+ words of content, and we're not finished.
+Depending on your business, there'll be parts of the system that are more or less relevant to you. But we've created it so that there's a place for _everything_, no matter who you are.
+
+But it's not for every business. At some point you reach a scale where you'd need a custom solution. And now you're not a 'small business'. We think this is probably somewhere around 10-15 employees.
+
+If in doubt, [get in touch](mailto:hello@johnnydecimal.com).
+`;
+*/
+
+const what = `
+This site -- the one you're reading -- _is_ the system. So you can try-before-you-buy. Just click around. Start at [10-19](/10-19) -- you'll find about 20% of the content is unlocked.
+
+When you sign up, you'll get full access as soon as the system is released. There'll be over 200 hand-crafted IDs organised in 20 categories, within 5 areas. It's a complete business operations manual: currently 35,000+ words of content, and we're not finished.
 
 Search is in demo mode. Try it out: say you're looking for the ID where you manage \`payroll\`.<sup>1</sup> Now imagine being able to find _anything_ in your business this quickly.
 
@@ -31,7 +43,7 @@ _Your_ files live on _your_ computer. **We never have access to your files**. Yo
 
 There are many other benefits, which we'll explore on the coming pages.
 
-> 1. We're still building the system; search is incomplete.
+> 1. We're still building the system. Search is incomplete, and you'll notice other bugs if you go looking for them. This site is in constant development, and my focus is on building the system over making this early public-facing version bug-free.
 `;
 
 const cost = `
@@ -68,6 +80,7 @@ Check out our plans for the [community](/00.92).
 
 const whyHtml = await marked.parse(why);
 const howHtml = await marked.parse(how);
+// const whoHtml = await marked.parse(who);
 const whatHtml = await marked.parse(what);
 const costHtml = await marked.parse(cost);
 const whenHtml = await marked.parse(when);
@@ -88,6 +101,17 @@ const nextHtml = await marked.parse(next);
     <div class="layout-right-item" set:html={howHtml} />
   </div>
 </Slice>
+
+{
+  /*
+<Slice id="who" className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Who?</h3>
+    <div class="layout-right-item" set:html={whoHtml} />
+  </div>
+</Slice>
+*/
+}
 
 <Slice id="what" className="descriptive-text">
   <div class="layout-grid-left-right">
