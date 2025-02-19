@@ -8,4 +8,10 @@ declare global {
     useEmoji?: boolean;
     useBlackSquare?: boolean;
   }
+
+  interface Window {
+    goatcounter?: {
+      no_onload?: boolean;
+    };
+  }
 }

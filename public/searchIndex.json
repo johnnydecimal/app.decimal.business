@@ -62,7 +62,6 @@
     "title": "Products",
     "type": "category",
     "description": "What yours are, and how you make them.",
-    "description": "What yours are, and how you make them.",
     "metadata": {
       "createdDate": "2024-11-18",
       "updatedDate": "2024-11-18"
@@ -279,7 +278,7 @@
     "number": "00",
     "title": "System information, help, and settings",
     "type": "category",
-    "description": "This category contains information about the system, its help pages, and your user settings.\n\n> Note that much of the site is hid░░░ as you are not logged in. The site is under construction. See the [home page](/00.91).",
+    "description": "This category contains information about the system, its help pages, and your user settings.",
     "metadata": {
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
