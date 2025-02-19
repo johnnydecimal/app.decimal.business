@@ -104,8 +104,8 @@
   border-top: 1px dashed var(--border-accent);
   border-bottom: 1px dashed var(--border-accent);
   font-size: 0.8rem;
-  // font-style: italic;
   margin: 0 0 1rem 0;
+
   :global(li + li) {
     margin-top: 5px;
   }
