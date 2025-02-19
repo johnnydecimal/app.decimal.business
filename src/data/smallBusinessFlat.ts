@@ -161,10 +161,7 @@ const flattenedData: FlattenedData = {
       "In [[10-19]], our goal is that these categories could be the foundation of _any_ business, regardless of the product or service you offer.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
-      smallBusiness: {
-        exceptions:
-          "Just some text in an exceptions field so we can **see** _how_ `it` renders with a [[11.11]] wiki-link for good measure.",
-      },
+      smallBusiness: {},
     },
   },
   ...category_11,
