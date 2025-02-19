@@ -16,7 +16,8 @@ const { slug } = Astro.params;
 
 // TODO obvs this is temporary until launch
 const { userId } = Astro.locals.auth();
-if (slug === "index.html" && !userId) {
+// In prod, slug is just blank at the home page
+if (slug === "" && !userId) {
   return Astro.redirect("/00.91");
 }
 
@@ -45,7 +46,7 @@ let entryType: EntryType | "no-match" | null = null;
 if (!slug) {
   // Not sure how this can be, but handle it
   entryType = "no-match";
-} else if (slug === "index.html") {
+} else if (slug === "index.html" || slug === "") {
   entryType = "system";
 } else {
   const systemEntry = sb[slug];
