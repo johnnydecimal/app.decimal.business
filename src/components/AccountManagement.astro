@@ -4,16 +4,29 @@ import { SignOutButton } from "@clerk/astro/components";
 import Slice from "./common/Slice.astro";
 
 const { slug } = Astro.params;
+const { userId } = Astro.locals.auth();
 ---
 
 <Slice id="AccountManagement">
   <div class="layout-grid-left-right">
     <div class="layout-left-item">?</div>
     <div class="layout-right-item border-none">
-      <a
-        href=`https://airtable.com/appep0KBedENs1fkW/pagnQjbOW4JoXNNax/form?prefill_JD+SBS+ID=${slug}`
-        >Provide feedback</a
-      >
+      {
+        userId ? (
+          <a
+            href={`https://airtable.com/appep0KBedENs1fkW/pagnQjbOW4JoXNNax/form?prefill_JD+SBS+ID=${slug}`}
+          >
+            Provide feedback
+          </a>
+        ) : (
+          <a
+            href="#"
+            onclick="alert(`When you're signed in, this link allows you to send immediate feedback on the ID you're viewing.`)"
+          >
+            Provide feedback
+          </a>
+        )
+      }
     </div>
   </div>
   <div class="layout-grid-left-right">
@@ -25,19 +38,24 @@ const { slug } = Astro.params;
             Account management
           </a>
         ) : (
-          <a href="https://accounts.production.com/user">Account management</a>
+          <span>Account management (inactive)</span>
         )
       }
     </div>
   </div>
-  <div class="layout-grid-left-right">
-    <div class="layout-left-item">×</div>
-    <div class="layout-right-item border-none">
-      <SignOutButton asChild>
-        <button>Sign out</button>
-      </SignOutButton>
-    </div>
-  </div>
+
+  {
+    userId ? (
+      <div class="layout-grid-left-right">
+        <div class="layout-left-item">×</div>
+        <div class="layout-right-item border-none">
+          <SignOutButton asChild>
+            <button>Sign out</button>
+          </SignOutButton>
+        </div>
+      </div>
+    ) : null
+  }
 </Slice>
 
 <style lang="scss">

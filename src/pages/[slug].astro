@@ -14,6 +14,12 @@ import AdHoc from "@components/AdHoc.astro";
 
 const { slug } = Astro.params;
 
+// TODO obvs this is temporary until launch
+const { userId } = Astro.locals.auth();
+if (slug === "index.html" && !userId) {
+  return Astro.redirect("/00.91");
+}
+
 // Is it a test run? That's only a possibility if we're in dev, which is how
 // we stop sneaky people appending ?env=test in prod and viewing the system.
 const testRun =

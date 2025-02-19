@@ -316,6 +316,18 @@
     "isPublic": true
   },
   {
+    "number": "00.93",
+    "title": "About those numbers",
+    "type": "adHoc",
+    "description": "Yeah, there are a lot of numbers. Here's why they're so useful (and why you shouldn't be afraid of them).",
+    "metadata": {
+      "createdDate": "2025-01-01",
+      "updatedDate": "2025-01-01"
+    },
+    "smallBusiness": {},
+    "isPublic": true
+  },
+  {
     "number": "10-19",
     "title": "Company administration",
     "type": "area",

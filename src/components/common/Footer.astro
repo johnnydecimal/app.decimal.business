@@ -7,6 +7,8 @@ const day = String(today.getDate()).padStart(2, "0");
 const year = today.getFullYear();
 const date = `${year}-${month}-${day}`;
 
+const { userId } = Astro.locals.auth();
+
 let environment = import.meta.env.DEV ? "dev" : "prod";
 if (Astro.url.searchParams.get("env") === "test") {
   environment = "test";
@@ -23,7 +25,11 @@ if (Astro.url.searchParams.get("env") === "test") {
             >Environment&nbsp;&nbsp;&nbsp;: {environment}</span
           >
           <br />
-          <span>System status : normal</span><br />
+          <span
+            >Signed in&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {userId ? "✓" : "×"}</span
+          >
+          <br />
+          <!-- <span>System status : normal</span><br /> -->
           <span
             >Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {
               environment !== "test" ? "0.1.0" : "x.y.z"
