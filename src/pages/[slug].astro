@@ -13,6 +13,7 @@ import AdHoc from "@components/AdHoc.astro";
 import FurtherReading from "@components/FurtherReading.astro";
 
 const { slug } = Astro.params;
+console.log("🚀 ~ slug:", slug);
 
 // TODO obvs this is temporary until launch
 const { userId } = Astro.locals.auth();
@@ -20,11 +21,6 @@ const { userId } = Astro.locals.auth();
 if (slug === "" && !userId) {
   return Astro.redirect("/00.91");
 }
-
-// Is it a test run? That's only a possibility if we're in dev, which is how
-// we stop sneaky people appending ?env=test in prod and viewing the system.
-const testRun =
-  import.meta.env.DEV && Astro.url.searchParams.get("env") === "test";
 
 /**
  * This page handles the display of all areas, categories, and IDs. So first
@@ -60,8 +56,8 @@ if (!slug) {
 ---
 
 <!-- TODO title needs fixing in case of / etc. -->
-<Layout testRun={testRun} title={slug}>
-  {entryType === "system" ? <AdHoc id="00.91" /> : null}
+<Layout title={slug}>
+  {entryType === "system" ? <System /> : null}
   {entryType === "area" ? <Area area={slug!} /> : null}
   {entryType === "category" ? <Category category={slug!} /> : null}
   {entryType === "id" ? <ID id={slug!} /> : null}
@@ -73,5 +69,5 @@ if (!slug) {
     ) : null
   }
   {entryType === "adHoc" ? <AdHoc id={slug!} /> : null}
-  {entryType === "no-match" ? <AdHoc id="00.91" /> : null}
+  {entryType === "no-match" ? <System /> : null}
 </Layout>
