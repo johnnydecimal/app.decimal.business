@@ -124,7 +124,7 @@ const flattenedData: FlattenedData = {
   J82: {
     number: "J82",
     title: "Small business system",
-    description: "The best small business system.",
+    description: "A framework and global standard for every small business.",
     type: "system",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },

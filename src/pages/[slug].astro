@@ -13,7 +13,23 @@ import AdHoc from "@components/AdHoc.astro";
 import FurtherReading from "@components/FurtherReading.astro";
 
 const { slug } = Astro.params;
-console.log("🚀 ~ slug:", slug);
+
+export async function get({ request }) {
+  const cookies = request.headers.get("cookie") || "";
+
+  const hasVisited = cookies.includes("visited=true");
+
+  if (!hasVisited) {
+    return {
+      redirect: "/00.91",
+      headers: {
+        "Set-Cookie": "visited=true; Path=/; HttpOnly; Max-Age=31536000", // 1 year
+      },
+    };
+  }
+
+  return {};
+}
 
 // TODO obvs this is temporary until launch
 const { userId } = Astro.locals.auth();

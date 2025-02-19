@@ -173,7 +173,7 @@
     "number": "J82",
     "title": "Small business system",
     "type": "system",
-    "description": "The best small business system.",
+    "description": "A framework and global standard for every small business.",
     "metadata": {
       "createdDate": "2024-11-18",
       "updatedDate": "2024-11-18"
@@ -288,7 +288,9 @@
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
     },
-    "smallBusiness": {},
+    "smallBusiness": {
+      "alsoSee": "- [00.91 Welcome to the small business system](/00.91)\n- [00.92 A community based around standards](/00.92)\n- [00.93 About those numbers](/00.93)"
+    },
     "isPublic": true
   },
   {
@@ -336,9 +338,7 @@
       "createdDate": "2024-11-18",
       "updatedDate": "2024-11-18"
     },
-    "smallBusiness": {
-      "exceptions": "Just some text in an exceptions field so we can **see** _how_ `it` renders with a [[11.11]] wiki-link for good measure."
-    },
+    "smallBusiness": {},
     "isPublic": true
   },
   {
@@ -396,7 +396,7 @@
       "overview": "This ID is for storing copies of any licence, permit, or accreditation that your business cannot trade without. First, you registered your business. Now you need the legal proof that you can provide a product or service.\n\nThis ‘proof’ will vary considerably depending on what you do. If you run a bar, you’ll need a liquor licence. If you’re a healthcare provider in private practice, you must have a degree, as well as any other required accreditations.\n\nThis is an important ID to keep up-to-date in your JDex and to set reminders for so nothing expires.",
       "alsoSee": "Manage ongoing training or education in [[11.50]], but store a copy of the proof of completion here if it’s essential to your ability to trade."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.12+FR1",
@@ -409,7 +409,7 @@
     "furtherReading": {
       "text": "You might be thinking, “hey Johnny Decimal, you’ve always said not to have copies of things in different places”. Absolutely – for documents that _change_, like a budget spreadsheet. You should never have multiple copies of things like that because someone will inevitably update the wrong version.\n\nHowever, licences, permits, and accreditations are static documents. Probably a PDF or a piece of paper. It’s okay to put copies of them where it’s helpful and makes sense to do so. They’re not going to change unless they are renewed."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.12+FR2",
@@ -422,7 +422,7 @@
     "furtherReading": {
       "text": "If an inspector turns up at your door, having copies of these core documents in one place will be very handy. They’re also highly visible at the top of your system so they’re not lost or forgotten."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.13",
@@ -514,7 +514,7 @@
       "exceptions": "Staff health insurance as part of a salary package goes in [[13.34]].\n\nBuilding (structural and/or contents) or land insurance goes in [[12.12]].\n\nVehicle insurance goes in [[12.42]].\n\nFinancial insurance goes in [[13.12]].\n\nCyber insurance goes in [[14.44]].\n\nProduct insurance goes in [[20-29]].",
       "links": "An overview of all the [types of insurances](https://business.gov.au/risk-management/insurance/types-of-business-insurance) a business might have – some policies would go here, others would fit in the categories below."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.22+FR1",
@@ -527,7 +527,7 @@
     "furtherReading": {
       "text": "We can’t advise you on what to get. But one thing we’ve learned in our research is that there are _a lot_ of business insurance options. It’s a bit overwhelming. We now understand the value of a trustworthy insurance professional to provide tailored advice.\n\nWe’ve also noticed that insurance companies often have commercial policies that are designed for certain occupations. So it might pay to look around to see if that’s an option for you."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.22+FR2",
@@ -540,7 +540,7 @@
     "furtherReading": {
       "text": "We recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal. Hence, business insurance goes up here and there’s room allocated for other insurances in the categories below."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.23",
@@ -645,7 +645,7 @@
       "overview": "How do you solve problems and deal with sticky situations? This is a place for anything to do with figuring this out.\n\nIt’s hard to predict what can go wrong. But having some guidelines in place for how you approach disputes can help you stay calm and in control, represent the business well, and hopefully get a good outcome.",
       "links": "An article about [managing online reviews](https://business.gov.au/online-and-digital/online-reviews) from the Australian Government."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.40",
@@ -672,7 +672,7 @@
       "examples": "Recruitment agencies or online employment platforms you use; role descriptions for job ads; CVs/resumes received; the interview process and questions; candidate shortlists; the onboarding process; information for new employees; a checklist that covers the entire hiring process.",
       "alsoSee": "[[11.42]] for creating a new staff record template when someone is hired.\n\n[[14.10]] and [[14.41]] for assigning and setting up new devices and accounts."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.42",
@@ -849,7 +849,7 @@
       "overview": "A place for anything you might classify as learning or self-improvement that doesn’t fit elsewhere. It’s not related to your business operating legally and/or doesn’t lead to a formal credential. You don’t have to do it, it’s extracurricular. But it might help you be a better business owner or staff member.\n\nFor instance, informal courses, conferences or workshops, coaching programs, webinars, talks, or general reading and media consumption that keeps you informed.\n\nAs an aside, we know some businesses that include budgets for this kind of thing in salary packages. Staff can then spend this on whatever learning they choose. Nice.",
       "links": "[Free self-paced courses for small business](https://smallbusiness.taxsuperandyou.gov.au/) from the Australian Taxation Office."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.53+FR1",
@@ -862,7 +862,7 @@
     "furtherReading": {
       "text": "Nerd tip: this may sound obvious but we only just did it ourselves.\n\n1. Go to your government’s small business and/or tax website.\n2. See if they have newsletters.\n3. Sign up!\n\nWe’ve subscribed to about ten different newsletters and so far they’re _full_ of useful stuff."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.60",
@@ -905,7 +905,7 @@
       "overview": "This might include the contact details of anyone you know personally, or a list of websites that you have used previously or have been recommended. Or perhaps a library of useful downloads that you’ve saved on different topics.",
       "links": "[Business-related support](https://business.gov.au/planning/new-businesses/get-help-for-your-business) from the Australian Government.\n\n[Wellbeing-related support for business owners](https://business.gov.au/risk-management/mental-health/mental-health-and-wellbeing-support-for-business) from the Australian Government.\n\n[The Small Business Debt Helpline](https://sbdh.org.au/).\n\n[The Australian Small Business and Family Enterprise Ombudsman](https://www.asbfeo.gov.au/).\n\n[Small Business Guides to Mentally Healthy Workplaces](https://www.mentalhealthcommission.gov.au/projects/mentally-healthy-work/national-workplace-initiative/small-business-guides-mentally-healthy-workplaces) from the Australian Government National Mental Health Commission.\n\n[Mental health support for small business](https://www.beyondblue.org.au/mental-health/work/small-business-owners-and-sole-traders) from Beyond Blue.\n\n[Mental health support for small business](https://aheadforbusiness.org.au/] from Ahead for Business."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "11.63",
@@ -1029,7 +1029,7 @@
       "exceptions": "If your business ‘premises’ is mobile, like a food truck, van, or trailer, put the insurance details in [[12.42]].\n\nIf you’re a market stall holder or similar, store your equipment in [[12.30]] and your public liability insurance in [[11.22]].\n\nIf you’re a digital nomad with no fixed location, you might cover your valuables under a personal travel insurance policy.",
       "alsoSee": "Having an up-to-date inventory at [[12.0X]] will be helpful if you need to make a claim.\n\nIf you have separate insurance for high-value computers, devices, or accessories, you might decide to store that down in [[14.44]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.12+FR1",
@@ -1042,7 +1042,7 @@
     "furtherReading": {
       "text": "We recommend that insurance details should live next to the thing that is being insured. This will help your brain find things, and ensure other relevant information is nearby if you’re dealing with a claim or policy renewal."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.13",
@@ -1192,7 +1192,7 @@
       "exceptions": "This is not your business risk and emergency management plans, they’re in [[11.23]].",
       "alsoSee": "If anything here helps you meet compliance obligations (e.g. installing fire doors and smoke alarms), store the paperwork here and note it in [[11.13]].\n\nEnsure anything relevant in [[11.51]] is aligned with information here."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.23",
@@ -1410,7 +1410,7 @@
       "overview": "This is about keeping up appearances and creating a nice environment for your customers. You might have contracts with suppliers for ongoing services, or you might do everything yourself. Either way, track it all here.",
       "exceptions": "This is not for repairs and maintenance, that’s in [[12.15]].\n\nThis is not for digital music subscriptions, we’ve classified those as ‘technology’ – they live in [[14.32]] and should also be noted in [[13.35]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.34",
@@ -1608,7 +1608,7 @@
       "overview": "These examples are car focused for simplicity. But if you have different types of vehicles, adapt as needed. For instance, you might have to pay marina or airport fees for a boat or plane that are equivalent to car parking.\n\nRunning expenses are the everyday transactions related to your vehicles like buying fuel or going to the car wash. Contrast with repairs and maintenance, which are less frequent transactions and are managed separately below.\n\nDepending on your business, this might be a busy ID if you have a lot of running expenses. But as long as you process the receipts in your inbox regularly and archive them neatly, you’ll stay on top of what you’re spending.\n\nIf you have many vehicles, store their documents in subfolders labelled with the vehicle name and/or registration. And use one of the recommended date patterns to start file names so they sort neatly.",
       "exceptions": "Repairs, maintenance, and associated purchases go in [[12.45]].\n\nFuel tax credits or other government grants go in [[13.25]].\n\nFines and penalties go in [[13.55]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.44",
@@ -1721,9 +1721,9 @@
     },
     "smallBusiness": {
       "overview": "This is a place for anything to do with relationships that you maintain that are close by – your direct neighbours or surrounding streets. You’re probably on a first-name basis and know each other reasonably well.\n\nMaybe you store the contact details, opening hours, or annual holidays, of other businesses in your shopping centre in case of emergency. Or you might have reminders to bring in mail or garbage bins for your neighbours sometimes.\n\nPerhaps you offer discounts to certain neighbourhood businesses and you keep a list of what these are. Or maybe you’re part of a ‘neighbourhood watch’-style group where everyone keeps an eye on things. Either way, store any notes or documents here.",
-      "exceptions": "This is not for networking, seeking advice and support, or interactions with professional bodies, that’s in [11.60]]."
+      "exceptions": "This is not for networking, seeking advice and support, or interactions with professional bodies, that’s in [[11.60]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "12.52",
@@ -1819,7 +1819,7 @@
     "furtherReading": {
       "text": "If you’re a sole trader, you might just be tracking basic incomings and outgoings. Compared with someone who manages things like payroll, investments, or company equity. Although, the more complex your affairs, the more we’re assuming you have software and/or a professional to handle a lot of the money stuff for you."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13+FR2",
@@ -1832,7 +1832,7 @@
     "furtherReading": {
       "text": "Note that you might end up copying important static\\* records like receipts and invoices to or from this category. For example, you file the original expense receipt for a computer in [[13.33]], and also add a copy to [[14.11]] so it’s with the warranty. Or you add a copy of the title deed for your office premises to [[13.44]], but the original lives in [[12.11]]. This is okay. It’s part of being able to see the whole picture.\n\n\\*By ‘static’ we mean things that were sent to you that can’t be changed (e.g. a PDF). As compared to internal files that you work on (e.g. a spreadsheet). You should never have multiple copies of the latter. You’ll end up working on the wrong version and being very sad when you realise. This is not the Decimal way."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13+FR3",
@@ -1845,7 +1845,7 @@
     "furtherReading": {
       "text": "## An account could be many things\n\nFor simplicity, when we say account we’re referring to any account or service that manages money in some way. This includes traditional cash, credit card, loan, or investment accounts. But also online platforms, apps, and any other modern service. For instance, PayPal, Stripe, ‘buy now, pay later’ providers, money-transfer services, or even digital currency exchanges and wallets.\n\n## Different accounts for different tasks\n\nWhile many businesses will have one cash account to handle all incomings and outgoings (i.e. a standard business bank account), we wanted to leave room for those who do things differently. For instance, you might have completely (or mostly) separate accounts for income and expenses. If so, you may prefer to keep them in either [[13.22]] or [[13.32]].\n\nHere’s some scenarios.\n\n**A cooking school has online courses on a learning platform:**\n\n- Customer transactions are handled by Stripe.\n- This account is one-way only. It collects and holds income, and transfers it to a standard business bank account each month.\n- The owners keep account paperwork from Stripe in [[13.22]].\n- And their standard business bank account records are in [[13.42]].\n\n**A veterinary surgery accepts payments via Afterpay:**\n\n- The Afterpay retail account is linked to a standard business bank account.\n- The owners keep account paperwork from Afterpay in [[13.22]].\n- And their standard business bank account records are in [[13.42]].\n\n**A chicken rescue charity keeps separate bank accounts for income and expenses:**\n\n- All donations are collected in one bank account, which is managed in [[13.22]].\n- All expenses are paid from a different bank account, which is managed in [[13.32]].\n- They also have a standard business bank account for other miscellanea, which is managed in [[13.42]].\n\nWho knows what other variations occur in real life. An eBay store with an income-only PayPal account. Or a business that prefers to pay for all their expenses with Bitcoin. If this sounds like you, then [[13.22]] and [[13.32]] might be useful.\n\nOtherwise, just manage your standard business bank account in [[13.42]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.10",
@@ -1957,7 +1957,7 @@
       "overview": "How’s everything going? Checking in on the business and its finances is something we should all do when we can. This might take the form of mandatory reporting, or just some notes in your JDex. Or perhaps you send emails, presentations, or other documents to keep staff, subscribers, or potential investors updated. Either way, do the work here.",
       "links": "[Information about annual financial reports](https://www.acnc.gov.au/for-charities/manage-your-charity/obligations-acnc/reporting-annually-acnc/annual-financial-reports) from the Australian Charities and Not-for-profits Commission.\n\n[Information about not-for-profit self-reviews](https://www.ato.gov.au/businesses-and-organisations/not-for-profit-organisations/your-organisation/not-for-profit-self-review) from the Australian Taxation Office.\n\n[Information about changes in reporting requirements for sporting organisations](https://www.ato.gov.au/businesses-and-organisations/not-for-profit-organisations/not-for-profit-newsroom/changes-in-reporting-requirements-for-sporting-clubs) from the Australian Taxation Office."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.14",
@@ -2108,7 +2108,7 @@
     "smallBusiness": {
       "overview": "However you actively earn money, store the processed records here.\n\nWhether you send out invoices for your work\\*, download reports from a till or online platform, or tally up a cash book, these are your sales. This includes long-term income for things like royalties and book sales. You did the work once and continue to get paid for it.\n\nAnd if you have to deal with bad debts, we recommend noting those here too. They’re still sales, you just didn’t receive the money.\n\n\\*Your accountant might refer to this as ‘accounts receivable’."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.23+FR1",
@@ -2121,7 +2121,7 @@
     "furtherReading": {
       "text": "Not everyone uses software to generate invoices. For those who use a template, we recommend saving it here. Export the completed invoice as a PDF to the income inbox and send it. Then process it when it’s paid and move it here for permanent filing."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.24",
@@ -2208,7 +2208,7 @@
       "overview": "Think of this ID like a garden shed. It's where you can do rough work without anyone having to see it.\n\nIt contains an inbox where expense records are held until you process and permanently file them in [[13.33]].\n\nAnd if you need to do any messy calculations as you process the expenses, there’s room here.",
       "alsoSee": "[[13.03+ XXXXXXXX]]\n\nFollow the steps in the ops manual and set up a regular time to process your expenses inbox."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.31+FR1",
@@ -2221,7 +2221,7 @@
     "furtherReading": {
       "text": "The goal of the five ‘inbox and processing’ IDs in this category is to add a little rigour to ensure you don’t miss anything. Income payments and tax deductible expenses are like treasure. And forgetting to pay other people is bad form.\n\nWe don’t want to accidentally overlook these things because we’re busy keeping our customers happy. So hopefully these ops manuals will help form good habits around cross-checking incomings and outgoings."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.32",
@@ -2322,7 +2322,7 @@
       "alsoSee": "Store copies of final payroll records with the individual in [[11.42]] – this is not only good practice, but likely a legal requirement.",
       "links": "[Guidance on hiring and paying workers](https://www.ato.gov.au/businesses-and-organisations/hiring-and-paying-your-workers) from the Australian Taxation Office.\n\n[An article about managing payroll in small business](https://www.nerdwallet.com/article/small-business/how-to-manage-payroll-for-your-small-business) from NerdWallet."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.34+FR1",
@@ -2335,7 +2335,7 @@
     "furtherReading": {
       "text": "If you have staff, the kinds of things you might manage here include:\n\n- timekeeping (e.g. rosters, records of attendance, overtime, project timesheets),\n- wages, payslips, and remittance,\n- income tax withholding,\n- pension payments,\n- health insurance,\n- paid or unpaid leave of any kind,\n- allowances (e.g. for meals, clothing, training),\n- any benefits, bonuses, rewards, or incentives in salary packages,\n- expense reimbursement."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.35",
@@ -2461,7 +2461,7 @@
       "exceptions": "This is not for statements of earnings – after processing the income, file those in [[13.24]].",
       "alsoSee": "If you intend to sell all or part of an investment, remember to consider any tax implications such as capital gains in your budget and/or master finance record in [[13.11]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.43+FR1",
@@ -2474,7 +2474,7 @@
     "furtherReading": {
       "text": "To reiterate, we’re not accountants. And when we discussed property ownership, the conversation kept going around in circles.\n\nIf you own your business premises that’s a fixed asset. But a lot of us would think, “hey, isn’t that also an investment?”. And vice versa, if the business owns a rental property as an investment, that’s still a fixed asset right?\n\nWe’re not going to get involved in international balance sheet science. But we _can_ make a decision about folders.\n\nOur recommendation is:\n\n- If you own your business premises, the title deed lives in [[12.11]] and because it’s a fixed asset, copy it to [[13.44]].\n- And if the business also owns a rental property that is _not_ where you trade, we consider that an investment. The rent is your earnings. So the title deed lives here. You could also copy it to [[13.44]] if you prefer.\n\nIf this sounds like madness, we can discuss it in the [[community]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.44",
@@ -2657,7 +2657,7 @@
       "exceptions": "These are not expenses that are paid on the spot or automatically, manage those in [[13.30]].",
       "alsoSee": "[We say there is one in the text]"
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.54+FR1",
@@ -2670,7 +2670,7 @@
     "furtherReading": {
       "text": "Normally we think of the bills that we receive by email or post as liabilities. But we made a decision here to classify things like _direct debits_ of bill payments as going ‘straight to expenses’. They’re paid automatically and you don’t need to plan a time to physically transfer money. Those types of liabilities tend to recur predictably, either monthly or quarterly.\n\nFor instance, you’ve set up direct debits for your utility bills. They’re paid automatically on the due date. Now they’re just expense transactions on your bank statement that you process and file in [[13.30]].\n\nCompare this to other bills that arrive unpredictably, that you must pay manually. During one month you receive invoices from a carpenter, a car mechanic, and a new supplier who serviced your front office coffee machine. These are standalone bills for specific jobs and they all have different payment terms.\n\nAs they arrive, put them in the liabilities inbox. Then set aside time later to pay them in order of urgency. The processed invoices are permanently filed here. And you might decide to add copies of them to [[12.14]], [[12.45]], and [[12.34]], respectively."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.54+FR2",
@@ -2683,7 +2683,7 @@
     "furtherReading": {
       "text": "If you can, consider paying invoices from sole traders on the day they’re received. One company used to do this for Lucy. She didn’t ask them to, they just did it. Every time. It was an amazing gesture towards the smallest of business owners and made a huge difference to her cashflow and ability to trade."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.55",
@@ -2768,7 +2768,7 @@
       "overview": "Here we are at the final stop. The big ledger in the sky. This is the place to store all the official paperwork and statements related to government tax account/s for the business.\n\nAnd any other important documents related to your quarterly or annual tax returns (including the final tax return itself). Plus any correspondence with your accountant around preparing these returns.\n\nDepending on where you’re from, you might have more than one account for different types of tax. Just subfolder everything neatly using the date and account name, as per previous guidance.",
       "alsoSee": "If you receive a bill for taxes owed, put it in [[13.51]], process it, then file it here.\n\nDitto for your accountant’s invoices for managing your affairs."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.62+FR1",
@@ -2781,7 +2781,7 @@
     "furtherReading": {
       "text": "We recommend that all government tax records should be permanently filed here after processing. Not just income tax returns.\n\nWhether a business is paying income, sales, fringe benefits, or payroll tax, it all goes to an account somewhere with your name on it. So we wanted to ensure there’s a resting place for all the final documents.\n\nHaving everything tax related in the one place feels helpful. You can always duplicate any records that you would like to add elsewhere in the system."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "13.63",
@@ -2876,7 +2876,7 @@
     "furtherReading": {
       "text": "We have so many gadgets now, so there’s a lot of potential crossover between general technology, operations, and product. But we made a decision that this category is for classic computers, mobile devices, accessories, and other digital services that are common to _most_ businesses. The things that underpin everything else. And that you probably have more control over.\n\nAnd it’s _not_ for computerised machines that are specific to your operations or product. Anything from card readers and payment machines, medical devices, manufacturing equipment, or that fancy robot vacuum cleaner in the back office.\n\nThink about it like this. If you decide to open a completely different business, the gadgets you use in daily operations will change. But your over-arching IT setup probably won’t.\n\n## Here’s a scenario\n\nA gift shop has a card reader at the till (which is really just a paid service that happens to come with a gadget). The card reader needs a computer or iPad, network, and wifi to run – these are managed here. And the card reader and its subscription go in [[12.34]] and [[14.32]], respectively.\n\nSame goes for our dentist. Their x-ray machine sends scans to a computer in the treatment room via the network. Whether they own or lease this machine, they’ll be paying someone to ensure it is mechanically sound and the software is updated. As above, the computers and network are managed here. And the x-ray machine and its support contract go in [[12.34]] and [[14.33]], respectively.\n\nIf our dentist decided to convert the surgery into a gift shop, they can still use their existing computers, mobile devices, and network gear. But instead of an x-ray machine, they’ll be running a card reader and till.\n\nSee [[14.14#When is an accessory ‘technology’ versus ‘front office operations’?]] for further rationale on this decision."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.10",
@@ -2990,7 +2990,7 @@
       "overview": "These are the devices that provide your network service. You might have one device, such as a combined ADSL modem/wifi router. Or a series of devices set up in combination. They're important enough to have their own ID because without network we usually can't get anything done.\n\nThis is a place to store important documents that come with the device, such as manuals, warranties, and duplicates of purchase and repair receipts (from [[13.33]]). And if you decide to sell anything, manage that here too.\n\nThis is also a place to keep any troubleshooting notes that you’ve written and settings/configuration you’ve applied. This comes in handy when you need to replace your network device or set up new devices for staff.\n\nWe recommend naming subfolders by purchase date and model.",
       "alsoSee": "If you sell a high-value network device, record the details in [[13.26]] after processing the income.\n\nIf you purchase a high-value network device, record the details in [[13.44]] after processing the asset.\n\nIf you’re paying off a network device, process the bills in [[13.30]] or [[13.50]].\n\nSee [[14.31]] for the overall service that a network device contributes to (e.g. user login, internet connectivity, wifi connectivity, printing, file services)."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.13+FR1",
@@ -3003,7 +3003,7 @@
     "furtherReading": {
       "text": "We decided that notes related to the configuration of any network device in this category would live with the thing itself. For instance, an ADSL modem/router needs to be configured so that it broadcasts wifi with a certain password. It has a web interface where you type things in boxes to create the wifi network. Record what you did here."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.13+FR2",
@@ -3016,7 +3016,7 @@
     "furtherReading": {
       "text": "We’ve (tentatively) assumed that network devices are classed as fixed assets, like computers. But it’ll be up to your accountant and local tax guidelines if this is the case."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.14",
@@ -3172,7 +3172,7 @@
       "alsoSee": "If any data that you hold is: sensitive; requires special storage or security measures; and/or is affected by any privacy or protection policies, regulations, or laws; refer to the relevant sections of this system, such as:\n\n- [[11.13]],\n- [[11.32]],\n- [[14.40]].",
       "links": "The GDPR is the [EU’s data protection law](https://gdpr.eu/what-is-gdpr/) – if you hold data from EU citizens, then you’ll need to read up on this."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.22+FR1",
@@ -3185,7 +3185,7 @@
     "furtherReading": {
       "text": "If the word ‘data’ gives you hives, don’t stress. It’s just a nerdy way to say ‘stuff’.\n\nIt might help to think about it as ‘blocks of stuff’. For instance, Johnny’s laptop home folder is one block that he cares about. The files for the Johnny.Decimal business (D85) is another block that lives elsewhere.\n\nEach block is treated differently. D85 is precious so it’s stored in more places and backed up constantly. It’s also very large. So we don’t keep complete copies of it on our laptops, just the files we need. But the backups have _everything_.\n\nAnother example is Lucy’s design files that live in the Procreate app on her iPad. It wouldn’t be a disaster if they were lost, just annoying. So these are exported and backed up to our server less frequently.\n\n## Customer data\n\nNote that we have not differentiated here between your data and your customers’ data. It’s too difficult. If you’re storing something you’re responsible for treating it carefully, regardless of the source. If you _do_ hold customer data, then you’ll need to be aware of applicable laws and regulations, as mentioned above."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.22+FR2",
@@ -3198,7 +3198,7 @@
     "furtherReading": {
       "text": "Do whatever works for you. You might use this JDex note, a document, or a spreadsheet. In our case, Johnny has an Airtable database of all our drives, what's on them, and how they’re backed up. It's handy to be able to see how many copies of a thing we have.\n\nAnd remember that not everything is on a computer. You might have important data in the physical world. For example, ledgers, cash books, desk diaries, or filing cabinets. If you’re a wedding celebrant, this includes your register.\n\nWe also recommend noting how important your data is (i.e. what classifies as a disaster if it’s lost and what is less important).\n\nIf there’s demand, we could develop a database template like Johnny’s for everyone to use."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.22+FR3",
@@ -3211,7 +3211,7 @@
     "furtherReading": {
       "text": "Don’t trust that important data is backed up by the third party that stores it.\n\nMaybe important customer data is in your email account or an online database. Or all your financial data is in accounting software. Don't assume that those services can/will recover your data if it's lost. There are ways to export and back this up yourself. We’ll discuss this further in [[14.23]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.22+FR4",
@@ -3224,7 +3224,7 @@
     "furtherReading": {
       "text": "If you deal with customer data or anything else that’s sensitive, you’ll need a policy about this. It should outline how your business saves, retains, and backs up data in accordance with industry standards and compliance legislation."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.23",
@@ -3433,7 +3433,7 @@
       "overview": "This ID is for any paid technical support that _you_ can access.\n\nIt might be a contract or service level agreement (SLA) with a real-world IT support business. Or perhaps you’ve paid for a higher level of support from an online service, such as Google Workspace or Microsoft 365.\n\nEither way, keep any relevant official documents and/or notes on how to access help here.",
       "exceptions": "This is not for internal troubleshooting instructions that you have written, those live with the device or service they relate to.\n\nThis is not for customer management and support, that’s over in [[20-29]]. But if you use some sort of ‘technology’ that creates tickets to deal with customer feedback (e.g. Zendesk), that’s a third-party service, so note it in [[14.32]]."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.40",
@@ -3556,7 +3556,7 @@
       "alsoSee": "[[14.43]] for the human side of things.",
       "links": "[A cybersecurity checklist](https://business.gov.au/online-and-digital/cyber-security/cyber-security-checklist) from the Australian Government.\n\n[CyberWardens](https://cyberwardens.com.au/) – an Australian initiative to help protect small businesses from online threats.\n\n[Advice on how to protect yourself online](https://www.cyber.gov.au/protect-yourself) from the Australian Cyber Security Centre."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.42+FR1",
@@ -3569,7 +3569,7 @@
     "furtherReading": {
       "text": "If you’re new to all this, some initial steps to take might include:\n\n- Reading as much as you can on the topic.\n- Doing a trustworthy online cybersecurity health check.\n- Finding online courses for you and your staff.\n- Booking an in-house assessment from a reputable provider.\n- Signing up for email alerts on new threats.\n- Checking that antivirus and security software is up to date and always running.\n- Ensuring your firewall devices and/or software are set up correctly.\n- Ensuring that the operating systems on all devices are the latest version.\n- Drafting policies around all this stuff to keep staff informed.\n\nThe Cyber Wardens site (link below) is a handy resource for small businesses. Even if you don’t live in Australia, it outlines the kinds of things you need to be aware of. There might be a similar initiative in your country – let us know and we’ll add it to the list."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.43",
@@ -3698,7 +3698,7 @@
       "alsoSee": "Any services you use that are related to registering a domain or DNS management live in [[14.32]].",
       "links": "Tips on [registering a domain name](https://business.gov.au/online-and-digital/business-website/register-a-domain-name) from the Australian Government.\n\nTips on [setting up a business website](https://business.gov.au/online-and-digital/business-website/set-up-a-business-website) from the Australian Government."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.51+FR1",
@@ -3711,7 +3711,7 @@
     "furtherReading": {
       "text": "Your domain name is very important because you can usually only ‘buy’ them for a year (technically it’s a rental). So people forget to renew them and then whoops, everything’s gone.\n\nSo put a reminder in your calendar. You can build another website anytime. But if someone else gets your domain name, it’s all over."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.51+FR2",
@@ -3724,7 +3724,7 @@
     "furtherReading": {
       "text": "This is a little technical, but it’s handy to know about. If your eyes are glazing over, stay with us.\n\n_A domain is separate to any services that you run on it._ Whether that’s a website, blog, forum, email, or a bunch of other stuff like remote logins, VPNs, or file servers. So once you’ve registered your domain, you can use it for all sorts.\n\n## A big one for business owners is email\n\nWe often see vans proudly displaying their website (e.g. carolscupcakes.com) and email (e.g. carolscupcakes@gmail.com) in big letters down the side.\n\nUnfortunately Carol doesn’t know that she can easily set up a personalised email (e.g. hello@carolscupcakes.com) using her domain and her existing gmail account. As a sole trader, Lucy didn’t know this either. Until Johnny came along, tapped a few keys, and did some DNS magic.\n\n## Domain name service\n\nSo that’s what DNS means: domain name service. All the services that can run on your domain. For example, the domain, johnnydecimal.com, is registered at Porkbun. And we use other services to provide the website, email, and blog. But Porkbun is where we _point our domain to those services_.\n\nIt’s like the most important address book. So when someone wants to visit our website at johnnydecimal.com, we’ve told Porkbun to send them to our web hosting service. When someone wants to send us an email to hello@johnnydecimal.com, we’ve told Porkbun to send them to our email service.\n\nIn the future, we could make an ops manual to help with this kind of thing. Let us know if that’s something you’d like."
     },
-    "isPublic": false
+    "isPublic": true
   },
   {
     "number": "14.52",
