@@ -14,21 +14,12 @@ import FurtherReading from "@components/FurtherReading.astro";
 
 const { slug } = Astro.params;
 
-export async function get({ request }) {
-  const cookies = request.headers.get("cookie") || "";
-
-  const hasVisited = cookies.includes("visited=true");
-
-  if (!hasVisited) {
-    return {
-      redirect: "/00.91",
-      headers: {
-        "Set-Cookie": "visited=true; Path=/; HttpOnly; Max-Age=31536000", // 1 year
-      },
-    };
-  }
-
-  return {};
+if (!Astro.cookies.has("visited")) {
+  Astro.cookies.set(
+    "visited",
+    "This_cookie_tracks_if_you've_been_here_before._If_you_have,_it_doesn't_keep_redirecting_the_home_page_to_/00.91._Otherwise_you'd_never_be_able_to_see_the_'Small_business_system'_view_that_shows_the_list_of_areas."
+  );
+  return Astro.redirect("/00.91");
 }
 
 // TODO obvs this is temporary until launch

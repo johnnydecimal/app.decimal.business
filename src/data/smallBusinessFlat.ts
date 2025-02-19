@@ -174,16 +174,16 @@ const flattenedData: FlattenedData = {
   "20-29": {
     type: "area",
     number: "20-29",
-    title: "Product, marketing, customers, & sales",
+    title: "Product, suppliers, equipment, & stock",
     description:
-      "Everything to do with _your_ product: suppliers, product, manufacturing, marketing, and sales.",
+      "Everything to do with _making your product_: what it is, what you need to make it, and tracking the finished stock.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
   },
   "21": {
     number: "21",
     title: "Products",
     type: "category",
-    description: "What they are, and how you make them.",
+    description: "What yours are, and how you make them.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
       smallBusiness: {
@@ -195,7 +195,7 @@ const flattenedData: FlattenedData = {
     number: "22",
     title: "Suppliers",
     type: "category",
-    description: "Where you buy the stuff you need.",
+    description: "Where you buy the stuff you need to make your product.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
       smallBusiness: {
@@ -227,8 +227,17 @@ const flattenedData: FlattenedData = {
       },
     },
   },
-  "25": {
-    number: "25",
+
+  "30-39": {
+    type: "area",
+    number: "30-39",
+    title: "Marketing, channels, customers, & sales",
+    description:
+      "Everything to do with _selling your product_: how do you tell people about it, give them a way to buy it, and record who bought what.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+  },
+  "31": {
+    number: "31",
     title: "Marketing",
     type: "category",
     description: "How you get the word out about your product.",
@@ -239,11 +248,11 @@ const flattenedData: FlattenedData = {
       },
     },
   },
-  "26": {
-    number: "26",
+  "32": {
+    number: "32",
     title: "Channels",
     type: "category",
-    description: "Where you sell your product.",
+    description: "The places where you sell your product.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
       smallBusiness: {
@@ -251,11 +260,11 @@ const flattenedData: FlattenedData = {
       },
     },
   },
-  "27": {
-    number: "27",
+  "33": {
+    number: "33",
     title: "Customers",
     type: "category",
-    description: "Who buys your product.",
+    description: "Who bought (or is interested in) your product?",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
       smallBusiness: {
@@ -263,11 +272,113 @@ const flattenedData: FlattenedData = {
       },
     },
   },
-  "28": {
-    number: "28",
+  "34": {
+    number: "34",
     title: "Sales",
     type: "category",
-    description: "It's why we're all here, right?",
+    description: "Congratulations. :-)",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "80-89": {
+    number: "80-89",
+    title: "Library of creative inputs",
+    type: "area",
+    description:
+      "Your design artefacts that you might use in any product or marketing effort.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "81": {
+    number: "81",
+    title: "Design elements",
+    type: "category",
+    description:
+      "Where we store external artefacts, like typefaces, or ephemeral things, like colour palettes.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "82": {
+    number: "82",
+    title: "Words and text",
+    type: "category",
+    description: "Where we store re-usable words, text, or other prose.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "83": {
+    number: "83",
+    title: "Photos, images, drawings, diagrams, screenshots",
+    type: "category",
+    description: "Where we store re-usable images of any type.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "84": {
+    number: "84",
+    title: "Audio & music",
+    type: "category",
+    description:
+      "Where we store re-usable audio, music, or anything else that primarily goes in your ears.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "85": {
+    number: "85",
+    title: "Video & animation",
+    type: "category",
+    description:
+      "Where we store re-usable video, animation, or any other moving pictures.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "86": {
+    number: "86",
+    title: "Platform-specific instructions",
+    type: "category",
+    description:
+      "Where we store details that help us create for or load up to specific platforms; e.g. what video format does YouTube prefer?",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still in production.",
+      },
+    },
+  },
+  "90-99": {
+    number: "90-99",
+    title: "Portfolio of creative outputs",
+    type: "area",
+    description:
+      "These are the creative things you produce: the product brochure, marketing video, and so on. Each is a 'job' in creative agency parlance.\n\nThis area has non-standard numbering: you create a job code for each thing you create, starting at `90001`.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
       smallBusiness: {
