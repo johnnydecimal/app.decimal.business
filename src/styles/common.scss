@@ -308,6 +308,12 @@ select {
       margin-top: 0;
     }
   }
+  // But reset these margins if we're in a blockquote
+  // TODO probably a nicer way to do this oh yeah you had to !important
+  :global(blockquote > p) {
+    margin-top: 1em !important;
+  }
+
   // Headers go above the text on mobile, otherwise they take up loads of
   // room on the left.
   @include phone-only {
