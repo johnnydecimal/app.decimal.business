@@ -61,7 +61,7 @@ if (!slug) {
 
 <!-- TODO title needs fixing in case of / etc. -->
 <Layout testRun={testRun} title={slug}>
-  <p>Slug: {slug}</p>
+  <p>Slug: {slug!.toString()}</p>
   <p>userId: {userId}</p>
   {entryType === "system" ? <System /> : null}
   {entryType === "area" ? <Area area={slug!} /> : null}
