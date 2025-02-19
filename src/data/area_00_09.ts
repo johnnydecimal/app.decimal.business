@@ -94,7 +94,12 @@ export const area_00_09: FlattenedData = {
     description:
       "These pages describe the system to visitors who haven't signed up yet.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: { smallBusiness: {} },
+    extensions: {
+      smallBusiness: {
+        alsoSee:
+          "- [00.91 Welcome to the small business system](/00.91)\n- [00.92 A community based around standards](/00.92)\n- [00.93 About those numbers](/00.93)",
+      },
+    },
   },
   "00.91": {
     number: "00.91",
