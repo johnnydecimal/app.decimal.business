@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Investments",
   "description": "Anything you class as an investment that you hope to receive returns from, or whose value you hope will appreciate.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.756Z",
-    "updatedDate": "2025-02-24T05:52:12.756Z"
+    "createdDate": "2025-02-24T05:58:14.340Z",
+    "updatedDate": "2025-02-24T05:58:14.340Z"
   },
   "extensions": {
     "smallBusiness": {

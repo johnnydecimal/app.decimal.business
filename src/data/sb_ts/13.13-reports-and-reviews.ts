@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Reports & reviews",
   "description": "A place to write any official or informal financial reports and reflect on how the business is going.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.738Z",
-    "updatedDate": "2025-02-24T05:52:12.738Z"
+    "createdDate": "2025-02-24T05:58:14.336Z",
+    "updatedDate": "2025-02-24T05:58:14.336Z"
   },
   "extensions": {
     "smallBusiness": {

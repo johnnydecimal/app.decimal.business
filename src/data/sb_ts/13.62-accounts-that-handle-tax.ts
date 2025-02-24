@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Accounts that handle tax",
   "description": "The formal paperwork and statements for your official government tax ledgers.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.767Z",
-    "updatedDate": "2025-02-24T05:52:12.767Z"
+    "createdDate": "2025-02-24T05:58:14.343Z",
+    "updatedDate": "2025-02-24T05:58:14.343Z"
   },
   "extensions": {
     "smallBusiness": {

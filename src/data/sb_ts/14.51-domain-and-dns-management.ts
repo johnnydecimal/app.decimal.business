@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Domain & DNS management",
   "description": "Anything related to registering domains and DNS management.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.778Z",
-    "updatedDate": "2025-02-24T05:52:12.778Z"
+    "createdDate": "2025-02-24T05:58:14.350Z",
+    "updatedDate": "2025-02-24T05:58:14.350Z"
   },
   "extensions": {
     "smallBusiness": {

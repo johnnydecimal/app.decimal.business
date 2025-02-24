@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Support contracts",
   "description": "Any paid agreement that means you can contact a human for technical support.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.776Z",
-    "updatedDate": "2025-02-24T05:52:12.776Z"
+    "createdDate": "2025-02-24T05:58:14.348Z",
+    "updatedDate": "2025-02-24T05:58:14.348Z"
   },
   "extensions": {
     "smallBusiness": {

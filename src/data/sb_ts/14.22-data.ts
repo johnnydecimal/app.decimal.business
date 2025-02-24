@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Data",
   "description": "A summary of the kinds of data you have and where it is.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.772Z",
-    "updatedDate": "2025-02-24T05:52:12.772Z"
+    "createdDate": "2025-02-24T05:58:14.347Z",
+    "updatedDate": "2025-02-24T05:58:14.347Z"
   },
   "extensions": {
     "smallBusiness": {

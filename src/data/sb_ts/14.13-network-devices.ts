@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Network devices",
   "description": "Anything related to buying, maintaining, or selling the devices that connect you to a network or the internet.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.770Z",
-    "updatedDate": "2025-02-24T05:52:12.770Z"
+    "createdDate": "2025-02-24T05:58:14.345Z",
+    "updatedDate": "2025-02-24T05:58:14.345Z"
   },
   "extensions": {
     "smallBusiness": {

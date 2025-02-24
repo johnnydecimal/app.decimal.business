@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Technical cybersecurity",
   "description": "Defining the threats to the business and actively protecting against them.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.777Z",
-    "updatedDate": "2025-02-24T05:52:12.777Z"
+    "createdDate": "2025-02-24T05:58:14.349Z",
+    "updatedDate": "2025-02-24T05:58:14.349Z"
   },
   "extensions": {
     "smallBusiness": {

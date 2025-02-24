@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Bills",
   "description": "The place to file processed bills.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.763Z",
-    "updatedDate": "2025-02-24T05:52:12.763Z"
+    "createdDate": "2025-02-24T05:58:14.342Z",
+    "updatedDate": "2025-02-24T05:58:14.342Z"
   },
   "extensions": {
     "smallBusiness": {

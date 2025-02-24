@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Inbox and processing of expenses",
   "description": "Categorise your expenses, tally up spending, and file the records.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.753Z",
-    "updatedDate": "2025-02-24T05:52:12.753Z"
+    "createdDate": "2025-02-24T05:58:14.338Z",
+    "updatedDate": "2025-02-24T05:58:14.338Z"
   },
   "extensions": {
     "smallBusiness": {

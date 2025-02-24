@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Your business & local neighbourhood",
   "description": "People that your business interacts with next door and nearby.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.732Z",
-    "updatedDate": "2025-02-24T05:52:12.732Z"
+    "createdDate": "2025-02-24T05:58:14.334Z",
+    "updatedDate": "2025-02-24T05:58:14.334Z"
   },
   "extensions": {
     "smallBusiness": {

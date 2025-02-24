@@ -5,11 +5,11 @@ const entry: IdEntry = {
   "title": "Invoices & sales for your work",
   "description": "The place to file processed invoices or point-of-sale reports.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "metadata": {
-    "createdDate": "2025-02-24T05:52:12.747Z",
-    "updatedDate": "2025-02-24T05:52:12.747Z"
+    "createdDate": "2025-02-24T05:58:14.337Z",
+    "updatedDate": "2025-02-24T05:58:14.337Z"
   },
   "extensions": {
     "smallBusiness": {
