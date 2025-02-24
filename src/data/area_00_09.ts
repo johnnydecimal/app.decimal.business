@@ -27,9 +27,10 @@ export const area_00_09: FlattenedData = {
   "00.00": {
     number: "00.00",
     title: "System index",
-    type: "id",
+    type: "adHoc",
     description: "This section contains a list of every ID in the system.",
     isHeader: true,
+    isPublic: true,
     metadata: {
       createdDate: "2025-01-01",
       updatedDate: "2025-01-01",
