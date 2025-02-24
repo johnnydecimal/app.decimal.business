@@ -1,5 +1,11 @@
 import type { FlattenedData } from "./smallBusinessFlat";
 
+import id_00_12 from "@data/sb_ts/00.12-user-stories";
+import fr_00_12_FR1 from "@data/sb_ts/00.12+FR1-jeff";
+import fr_00_12_FR2 from "@data/sb_ts/00.12+FR2-gardener";
+import fr_00_12_FR3 from "@data/sb_ts/00.12+FR3-accountant";
+import fr_00_12_FR4 from "@data/sb_ts/00.12+FR4-software";
+
 export const area_00_09: FlattenedData = {
   "00-09": {
     number: "00-09",
@@ -54,6 +60,21 @@ export const area_00_09: FlattenedData = {
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
+  "00.12": {
+    ...id_00_12,
+  },
+  "00.12+FR1": {
+    ...fr_00_12_FR1,
+  },
+  "00.12+FR2": {
+    ...fr_00_12_FR2,
+  },
+  "00.12+FR3": {
+    ...fr_00_12_FR3,
+  },
+  "00.12+FR4": {
+    ...fr_00_12_FR4,
+  },
   "00.20": {
     number: "00.20",
     title: "Settings",
@@ -69,14 +90,6 @@ export const area_00_09: FlattenedData = {
     type: "adHoc",
     description: "This section contains your user settings.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-  },
-  "00.31": {
-    number: "00.31",
-    title: "User stories",
-    type: "adHoc",
-    description: "TEST",
-    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: { smallBusiness: {} },
   },
   "05": {
     number: "05",
