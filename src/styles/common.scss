@@ -276,7 +276,7 @@ select {
 
 :global(.descriptive-text) {
   // All headers within are h3
-  h3 {
+  :global(h3) {
     font-size: 1rem;
     font-weight: bold;
     margin: 0; // Surrounding <p> handles it
@@ -297,6 +297,17 @@ select {
     //   margin-bottom: 0.8rem;
     // }
   }
+  :global(h4) {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+    text-decoration-color: var(--border-strong);
+    text-decoration-thickness: 2px;
+    :global(+ p) {
+      margin-top: 0.5rem;
+    }
+  }
+
   // Line the text up with its header by removing top margin
   @include tablet-portrait-up {
     // This <p> is set:html'd
