@@ -284,6 +284,18 @@ const flattenedData: FlattenedData = {
       },
     },
   },
+  "35": {
+    number: "35",
+    title: "Shipping & fulfilment",
+    type: "category",
+    description: "How you send your product to your customers.",
+    metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview: "This area is still under construction.",
+      },
+    },
+  },
   "80-89": {
     number: "80-89",
     title: "Library of creative inputs",

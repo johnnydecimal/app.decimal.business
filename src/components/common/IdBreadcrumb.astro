@@ -11,25 +11,32 @@ const { thisEntry } = Astro.props;
 
 import Slice from "@components/common/Slice.astro";
 import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
+import system from "@data/smallBusinessFlat";
 
 function getParentId(thisEntry: FurtherReadingEntry): {
   parentIdNumber: string;
   parentIdTitle: string;
 } {
   if (thisEntry.number.match(/^\d\d\.\d\d\+/)) {
+    const parentIdNumber = thisEntry.number.replace(/^(\d\d\.\d\d).*/, "$1");
+    const parentIdTitle = system[parentIdNumber].title;
     return {
-      parentIdNumber: thisEntry.number.replace(/^(\d\d\.\d\d).*/, "$1"),
-      parentIdTitle: thisEntry.title,
+      parentIdNumber,
+      parentIdTitle,
     };
   } else if (thisEntry.number.match(/^\d\d\+/)) {
+    const parentIdNumber = thisEntry.number.replace(/^(\d\d).*/, "$1");
+    const parentIdTitle = system[parentIdNumber].title;
     return {
-      parentIdNumber: thisEntry.number.replace(/^(\d\d).*/, "$1"),
-      parentIdTitle: thisEntry.title,
+      parentIdNumber,
+      parentIdTitle,
     };
   } else if (thisEntry.number.match(/^\d\d-\d\d\+/)) {
+    const parentIdNumber = thisEntry.number.replace(/^(\d\d-\d\d).*/, "$1");
+    const parentIdTitle = system[parentIdNumber].title;
     return {
-      parentIdNumber: thisEntry.number.replace(/^(\d\d-\d\d).*/, "$1"),
-      parentIdTitle: thisEntry.title,
+      parentIdNumber,
+      parentIdTitle,
     };
   } else if (thisEntry.number === "J82") {
     return {
