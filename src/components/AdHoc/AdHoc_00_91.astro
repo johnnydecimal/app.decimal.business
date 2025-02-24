@@ -3,21 +3,25 @@ import Slice from "@components/common/Slice.astro";
 import { marked } from "marked";
 
 const why = `
-Let's face it: **you don't know where most of your important files are**.
+If you've ever been frustrated because you couldn't find an important file, or you've sent a client an outdated version of a file because you've saved it in multiple places, this is for you.
 
-You're busy running a business and the last thing you have time for is organising your file system. So it's chaos.
-
-This costs you time, money, and mental energy. It takes you away from _running your business_.
-
-We're experts at this, so we made it our job to solve this inefficiency. Leave this to us.
+If you feel like you spend more time trying to manage your files than you do your business: **we made this for you**.
 `;
 
 const how = `
-The [Johnny.Decimal system](https://johnnydecimal.com) sets out a methodical way to structure your files. Thousands of people have used it to organise their lives for over a decade. It's simple, and it works.
+The [Johnny.Decimal system](https://johnnydecimal.com) sets out a methodical way to structure your files, emails, notes, or anything else. Thousands of people have used it to organise their lives for over a decade. It's simple, and it works.
 
-But you don't have time to figure out how to apply this to your business. And why reinvent the wheel? We've done it for you.
+But you don't have time to figure out how to implement this. And why should every small business have to figure it out for themselves? That makes no sense. **Isn't it time we had a standard framework that you could all use?**
 
-The small business system is a pre-built framework. It gives you a place for everything. **All you have to do is move in**.
+That's what we've built. A standard system that gives you a place for everything. Personally supported by us, and backed up by the community. All you have to do is move in.
+
+#### But that sounds too hard...
+
+A common objection to a system like this is that having to decide exactly where a thing should go is just _too hard_. Or that we won't all agree on the structure, so it's a waste of time even trying.
+
+But what's more difficult? Picking the most suitable from a list of static, pre-defined locations? Or trying to find that file the way you do it now?
+
+The fact is there's no perfect solution. But with a combination of tools -- good documentation, good search, your own index for edge-cases -- **we can make it _dramatically easier_ for you to find your stuff**.
 `;
 
 /*
@@ -33,19 +37,33 @@ If in doubt, [get in touch](mailto:hello@johnnydecimal.com).
 */
 
 const what = `
-This site -- the one you're reading -- _is_ the system. So you can try-before-you-buy. Just click around. Start at [10-19](/10-19) -- you'll find about 20% of the content is unlocked.
+This website _is_ the small business system. So you can have a look around and get a feel for the structure. Most of the content is hidden like this ░░░░░ -- when you sign up, you unlock everything.
 
-The content that is locked is hidden like this: ░░░░░.
+Here's a really brief tour.
 
-When you sign up, you'll get full access as soon as the system is released. There'll be over 200 hand-crafted IDs organised in 20 categories, within 5 areas. It's a complete business operations manual: currently 35,000+ words of content, and we're not finished.
+#### 10-19 Company administration
 
-Search is in demo mode. Try it out: say you're looking for the ID where you manage \`payroll\`.<sup>1</sup> Now imagine being able to find _anything_ in your business this quickly.
+The categories in this area could be the foundation of any business, regardless of the product or service you offer.
+
+[11 The business & its people](/11) is all about the business entity and everyone who keeps it going. For example, [11.12](/11.12) is where you save your [licences, permits, & accreditations](/11.12). If you check out that ID you'll see that we explain what it's for, give some examples, and refer to to other relevant IDs.
+
+We have IDs for [business insurance and claims](/11.22), [dispute resolution](/11.33), [hiring staff](/11.41), and more.
+
+To explore the rest, just click around. [10-19](/10-19) is a good place to start. There's a list of all unlocked IDs at ~~[00.00](/00.00)~~ _coming later today 24th Feb_.
+
+> To return to this page, click the <a href="/00.91" style="text-decoration: none;">↖</a> arrow to the left of **Small business system** at the very top of the page. Or navigate yourself to [00.91](/00.91) any other way.
+
+#### Search
+
+Search is in demo mode. Try it out: say you're looking for the ID where you manage \`payroll\`. Now imagine being able to find _anything_ in your business this quickly.
+
+#### Always private
 
 _Your_ files live on _your_ computer. **We never have access to your files**. You download a complete folder structure that mirrors this site, as well as text files that you can use to set up your local [index](https://jdcm.al/11.05/).
 
 There are many other benefits, which we'll explore on the coming pages.
 
-> 1. We're still building the system. Search is incomplete, and you'll notice other bugs if you go looking for them. This site is in constant development, and my focus is on building the system over making this early public-facing version bug-free.
+> We're still building the system. Search is incomplete, and you'll notice other bugs if you go looking for them. This site is in constant development, and my focus is on building the system over making this early public-facing version bug-free.
 `;
 
 const cost = `
@@ -81,7 +99,6 @@ That's the [workshop](https://jdcm.al/14.22/), [workbook](https://jdcm.al/14.21/
 const next = `
 Check out our plans for the [community](/00.92).
 
-(To return to this page, click the <a href="/00.91" style="text-decoration: none;">↖</a> arrow to the left of **Small business system** at the very top of the page. Or navigate yourself to [00.91](/00.91) any other way.)
 `;
 
 const whyHtml = await marked.parse(why);
