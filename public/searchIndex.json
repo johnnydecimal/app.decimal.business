@@ -289,13 +289,14 @@
   {
     "number": "00.00",
     "title": "System index",
-    "type": "id",
+    "type": "adHoc",
     "description": "This section contains a list of every ID in the system.",
     "metadata": {
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
     },
-    "smallBusiness": {}
+    "smallBusiness": {},
+    "isPublic": true
   },
   {
     "number": "00.10",
@@ -339,6 +340,17 @@
       "createdDate": "2025-01-01",
       "updatedDate": "2025-01-01"
     }
+  },
+  {
+    "number": "00.31",
+    "title": "User stories",
+    "type": "adHoc",
+    "description": "TEST",
+    "metadata": {
+      "createdDate": "2025-01-01",
+      "updatedDate": "2025-01-01"
+    },
+    "smallBusiness": {}
   },
   {
     "number": "05",

@@ -70,6 +70,14 @@ export const area_00_09: FlattenedData = {
     description: "This section contains your user settings.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
   },
+  "00.31": {
+    number: "00.31",
+    title: "User stories",
+    type: "adHoc",
+    description: "TEST",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
+  },
   "05": {
     number: "05",
     title: "Templates & downloads",
