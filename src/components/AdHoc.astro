@@ -24,6 +24,7 @@ import system, {
   type AdHocEntry,
 } from "@data/smallBusinessFlat";
 
+import AdHoc_00_00 from "@components/AdHoc/AdHoc_00_00.astro";
 import AdHoc_00_21 from "@components/AdHoc/AdHoc_00_21.astro";
 import AdHoc_05_11 from "@components/AdHoc/AdHoc_05_11.astro";
 import AdHoc_00_91 from "@components/AdHoc/AdHoc_00_91.astro";
@@ -96,6 +97,7 @@ const parentSTitle = parentSEntry.title;
   ) : null
 }
 
+{id === "00.00" ? <AdHoc_00_00 /> : null}
 {id === "00.21" ? <AdHoc_00_21 /> : null}
 {id === "05.11" ? <AdHoc_05_11 /> : null}
 {id === "00.91" ? <AdHoc_00_91 /> : null}
