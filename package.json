@@ -28,6 +28,7 @@
     "jszip": "^3.10.1",
     "marked": "^15.0.6",
     "marked-smartypants": "^1.1.9",
+    "mermaid": "^11.4.1",
     "normalize.css": "^8.0.1",
     "sass": "^1.83.4",
     "sass-embedded": "^1.83.4",

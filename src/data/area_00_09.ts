@@ -61,7 +61,14 @@ export const area_00_09: FlattenedData = {
     extensions: { smallBusiness: {} },
   },
   "00.12": {
-    ...id_00_12,
+    // ...id_00_12,
+    number: "00.12",
+    title: "User stories",
+    type: "adHoc",
+    description:
+      "This page lists four 'user stories'. We've imagined the _types_ of business that might exist, and explained how each of them might use the various categories here.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
   },
   "00.12+FR1": {
     ...fr_00_12_FR1,

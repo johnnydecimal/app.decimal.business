@@ -1,0 +1,68 @@
+---
+import { marked } from "marked";
+import Slice from "@components/common/Slice.astro";
+
+const overview = `
+This system has been designed to accommodate everything that a business _might possibly need_.
+
+But the converse is not true: you don't have to use _everything in the system_. We have an entire category dedicated to [shipping & fulfilment](/35) but if you're a hairdresser, that's not something you ever do. And that's okay.
+
+This is intended to encourage you to think about your own business. You probably _shouldn't_ just copy one of these examples. If you need help, we're always available. Just ask. Maybe we can tell your story?
+`;
+
+const quadrant = `
+We've divided all businesses up in to four quadrants.
+
+On one extreme you **produce** a thing, and on the other you **deliver** a service. And the thing you produce or deliver might be **tangible** or **intangible**.
+
+We can plot this on a quadrant chart.
+`;
+
+const mermaidQuadrant = `
+%%{init: {"quadrantChart": {"chartWidth": 450, "chartHeight": 450, "quadrantLabelFontSize": 12, "xAxisLabelFontSize": 12, "yAxisLabelFontSize": 12}, "themeVariables": { "quadrantPointFill": "#f00", "quadrantPointTextFill": "#f00", "quadrant1TextFill": "#00f", "quadrant2TextFill": "#00f", "quadrant3TextFill": "#00f", "quadrant4TextFill": "#00f", "quadrantXAxisTextFill": "#00a", "quadrantYAxisTextFill": "#00a" } }}%%
+quadrantChart
+    title Classes of small business
+    x-axis You produce a thing --> You deliver a service
+    y-axis Intangible thing --> Tangible thing
+    quadrant-1 Delivers a tangible service
+    quadrant-2 Produces a tangible thing
+    quadrant-3 Produces a intangible thing
+    quadrant-4 Delivers a intangible service
+    "Cosmetics manufacturer": [0.1, 0.9]
+    "Software developer" : [0.1, 0.1]
+    "Gardener": [0.9, 0.9]
+    "Accountant": [0.9, 0.1]
+    "Johnny.Decimal": [0.4, 0.2]
+    "Wedding celebrant": [0.75, 0.75]
+    "Custom furniture maker": [0.4, 0.8]
+`;
+
+const overviewHtml = await marked.parse(overview);
+const quadrantHtml = await marked.parse(quadrant);
+---
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <div class="layout-left-item">
+      <h3>Overview</h3>
+    </div>
+    <div class="layout-right-item" set:html={overviewHtml} />
+  </div>
+</Slice>
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <div class="layout-left-item">
+      <h3>Quadrant chart</h3>
+    </div>
+    <div class="layout-right-item" set:html={quadrantHtml} />
+  </div>
+</Slice>
+
+<div class="mermaid">
+  {mermaidQuadrant}
+</div>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+</style>
