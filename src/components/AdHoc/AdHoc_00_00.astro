@@ -6,7 +6,6 @@
 const { userId } = Astro.locals.auth();
 const loggedIn = !!userId;
 import system from "@data/smallBusinessFlat";
-console.log("🚀 ~ system:", system);
 import Slice from "@components/common/Slice.astro";
 
 const allEntries = Object.entries(system)
@@ -18,12 +17,10 @@ const allEntries = Object.entries(system)
     type: entry.type,
   }))
   .sort((a, b) => a.number.localeCompare(b.number));
-console.log("🚀 ~ allEntries:", allEntries);
 
 const xallEntries = Object.entries(system)
   .filter(([, entry]) => entry.type === "id")
   .filter(([, entry]) => loggedIn || entry.isPublic);
-console.log("🚀 ~ xallEntries:", xallEntries);
 ---
 
 <Slice id="SystemIndexHeader" className="main-text">
