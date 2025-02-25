@@ -14,4 +14,10 @@ import Slice from "@components/common/Slice.astro";
 <style lang="scss">
   @use "@styles/common" as *;
   // We define the #[Various]Breadcrumbs in common, because they share a lot.
+
+  // Bring the text off the search border a touch
+  .layout-left-item,
+  .layout-right-item {
+    padding-top: 8px;
+  }
 </style>

@@ -44,17 +44,17 @@ const xallEntries = Object.entries(system)
       <h3>Public pages</h3>
     </div>
     <div class="layout-right-item">
-      <ol>
+      <div>
         {
           allEntries.map((entry) => (
-            <li>
+            <div>
               <a href={`/${entry.number}`}>
                 {entry.number} {entry.title}
               </a>
-            </li>
+            </div>
           ))
         }
-      </ol>
+      </div>
     </div>
   </div>
 </Slice>
@@ -62,7 +62,8 @@ const xallEntries = Object.entries(system)
 <style lang="scss">
   @use "@styles/common" as *;
 
-  ol {
+  ol#zero-zero-zero-zero {
+    color: hotpink;
     list-style: none;
     padding: 0;
     margin: 0;
