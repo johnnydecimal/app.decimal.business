@@ -127,6 +127,12 @@ const flattenedData: FlattenedData = {
     description: "A framework and global standard for every small business.",
     type: "system",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
+    extensions: {
+      smallBusiness: {
+        overview:
+          "**If you're new here, you should head over to the [welcome page at 00.91](/00.91)**.\n\nOtherwise you're free to explore. I built this site so you can see exactly what you're going to get, before you get it.\n\nThere isn't one site with fancy graphics that tells you what you're going to get, then a completely different site once you log in. It's all the same place: you're looking at it now. But until you sign up much of the content will be hidden like this ░░░░.",
+      },
+    },
   },
   // "11+FR1": {
   //   number: "11+FR1",

@@ -13,6 +13,9 @@ import ChildrenInParent from "@components/common/ChildrenInParent.astro";
 const systemEntry = system["J82"] as SystemEntry;
 const systemTitle = systemEntry.title;
 const systemDescription = await parseMd(systemEntry.description);
+const systemOverview = await parseMd(
+  systemEntry.extensions?.smallBusiness?.overview ?? ""
+);
 ---
 
 <!-- This duplication isn't actually required here, but it keeps
@@ -37,6 +40,13 @@ const systemDescription = await parseMd(systemEntry.description);
     </Slice>
   ) : null
 }
+
+<Slice id="SystemOverview" className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <div></div>
+    <div class="layout-right-item" set:html={systemOverview} />
+  </div>
+</Slice>
 
 <FurtherReadingLinks number={systemEntry.number} label="Help" />
 
