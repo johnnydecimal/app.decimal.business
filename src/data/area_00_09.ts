@@ -1,5 +1,6 @@
 import type { FlattenedData } from "./smallBusinessFlat";
 
+import sb_00_99 from "@data/sb_ts/00.99-test-standard-page";
 import id_00_12 from "@data/sb_ts/00.12-user-stories";
 import fr_00_12_FR1 from "@data/sb_ts/00.12+FR1-jeff";
 import fr_00_12_FR2 from "@data/sb_ts/00.12+FR2-gardener";
@@ -158,5 +159,8 @@ export const area_00_09: FlattenedData = {
       "Yeah, there are a lot of numbers. Here's why they're so useful (and why you shouldn't be afraid of them).",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
+  },
+  "00.99": {
+    ...sb_00_99,
   },
 };
