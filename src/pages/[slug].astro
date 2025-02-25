@@ -14,21 +14,6 @@ import FurtherReading from "@components/FurtherReading.astro";
 
 const { slug } = Astro.params;
 
-if (!Astro.cookies.has("visited")) {
-  Astro.cookies.set(
-    "visited",
-    "This_cookie_tracks_if_you've_been_here_before._If_you_have,_it_doesn't_keep_redirecting_the_home_page_to_/00.91._Otherwise_you'd_never_be_able_to_see_the_'Small_business_system'_view_that_shows_the_list_of_areas."
-  );
-  return Astro.redirect("/00.91");
-}
-
-// TODO obvs this is temporary until launch
-const { userId } = Astro.locals.auth();
-// In prod, slug is just blank at the home page
-if (slug === "" && !userId) {
-  return Astro.redirect("/00.91");
-}
-
 /**
  * This page handles the display of all areas, categories, and IDs. So first
  * we need to figure out which of those things we want. Then we fetch it,

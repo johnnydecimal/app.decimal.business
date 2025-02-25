@@ -124,7 +124,8 @@ const flattenedData: FlattenedData = {
   J82: {
     number: "J82",
     title: "Small business system",
-    description: "A framework and global standard for every small business.",
+    description:
+      "The system gives you a place to store all of your files, notes, and anything else. It is a simple, structured way to organise your small business.\n\nIt helps you find these things again quickly, easily, and with no stress.",
     type: "system",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
@@ -307,7 +308,7 @@ const flattenedData: FlattenedData = {
     title: "Library of creative inputs",
     type: "area",
     description:
-      "Your design artefacts that you might use in any product or marketing effort.",
+      "Your design artefacts that you might use in any product or marketing effort. This is where you'll find the master version of your logo.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
       smallBusiness: {
@@ -396,7 +397,7 @@ const flattenedData: FlattenedData = {
     title: "Portfolio of creative outputs",
     type: "area",
     description:
-      "These are the creative things you produce: the product brochure, marketing video, and so on. Each is a 'job' in creative agency parlance.\n\nThis area has non-standard numbering: you create a job code for each thing you create, starting at `90001`.",
+      "These are the creative things you produce: product brochures, marketing videos, etc.\n\nYou might use them across your entire business, so we keep them in their own place.",
     metadata: { createdDate: "2024-11-18", updatedDate: "2024-11-18" },
     extensions: {
       smallBusiness: {
