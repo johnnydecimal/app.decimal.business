@@ -11,22 +11,11 @@ const { userId } = Astro.locals.auth();
   <div class="layout-grid-left-right">
     <div class="layout-left-item">?</div>
     <div class="layout-right-item border-none">
-      {
-        userId ? (
-          <a
-            href={`https://airtable.com/appep0KBedENs1fkW/pagnQjbOW4JoXNNax/form?prefill_JD+SBS+ID=${slug}`}
-          >
-            Provide feedback
-          </a>
-        ) : (
-          <a
-            href="#"
-            onclick="alert(`When you're signed in, this link allows you to send immediate feedback on the ID you're viewing.`)"
-          >
-            Provide feedback
-          </a>
-        )
-      }
+      <a
+        href={`https://airtable.com/appep0KBedENs1fkW/pagnQjbOW4JoXNNax/form?prefill_JD+SBS+ID=${slug}`}
+      >
+        Provide feedback
+      </a>
     </div>
   </div>
   <div class="layout-grid-left-right">
