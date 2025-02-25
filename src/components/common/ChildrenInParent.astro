@@ -124,11 +124,14 @@ const processedIds = await Promise.all(
   <ol class="acid-list">
     {
       processedIds.map((id) => {
+        if (id.isHidden) {
+          return null;
+        }
         return (
           <li
             class={`layout-grid-left-right ${id.isHeader ? "header-item" : ""}`}
           >
-            <h3 class="layout-left-item">
+            <h3 class="layout-left-item" id={id.number}>
               <a href={`/${id.number}`}>{id.number}</a>
             </h3>
             <div class="layout-right-item">

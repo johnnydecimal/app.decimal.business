@@ -23,6 +23,7 @@ interface BaseEntry {
   emoji?: string;
   isPublic?: boolean;
   isHeader?: boolean; // Really only applies to IDs but KISS
+  isHidden?: boolean; // For test pages, etc.
   metadata: Metadata;
   extensions?: {};
 }
