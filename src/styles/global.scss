@@ -154,6 +154,10 @@ html {
     width: 1ch; /* Aligns with ol number */
   }
 
+  li + li {
+    margin-top: 0.5rem;
+  }
+
   select {
     font-family: var(--monospace);
   }

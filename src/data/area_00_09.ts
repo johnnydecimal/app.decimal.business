@@ -13,7 +13,8 @@ export const area_00_09: FlattenedData = {
     title: "About the system",
     type: "area",
     isPublic: true,
-    description: "This area is used to manage the system.",
+    description:
+      "This area is used to manage the system. Find information, help, support, and your user settings here.",
     metadata: {
       createdDate: "2025-01-01",
       updatedDate: "2025-01-01",
@@ -102,15 +103,6 @@ export const area_00_09: FlattenedData = {
   // "00.12+FR4": {
   //   ...fr_00_12_FR4,
   // },
-  "00.20": {
-    number: "00.20",
-    title: "What is the small business system?",
-    type: "id",
-    description: "These pages describe the system to new visitors.",
-    isHeader: true,
-    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: { smallBusiness: {} },
-  },
   // "00.21": {
   //   number: "00.21",
   //   title: "User settings",
@@ -150,12 +142,23 @@ export const area_00_09: FlattenedData = {
   //     },
   //   },
   // },
+  "00.20": {
+    number: "00.20",
+    title: "The 'home page' for new visitors",
+    type: "id",
+    description:
+      "These pages describe the system to new visitors. Start here if you've no idea what you're looking at.",
+    isHeader: true,
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
+  },
   "00.21": {
     number: "00.21",
     title: "What is the small business system?",
     type: "adHoc",
     isPublic: true,
-    description: "A framework and global standard for every small business.",
+    description:
+      "Why does this site exist, what does it give you, and what does it cost?",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
@@ -176,6 +179,37 @@ export const area_00_09: FlattenedData = {
     isPublic: true,
     description:
       "Yeah, there are a lot of numbers. Here's why they're so useful (and why you shouldn't be afraid of them).",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
+  },
+  "00.30": {
+    number: "00.30",
+    title: "Legal stuff",
+    type: "id",
+    description: "Important legal stuff.",
+    isHeader: true,
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
+  },
+  "00.31": {
+    number: "00.31",
+    title: "Terms of service",
+    type: "id",
+    description:
+      "We are not your lawyer, accountant, or other professional service provider.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: {
+      smallBusiness: {
+        overview:
+          '**Terms of Service**\n\n**1. Introduction**  \nWelcome to Coruscade Pty Ltd, trading as Johnny.Decimal ("we," "our," or "us"). By using our website, tools, or services ("Services"), you agree to these Terms of Service ("Terms"). If you do not agree, please do not use our Services.\n\n**2. No Professional Advice**  \nOur Services provide general guidance on business, finance, and related topics. However, we are **not** lawyers, accountants, financial advisors, or any other type of licensed professional. The information we provide is for informational purposes only and should not be considered legal, financial, tax, or any other form of professional advice. You should consult a qualified professional before making any decisions.\n\n**3. Use of Services**  \nYou agree to use our Services at your own risk. We make no guarantees about the accuracy, completeness, or reliability of the information provided. We are not responsible for any actions you take (or fail to take) based on our guidance.\n\n**4. Limitation of Liability**  \nTo the fullest extent permitted by law, we are not liable for any direct, indirect, incidental, consequential, or special damages arising from your use of our Services, even if we have been advised of the possibility of such damages.\n\n**5. No Client Relationship**  \nUsing our Services does **not** create any attorney-client, accountant-client, or other professional-client relationship. We do not represent you, and our guidance does not substitute for professional advice.\n\n**6. Changes to These Terms**  \nWe may update these Terms at any time. Continued use of our Services after changes means you accept the updated Terms.\n\n**7. Contact Us**  \nIf you have any questions, please contact us at hello@johnnydecimal.com.\n\n',
+      },
+    },
+  },
+  "00.32": {
+    number: "00.32",
+    title: "Privacy policy",
+    type: "id",
+    description: "Our privacy policy.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },

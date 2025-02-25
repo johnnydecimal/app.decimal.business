@@ -1,309 +1,179 @@
 ---
-// 00.21 User settings
-import { createClerkClient } from "@clerk/astro/server";
-
 import Slice from "@components/common/Slice.astro";
+import { marked } from "marked";
 
-const { userId } = Astro.locals.auth();
-const clerkClient = createClerkClient({
-  secretKey: import.meta.env.CLERK_SECRET_KEY,
-});
-const user = await clerkClient.users.getUser(userId!);
-// const firstRunComplete = user.publicMetadata.firstRunComplete || false;
-const useEmoji = user.publicMetadata.useEmoji || false;
-const jdexApp = user.publicMetadata.jdexApp || "none";
-const obsidianVault = user.publicMetadata.obsidianVault;
+const why = `
+If you've ever been frustrated because you couldn't find an important file, or you've sent a client an outdated version of a file because you've saved it in multiple places, this is for you.
 
-// If this is not set, we default it to true and push it back to Clerk
-let useBlackSquare = user.publicMetadata.useBlackSquare;
-if (useBlackSquare === undefined) {
-  await clerkClient.users.updateUserMetadata(userId!, {
-    publicMetadata: { useBlackSquare: true },
-  });
-  useBlackSquare = true;
-}
+If you feel like you spend more time trying to manage your files than you do your business: **we made this for you**.
+`;
+
+const how = `
+The [Johnny.Decimal system](https://johnnydecimal.com) sets out a methodical way to structure your files, emails, notes, or anything else. Thousands of people have used it to organise their lives for over a decade. It's simple, and it works.
+
+But you don't have time to figure out how to implement this. And why should every small business have to figure it out for themselves? That makes no sense. **Isn't it time we had a standard framework that you could all use?**
+
+That's what we're building. A standard system that gives you a place for everything. Personally supported by us, and backed up by the community. All you have to do is move in.
+
+#### This sounds like more work...
+
+A common objection to a system like this is that having to decide exactly where a thing should go is just _too hard_. Or that we won't all agree on the structure, so it's a waste of time even trying.
+
+But what's more difficult?
+
+- Picking the most suitable from a list of static, pre-defined, comprehensively documented locations? or
+- Trying to find that file the way you do it today, i.e. frustrating guesswork.
+
+There's no perfect solution. But with a combination of tools -- good documentation, good search, your own index for edge-cases -- **we can make it _dramatically easier_ for you to find your stuff**.
+`;
+
+/*
+const who = `
+We've designed this for all small businesses. So it doesn't matter what you do: you might make stuff, either physical or digital; you might sell a service, in the real world or online; or you might manage a club, or charity.
+
+Depending on your business, there'll be parts of the system that are more or less relevant to you. But we've created it so that there's a place for _everything_, no matter who you are.
+
+But it's not for every business. At some point you reach a scale where you'd need a custom solution. And now you're not a 'small business'. We think this is probably somewhere around 10-15 employees.
+
+If in doubt, [get in touch](mailto:hello@johnnydecimal.com).
+`;
+*/
+
+const what = `
+This website _is_ the small business system. So you can have a look around and get a feel for the structure. Most of the content is hidden like this ░░░░░ -- when you sign up, you unlock everything.
+
+Here's a really brief tour.
+
+#### 10-19 Company administration
+
+The categories in this area could be the foundation of any business, regardless of the product or service you offer.
+
+[11 The business & its people](/11) is all about the business entity and everyone who keeps it going. For example, [11.12](/11.12) is where you save your [licences, permits, & accreditations](/11.12). If you check out that ID you'll see that we explain what it's for, give some examples, and refer to other relevant IDs.
+
+We have IDs for [business insurance and claims](/11.22), [dispute resolution](/11.33), [hiring staff](/11.41), and more.
+
+To explore the rest, just click around. [10-19](/10-19) is a good place to start. There's a list of all unlocked IDs at [00.00](/00.00).
+
+> To return to this page, click the <a href="/00.91" style="text-decoration: none;">↖</a> arrow to the left of **Small business system** at the very top of the page. Or navigate yourself to [00.91](/00.91) any other way.
+
+#### Search
+
+Search is in demo mode. Try it out: say you're looking for the ID where you manage \`payroll\`. Now imagine being able to find _anything_ in your business this quickly.
+
+#### Always private
+
+_Your_ files live on _your_ computer. **We never have access to your files**. You download a complete folder structure that mirrors this site, as well as text files that you can use to set up your local [index](https://jdcm.al/11.05/).
+
+There are many other benefits, which we'll explore on the coming pages.
+
+> We're still building the system. Search is incomplete, and you'll notice other bugs if you go looking for them. This site is in constant development, and my focus is on building the system over making this early public-facing version bug-free.
+`;
+
+const cost = `
+Platinum membership is for life. It gets you access to **everything we ever create, for all of time, for a [one-off payment of US$300](https://store.johnnydecimal.com/cart/43063017111688:1)**.<sup>1</sup>
+
+Gold membership is for one year.<sup>2</sup> You have access to everything we do for as long as you're a member. It costs [US$150 a year](https://store.johnnydecimal.com/cart/43069054648456:1).<sup>3</sup>
+
+These are pre-sale prices. They will increase when we launch the system.
+
+This is what me and my partner Lucy do full-time: we quit our jobs to do this. Your membership supports two humans who hand-craft everything you see. The system is the result of thousands of hours of work.
+
+We're not a faceless corporation. There's no lazy AI-generated slop here. No automated helpdesk. You email me, I help you.
+
+Our plan for the next couple of years is to listen to exactly what you need, and to build it for you as quickly as possible. It'll be like having us on your staff.
+
+> 1. Prices include GST in Australia.
+> 2. Renews one year after the full system is released, not one year after your initial payment.
+> 3. You'll _never_ lose access to your system. If you choose not to renew, you'll just stop getting updates.
+`;
+
+const when = `
+As you'll see when you're browsing the site, we're still building the system. We are targeting a first release of end-March 2025.
+
+Me and Lucy are working on this 6 days a week. It has our complete focus.
+`;
+
+const also = `
+As this is a Johnny.Decimal membership, you get **everything else** that we produce.
+
+That's the [workshop](https://jdcm.al/14.22/), [workbook](https://jdcm.al/14.21/), and [life admin system](https://jdcm.al/14.11/). Platinum also includes our 14-hour beginner Excel course, [Learn with Lucy](https://learnwithlucy.rocks).
+`;
+
+const next = `
+Check out our plans for the [community](/00.92).
+
+`;
+
+const whyHtml = await marked.parse(why);
+const howHtml = await marked.parse(how);
+// const whoHtml = await marked.parse(who);
+const whatHtml = await marked.parse(what);
+const costHtml = await marked.parse(cost);
+const whenHtml = await marked.parse(when);
+const alsoHtml = await marked.parse(also);
+const nextHtml = await marked.parse(next);
 ---
 
+<Slice id="why" className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Why?</h3>
+    <div class="layout-right-item" set:html={whyHtml} />
+  </div>
+</Slice>
+
+<Slice id="how" className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">How?</h3>
+    <div class="layout-right-item" set:html={howHtml} />
+  </div>
+</Slice>
+
 {
-  !user ? (
-    <Slice className="main-text">
-      <div class="layout-grid-left-right">
-        <div />
-        <div class="layout-right-item">
-          <p>Loading your user data...</p>
-        </div>
-      </div>
-    </Slice>
-  ) : (
-    <>
-      {/* 
-      <Slice id="SettingsFirstRun" className="main-text">
-        <div class="layout-grid-left-right">
-          <h3 class="layout-left-item">Home page</h3>
-          <div class="layout-right-item">
-            <input
-              type="checkbox"
-              id="firstRunCompleteCheckbox"
-              checked={firstRunComplete}
-            />
-            <span id="firstRunCompleteUpdateStatus" />
-            <p>
-              When you log in, do you want to see the{" "}
-              <a href="/00.11">introductory help page</a>, or the
-              <a href="/">system home page</a>? (Inactive)
-            </p>
-            <select name="homePage" id="homePage">
-              <option value="home">Home page</option>
-              <option value="help">Help page</option>
-            </select>
-          </div>
-        </div>
-      </Slice>
-      */}
-
-      <Slice id="SettingsEmoji" className="main-text">
-        <div class="layout-grid-left-right">
-          <h3 class="layout-left-item">Emoji</h3>
-          <div class="layout-right-item">
-            <p>
-              Do you want to use emoji in your system? This applies to file
-              system folder and JDex downloads.
-            </p>
-            <select name="useEmoji" id="useEmoji">
-              <option value="false" selected={!useEmoji}>
-                No
-              </option>
-              <option value="true" selected={useEmoji}>
-                Yes 😃
-              </option>
-            </select>
-            <span id="useEmojiSaved" class="saved-indicator hidden" />
-          </div>
-        </div>
-      </Slice>
-
-      <Slice id="SettingsBlackSquare" className="main-text">
-        <div class="layout-grid-left-right">
-          <h3 class="layout-left-item">Headers</h3>
-          <div class="layout-right-item">
-            <p>
-              Do you want to use a black square to indicate headers? This
-              applies to file system folder and JDex downloads.
-            </p>
-            <p>
-              I recommend you leave this turned on unless you use a file system
-              that does not support it, e.g. Dropbox.
-            </p>
-            <select name="useBlackSquare" id="useBlackSquare">
-              <option value="false" selected={!useBlackSquare}>
-                No
-              </option>
-              <option value="true" selected={useBlackSquare}>
-                Yes ■
-              </option>
-            </select>
-            <span id="useBlackSquareSaved" class="saved-indicator hidden" />
-          </div>
-        </div>
-      </Slice>
-
-      <Slice id="SettingsJDexApp" className="main-text">
-        <div class="layout-grid-left-right">
-          <h3 class="layout-left-item">JDex app</h3>
-          <div class="layout-right-item">
-            <p>
-              Which app do you use for your JDex? This setting allows us to
-              create links from each of the IDs on this website.
-            </p>
-            <p>
-              If the app you use isn't shown here, please send us feedback using
-              the link below.
-            </p>
-            <select name="jdexApp" id="jdexApp">
-              <option value="none" selected={jdexApp === "none"}>
-                – None –
-              </option>
-              <option value="bear" selected={jdexApp === "bear"}>
-                Bear
-              </option>
-              <option value="obsidian" selected={jdexApp === "obsidian"}>
-                Obsidian
-              </option>
-            </select>
-            <span id="jdexAppSaved" class="saved-indicator hidden" />
-          </div>
-        </div>
-      </Slice>
-
-      <Slice
-        id="ObsidianVault"
-        className={
-          jdexApp === "obsidian" ? "main-text visible" : "main-text hidden"
-        }
-      >
-        <div class="layout-grid-left-right">
-          <h3 class="layout-left-item">Obsidian vault</h3>
-          <div class="layout-right-item">
-            <p>
-              What's the name of your Obsidian vault? You can find it at the
-              very bottom of the left sidebar next to the arrow-up/arrow-down
-              symbol. Enter it exactly as shown.
-            </p>
-            <p>
-              This allows us to create links from each ID page on this site that
-              open your Obsidian note directly.
-            </p>
-            <p>
-              If you haven't created your vault yet, you can come back and enter
-              the value here at any time.
-            </p>
-            <input
-              type="text"
-              id="obsidianVault"
-              value={obsidianVault}
-              placeholder="No value saved"
-            />
-            <button id="obsidianVaultSubmit">Submit</button>
-            <span id="obsidianVaultSaved" class="saved-indicator hidden" />
-          </div>
-        </div>
-      </Slice>
-    </>
-  )
+  /*
+<Slice id="who" className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Who?</h3>
+    <div class="layout-right-item" set:html={whoHtml} />
+  </div>
+</Slice>
+*/
 }
 
-<script>
-  import { actions } from "astro:actions";
+<Slice id="what" className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">What?</h3>
+    <div class="layout-right-item" set:html={whatHtml} />
+  </div>
+</Slice>
 
-  document.addEventListener("DOMContentLoaded", async () => {
-    const { updateStatusIndicator } = await import(
-      "@utils/updateStatusIndicator"
-    );
+<Slice id="cost" className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Cost?</h3>
+    <div class="layout-right-item" set:html={costHtml} />
+  </div>
+</Slice>
 
-    // #region ---------------------- Emoji --------------------------------- */
-    const useEmojiEl = document.getElementById("useEmoji") as HTMLSelectElement;
-    if (!useEmojiEl) throw new Error("🚨 emojiPref doesn't exist!");
+<Slice id="when" className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">When?</h3>
+    <div class="layout-right-item" set:html={whenHtml} />
+  </div>
+</Slice>
 
-    useEmojiEl.addEventListener("change", async () => {
-      const useEmoji = useEmojiEl.value === "true";
+<Slice id="also" className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Also…</h3>
+    <div class="layout-right-item" set:html={alsoHtml} />
+  </div>
+</Slice>
 
-      const { data, error } = await actions.setUseEmoji({ useEmoji });
-      if (!error && data.status === "success") {
-        updateStatusIndicator("useEmojiSaved", true);
-      } else if (error) {
-        updateStatusIndicator("useEmojiSaved", false, error.message);
-      }
-    });
-    // #endregion
-
-    // #region ------------------------ ■ ----------------------------------- */
-    const useBlackSquareEl = document.getElementById(
-      "useBlackSquare"
-    ) as HTMLSelectElement;
-    if (!useBlackSquareEl) throw new Error("🚨 emojiPref doesn't exist!");
-
-    useBlackSquareEl.addEventListener("change", async () => {
-      const useBlackSquare = useBlackSquareEl.value === "true";
-
-      const { data, error } = await actions.setUseBlackSquare({
-        useBlackSquare,
-      });
-      if (!error && data.status === "success") {
-        updateStatusIndicator("useBlackSquareSaved", true);
-      } else if (error) {
-        updateStatusIndicator("useBlackSquareSaved", false, error.message);
-      }
-    });
-    // #endregion
-
-    // #region ---------------------- JDex app ------------------------------ */
-    const jdexAppEl = document.getElementById("jdexApp") as HTMLSelectElement;
-    if (!jdexAppEl) throw new Error("🚨 jdexApp doesn't exist!");
-
-    jdexAppEl.addEventListener("change", async () => {
-      const jdexApp = jdexAppEl.value;
-
-      const { data, error } = await actions.setPublicMetadata({
-        key: "jdexApp",
-        value: jdexApp,
-      });
-      if (!error && data.status === "success") {
-        updateStatusIndicator("jdexAppSaved", true);
-      } else if (error) {
-        updateStatusIndicator("jdexAppSaved", false, error.message);
-      }
-
-      const obsidianVault = document.getElementById("ObsidianVault");
-      if (jdexApp === "obsidian") {
-        obsidianVault!.classList.remove("hidden");
-        obsidianVault!.classList.add("visible");
-      } else {
-        obsidianVault!.classList.remove("visible");
-        obsidianVault!.classList.add("hidden");
-      }
-    });
-    // #endregion
-
-    // #region ----------------- Obsidian vault ----------------------------- */
-    const obsidianVaultSubmit = document.getElementById(
-      "obsidianVaultSubmit"
-    ) as HTMLElement;
-    const obsidianVault = document.getElementById(
-      "obsidianVault"
-    ) as HTMLInputElement;
-    if (!obsidianVault || !obsidianVaultSubmit)
-      throw new Error("🚨 obsidianVault[Submit] doesn't exist!");
-
-    obsidianVaultSubmit.addEventListener("click", async () => {
-      const { data, error } = await actions.setPublicMetadata({
-        key: "obsidianVault",
-        value: obsidianVault.value,
-      });
-
-      if (!error && data.status === "success") {
-        updateStatusIndicator("obsidianVaultSaved", true);
-      } else if (error) {
-        updateStatusIndicator("obsidianVaultSaved", false, error.message);
-      }
-    });
-    // #endregion
-  });
-</script>
+<Slice id="next" className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Next</h3>
+    <div class="layout-right-item" set:html={nextHtml} />
+  </div>
+</Slice>
 
 <style lang="scss">
   @use "@styles/common" as *;
-
-  select {
-    height: 1.6rem; // Affects FF, Chromium
-    margin-bottom: 1rem;
-  }
-
-  .saved-indicator {
-    opacity: 1;
-    transition: opacity 0.7s ease-in-out;
-    &.hidden {
-      opacity: 0;
-    }
-    &.green {
-      color: light-dark(green, lightgreen);
-    }
-    &.red {
-      color: light-dark(red, red);
-    }
-  }
-
-  :global(#ObsidianVault) {
-    &.hidden {
-      display: none;
-    }
-    &.visible {
-      display: block;
-    }
-
-    button {
-      @include phone-only {
-        margin-top: 10px;
-      }
-    }
-  }
 </style>

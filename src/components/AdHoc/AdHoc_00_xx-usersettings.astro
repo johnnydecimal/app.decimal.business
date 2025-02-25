@@ -1,0 +1,309 @@
+---
+// 00.21 User settings
+import { createClerkClient } from "@clerk/astro/server";
+
+import Slice from "@components/common/Slice.astro";
+
+const { userId } = Astro.locals.auth();
+const clerkClient = createClerkClient({
+  secretKey: import.meta.env.CLERK_SECRET_KEY,
+});
+const user = await clerkClient.users.getUser(userId!);
+// const firstRunComplete = user.publicMetadata.firstRunComplete || false;
+const useEmoji = user.publicMetadata.useEmoji || false;
+const jdexApp = user.publicMetadata.jdexApp || "none";
+const obsidianVault = user.publicMetadata.obsidianVault;
+
+// If this is not set, we default it to true and push it back to Clerk
+let useBlackSquare = user.publicMetadata.useBlackSquare;
+if (useBlackSquare === undefined) {
+  await clerkClient.users.updateUserMetadata(userId!, {
+    publicMetadata: { useBlackSquare: true },
+  });
+  useBlackSquare = true;
+}
+---
+
+{
+  !user ? (
+    <Slice className="main-text">
+      <div class="layout-grid-left-right">
+        <div />
+        <div class="layout-right-item">
+          <p>Loading your user data...</p>
+        </div>
+      </div>
+    </Slice>
+  ) : (
+    <>
+      {/* 
+      <Slice id="SettingsFirstRun" className="main-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Home page</h3>
+          <div class="layout-right-item">
+            <input
+              type="checkbox"
+              id="firstRunCompleteCheckbox"
+              checked={firstRunComplete}
+            />
+            <span id="firstRunCompleteUpdateStatus" />
+            <p>
+              When you log in, do you want to see the{" "}
+              <a href="/00.11">introductory help page</a>, or the
+              <a href="/">system home page</a>? (Inactive)
+            </p>
+            <select name="homePage" id="homePage">
+              <option value="home">Home page</option>
+              <option value="help">Help page</option>
+            </select>
+          </div>
+        </div>
+      </Slice>
+      */}
+
+      <Slice id="SettingsEmoji" className="main-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Emoji</h3>
+          <div class="layout-right-item">
+            <p>
+              Do you want to use emoji in your system? This applies to file
+              system folder and JDex downloads.
+            </p>
+            <select name="useEmoji" id="useEmoji">
+              <option value="false" selected={!useEmoji}>
+                No
+              </option>
+              <option value="true" selected={useEmoji}>
+                Yes 😃
+              </option>
+            </select>
+            <span id="useEmojiSaved" class="saved-indicator hidden" />
+          </div>
+        </div>
+      </Slice>
+
+      <Slice id="SettingsBlackSquare" className="main-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Headers</h3>
+          <div class="layout-right-item">
+            <p>
+              Do you want to use a black square to indicate headers? This
+              applies to file system folder and JDex downloads.
+            </p>
+            <p>
+              I recommend you leave this turned on unless you use a file system
+              that does not support it, e.g. Dropbox.
+            </p>
+            <select name="useBlackSquare" id="useBlackSquare">
+              <option value="false" selected={!useBlackSquare}>
+                No
+              </option>
+              <option value="true" selected={useBlackSquare}>
+                Yes ■
+              </option>
+            </select>
+            <span id="useBlackSquareSaved" class="saved-indicator hidden" />
+          </div>
+        </div>
+      </Slice>
+
+      <Slice id="SettingsJDexApp" className="main-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">JDex app</h3>
+          <div class="layout-right-item">
+            <p>
+              Which app do you use for your JDex? This setting allows us to
+              create links from each of the IDs on this website.
+            </p>
+            <p>
+              If the app you use isn't shown here, please send us feedback using
+              the link below.
+            </p>
+            <select name="jdexApp" id="jdexApp">
+              <option value="none" selected={jdexApp === "none"}>
+                – None –
+              </option>
+              <option value="bear" selected={jdexApp === "bear"}>
+                Bear
+              </option>
+              <option value="obsidian" selected={jdexApp === "obsidian"}>
+                Obsidian
+              </option>
+            </select>
+            <span id="jdexAppSaved" class="saved-indicator hidden" />
+          </div>
+        </div>
+      </Slice>
+
+      <Slice
+        id="ObsidianVault"
+        className={
+          jdexApp === "obsidian" ? "main-text visible" : "main-text hidden"
+        }
+      >
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Obsidian vault</h3>
+          <div class="layout-right-item">
+            <p>
+              What's the name of your Obsidian vault? You can find it at the
+              very bottom of the left sidebar next to the arrow-up/arrow-down
+              symbol. Enter it exactly as shown.
+            </p>
+            <p>
+              This allows us to create links from each ID page on this site that
+              open your Obsidian note directly.
+            </p>
+            <p>
+              If you haven't created your vault yet, you can come back and enter
+              the value here at any time.
+            </p>
+            <input
+              type="text"
+              id="obsidianVault"
+              value={obsidianVault}
+              placeholder="No value saved"
+            />
+            <button id="obsidianVaultSubmit">Submit</button>
+            <span id="obsidianVaultSaved" class="saved-indicator hidden" />
+          </div>
+        </div>
+      </Slice>
+    </>
+  )
+}
+
+<script>
+  import { actions } from "astro:actions";
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const { updateStatusIndicator } = await import(
+      "@utils/updateStatusIndicator"
+    );
+
+    // #region ---------------------- Emoji --------------------------------- */
+    const useEmojiEl = document.getElementById("useEmoji") as HTMLSelectElement;
+    if (!useEmojiEl) throw new Error("🚨 emojiPref doesn't exist!");
+
+    useEmojiEl.addEventListener("change", async () => {
+      const useEmoji = useEmojiEl.value === "true";
+
+      const { data, error } = await actions.setUseEmoji({ useEmoji });
+      if (!error && data.status === "success") {
+        updateStatusIndicator("useEmojiSaved", true);
+      } else if (error) {
+        updateStatusIndicator("useEmojiSaved", false, error.message);
+      }
+    });
+    // #endregion
+
+    // #region ------------------------ ■ ----------------------------------- */
+    const useBlackSquareEl = document.getElementById(
+      "useBlackSquare"
+    ) as HTMLSelectElement;
+    if (!useBlackSquareEl) throw new Error("🚨 emojiPref doesn't exist!");
+
+    useBlackSquareEl.addEventListener("change", async () => {
+      const useBlackSquare = useBlackSquareEl.value === "true";
+
+      const { data, error } = await actions.setUseBlackSquare({
+        useBlackSquare,
+      });
+      if (!error && data.status === "success") {
+        updateStatusIndicator("useBlackSquareSaved", true);
+      } else if (error) {
+        updateStatusIndicator("useBlackSquareSaved", false, error.message);
+      }
+    });
+    // #endregion
+
+    // #region ---------------------- JDex app ------------------------------ */
+    const jdexAppEl = document.getElementById("jdexApp") as HTMLSelectElement;
+    if (!jdexAppEl) throw new Error("🚨 jdexApp doesn't exist!");
+
+    jdexAppEl.addEventListener("change", async () => {
+      const jdexApp = jdexAppEl.value;
+
+      const { data, error } = await actions.setPublicMetadata({
+        key: "jdexApp",
+        value: jdexApp,
+      });
+      if (!error && data.status === "success") {
+        updateStatusIndicator("jdexAppSaved", true);
+      } else if (error) {
+        updateStatusIndicator("jdexAppSaved", false, error.message);
+      }
+
+      const obsidianVault = document.getElementById("ObsidianVault");
+      if (jdexApp === "obsidian") {
+        obsidianVault!.classList.remove("hidden");
+        obsidianVault!.classList.add("visible");
+      } else {
+        obsidianVault!.classList.remove("visible");
+        obsidianVault!.classList.add("hidden");
+      }
+    });
+    // #endregion
+
+    // #region ----------------- Obsidian vault ----------------------------- */
+    const obsidianVaultSubmit = document.getElementById(
+      "obsidianVaultSubmit"
+    ) as HTMLElement;
+    const obsidianVault = document.getElementById(
+      "obsidianVault"
+    ) as HTMLInputElement;
+    if (!obsidianVault || !obsidianVaultSubmit)
+      throw new Error("🚨 obsidianVault[Submit] doesn't exist!");
+
+    obsidianVaultSubmit.addEventListener("click", async () => {
+      const { data, error } = await actions.setPublicMetadata({
+        key: "obsidianVault",
+        value: obsidianVault.value,
+      });
+
+      if (!error && data.status === "success") {
+        updateStatusIndicator("obsidianVaultSaved", true);
+      } else if (error) {
+        updateStatusIndicator("obsidianVaultSaved", false, error.message);
+      }
+    });
+    // #endregion
+  });
+</script>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+
+  select {
+    height: 1.6rem; // Affects FF, Chromium
+    margin-bottom: 1rem;
+  }
+
+  .saved-indicator {
+    opacity: 1;
+    transition: opacity 0.7s ease-in-out;
+    &.hidden {
+      opacity: 0;
+    }
+    &.green {
+      color: light-dark(green, lightgreen);
+    }
+    &.red {
+      color: light-dark(red, red);
+    }
+  }
+
+  :global(#ObsidianVault) {
+    &.hidden {
+      display: none;
+    }
+    &.visible {
+      display: block;
+    }
+
+    button {
+      @include phone-only {
+        margin-top: 10px;
+      }
+    }
+  }
+</style>
