@@ -26,7 +26,7 @@ if (useBlackSquare === undefined) {
 
 {
   !user ? (
-    <Slice className="descriptive-text">
+    <Slice className="main-text">
       <div class="layout-grid-left-right">
         <div />
         <div class="layout-right-item">
@@ -37,7 +37,7 @@ if (useBlackSquare === undefined) {
   ) : (
     <>
       {/* 
-      <Slice id="SettingsFirstRun" className="descriptive-text">
+      <Slice id="SettingsFirstRun" className="main-text">
         <div class="layout-grid-left-right">
           <h3 class="layout-left-item">Home page</h3>
           <div class="layout-right-item">
@@ -61,7 +61,7 @@ if (useBlackSquare === undefined) {
       </Slice>
       */}
 
-      <Slice id="SettingsEmoji" className="descriptive-text">
+      <Slice id="SettingsEmoji" className="main-text">
         <div class="layout-grid-left-right">
           <h3 class="layout-left-item">Emoji</h3>
           <div class="layout-right-item">
@@ -82,7 +82,7 @@ if (useBlackSquare === undefined) {
         </div>
       </Slice>
 
-      <Slice id="SettingsBlackSquare" className="descriptive-text">
+      <Slice id="SettingsBlackSquare" className="main-text">
         <div class="layout-grid-left-right">
           <h3 class="layout-left-item">Headers</h3>
           <div class="layout-right-item">
@@ -107,7 +107,7 @@ if (useBlackSquare === undefined) {
         </div>
       </Slice>
 
-      <Slice id="SettingsJDexApp" className="descriptive-text">
+      <Slice id="SettingsJDexApp" className="main-text">
         <div class="layout-grid-left-right">
           <h3 class="layout-left-item">JDex app</h3>
           <div class="layout-right-item">
@@ -138,9 +138,7 @@ if (useBlackSquare === undefined) {
       <Slice
         id="ObsidianVault"
         className={
-          jdexApp === "obsidian"
-            ? "descriptive-text visible"
-            : "descriptive-text hidden"
+          jdexApp === "obsidian" ? "main-text visible" : "main-text hidden"
         }
       >
         <div class="layout-grid-left-right">

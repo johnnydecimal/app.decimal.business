@@ -42,7 +42,7 @@ const categoryAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
 
 {
   categoryDescription ? (
-    <Slice id="CategoryDescription" className="descriptive-text">
+    <Slice id="CategoryDescription" className="main-text">
       <div class="layout-grid-left-right">
         <div />
         <div class="layout-right-item" set:html={categoryDescription} />
@@ -54,7 +54,7 @@ const categoryAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
 <!-- #region Examples ---------------------------------------------------------->
 {
   categoryExamples ? (
-    <Slice id="CategoryExamples" className="descriptive-text">
+    <Slice id="CategoryExamples" className="main-text">
       <div class="layout-grid-left-right">
         <h3 class="layout-left-item">Examples</h3>
         <div class="layout-right-item" set:html={categoryExamples} />
@@ -65,7 +65,7 @@ const categoryAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
 
 {
   categoryOverview ? (
-    <Slice id="CategoryOverview" className="descriptive-text">
+    <Slice id="CategoryOverview" className="main-text">
       <div class="layout-grid-left-right">
         <h3 class="layout-left-item">Overview</h3>
         <div class="layout-right-item" set:html={categoryOverview} />
@@ -76,7 +76,7 @@ const categoryAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
 
 {
   categoryExceptions ? (
-    <Slice id="CategoryExceptions" className="descriptive-text">
+    <Slice id="CategoryExceptions" className="main-text">
       <div class="layout-grid-left-right">
         <h3 class="layout-left-item">Exceptions</h3>
         <div class="layout-right-item" set:html={categoryExceptions} />
@@ -87,7 +87,7 @@ const categoryAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
 
 {
   categoryAlsoSee ? (
-    <Slice id="CategoryAlsoSee" className="descriptive-text">
+    <Slice id="CategoryAlsoSee" className="main-text">
       <div class="layout-grid-left-right">
         <h3 class="layout-left-item">Also see</h3>
         <div class="layout-right-item" set:html={categoryAlsoSee} />

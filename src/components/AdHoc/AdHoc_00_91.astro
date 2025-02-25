@@ -111,14 +111,14 @@ const alsoHtml = await marked.parse(also);
 const nextHtml = await marked.parse(next);
 ---
 
-<Slice id="why" className="descriptive-text">
+<Slice id="why" className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Why?</h3>
     <div class="layout-right-item" set:html={whyHtml} />
   </div>
 </Slice>
 
-<Slice id="how" className="descriptive-text">
+<Slice id="how" className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">How?</h3>
     <div class="layout-right-item" set:html={howHtml} />
@@ -127,7 +127,7 @@ const nextHtml = await marked.parse(next);
 
 {
   /*
-<Slice id="who" className="descriptive-text">
+<Slice id="who" className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Who?</h3>
     <div class="layout-right-item" set:html={whoHtml} />
@@ -136,35 +136,35 @@ const nextHtml = await marked.parse(next);
 */
 }
 
-<Slice id="what" className="descriptive-text">
+<Slice id="what" className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">What?</h3>
     <div class="layout-right-item" set:html={whatHtml} />
   </div>
 </Slice>
 
-<Slice id="cost" className="descriptive-text">
+<Slice id="cost" className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Cost?</h3>
     <div class="layout-right-item" set:html={costHtml} />
   </div>
 </Slice>
 
-<Slice id="when" className="descriptive-text">
+<Slice id="when" className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">When?</h3>
     <div class="layout-right-item" set:html={whenHtml} />
   </div>
 </Slice>
 
-<Slice id="also" className="descriptive-text">
+<Slice id="also" className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Also…</h3>
     <div class="layout-right-item" set:html={alsoHtml} />
   </div>
 </Slice>
 
-<Slice id="next" className="descriptive-text">
+<Slice id="next" className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Next</h3>
     <div class="layout-right-item" set:html={nextHtml} />

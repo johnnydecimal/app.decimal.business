@@ -45,35 +45,35 @@ const subscribeHtml = await marked.parse(subscribe);
 const nextHtml = await marked.parse(next);
 ---
 
-<Slice className="descriptive-text">
+<Slice className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Common language</h3>
     <div class="layout-right-item" set:html={languageHtml} />
   </div>
 </Slice>
 
-<Slice className="descriptive-text">
+<Slice className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Feedback loop</h3>
     <div class="layout-right-item" set:html={feedbackHtml} />
   </div>
 </Slice>
 
-<Slice className="descriptive-text">
+<Slice className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Open for business</h3>
     <div class="layout-right-item" set:html={openHtml} />
   </div>
 </Slice>
 
-<Slice className="descriptive-text">
+<Slice className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Subscribe</h3>
     <div class="layout-right-item" set:html={subscribeHtml} />
   </div>
 </Slice>
 
-<Slice className="descriptive-text">
+<Slice className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Next</h3>
     <div class="layout-right-item" set:html={nextHtml} />

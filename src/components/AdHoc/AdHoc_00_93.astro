@@ -69,28 +69,28 @@ const noMathsHtml = await marked.parse(noMaths);
 const subscribeHtml = await marked.parse(subscribe);
 ---
 
-<Slice className="descriptive-text">
+<Slice className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">A simple hierarchy</h3>
     <div class="layout-right-item" set:html={numbersHtml} />
   </div>
 </Slice>
 
-<Slice className="descriptive-text">
+<Slice className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Read them aloud</h3>
     <div class="layout-right-item" set:html={outloudHtml} />
   </div>
 </Slice>
 
-<Slice className="descriptive-text">
+<Slice className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">No maths</h3>
     <div class="layout-right-item" set:html={noMathsHtml} />
   </div>
 </Slice>
 
-<Slice className="descriptive-text">
+<Slice className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Subscribe</h3>
     <div class="layout-right-item" set:html={subscribeHtml} />
