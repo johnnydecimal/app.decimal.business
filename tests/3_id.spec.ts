@@ -1,6 +1,13 @@
 import { test, expect } from "@playwright/test";
 
-test("ID 11.11", async ({ page }) => {
+test("ID 11.11", async ({ context, page }) => {
+  await context.addCookies([
+    {
+      name: "visited",
+      value: "true",
+      url: "http://lutetium:3012/",
+    },
+  ]);
   await page.goto("/11.11?env=test");
   await expect(page).toHaveScreenshot({ fullPage: true });
 

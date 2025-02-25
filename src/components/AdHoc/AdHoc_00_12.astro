@@ -11,17 +11,24 @@ This is intended to encourage you to think about your own business. You probably
 `;
 
 const quadrant = `
-We've divided all businesses up in to four quadrants.
+We've divided all businesses into four quadrants.
 
 On one extreme you **produce** a thing, and on the other you **deliver** a service. And the thing you produce or deliver might be **tangible** or **intangible**.
 
 We can plot this on a quadrant chart.
 `;
 
-const mermaidQuadrant = `
-%%{init: {"quadrantChart": {"chartWidth": 450, "chartHeight": 450, "quadrantLabelFontSize": 12, "xAxisLabelFontSize": 12, "yAxisLabelFontSize": 12}, "themeVariables": { "quadrantPointFill": "#f00", "quadrantPointTextFill": "#f00", "quadrant1TextFill": "#00f", "quadrant2TextFill": "#00f", "quadrant3TextFill": "#00f", "quadrant4TextFill": "#00f", "quadrantXAxisTextFill": "#00a", "quadrantYAxisTextFill": "#00a" } }}%%
+const storyLinks = `
+1. [Jeff runs Lovett Sundries. They manufacture their own range of body-care products, and sell them in-store and online.](/00.12+FR1)
+2. [Gary is a gardener. His service is really simple: he'll come and mow your lawn.](/00.12+FR2)
+3. [My account is ... my accountant! We all know what they do.](/00.12+FR3)
+4. [Xe is a software developer. They require a very detailed brief, then they do the work, and deliver a finished product with no ongoing support.](/00.12+FR4)
+`;
+
+/** Render this in the playground, easier for screenshots/light/dark etc.
+const _chart = `
+%%{init: {"quadrantChart": {"chartWidth": 450, "chartHeight": 450, "quadrantLabelFontSize": 12, "xAxisLabelFontSize": 12, "yAxisLabelFontSize": 12}, "themeVariables": { "quadrantPointFill": "#37470A", "quadrantPointTextFill": "#37470A", "quadrant1TextFill": "midnightblue", "quadrant2TextFill": "midnightblue", "quadrant3TextFill": "midnightblue", "quadrant4TextFill": "midnightblue", "quadrantXAxisTextFill": "#00a", "quadrantYAxisTextFill": "#00a" } }}%%
 quadrantChart
-    title Classes of small business
     x-axis You produce a thing --> You deliver a service
     y-axis Intangible thing --> Tangible thing
     quadrant-1 Delivers a tangible service
@@ -34,11 +41,12 @@ quadrantChart
     "Accountant": [0.9, 0.1]
     "Johnny.Decimal": [0.4, 0.2]
     "Wedding celebrant": [0.75, 0.75]
-    "Custom furniture maker": [0.4, 0.8]
-`;
+    "Custom furniture maker": [0.4, 0.8]`;
+*/
 
 const overviewHtml = await marked.parse(overview);
 const quadrantHtml = await marked.parse(quadrant);
+const storyLinksHtml = await marked.parse(storyLinks);
 ---
 
 <Slice className="descriptive-text">
@@ -59,10 +67,53 @@ const quadrantHtml = await marked.parse(quadrant);
   </div>
 </Slice>
 
-<div class="mermaid">
-  {mermaidQuadrant}
-</div>
+<Slice id="quadrant-chart">
+  <picture>
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="/img/00.12A-Quadrant-light-1296x1294.png"
+    />
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="/img/00.12A-Quadrant-dark-1296x1294.png"
+    />
+    <img
+      alt="A quadrant chart showing the four quadrants of a business."
+      id="quadrant-img"
+      src="/img/00.12A-Quadrant-light-1296x1294.png"
+      width="648"
+      height="647"
+    />
+  </picture>
+</Slice>
+
+<Slice className="descriptive-text">
+  <div class="layout-grid-left-right">
+    <div class="layout-left-item padding-top">
+      <h3>Stories</h3>
+    </div>
+    <div class="layout-right-item padding-top" set:html={storyLinksHtml} />
+  </div>
+</Slice>
 
 <style lang="scss">
   @use "@styles/common" as *;
+
+  :global(#quadrant-chart) {
+    border-top: 1.5px solid light-dark(#ccc, #333);
+    border-bottom: 1.5px solid light-dark(#ccc, #333);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  :global(img#quadrant-img) {
+    // border: 1px solid var(--border-accent);
+    height: auto;
+    max-width: 95%;
+    object-fit: cover;
+  }
+
+  .padding-top {
+    padding-top: 1rem;
+  }
 </style>
