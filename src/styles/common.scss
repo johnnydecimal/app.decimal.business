@@ -1,185 +1,12 @@
-@import "normalize.css";
-
-// #region fonts
-@font-face {
-  font-family: "Berkeley Mono";
-  src:
-    local("Berkeley Mono Regular"),
-    local("BerkeleyMonoRegular"),
-    url("/fonts/BerkeleyMono/BerkeleyMono-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "Berkeley Mono";
-  src:
-    local("Berkeley Mono Bold"),
-    local("BerkeleyMonoBold"),
-    url("/fonts/BerkeleyMono/BerkeleyMono-Bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "Berkeley Mono";
-  src:
-    local("Berkeley Mono Italic"),
-    local("BerkeleyMonoItalic"),
-    url("/fonts/BerkeleyMono/BerkeleyMono-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: fallback;
-}
-@font-face {
-  font-family: "Berkeley Mono";
-  src:
-    local("Berkeley Mono Bold Italic"),
-    local("BerkeleyMonoBoldItalic"),
-    url("/fonts/BerkeleyMono/BerkeleyMono-BoldItalic.woff2") format("woff2");
-  font-weight: 700;
-  font-style: italic;
-  font-display: fallback;
-}
-// #endregion
-
-// #region mixins
-@mixin dark {
-  @media (prefers-color-scheme: dark) {
-    @content;
-  }
-}
-@mixin phone-only {
-  @media (max-width: 599px) {
-    @content;
-  }
-}
-@mixin tablet-portrait-up {
-  @media (min-width: 600px) {
-    @content;
-  }
-}
-@mixin tablet-landscape-up {
-  @media (min-width: 900px) {
-    @content;
-  }
-}
-@mixin desktop-up {
-  @media (min-width: 1200px) {
-    @content;
-  }
-}
-@mixin big-desktop-up {
-  @media (min-width: 1800px) {
-    @content;
-  }
-}
-// #endregion
-
-/* -------------------------------- Variables ------------------------------- */
-:root {
-  --content-max-width: 600px;
-  --content-padding: 1rem;
-
-  // Meh are these useful?
-  --tiny: 5px;
-  --small: 8px;
-  --medium: 12px;
-  --large: 16px;
-  --xlarge: 20px;
-  // Is this better
-  --component-padding: 20px;
-
-  --border-strong: light-dark(#111, #eee);
-  --border-accent: light-dark(#11b, #99c);
-  --secondary-content-bg: light-dark(#f3f3f3, #111);
-  --tint: light-dark(#f0f0ff, #448);
-
-  --monospace: "Berkeley Mono", ui-monospace, "Cascadia Code", "Source Code Pro",
-    Menlo, Consolas, "DejaVu Sans Mono", monospace;
-}
+@forward "mixins";
+@use "mixins" as *;
 
 /* -------------------------------- Elements -------------------------------- */
-:global(blockquote) {
-  border-top: 1px dashed var(--border-accent);
-  border-bottom: 1px dashed var(--border-accent);
-  font-size: 0.8rem;
-  margin: 0 0 1rem 0;
-
-  :global(li + li) {
-    margin-top: 5px;
-  }
-}
-
-:global(code) {
-  background-color: var(--tint);
-  border: 1px dotted var(--border-strong);
-  border-bottom: 2px solid var(--border-strong);
-  font-family: var(--monospace);
-  padding-inline: 1ch;
-}
-
-footer {
-  border-top: 2px solid black;
-}
-
-html {
-  color-scheme: light dark;
-  font-family: var(--monospace);
-  line-height: 1.5;
-}
-
-select {
-  font-family: var(--monospace);
-}
-
-:global(ol) {
-  padding-inline-start: 39px; // Way too much otherwise
-}
-:global(ul) {
-  padding-inline-start: 18px; // Way too much otherwise
-}
 
 // Spans the page width without margin. Used for full-width effects e.g.
 // background & border. No content should live at this level.
 // This blob of style only includes stuff that applies to the whole slice,
 // regardless of its content.
-.Slice {
-  // Thicken the border below search
-  &.search-border {
-    border-bottom: 2px solid var(--border-strong);
-  }
-  // Push the system breadcrumb off search a touch b/c of the thick border
-  &.system.breadcrumb > .inner-container > .label-text-grid > h2.label,
-  &.system.breadcrumb > .inner-container > .label-text-grid > h2.text {
-    padding-top: calc(var(--tiny) + 2px);
-  }
-
-  // Active vs. inactive highlighting
-  // .active-top/-bottom do the border
-  &.active-top {
-    border-top: 1px solid var(--border-strong);
-  }
-  &.active-bottom {
-    border-bottom: 1px solid var(--border-strong);
-  }
-  // .secondary-content-bg does the not-active bg tint
-  &.secondary-content-bg {
-    background-color: var(--secondary-content-bg);
-  }
-
-  // The inner container is what brings us in from the edges, with padding
-  // Everything absolutely everything should live in here
-  .inner-container {
-    max-width: var(--content-max-width);
-    margin: 0 auto;
-    padding: 0 var(--content-padding);
-    box-sizing: border-box;
-  }
-
-  // But now for the specific things that _do_ live inside there, define them
-  // below so this doesn't get too busy.
-}
 
 // This is common for breadcrumbs at all sizes, and descriptive text on larger
 @mixin layout-grid-100px-auto {
@@ -310,13 +137,19 @@ select {
 
   // Line the text up with its header by removing top margin
   @include tablet-portrait-up {
-    // This <p> is set:html'd
-    .layout-right-item :global(p:first-child) {
-      margin-top: 0;
-    }
-    // If the first thing is an ul, it's the same
-    .layout-right-item :global(ul:first-child) {
-      margin-top: 0;
+    .layout-right-item {
+      // This <p> is set:html'd
+      :global(p:first-child) {
+        margin-top: 0;
+      }
+      // If the first thing is an ul, it's the same
+      :global(ul:first-child) {
+        margin-top: 0;
+      }
+      // If the first thing is an ol, it's the same
+      :global(ol:first-child) {
+        margin-top: 0;
+      }
     }
   }
   // But reset these margins if we're in a blockquote

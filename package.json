@@ -29,7 +29,7 @@
     "marked": "^15.0.6",
     "marked-smartypants": "^1.1.9",
     "mermaid": "^11.4.1",
-    "normalize.css": "^8.0.1",
+    "modern-normalize": "^3.0.1",
     "sass": "^1.83.4",
     "sass-embedded": "^1.83.4",
     "typescript": "^5.7.3"

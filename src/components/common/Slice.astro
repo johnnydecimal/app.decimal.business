@@ -8,16 +8,40 @@ const { className, id } = Astro.props;
 ---
 
 <div id={id} class="Slice" class:list={className}>
-  {/* layout-container is what does all of the work */}
   <div class="inner-container">
     <slot />
   </div>
 </div>
 
 <style lang="scss">
-  @use "@styles/common" as *;
+  // This works with local scoping because each `className` is sent to this
+  // component, and rendered directly by it.
+  .Slice {
+    // Thicken the border below search
+    &.search-border {
+      border-bottom: 2px solid var(--border-strong);
+    }
 
-  .inner-container {
-    // border: 1px dotted lightgoldenrodyellow;
+    // Active vs. inactive highlighting
+    // .active-top/-bottom do the border
+    &.active-top {
+      border-top: 1px solid var(--border-strong);
+    }
+    &.active-bottom {
+      border-bottom: 1px solid var(--border-strong);
+    }
+    // .secondary-content-bg does the not-active bg tint
+    &.secondary-content-bg {
+      background-color: var(--secondary-content-bg);
+    }
+
+    // The inner container is what brings us in from the edges, with padding
+    // Everything absolutely everything should live in here
+    .inner-container {
+      max-width: var(--content-max-width);
+      margin: 0 auto;
+      padding: 0 var(--content-padding);
+      box-sizing: border-box;
+    }
   }
 </style>
