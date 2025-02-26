@@ -37,12 +37,13 @@ interface SmallBusinessEntry {
   exceptions?: string;
   alsoSee?: string;
   links?: string;
+  freeform?: Array<{ header: string; content: string }>;
 }
 
 // Parse a markdown file into a Partial<SmallBusinessEntry>
 // 1. The first line (starting with "# ") is assumed to be "<number> <title>".
 // 2. Headers starting with "## " are used to extract the supported sections.
-function parseMarkdown(markdown: string): SmallBusinessEntry {
+function parseMarkdown(markdown: string, frontmatter: any): SmallBusinessEntry {
   const lines = markdown.split("\n");
   const entry: SmallBusinessEntry = { number: "", title: "" };
 
@@ -89,6 +90,45 @@ function parseMarkdown(markdown: string): SmallBusinessEntry {
     }
   });
 
+  // Handle freeform content if specified in frontmatter
+  if (frontmatter.freeform && Array.isArray(frontmatter.freeform)) {
+    entry.freeform = [];
+
+    frontmatter.freeform.forEach((header: string) => {
+      const headerLower = header.toLowerCase();
+      const idx = headerIndices[headerLower];
+
+      if (idx !== undefined) {
+        // Find the end of this section (next header or end of file)
+        const subsequentIndices = Object.values(headerIndices).filter(
+          (i) => i > idx
+        );
+        const endIdx =
+          subsequentIndices.length > 0
+            ? Math.min(...subsequentIndices)
+            : lines.length;
+
+        const content = lines
+          .slice(idx + 1, endIdx)
+          .join("\n")
+          .trim()
+          .replace(/\n+$/, "");
+
+        if (content) {
+          entry.freeform!.push({
+            header,
+            content,
+          });
+        }
+      }
+    });
+
+    // If no freeform sections were found, remove the empty array
+    if (entry.freeform.length === 0) {
+      delete entry.freeform;
+    }
+  }
+
   return entry;
 }
 
@@ -112,7 +152,7 @@ async function generateTsFiles() {
 
       // Parse the markdown content with gray-matter
       const { data: frontmatter, content: markdown } = matter(markdownContent);
-      const parsed = parseMarkdown(markdown);
+      const parsed = parseMarkdown(markdown, frontmatter);
 
       let finalEntry: IdEntry | CategoryEntry;
       let entryType: string;
@@ -156,6 +196,7 @@ async function generateTsFiles() {
         "alsoSee",
         "links",
         "emoji",
+        "freeform",
       ];
       extKeys.forEach((key) => {
         if ((parsed as any)[key]) {

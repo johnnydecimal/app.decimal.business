@@ -34,6 +34,7 @@ interface SmallBusinessExtension {
   overview?: string;
   exceptions?: string;
   alsoSee?: string;
+  freeform?: { header: string; content: string }[];
   links?: string;
 }
 export interface SystemEntry extends BaseEntry {
