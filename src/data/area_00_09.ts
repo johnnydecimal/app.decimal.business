@@ -211,14 +211,28 @@ export const area_00_09: FlattenedData = {
   },
   "01.01": {
     number: "01.01",
-    title: "User settings",
-    type: "adHoc",
-    isPublic: true,
-    description: "This section contains your user settings.",
+    title: "Account management",
+    type: "id",
+    description: "Manage your account here.",
+    isPublic: false, // allows signup if exposed
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: {
+      smallBusiness: {
+        overview:
+          "For now, this is at [Clerk](https://accounts.johnnydecimal.com/user).",
+      },
+    },
   },
   "01.02": {
     number: "01.02",
+    title: "User settings",
+    type: "adHoc",
+    isPublic: true,
+    description: "This ID contains your user settings.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+  },
+  "01.03": {
+    number: "01.03",
     title: "System downloads",
     type: "adHoc",
     isPublic: true,

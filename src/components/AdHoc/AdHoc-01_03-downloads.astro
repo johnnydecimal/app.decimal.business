@@ -8,16 +8,20 @@ const { userId } = Astro.locals.auth();
 const clerkClient = createClerkClient({
   secretKey: import.meta.env.CLERK_SECRET_KEY,
 });
-const user = await clerkClient.users.getUser(userId!);
+const user = userId && (await clerkClient.users.getUser(userId));
+
 // const useEmoji = user.publicMetadata.useEmoji || false;
 
-// If this is not set, we default it to true and push it back to Clerk
-let useBlackSquare = user.publicMetadata.useBlackSquare;
-if (useBlackSquare === undefined) {
-  await clerkClient.users.updateUserMetadata(userId!, {
-    publicMetadata: { useBlackSquare: true },
-  });
-  useBlackSquare = true;
+let useBlackSquare;
+if (user) {
+  // If this is not set, we default it to true and push it back to Clerk
+  useBlackSquare = user.publicMetadata.useBlackSquare;
+  if (useBlackSquare === undefined) {
+    await clerkClient.users.updateUserMetadata(userId!, {
+      publicMetadata: { useBlackSquare: true },
+    });
+    useBlackSquare = true;
+  }
 }
 ---
 
@@ -28,6 +32,7 @@ if (useBlackSquare === undefined) {
         <div />
         <div class="layout-right-item">
           <p>Loading your user data...</p>
+          <p>(If you're not signed in, nothing else is going to happen.)</p>
         </div>
       </div>
     </Slice>

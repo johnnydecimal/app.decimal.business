@@ -25,7 +25,7 @@ if (user) {
   obsidianVault = user.publicMetadata.obsidianVault;
 
   // If this is not set, we default it to true and push it back to Clerk
-  // TODO why? we don't do that with useEmoji et. al.
+  // We do this as true is the sensible default
   useBlackSquare = user.publicMetadata.useBlackSquare;
   if (useBlackSquare === undefined) {
     await clerkClient.users.updateUserMetadata(userId!, {
@@ -43,6 +43,7 @@ if (user) {
         <div />
         <div class="layout-right-item">
           <p>Loading your user data...</p>
+          <p>(If you're not signed in, nothing else is going to happen.)</p>
         </div>
       </div>
     </Slice>
