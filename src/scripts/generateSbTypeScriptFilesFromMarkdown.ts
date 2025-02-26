@@ -66,32 +66,9 @@ function parseMarkdown(markdown: string, frontmatter: any): SmallBusinessEntry {
     }
   });
 
-  // For each supported header, extract its content from (headerIndex + 1) to the next "## " or EOF.
-  Object.keys(SECTION_MAP).forEach((headerKey) => {
-    const idx = headerIndices[headerKey];
-    if (idx !== undefined) {
-      // Determine the end index: first subsequent line that starts with "## ", or end of file.
-      const subsequentIndices = Object.values(headerIndices).filter(
-        (i) => i > idx
-      );
-      const endIdx =
-        subsequentIndices.length > 0
-          ? Math.min(...subsequentIndices)
-          : lines.length;
-      const content = lines
-        .slice(idx + 1, endIdx)
-        .join("\n")
-        .trim()
-        .replace(/\n+$/, "");
-      // Only add if there is some content.
-      if (content) {
-        (entry as any)[SECTION_MAP[headerKey]] = content;
-      }
-    }
-  });
-
-  // Handle freeform content if specified in frontmatter
+  // Check if we should process freeform content
   if (frontmatter.freeform && Array.isArray(frontmatter.freeform)) {
+    // Process freeform content instead of standard headers
     entry.freeform = [];
 
     frontmatter.freeform.forEach((header: string) => {
@@ -127,6 +104,30 @@ function parseMarkdown(markdown: string, frontmatter: any): SmallBusinessEntry {
     if (entry.freeform.length === 0) {
       delete entry.freeform;
     }
+  } else {
+    // Process standard headers
+    Object.keys(SECTION_MAP).forEach((headerKey) => {
+      const idx = headerIndices[headerKey];
+      if (idx !== undefined) {
+        // Determine the end index: first subsequent line that starts with "## ", or end of file.
+        const subsequentIndices = Object.values(headerIndices).filter(
+          (i) => i > idx
+        );
+        const endIdx =
+          subsequentIndices.length > 0
+            ? Math.min(...subsequentIndices)
+            : lines.length;
+        const content = lines
+          .slice(idx + 1, endIdx)
+          .join("\n")
+          .trim()
+          .replace(/\n+$/, "");
+        // Only add if there is some content.
+        if (content) {
+          (entry as any)[SECTION_MAP[headerKey]] = content;
+        }
+      }
+    });
   }
 
   return entry;

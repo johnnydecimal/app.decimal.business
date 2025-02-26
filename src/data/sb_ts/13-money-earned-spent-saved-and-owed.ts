@@ -6,8 +6,8 @@ const entry: CategoryEntry = {
   "description": "This category is all about keeping track of your finances, from planning and budgeting, to reconciling and submitting your annual returns.",
   "type": "category",
   "metadata": {
-    "createdDate": "2025-02-26T23:39:05.780Z",
-    "updatedDate": "2025-02-26T23:39:05.780Z"
+    "createdDate": "2025-02-26T23:51:12.420Z",
+    "updatedDate": "2025-02-26T23:51:12.420Z"
   },
   "extensions": {
     "smallBusiness": {

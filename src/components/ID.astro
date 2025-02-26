@@ -100,7 +100,6 @@ console.log("🚀 ~ ID.astro:73 ~ freeformSections:", freeformSections);
   </div>
 </Slice>
 
-<!-- #region Optional fields -------------------------------------------------->
 {
   idDescription ? (
     <Slice id="IDDescription" className="main-text">
@@ -112,6 +111,20 @@ console.log("🚀 ~ ID.astro:73 ~ freeformSections:", freeformSections);
   ) : null
 }
 
+{
+  freeformSections.length > 0 ? (
+    <Slice id="FreeformSections" className="main-text">
+      {freeformSections.map((section) => (
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">{section.header}</h3>
+          <div class="layout-right-item" set:html={section.content} />
+        </div>
+      ))}
+    </Slice>
+  ) : null
+}
+
+<!-- #region Optional fields -------------------------------------------------->
 {
   idExamples ? (
     <Slice id="IDExamples" className="main-text">
@@ -178,19 +191,6 @@ console.log("🚀 ~ ID.astro:73 ~ freeformSections:", freeformSections);
           </ol>
         </div>
       </div>
-    </Slice>
-  ) : null
-}
-
-{
-  freeformSections.length > 0 ? (
-    <Slice id="FreeformSections" className="main-text">
-      {freeformSections.map((section) => (
-        <div class="layout-grid-left-right">
-          <h3 class="layout-left-item">{section.header}</h3>
-          <div class="layout-right-item" set:html={section.content} />
-        </div>
-      ))}
     </Slice>
   ) : null
 }
