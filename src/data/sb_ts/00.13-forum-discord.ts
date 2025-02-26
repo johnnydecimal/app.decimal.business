@@ -9,19 +9,19 @@ const entry: IdEntry = {
   "isHeader": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-26T23:03:41.065Z",
-    "updatedDate": "2025-02-26T23:03:41.065Z"
+    "createdDate": "2025-02-26T23:29:24.394Z",
+    "updatedDate": "2025-02-26T23:29:24.394Z"
   },
   "extensions": {
     "smallBusiness": {
       "freeform": [
         {
           "header": "Forum",
-          "content": "Yeah **great** [right](/00.00)?"
+          "content": "The [Johnny.Decimal forum](https://forum.johnnydecimal.com) has dedicated categories for each of the small business categories.\n\nAnyone can browse, and you need to [sign up](https://forum.johnnydecimal.com/signup) to post."
         },
         {
           "header": "Discord",
-          "content": "Also great"
+          "content": "The setup is similar on Discord. Note that you **must [join the server](http://discord.gg/KYWzAJhmPv)** before the links will work."
         }
       ]
     }
