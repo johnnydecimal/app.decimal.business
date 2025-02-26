@@ -17,10 +17,6 @@ const allEntries = Object.entries(system)
     type: entry.type,
   }))
   .sort((a, b) => a.number.localeCompare(b.number));
-
-const xallEntries = Object.entries(system)
-  .filter(([, entry]) => entry.type === "id")
-  .filter(([, entry]) => loggedIn || entry.isPublic);
 ---
 
 <Slice id="SystemIndexHeader" className="main-text">

@@ -99,6 +99,14 @@ export interface AdHocEntry extends BaseEntry {
   // Every page is a unique Astro component. We don't define it in the object
 }
 
+export interface FreeformEntry extends BaseEntry {
+  extensions: {
+    smallBusiness: {
+      freeform: string;
+    };
+  };
+}
+
 // Union type for all entries
 export type FlattenedEntry =
   | SystemEntry
@@ -107,7 +115,8 @@ export type FlattenedEntry =
   | IdEntry
   | OpsEntry
   | FurtherReadingEntry
-  | AdHocEntry;
+  | AdHocEntry
+  | FreeformEntry;
 
 // Flattened data structure type
 export type FlattenedData = Record<string, FlattenedEntry>;

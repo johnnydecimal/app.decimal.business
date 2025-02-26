@@ -6,9 +6,6 @@
 import * as fs from "fs";
 import * as path from "path";
 
-const __filename = new URL(import.meta.url).pathname;
-const __dirname = path.dirname(__filename);
-
 // Specify the array of IDs
 const ids = [
   // "11.12-licences-permits-and-accreditations",

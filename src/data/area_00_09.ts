@@ -1,12 +1,12 @@
 import type { FlattenedData } from "./smallBusinessFlat";
 
 import sb_00_99 from "@data/sb_ts/00.99-test-standard-page";
-import id_00_12 from "@data/sb_ts/00.12-user-stories";
+// import id_00_12 from "@data/sb_ts/00.12-user-stories";
 import id_00_32 from "@data/sb_ts/00.32-privacy-policy";
-import fr_00_12_FR1 from "@data/sb_ts/00.12+FR1-jeff";
-import fr_00_12_FR2 from "@data/sb_ts/00.12+FR2-gardener";
-import fr_00_12_FR3 from "@data/sb_ts/00.12+FR3-accountant";
-import fr_00_12_FR4 from "@data/sb_ts/00.12+FR4-software";
+// import fr_00_12_FR1 from "@data/sb_ts/00.12+FR1-jeff";
+// import fr_00_12_FR2 from "@data/sb_ts/00.12+FR2-gardener";
+// import fr_00_12_FR3 from "@data/sb_ts/00.12+FR3-accountant";
+// import fr_00_12_FR4 from "@data/sb_ts/00.12+FR4-software";
 
 export const area_00_09: FlattenedData = {
   "00-09": {
