@@ -152,13 +152,15 @@ console.log("🚀 ~ childEntries:", childEntries);
         <h3 class="layout-left-item">■</h3>
         <div class="layout-right-item">
           <p>This ID is a header. It contains the following IDs.</p>
-          {childEntries.map((entry) => (
-            <p>
-              <a href={`/${entry.number}`}>
-                {entry.number} {entry.title}
-              </a>
-            </p>
-          ))}
+          <ol class="no-style">
+            {childEntries.map((entry) => (
+              <li>
+                <a href={`/${entry.number}`}>
+                  {entry.number} {entry.title}
+                </a>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </Slice>
