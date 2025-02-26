@@ -22,10 +22,10 @@ export const area_00_09: FlattenedData = {
   },
   "00": {
     number: "00",
-    title: "System information, help, support, and legal",
+    title: "System information & support",
     type: "category",
     description:
-      "This category contains information about the system, and tells you where to get help & support.",
+      "This category contains information about the system, tells you where to get help & support, and contains the legal stuff.",
     metadata: {
       createdDate: "2025-01-01",
       updatedDate: "2025-01-01",
@@ -164,21 +164,21 @@ export const area_00_09: FlattenedData = {
   },
   "00.22": {
     number: "00.22",
-    title: "A community based around standards",
     type: "adHoc",
-    isPublic: true,
+    title: "About those numbers",
     description:
-      "An open community sharing a common language makes us all more effective.",
+      "Yeah, there are a lot of numbers. Here's why they're so useful (and why you shouldn't be afraid of them).",
+    isPublic: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
   "00.23": {
     number: "00.23",
-    title: "About those numbers",
+    title: "A community with a shared language",
+    description:
+      "An open community sharing a common language makes us all more effective.",
     type: "adHoc",
     isPublic: true,
-    description:
-      "Yeah, there are a lot of numbers. Here's why they're so useful (and why you shouldn't be afraid of them).",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
@@ -210,6 +210,22 @@ export const area_00_09: FlattenedData = {
     title: "Privacy policy",
     type: "id",
     description: "Our privacy policy.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
+  },
+  "01": {
+    number: "01",
+    title: "Settings & downloads",
+    type: "category",
+    description: "Your user settings, and the download links for the system.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
+  },
+  "02": {
+    number: "02",
+    title: "Education & resources",
+    type: "category",
+    description: "Learn how to use the system.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },

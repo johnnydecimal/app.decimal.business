@@ -2,91 +2,62 @@
 import Slice from "@components/common/Slice.astro";
 import { marked } from "marked";
 
-const numbers = `
-There's a really simple system behind the numbers that makes it impossible to get lost.
+const open = `
+People boast of their closed 'private community' as if restricting access is a good thing. We disagree.
 
-All of your stuff -- your files, notes, emails -- lives inside an ID. The page you're reading is an ID: its number is \`00.93\`.
-
-The number tells you where this thing is. This one's in category \`00\`. Where's category \`00\`? It's in area \`00-09\`. You can see this structure in the links above.
-
-This structure is mirrored on your computer. Guess how you organise your files?
-
-<picture>
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="/img/00.93A-Finder-light-792x294.png"
-  />
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="/img/00.93A-Finder-dark-792x294.png"
-  />
-  <img
-    alt="A screenshot of the macOS finder showing a simple hierarchy. Folder '10-19 Company admin' contains folder '13 Money earned, spent, saved, & owed', which in turn contains folder '13.34 Payroll'."
-    id="finder"
-    src="/img/00.93A-Finder-light-792x294.png"
-    width="396"
-    height="147"
-  />
-</picture>
-
-This makes it really hard to lose stuff.
-
-You don't even have to create these folders yourself. You'll download the complete structure from this site.
+Our community is open. We believe that we can become more efficient if we work together. You're welcome to join us and ask for help even if you're not a member.
 `;
 
-const outloud = `
-These numbers give you a superpower: now you can tell anyone where anything is, instantly.
+const language = `
+One problem with existing communities is that they lack a shared language. This is the same problem you face with your file system: there are any number of ways to refer to the same concept. Confusion results from the ambiguity.
 
-_'Hey Susan, where's our payroll stuff?'_  
-**— Thirteen-thirty-four**.
+Our system defines a language. When we're talking about payroll, that's _always_ [13.34 Payroll](/13.34).<sup>1</sup> So now you can ask for help in a really specific place.
 
-Think how convenient this is when you're on a video call. No more trying to explain to someone which one of your 'finance' folders they have to try to find.
+We have two communities, [Discord and the forum](/00.13). Both will have dedicated small business sections whose structure mirrors the system.
 
-Or you could stick a number to the side of that piece of machinery that always breaks down. Now anybody immediately knows where to look for the service contract.
+So you won't find yourself asking for payroll help in a channel full of people talking about their tax returns. We'll keep everything in the right channel.  **Jump in, get targeted help, and get back to work**.
+
+> 1. If you searched for \`payroll\` on the previous page, do you now find yourself remembering the number? :-) 
 `;
 
-const noMaths = `
-In case it's not obvious: there's no maths here. You can put the slide rule away.
+const feedback = `
+A problem with communities is that knowledge can be really hard to find. If you didn't see it scroll past the first time, you're probably _never_ going to see it.
 
-The numbers are just a convenient reference. So it doesn't matter if you're '_not a numbers person_'. There's nothing to be afraid of.
-`;
+This is why I built this system as a website. Lucy and I will be constantly monitoring our communities, and feeding information that should be persistent back in to the system.
 
-const categories = `
-A common objection to a system like this is that having to decide exactly where a thing should go is just _too hard_. Or that we won't all agree on the structure, so it's a waste of time.
-
-But what's more difficult? Picking the most suitable from a list of pre-defined locations, or trying to find that file in your current mess?
-
-The fact is there's no perfect solution. But with a combination of tools -- good documentation, good search, your own index for edge-cases -- we can make it _dramatically easier_ for you to find your stuff.
+If it's useful, it'll become permanent. You shouldn't have to worry about searching a forum for information. We'll do that for you.
 `;
 
 const subscribe = `
-Get everything, forever, with [Platinum](https://store.johnnydecimal.com/cart/43063017111688:1). Or go [Gold](https://store.johnnydecimal.com/cart/43069054648456:1) for a year. 
+A [Platinum](https://store.johnnydecimal.com/cart/43063017111688:1) membership is for life and is only [US$300](https://store.johnnydecimal.com/cart/43063017111688:1) while we are in pre-launch. [Gold is US$150](https://store.johnnydecimal.com/cart/43069054648456:1) for one year.
+
+Prices will increase when the system is launched.
 `;
 
-const numbersHtml = await marked.parse(numbers);
-const outloudHtml = await marked.parse(outloud);
-const noMathsHtml = await marked.parse(noMaths);
+const openHtml = await marked.parse(open);
+const languageHtml = await marked.parse(language);
+const feedbackHtml = await marked.parse(feedback);
 const subscribeHtml = await marked.parse(subscribe);
 ---
 
 <Slice className="main-text">
   <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">A simple hierarchy</h3>
-    <div class="layout-right-item" set:html={numbersHtml} />
+    <h3 class="layout-left-item">Reference point</h3>
+    <div class="layout-right-item" set:html={languageHtml} />
   </div>
 </Slice>
 
 <Slice className="main-text">
   <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">Read them aloud</h3>
-    <div class="layout-right-item" set:html={outloudHtml} />
+    <h3 class="layout-left-item">Feedback loop</h3>
+    <div class="layout-right-item" set:html={feedbackHtml} />
   </div>
 </Slice>
 
 <Slice className="main-text">
   <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">No maths</h3>
-    <div class="layout-right-item" set:html={noMathsHtml} />
+    <h3 class="layout-left-item">Open for business</h3>
+    <div class="layout-right-item" set:html={openHtml} />
   </div>
 </Slice>
 
@@ -99,11 +70,4 @@ const subscribeHtml = await marked.parse(subscribe);
 
 <style lang="scss">
   @use "@styles/common" as *;
-
-  :global(img#finder) {
-    border: 1px solid var(--border-accent);
-    height: auto;
-    max-width: 95%;
-    object-fit: cover;
-  }
 </style>

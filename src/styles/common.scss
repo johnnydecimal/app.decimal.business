@@ -150,6 +150,11 @@
       :global(ol:first-child) {
         margin-top: 0;
       }
+      // ...except if the damned thing is in a blockquote
+      // TODO obviously
+      :global(blockquote > ol:first-child) {
+        margin-top: 1em;
+      }
     }
   }
   // But reset these margins if we're in a blockquote
