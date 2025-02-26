@@ -24,6 +24,7 @@ interface BaseEntry {
   isPublic?: boolean;
   isHeader?: boolean; // Really only applies to IDs but KISS
   isHidden?: boolean; // For test pages, etc.
+  noLabel?: boolean; // Don't show the 'overview' label
   metadata: Metadata;
   extensions?: {};
 }

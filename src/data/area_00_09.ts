@@ -2,6 +2,7 @@ import type { FlattenedData } from "./smallBusinessFlat";
 
 import sb_00_99 from "@data/sb_ts/00.99-test-standard-page";
 import id_00_12 from "@data/sb_ts/00.12-user-stories";
+import id_00_32 from "@data/sb_ts/00.32-privacy-policy";
 import fr_00_12_FR1 from "@data/sb_ts/00.12+FR1-jeff";
 import fr_00_12_FR2 from "@data/sb_ts/00.12+FR2-gardener";
 import fr_00_12_FR3 from "@data/sb_ts/00.12+FR3-accountant";
@@ -51,6 +52,7 @@ export const area_00_09: FlattenedData = {
     type: "id",
     description: "Where to get help & support.",
     isHeader: true,
+    isPublic: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
@@ -60,6 +62,7 @@ export const area_00_09: FlattenedData = {
     type: "id",
     description:
       "Here's how to contact us. Get in touch if you need technical or billing support, or for any other reason.",
+    isPublic: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
@@ -69,6 +72,7 @@ export const area_00_09: FlattenedData = {
     type: "id",
     description:
       "How to get everything set up and running. A step-by-step guide. Start here!",
+    isPublic: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
@@ -78,6 +82,7 @@ export const area_00_09: FlattenedData = {
     type: "id",
     description:
       "If you have general questions about the system, your business, or pretty much anything else, the community is here to support you. Find the links here.",
+    isPublic: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
@@ -149,6 +154,7 @@ export const area_00_09: FlattenedData = {
     description:
       "These pages describe the system to new visitors. Start here if you've no idea what you're looking at.",
     isHeader: true,
+    isPublic: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
@@ -188,6 +194,7 @@ export const area_00_09: FlattenedData = {
     type: "id",
     description: "Important legal stuff.",
     isHeader: true,
+    isPublic: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
@@ -197,6 +204,7 @@ export const area_00_09: FlattenedData = {
     type: "id",
     description:
       "We are not your lawyer, accountant, or other professional service provider.",
+    isPublic: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: {
       smallBusiness: {
@@ -206,12 +214,7 @@ export const area_00_09: FlattenedData = {
     },
   },
   "00.32": {
-    number: "00.32",
-    title: "Privacy policy",
-    type: "id",
-    description: "Our privacy policy.",
-    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: { smallBusiness: {} },
+    ...id_00_32,
   },
   "01": {
     number: "01",
