@@ -108,25 +108,10 @@ export const area_00_09: FlattenedData = {
   // "00.12+FR4": {
   //   ...fr_00_12_FR4,
   // },
-  // "00.21": {
-  //   number: "00.21",
-  //   title: "User settings",
-  //   type: "adHoc",
-  //   description: "This section contains your user settings.",
-  //   metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-  // },
   // "05": {
   //   number: "05",
   //   title: "Templates & downloads",
   //   type: "category",
-  //   description: "Get your file system folders & JDex files here.",
-  //   metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-  //   extensions: { smallBusiness: {} },
-  // },
-  // "05.11": {
-  //   number: "05.11",
-  //   title: "System downloads",
-  //   type: "adHoc",
   //   description: "Get your file system folders & JDex files here.",
   //   metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
   //   extensions: { smallBusiness: {} },
@@ -223,6 +208,22 @@ export const area_00_09: FlattenedData = {
     description: "Your user settings, and the download links for the system.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
+  },
+  "01.01": {
+    number: "01.01",
+    title: "User settings",
+    type: "adHoc",
+    isPublic: true,
+    description: "This section contains your user settings.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+  },
+  "01.02": {
+    number: "01.02",
+    title: "System downloads",
+    type: "adHoc",
+    isPublic: true,
+    description: "Get your file system folders & JDex files here.",
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
   },
   "02": {
     number: "02",

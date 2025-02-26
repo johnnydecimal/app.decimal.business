@@ -29,7 +29,9 @@ import AdHoc_00_12 from "@components/AdHoc/AdHoc_00_12.astro";
 import AdHoc_00_21 from "@components/AdHoc/AdHoc_00_21.astro";
 import AdHoc_00_22 from "@components/AdHoc/AdHoc_00_22.astro";
 import AdHoc_00_23 from "@components/AdHoc/AdHoc_00_23.astro";
-import AdHoc_05_11 from "@components/AdHoc/AdHoc_05_11.astro";
+import AdHoc_01_01 from "@components/AdHoc/AdHoc-01_01-user_settings.astro";
+import AdHoc_01_02 from "@components/AdHoc/AdHoc-01_02-downloads.astro";
+
 /* --------------------------- This item's details -------------------------- */
 const idTitle = system[id]?.title;
 const idEntry = system[id] as AdHocEntry;
@@ -101,6 +103,8 @@ const parentSTitle = parentSEntry.title;
 {id === "00.21" ? <AdHoc_00_21 /> : null}
 {id === "00.22" ? <AdHoc_00_22 /> : null}
 {id === "00.23" ? <AdHoc_00_23 /> : null}
+{id === "01.01" ? <AdHoc_01_01 /> : null}
+{id === "01.02" ? <AdHoc_01_02 /> : null}
 
 <!-- TODO fix this nonsense -->
 <div id="EndOfIDsBorder"></div>

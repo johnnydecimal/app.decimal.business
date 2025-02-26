@@ -5,12 +5,12 @@ const entry: IdEntry = {
   "title": "Privacy policy",
   "description": "Our privacy policy.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "noLabel": true,
   "metadata": {
-    "createdDate": "2025-02-26T01:29:29.242Z",
-    "updatedDate": "2025-02-26T01:29:29.242Z"
+    "createdDate": "2025-02-26T01:32:39.718Z",
+    "updatedDate": "2025-02-26T01:32:39.718Z"
   },
   "extensions": {
     "smallBusiness": {

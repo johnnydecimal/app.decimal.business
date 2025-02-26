@@ -70,7 +70,7 @@ const { title } = Astro.props;
       mermaid.initialize({ startOnLoad: true });
     </script>
   </head>
-  <body>
+  <body id={`body-${title?.replace(".", "_")}`}>
     {
       /* In this new world, we're not using Clerk's components at this level.
          We handle all auth stuff down at the component level. */

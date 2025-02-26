@@ -1,26 +1,38 @@
 ---
-// 00.21 User settings
+/**
+ * 01.01 User settings
+ *
+ * Remember that we have no <SignedIn> wrapper protecting this. So you might
+ * not be signed in, and if you're not careful this causes Clerk to error
+ * 'A valid resource ID is required.'
+ */
 import { createClerkClient } from "@clerk/astro/server";
 
 import Slice from "@components/common/Slice.astro";
 
 const { userId } = Astro.locals.auth();
+
 const clerkClient = createClerkClient({
   secretKey: import.meta.env.CLERK_SECRET_KEY,
 });
-const user = await clerkClient.users.getUser(userId!);
-// const firstRunComplete = user.publicMetadata.firstRunComplete || false;
-const useEmoji = user.publicMetadata.useEmoji || false;
-const jdexApp = user.publicMetadata.jdexApp || "none";
-const obsidianVault = user.publicMetadata.obsidianVault;
 
-// If this is not set, we default it to true and push it back to Clerk
-let useBlackSquare = user.publicMetadata.useBlackSquare;
-if (useBlackSquare === undefined) {
-  await clerkClient.users.updateUserMetadata(userId!, {
-    publicMetadata: { useBlackSquare: true },
-  });
-  useBlackSquare = true;
+const user = userId && (await clerkClient.users.getUser(userId));
+
+let useEmoji, jdexApp, obsidianVault, useBlackSquare;
+if (user) {
+  useEmoji = user.publicMetadata.useEmoji || false;
+  jdexApp = user.publicMetadata.jdexApp || "none";
+  obsidianVault = user.publicMetadata.obsidianVault;
+
+  // If this is not set, we default it to true and push it back to Clerk
+  // TODO why? we don't do that with useEmoji et. al.
+  useBlackSquare = user.publicMetadata.useBlackSquare;
+  if (useBlackSquare === undefined) {
+    await clerkClient.users.updateUserMetadata(userId!, {
+      publicMetadata: { useBlackSquare: true },
+    });
+    useBlackSquare = true;
+  }
 }
 ---
 

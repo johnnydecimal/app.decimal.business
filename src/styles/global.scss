@@ -164,3 +164,15 @@ html {
 }
 
 // #endregion
+
+// janky one-offs that you should fix
+#body-index_html .welcome-border {
+  border: 2px solid var(--border-strong);
+  padding: 1ch;
+  margin-bottom: 2rem;
+}
+
+// The 'note that this site is under construction' block in each ChildinParent
+#HiddenNotice .layout-right-item > blockquote:first-child {
+  margin: 1rem 0;
+}
