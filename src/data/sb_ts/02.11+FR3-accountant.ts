@@ -1,13 +1,13 @@
-// Auto-generated from 00.12+FR3-accountant.md
+// Auto-generated from 02.11+FR3-accountant.md
 import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
 const entry: FurtherReadingEntry = {
-  "number": "00.12+FR3",
+  "number": "02.11+FR3",
   "title": "My accountant delivers an intangible service",
   "type": "furtherReading",
   "isPublic": true,
   "metadata": {
-    "createdDate": "2025-02-26T23:29:24.687Z",
-    "updatedDate": "2025-02-26T23:29:24.687Z"
+    "createdDate": "2025-02-26T23:39:06.065Z",
+    "updatedDate": "2025-02-26T23:39:06.065Z"
   },
   "extensions": {
     "furtherReading": {

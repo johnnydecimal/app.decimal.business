@@ -1,13 +1,13 @@
 import type { FlattenedData } from "./smallBusinessFlat";
 
 import sb_00_99 from "@data/sb_ts/00.99-test-standard-page";
-// import id_00_12 from "@data/sb_ts/00.12-user-stories";
 import id_00_13 from "@data/sb_ts/00.13-forum-discord";
 import id_00_32 from "@data/sb_ts/00.32-privacy-policy";
-// import fr_00_12_FR1 from "@data/sb_ts/00.12+FR1-jeff";
-// import fr_00_12_FR2 from "@data/sb_ts/00.12+FR2-gardener";
-// import fr_00_12_FR3 from "@data/sb_ts/00.12+FR3-accountant";
-// import fr_00_12_FR4 from "@data/sb_ts/00.12+FR4-software";
+import id_02_11 from "@data/sb_ts/02.11-user-stories";
+import fr_02_11_FR1 from "@data/sb_ts/02.11+FR1-jeff";
+import fr_02_11_FR2 from "@data/sb_ts/02.11+FR2-gardener";
+import fr_02_11_FR3 from "@data/sb_ts/02.11+FR3-accountant";
+import fr_02_11_FR4 from "@data/sb_ts/02.11+FR4-software";
 
 export const area_00_09: FlattenedData = {
   "00-09": {
@@ -240,6 +240,31 @@ export const area_00_09: FlattenedData = {
     description: "Learn how to use the system.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
+  },
+  "02.10": {
+    number: "02.10",
+    title: "Education",
+    type: "id",
+    description: "Learn how to use the system.",
+    isHeader: true,
+    isPublic: true,
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
+  },
+  "02.11": {
+    ...id_02_11,
+  },
+  "02.11+FR1": {
+    ...fr_02_11_FR1,
+  },
+  "02.11+FR2": {
+    ...fr_02_11_FR2,
+  },
+  "02.11+FR3": {
+    ...fr_02_11_FR3,
+  },
+  "02.11+FR4": {
+    ...fr_02_11_FR4,
   },
   "00.99": {
     // The test page with every element. Needs to be hidden.

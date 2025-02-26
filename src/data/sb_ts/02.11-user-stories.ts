@@ -1,7 +1,7 @@
-// Auto-generated from 00.12-user-stories.md
+// Auto-generated from 02.11-user-stories.md
 import type { IdEntry } from "@data/smallBusinessFlat";
 const entry: IdEntry = {
-  "number": "00.12",
+  "number": "02.11",
   "title": "User stories",
   "description": "This page lists four 'user stories'. We've imagined the _types_ of business that might exist, and explained how each of them might use the various categories here.",
   "type": "id",
@@ -9,8 +9,8 @@ const entry: IdEntry = {
   "isHeader": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-26T23:29:24.391Z",
-    "updatedDate": "2025-02-26T23:29:24.392Z"
+    "createdDate": "2025-02-26T23:39:05.756Z",
+    "updatedDate": "2025-02-26T23:39:05.756Z"
   },
   "extensions": {
     "smallBusiness": {

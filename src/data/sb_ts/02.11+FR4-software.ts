@@ -1,13 +1,13 @@
-// Auto-generated from 00.12+FR4-software.md
+// Auto-generated from 02.11+FR4-software.md
 import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
 const entry: FurtherReadingEntry = {
-  "number": "00.12+FR4",
+  "number": "02.11+FR4",
   "title": "A software developer produces an intangible thing",
   "type": "furtherReading",
   "isPublic": true,
   "metadata": {
-    "createdDate": "2025-02-26T23:29:24.687Z",
-    "updatedDate": "2025-02-26T23:29:24.687Z"
+    "createdDate": "2025-02-26T23:39:06.066Z",
+    "updatedDate": "2025-02-26T23:39:06.066Z"
   },
   "extensions": {
     "furtherReading": {

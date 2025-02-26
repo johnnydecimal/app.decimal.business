@@ -1,13 +1,13 @@
-// Auto-generated from 00.12+FR2-gardener.md
+// Auto-generated from 02.11+FR2-gardener.md
 import type { FurtherReadingEntry } from "@data/smallBusinessFlat";
 const entry: FurtherReadingEntry = {
-  "number": "00.12+FR2",
+  "number": "02.11+FR2",
   "title": "A gardener delivers a tangible service",
   "type": "furtherReading",
   "isPublic": true,
   "metadata": {
-    "createdDate": "2025-02-26T23:29:24.686Z",
-    "updatedDate": "2025-02-26T23:29:24.686Z"
+    "createdDate": "2025-02-26T23:39:06.064Z",
+    "updatedDate": "2025-02-26T23:39:06.064Z"
   },
   "extensions": {
     "furtherReading": {
