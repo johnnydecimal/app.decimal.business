@@ -27,6 +27,7 @@ import FurtherReadingLinks from "@components/common/FurtherReadingLinks.astro";
 // #region Entry: core details ------------------------------------------------
 const idEntry = system[id] as IdEntry;
 const isPublic = idEntry.isPublic || false;
+const isHeader = idEntry.isHeader || false;
 
 // Get the small business details
 const sb = idEntry.extensions.smallBusiness;
@@ -54,6 +55,18 @@ if (userId) {
     sb.exceptions && (await parseMd(sb.exceptions, true, !!isPublic));
   idAlsoSee = sb.alsoSee && (await parseMd(sb.alsoSee, true, !!isPublic));
 }
+
+// If this entry is a header, get its children
+let childEntries;
+if (isHeader) {
+  childEntries = Object.values(system).filter(
+    (entry) =>
+      entry.type === "id" &&
+      entry.number.startsWith(idEntry.number.slice(0, 4)) &&
+      entry.number !== idEntry.number
+  ) as IdEntry[];
+}
+console.log("🚀 ~ childEntries:", childEntries);
 ---
 
 <SystemBreadcrumb />
@@ -131,6 +144,26 @@ if (userId) {
 <FurtherReadingLinks number={id} />
 
 <!-- #endregion -->
+
+{
+  childEntries && childEntries.length > 0 ? (
+    <Slice id="ChildEntries" className="main-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item">■</h3>
+        <div class="layout-right-item">
+          <p>This ID is a header. It contains the following IDs.</p>
+          {childEntries.map((entry) => (
+            <p>
+              <a href={`/${entry.number}`}>
+                {entry.number} {entry.title}
+              </a>
+            </p>
+          ))}
+        </div>
+      </div>
+    </Slice>
+  ) : null
+}
 
 <ObsidianVaultLink id={id} idTitle={idTitle} />
 
