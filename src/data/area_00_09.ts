@@ -224,6 +224,7 @@ export const area_00_09: FlattenedData = {
     isPublic: true,
     description: "This ID contains your user settings.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
   },
   "01.03": {
     number: "01.03",
@@ -232,6 +233,7 @@ export const area_00_09: FlattenedData = {
     isPublic: true,
     description: "Get your file system folders & JDex files here.",
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
   },
   "02": {
     number: "02",
