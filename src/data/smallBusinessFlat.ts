@@ -98,6 +98,9 @@ export interface FurtherReadingEntry {
 export interface AdHocEntry extends BaseEntry {
   type: "adHoc";
   // Every page is a unique Astro component. We don't define it in the object
+  extensions: {
+    smallBusiness: SmallBusinessExtension;
+  };
 }
 
 export interface FreeformEntry extends BaseEntry {

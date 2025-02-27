@@ -2,21 +2,14 @@
 import { marked } from "marked";
 import Slice from "@components/common/Slice.astro";
 
-const overview = `
-This system has been designed to accommodate everything that a business _might possibly need_.
+import entry from "@data/sb_ts/02.11-user-stories";
+if (!entry.extensions?.smallBusiness?.freeform) {
+  throw new Error("No freeform content found for 02.11-user-stories");
+}
 
-But the converse is not true: you don't have to use _everything in the system_. We have an entire category dedicated to [shipping & fulfilment](/35) but if you're a hairdresser, that's not something you ever do. And that's okay.
-
-This is intended to encourage you to think about your own business. You probably _shouldn't_ just copy one of these examples. If you need help, we're always available. Just ask. Maybe we can tell your story?
-`;
-
-const quadrant = `
-We've divided all businesses into four quadrants.
-
-On one extreme you **produce** a thing, and on the other you **deliver** a service. And the thing you produce or deliver might be **tangible** or **intangible**.
-
-We can plot this on a quadrant chart.
-`;
+const overview = entry.extensions.smallBusiness.freeform[0].content;
+console.log("🚀 ~ AdHoc-02_11-user_stories.astro:11 ~ overview:", overview);
+const quadrant = entry.extensions.smallBusiness.freeform[1].content;
 
 const storyLinks = `
 1. [Jeff runs Lovett Sundries. They manufacture their own range of body-care products, and sell them in-store and online.](/00.12+FR1)

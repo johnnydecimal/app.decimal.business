@@ -1,0 +1,27 @@
+---
+import Slice from "@components/common/Slice.astro";
+---
+
+<Slice id="quadrant-chart">
+  <picture>
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="/img/00.12A-Quadrant-light-1296x1294.png"
+    />
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="/img/00.12A-Quadrant-dark-1296x1294.png"
+    />
+    <img
+      alt="A quadrant chart showing the four quadrants of a business."
+      id="quadrant-img"
+      src="/img/00.12A-Quadrant-light-1296x1294.png"
+      width="648"
+      height="647"
+    />
+  </picture>
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+</style>
