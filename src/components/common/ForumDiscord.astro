@@ -24,14 +24,20 @@ const discordLinks: Record<string, string> = {
 
 const forumLink = forumLinks[entry.number.slice(0, 2)];
 const discordLink = discordLinks[entry.number.slice(0, 2)];
+const forumFallback =
+  "https://forum.johnnydecimal.com/c/small-business/00-water-cooler/22";
+const discordFallback =
+  "https://discord.com/channels/822215537589354566/1292946370759495821";
 ---
 
 <Slice id="ForumDiscord" className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">Community</h3>
     <div class="layout-right-item">
-      <a href={discordLink} target="_blank">Discord</a> •
-      <a href={forumLink} target="_blank">Forum</a>
+      <a href={discordLink ? discordLink : discordFallback} target="_blank"
+        >Discord</a
+      > •
+      <a href={forumLink ? forumLink : forumFallback} target="_blank">Forum</a>
     </div>
   </div>
 </Slice>
