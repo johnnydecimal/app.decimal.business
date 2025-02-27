@@ -6,8 +6,8 @@ const entry: FurtherReadingEntry = {
   "type": "furtherReading",
   "isPublic": false,
   "metadata": {
-    "createdDate": "2025-02-27T00:11:08.662Z",
-    "updatedDate": "2025-02-27T00:11:08.662Z"
+    "createdDate": "2025-02-27T00:46:54.457Z",
+    "updatedDate": "2025-02-27T00:46:54.457Z"
   },
   "extensions": {
     "furtherReading": {

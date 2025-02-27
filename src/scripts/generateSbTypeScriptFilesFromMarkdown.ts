@@ -205,7 +205,7 @@ async function generateTsFiles() {
           number: parsed.number,
           title: parsed.title,
           description: parsed.description || "",
-          type: "id",
+          type: frontmatter.type || "id",
           isPublic: frontmatter.isPublic || false,
           isHeader: frontmatter.isHeader || false,
           noLabel: frontmatter.noLabel || false,
@@ -216,7 +216,12 @@ async function generateTsFiles() {
           },
           extensions: { smallBusiness: {} },
         };
-        entryType = "IdEntry";
+        // HACK I mean much of this file is a disgrace but c'mon
+        if (frontmatter.type === "adHoc") {
+          entryType = "AdHocEntry";
+        } else {
+          entryType = "IdEntry";
+        }
       }
 
       const extKeys: (keyof SmallBusinessEntry)[] = [

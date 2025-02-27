@@ -1,4 +1,13 @@
 ---
+/**
+ * This is AdHoc because of the page-spanning quadrant chart.
+ *
+ * If you built something that rendered page-spanning images, you might be
+ * able to simplify this.
+ *
+ * Also note that it imports text values from the 02.11.ts file! Wowza.
+ */
+
 import { marked } from "marked";
 import Slice from "@components/common/Slice.astro";
 
@@ -8,7 +17,6 @@ if (!entry.extensions?.smallBusiness?.freeform) {
 }
 
 const overview = entry.extensions.smallBusiness.freeform[0].content;
-console.log("🚀 ~ AdHoc-02_11-user_stories.astro:11 ~ overview:", overview);
 const quadrant = entry.extensions.smallBusiness.freeform[1].content;
 
 const storyLinks = `
