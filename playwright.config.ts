@@ -21,6 +21,9 @@ export default defineConfig({
       name: "Desktop Firefox",
       use: {
         ...devices["Desktop Firefox"],
+        launchOptions: {
+          firefoxUserPrefs: { "layout.css.visited_links_enabled": false },
+        },
       },
     },
     {
