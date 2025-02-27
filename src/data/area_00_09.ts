@@ -1,8 +1,9 @@
 import type { FlattenedData } from "./smallBusinessFlat";
 
-import sb_00_99 from "@data/sb_ts/00.99-test-standard-page";
 import id_00_13 from "@data/sb_ts/00.13-forum-discord";
+import id_00_21 from "@data/sb_ts/00.21-welcome";
 import id_00_32 from "@data/sb_ts/00.32-privacy-policy";
+import sb_00_99 from "@data/sb_ts/00.99-test-standard-page";
 import id_02_11 from "@data/sb_ts/02.11-user-stories";
 import fr_02_11_FR1 from "@data/sb_ts/02.11+FR1-jeff";
 import fr_02_11_FR2 from "@data/sb_ts/02.11+FR2-gardener";
@@ -138,14 +139,7 @@ export const area_00_09: FlattenedData = {
     extensions: { smallBusiness: {} },
   },
   "00.21": {
-    number: "00.21",
-    title: "What is the small business system?",
-    type: "adHoc",
-    isPublic: true,
-    description:
-      "Why does this site exist, what does it give you, and what does it cost?",
-    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: { smallBusiness: {} },
+    ...id_00_21,
   },
   "00.22": {
     number: "00.22",

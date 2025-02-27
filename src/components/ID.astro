@@ -67,22 +67,6 @@ if (isHeader) {
       entry.number !== idEntry.number
   ) as IdEntry[];
 }
-
-// Process freeform content if it exists
-// FIXME extract to a function the moment you need this elsewhere
-// let freeformSections: Array<{ header: string; content: string }> = [];
-// if (sb.freeform) {
-//   freeformSections = await Promise.all(
-//     sb.freeform.map(async (section) => {
-//       console.log("🚀 ~ ID.astro:76 ~ sb.freeform.map ~ section:", section);
-//       return {
-//         header: section.header,
-//         content: await parseMd(section.content, true, !!userId || !!isPublic),
-//       };
-//     })
-//   );
-// }
-// console.log("🚀 ~ ID.astro:73 ~ freeformSections:", freeformSections);
 ---
 
 <SystemBreadcrumb />
