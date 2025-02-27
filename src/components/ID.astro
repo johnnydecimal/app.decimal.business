@@ -23,6 +23,7 @@ import Slice from "@components/common/Slice.astro";
 import ObsidianVaultLink from "@components/common/ObsidianVaultLink.astro";
 import FurtherReadingLinks from "@components/common/FurtherReadingLinks.astro";
 import FreeformSlice from "@components/common/FreeformSlice.astro";
+import ForumDiscord from "@components/common/ForumDiscord.astro";
 // #endregion
 
 // #region Entry: core details ------------------------------------------------
@@ -173,6 +174,12 @@ if (isHeader) {
   ) : null
 }
 
+<Slice id="EndOfContentBorder" className="main-text">
+  <div class="layout-grid-left-right"></div>
+</Slice>
+
+<ForumDiscord entry={idEntry} />
+
 <ObsidianVaultLink id={id} idTitle={idTitle} />
 
 <div id="EndOfIDsBorder"></div>
@@ -182,6 +189,9 @@ if (isHeader) {
 
   :global(#EndOfIDsBorder) {
     border-top: 1px solid var(--border-strong);
+  }
+  :global(#EndOfContentBorder .layout-grid-left-right) {
+    border-top: 1px solid light-dark(#ccc, #333);
   }
 
   :global(#FurtherReadings),

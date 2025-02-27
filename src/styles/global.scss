@@ -184,3 +184,11 @@ html {
 #HiddenNotice .layout-right-item > blockquote:first-child {
   margin: 1rem 0;
 }
+
+// Bring the community links off the border
+#ForumDiscord {
+  .layout-left-item,
+  .layout-right-item {
+    padding-top: 1rem;
+  }
+}

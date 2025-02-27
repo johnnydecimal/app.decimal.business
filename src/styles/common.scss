@@ -221,7 +221,7 @@
     }
   }
   .header-item:not(:first-of-type) {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid light-dark(#ccc, #333);
     .layout-left-item {
       padding-top: 1rem;
     }
