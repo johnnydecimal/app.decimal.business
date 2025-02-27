@@ -10,9 +10,6 @@ const date = `${year}-${month}-${day}`;
 const { userId } = Astro.locals.auth();
 
 let environment = import.meta.env.DEV ? "dev" : "prod";
-if (Astro.url.searchParams.get("env") === "test") {
-  environment = "test";
-}
 ---
 
 <footer>
@@ -32,12 +29,12 @@ if (Astro.url.searchParams.get("env") === "test") {
           <!-- <span>System status : normal</span><br /> -->
           <span
             >Version&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {
-              environment !== "test" ? "0.1.0" : "x.y.z"
+              environment !== "dev" ? "0.1.0" : "x.y.z"
             }</span
           ><br />
           <span
             >Updated&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: {
-              environment !== "test" ? date : "yyyy-mm-dd"
+              environment !== "dev" ? date : "yyyy-mm-dd"
             }</span
           >
         </p>
