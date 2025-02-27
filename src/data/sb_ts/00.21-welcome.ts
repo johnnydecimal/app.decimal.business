@@ -5,12 +5,12 @@ const entry: IdEntry = {
   "title": "What is the small business system?",
   "description": "Why does this site exist, what does it give you, and what does it cost?",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-27T01:42:28.894Z",
-    "updatedDate": "2025-02-27T01:42:28.894Z"
+    "createdDate": "2025-02-27T06:48:19.087Z",
+    "updatedDate": "2025-02-27T06:48:19.087Z"
   },
   "extensions": {
     "smallBusiness": {

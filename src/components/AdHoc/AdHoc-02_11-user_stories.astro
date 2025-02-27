@@ -11,13 +11,13 @@
 import { marked } from "marked";
 import Slice from "@components/common/Slice.astro";
 
-import entry from "@data/sb_ts/02.11-user-stories";
-if (!entry.extensions?.smallBusiness?.freeform) {
+import id_02_11 from "@data/sb_ts/02.11-user-stories";
+if (!id_02_11.extensions?.smallBusiness?.freeform) {
   throw new Error("No freeform content found for 02.11-user-stories");
 }
 
-const overview = entry.extensions.smallBusiness.freeform[0].content;
-const quadrant = entry.extensions.smallBusiness.freeform[1].content;
+const overview = id_02_11.extensions.smallBusiness.freeform[0].content;
+const quadrant = id_02_11.extensions.smallBusiness.freeform[1].content;
 
 const storyLinks = `
 1. [Jeff runs Lovett Sundries. They manufacture their own range of body-care products, and sell them in-store and online.](/00.12+FR1)

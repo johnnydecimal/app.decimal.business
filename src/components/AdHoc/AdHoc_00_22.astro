@@ -2,58 +2,15 @@
 import Slice from "@components/common/Slice.astro";
 import { marked } from "marked";
 
-const numbers = `
-There's a really simple system behind the numbers that makes it impossible to get lost.
+import id_00_22 from "@data/sb_ts/00.22-about-numbers";
+if (!id_00_22.extensions?.smallBusiness?.freeform) {
+  throw new Error("No freeform content found for 00.22-about-numbers");
+}
 
-All of your stuff -- your files, notes, emails -- lives inside an ID. The page you're reading is an ID: its number is \`00.93\`.
-
-The number tells you where this thing is. This one's in category \`00\`. Where's category \`00\`? It's in area \`00-09\`. You can see this structure in the links above.
-
-This structure is mirrored on your computer. Guess how you organise your files?
-
-<picture>
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="/img/00.93A-Finder-light-792x294.png"
-  />
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="/img/00.93A-Finder-dark-792x294.png"
-  />
-  <img
-    alt="A screenshot of the macOS finder showing a simple hierarchy. Folder '10-19 Company admin' contains folder '13 Money earned, spent, saved, & owed', which in turn contains folder '13.34 Payroll'."
-    id="finder"
-    src="/img/00.93A-Finder-light-792x294.png"
-    width="396"
-    height="147"
-  />
-</picture>
-
-This makes it really hard to lose stuff.
-
-You don't even have to create these folders yourself. You'll download the complete structure from this site.
-`;
-
-const outloud = `
-These numbers give you a superpower: now you can tell anyone where anything is, instantly.
-
-_'Hey Susan, where's our payroll stuff?'_  
-**— Thirteen-thirty-four**.
-
-Think how convenient this is when you're on a video call. No more trying to explain to someone which one of your 'finance' folders they have to try to find.
-
-Or you could stick a number to the side of that piece of machinery that always breaks down. Now anybody immediately knows where to look for the service contract.
-`;
-
-const noMaths = `
-In case it's not obvious: there's no maths here. You can put the slide rule away.
-
-The numbers are just a convenient reference. So it doesn't matter if you're '_not a numbers person_'. There's nothing to be afraid of.
-`;
-
-const next = `
-Next, learn about [our plans for the community](/00.23).
-`;
+const numbers = id_00_22.extensions.smallBusiness.freeform[0].content;
+const outloud = id_00_22.extensions.smallBusiness.freeform[1].content;
+const noMaths = id_00_22.extensions.smallBusiness.freeform[2].content;
+const next = id_00_22.extensions.smallBusiness.freeform[3].content;
 
 const numbersHtml = await marked.parse(numbers);
 const outloudHtml = await marked.parse(outloud);
