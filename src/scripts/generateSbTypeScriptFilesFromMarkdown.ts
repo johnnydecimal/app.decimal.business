@@ -71,8 +71,35 @@ function parseMarkdown(markdown: string, frontmatter: any): SmallBusinessEntry {
     // Process freeform content instead of standard headers
     entry.freeform = [];
 
+    // Always process the Description header for both modes
+    const descriptionIdx = headerIndices["description"];
+    if (descriptionIdx !== undefined) {
+      // Find the end of the description section
+      const subsequentIndices = Object.values(headerIndices).filter(
+        (i) => i > descriptionIdx
+      );
+      const endIdx =
+        subsequentIndices.length > 0
+          ? Math.min(...subsequentIndices)
+          : lines.length;
+
+      const content = lines
+        .slice(descriptionIdx + 1, endIdx)
+        .join("\n")
+        .trim()
+        .replace(/\n+$/, "");
+
+      if (content) {
+        entry.description = content;
+      }
+    }
+
+    // Process the freeform headers
     frontmatter.freeform.forEach((header: string) => {
       const headerLower = header.toLowerCase();
+      // Skip the description header as it's already processed
+      if (headerLower === "description") return;
+
       const idx = headerIndices[headerLower];
 
       if (idx !== undefined) {
@@ -124,7 +151,9 @@ function parseMarkdown(markdown: string, frontmatter: any): SmallBusinessEntry {
           .replace(/\n+$/, "");
         // Only add if there is some content.
         if (content) {
-          (entry as any)[SECTION_MAP[headerKey]] = content;
+          const targetKey = SECTION_MAP[headerKey];
+          // Add directly to the entry object
+          (entry as any)[targetKey] = content;
         }
       }
     });

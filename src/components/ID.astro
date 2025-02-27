@@ -22,6 +22,7 @@ import CategoryBreadcrumb from "@components/common/CategoryBreadcrumb.astro";
 import Slice from "@components/common/Slice.astro";
 import ObsidianVaultLink from "@components/common/ObsidianVaultLink.astro";
 import FurtherReadingLinks from "@components/common/FurtherReadingLinks.astro";
+import FreeformSlice from "@components/common/FreeformSlice.astro";
 // #endregion
 
 // #region Entry: core details ------------------------------------------------
@@ -69,19 +70,19 @@ if (isHeader) {
 
 // Process freeform content if it exists
 // FIXME extract to a function the moment you need this elsewhere
-let freeformSections: Array<{ header: string; content: string }> = [];
-if (sb.freeform) {
-  freeformSections = await Promise.all(
-    sb.freeform.map(async (section) => {
-      console.log("🚀 ~ ID.astro:76 ~ sb.freeform.map ~ section:", section);
-      return {
-        header: section.header,
-        content: await parseMd(section.content, true, !!userId || !!isPublic),
-      };
-    })
-  );
-}
-console.log("🚀 ~ ID.astro:73 ~ freeformSections:", freeformSections);
+// let freeformSections: Array<{ header: string; content: string }> = [];
+// if (sb.freeform) {
+//   freeformSections = await Promise.all(
+//     sb.freeform.map(async (section) => {
+//       console.log("🚀 ~ ID.astro:76 ~ sb.freeform.map ~ section:", section);
+//       return {
+//         header: section.header,
+//         content: await parseMd(section.content, true, !!userId || !!isPublic),
+//       };
+//     })
+//   );
+// }
+// console.log("🚀 ~ ID.astro:73 ~ freeformSections:", freeformSections);
 ---
 
 <SystemBreadcrumb />
@@ -112,16 +113,9 @@ console.log("🚀 ~ ID.astro:73 ~ freeformSections:", freeformSections);
 }
 
 {
-  freeformSections.length > 0 ? (
-    <Slice id="FreeformSections" className="main-text">
-      {freeformSections.map((section) => (
-        <div class="layout-grid-left-right">
-          <h3 class="layout-left-item">{section.header}</h3>
-          <div class="layout-right-item" set:html={section.content} />
-        </div>
-      ))}
-    </Slice>
-  ) : null
+  sb.freeform && (
+    <FreeformSlice freeform={sb.freeform} isPublic={isPublic} userId={userId} />
+  )
 }
 
 <!-- #region Optional fields -------------------------------------------------->

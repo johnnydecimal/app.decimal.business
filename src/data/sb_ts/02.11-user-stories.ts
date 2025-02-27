@@ -9,12 +9,11 @@ const entry: IdEntry = {
   "isHeader": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-26T23:51:12.397Z",
-    "updatedDate": "2025-02-26T23:51:12.397Z"
+    "createdDate": "2025-02-27T00:11:08.326Z",
+    "updatedDate": "2025-02-27T00:11:08.326Z"
   },
   "extensions": {
     "smallBusiness": {
-      "overview": "This system has been designed to accommodate everything that a business _might possibly need_.\n\nBut the converse is not true: you don't have to use _everything in the system_. We have an entire category dedicated to [shipping & fulfilment](/35) but if you're a hairdresser, that's not something you ever do. And that's okay.\n\nThis is intended to encourage you to think about your own business. You probably shouldn't just copy one of these examples. If you need help, we're always available. Just ask. Maybe we can tell your story?",
       "freeform": [
         {
           "header": "Overview",

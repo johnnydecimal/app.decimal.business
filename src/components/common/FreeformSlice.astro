@@ -1,0 +1,40 @@
+---
+interface Props {
+  freeform: Array<{ header: string; content: string }>;
+  isPublic: boolean;
+  userId: string | null;
+}
+
+const { freeform, userId, isPublic } = Astro.props;
+import parseMd from "@utils/parseMd";
+import Slice from "@components/common/Slice.astro";
+
+const freeformSections = await Promise.all(
+  freeform.map(async (section) => {
+    console.log("🚀 ~ ID.astro:76 ~ sb.freeform.map ~ section:", section);
+    return {
+      header: section.header,
+      content: await parseMd(section.content, true, !!userId || !!isPublic),
+    };
+  })
+);
+---
+
+<Slice id="Freeform" className="main-text">
+  {
+    freeformSections.map((freeformSection) => (
+      <div class="layout-grid-left-right">
+        <div class="layout-left-item">
+          <h3>{freeformSection.header}</h3>
+        </div>
+        <div class="layout-right-item">
+          <div set:html={freeformSection.content} />
+        </div>
+      </div>
+    ))
+  }
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+</style>
