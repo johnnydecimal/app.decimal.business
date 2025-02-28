@@ -231,6 +231,11 @@ html {
     }
   }
 }
+.breadcrumb .layout-grid-left-right {
+  @include r.phone-only {
+    grid-template-columns: 60px auto;
+  }
+}
 
 #ChildrenInParentList .layout-grid-left-right .layout-right-item p:first-child {
   // NOTE order-in-file specific
