@@ -67,7 +67,7 @@ export const GET: APIRoute = async (context) => {
       if (!id.isPublic) {
         idTitle = id.title.replace(/[a-zA-Z0-9]/g, "_");
         description = id.description.replace(/[a-zA-Z0-9]/g, "–");
-        description = `> You downloaded the system in demo mode. This file's contents have been hidden.\n\n${description}`;
+        description = `> You downloaded the system in demo mode. This file's contents have been hidden. [Sign up here](https://sbs.johnnydecimal.com/00.01).\n\n${description}`;
       }
     }
 

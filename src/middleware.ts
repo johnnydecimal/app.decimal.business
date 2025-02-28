@@ -1,5 +1,5 @@
 // https://clerk.com/docs/references/astro/clerk-middleware
-import { clerkMiddleware, createRouteMatcher } from "@clerk/astro/server";
+import { clerkMiddleware } from "@clerk/astro/server";
 
 export const onRequest = clerkMiddleware();
 // const isProtectedRoute = createRouteMatcher(["/api(.*)"]);
