@@ -9,15 +9,15 @@ const entry: IdEntry = {
   "isHeader": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-28T03:37:27.390Z",
-    "updatedDate": "2025-02-28T03:37:27.391Z"
+    "createdDate": "2025-02-28T03:42:18.415Z",
+    "updatedDate": "2025-02-28T03:42:18.415Z"
   },
   "extensions": {
     "smallBusiness": {
       "freeform": [
         {
           "header": "Platinum",
-          "content": "Platinum membership is for life. It's a one-time payment. Nothing else to pay, ever again.\n\nFor this you get:\n\n- The Small Business System.\n- All of our existing products:\n  - The Johnny.Decimal Workshop.\n  - The Johnny.Decimal Workbook.\n  - The Life Admin System.\n  - Learn with Lucy, our 14-hour beginner Excel course.\n\nAnd you get everything else we ever do, for life.\n\nFO"
+          "content": "Platinum membership is for life. It's a one-time payment. There's nothing else to pay, ever again.\n\nFor this you get:\n\n- The Small Business System.\n- All of our existing products:\n  - The Johnny.Decimal Workshop.\n  - The Johnny.Decimal Workbook.\n  - The Life Admin System.\n  - Learn with Lucy, our 14-hour beginner Excel course.\n\nAnd you get everything else we ever do, for life.\n\nFO"
         }
       ]
     }

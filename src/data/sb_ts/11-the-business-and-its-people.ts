@@ -6,8 +6,8 @@ const entry: CategoryEntry = {
   "description": "This category is all about the business entity and everyone who keeps it going, including staff, professional bodies, and support services.",
   "type": "category",
   "metadata": {
-    "createdDate": "2025-02-28T03:37:27.397Z",
-    "updatedDate": "2025-02-28T03:37:27.397Z"
+    "createdDate": "2025-02-28T03:42:18.421Z",
+    "updatedDate": "2025-02-28T03:42:18.421Z"
   },
   "extensions": {
     "smallBusiness": {
