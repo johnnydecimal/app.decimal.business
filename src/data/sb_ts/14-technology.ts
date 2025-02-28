@@ -6,8 +6,8 @@ const entry: CategoryEntry = {
   "description": "This category is all about your business in the digital world.",
   "type": "category",
   "metadata": {
-    "createdDate": "2025-02-28T06:53:49.134Z",
-    "updatedDate": "2025-02-28T06:53:49.134Z"
+    "createdDate": "2025-02-28T07:11:56.868Z",
+    "updatedDate": "2025-02-28T07:11:56.868Z"
   },
   "extensions": {
     "smallBusiness": {
