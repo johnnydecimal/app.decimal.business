@@ -62,15 +62,23 @@ export const GET: APIRoute = async (context) => {
 
     // If we're not logged in, obfuscate the non-public IDs
     let idTitle = id.title;
+    let description = id.description;
     if ("notLoggedIn" in user) {
       if (!id.isPublic) {
         idTitle = id.title.replace(/[a-zA-Z0-9]/g, "_");
+        description = id.description.replace(/[a-zA-Z0-9]/g, "–");
+        description = `> You downloaded the system in demo mode. This file's contents have been hidden.\n\n${description}`;
       }
     }
 
-    zip.folder(
-      `${areaNumber} ${areaTitle}${areaEmoji}/${categoryNumber} ${categoryTitle}${categoryEmoji}/${id.number} ${idHeaderSquare}${idTitle}${idEmoji}`
-    );
+    // Branch here depending on what we're creating. Start with Obsidian,
+    // which doesn't need an H1 in the content.
+
+    const fileName = `${id.number} ${idHeaderSquare}${idTitle}${idEmoji}.md`;
+    const markdownContent = `${description}\n\n---\n\n`;
+
+    // Add the markdown file to the zip
+    zip.file(fileName, markdownContent);
   });
 
   const content = await zip.generateAsync({ type: "nodebuffer" });
@@ -80,7 +88,7 @@ export const GET: APIRoute = async (context) => {
     headers: {
       "Content-Type": "application/zip",
       "Content-Disposition":
-        'attachment; filename="Johnny.Decimal Small Business System - folder structure.zip"',
+        'attachment; filename="Johnny.Decimal Small Business System - markdown files.zip"',
     },
   });
 };

@@ -1,5 +1,6 @@
 import type { FlattenedData } from "./smallBusinessFlat";
 
+import id_00_01 from "@data/sb_ts/00.01-sign-up";
 import id_00_13 from "@data/sb_ts/00.13-forum-discord";
 import id_00_21 from "@data/sb_ts/00.21-welcome";
 import id_00_32 from "@data/sb_ts/00.32-privacy-policy";
@@ -47,6 +48,9 @@ export const area_00_09: FlattenedData = {
       updatedDate: "2025-01-01",
     },
     extensions: { smallBusiness: {} },
+  },
+  "00.01": {
+    ...id_00_01,
   },
   "00.10": {
     number: "00.10",
