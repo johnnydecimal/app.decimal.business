@@ -166,23 +166,39 @@ html {
   select {
     font-family: var(--monospace);
   }
+}
 
-  .layout-grid-left-right {
+.layout-grid-left-right {
+  display: grid;
+  grid-template-columns: 110px auto;
+  .layout-left-item {
+    justify-self: end;
+    padding: var(--tiny) var(--small) var(--tiny) 0;
+  }
+  .layout-right-item {
+    border-left: 1.5px solid light-dark(#ccc, #333);
+    padding: var(--tiny) 0 var(--tiny) var(--small);
+    &.border-none {
+      border-left: none;
+    }
+
+    h2,
+    h3 {
+      font-size: 1rem;
+    }
+  }
+  // On mobile, flick to a single-column layout
+  @include r.phone-only {
     display: grid;
-    grid-template-columns: 110px auto;
-    // On mobile, flick to a single-column layout
-    @include r.phone-only {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-auto-flow: row;
-      // Undo the stuff we set for larger screens
-      .layout-left-item {
-        justify-self: start;
-      }
-      .layout-right-item {
-        border: none;
-        padding: unset;
-      }
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    // Undo the stuff we set for larger screens
+    .layout-left-item {
+      justify-self: start;
+    }
+    .layout-right-item {
+      border: none;
+      padding: unset;
     }
   }
 

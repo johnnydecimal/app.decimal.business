@@ -10,37 +10,9 @@
 
 /* -------------------------------- NEW STUFF ------------------------------- */
 /* --------------------------------- Layouts -------------------------------- */
-.layout-grid-left-right {
-  display: grid;
-  grid-template-columns: 110px auto;
-  @include phone-only {
-    grid-template-columns: 60px auto;
-  }
-}
 // Don't nest these in the declaration above! When you do that, you run in to
 // specificity problems trying to use .padding-t-10px and so on. There's no
 // reason for them to be nested. They work just fine.
-.layout-left-item {
-  justify-self: end;
-  padding: var(--tiny) var(--small) var(--tiny) 0;
-}
-.layout-right-item {
-  border-left: 1.5px solid light-dark(#ccc, #333);
-  padding: var(--tiny) 0 var(--tiny) var(--small);
-  &.border-none {
-    border-left: none;
-  }
-
-  // When we set:html text in here, e.g. HowToText, control the headers
-  // TODO in the future, pull the H1s out and then re-style the remainder
-  // set:html'd needs :global
-  :global(h1) {
-    font-size: 1.2rem;
-  }
-  :global(h2, h3) {
-    font-size: 1rem;
-  }
-}
 
 /* ---------------------- Moved out of Component:global --------------------- */
 // And I can't tell you why they all need the :global. I think it's a bug.
