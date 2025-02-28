@@ -10,15 +10,15 @@ const entry: IdEntry = {
   "isHidden": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-28T07:11:56.828Z",
-    "updatedDate": "2025-02-28T07:11:56.829Z"
+    "createdDate": "2025-02-28T07:32:04.824Z",
+    "updatedDate": "2025-02-28T07:32:04.825Z"
   },
   "extensions": {
     "smallBusiness": {
       "freeform": [
         {
           "header": "Lifetime",
-          "content": "Lifetime membership is a one-time payment. There's nothing else to pay, ever again. It's [US$300](https://store.johnnydecimal.com/cart/43063017111688:1).\n\nFor this you get:\n\n#### The Small Business System\n\n- And all of its updates, future improvements, and content updates, _forever_.\n- Lucy and I plan on working on this full-time for the next few years. It'll be like having us on your staff.\n\n#### All of our existing products\n\n- The [Johnny.Decimal Workshop](https://jdcm.al/14.22).\n- The [Johnny.Decimal Workbook](https://jdcm.al/14.21).\n- The [Life Admin System](https://jdcm.al/14.11).\n- [Learn with Lucy](https://jdcm.al/32.02), our 14-hour beginner Excel course.\n\nYou can access these immediately.\n\n#### Everything else we ever do, for life\n\n- Seriously: everything we ever create, forever.\n- For example, I'm planning open video sessions where we can solve your business problems together.\n- …and whatever else you ask for: we'll listen to the community and give you what you need.\n\n[Sign up today for US$300](https://store.johnnydecimal.com/cart/43063017111688:1). Then nothing else, ever again."
+          "content": "Lifetime membership is a one-time payment. There's nothing else to pay, ever again. It's [US$300](https://store.johnnydecimal.com/cart/43063017111688:1).\n\nFor this you get:\n\n#### The Small Business System\n\n- And all of its content updates, improvements, and new features, _forever_.\n- Lucy and I plan on working on this full-time for the next few years. It'll be like having us on your staff.\n\n#### All of our existing products\n\n- The [Johnny.Decimal Workshop](https://jdcm.al/14.22).\n- The [Johnny.Decimal Workbook](https://jdcm.al/14.21).\n- The [Life Admin System](https://jdcm.al/14.11).\n- [Learn with Lucy](https://jdcm.al/32.02), our 14-hour beginner Excel course.\n\nYou can access these immediately.\n\n#### Everything else we ever do, for life\n\n- Seriously: everything we ever create, forever.\n- For example, I'm planning open video sessions where we can solve your business problems together.\n- …and whatever else you ask for: we'll listen to the community and give you what you need.\n\n[Sign up today for US$300](https://store.johnnydecimal.com/cart/43063017111688:1). Then nothing else, ever again."
         },
         {
           "header": "Annual",
