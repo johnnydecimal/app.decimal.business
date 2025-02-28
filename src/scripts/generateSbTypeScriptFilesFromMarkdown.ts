@@ -208,6 +208,7 @@ async function generateTsFiles() {
           type: frontmatter.type || "id",
           isPublic: frontmatter.isPublic || false,
           isHeader: frontmatter.isHeader || false,
+          isHidden: frontmatter.isHidden || false,
           noLabel: frontmatter.noLabel || false,
           emoji: frontmatter.emoji || undefined,
           metadata: {

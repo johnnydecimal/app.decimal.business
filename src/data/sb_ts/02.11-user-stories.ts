@@ -7,10 +7,11 @@ const entry: AdHocEntry = {
   "type": "adHoc",
   "isPublic": true,
   "isHeader": false,
+  "isHidden": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-28T03:42:18.420Z",
-    "updatedDate": "2025-02-28T03:42:18.420Z"
+    "createdDate": "2025-02-28T04:00:54.956Z",
+    "updatedDate": "2025-02-28T04:00:54.956Z"
   },
   "extensions": {
     "smallBusiness": {

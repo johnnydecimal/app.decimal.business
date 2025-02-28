@@ -163,7 +163,7 @@ html {
     }
   }
   li + li {
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
   }
   // Nested lists
   ul > li > ul {
@@ -172,6 +172,80 @@ html {
 
   select {
     font-family: var(--monospace);
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0; // Surrounding <p> handles it
+    text-align: right;
+    @include phone-only {
+      font-size: 1.1rem; // Pop the headers a bit
+      margin-top: 0.5rem; // Room to breathe
+      text-decoration: underline;
+    }
+    @include tablet-portrait-up {
+      margin: 0 0 1rem 0; // Spaces out multi-line headers
+    }
+
+    // Actually, if you have a double-height label and a single-height text,
+    // which might be the case in our user-prefs layout, it's a bit tight. Fix:
+    // -- removing just for now, but this is the fix
+    // @include tablet-portrait-up {
+    //   margin-bottom: 0.8rem;
+    // }
+  }
+  h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    text-decoration: underline;
+    text-decoration-color: var(--border-strong);
+    text-decoration-thickness: 2px;
+    :global(+ p) {
+      margin-top: 0.5rem;
+    }
+  }
+
+  // In desktop's layout, remove the first-child margin so that the first
+  // child lines up with its label, to the left.
+  @include tablet-portrait-up {
+    .layout-right-item {
+      p:first-child,
+      ol:first-child,
+      ul:first-child {
+        margin-top: 0;
+      }
+      // ...except if the damned thing is in a blockquote
+      blockquote > ol:first-child {
+        margin-top: 1em;
+      }
+      // ...or if we have nested lists
+      ul > li > ul:first-child {
+        margin: 0.25rem 0;
+      }
+    }
+  }
+  // But reset these margins if we're in a blockquote
+  // TODO probably a nicer way to do this oh yeah you had to !important
+  :global(blockquote > p) {
+    margin-top: 1em !important;
+  }
+
+  // Headers go above the text on mobile, otherwise they take up loads of
+  // room on the left.
+  @include phone-only {
+    .layout-grid-left-right {
+      grid-auto-flow: row;
+      grid-template-columns: none;
+      // Undo the stuff we set for larger screens
+      .layout-left-item {
+        justify-self: start;
+      }
+      .layout-right-item {
+        border: none;
+        padding: unset;
+      }
+    }
   }
 }
 

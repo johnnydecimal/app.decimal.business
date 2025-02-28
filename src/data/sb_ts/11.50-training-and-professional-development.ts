@@ -7,10 +7,11 @@ const entry: IdEntry = {
   "type": "id",
   "isPublic": false,
   "isHeader": true,
+  "isHidden": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-28T03:42:18.430Z",
-    "updatedDate": "2025-02-28T03:42:18.430Z"
+    "createdDate": "2025-02-28T04:00:54.966Z",
+    "updatedDate": "2025-02-28T04:00:54.966Z"
   },
   "extensions": {
     "smallBusiness": {}
