@@ -1,10 +1,13 @@
 import type { FlattenedData } from "./smallBusinessFlat";
 
 import id_00_01 from "@data/sb_ts/00.01-sign-up";
+import id_00_11 from "@data/sb_ts/00.11-contact-us";
+import id_00_12 from "@data/sb_ts/00.12-get-started";
 import id_00_13 from "@data/sb_ts/00.13-forum-discord";
 import id_00_21 from "@data/sb_ts/00.21-welcome";
 import id_00_22 from "@data/sb_ts/00.22-about-numbers";
 import id_00_23 from "@data/sb_ts/00.23-community";
+import id_00_31 from "@data/sb_ts/00.31-terms-of-service";
 import id_00_32 from "@data/sb_ts/00.32-privacy-policy";
 import sb_00_99 from "@data/sb_ts/00.99-test-standard-page";
 import id_02_11 from "@data/sb_ts/02.11-user-stories";
@@ -65,24 +68,10 @@ export const area_00_09: FlattenedData = {
     extensions: { smallBusiness: {} },
   },
   "00.11": {
-    number: "00.11",
-    title: "Contact us",
-    type: "id",
-    description:
-      "Here's how to contact us. Get in touch if you need technical or billing support, or for any other reason.",
-    isPublic: true,
-    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: { smallBusiness: {} },
+    ...id_00_11,
   },
   "00.12": {
-    number: "00.12",
-    title: "How to get started",
-    type: "id",
-    description:
-      "How to get everything set up and running. A step-by-step guide. Start here!",
-    isPublic: true,
-    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: { smallBusiness: {} },
+    ...id_00_12,
   },
   "00.13": {
     ...id_00_13,
@@ -164,19 +153,7 @@ export const area_00_09: FlattenedData = {
     extensions: { smallBusiness: {} },
   },
   "00.31": {
-    number: "00.31",
-    title: "Terms of service",
-    type: "id",
-    description:
-      "We are not your lawyer, accountant, or other professional service provider.",
-    isPublic: true,
-    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: {
-      smallBusiness: {
-        overview:
-          '**Terms of Service**\n\n**1. Introduction**  \nWelcome to Coruscade Pty Ltd, trading as Johnny.Decimal ("we," "our," or "us"). By using our website, tools, or services ("Services"), you agree to these Terms of Service ("Terms"). If you do not agree, please do not use our Services.\n\n**2. No Professional Advice**  \nOur Services provide general guidance on business, finance, and related topics. However, we are **not** lawyers, accountants, financial advisors, or any other type of licensed professional. The information we provide is for informational purposes only and should not be considered legal, financial, tax, or any other form of professional advice. You should consult a qualified professional before making any decisions.\n\n**3. Use of Services**  \nYou agree to use our Services at your own risk. We make no guarantees about the accuracy, completeness, or reliability of the information provided. We are not responsible for any actions you take (or fail to take) based on our guidance.\n\n**4. Limitation of Liability**  \nTo the fullest extent permitted by law, we are not liable for any direct, indirect, incidental, consequential, or special damages arising from your use of our Services, even if we have been advised of the possibility of such damages.\n\n**5. No Client Relationship**  \nUsing our Services does **not** create any attorney-client, accountant-client, or other professional-client relationship. We do not represent you, and our guidance does not substitute for professional advice.\n\n**6. Changes to These Terms**  \nWe may update these Terms at any time. Continued use of our Services after changes means you accept the updated Terms.\n\n**7. Contact Us**  \nIf you have any questions, please contact us at hello@johnnydecimal.com.\n\n',
-      },
-    },
+    ...id_00_31,
   },
   "00.32": {
     ...id_00_32,

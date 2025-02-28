@@ -192,6 +192,7 @@ html {
   // child lines up with its label, to the left.
   @include r.tablet-portrait-up {
     .layout-right-item {
+      h4:first-child,
       p:first-child,
       ol:first-child,
       ul:first-child {
