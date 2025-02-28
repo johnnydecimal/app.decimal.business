@@ -255,6 +255,8 @@ footer .layout-grid-left-right {
 }
 
 // janky one-offs that you should fix
+// FIXME this works but body-undefined isn't a great classname for prod
+#body-undefined .welcome-border,
 #body-index_html .welcome-border {
   border: 2px solid var(--border-strong);
   padding: 1ch;
