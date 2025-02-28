@@ -173,6 +173,11 @@ html {
 
 // #endregion
 
+// actually-global stylings
+.text-error {
+  color: light-dark(darkred, lightcoral);
+}
+
 // janky one-offs that you should fix
 #body-index_html .welcome-border {
   border: 2px solid var(--border-strong);

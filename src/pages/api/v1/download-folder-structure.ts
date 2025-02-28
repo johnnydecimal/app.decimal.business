@@ -1,5 +1,5 @@
 import type { APIRoute } from "astro";
-import { createClerkClient } from "@clerk/astro/server";
+import { createClerkClient, type User } from "@clerk/astro/server";
 import JSZip from "jszip";
 
 import system, {
@@ -15,12 +15,22 @@ export const GET: APIRoute = async (context) => {
   });
 
   const userId = context.locals.auth().userId;
-  if (!userId) throw new Error("This is impossible, route /api is protected.");
 
-  const user = await clerkClient.users.getUser(userId);
-  const useEmoji = user.publicMetadata.useEmoji || false;
-  // This is always set, as we do it whenever we load the page
-  const useBlackSquare = user.publicMetadata.useBlackSquare;
+  let user: User | { notLoggedIn: boolean },
+    useEmoji: boolean,
+    useBlackSquare: boolean;
+  if (userId) {
+    // Replace it, if we're logged in
+    user = await clerkClient.users.getUser(userId);
+    // This might not be defined; the default is undefined unless user changes
+    useEmoji = user.publicMetadata.useEmoji || false;
+    // This is always set, as we do it whenever we load the page
+    useBlackSquare = user.publicMetadata.useBlackSquare!;
+  } else {
+    user = { notLoggedIn: true };
+    useEmoji = true;
+    useBlackSquare = true;
+  }
 
   const zip = new JSZip();
 
@@ -50,8 +60,16 @@ export const GET: APIRoute = async (context) => {
       idHeaderSquare = "■ ";
     }
 
+    // If we're not logged in, obfuscate the non-public IDs
+    let idTitle = id.title;
+    if ("notLoggedIn" in user) {
+      if (!id.isPublic) {
+        idTitle = id.title.replace(/[a-zA-Z0-9]/g, "_");
+      }
+    }
+
     zip.folder(
-      `${areaNumber} ${areaTitle}${areaEmoji}/${categoryNumber} ${categoryTitle}${categoryEmoji}/${id.number} ${idHeaderSquare}${id.title}${idEmoji}`
+      `${areaNumber} ${areaTitle}${areaEmoji}/${categoryNumber} ${categoryTitle}${categoryEmoji}/${id.number} ${idHeaderSquare}${idTitle}${idEmoji}`
     );
   });
 

@@ -27,70 +27,76 @@ if (user) {
 
 {
   !user ? (
-    <Slice className="main-text">
+    <Slice id="NotLoggedIn" className="main-text">
       <div class="layout-grid-left-right">
-        <div />
-        <div class="layout-right-item">
-          <p>Loading your user data...</p>
-          <p>(If you're not signed in, nothing else is going to happen.)</p>
+        <h3 class="layout-left-item">❗</h3>
+        <div class="layout-right-item text-error">
+          <p>
+            <strong>
+              You are not logged in. These links are in demo mode: the files you
+              download will be hidden in the same way as the rest of the site,
+              with _____ replacing the content for non-public IDs.
+            </strong>
+          </p>
+          <p>Subscribe for immediate access to the full folder structure.</p>
         </div>
       </div>
     </Slice>
-  ) : (
-    <>
-      <Slice className="main-text">
-        <div class="layout-grid-left-right">
-          <h3 class="layout-left-item">Note</h3>
-          <div class="layout-right-item">
-            {/* prettier-ignore */}
-            <p>
-              Your <a href="/01.02" title="01.02 User settings">user settings</a> affect whether these downloads contain emoji and other special
-              characters.
-            </p>
-            <p>
-              You can change those settings and use the download links here as
-              often as you like.
-            </p>
-          </div>
-        </div>
-      </Slice>
-
-      <Slice className="main-text">
-        <div class="layout-grid-left-right">
-          <h3 class="layout-left-item">Folder structure</h3>
-          <div class="layout-right-item">
-            <p>
-              Download your Johnny.Decimal file system folder structure here.
-            </p>
-            <p>
-              Move the folder from your Downloads folder to wherever you store
-              your documents.
-            </p>
-            <button onclick="window.location.href = '/api/v1/download-folder-structure'">
-              Download
-            </button>
-          </div>
-        </div>
-      </Slice>
-
-      <Slice className="main-text">
-        <div class="layout-grid-left-right">
-          <h3 class="layout-left-item">JDex files</h3>
-          <div class="layout-right-item">
-            <p>Download your Johnny.Decimal JDex files here.</p>
-            <p>
-              Move the folder from your Downloads folder to wherever you store
-              your documents.
-            </p>
-            <button onclick="window.location.href = '/api/v1/download-folder-structure'">
-              Download
-            </button>
-          </div>
-        </div>
-      </Slice>
-    </>
-  )
+  ) : null
 }
+
+<Slice className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Note</h3>
+    <div class="layout-right-item">
+      {/* prettier-ignore */}
+      <p>
+        Your <a href="/01.02" title="01.02 User settings">user settings</a> affect
+        whether these downloads contain emoji and other special characters.
+      </p>
+      <p>
+        You can change those settings and use the download links here as often
+        as you like.
+      </p>
+    </div>
+  </div>
+</Slice>
+
+<Slice className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Folder structure</h3>
+    <div class="layout-right-item">
+      <p>Download your Johnny.Decimal file system folder structure here.</p>
+      <p>
+        Move the folder from your Downloads folder to wherever you store your
+        documents.
+      </p>
+      <button
+        onclick="window.location.href = '/api/v1/download-folder-structure'"
+      >
+        Download
+      </button>
+    </div>
+  </div>
+</Slice>
+
+<Slice className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">JDex files</h3>
+    <div class="layout-right-item">
+      <p>Download your Johnny.Decimal JDex files here.</p>
+      <p>
+        Move the folder from your Downloads folder to wherever you store your
+        documents.
+      </p>
+      <button
+        onclick="window.location.href = '/api/v1/download-folder-structure'"
+      >
+        Download
+      </button>
+    </div>
+  </div>
+</Slice>
 
 <script>
   import { actions } from "astro:actions";
