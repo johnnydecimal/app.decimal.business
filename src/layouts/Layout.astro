@@ -12,7 +12,7 @@ import Search from "@components/common/Search.astro";
 import AccountManagement from "@components/AccountManagement.astro";
 import Footer from "@components/common/Footer.astro";
 // import { SignedOut } from "@clerk/astro/components";
-
+import SignUpOrSignInBanner from "@components/SignUpOrSignInBanner.astro";
 const { title } = Astro.props;
 ---
 
@@ -76,6 +76,7 @@ const { title } = Astro.props;
       /* In this new world, we're not using Clerk's components at this level.
          We handle all auth stuff down at the component level. */
     }
+    <SignUpOrSignInBanner />
     <Search />
     <main>
       <slot />

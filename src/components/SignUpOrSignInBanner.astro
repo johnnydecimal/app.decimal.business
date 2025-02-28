@@ -1,0 +1,31 @@
+---
+import Slice from "@components/common/Slice.astro";
+---
+
+<Slice id="SignUpOrSignInBanner">
+  <p>
+    <a
+      href="#"
+      onclick=`alert("We are still building the system. If you\'ve already signed up, we\'ll email you as soon as your account is ready.")`
+      >Sign in</a
+    > or <a href="/00.01">sign up</a>.
+  </p>
+</Slice>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+
+  :global(#SignUpOrSignInBanner) {
+    background-color: light-dark(#227, #ccd);
+    color: light-dark(#eef, #117);
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+    p {
+      margin: 0;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+  }
+</style>
