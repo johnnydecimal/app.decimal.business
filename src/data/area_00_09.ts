@@ -3,6 +3,8 @@ import type { FlattenedData } from "./smallBusinessFlat";
 import id_00_01 from "@data/sb_ts/00.01-sign-up";
 import id_00_13 from "@data/sb_ts/00.13-forum-discord";
 import id_00_21 from "@data/sb_ts/00.21-welcome";
+import id_00_22 from "@data/sb_ts/00.22-about-numbers";
+import id_00_23 from "@data/sb_ts/00.23-community";
 import id_00_32 from "@data/sb_ts/00.32-privacy-policy";
 import sb_00_99 from "@data/sb_ts/00.99-test-standard-page";
 import id_02_11 from "@data/sb_ts/02.11-user-stories";
@@ -146,24 +148,10 @@ export const area_00_09: FlattenedData = {
     ...id_00_21,
   },
   "00.22": {
-    number: "00.22",
-    type: "adHoc",
-    title: "About those numbers",
-    description:
-      "Yeah, there are a lot of numbers. Here's why they're so useful (and why you shouldn't be afraid of them).",
-    isPublic: true,
-    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: { smallBusiness: {} },
+    ...id_00_22,
   },
   "00.23": {
-    number: "00.23",
-    title: "A community with a shared language",
-    description:
-      "An open community sharing a common language makes us all more effective.",
-    type: "adHoc",
-    isPublic: true,
-    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
-    extensions: { smallBusiness: {} },
+    ...id_00_23,
   },
   "00.30": {
     number: "00.30",

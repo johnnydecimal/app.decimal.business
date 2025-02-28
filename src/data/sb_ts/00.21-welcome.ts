@@ -10,8 +10,8 @@ const entry: IdEntry = {
   "isHidden": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-28T06:07:09.015Z",
-    "updatedDate": "2025-02-28T06:07:09.015Z"
+    "createdDate": "2025-02-28T06:26:02.603Z",
+    "updatedDate": "2025-02-28T06:26:02.603Z"
   },
   "extensions": {
     "smallBusiness": {
@@ -38,7 +38,7 @@ const entry: IdEntry = {
         },
         {
           "header": "Cost",
-          "content": "Platinum membership is for life. It gets you access to **everything we ever create, for all of time, for a [one-off payment of US$300](https://store.johnnydecimal.com/cart/43063017111688:1)**.<sup>1</sup>\n\nGold membership is for one year.<sup>2</sup> You have access to everything we do for as long as you're a member. It costs [US$150 a year](https://store.johnnydecimal.com/cart/43069054648456:1).<sup>3</sup>\n\nThese are pre-sale prices. They will increase when we launch the system.\n\nThis is what me and my partner Lucy do full-time: we quit our jobs to do this. Your membership supports two humans who hand-craft everything you see. The system is the result of thousands of hours of work.\n\nWe're not a faceless corporation. There's no lazy AI-generated slop here. No automated helpdesk. You email me, I help you.\n\nOur plan for the next couple of years is to listen to exactly what you need, and to build it for you as quickly as possible. It'll be like having us on your staff.\n\n> 1. Prices include GST in Australia.\n> 2. Renews one year after the full system is released, not one year after your initial payment.\n> 3. You'll _never_ lose access to your system. If you choose not to renew, you'll just stop getting updates."
+          "content": "Lifetime membership gets you access to **everything we ever create, for all of time, for a [one-off payment of US$300](https://store.johnnydecimal.com/cart/43063017111688:1)**.<sup>1</sup>\n\nAnnual membership is for one year.<sup>2</sup> You have access to everything we do for as long as you're a member. It costs [US$150 a year](https://store.johnnydecimal.com/cart/43069054648456:1).<sup>3</sup>\n\nThese are pre-sale prices. They will increase when we launch the system.\n\nThis is what me and my partner Lucy do full-time: we quit our jobs to do this. Your membership supports two humans who hand-craft everything you see. The system is the result of thousands of hours of work.\n\nWe're not a faceless corporation. There's no lazy AI-generated slop here. No automated helpdesk. You email me, I help you.\n\nOur plan for the next couple of years is to listen to exactly what you need, and to build it for you as quickly as possible. It'll be like having us on your staff.\n\n> 1. Prices include GST in Australia.\n> 2. Renews one year after the full system is released, not one year after your initial payment.\n> 3. You'll _never_ lose access to your system. If you choose not to renew, you'll just stop getting updates."
         },
         {
           "header": "When",

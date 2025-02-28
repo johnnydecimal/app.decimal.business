@@ -1,24 +1,24 @@
 // Auto-generated from 00.22-about-numbers.md
-import type { AdHocEntry } from "@data/smallBusinessFlat";
-const entry: AdHocEntry = {
+import type { IdEntry } from "@data/smallBusinessFlat";
+const entry: IdEntry = {
   "number": "00.22",
   "title": "About those numbers",
-  "description": "",
-  "type": "adHoc",
+  "description": "Yeah, there are a lot of numbers. Here’s why they’re so useful (and why you shouldn’t be afraid of them).",
+  "type": "id",
   "isPublic": true,
   "isHeader": false,
   "isHidden": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-28T06:07:09.016Z",
-    "updatedDate": "2025-02-28T06:07:09.016Z"
+    "createdDate": "2025-02-28T06:26:02.603Z",
+    "updatedDate": "2025-02-28T06:26:02.603Z"
   },
   "extensions": {
     "smallBusiness": {
       "freeform": [
         {
           "header": "A simple hierarchy",
-          "content": "There's a really simple system behind the numbers that makes it impossible to get lost.\n\nAll of your stuff -- your files, notes, emails -- lives inside an ID. The page you're reading is an ID: its number is `00.93`.\n\nThe number tells you where this thing is. This one's in category `00`. Where's category `00`? It's in area `00-09`. You can see this structure in the links above.\n\nThis structure is mirrored on your computer. Guess how you organise your files?\n\n<picture>\n  <source\n    media=\"(prefers-color-scheme: light)\"\n    srcset=\"/img/00.93A-Finder-light-792x294.png\"\n  />\n  <source\n    media=\"(prefers-color-scheme: dark)\"\n    srcset=\"/img/00.93A-Finder-dark-792x294.png\"\n  />\n  <img\n    alt=\"A screenshot of the macOS finder showing a simple hierarchy. Folder '10-19 Company admin' contains folder '13 Money earned, spent, saved, & owed', which in turn contains folder '13.34 Payroll'.\"\n    id=\"finder\"\n    src=\"/img/00.93A-Finder-light-792x294.png\"\n    width=\"396\"\n    height=\"147\"\n  />\n</picture>\n\nThis makes it really hard to lose stuff.\n\nYou don't even have to create these folders yourself. You'll download the complete structure from this site."
+          "content": "There's a really simple system behind the numbers that makes it impossible to get lost.\n\nAll of your stuff -- your files, notes, emails -- lives inside an ID. The page you're reading is an ID: its number is `00.22`.\n\nThe number tells you where this thing is. This one's in category `00`. Where's category `00`? It's in area `00-09`. You can see this structure in the links above.\n\nThis structure is mirrored on your computer. Guess how you organise your files?\n\n<picture>\n  <source\n    media=\"(prefers-color-scheme: light)\"\n    srcset=\"/img/00.93A-Finder-light-792x294.png\"\n  />\n  <source\n    media=\"(prefers-color-scheme: dark)\"\n    srcset=\"/img/00.93A-Finder-dark-792x294.png\"\n  />\n  <img\n    alt=\"A screenshot of the macOS finder showing a simple hierarchy. Folder '10-19 Company admin' contains folder '13 Money earned, spent, saved, & owed', which in turn contains folder '13.34 Payroll'.\"\n    id=\"finder\"\n    src=\"/img/00.93A-Finder-light-792x294.png\"\n    width=\"396\"\n    height=\"147\"\n  />\n</picture>\n\nThis makes it really hard to lose stuff.\n\nYou don't even have to create these folders yourself. You'll download the complete structure from this site."
         },
         {
           "header": "Read them aloud",
