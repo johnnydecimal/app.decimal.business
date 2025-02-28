@@ -1,5 +1,5 @@
-@forward "mixins";
-@use "mixins" as *;
+@forward "responsive";
+@use "responsive" as *;
 
 /* -------------------------------- Elements -------------------------------- */
 
@@ -7,24 +7,6 @@
 // background & border. No content should live at this level.
 // This blob of style only includes stuff that applies to the whole slice,
 // regardless of its content.
-
-// This is common for breadcrumbs at all sizes, and descriptive text on larger
-@mixin layout-grid-100px-auto {
-  display: grid;
-  grid-template-columns: 110px auto;
-  // On mobile, this takes a lot of room on the left. Reclaim a touch.
-  @include phone-only {
-    grid-template-columns: 60px auto;
-  }
-  .label {
-    justify-self: end;
-    padding: var(--tiny) var(--small) var(--tiny) 0;
-  }
-  .text {
-    border-left: 1.5px solid light-dark(#ccc, #333);
-    padding: var(--tiny) 0 var(--tiny) var(--small);
-  }
-}
 
 /* -------------------------------- NEW STUFF ------------------------------- */
 /* --------------------------------- Layouts -------------------------------- */
