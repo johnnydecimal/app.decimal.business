@@ -13,9 +13,16 @@ const user = userId && (await clerkClient.users.getUser(userId));
 // const useEmoji = user.publicMetadata.useEmoji || false;
 
 let useBlackSquare;
+// Define the type for our custom publicMetadata
+interface UserPublicMetadata {
+  useBlackSquare?: boolean;
+  useEmoji?: boolean;
+}
+
 if (user) {
   // If this is not set, we default it to true and push it back to Clerk
-  useBlackSquare = user.publicMetadata.useBlackSquare;
+  const typedMetadata = user.publicMetadata as UserPublicMetadata;
+  useBlackSquare = typedMetadata.useBlackSquare;
   if (useBlackSquare === undefined) {
     await clerkClient.users.updateUserMetadata(userId!, {
       publicMetadata: { useBlackSquare: true },
@@ -83,7 +90,9 @@ if (user) {
   </div>
 </Slice>
 
-<Slice className="main-text">
+<!-- If a user is logged in,  -->
+
+<Slice id="JDex-download" className="main-text">
   <div class="layout-grid-left-right">
     <h3 class="layout-left-item">JDex files</h3>
     <div class="layout-right-item">
@@ -92,9 +101,32 @@ if (user) {
         Move the folder from your Downloads folder to wherever you store your
         documents.
       </p>
-      <button onclick="window.location.href = '/api/v1/download-jdex-files'">
-        Download
-      </button>
+      <select name="obsidianNestedFolders" id="obsidianNestedFolders">
+        <option value="false"> No - flat structure </option>
+        <option value="true"> Yes - area/category folders </option>
+      </select>
+      <button onclick="downloadWithOptions()"> Download </button>
+
+      <script is:inline>
+        function downloadWithOptions() {
+          // Get the value from the select element
+          const selectElement = document.getElementById(
+            "obsidianNestedFolders"
+          );
+          if (!selectElement) {
+            console.error("Select element not found");
+            return;
+          }
+
+          const nestedFolders = selectElement.value;
+
+          // Build the URL with the parameter
+          const downloadUrl = `/api/v1/download-jdex-files?nestedFolders=${nestedFolders}`;
+
+          // Navigate to the URL to trigger the download
+          window.location.href = downloadUrl;
+        }
+      </script>
     </div>
   </div>
 </Slice>
