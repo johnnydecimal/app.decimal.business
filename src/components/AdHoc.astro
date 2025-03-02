@@ -25,6 +25,7 @@ import system, {
 } from "@data/smallBusinessFlat";
 
 import AdHoc_00_00 from "@components/AdHoc/AdHoc_00_00.astro";
+import AdHoc_00_12 from "@components/AdHoc/AdHoc-00_12-get_started.astro";
 import AdHoc_02_11 from "@components/AdHoc/AdHoc-02_11-user_stories.astro";
 import AdHoc_01_02 from "@components/AdHoc/AdHoc-01_02-user_settings.astro";
 import AdHoc_01_03 from "@components/AdHoc/AdHoc-01_03-downloads.astro";
@@ -96,6 +97,7 @@ const parentSTitle = parentSEntry.title;
 }
 
 {id === "00.00" ? <AdHoc_00_00 /> : null}
+{id === "00.12" ? <AdHoc_00_12 /> : null}
 {id === "01.02" ? <AdHoc_01_02 /> : null}
 {id === "01.03" ? <AdHoc_01_03 /> : null}
 {id === "02.11" ? <AdHoc_02_11 /> : null}

@@ -2,7 +2,6 @@ import type { FlattenedData } from "./smallBusinessFlat";
 
 import id_00_01 from "@data/sb_ts/00.01-sign-up";
 import id_00_11 from "@data/sb_ts/00.11-contact-us";
-import id_00_12 from "@data/sb_ts/00.12-get-started";
 import id_00_13 from "@data/sb_ts/00.13-forum-discord";
 import id_00_21 from "@data/sb_ts/00.21-welcome";
 import id_00_22 from "@data/sb_ts/00.22-about-numbers";
@@ -72,7 +71,14 @@ export const area_00_09: FlattenedData = {
     ...id_00_11,
   },
   "00.12": {
-    ...id_00_12,
+    number: "00.12",
+    title: "Get started",
+    type: "adHoc",
+    description:
+      "Here’s how to get everything set up and running. A step-by-step guide.",
+    isPublic: true,
+    metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
+    extensions: { smallBusiness: {} },
   },
   "00.13": {
     ...id_00_13,

@@ -1,0 +1,60 @@
+---
+import Slice from "@components/common/Slice.astro";
+import { createClerkClient } from "@clerk/astro/server";
+
+const { userId } = Astro.locals.auth();
+
+const clerkClient = createClerkClient({
+  secretKey: import.meta.env.CLERK_SECRET_KEY,
+});
+
+const user = userId && (await clerkClient.users.getUser(userId));
+
+let _1_tos;
+if (user) {
+  _1_tos = user.publicMetadata.onboarding._1_tos;
+}
+---
+
+<Slice id="GetStarted" className="main-text">
+  <div class="layout-grid-left-right">
+    <h3 class="layout-left-item">Terms of Service</h3>
+    <div class="layout-right-item">
+      <p>
+        Before you do anything else, you need to read and agree to the Terms of
+        Service.
+      </p>
+      <p>
+        They're very short, and written to be read by a human. It'll take two
+        minutes. <a href="/00.31">Go and read them now</a>, then come back here
+        and check this box.
+      </p>
+      <p>
+        <input type="checkbox" id="termsOfService" /> I agree to the Terms of Service.
+      </p>
+    </div>
+  </div>
+</Slice>
+
+<script>
+  import { actions } from "astro:actions";
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const termsOfServiceCheckbox = document.getElementById(
+      "termsOfService"
+    ) as HTMLInputElement;
+    if (!termsOfServiceCheckbox)
+      throw new Error("🚨 termsOfServiceCheckbox doesn't exist!");
+
+    termsOfServiceCheckbox.addEventListener("change", async () => {
+      const { data, error } = await actions.setPublicMetadata({
+        key: "onboarding._1_tos",
+        value: new Date().toISOString(),
+      });
+    });
+  });
+</script>
+
+<style lang="scss">
+  @use "@styles/common" as *;
+</style>

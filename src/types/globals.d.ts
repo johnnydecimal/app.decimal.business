@@ -7,6 +7,13 @@ declare global {
     obsidianVault?: string;
     useEmoji?: boolean;
     useBlackSquare?: boolean;
+    onboarding?: {
+      _1_tos?: string;
+      _2_community?: string;
+      _3_settings?: string;
+      _4_folders?: string;
+      _5_jdex?: string;
+    };
   }
 
   interface Window {

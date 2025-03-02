@@ -94,19 +94,39 @@ export const server = {
         const clerkClient = createClerkClient({
           secretKey: import.meta.env.CLERK_SECRET_KEY,
         });
+
+        // Get current metadata first
+        const currentUser = await clerkClient.users.getUser(userId!);
+        const currentMetadata = currentUser.publicMetadata || {};
+
+        // Handle nested keys by splitting on dots
+        const keys = input.key.split(".");
+        let newMetadata = { ...currentMetadata };
+        let temp = newMetadata;
+
+        // Build nested structure
+        for (let i = 0; i < keys.length - 1; i++) {
+          temp[keys[i]] = temp[keys[i]] || {};
+          temp = temp[keys[i]];
+        }
+        temp[keys[keys.length - 1]] = input.value;
+
         const user = await clerkClient.users.updateUserMetadata(userId!, {
-          publicMetadata: {
-            [input.key]: input.value,
-          },
+          publicMetadata: newMetadata,
         });
-        // Test that the user object contains the value we just set
-        // and throw an error if it doesn't
-        if (user.publicMetadata[input.key] !== input.value) {
+
+        // Verify the nested value was set correctly
+        let verifyValue = user.publicMetadata;
+        for (const key of keys) {
+          verifyValue = verifyValue[key];
+        }
+        if (verifyValue !== input.value) {
           throw new ActionError({
             code: "INTERNAL_SERVER_ERROR",
             message: "Metadata was not set correctly",
           });
         }
+
         return { status: "success", publicMetadata: user.publicMetadata };
       } catch (e) {
         // TODO this is typed all wrong
