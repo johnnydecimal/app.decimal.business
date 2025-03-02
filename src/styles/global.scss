@@ -250,7 +250,11 @@ footer .layout-grid-left-right {
 // #endregion
 
 // actually-global stylings
-.text-error {
+.main-text .layout-grid-left-right .layout-right-item.text-error {
+  // For specificity override
+  border-left: 2px solid light-dark(darkred, lightcoral);
+}
+p.text-error {
   color: light-dark(darkred, lightcoral);
 }
 
