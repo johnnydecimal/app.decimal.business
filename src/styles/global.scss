@@ -259,6 +259,18 @@ p.text-error {
   margin: 1rem 0;
 }
 
+.top-item-padding {
+  .layout-left-item,
+  .layout-right-item {
+    padding-top: var(--component-padding);
+  }
+}
+.bottom-item-padding {
+  .layout-left-item,
+  .layout-right-item {
+    padding-bottom: var(--component-padding);
+  }
+}
 // janky one-offs that you should fix
 // FIXME this works but body-undefined isn't a great classname for prod
 #body-undefined .welcome-border,

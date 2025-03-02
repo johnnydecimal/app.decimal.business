@@ -2,18 +2,18 @@
 import { SignOutButton } from "@clerk/astro/components";
 
 import Slice from "@components/common/Slice.astro";
-import system, { type FlattenedEntry } from "@data/smallBusinessFlat";
+import system from "@data/smallBusinessFlat";
+import { createClerkClient } from "@clerk/astro/server";
+import slugToId from "@utils/slugToId";
 
 const { userId } = Astro.locals.auth();
 const { slug } = Astro.params;
 
-let entry: FlattenedEntry;
-if (slug) {
-  entry = system[slug];
-} else {
-  entry = system["J82"];
-}
+const id = slugToId(slug);
+const entry = system[id];
+const idTitle = entry.title;
 
+// #region Forum & Discord links
 const forumLinks: Record<string, string> = {
   "11": "https://forum.johnnydecimal.com/c/small-business/11-the-business-its-people/19",
   "12": "https://forum.johnnydecimal.com/c/small-business/12-where-i-trade-how-i-get-around/20",
@@ -35,27 +35,83 @@ const forumFallback =
   "https://forum.johnnydecimal.com/c/small-business/00-water-cooler/22";
 const discordFallback =
   "https://discord.com/channels/822215537589354566/1292946370759495821";
+// #endregion
+
+// #region Obsidian link
+const obsidianPathURI = encodeURIComponent(`${id} ${idTitle}`);
+
+// Get the user's stored Obsidian vault name
+let obsidianVaultURI: string | null = null;
+// If there's a user...
+if (userId) {
+  const clerkClient = createClerkClient({
+    secretKey: import.meta.env.CLERK_SECRET_KEY,
+  });
+  const user = await clerkClient.users.getUser(userId!);
+  // ...and they have a stored Obsidian vault name...
+  if (user.publicMetadata.obsidianVault) {
+    // ...then use it
+    obsidianVaultURI = encodeURIComponent(user.publicMetadata.obsidianVault);
+  } else {
+    // Otherwise, don't show the link
+    obsidianVaultURI = null;
+  }
+}
 ---
 
-<Slice id="AccountManagement">
+<Slice id="AccountManagement" className="main-text">
+  {
+    obsidianVaultURI ? (
+      <div class="layout-grid-left-right top-item-padding">
+        <h3 class="layout-left-item">JDex</h3>
+        <div class="layout-right-item">
+          <a
+            href={`obsidian://open?vault=${obsidianVaultURI}&file=${obsidianPathURI}`}
+          >
+            {id}&nbsp;{idTitle}
+          </a>
+        </div>
+      </div>
+    ) : (
+      <div class="layout-grid-left-right top-item-padding">
+        <h3 class="layout-left-item">Open in Obsidian</h3>
+        <div class="layout-right-item">
+          <a
+            href="#"
+            onclick="alert(`When you're signed in, this link opens this entry in your chosen JDex app. We currently support Bear and Obsidian.`)"
+          >
+            {id}&nbsp;{idTitle}
+          </a>
+        </div>
+      </div>
+    )
+  }
+
   <div class="layout-grid-left-right">
-    <div class="layout-left-item"><strong>Community</strong></div>
-    <div class="layout-right-item border-none">
+    <h3 class="layout-left-item">?</h3>
+    <div class="layout-right-item">
+      <a href={forumLink ? forumLink : forumFallback} target="_blank">Forum</a> •
       <a href={discordLink ? discordLink : discordFallback} target="_blank"
         >Discord</a
       > •
-      <a href={forumLink ? forumLink : forumFallback} target="_blank">Forum</a> •
+      <a
+        href={`https://airtable.com/appep0KBedENs1fkW/pagnQjbOW4JoXNNax/form?prefill_JD+SBS+ID=${slug}`}
+      >
+        Feedback form
+      </a>
     </div>
   </div>
+
   <div class="layout-grid-left-right">
-    <div class="layout-left-item">!</div>
-    <div class="layout-right-item border-none">
-      <a href="/00#00.10"> Help & support </a>
+    <h3 class="layout-left-item">!</h3>
+    <div class="layout-right-item">
+      <a href="/00#00.10">Help & support</a>
     </div>
   </div>
-  <div class="layout-grid-left-right">
-    <div class="layout-left-item">↗</div>
-    <div class="layout-right-item border-none">
+
+  <div class="layout-grid-left-right bottom-item-padding">
+    <h3 class="layout-left-item">@</h3>
+    <div class="layout-right-item">
       {
         import.meta.env.DEV ? (
           <a href="https://lenient-hound-82.accounts.dev/user">
@@ -68,7 +124,7 @@ const discordFallback =
     </div>
   </div>
 
-  {
+  <!-- {
     userId ? (
       <div class="layout-grid-left-right">
         <div class="layout-left-item">×</div>
@@ -79,15 +135,11 @@ const discordFallback =
         </div>
       </div>
     ) : null
-  }
+  } -->
 </Slice>
 
 <style lang="scss">
   @use "@styles/common" as *;
-
-  :global(#AccountManagement) {
-    padding: var(--component-padding) 0;
-  }
 
   button {
     background: none;
@@ -100,5 +152,9 @@ const discordFallback =
   }
   button:hover {
     color: VisitedText;
+  }
+
+  h3 {
+    margin: 0;
   }
 </style>
