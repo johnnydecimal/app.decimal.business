@@ -1,13 +1,52 @@
 ---
 import { SignOutButton } from "@clerk/astro/components";
 
-import Slice from "./common/Slice.astro";
+import Slice from "@components/common/Slice.astro";
+import system, { type FlattenedEntry } from "@data/smallBusinessFlat";
 
-const { slug } = Astro.params;
 const { userId } = Astro.locals.auth();
+const { slug } = Astro.params;
+
+let entry: FlattenedEntry;
+if (slug) {
+  entry = system[slug];
+} else {
+  entry = system["J82"];
+}
+
+const forumLinks: Record<string, string> = {
+  "11": "https://forum.johnnydecimal.com/c/small-business/11-the-business-its-people/19",
+  "12": "https://forum.johnnydecimal.com/c/small-business/12-where-i-trade-how-i-get-around/20",
+  "13": "https://forum.johnnydecimal.com/c/small-business/13-money/21",
+  "14": "https://forum.johnnydecimal.com/c/small-business/14-technology/23",
+  "15": "https://forum.johnnydecimal.com/c/small-business/15-travel-events-social/24",
+};
+const discordLinks: Record<string, string> = {
+  "11": "https://discord.com/channels/822215537589354566/1337958692317827102",
+  "12": "https://discord.com/channels/822215537589354566/1344416111856189581",
+  "13": "https://discord.com/channels/822215537589354566/1344497228261101600",
+  "14": "https://discord.com/channels/822215537589354566/1344497359094284328",
+  "15": "https://discord.com/channels/822215537589354566/1344497499725103147",
+};
+
+const forumLink = forumLinks[entry.number.slice(0, 2)];
+const discordLink = discordLinks[entry.number.slice(0, 2)];
+const forumFallback =
+  "https://forum.johnnydecimal.com/c/small-business/00-water-cooler/22";
+const discordFallback =
+  "https://discord.com/channels/822215537589354566/1292946370759495821";
 ---
 
 <Slice id="AccountManagement">
+  <div class="layout-grid-left-right">
+    <div class="layout-left-item"><strong>Community</strong></div>
+    <div class="layout-right-item border-none">
+      <a href={discordLink ? discordLink : discordFallback} target="_blank"
+        >Discord</a
+      > •
+      <a href={forumLink ? forumLink : forumFallback} target="_blank">Forum</a> •
+    </div>
+  </div>
   <div class="layout-grid-left-right">
     <div class="layout-left-item">!</div>
     <div class="layout-right-item border-none">
