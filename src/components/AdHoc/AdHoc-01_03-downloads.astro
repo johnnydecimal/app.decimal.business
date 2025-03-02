@@ -101,11 +101,23 @@ if (user) {
         Move the folder from your Downloads folder to wherever you store your
         documents.
       </p>
-      <select name="obsidianNestedFolders" id="obsidianNestedFolders">
-        <option value="false"> No - flat structure </option>
-        <option value="true"> Yes - area/category folders </option>
-      </select>
-      <button onclick="downloadWithOptions()"> Download </button>
+      <div class="select-group">
+        <label for="obsidianNestedFolders"
+          >Do you want a single, flat folder of Markdown files? Or do you want
+          them nested in area/category folders?</label
+        >
+        <select name="obsidianNestedFolders" id="obsidianNestedFolders">
+          <option value="false">☰ Flat folder</option>
+          <option value="true">↘ Nested area/category folders</option>
+        </select><br />
+        <button onclick="downloadWithOptions()">Download</button>
+      </div>
+      <blockquote>
+        <p>
+          This is v1.0 of this download tool. I can create whatever options you
+          need - just let me know.
+        </p>
+      </blockquote>
 
       <script is:inline>
         function downloadWithOptions() {
@@ -131,30 +143,6 @@ if (user) {
   </div>
 </Slice>
 
-<script>
-  import { actions } from "astro:actions";
-
-  document.addEventListener("DOMContentLoaded", async () => {
-    const { updateStatusIndicator } = await import(
-      "@utils/updateStatusIndicator"
-    );
-
-    const useEmojiEl = document.getElementById("useEmoji") as HTMLSelectElement;
-    if (!useEmojiEl) throw new Error("🚨 emojiPref doesn't exist!");
-
-    useEmojiEl.addEventListener("change", async () => {
-      const useEmoji = useEmojiEl.value === "true";
-
-      const { data, error } = await actions.setUseEmoji({ useEmoji });
-      if (!error && data.status === "success") {
-        updateStatusIndicator("useEmojiSaved", true);
-      } else if (error) {
-        updateStatusIndicator("useEmojiSaved", false, error.message);
-      }
-    });
-  });
-</script>
-
 <style lang="scss">
   @use "@styles/common" as *;
 
@@ -179,6 +167,13 @@ if (user) {
     }
     &.red {
       color: light-dark(red, red);
+    }
+  }
+
+  .select-group {
+    margin-top: 1rem;
+    select {
+      margin: 1rem 0;
     }
   }
 </style>

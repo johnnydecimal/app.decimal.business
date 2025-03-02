@@ -5,13 +5,13 @@ const entry: IdEntry = {
   "title": "Payroll",
   "description": "The place to manage anything to do with wages, leave, pensions, health insurance, and other benefits.",
   "type": "id",
-  "isPublic": false,
+  "isPublic": true,
   "isHeader": false,
   "isHidden": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-02-28T07:32:04.861Z",
-    "updatedDate": "2025-02-28T07:32:04.861Z"
+    "createdDate": "2025-03-01T23:59:53.491Z",
+    "updatedDate": "2025-03-01T23:59:53.491Z"
   },
   "extensions": {
     "smallBusiness": {
