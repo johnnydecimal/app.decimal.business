@@ -10,8 +10,8 @@ const entry: IdEntry = {
   "isHidden": false,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-03-02T00:01:32.099Z",
-    "updatedDate": "2025-03-02T00:01:32.099Z"
+    "createdDate": "2025-03-02T02:27:04.440Z",
+    "updatedDate": "2025-03-02T02:27:04.440Z"
   },
   "extensions": {
     "smallBusiness": {
@@ -26,7 +26,7 @@ const entry: IdEntry = {
         },
         {
           "header": "What",
-          "content": "This website _is_ the small business system. So you can have a look around and get a feel for the structure. Most of the content is hidden like this ░░░░░ -- when you sign up, you unlock everything.\n\nHere's a really brief tour.\n\n#### 10-19 Company administration\n\nThe categories in this area could be the foundation of any business, regardless of the product or service you offer.\n\n[11 The business & its people](/11) is all about the business entity and everyone who keeps it going. For example, [11.12](/11.12) is where you save your [licences, permits, & accreditations](/11.12). If you check out that ID you'll see that we explain what it's for, give some examples, and refer to other relevant IDs.\n\nWe have IDs for [business insurance and claims](/11.22), [dispute resolution](/11.33), [hiring staff](/11.41), and many more.\n\nTo explore the rest, just click around. [10-19](/10-19) is a good place to start. There's a list of all unlocked IDs at [00.00](/00.00)."
+          "content": "This website _is_ the small business system. So you can have a look around and get a feel for the structure. Most of the content is hidden like this ░░░░░ -- when you sign up, you unlock everything.\n\nHere's a really brief tour.\n\n#### 10-19 Company administration\n\nThe categories in this area could be the foundation of any business, regardless of the product or service you offer.\n\n[11 The business & its people](/11) is all about the business entity and everyone who keeps it going. For example, [11.12](/11.12) is where you save your [licences, permits, & accreditations](/11.12). If you check out that ID you'll see that we explain what it's for, give some examples, and refer to other relevant IDs.\n\nWe have IDs for [business insurance and claims](/11.22), [dispute resolution](/11.33), [hiring staff](/11.41), and many more.\n\nAnd you can try out [downloading a folder structure and files for your JDex](/01.03).\n\nTo explore the rest, just click around. [10-19](/10-19) is a good place to start. There's a list of all unlocked IDs at [00.00](/00.00)."
         },
         {
           "header": "Search",
@@ -34,7 +34,7 @@ const entry: IdEntry = {
         },
         {
           "header": "Always private",
-          "content": "_Your_ files live on _your_ computer. **We never have access to your files**. You download a complete folder structure that mirrors this site, as well as text files that you can use to set up your local [index](https://jdcm.al/11.05/).\n\nThere are many other benefits, which we'll explore on the coming pages.\n\n> We're still building the system. Search is incomplete, and you'll notice other bugs if you go looking for them. This site is in constant development, and my focus is on building the system over making this early public-facing version bug-free."
+          "content": "_Your_ files live on _your_ computer. **We never have access to your files**. You download a complete folder structure that mirrors this site, as well as text files that you can use to set up your local [index](https://jdcm.al/11.05/).\n\nThere are many other benefits, which we'll explore on the coming pages.\n\n> We're still building the system. Search is incomplete, and you'll notice other bugs if you go looking for them. This site is under construction, and my current focus is on building the system over making this early public-facing version bug-free."
         },
         {
           "header": "Cost",
