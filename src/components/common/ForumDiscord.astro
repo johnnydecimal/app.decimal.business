@@ -4,6 +4,7 @@ interface Props {
 }
 
 import type { FlattenedEntry } from "@data/smallBusinessFlat";
+const { slug } = Astro.params;
 const { entry } = Astro.props;
 import Slice from "@components/common/Slice.astro";
 
@@ -37,7 +38,12 @@ const discordFallback =
       <a href={discordLink ? discordLink : discordFallback} target="_blank"
         >Discord</a
       > •
-      <a href={forumLink ? forumLink : forumFallback} target="_blank">Forum</a>
+      <a href={forumLink ? forumLink : forumFallback} target="_blank">Forum</a> •
+      <a
+        href={`https://airtable.com/appep0KBedENs1fkW/pagnQjbOW4JoXNNax/form?prefill_JD+SBS+ID=${slug}`}
+      >
+        Feedback
+      </a>
     </div>
   </div>
 </Slice>
