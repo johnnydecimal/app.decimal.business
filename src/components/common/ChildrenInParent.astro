@@ -88,9 +88,7 @@ const processedIds = await Promise.all(
     <Slice id="ChildrenInParentLabel" className="secondary-content-bg">
       <div class="layout-grid-left-right">
         <div />
-        {parentType === "system" && (
-          <h2 class="layout-right-item">Areas in this system</h2>
-        )}
+        {parentType === "system" && <h2 class="layout-right-item" />}
         {parentType === "area" && (
           <h2 class="layout-right-item">Categories in this area</h2>
         )}
@@ -104,21 +102,24 @@ const processedIds = await Promise.all(
   )
 }
 
-<Slice id="HiddenNotice" className="main-text secondary-content-bg">
-  <div class="layout-grid-left-right">
-    <div class="layout-left-item"></div>
-    <div class="layout-right-item">
-      <blockquote>
-        <p>
-          Note that much of the site is hidden like this ░░░░░ as you are not
-          logged in. <strong>The site is under construction</strong>. See the <a
-            href="/00.21">welcome page at 00.21</a
-          >.
-        </p>
-      </blockquote>
-    </div>
-  </div>
-</Slice>
+{
+  !userId ? (
+    <Slice id="HiddenNotice" className="main-text secondary-content-bg">
+      <div class="layout-grid-left-right">
+        <div class="layout-left-item" />
+        <div class="layout-right-item">
+          <blockquote>
+            <p>
+              Note that much of the site is hidden like this ░░░░░ as you are
+              not logged in. <strong>The site is under construction</strong>.
+              See the <a href="/00.21">welcome page at 00.21</a>.
+            </p>
+          </blockquote>
+        </div>
+      </div>
+    </Slice>
+  ) : null
+}
 
 <Slice id="ChildrenInParentList" className="secondary-content-bg">
   <ol class="acid-list">

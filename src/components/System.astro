@@ -10,6 +10,8 @@ import Slice from "@components/common/Slice.astro";
 import FurtherReadingLinks from "@components/common/FurtherReadingLinks.astro";
 import ChildrenInParent from "@components/common/ChildrenInParent.astro";
 
+const { userId } = Astro.locals.auth();
+
 const systemEntry = system["J82"] as SystemEntry;
 const systemTitle = systemEntry.title;
 const systemDescription = await parseMd(systemEntry.description);
@@ -33,22 +35,22 @@ const systemOverview = await parseMd(
 </Slice>
 
 {
-  systemDescription ? (
+  !userId ? (
     <Slice id="SystemDescription" className="main-text">
       <div class="layout-grid-left-right">
         <div />
         <div class="layout-right-item" set:html={systemDescription} />
       </div>
     </Slice>
+
+    <Slice id="SystemOverview" className="main-text">
+      <div class="layout-grid-left-right">
+        <h3 class="layout-left-item"></h3>
+        <div class="layout-right-item" set:html={systemOverview} />
+      </div>
+    </Slice>
   ) : null
 }
-
-<Slice id="SystemOverview" className="main-text">
-  <div class="layout-grid-left-right">
-    <h3 class="layout-left-item"></h3>
-    <div class="layout-right-item" set:html={systemOverview} />
-  </div>
-</Slice>
 
 <FurtherReadingLinks number={systemEntry.number} label="Help" />
 
