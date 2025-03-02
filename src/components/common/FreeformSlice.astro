@@ -24,7 +24,9 @@ const freeformSections = await Promise.all(
     freeformSections.map((freeformSection) => (
       <div class="layout-grid-left-right">
         <div class="layout-left-item">
-          <h3>{freeformSection.header}</h3>
+          <h3 id={freeformSection.header.toLowerCase()}>
+            {freeformSection.header}
+          </h3>
         </div>
         <div class="layout-right-item">
           <div set:html={freeformSection.content} />

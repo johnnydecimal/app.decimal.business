@@ -124,6 +124,10 @@ html {
     }
   }
 
+  hr {
+    border: 0.5px dotted var(--border-accent);
+  }
+
   ol,
   ul {
     list-style: none;

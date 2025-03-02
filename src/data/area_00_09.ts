@@ -11,6 +11,7 @@ import id_00_31 from "@data/sb_ts/00.31-terms-of-service";
 import id_00_32 from "@data/sb_ts/00.32-privacy-policy";
 import sb_00_99 from "@data/sb_ts/00.99-test-standard-page";
 import id_02_11 from "@data/sb_ts/02.11-user-stories";
+import id_02_12 from "@data/sb_ts/02.12-definitions";
 import fr_02_11_FR1 from "@data/sb_ts/02.11+FR1-jeff";
 import fr_02_11_FR2 from "@data/sb_ts/02.11+FR2-gardener";
 import fr_02_11_FR3 from "@data/sb_ts/02.11+FR3-accountant";
@@ -216,21 +217,12 @@ export const area_00_09: FlattenedData = {
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
   },
-  "02.11": {
-    ...id_02_11,
-  },
-  "02.11+FR1": {
-    ...fr_02_11_FR1,
-  },
-  "02.11+FR2": {
-    ...fr_02_11_FR2,
-  },
-  "02.11+FR3": {
-    ...fr_02_11_FR3,
-  },
-  "02.11+FR4": {
-    ...fr_02_11_FR4,
-  },
+  "02.11": { ...id_02_11 },
+  "02.11+FR1": { ...fr_02_11_FR1 },
+  "02.11+FR2": { ...fr_02_11_FR2 },
+  "02.11+FR3": { ...fr_02_11_FR3 },
+  "02.11+FR4": { ...fr_02_11_FR4 },
+  "02.12": { ...id_02_12 },
   "00.99": {
     // The test page with every element. Needs to be hidden.
     ...sb_00_99,
