@@ -10,9 +10,10 @@ const clerkClient = createClerkClient({
 
 const user = userId && (await clerkClient.users.getUser(userId));
 
-let _1_tos;
+let _1_tos, _2_community;
 if (user) {
   _1_tos = user.publicMetadata?.onboarding?._1_tos;
+  _2_community = user.publicMetadata?.onboarding?._2_community;
 }
 ---
 
@@ -64,6 +65,56 @@ if (user) {
           </div>
         </div>
       </Slice>
+
+      <Slice id="GetStarted-Community" className="main-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Community</h3>
+          <div class="layout-right-item">
+            {!_2_community ? (
+              <>
+                <p>
+                  We've designed this system with the community at its heart.
+                  You'll have a nicer time, and be better supported, if you join
+                  one or both of the forum, and Discord.
+                </p>
+                <p>
+                  The forum is simpler and slower. Whereas Discord is more of an
+                  always-on chat channel. If you're unsure, start with the
+                  forum.
+                </p>
+                <p>
+                  At the bottom of every page there are links to these
+                  communities. These links take you to a specific channel where
+                  you can get targeted help.
+                </p>
+                <p>
+                  There's also a private feedback form if you want to send us a
+                  message directly.
+                </p>
+                <p>
+                  Head over to <a href="/00.13">00.13 Forum & Discord links</a>{" "}
+                  and sign yourself up. Send us a little welcome message, then
+                  come back here and check the box.
+                </p>
+              </>
+            ) : null}
+            <p>
+              <input
+                type="checkbox"
+                id="community"
+                checked={_2_community}
+                disabled={_2_community}
+              />
+              <span
+                id="communityText"
+                class={_2_community ? "community-agreed" : ""}
+              >
+                I'm in!
+              </span>
+            </p>
+          </div>
+        </div>
+      </Slice>
     </>
   )
 }
@@ -72,6 +123,7 @@ if (user) {
   import { actions } from "astro:actions";
 
   document.addEventListener("DOMContentLoaded", async () => {
+    // #region TOS
     const termsOfServiceCheckbox = document.getElementById(
       "termsOfService"
     ) as HTMLInputElement;
@@ -88,12 +140,39 @@ if (user) {
         termsOfServiceCheckbox.disabled = true;
 
         // Update metadata
+        // TODO handle errors throughout this file
         const { data, error } = await actions.setPublicMetadata({
           key: "onboarding._1_tos",
           value: new Date().toISOString(),
         });
       }
     });
+    // #endregion
+
+    // #region Community
+    const communityCheckbox = document.getElementById(
+      "community"
+    ) as HTMLInputElement;
+    const communityText = document.getElementById("communityText");
+
+    if (!communityCheckbox)
+      throw new Error("🚨 communityCheckbox doesn't exist!");
+    if (!communityText)
+      throw new Error("🚨 communityText element doesn't exist!");
+
+    communityCheckbox.addEventListener("change", async () => {
+      if (communityCheckbox.checked) {
+        communityText.classList.add("community-agreed");
+        communityCheckbox.disabled = true;
+
+        // Update metadata
+        const { data, error } = await actions.setPublicMetadata({
+          key: "onboarding._2_community",
+          value: new Date().toISOString(),
+        });
+      }
+    });
+    // #endregion
   });
 </script>
 
@@ -101,6 +180,10 @@ if (user) {
   @use "@styles/common" as *;
 
   .tos-agreed {
+    text-decoration: line-through;
+  }
+
+  .community-agreed {
     text-decoration: line-through;
   }
 </style>
