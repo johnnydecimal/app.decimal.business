@@ -10,10 +10,12 @@ const clerkClient = createClerkClient({
 
 const user = userId && (await clerkClient.users.getUser(userId));
 
-let _1_tos, _2_community;
+let _1_tos, _2_community, _3_settings, _4_folders;
 if (user) {
   _1_tos = user.publicMetadata?.onboarding?._1_tos;
   _2_community = user.publicMetadata?.onboarding?._2_community;
+  _3_settings = user.publicMetadata?.onboarding?._3_settings;
+  _4_folders = user.publicMetadata?.onboarding?._4_folders;
 }
 ---
 
@@ -66,7 +68,10 @@ if (user) {
         </div>
       </Slice>
 
-      <Slice id="GetStarted-Community" className="main-text">
+      <Slice
+        id="GetStarted-Community"
+        className={`main-text ${_1_tos ? "" : "tos-not-agreed"}`}
+      >
         <div class="layout-grid-left-right">
           <h3 class="layout-left-item">Community</h3>
           <div class="layout-right-item">
@@ -92,9 +97,15 @@ if (user) {
                   message directly.
                 </p>
                 <p>
-                  Head over to <a href="/00.13">00.13 Forum & Discord links</a>{" "}
-                  and sign yourself up. Send us a little welcome message, then
-                  come back here and check the box.
+                  Head over to <a href="/00.13">00.13 Forum & Discord links</a>,
+                  sign yourself up, and send us a little welcome message.
+                </p>
+                <p>
+                  Now the point of this is that{" "}
+                  <em>you ask for help if you need it</em>! I can't emphasise
+                  this enough: you didn't just buy a bunch of words on a
+                  website. You bought our support. So if you need something —
+                  anything — just ask.
                 </p>
               </>
             ) : null}
@@ -103,13 +114,107 @@ if (user) {
                 type="checkbox"
                 id="community"
                 checked={_2_community}
-                disabled={_2_community}
+                disabled={!_1_tos || _2_community}
               />
               <span
                 id="communityText"
                 class={_2_community ? "community-agreed" : ""}
               >
-                I'm in!
+                I'm in! And I promise to ask for help if I need it.
+              </span>
+            </p>
+          </div>
+        </div>
+      </Slice>
+
+      <Slice
+        id="GetStarted-Settings"
+        className={`main-text ${_1_tos ? "" : "tos-not-agreed"}`}
+      >
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Settings</h3>
+          <div class="layout-right-item">
+            {!_3_settings ? (
+              <>
+                <p>
+                  The system works 'out of the box', but there are some settings
+                  that change how it looks, and let us know which app you use
+                  for your JDex.
+                </p>
+                <p>
+                  When you download your folder structure & JDex files, you can
+                  choose to have them with emoji 👋 or not, and to use the ■
+                  square symbol on headers.
+                </p>
+                <p>
+                  Emoji is just a personal preference. We think they're really
+                  useful -- they actually help your brain anchor on to concepts
+                  and remember where things are. But as this is{" "}
+                  <em>business</em>, some of you might not want that. So they're{" "}
+                  <strong>off</strong> by default.
+                </p>
+                <p>
+                  The ■ squares are recommended, and are <strong>on</strong> by
+                  default. But some cloud services, notably Dropbox, won't
+                  synchronise folders with <em>any</em> special characters. So
+                  you might need to turn them off.
+                </p>
+                <p>
+                  There's also a setting where you tell us which app you're
+                  using for your JDex. And if you use Obsidian, you enter your
+                  vault name. This enables the link at the bottom of each page
+                  that opens the entry in your JDex. It's to the right of the ↗
+                  arrow.
+                </p>
+              </>
+            ) : null}
+            <p>
+              <input
+                type="checkbox"
+                id="settings"
+                checked={_3_settings}
+                disabled={!_1_tos || _3_settings}
+              />
+              <span
+                id="settingsText"
+                class={_3_settings ? "settings-agreed" : ""}
+              >
+                I've configured my settings.
+              </span>
+            </p>
+          </div>
+        </div>
+      </Slice>
+
+      <Slice
+        id="GetStarted-Folders"
+        className={`main-text ${_1_tos ? "" : "tos-not-agreed"}`}
+      >
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Folders</h3>
+          <div class="layout-right-item">
+            {!_4_folders ? (
+              <>
+                <p>
+                  Time to download your folder structure. This is where you'll
+                  actually save your files.
+                </p>
+                <p>
+                  Head over to <a href="/01.03">01.03 System downloads</a>,
+                  click the <strong>Download folders</strong> button, and follow
+                  the instructions there to move it to the correct location.
+                </p>
+              </>
+            ) : null}
+            <p>
+              <input
+                type="checkbox"
+                id="folders"
+                checked={_4_folders}
+                disabled={!_1_tos || _4_folders}
+              />
+              <span id="foldersText" class={_4_folders ? "folders-agreed" : ""}>
+                I've downloaded and installed my folders.
               </span>
             </p>
           </div>
@@ -123,12 +228,26 @@ if (user) {
   import { actions } from "astro:actions";
 
   document.addEventListener("DOMContentLoaded", async () => {
-    // #region TOS
+    // #region Get elements
     const termsOfServiceCheckbox = document.getElementById(
       "termsOfService"
     ) as HTMLInputElement;
     const tosText = document.getElementById("tosText");
+    const communityCheckbox = document.getElementById(
+      "community"
+    ) as HTMLInputElement;
+    const communityText = document.getElementById("communityText");
+    const settingsCheckbox = document.getElementById(
+      "settings"
+    ) as HTMLInputElement;
+    const settingsText = document.getElementById("settingsText");
+    const foldersCheckbox = document.getElementById(
+      "folders"
+    ) as HTMLInputElement;
+    const foldersText = document.getElementById("foldersText");
+    // #endregion
 
+    // #region TOS
     if (!termsOfServiceCheckbox)
       throw new Error("🚨 termsOfServiceCheckbox doesn't exist!");
     if (!tosText) throw new Error("🚨 tosText element doesn't exist!");
@@ -140,21 +259,31 @@ if (user) {
         termsOfServiceCheckbox.disabled = true;
 
         // Update metadata
-        // TODO handle errors throughout this file
+        // FIXME handle errors throughout this file
         const { data, error } = await actions.setPublicMetadata({
           key: "onboarding._1_tos",
           value: new Date().toISOString(),
         });
+
+        // Remove tos-not-agreed class
+        document
+          .getElementById("GetStarted-Community")
+          ?.classList.remove("tos-not-agreed");
+        document
+          .getElementById("GetStarted-Settings")
+          ?.classList.remove("tos-not-agreed");
+        document
+          .getElementById("GetStarted-Folders")
+          ?.classList.remove("tos-not-agreed");
+        // Enable checkboxes
+        communityCheckbox.disabled = false;
+        settingsCheckbox.disabled = false;
+        foldersCheckbox.disabled = false;
       }
     });
     // #endregion
 
     // #region Community
-    const communityCheckbox = document.getElementById(
-      "community"
-    ) as HTMLInputElement;
-    const communityText = document.getElementById("communityText");
-
     if (!communityCheckbox)
       throw new Error("🚨 communityCheckbox doesn't exist!");
     if (!communityText)
@@ -173,6 +302,44 @@ if (user) {
       }
     });
     // #endregion
+
+    // #region Settings
+    if (!settingsCheckbox)
+      throw new Error("🚨 settingsCheckbox doesn't exist!");
+    if (!settingsText)
+      throw new Error("🚨 settingsText element doesn't exist!");
+
+    settingsCheckbox.addEventListener("change", async () => {
+      if (settingsCheckbox.checked) {
+        settingsText.classList.add("settings-agreed");
+        settingsCheckbox.disabled = true;
+
+        // Update metadata
+        const { data, error } = await actions.setPublicMetadata({
+          key: "onboarding._3_settings",
+          value: new Date().toISOString(),
+        });
+      }
+    });
+    // #endregion
+
+    // #region Folders
+    if (!foldersCheckbox) throw new Error("🚨 foldersCheckbox doesn't exist!");
+    if (!foldersText) throw new Error("🚨 foldersText element doesn't exist!");
+
+    foldersCheckbox.addEventListener("change", async () => {
+      if (foldersCheckbox.checked) {
+        foldersText.classList.add("folders-agreed");
+        foldersCheckbox.disabled = true;
+
+        // Update metadata
+        const { data, error } = await actions.setPublicMetadata({
+          key: "onboarding._4_folders",
+          value: new Date().toISOString(),
+        });
+      }
+    });
+    // #endregion
   });
 </script>
 
@@ -185,5 +352,20 @@ if (user) {
 
   .community-agreed {
     text-decoration: line-through;
+  }
+
+  .settings-agreed {
+    text-decoration: line-through;
+  }
+
+  :global(.tos-not-agreed) {
+    // Only apply opacity to text elements
+    h3,
+    p,
+    span,
+    a,
+    label {
+      opacity: 0.3;
+    }
   }
 </style>

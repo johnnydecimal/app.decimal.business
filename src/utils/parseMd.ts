@@ -1,6 +1,6 @@
 import { marked } from "marked";
-// import { markedSmartypants } from "marked-smartypants";
-// marked.use(markedSmartypants());
+import { markedSmartypants } from "marked-smartypants";
+marked.use(markedSmartypants({ config: "De" }));
 
 import obfuscate from "./obfuscate";
 import wikiLinkify from "./wikiLinkify";
