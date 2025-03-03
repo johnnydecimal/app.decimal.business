@@ -106,8 +106,10 @@ export const server = {
 
         // Build nested structure
         for (let i = 0; i < keys.length - 1; i++) {
-          temp[keys[i]] = temp[keys[i]] || {};
-          temp = temp[keys[i]];
+          if (!temp[keys[i]] || typeof temp[keys[i]] !== "object") {
+            temp[keys[i]] = {};
+          }
+          temp = temp[keys[i]] as { [key: string]: unknown };
         }
         temp[keys[keys.length - 1]] = input.value;
 
@@ -116,9 +118,16 @@ export const server = {
         });
 
         // Verify the nested value was set correctly
-        let verifyValue = user.publicMetadata;
+        let verifyValue: any = user.publicMetadata;
         for (const key of keys) {
-          verifyValue = verifyValue[key];
+          if (verifyValue && typeof verifyValue === "object") {
+            verifyValue = verifyValue[key];
+          } else {
+            throw new ActionError({
+              code: "INTERNAL_SERVER_ERROR",
+              message: `Cannot access nested property: ${key}`,
+            });
+          }
         }
         if (verifyValue !== input.value) {
           throw new ActionError({
