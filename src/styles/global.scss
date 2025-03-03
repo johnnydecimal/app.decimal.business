@@ -239,7 +239,7 @@ html {
 }
 .breadcrumb .layout-grid-left-right,
 #ChildrenInParentList .layout-grid-left-right,
-// #AccountManagement .layout-grid-left-right,
+#AccountManagement .layout-grid-left-right,
 footer .layout-grid-left-right {
   @include r.phone-only {
     grid-template-columns: 60px auto;
