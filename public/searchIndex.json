@@ -379,21 +379,14 @@
   },
   {
     "number": "00.12",
-    "title": "How to get started",
-    "type": "id",
-    "description": "Here's how to get everything set up and running. A step-by-step guide. Start here!",
+    "title": "Get started",
+    "type": "adHoc",
+    "description": "Here’s how to get everything set up and running. A step-by-step guide.",
     "metadata": {
-      "createdDate": "2025-03-02T22:35:16.705Z",
-      "updatedDate": "2025-03-02T22:35:16.705Z"
+      "createdDate": "2025-01-01",
+      "updatedDate": "2025-01-01"
     },
-    "smallBusiness": {
-      "freeform": [
-        {
-          "header": "🚧",
-          "content": "This page is under construction."
-        }
-      ]
-    },
+    "smallBusiness": {},
     "isPublic": true
   },
   {

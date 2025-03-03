@@ -37,18 +37,29 @@ if (user) {
         <div class="layout-grid-left-right">
           <h3 class="layout-left-item">Terms of Service</h3>
           <div class="layout-right-item">
+            {!_1_tos ? (
+              <>
+                <p>
+                  Before you do anything else, you need to read and agree to the
+                  Terms of Service.
+                </p>
+                <p>
+                  They're very short, and written to be read by a human. It'll
+                  take two minutes. <a href="/00.31">Go and read them now</a>,
+                  then come back here and check this box.
+                </p>
+              </>
+            ) : null}
             <p>
-              Before you do anything else, you need to read and agree to the
-              Terms of Service.
-            </p>
-            <p>
-              They're very short, and written to be read by a human. It'll take
-              two minutes. <a href="/00.31">Go and read them now</a>, then come
-              back here and check this box.
-            </p>
-            <p>
-              <input type="checkbox" id="termsOfService" checked={_1_tos} /> I
-              agree to the Terms of Service.
+              <input
+                type="checkbox"
+                id="termsOfService"
+                checked={_1_tos}
+                disabled={_1_tos}
+              />
+              <span id="tosText" class={_1_tos ? "tos-agreed" : ""}>
+                I agree to the Terms of Service.
+              </span>
             </p>
           </div>
         </div>
@@ -64,18 +75,32 @@ if (user) {
     const termsOfServiceCheckbox = document.getElementById(
       "termsOfService"
     ) as HTMLInputElement;
+    const tosText = document.getElementById("tosText");
+
     if (!termsOfServiceCheckbox)
       throw new Error("🚨 termsOfServiceCheckbox doesn't exist!");
+    if (!tosText) throw new Error("🚨 tosText element doesn't exist!");
 
     termsOfServiceCheckbox.addEventListener("change", async () => {
-      const { data, error } = await actions.setPublicMetadata({
-        key: "onboarding._1_tos",
-        value: new Date().toISOString(),
-      });
+      if (termsOfServiceCheckbox.checked) {
+        // Apply strikethrough and disable checkbox
+        tosText.classList.add("tos-agreed");
+        termsOfServiceCheckbox.disabled = true;
+
+        // Update metadata
+        const { data, error } = await actions.setPublicMetadata({
+          key: "onboarding._1_tos",
+          value: new Date().toISOString(),
+        });
+      }
     });
   });
 </script>
 
 <style lang="scss">
   @use "@styles/common" as *;
+
+  .tos-agreed {
+    text-decoration: line-through;
+  }
 </style>

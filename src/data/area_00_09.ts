@@ -75,7 +75,7 @@ export const area_00_09: FlattenedData = {
     title: "Get started",
     type: "adHoc",
     description:
-      "Here’s how to get everything set up and running. A step-by-step guide.",
+      "Here's how to get everything set up and running. A step-by-step guide.",
     isPublic: true,
     metadata: { createdDate: "2025-01-01", updatedDate: "2025-01-01" },
     extensions: { smallBusiness: {} },
