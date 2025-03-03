@@ -12,29 +12,50 @@ const user = userId && (await clerkClient.users.getUser(userId));
 
 let _1_tos;
 if (user) {
-  _1_tos = user.publicMetadata.onboarding._1_tos;
+  _1_tos = user.publicMetadata?.onboarding?._1_tos;
 }
 ---
 
-<Slice id="GetStarted" className="main-text">
-  <div class="layout-grid-left-right">
-    <h3 class="layout-left-item">Terms of Service</h3>
-    <div class="layout-right-item">
-      <p>
-        Before you do anything else, you need to read and agree to the Terms of
-        Service.
-      </p>
-      <p>
-        They're very short, and written to be read by a human. It'll take two
-        minutes. <a href="/00.31">Go and read them now</a>, then come back here
-        and check this box.
-      </p>
-      <p>
-        <input type="checkbox" id="termsOfService" /> I agree to the Terms of Service.
-      </p>
-    </div>
-  </div>
-</Slice>
+{
+  !user ? (
+    <Slice className="main-text">
+      <div class="layout-grid-left-right">
+        <div />
+        <div class="layout-right-item">
+          <p>Loading your user data...</p>
+          <p>
+            (If you're not signed in, nothing else is going to happen. When you
+            are signed in, this page guides you through the initial setup of
+            your system.)
+          </p>
+        </div>
+      </div>
+    </Slice>
+  ) : (
+    <>
+      <Slice id="GetStarted-TOS" className="main-text">
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">Terms of Service</h3>
+          <div class="layout-right-item">
+            <p>
+              Before you do anything else, you need to read and agree to the
+              Terms of Service.
+            </p>
+            <p>
+              They're very short, and written to be read by a human. It'll take
+              two minutes. <a href="/00.31">Go and read them now</a>, then come
+              back here and check this box.
+            </p>
+            <p>
+              <input type="checkbox" id="termsOfService" checked={_1_tos} /> I
+              agree to the Terms of Service.
+            </p>
+          </div>
+        </div>
+      </Slice>
+    </>
+  )
+}
 
 <script>
   import { actions } from "astro:actions";
