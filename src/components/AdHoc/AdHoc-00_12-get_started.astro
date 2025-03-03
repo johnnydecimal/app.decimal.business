@@ -10,12 +10,13 @@ const clerkClient = createClerkClient({
 
 const user = userId && (await clerkClient.users.getUser(userId));
 
-let _1_tos, _2_community, _3_settings, _4_folders;
+let _1_tos, _2_community, _3_settings, _4_folders, _5_jdex;
 if (user) {
   _1_tos = user.publicMetadata?.onboarding?._1_tos;
   _2_community = user.publicMetadata?.onboarding?._2_community;
   _3_settings = user.publicMetadata?.onboarding?._3_settings;
   _4_folders = user.publicMetadata?.onboarding?._4_folders;
+  _5_jdex = user.publicMetadata?.onboarding?._5_jdex;
 }
 ---
 
@@ -61,7 +62,7 @@ if (user) {
                 disabled={_1_tos}
               />
               <span id="tosText" class={_1_tos ? "tos-agreed" : ""}>
-                I agree to the Terms of Service.
+                I agree to the Terms of Service
               </span>
             </p>
           </div>
@@ -94,7 +95,8 @@ if (user) {
                 </p>
                 <p>
                   There's also a private feedback form if you want to send us a
-                  message directly.
+                  message directly. And you can always{" "}
+                  <a href="mailto:hello@johnnydecimal.com">email me</a>.
                 </p>
                 <p>
                   Head over to <a href="/00.13">00.13 Forum & Discord links</a>,
@@ -104,8 +106,11 @@ if (user) {
                   Now the point of this is that{" "}
                   <em>you ask for help if you need it</em>! I can't emphasise
                   this enough: you didn't just buy a bunch of words on a
-                  website. You bought our support. So if you need something —
-                  anything — just ask.
+                  website. You bought our support.
+                </p>
+                <p>
+                  So if you need something — <em>anything</em> — just ask.{" "}
+                  <strong>There are no stupid questions.</strong>
                 </p>
               </>
             ) : null}
@@ -120,7 +125,7 @@ if (user) {
                 id="communityText"
                 class={_2_community ? "community-agreed" : ""}
               >
-                I'm in! And I promise to ask for help if I need it.
+                I'm in! And I promise to ask for help if I need it
               </span>
             </p>
           </div>
@@ -148,16 +153,19 @@ if (user) {
                 </p>
                 <p>
                   Emoji is just a personal preference. We think they're really
-                  useful -- they actually help your brain anchor on to concepts
-                  and remember where things are. But as this is{" "}
-                  <em>business</em>, some of you might not want that. So they're{" "}
-                  <strong>off</strong> by default.
+                  useful — they help your brain anchor on to concepts and
+                  remember where things are. We use them in our own system.
                 </p>
                 <p>
-                  The ■ squares are recommended, and are <strong>on</strong> by
-                  default. But some cloud services, notably Dropbox, won't
-                  synchronise folders with <em>any</em> special characters. So
-                  you might need to turn them off.
+                  But as this is <em>business</em>, some of you might not want
+                  that. Oh and they look rubbish on Windows. Thanks, Microsoft.
+                  So they're <strong>off</strong> by default.
+                </p>
+                <p>
+                  The ■ header squares are recommended, and are{" "}
+                  <strong>on</strong> by default. But some cloud services,
+                  notably Dropbox, won't synchronise folders with <em>any</em>{" "}
+                  special characters. So you might need to turn them off.
                 </p>
                 <p>
                   There's also a setting where you tell us which app you're
@@ -179,7 +187,7 @@ if (user) {
                 id="settingsText"
                 class={_3_settings ? "settings-agreed" : ""}
               >
-                I've configured my settings.
+                I've configured my settings
               </span>
             </p>
           </div>
@@ -214,7 +222,43 @@ if (user) {
                 disabled={!_1_tos || _4_folders}
               />
               <span id="foldersText" class={_4_folders ? "folders-agreed" : ""}>
-                I've downloaded and installed my folders.
+                I've downloaded and installed my folders
+              </span>
+            </p>
+          </div>
+        </div>
+      </Slice>
+
+      <Slice
+        id="GetStarted-JDex"
+        className={`main-text ${_1_tos ? "" : "tos-not-agreed"}`}
+      >
+        <div class="layout-grid-left-right">
+          <h3 class="layout-left-item">JDex files</h3>
+          <div class="layout-right-item">
+            {!_5_jdex ? (
+              <>
+                <p>
+                  Time to download your JDex files. This is where you'll
+                  actually save your files.
+                </p>
+                <p>
+                  Head over to <a href="/01.03">01.03 System downloads</a>,
+                  click the <strong>Download JDex files</strong> button, and
+                  follow the instructions there to move it to the correct
+                  location.
+                </p>
+              </>
+            ) : null}
+            <p>
+              <input
+                type="checkbox"
+                id="jdex"
+                checked={_5_jdex}
+                disabled={!_1_tos || _5_jdex}
+              />
+              <span id="jdexText" class={_5_jdex ? "jdex-agreed" : ""}>
+                I've downloaded and installed my JDex files
               </span>
             </p>
           </div>
@@ -245,6 +289,9 @@ if (user) {
       "folders"
     ) as HTMLInputElement;
     const foldersText = document.getElementById("foldersText");
+    const jdexCheckbox = document.getElementById("jdex") as HTMLInputElement;
+    const jdexText = document.getElementById("jdexText");
+    const onboardingBanner = document.getElementById("OnboardingBanner");
     // #endregion
 
     // #region TOS
@@ -275,10 +322,14 @@ if (user) {
         document
           .getElementById("GetStarted-Folders")
           ?.classList.remove("tos-not-agreed");
+        document
+          .getElementById("GetStarted-JDex")
+          ?.classList.remove("tos-not-agreed");
         // Enable checkboxes
         communityCheckbox.disabled = false;
         settingsCheckbox.disabled = false;
         foldersCheckbox.disabled = false;
+        jdexCheckbox.disabled = false;
       }
     });
     // #endregion
@@ -340,6 +391,30 @@ if (user) {
       }
     });
     // #endregion
+
+    // #region JDex
+    if (!jdexCheckbox) throw new Error("🚨 jdexCheckbox doesn't exist!");
+    if (!jdexText) throw new Error("🚨 jdexText element doesn't exist!");
+
+    jdexCheckbox.addEventListener("change", async () => {
+      if (jdexCheckbox.checked) {
+        jdexText.classList.add("jdex-agreed");
+        jdexCheckbox.disabled = true;
+
+        // Update metadata
+        const { data, error } = await actions.setPublicMetadata({
+          key: "onboarding._5_jdex",
+          value: new Date().toISOString(),
+        });
+        const { data: dataComplete, error: errorComplete } =
+          await actions.setPublicMetadata({
+            key: "onboarding.complete",
+            value: true,
+          });
+        if (onboardingBanner) onboardingBanner.style.display = "none";
+      }
+    });
+    // #endregion
   });
 </script>
 
@@ -355,6 +430,14 @@ if (user) {
   }
 
   .settings-agreed {
+    text-decoration: line-through;
+  }
+
+  .folders-agreed {
+    text-decoration: line-through;
+  }
+
+  .jdex-agreed {
     text-decoration: line-through;
   }
 
