@@ -7,7 +7,7 @@ interface Props {
 const { className, id } = Astro.props;
 ---
 
-<div id={id} class="Slice" class:list={className}>
+<div id={id} class=`Slice ${className}`>
   <div class="inner-container">
     <slot />
   </div>

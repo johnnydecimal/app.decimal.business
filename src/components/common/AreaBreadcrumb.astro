@@ -9,7 +9,7 @@
  * 4. When I'm viewing an A:FR.
  */
 interface Props {
-  thisEntry: IdEntry | CategoryEntry | FurtherReadingEntry;
+  thisEntry: IdEntry | CategoryEntry | FurtherReadingEntry | AdHocEntry;
 }
 const { thisEntry } = Astro.props;
 
@@ -19,10 +19,11 @@ import system, {
   type CategoryEntry,
   type IdEntry,
   type FurtherReadingEntry,
+  type AdHocEntry,
 } from "@data/smallBusinessFlat";
 
 function getParentArea(
-  thisEntry: IdEntry | CategoryEntry | FurtherReadingEntry
+  thisEntry: IdEntry | CategoryEntry | FurtherReadingEntry | AdHocEntry
 ): {
   parentANumber: string;
   parentATitle: string;

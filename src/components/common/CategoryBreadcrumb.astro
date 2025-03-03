@@ -7,7 +7,7 @@
  * 3. When I'm viewing a C:FR.
  */
 interface Props {
-  thisEntry: IdEntry | FurtherReadingEntry;
+  thisEntry: IdEntry | FurtherReadingEntry | AdHocEntry;
 }
 const { thisEntry } = Astro.props;
 
@@ -16,9 +16,10 @@ import system, {
   type CategoryEntry,
   type IdEntry,
   type FurtherReadingEntry,
+  type AdHocEntry,
 } from "@data/smallBusinessFlat";
 
-function getParentArea(thisEntry: IdEntry | FurtherReadingEntry): {
+function getParentArea(thisEntry: IdEntry | FurtherReadingEntry | AdHocEntry): {
   parentCNumber: string;
   parentCTitle: string;
 } {
