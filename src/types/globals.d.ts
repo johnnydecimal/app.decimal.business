@@ -13,6 +13,7 @@ declare global {
       _3_settings?: string;
       _4_folders?: string;
       _5_jdex?: string;
+      complete?: boolean;
     };
   }
 

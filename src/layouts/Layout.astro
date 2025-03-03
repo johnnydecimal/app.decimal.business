@@ -13,6 +13,8 @@ import AccountManagement from "@components/AccountManagement.astro";
 import Footer from "@components/common/Footer.astro";
 // import { SignedOut } from "@clerk/astro/components";
 import SignUpOrSignInBanner from "@components/SignUpOrSignInBanner.astro";
+import { SignedOut, SignedIn } from "@clerk/astro/components";
+import OnboardingBanner from "@components/OnboardingBanner.astro";
 const { slug } = Astro.params;
 const { title } = Astro.props;
 ---
@@ -77,7 +79,13 @@ const { title } = Astro.props;
       /* In this new world, we're not using Clerk's components at this level.
          We handle all auth stuff down at the component level. */
     }
-    <SignUpOrSignInBanner />
+
+    <SignedOut>
+      <SignUpOrSignInBanner />
+    </SignedOut>
+    <SignedIn>
+      <OnboardingBanner />
+    </SignedIn>
     <Search />
     <main>
       <slot />

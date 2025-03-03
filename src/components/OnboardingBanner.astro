@@ -1,0 +1,43 @@
+---
+import Slice from "@components/common/Slice.astro";
+
+import { createClerkClient } from "@clerk/astro/server";
+const { userId } = Astro.locals.auth();
+const clerkClient = createClerkClient({
+  secretKey: import.meta.env.CLERK_SECRET_KEY,
+});
+const user = userId && (await clerkClient.users.getUser(userId));
+
+let complete;
+if (user) {
+  complete = user.publicMetadata?.onboarding?.complete;
+}
+---
+
+{
+  !complete && (
+    <Slice id="OnboardingBanner">
+      <p>
+        ⚠️ Complete your <a href="/00.12">get started</a> checklist ⚠️
+      </p>
+    </Slice>
+  )
+}
+
+<style lang="scss">
+  @use "@styles/common" as *;
+
+  :global(#OnboardingBanner) {
+    background-color: light-dark(#227, #ccd);
+    color: light-dark(#eef, #117);
+    a {
+      color: inherit;
+      text-decoration: underline;
+    }
+    p {
+      margin: 0;
+      padding: 0.5rem 0;
+      text-align: center;
+    }
+  }
+</style>
