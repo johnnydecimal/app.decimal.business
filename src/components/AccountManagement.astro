@@ -8,12 +8,9 @@ import slugToId from "@utils/slugToId";
 
 const { userId } = Astro.locals.auth();
 const { slug } = Astro.params;
-console.log("🚀 ~ AccountManagement.astro:11 ~ slug:", slug);
 
 const id = slugToId(slug);
-console.log("🚀 ~ AccountManagement.astro:13 ~ id:", id);
 const entry = system[id];
-console.log("🚀 ~ AccountManagement.astro:14 ~ entry:", entry);
 
 const idTitle = entry.title;
 
