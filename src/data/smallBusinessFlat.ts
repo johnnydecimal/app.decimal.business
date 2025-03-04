@@ -65,21 +65,21 @@ export interface IdEntry extends BaseEntry {
   };
 }
 
-export interface OpsEntry extends BaseEntry {
-  type: "opsManual";
-  // isHeader?: boolean;
-  extensions: {
-    // TODO these are too restrictive: just use the HOWTO pattern
-    smallBusinessOpsManual: {
-      overview: string; // remember the ID has a description
-      diagram?: string;
-      triggers: string;
-      inputs: string;
-      process: string;
-      outputs: string;
-    };
-  };
-}
+// export interface OpsEntry extends BaseEntry {
+//   type: "opsManual";
+//   // isHeader?: boolean;
+//   extensions: {
+//     // TODO these are too restrictive: just use the HOWTO pattern
+//     smallBusinessOpsManual: {
+//       overview: string; // remember the ID has a description
+//       diagram?: string;
+//       triggers: string;
+//       inputs: string;
+//       process: string;
+//       outputs: string;
+//     };
+//   };
+// }
 
 export interface FurtherReadingEntry {
   // Doesn't extend BaseEntry: no description
@@ -90,6 +90,20 @@ export interface FurtherReadingEntry {
   metadata: Metadata;
   extensions: {
     furtherReading: {
+      text: string; // freeform Markdown; usually just a few paras
+    };
+  };
+}
+
+export interface OpsManualEntry {
+  // Doesn't extend BaseEntry: no description
+  number: string;
+  title: string;
+  type: "opsManual";
+  isPublic?: boolean;
+  metadata: Metadata;
+  extensions: {
+    opsManual: {
       text: string; // freeform Markdown; usually just a few paras
     };
   };
@@ -117,7 +131,7 @@ export type FlattenedEntry =
   | AreaEntry
   | CategoryEntry
   | IdEntry
-  | OpsEntry
+  | OpsManualEntry
   | FurtherReadingEntry
   | AdHocEntry
   | FreeformEntry;
