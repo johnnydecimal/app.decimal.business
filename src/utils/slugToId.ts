@@ -1,7 +1,7 @@
 function slugToId(slug: string | undefined): string {
   if (slug === undefined || slug === "index.html") {
     return "J82";
-  } else if (slug === "favicon.svg") {
+  } else if (slug.includes(".svg") || slug.includes(".png")) {
     // Firefox preloading it?
     // BUG probably needs fixing
     // If you remove this as a return path, and load the home page in Firefox,

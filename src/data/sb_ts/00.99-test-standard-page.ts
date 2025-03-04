@@ -10,8 +10,8 @@ const entry: IdEntry = {
   "isHidden": true,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-03-04T03:31:17.771Z",
-    "updatedDate": "2025-03-04T03:31:17.771Z"
+    "createdDate": "2025-03-04T04:16:16.227Z",
+    "updatedDate": "2025-03-04T04:16:16.227Z"
   },
   "extensions": {
     "smallBusiness": {
@@ -34,7 +34,7 @@ const entry: IdEntry = {
         },
         {
           "header": "Mermaid",
-          "content": "<div class=\"mermaid-light\">\n<pre class=\"mermaid\">\n---\ntitle: Reach and engagement of campaigns\nconfig:\n  theme: default\n---\nquadrantChart\n  x-axis Low Reach --> High Reach\n  y-axis Low Engagement --> High Engagement\n  quadrant-1 We should expand\n  quadrant-2 Need to promote\n  quadrant-3 Re-evaluate\n  quadrant-4 May be improved\n  Campaign A: [0.3, 0.6]\n  Campaign B: [0.45, 0.23]\n  Campaign C: [0.57, 0.69]\n  Campaign D: [0.78, 0.34]\n  Campaign E: [0.40, 0.34]\n  Campaign F: [0.35, 0.78]\n</pre>\n</div>\n\n<div class=\"mermaid-dark\">\n<pre class=\"mermaid\">\n---\ntitle: Reach and engagement of campaigns\nconfig:\n  theme: dark\n---\nquadrantChart\n  x-axis Low Reach --> High Reach\n  y-axis Low Engagement --> High Engagement\n  quadrant-1 We should expand\n  quadrant-2 Need to promote\n  quadrant-3 Re-evaluate\n  quadrant-4 May be improved\n  Campaign A: [0.3, 0.6]\n  Campaign B: [0.45, 0.23]\n  Campaign C: [0.57, 0.69]\n  Campaign D: [0.78, 0.34]\n  Campaign E: [0.40, 0.34]\n  Campaign F: [0.35, 0.78]\n</pre>\n</div>"
+          "content": "<pre class=\"mermaid mermaid-light\">\n---\ntitle: Reach and engagement of campaigns\nconfig:\n  theme: default\n---\nquadrantChart\n  x-axis Low Reach --> High Reach\n  y-axis Low Engagement --> High Engagement\n  quadrant-1 We should expand\n  quadrant-2 Need to promote\n  quadrant-3 Re-evaluate\n  quadrant-4 May be improved\n  Campaign A: [0.3, 0.6]\n  Campaign B: [0.45, 0.23]\n  Campaign C: [0.57, 0.69]\n  Campaign D: [0.78, 0.34]\n  Campaign E: [0.40, 0.34]\n  Campaign F: [0.35, 0.78]\n</pre>\n\n<pre class=\"mermaid mermaid-dark\">\n---\ntitle: Reach and engagement of campaigns\nconfig:\n  theme: dark\n---\nquadrantChart\n  x-axis Low Reach --> High Reach\n  y-axis Low Engagement --> High Engagement\n  quadrant-1 We should expand\n  quadrant-2 Need to promote\n  quadrant-3 Re-evaluate\n  quadrant-4 May be improved\n  Campaign A: [0.3, 0.6]\n  Campaign B: [0.45, 0.23]\n  Campaign C: [0.57, 0.69]\n  Campaign D: [0.78, 0.34]\n  Campaign E: [0.40, 0.34]\n  Campaign F: [0.35, 0.78]\n</pre>\n\n<pre class=\"mermaid mermaid-light\">\nflowchart TB\n    n1[\"Start\"]\n    n2[\"40-49 Library of creative inputs\"]\n    n3[\"Make a thing; do the creative work\"]\n    n4[\"Ad-hoc per-job input\"]\n    n5[\"50-59 Portfolio of creative outputs\"]\n    n6[\"Stop\"]\n    n1 --> n2\n    n1 --> n4\n    n2 ---> n3\n    n4 --> n3\n    n5 -->|Use the output from a previous job| n3\n    n5 --> n6\n    n3 -->|If you produced something reusable, save it in your library| n2\n    n3 ---> n5\n\n    n1@{ shape: start}\n    n2@{ shape: internal-storage}\n    n4@{ shape: manual-input}\n    n3@{ shape: proc}\n    n5@{ shape: internal-storage}\n    n6@{ shape: stop}\n\n    click n5 \"/90-99\"\n</pre>\n\n<pre class=\"mermaid mermaid-dark\">\n---\nconfig:\n  theme: dark\n---\nflowchart TB\n    n1[\"Start\"]\n    n2[\"40-49 Library of creative inputs\"]\n    n3[\"Make a thing; do the creative work\"]\n    n4[\"Ad-hoc per-job input\"]\n    n5[\"50-59 Portfolio of creative outputs\"]\n    n6[\"Stop\"]\n    n1 --> n2\n    n1 --> n4\n    n2 ---> n3\n    n4 --> n3\n    n5 -->|You might use an output from a previous job| n3\n    n5 --> n6\n    n3 ---> n5\n    n3 -->|If you produced something reusable, save it in your library| n2\n\n    n1@{ shape: start}\n    n2@{ shape: internal-storage}\n    n4@{ shape: manual-input}\n    n3@{ shape: proc}\n    n5@{ shape: internal-storage}\n    n6@{ shape: stop}\n</pre>"
         }
       ]
     }
