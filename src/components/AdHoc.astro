@@ -19,12 +19,7 @@ import SystemBreadcrumb from "@components/common/SystemBreadcrumb.astro";
 import AreaBreadcrumb from "@components/common/AreaBreadcrumb.astro";
 import CategoryBreadcrumb from "@components/common/CategoryBreadcrumb.astro";
 
-import system, {
-  type SystemEntry,
-  type AreaEntry,
-  type CategoryEntry,
-  type AdHocEntry,
-} from "@data/smallBusinessFlat";
+import system, { type AdHocEntry } from "@data/smallBusinessFlat";
 
 import AdHoc_00_00 from "@components/AdHoc/AdHoc_00_00.astro";
 import AdHoc_00_12 from "@components/AdHoc/AdHoc-00_12-get_started.astro";
@@ -37,23 +32,9 @@ const idTitle = system[id]?.title;
 const idEntry = system[id] as AdHocEntry;
 const idDescription = await parseMd(idEntry.description);
 // const idEmoji = idEntry.emoji;
-
-/* ------------------------------- Breadcrumbs ------------------------------ */
-const parentCNumber = idEntry.number.split(".")[0];
-const parentCEntry = system[parentCNumber] as CategoryEntry;
-const parentCTitle = parentCEntry.title;
-
-const firstDigit = parentCNumber.charAt(0);
-const parentANumber = `${firstDigit}0-${firstDigit}9`;
-const parentAEntry = system[parentANumber] as AreaEntry;
-const parentATitle = parentAEntry.title;
-
-const parentSNumber = "J82";
-const parentSEntry = system[parentSNumber] as SystemEntry;
-const parentSTitle = parentSEntry.title;
 ---
 
-<SystemBreadcrumb parentSTitle={parentSTitle} />
+<SystemBreadcrumb parentSTitle="Small business system" />
 
 <AreaBreadcrumb thisEntry={idEntry} />
 

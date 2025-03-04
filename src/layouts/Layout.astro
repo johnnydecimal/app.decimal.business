@@ -6,6 +6,7 @@ interface Props {
 
 import "node_modules/modern-normalize/modern-normalize.css";
 import "@styles/global.scss";
+const { title } = Astro.props;
 
 import Search from "@components/common/Search.astro";
 // import SignInPage from "@components/SignInPage.astro";
@@ -15,8 +16,6 @@ import Footer from "@components/common/Footer.astro";
 import SignUpOrSignInBanner from "@components/SignUpOrSignInBanner.astro";
 import { SignedOut, SignedIn } from "@clerk/astro/components";
 import OnboardingBanner from "@components/OnboardingBanner.astro";
-const { slug } = Astro.params;
-const { title } = Astro.props;
 ---
 
 <!-- 🐓🐓🐓 This system is dedicated to Wendy, Marie, and Belinda. We loved them very much. -->

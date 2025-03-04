@@ -8,10 +8,7 @@ interface Props {
 }
 const { area } = Astro.props;
 
-import system, {
-  type SystemEntry,
-  type AreaEntry,
-} from "@data/smallBusinessFlat";
+import system, { type AreaEntry } from "@data/smallBusinessFlat";
 import parseMd from "@utils/parseMd";
 import Slice from "./common/Slice.astro";
 import SystemBreadcrumb from "./common/SystemBreadcrumb.astro";
@@ -26,13 +23,9 @@ const areaExamples = sb?.examples && (await parseMd(sb.examples));
 const areaOverview = sb?.overview && (await parseMd(sb.overview));
 const areaExceptions = sb?.exceptions && (await parseMd(sb.exceptions));
 const areaAlsoSee = sb?.alsoSee && (await parseMd(sb.alsoSee));
-
-const parentSNumber = "J82";
-const parentSEntry = system[parentSNumber] as SystemEntry;
-const parentSTitle = parentSEntry.title;
 ---
 
-<SystemBreadcrumb parentSTitle={parentSTitle} />
+<SystemBreadcrumb parentSTitle="Small business system" />
 
 <Slice id="Header" className="active-top">
   <div class="layout-grid-left-right phone-only">

@@ -308,7 +308,7 @@ if (user) {
 
         // Update metadata
         // FIXME handle errors throughout this file
-        const { data, error } = await actions.setPublicMetadata({
+        const { data: _data, error: _error } = await actions.setPublicMetadata({
           key: "onboarding._1_tos",
           value: new Date().toISOString(),
         });
@@ -347,7 +347,7 @@ if (user) {
         communityCheckbox.disabled = true;
 
         // Update metadata
-        const { data, error } = await actions.setPublicMetadata({
+        const { data: _data, error: _error } = await actions.setPublicMetadata({
           key: "onboarding._2_community",
           value: new Date().toISOString(),
         });
@@ -367,7 +367,7 @@ if (user) {
         settingsCheckbox.disabled = true;
 
         // Update metadata
-        const { data, error } = await actions.setPublicMetadata({
+        const { data: _data, error: _error } = await actions.setPublicMetadata({
           key: "onboarding._3_settings",
           value: new Date().toISOString(),
         });
@@ -385,7 +385,7 @@ if (user) {
         foldersCheckbox.disabled = true;
 
         // Update metadata
-        const { data, error } = await actions.setPublicMetadata({
+        const { data: _data, error: _error } = await actions.setPublicMetadata({
           key: "onboarding._4_folders",
           value: new Date().toISOString(),
         });
@@ -403,11 +403,11 @@ if (user) {
         jdexCheckbox.disabled = true;
 
         // Update metadata
-        const { data, error } = await actions.setPublicMetadata({
+        const { data: _data, error: _error } = await actions.setPublicMetadata({
           key: "onboarding._5_jdex",
           value: new Date().toISOString(),
         });
-        const { data: dataComplete, error: errorComplete } =
+        const { data: _dataComplete, error: _errorComplete } =
           await actions.setPublicMetadata({
             key: "onboarding.complete",
             value: true,

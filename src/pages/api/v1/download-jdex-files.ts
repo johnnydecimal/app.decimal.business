@@ -8,7 +8,6 @@ import system, {
   type CategoryEntry,
   type IdEntry,
 } from "@data/smallBusinessFlat.ts";
-import { z } from "astro:content";
 
 /**
  * API endpoint to download Johnny.Decimal files as a ZIP archive
@@ -82,14 +81,14 @@ export const GET: APIRoute = async (context) => {
     const areaEntry = system[areaNumber] as AreaEntry;
     const areaTitle = areaEntry.title;
 
-    let idEmoji = "",
-      categoryEmoji = "",
-      areaEmoji = "";
+    let idEmoji = "";
+    // categoryEmoji = "",
+    // areaEmoji = "";
     if (useEmoji) {
       // Only use an emoji if the item has one; otherwise, use an empty string
       idEmoji = id.emoji ? " " + id.emoji : "";
-      categoryEmoji = categoryEntry.emoji ? " " + categoryEntry.emoji : "";
-      areaEmoji = areaEntry.emoji ? " " + areaEntry.emoji : "";
+      // categoryEmoji = categoryEntry.emoji ? " " + categoryEntry.emoji : "";
+      // areaEmoji = areaEntry.emoji ? " " + areaEntry.emoji : "";
     }
 
     // If our ID is a header, and useBlackSquare, then do that
