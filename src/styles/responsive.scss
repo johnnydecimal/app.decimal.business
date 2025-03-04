@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin light {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
 @mixin phone-only {
   @media (max-width: 599px) {
     @content;

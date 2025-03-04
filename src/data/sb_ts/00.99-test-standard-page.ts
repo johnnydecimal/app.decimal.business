@@ -10,8 +10,8 @@ const entry: IdEntry = {
   "isHidden": true,
   "noLabel": false,
   "metadata": {
-    "createdDate": "2025-03-03T03:19:11.862Z",
-    "updatedDate": "2025-03-03T03:19:11.862Z"
+    "createdDate": "2025-03-04T03:31:17.771Z",
+    "updatedDate": "2025-03-04T03:31:17.771Z"
   },
   "extensions": {
     "smallBusiness": {
@@ -31,6 +31,10 @@ const entry: IdEntry = {
         {
           "header": "blockquote > ol:first-child",
           "content": "The blockquote surrounded by paras.\n\n> 1. First item.\n> 2. Second item.\n\nWe use these as footnotes."
+        },
+        {
+          "header": "Mermaid",
+          "content": "<div class=\"mermaid-light\">\n<pre class=\"mermaid\">\n---\ntitle: Reach and engagement of campaigns\nconfig:\n  theme: default\n---\nquadrantChart\n  x-axis Low Reach --> High Reach\n  y-axis Low Engagement --> High Engagement\n  quadrant-1 We should expand\n  quadrant-2 Need to promote\n  quadrant-3 Re-evaluate\n  quadrant-4 May be improved\n  Campaign A: [0.3, 0.6]\n  Campaign B: [0.45, 0.23]\n  Campaign C: [0.57, 0.69]\n  Campaign D: [0.78, 0.34]\n  Campaign E: [0.40, 0.34]\n  Campaign F: [0.35, 0.78]\n</pre>\n</div>\n\n<div class=\"mermaid-dark\">\n<pre class=\"mermaid\">\n---\ntitle: Reach and engagement of campaigns\nconfig:\n  theme: dark\n---\nquadrantChart\n  x-axis Low Reach --> High Reach\n  y-axis Low Engagement --> High Engagement\n  quadrant-1 We should expand\n  quadrant-2 Need to promote\n  quadrant-3 Re-evaluate\n  quadrant-4 May be improved\n  Campaign A: [0.3, 0.6]\n  Campaign B: [0.45, 0.23]\n  Campaign C: [0.57, 0.69]\n  Campaign D: [0.78, 0.34]\n  Campaign E: [0.40, 0.34]\n  Campaign F: [0.35, 0.78]\n</pre>\n</div>"
         }
       ]
     }

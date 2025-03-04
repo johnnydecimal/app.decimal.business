@@ -301,3 +301,19 @@ p.text-error {
 #body-00_22 #FinderImage img {
   border: 2px solid var(--border-strong);
 }
+
+// Handle responsive Mermaid diagrams
+.mermaid-light,
+.mermaid-dark {
+  display: none;
+}
+.mermaid-light {
+  @include r.light {
+    display: block;
+  }
+}
+.mermaid-dark {
+  @include r.dark {
+    display: block;
+  }
+}
